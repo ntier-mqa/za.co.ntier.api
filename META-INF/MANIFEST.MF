@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ntier Common
+Bundle-SymbolicName: za.co.ntier.api
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Ntier
+Automatic-Module-Name: za.co.ntier.api
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: za.co.ntier.api.model
+Import-Package: org.adempiere.base,
+ org.compiere.model,
+ org.compiere.util
+Service-Component: OSGI-INF/za.co.ntier.api.osgi.component.MQAAnnotationModelFactory.xml
+Bundle-ActivationPolicy: lazy
