@@ -31,7 +31,7 @@ public class X_ZZDetailSmallBusinesse extends PO implements I_ZZDetailSmallBusin
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250924L;
+	private static final long serialVersionUID = 20250925L;
 
     /** Standard Constructor */
     public X_ZZDetailSmallBusinesse (Properties ctx, int ZZDetailSmallBusinesse_ID, String trxName)
@@ -157,47 +157,56 @@ public class X_ZZDetailSmallBusinesse extends PO implements I_ZZDetailSmallBusin
 	/** Set No Of Credit Offered.
 		@param ZZNoCreditOffered No Of Credit Offered
 	*/
-	public void setZZNoCreditOffered (String ZZNoCreditOffered)
+	public void setZZNoCreditOffered (int ZZNoCreditOffered)
 	{
-		set_Value (COLUMNNAME_ZZNoCreditOffered, ZZNoCreditOffered);
+		set_Value (COLUMNNAME_ZZNoCreditOffered, Integer.valueOf(ZZNoCreditOffered));
 	}
 
 	/** Get No Of Credit Offered.
 		@return No Of Credit Offered	  */
-	public String getZZNoCreditOffered()
+	public int getZZNoCreditOffered()
 	{
-		return (String)get_Value(COLUMNNAME_ZZNoCreditOffered);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZNoCreditOffered);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set No Trainees.
 		@param ZZNoTrainees No Trainees
 	*/
-	public void setZZNoTrainees (String ZZNoTrainees)
+	public void setZZNoTrainees (int ZZNoTrainees)
 	{
-		set_Value (COLUMNNAME_ZZNoTrainees, ZZNoTrainees);
+		set_Value (COLUMNNAME_ZZNoTrainees, Integer.valueOf(ZZNoTrainees));
 	}
 
 	/** Get No Trainees.
 		@return No Trainees	  */
-	public String getZZNoTrainees()
+	public int getZZNoTrainees()
 	{
-		return (String)get_Value(COLUMNNAME_ZZNoTrainees);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZNoTrainees);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Duration Training Day.
 		@param ZZNoTrainingDay Duration Of Training In Day
 	*/
-	public void setZZNoTrainingDay (String ZZNoTrainingDay)
+	public void setZZNoTrainingDay (int ZZNoTrainingDay)
 	{
-		set_Value (COLUMNNAME_ZZNoTrainingDay, ZZNoTrainingDay);
+		set_Value (COLUMNNAME_ZZNoTrainingDay, Integer.valueOf(ZZNoTrainingDay));
 	}
 
 	/** Get Duration Training Day.
 		@return Duration Of Training In Day
 	  */
-	public String getZZNoTrainingDay()
+	public int getZZNoTrainingDay()
 	{
-		return (String)get_Value(COLUMNNAME_ZZNoTrainingDay);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZNoTrainingDay);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Programme Name.

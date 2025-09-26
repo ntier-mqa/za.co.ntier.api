@@ -148,19 +148,19 @@ public interface I_ZZDetailSmallBusinesse
     public static final String COLUMNNAME_ZZNoCreditOffered = "ZZNoCreditOffered";
 
 	/** Set No Of Credit Offered	  */
-	public void setZZNoCreditOffered (String ZZNoCreditOffered);
+	public void setZZNoCreditOffered (int ZZNoCreditOffered);
 
 	/** Get No Of Credit Offered	  */
-	public String getZZNoCreditOffered();
+	public int getZZNoCreditOffered();
 
     /** Column name ZZNoTrainees */
     public static final String COLUMNNAME_ZZNoTrainees = "ZZNoTrainees";
 
 	/** Set No Trainees	  */
-	public void setZZNoTrainees (String ZZNoTrainees);
+	public void setZZNoTrainees (int ZZNoTrainees);
 
 	/** Get No Trainees	  */
-	public String getZZNoTrainees();
+	public int getZZNoTrainees();
 
     /** Column name ZZNoTrainingDay */
     public static final String COLUMNNAME_ZZNoTrainingDay = "ZZNoTrainingDay";
@@ -168,12 +168,12 @@ public interface I_ZZDetailSmallBusinesse
 	/** Set Duration Training Day.
 	  * Duration Of Training In Day
 	  */
-	public void setZZNoTrainingDay (String ZZNoTrainingDay);
+	public void setZZNoTrainingDay (int ZZNoTrainingDay);
 
 	/** Get Duration Training Day.
 	  * Duration Of Training In Day
 	  */
-	public String getZZNoTrainingDay();
+	public int getZZNoTrainingDay();
 
     /** Column name ZZProgrammeName */
     public static final String COLUMNNAME_ZZProgrammeName = "ZZProgrammeName";

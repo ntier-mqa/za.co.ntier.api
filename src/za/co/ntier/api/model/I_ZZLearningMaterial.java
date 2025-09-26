@@ -176,6 +176,24 @@ public interface I_ZZLearningMaterial
 	/** Get Qualification/Skill Programme	  */
 	public String getZZQualificationProgramme();
 
+    /** Column name ZZUnabridgedCVFile */
+    public static final String COLUMNNAME_ZZUnabridgedCVFile = "ZZUnabridgedCVFile";
+
+	/** Set Unabridged CV File	  */
+	public void setZZUnabridgedCVFile (byte[] ZZUnabridgedCVFile);
+
+	/** Get Unabridged CV File	  */
+	public byte[] getZZUnabridgedCVFile();
+
+    /** Column name ZZUnabridgedCVFileName */
+    public static final String COLUMNNAME_ZZUnabridgedCVFileName = "ZZUnabridgedCVFileName";
+
+	/** Set Unabridged CV File Name	  */
+	public void setZZUnabridgedCVFileName (String ZZUnabridgedCVFileName);
+
+	/** Get Unabridged CV File Name	  */
+	public String getZZUnabridgedCVFileName();
+
     /** Column name ZZ_Application_Form_ID */
     public static final String COLUMNNAME_ZZ_Application_Form_ID = "ZZ_Application_Form_ID";
 

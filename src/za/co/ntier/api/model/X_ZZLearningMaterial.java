@@ -31,7 +31,7 @@ public class X_ZZLearningMaterial extends PO implements I_ZZLearningMaterial, I_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250924L;
+	private static final long serialVersionUID = 20250925L;
 
     /** Standard Constructor */
     public X_ZZLearningMaterial (Properties ctx, int ZZLearningMaterial_ID, String trxName)
@@ -211,6 +211,36 @@ public class X_ZZLearningMaterial extends PO implements I_ZZLearningMaterial, I_
 	public String getZZQualificationProgramme()
 	{
 		return (String)get_Value(COLUMNNAME_ZZQualificationProgramme);
+	}
+
+	/** Set Unabridged CV File.
+		@param ZZUnabridgedCVFile Unabridged CV File
+	*/
+	public void setZZUnabridgedCVFile (byte[] ZZUnabridgedCVFile)
+	{
+		set_Value (COLUMNNAME_ZZUnabridgedCVFile, ZZUnabridgedCVFile);
+	}
+
+	/** Get Unabridged CV File.
+		@return Unabridged CV File	  */
+	public byte[] getZZUnabridgedCVFile()
+	{
+		return (byte[])get_Value(COLUMNNAME_ZZUnabridgedCVFile);
+	}
+
+	/** Set Unabridged CV File Name.
+		@param ZZUnabridgedCVFileName Unabridged CV File Name
+	*/
+	public void setZZUnabridgedCVFileName (String ZZUnabridgedCVFileName)
+	{
+		set_Value (COLUMNNAME_ZZUnabridgedCVFileName, ZZUnabridgedCVFileName);
+	}
+
+	/** Get Unabridged CV File Name.
+		@return Unabridged CV File Name	  */
+	public String getZZUnabridgedCVFileName()
+	{
+		return (String)get_Value(COLUMNNAME_ZZUnabridgedCVFileName);
 	}
 
 	public I_ZZ_Application_Form getZZ_Application_Form() throws RuntimeException
