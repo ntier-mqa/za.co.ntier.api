@@ -32,7 +32,7 @@ public class X_ZZ_FormDiscipline extends PO implements I_ZZ_FormDiscipline, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250923L;
+	private static final long serialVersionUID = 20250929L;
 
     /** Standard Constructor */
     public X_ZZ_FormDiscipline (Properties ctx, int ZZ_FormDiscipline_ID, String trxName)

@@ -119,15 +119,6 @@ public interface I_ZZAnnexure
 	  */
 	public String getName();
 
-    /** Column name NoMonths */
-    public static final String COLUMNNAME_NoMonths = "NoMonths";
-
-	/** Set Number of Months	  */
-	public void setNoMonths (int NoMonths);
-
-	/** Get Number of Months	  */
-	public int getNoMonths();
-
     /** Column name Postal */
     public static final String COLUMNNAME_Postal = "Postal";
 
@@ -200,32 +191,6 @@ public interface I_ZZAnnexure
 	  * Discipline Applying For
 	  */
 	public String getZZDiscipline();
-
-    /** Column name ZZNoLearners */
-    public static final String COLUMNNAME_ZZNoLearners = "ZZNoLearners";
-
-	/** Set No Learners.
-	  * Number of learners applying should be based on
-	  */
-	public void setZZNoLearners (int ZZNoLearners);
-
-	/** Get No Learners.
-	  * Number of learners applying should be based on
-	  */
-	public int getZZNoLearners();
-
-    /** Column name ZZProgramme */
-    public static final String COLUMNNAME_ZZProgramme = "ZZProgramme";
-
-	/** Set Programme Applying.
-	  * Programme Applying For
-	  */
-	public void setZZProgramme (int ZZProgramme);
-
-	/** Get Programme Applying.
-	  * Programme Applying For
-	  */
-	public int getZZProgramme();
 
     /** Column name ZZTotalBeneficiaries */
     public static final String COLUMNNAME_ZZTotalBeneficiaries = "ZZTotalBeneficiaries";

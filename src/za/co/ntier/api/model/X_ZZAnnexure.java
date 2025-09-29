@@ -31,7 +31,7 @@ public class X_ZZAnnexure extends PO implements I_ZZAnnexure, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250917L;
+	private static final long serialVersionUID = 20250929L;
 
     /** Standard Constructor */
     public X_ZZAnnexure (Properties ctx, int ZZAnnexure_ID, String trxName)
@@ -39,7 +39,6 @@ public class X_ZZAnnexure extends PO implements I_ZZAnnexure, I_Persistent
       super (ctx, ZZAnnexure_ID, trxName);
       /** if (ZZAnnexure_ID == 0)
         {
-			setName (null);
 			setZZAnnexure_ID (0);
         } */
     }
@@ -50,7 +49,6 @@ public class X_ZZAnnexure extends PO implements I_ZZAnnexure, I_Persistent
       super (ctx, ZZAnnexure_ID, trxName, virtualColumns);
       /** if (ZZAnnexure_ID == 0)
         {
-			setName (null);
 			setZZAnnexure_ID (0);
         } */
     }
@@ -61,7 +59,6 @@ public class X_ZZAnnexure extends PO implements I_ZZAnnexure, I_Persistent
       super (ctx, ZZAnnexure_UU, trxName);
       /** if (ZZAnnexure_UU == null)
         {
-			setName (null);
 			setZZAnnexure_ID (0);
         } */
     }
@@ -72,7 +69,6 @@ public class X_ZZAnnexure extends PO implements I_ZZAnnexure, I_Persistent
       super (ctx, ZZAnnexure_UU, trxName, virtualColumns);
       /** if (ZZAnnexure_UU == null)
         {
-			setName (null);
 			setZZAnnexure_ID (0);
         } */
     }
@@ -135,24 +131,6 @@ public class X_ZZAnnexure extends PO implements I_ZZAnnexure, I_Persistent
 	public String getName()
 	{
 		return (String)get_Value(COLUMNNAME_Name);
-	}
-
-	/** Set Number of Months.
-		@param NoMonths Number of Months
-	*/
-	public void setNoMonths (int NoMonths)
-	{
-		set_Value (COLUMNNAME_NoMonths, Integer.valueOf(NoMonths));
-	}
-
-	/** Get Number of Months.
-		@return Number of Months	  */
-	public int getNoMonths()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_NoMonths);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
 	}
 
 	/** Set ZIP.
@@ -240,44 +218,6 @@ public class X_ZZAnnexure extends PO implements I_ZZAnnexure, I_Persistent
 	public String getZZDiscipline()
 	{
 		return (String)get_Value(COLUMNNAME_ZZDiscipline);
-	}
-
-	/** Set No Learners.
-		@param ZZNoLearners Number of learners applying should be based on
-	*/
-	public void setZZNoLearners (int ZZNoLearners)
-	{
-		set_Value (COLUMNNAME_ZZNoLearners, Integer.valueOf(ZZNoLearners));
-	}
-
-	/** Get No Learners.
-		@return Number of learners applying should be based on
-	  */
-	public int getZZNoLearners()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZNoLearners);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	/** Set Programme Applying.
-		@param ZZProgramme Programme Applying For
-	*/
-	public void setZZProgramme (int ZZProgramme)
-	{
-		set_Value (COLUMNNAME_ZZProgramme, Integer.valueOf(ZZProgramme));
-	}
-
-	/** Get Programme Applying.
-		@return Programme Applying For
-	  */
-	public int getZZProgramme()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZProgramme);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
 	}
 
 	/** Set Total Number Beneficiaries.

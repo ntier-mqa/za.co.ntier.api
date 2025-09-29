@@ -19,11 +19,7 @@ package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
 import java.util.Properties;
-
-import org.compiere.model.I_Persistent;
-import org.compiere.model.MTable;
-import org.compiere.model.PO;
-import org.compiere.model.POInfo;
+import org.compiere.model.*;
 
 /** Generated Model for ZZ_FormContact
  *  @author iDempiere (generated)
@@ -35,7 +31,7 @@ public class X_ZZ_FormContact extends PO implements I_ZZ_FormContact, I_Persiste
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250903L;
+	private static final long serialVersionUID = 20250929L;
 
     /** Standard Constructor */
     public X_ZZ_FormContact (Properties ctx, int ZZ_FormContact_ID, String trxName)
@@ -106,7 +102,7 @@ public class X_ZZ_FormContact extends PO implements I_ZZ_FormContact, I_Persiste
 	*/
 	public void setAddress (String Address)
 	{
-		set_ValueNoCheck (COLUMNNAME_Address, Address);
+		set_Value (COLUMNNAME_Address, Address);
 	}
 
 	/** Get Address.
@@ -128,9 +124,9 @@ public class X_ZZ_FormContact extends PO implements I_ZZ_FormContact, I_Persiste
 	public void setC_City_ID (int C_City_ID)
 	{
 		if (C_City_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_C_City_ID, null);
+			set_Value (COLUMNNAME_C_City_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_C_City_ID, Integer.valueOf(C_City_ID));
+			set_Value (COLUMNNAME_C_City_ID, Integer.valueOf(C_City_ID));
 	}
 
 	/** Get City.
@@ -156,9 +152,9 @@ public class X_ZZ_FormContact extends PO implements I_ZZ_FormContact, I_Persiste
 	public void setC_Region_ID (int C_Region_ID)
 	{
 		if (C_Region_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_C_Region_ID, null);
+			set_Value (COLUMNNAME_C_Region_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_C_Region_ID, Integer.valueOf(C_Region_ID));
+			set_Value (COLUMNNAME_C_Region_ID, Integer.valueOf(C_Region_ID));
 	}
 
 	/** Get Region.
@@ -177,7 +173,7 @@ public class X_ZZ_FormContact extends PO implements I_ZZ_FormContact, I_Persiste
 	*/
 	public void setContactName (String ContactName)
 	{
-		set_ValueNoCheck (COLUMNNAME_ContactName, ContactName);
+		set_Value (COLUMNNAME_ContactName, ContactName);
 	}
 
 	/** Get Contact Name.
@@ -209,7 +205,7 @@ public class X_ZZ_FormContact extends PO implements I_ZZ_FormContact, I_Persiste
 	*/
 	public void setPhone (String Phone)
 	{
-		set_ValueNoCheck (COLUMNNAME_Phone, Phone);
+		set_Value (COLUMNNAME_Phone, Phone);
 	}
 
 	/** Get Phone.

@@ -31,7 +31,7 @@ public class X_ZZSubAnnex extends PO implements I_ZZSubAnnex, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250921L;
+	private static final long serialVersionUID = 20250929L;
 
     /** Standard Constructor */
     public X_ZZSubAnnex (Properties ctx, int ZZSubAnnex_ID, String trxName)
