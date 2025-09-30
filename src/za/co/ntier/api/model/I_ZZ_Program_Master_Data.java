@@ -229,6 +229,15 @@ public interface I_ZZ_Program_Master_Data
 	/** Get Date Approved	  */
 	public Timestamp getZZ_Date_Approved();
 
+    /** Column name ZZ_Date_Not_Approved */
+    public static final String COLUMNNAME_ZZ_Date_Not_Approved = "ZZ_Date_Not_Approved";
+
+	/** Set Date Not Approved	  */
+	public void setZZ_Date_Not_Approved (Timestamp ZZ_Date_Not_Approved);
+
+	/** Get Date Not Approved	  */
+	public Timestamp getZZ_Date_Not_Approved();
+
     /** Column name ZZ_Date_Submitted */
     public static final String COLUMNNAME_ZZ_Date_Submitted = "ZZ_Date_Submitted";
 
