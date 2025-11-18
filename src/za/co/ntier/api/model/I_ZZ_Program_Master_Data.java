@@ -293,4 +293,15 @@ public interface I_ZZ_Program_Master_Data
 	public int getZZ_Snr_Mgr_LP_ID();
 
 	public org.compiere.model.I_AD_User getZZ_Snr_Mgr_LP() throws RuntimeException;
+
+    /** Column name ZZ_Submitter_ID */
+    public static final String COLUMNNAME_ZZ_Submitter_ID = "ZZ_Submitter_ID";
+
+	/** Set Submitted By	  */
+	public void setZZ_Submitter_ID (int ZZ_Submitter_ID);
+
+	/** Get Submitted By	  */
+	public int getZZ_Submitter_ID();
+
+	public org.compiere.model.I_AD_User getZZ_Submitter() throws RuntimeException;
 }

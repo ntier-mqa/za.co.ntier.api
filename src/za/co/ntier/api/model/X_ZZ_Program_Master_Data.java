@@ -32,7 +32,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250930L;
+	private static final long serialVersionUID = 20251118L;
 
     /** Standard Constructor */
     public X_ZZ_Program_Master_Data (Properties ctx, int ZZ_Program_Master_Data_ID, String trxName)
@@ -385,6 +385,16 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
+	/** Not Recommended By Senior Mgr SDR = N1 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrSDR = "N1";
+	/** Not Recommended By Senior Mgr Finance = N2 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrFinance = "N2";
+	/** Not Recommended By COO = N3 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCOO = "N3";
+	/** Not Recommended By CFO = N4 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCFO = "N4";
+	/** Not Recommended By CEO = N5 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCEO = "N5";
 	/** Not Approved by Snr Manager = NA */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrManager = "NA";
 	/** Not Approved By Manager Finance Consumables = NC */
@@ -399,8 +409,16 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Not Approved by Snr Admin Finance = NS */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Recommended By Senior Mgr Finance = R1 */
+	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
+	/** Recommended By COO = R2 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
+	/** Recommended By CFO = R3 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
 	/** Recommended = RC */
 	public static final String ZZ_DOCSTATUS_Recommended = "RC";
+	/** Recommended By Senior Mgr SDR = RD */
+	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
@@ -485,6 +503,33 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public int getZZ_Snr_Mgr_LP_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Snr_Mgr_LP_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_Submitter() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Submitter_ID(), get_TrxName());
+	}
+
+	/** Set Submitted By.
+		@param ZZ_Submitter_ID Submitted By
+	*/
+	public void setZZ_Submitter_ID (int ZZ_Submitter_ID)
+	{
+		if (ZZ_Submitter_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Submitter_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Submitter_ID, Integer.valueOf(ZZ_Submitter_ID));
+	}
+
+	/** Get Submitted By.
+		@return Submitted By	  */
+	public int getZZ_Submitter_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Submitter_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
