@@ -20,11 +20,7 @@ package za.co.ntier.api.model;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
-
-import org.compiere.model.I_Persistent;
-import org.compiere.model.MTable;
-import org.compiere.model.PO;
-import org.compiere.model.POInfo;
+import org.compiere.model.*;
 
 /** Generated Model for ZZ_Application_Form
  *  @author iDempiere (generated)
@@ -36,7 +32,7 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251023L;
+	private static final long serialVersionUID = 20251127L;
 
     /** Standard Constructor */
     public X_ZZ_Application_Form (Properties ctx, int ZZ_Application_Form_ID, String trxName)
@@ -380,21 +376,6 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 		return (String)get_Value(COLUMNNAME_ZZCollegeSla);
 	}
 
-	/** Set First Name.
-		@param ZZFirstName First Name
-	*/
-	public void setZZFirstName (String ZZFirstName)
-	{
-		set_Value (COLUMNNAME_ZZFirstName, ZZFirstName);
-	}
-
-	/** Get First Name.
-		@return First Name	  */
-	public String getZZFirstName()
-	{
-		return (String)get_Value(COLUMNNAME_ZZFirstName);
-	}
-
 	/** ZZHasPastParticipatedLecturer AD_Reference_ID=319 */
 	public static final int ZZHASPASTPARTICIPATEDLECTURER_AD_Reference_ID=319;
 	/** No = N */
@@ -416,21 +397,6 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	public String getZZHasPastParticipatedLecturer()
 	{
 		return (String)get_Value(COLUMNNAME_ZZHasPastParticipatedLecturer);
-	}
-
-	/** Set Middle Name.
-		@param ZZMiddleName Middle Name
-	*/
-	public void setZZMiddleName (String ZZMiddleName)
-	{
-		set_Value (COLUMNNAME_ZZMiddleName, ZZMiddleName);
-	}
-
-	/** Get Middle Name.
-		@return Middle Name	  */
-	public String getZZMiddleName()
-	{
-		return (String)get_Value(COLUMNNAME_ZZMiddleName);
 	}
 
 	/** Set No Learners.
@@ -513,6 +479,8 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	public static final String ZZPROGRAMTYPE_OHASSP = "OHASSP";
 	/** SMALL_BUSINESS = SMALL_BUSINESS */
 	public static final String ZZPROGRAMTYPE_SMALL_BUSINESS = "SMALL_BUSINESS";
+	/** SMALL_SCALE_MINING = SMALL_SCALE_MINING */
+	public static final String ZZPROGRAMTYPE_SMALL_SCALE_MINING = "SMALL_SCALE_MINING";
 	/** STANDARD_SETTING = STANDARD_SETTING */
 	public static final String ZZPROGRAMTYPE_STANDARD_SETTING = "STANDARD_SETTING";
 	/** TVET = TVET */
@@ -521,6 +489,8 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	public static final String ZZPROGRAMTYPE_TVET_BURSARS = "TVET_BURSARS";
 	/** UNEMPLOYED_YOUTH = UNEMPLOYED_YOUTH */
 	public static final String ZZPROGRAMTYPE_UNEMPLOYED_YOUTH = "UNEMPLOYED_YOUTH";
+	/** UNIVERSITY = UNIVERSITY */
+	public static final String ZZPROGRAMTYPE_UNIVERSITY = "UNIVERSITY";
 	/** WORKER_INITIATED_TRAINING = WORKER_INITIATED_TRAINING */
 	public static final String ZZPROGRAMTYPE_WORKER_INITIATED_TRAINING = "WORKER_INITIATED_TRAINING";
 	/** WORKPLACE_COACHES = WORKPLACE_COACHES */
@@ -539,21 +509,6 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	public String getZZProgramType()
 	{
 		return (String)get_Value(COLUMNNAME_ZZProgramType);
-	}
-
-	/** Set Surname.
-		@param ZZSurname Surname
-	*/
-	public void setZZSurname (String ZZSurname)
-	{
-		set_Value (COLUMNNAME_ZZSurname, ZZSurname);
-	}
-
-	/** Get Surname.
-		@return Surname	  */
-	public String getZZSurname()
-	{
-		return (String)get_Value(COLUMNNAME_ZZSurname);
 	}
 
 	/** Set Total Number Applied For.
@@ -639,6 +594,16 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
+	/** Not Recommended By Senior Mgr SDR = N1 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrSDR = "N1";
+	/** Not Recommended By Senior Mgr Finance = N2 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrFinance = "N2";
+	/** Not Recommended By COO = N3 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCOO = "N3";
+	/** Not Recommended By CFO = N4 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCFO = "N4";
+	/** Not Recommended By CEO = N5 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCEO = "N5";
 	/** Not Approved by Snr Manager = NA */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrManager = "NA";
 	/** Not Approved By Manager Finance Consumables = NC */
@@ -653,8 +618,18 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Not Approved by Snr Admin Finance = NS */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Pending = PE */
+	public static final String ZZ_DOCSTATUS_Pending = "PE";
+	/** Recommended By Senior Mgr Finance = R1 */
+	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
+	/** Recommended By COO = R2 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
+	/** Recommended By CFO = R3 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
 	/** Recommended = RC */
 	public static final String ZZ_DOCSTATUS_Recommended = "RC";
+	/** Recommended By Senior Mgr SDR = RD */
+	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
