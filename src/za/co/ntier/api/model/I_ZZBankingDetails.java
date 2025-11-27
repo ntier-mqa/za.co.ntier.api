@@ -77,6 +77,19 @@ public interface I_ZZBankingDetails
 	  */
 	public String getAccountNo();
 
+    /** Column name AccountType */
+    public static final String COLUMNNAME_AccountType = "AccountType";
+
+	/** Set Account Type.
+	  * Indicates the type of account
+	  */
+	public void setAccountType (String AccountType);
+
+	/** Get Account Type.
+	  * Indicates the type of account
+	  */
+	public String getAccountType();
+
     /** Column name BankName */
     public static final String COLUMNNAME_BankName = "BankName";
 
@@ -85,6 +98,36 @@ public interface I_ZZBankingDetails
 
 	/** Get Bank Name	  */
 	public String getBankName();
+
+    /** Column name C_BPartner_ID */
+    public static final String COLUMNNAME_C_BPartner_ID = "C_BPartner_ID";
+
+	/** Set Business Partner.
+	  * Identifies a Business Partner
+	  */
+	public void setC_BPartner_ID (int C_BPartner_ID);
+
+	/** Get Business Partner.
+	  * Identifies a Business Partner
+	  */
+	public int getC_BPartner_ID();
+
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException;
+
+    /** Column name C_Bank_ID */
+    public static final String COLUMNNAME_C_Bank_ID = "C_Bank_ID";
+
+	/** Set Bank Name.
+	  * Bank Name
+	  */
+	public void setC_Bank_ID (int C_Bank_ID);
+
+	/** Get Bank Name.
+	  * Bank Name
+	  */
+	public int getC_Bank_ID();
+
+	public org.compiere.model.I_C_Bank getC_Bank() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -131,6 +174,54 @@ public interface I_ZZBankingDetails
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZAccountHolder */
+    public static final String COLUMNNAME_ZZAccountHolder = "ZZAccountHolder";
+
+	/** Set Account Holder	  */
+	public void setZZAccountHolder (String ZZAccountHolder);
+
+	/** Get Account Holder	  */
+	public String getZZAccountHolder();
+
+    /** Column name ZZAdminDetailsCorrect */
+    public static final String COLUMNNAME_ZZAdminDetailsCorrect = "ZZAdminDetailsCorrect";
+
+	/** Set Admin Details Correct.
+	  * The Administrative Details Given Abvove Are Correct
+	  */
+	public void setZZAdminDetailsCorrect (String ZZAdminDetailsCorrect);
+
+	/** Get Admin Details Correct.
+	  * The Administrative Details Given Abvove Are Correct
+	  */
+	public String getZZAdminDetailsCorrect();
+
+    /** Column name ZZBankDetailsChanged */
+    public static final String COLUMNNAME_ZZBankDetailsChanged = "ZZBankDetailsChanged";
+
+	/** Set Bank Details Changed.
+	  * The Banking Details Given Abvove Have Changed
+	  */
+	public void setZZBankDetailsChanged (String ZZBankDetailsChanged);
+
+	/** Get Bank Details Changed.
+	  * The Banking Details Given Abvove Have Changed
+	  */
+	public String getZZBankDetailsChanged();
+
+    /** Column name ZZBankDetailsCorrect */
+    public static final String COLUMNNAME_ZZBankDetailsCorrect = "ZZBankDetailsCorrect";
+
+	/** Set Bank Details Correct.
+	  * The Banking Details Given Abvove Are Correct
+	  */
+	public void setZZBankDetailsCorrect (String ZZBankDetailsCorrect);
+
+	/** Get Bank Details Correct.
+	  * The Banking Details Given Abvove Are Correct
+	  */
+	public String getZZBankDetailsCorrect();
+
     /** Column name ZZBankingDetails_ID */
     public static final String COLUMNNAME_ZZBankingDetails_ID = "ZZBankingDetails_ID";
 
@@ -148,6 +239,19 @@ public interface I_ZZBankingDetails
 
 	/** Get ZZBankingDetails_UU	  */
 	public String getZZBankingDetails_UU();
+
+    /** Column name ZZSdfOrganisation_ID */
+    public static final String COLUMNNAME_ZZSdfOrganisation_ID = "ZZSdfOrganisation_ID";
+
+	/** Set SDF Organisation.
+	  * Link Organisation And SDF
+	  */
+	public void setZZSdfOrganisation_ID (int ZZSdfOrganisation_ID);
+
+	/** Get SDF Organisation.
+	  * Link Organisation And SDF
+	  */
+	public int getZZSdfOrganisation_ID();
 
     /** Column name ZZ_Application_Form_ID */
     public static final String COLUMNNAME_ZZ_Application_Form_ID = "ZZ_Application_Form_ID";

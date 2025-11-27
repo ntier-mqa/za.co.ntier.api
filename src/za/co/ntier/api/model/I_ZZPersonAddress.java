@@ -18,22 +18,21 @@ package za.co.ntier.api.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-
-import org.compiere.model.MTable;
+import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for ZZDetailSmallBusinesse
+/** Generated Interface for ZZPersonAddress
  *  @author iDempiere (generated) 
  *  @version Release 12
  */
 @SuppressWarnings("all")
-public interface I_ZZDetailSmallBusinesse 
+public interface I_ZZPersonAddress 
 {
 
-    /** TableName=ZZDetailSmallBusinesse */
-    public static final String Table_Name = "ZZDetailSmallBusinesse";
+    /** TableName=ZZPersonAddress */
+    public static final String Table_Name = "ZZPersonAddress";
 
-    /** AD_Table_ID=1000063 */
+    /** AD_Table_ID=1000081 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -65,6 +64,60 @@ public interface I_ZZDetailSmallBusinesse
 	  */
 	public int getAD_Org_ID();
 
+    /** Column name AD_User_ID */
+    public static final String COLUMNNAME_AD_User_ID = "AD_User_ID";
+
+	/** Set User/Contact.
+	  * User within the system - Internal or Business Partner Contact
+	  */
+	public void setAD_User_ID (int AD_User_ID);
+
+	/** Get User/Contact.
+	  * User within the system - Internal or Business Partner Contact
+	  */
+	public int getAD_User_ID();
+
+	public org.compiere.model.I_AD_User getAD_User() throws RuntimeException;
+
+    /** Column name Address1 */
+    public static final String COLUMNNAME_Address1 = "Address1";
+
+	/** Set Address 1.
+	  * Address line 1 for this location
+	  */
+	public void setAddress1 (String Address1);
+
+	/** Get Address 1.
+	  * Address line 1 for this location
+	  */
+	public String getAddress1();
+
+    /** Column name Address2 */
+    public static final String COLUMNNAME_Address2 = "Address2";
+
+	/** Set Address 2.
+	  * Address line 2 for this location
+	  */
+	public void setAddress2 (String Address2);
+
+	/** Get Address 2.
+	  * Address line 2 for this location
+	  */
+	public String getAddress2();
+
+    /** Column name Address3 */
+    public static final String COLUMNNAME_Address3 = "Address3";
+
+	/** Set Address 3.
+	  * Address Line 3 for the location
+	  */
+	public void setAddress3 (String Address3);
+
+	/** Get Address 3.
+	  * Address Line 3 for the location
+	  */
+	public String getAddress3();
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -94,6 +147,19 @@ public interface I_ZZDetailSmallBusinesse
 	  */
 	public boolean isActive();
 
+    /** Column name Postal */
+    public static final String COLUMNNAME_Postal = "Postal";
+
+	/** Set ZIP.
+	  * Postal code
+	  */
+	public void setPostal (String Postal);
+
+	/** Get ZIP.
+	  * Postal code
+	  */
+	public String getPostal();
+
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
 
@@ -110,89 +176,50 @@ public interface I_ZZDetailSmallBusinesse
 	  */
 	public int getUpdatedBy();
 
-    /** Column name ZZBusinessesName */
-    public static final String COLUMNNAME_ZZBusinessesName = "ZZBusinessesName";
+    /** Column name ZZAddressType */
+    public static final String COLUMNNAME_ZZAddressType = "ZZAddressType";
 
-	/** Set Businesses Name.
-	  * Name of business/cooperative/NPO/NGO/CBO to be supported
-	  */
-	public void setZZBusinessesName (String ZZBusinessesName);
+	/** Set Address Type	  */
+	public void setZZAddressType (String ZZAddressType);
 
-	/** Get Businesses Name.
-	  * Name of business/cooperative/NPO/NGO/CBO to be supported
-	  */
-	public String getZZBusinessesName();
+	/** Get Address Type	  */
+	public String getZZAddressType();
 
-    /** Column name ZZDetailSmallBusinesse_ID */
-    public static final String COLUMNNAME_ZZDetailSmallBusinesse_ID = "ZZDetailSmallBusinesse_ID";
+    /** Column name ZZPersonAddress_ID */
+    public static final String COLUMNNAME_ZZPersonAddress_ID = "ZZPersonAddress_ID";
 
-	/** Set Detail Small Businesse.
-	  * LIST OF BUSINESSES/COOPERATIVES/NPO/NGO/CBO TO BE SUPPORTED AND TRAINING PROGRAMMES
-	  */
-	public void setZZDetailSmallBusinesse_ID (int ZZDetailSmallBusinesse_ID);
+	/** Set Person Address	  */
+	public void setZZPersonAddress_ID (int ZZPersonAddress_ID);
 
-	/** Get Detail Small Businesse.
-	  * LIST OF BUSINESSES/COOPERATIVES/NPO/NGO/CBO TO BE SUPPORTED AND TRAINING PROGRAMMES
-	  */
-	public int getZZDetailSmallBusinesse_ID();
+	/** Get Person Address	  */
+	public int getZZPersonAddress_ID();
 
-    /** Column name ZZDetailSmallBusinesse_UU */
-    public static final String COLUMNNAME_ZZDetailSmallBusinesse_UU = "ZZDetailSmallBusinesse_UU";
+    /** Column name ZZPersonAddress_UU */
+    public static final String COLUMNNAME_ZZPersonAddress_UU = "ZZPersonAddress_UU";
 
-	/** Set ZZDetailSmallBusinesse_UU	  */
-	public void setZZDetailSmallBusinesse_UU (String ZZDetailSmallBusinesse_UU);
+	/** Set ZZPersonAddress_UU	  */
+	public void setZZPersonAddress_UU (String ZZPersonAddress_UU);
 
-	/** Get ZZDetailSmallBusinesse_UU	  */
-	public String getZZDetailSmallBusinesse_UU();
+	/** Get ZZPersonAddress_UU	  */
+	public String getZZPersonAddress_UU();
 
-    /** Column name ZZNoCreditOffered */
-    public static final String COLUMNNAME_ZZNoCreditOffered = "ZZNoCreditOffered";
+    /** Column name ZZProvince */
+    public static final String COLUMNNAME_ZZProvince = "ZZProvince";
 
-	/** Set No Of Credit Offered	  */
-	public void setZZNoCreditOffered (int ZZNoCreditOffered);
+	/** Set Province	  */
+	public void setZZProvince (String ZZProvince);
 
-	/** Get No Of Credit Offered	  */
-	public int getZZNoCreditOffered();
+	/** Get Province	  */
+	public String getZZProvince();
 
-    /** Column name ZZNoTrainees */
-    public static final String COLUMNNAME_ZZNoTrainees = "ZZNoTrainees";
+    /** Column name ZZSdf_ID */
+    public static final String COLUMNNAME_ZZSdf_ID = "ZZSdf_ID";
 
-	/** Set No Trainees	  */
-	public void setZZNoTrainees (int ZZNoTrainees);
+	/** Set Sdf	  */
+	public void setZZSdf_ID (int ZZSdf_ID);
 
-	/** Get No Trainees	  */
-	public int getZZNoTrainees();
+	/** Get Sdf	  */
+	public int getZZSdf_ID();
 
-    /** Column name ZZNoTrainingDay */
-    public static final String COLUMNNAME_ZZNoTrainingDay = "ZZNoTrainingDay";
-
-	/** Set Duration Training Day.
-	  * Duration Of Training In Day
-	  */
-	public void setZZNoTrainingDay (int ZZNoTrainingDay);
-
-	/** Get Duration Training Day.
-	  * Duration Of Training In Day
-	  */
-	public int getZZNoTrainingDay();
-
-    /** Column name ZZProgrammeName */
-    public static final String COLUMNNAME_ZZProgrammeName = "ZZProgrammeName";
-
-	/** Set Programme Name	  */
-	public void setZZProgrammeName (String ZZProgrammeName);
-
-	/** Get Programme Name	  */
-	public String getZZProgrammeName();
-
-    /** Column name ZZ_Application_Form_ID */
-    public static final String COLUMNNAME_ZZ_Application_Form_ID = "ZZ_Application_Form_ID";
-
-	/** Set Application Form	  */
-	public void setZZ_Application_Form_ID (int ZZ_Application_Form_ID);
-
-	/** Get Application Form	  */
-	public int getZZ_Application_Form_ID();
-
-	public I_ZZ_Application_Form getZZ_Application_Form() throws RuntimeException;
+	public I_ZZSdf getZZSdf() throws RuntimeException;
 }

@@ -18,7 +18,8 @@ package za.co.ntier.api.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import org.compiere.model.*;
+
+import org.compiere.model.MTable;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for ZZ_Application_Form
@@ -276,6 +277,15 @@ s site
 	  */
 	public String getZZCollegeSla();
 
+    /** Column name ZZFirstName */
+    public static final String COLUMNNAME_ZZFirstName = "ZZFirstName";
+
+	/** Set First Name	  */
+	public void setZZFirstName (String ZZFirstName);
+
+	/** Get First Name	  */
+	public String getZZFirstName();
+
     /** Column name ZZHasPastParticipatedLecturer */
     public static final String COLUMNNAME_ZZHasPastParticipatedLecturer = "ZZHasPastParticipatedLecturer";
 
@@ -288,6 +298,15 @@ s site
 	  * Has the institution participated in MQA Lecturer Development Programme in the past years?
 	  */
 	public String getZZHasPastParticipatedLecturer();
+
+    /** Column name ZZMiddleName */
+    public static final String COLUMNNAME_ZZMiddleName = "ZZMiddleName";
+
+	/** Set Middle Name	  */
+	public void setZZMiddleName (String ZZMiddleName);
+
+	/** Get Middle Name	  */
+	public String getZZMiddleName();
 
     /** Column name ZZNoLearners */
     public static final String COLUMNNAME_ZZNoLearners = "ZZNoLearners";
@@ -323,6 +342,15 @@ s site
 
 	/** Get Program Type	  */
 	public String getZZProgramType();
+
+    /** Column name ZZSurname */
+    public static final String COLUMNNAME_ZZSurname = "ZZSurname";
+
+	/** Set Surname	  */
+	public void setZZSurname (String ZZSurname);
+
+	/** Get Surname	  */
+	public String getZZSurname();
 
     /** Column name ZZTotalNumberApplied */
     public static final String COLUMNNAME_ZZTotalNumberApplied = "ZZTotalNumberApplied";

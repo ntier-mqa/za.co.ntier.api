@@ -18,7 +18,7 @@ package za.co.ntier.api.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import org.compiere.model.*;
+
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for C_BPartner

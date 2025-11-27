@@ -22,18 +22,18 @@ import java.sql.Timestamp;
 import org.compiere.model.MTable;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for ZZDetailSmallBusinesse
+/** Generated Interface for lkpNationality
  *  @author iDempiere (generated) 
  *  @version Release 12
  */
 @SuppressWarnings("all")
-public interface I_ZZDetailSmallBusinesse 
+public interface I_lkpNationality 
 {
 
-    /** TableName=ZZDetailSmallBusinesse */
-    public static final String Table_Name = "ZZDetailSmallBusinesse";
+    /** TableName=lkpNationality */
+    public static final String Table_Name = "lkpNationality";
 
-    /** AD_Table_ID=1000063 */
+    /** AD_Table_ID=1000073 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -81,6 +81,19 @@ public interface I_ZZDetailSmallBusinesse
 	  */
 	public int getCreatedBy();
 
+    /** Column name Description */
+    public static final String COLUMNNAME_Description = "Description";
+
+	/** Set Description.
+	  * Optional short description of the record
+	  */
+	public void setDescription (String Description);
+
+	/** Get Description.
+	  * Optional short description of the record
+	  */
+	public String getDescription();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -93,6 +106,15 @@ public interface I_ZZDetailSmallBusinesse
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name SAQACode */
+    public static final String COLUMNNAME_SAQACode = "SAQACode";
+
+	/** Set SAQACode	  */
+	public void setSAQACode (String SAQACode);
+
+	/** Get SAQACode	  */
+	public String getSAQACode();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -110,89 +132,75 @@ public interface I_ZZDetailSmallBusinesse
 	  */
 	public int getUpdatedBy();
 
-    /** Column name ZZBusinessesName */
-    public static final String COLUMNNAME_ZZBusinessesName = "ZZBusinessesName";
+    /** Column name datecreated */
+    public static final String COLUMNNAME_datecreated = "datecreated";
 
-	/** Set Businesses Name.
-	  * Name of business/cooperative/NPO/NGO/CBO to be supported
-	  */
-	public void setZZBusinessesName (String ZZBusinessesName);
+	/** Set datecreated	  */
+	public void setdatecreated (Timestamp datecreated);
 
-	/** Get Businesses Name.
-	  * Name of business/cooperative/NPO/NGO/CBO to be supported
-	  */
-	public String getZZBusinessesName();
+	/** Get datecreated	  */
+	public Timestamp getdatecreated();
 
-    /** Column name ZZDetailSmallBusinesse_ID */
-    public static final String COLUMNNAME_ZZDetailSmallBusinesse_ID = "ZZDetailSmallBusinesse_ID";
+    /** Column name dateupdated */
+    public static final String COLUMNNAME_dateupdated = "dateupdated";
 
-	/** Set Detail Small Businesse.
-	  * LIST OF BUSINESSES/COOPERATIVES/NPO/NGO/CBO TO BE SUPPORTED AND TRAINING PROGRAMMES
-	  */
-	public void setZZDetailSmallBusinesse_ID (int ZZDetailSmallBusinesse_ID);
+	/** Set dateupdated	  */
+	public void setdateupdated (Timestamp dateupdated);
 
-	/** Get Detail Small Businesse.
-	  * LIST OF BUSINESSES/COOPERATIVES/NPO/NGO/CBO TO BE SUPPORTED AND TRAINING PROGRAMMES
-	  */
-	public int getZZDetailSmallBusinesse_ID();
+	/** Get dateupdated	  */
+	public Timestamp getdateupdated();
 
-    /** Column name ZZDetailSmallBusinesse_UU */
-    public static final String COLUMNNAME_ZZDetailSmallBusinesse_UU = "ZZDetailSmallBusinesse_UU";
+    /** Column name id */
+    public static final String COLUMNNAME_id = "id";
 
-	/** Set ZZDetailSmallBusinesse_UU	  */
-	public void setZZDetailSmallBusinesse_UU (String ZZDetailSmallBusinesse_UU);
+	/** Set id	  */
+	public void setid (String id);
 
-	/** Get ZZDetailSmallBusinesse_UU	  */
-	public String getZZDetailSmallBusinesse_UU();
+	/** Get id	  */
+	public String getid();
 
-    /** Column name ZZNoCreditOffered */
-    public static final String COLUMNNAME_ZZNoCreditOffered = "ZZNoCreditOffered";
+    /** Column name isdeleted */
+    public static final String COLUMNNAME_isdeleted = "isdeleted";
 
-	/** Set No Of Credit Offered	  */
-	public void setZZNoCreditOffered (int ZZNoCreditOffered);
+	/** Set isdeleted	  */
+	public void setisdeleted (BigDecimal isdeleted);
 
-	/** Get No Of Credit Offered	  */
-	public int getZZNoCreditOffered();
+	/** Get isdeleted	  */
+	public BigDecimal getisdeleted();
 
-    /** Column name ZZNoTrainees */
-    public static final String COLUMNNAME_ZZNoTrainees = "ZZNoTrainees";
+    /** Column name lkpNationality_ID */
+    public static final String COLUMNNAME_lkpNationality_ID = "lkpNationality_ID";
 
-	/** Set No Trainees	  */
-	public void setZZNoTrainees (int ZZNoTrainees);
+	/** Set Nationality	  */
+	public void setlkpNationality_ID (int lkpNationality_ID);
 
-	/** Get No Trainees	  */
-	public int getZZNoTrainees();
+	/** Get Nationality	  */
+	public int getlkpNationality_ID();
 
-    /** Column name ZZNoTrainingDay */
-    public static final String COLUMNNAME_ZZNoTrainingDay = "ZZNoTrainingDay";
+    /** Column name lkpNationality_UU */
+    public static final String COLUMNNAME_lkpNationality_UU = "lkpNationality_UU";
 
-	/** Set Duration Training Day.
-	  * Duration Of Training In Day
-	  */
-	public void setZZNoTrainingDay (int ZZNoTrainingDay);
+	/** Set lkpNationality_UU	  */
+	public void setlkpNationality_UU (String lkpNationality_UU);
 
-	/** Get Duration Training Day.
-	  * Duration Of Training In Day
-	  */
-	public int getZZNoTrainingDay();
+	/** Get lkpNationality_UU	  */
+	public String getlkpNationality_UU();
 
-    /** Column name ZZProgrammeName */
-    public static final String COLUMNNAME_ZZProgrammeName = "ZZProgrammeName";
+    /** Column name sysendtime */
+    public static final String COLUMNNAME_sysendtime = "sysendtime";
 
-	/** Set Programme Name	  */
-	public void setZZProgrammeName (String ZZProgrammeName);
+	/** Set sysendtime	  */
+	public void setsysendtime (Timestamp sysendtime);
 
-	/** Get Programme Name	  */
-	public String getZZProgrammeName();
+	/** Get sysendtime	  */
+	public Timestamp getsysendtime();
 
-    /** Column name ZZ_Application_Form_ID */
-    public static final String COLUMNNAME_ZZ_Application_Form_ID = "ZZ_Application_Form_ID";
+    /** Column name sysstarttime */
+    public static final String COLUMNNAME_sysstarttime = "sysstarttime";
 
-	/** Set Application Form	  */
-	public void setZZ_Application_Form_ID (int ZZ_Application_Form_ID);
+	/** Set sysstarttime	  */
+	public void setsysstarttime (Timestamp sysstarttime);
 
-	/** Get Application Form	  */
-	public int getZZ_Application_Form_ID();
-
-	public I_ZZ_Application_Form getZZ_Application_Form() throws RuntimeException;
+	/** Get sysstarttime	  */
+	public Timestamp getsysstarttime();
 }

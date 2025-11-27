@@ -20,7 +20,11 @@ package za.co.ntier.api.model;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
-import org.compiere.model.*;
+
+import org.compiere.model.I_Persistent;
+import org.compiere.model.MTable;
+import org.compiere.model.PO;
+import org.compiere.model.POInfo;
 
 /** Generated Model for ZZ_Application_Form
  *  @author iDempiere (generated)
@@ -32,7 +36,7 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250929L;
+	private static final long serialVersionUID = 20251023L;
 
     /** Standard Constructor */
     public X_ZZ_Application_Form (Properties ctx, int ZZ_Application_Form_ID, String trxName)
@@ -376,6 +380,21 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 		return (String)get_Value(COLUMNNAME_ZZCollegeSla);
 	}
 
+	/** Set First Name.
+		@param ZZFirstName First Name
+	*/
+	public void setZZFirstName (String ZZFirstName)
+	{
+		set_Value (COLUMNNAME_ZZFirstName, ZZFirstName);
+	}
+
+	/** Get First Name.
+		@return First Name	  */
+	public String getZZFirstName()
+	{
+		return (String)get_Value(COLUMNNAME_ZZFirstName);
+	}
+
 	/** ZZHasPastParticipatedLecturer AD_Reference_ID=319 */
 	public static final int ZZHASPASTPARTICIPATEDLECTURER_AD_Reference_ID=319;
 	/** No = N */
@@ -397,6 +416,21 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	public String getZZHasPastParticipatedLecturer()
 	{
 		return (String)get_Value(COLUMNNAME_ZZHasPastParticipatedLecturer);
+	}
+
+	/** Set Middle Name.
+		@param ZZMiddleName Middle Name
+	*/
+	public void setZZMiddleName (String ZZMiddleName)
+	{
+		set_Value (COLUMNNAME_ZZMiddleName, ZZMiddleName);
+	}
+
+	/** Get Middle Name.
+		@return Middle Name	  */
+	public String getZZMiddleName()
+	{
+		return (String)get_Value(COLUMNNAME_ZZMiddleName);
 	}
 
 	/** Set No Learners.
@@ -507,6 +541,21 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 		return (String)get_Value(COLUMNNAME_ZZProgramType);
 	}
 
+	/** Set Surname.
+		@param ZZSurname Surname
+	*/
+	public void setZZSurname (String ZZSurname)
+	{
+		set_Value (COLUMNNAME_ZZSurname, ZZSurname);
+	}
+
+	/** Get Surname.
+		@return Surname	  */
+	public String getZZSurname()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSurname);
+	}
+
 	/** Set Total Number Applied For.
 		@param ZZTotalNumberApplied Total Number Applied For
 	*/
@@ -590,6 +639,8 @@ public class X_ZZ_Application_Form extends PO implements I_ZZ_Application_Form, 
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
+	/** Not Approved by Snr Manager = NA */
+	public static final String ZZ_DOCSTATUS_NotApprovedBySnrManager = "NA";
 	/** Not Approved By Manager Finance Consumables = NC */
 	public static final String ZZ_DOCSTATUS_NotApprovedByManagerFinanceConsumables = "NC";
 	/** Not Approved By SDL Finance Mgr = ND */

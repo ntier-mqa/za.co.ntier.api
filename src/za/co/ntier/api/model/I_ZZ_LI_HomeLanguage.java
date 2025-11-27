@@ -22,18 +22,18 @@ import java.sql.Timestamp;
 import org.compiere.model.MTable;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for ZZDetailSmallBusinesse
+/** Generated Interface for ZZ_LI_HomeLanguage
  *  @author iDempiere (generated) 
  *  @version Release 12
  */
 @SuppressWarnings("all")
-public interface I_ZZDetailSmallBusinesse 
+public interface I_ZZ_LI_HomeLanguage 
 {
 
-    /** TableName=ZZDetailSmallBusinesse */
-    public static final String Table_Name = "ZZDetailSmallBusinesse";
+    /** TableName=ZZ_LI_HomeLanguage */
+    public static final String Table_Name = "ZZ_LI_HomeLanguage";
 
-    /** AD_Table_ID=1000063 */
+    /** AD_Table_ID=1000070 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -81,6 +81,32 @@ public interface I_ZZDetailSmallBusinesse
 	  */
 	public int getCreatedBy();
 
+    /** Column name Description */
+    public static final String COLUMNNAME_Description = "Description";
+
+	/** Set Description.
+	  * Optional short description of the record
+	  */
+	public void setDescription (String Description);
+
+	/** Get Description.
+	  * Optional short description of the record
+	  */
+	public String getDescription();
+
+    /** Column name Help */
+    public static final String COLUMNNAME_Help = "Help";
+
+	/** Set Comment/Help.
+	  * Comment or Hint
+	  */
+	public void setHelp (String Help);
+
+	/** Get Comment/Help.
+	  * Comment or Hint
+	  */
+	public String getHelp();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -93,6 +119,19 @@ public interface I_ZZDetailSmallBusinesse
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name Name */
+    public static final String COLUMNNAME_Name = "Name";
+
+	/** Set Name.
+	  * Alphanumeric identifier of the entity
+	  */
+	public void setName (String Name);
+
+	/** Get Name.
+	  * Alphanumeric identifier of the entity
+	  */
+	public String getName();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -110,89 +149,34 @@ public interface I_ZZDetailSmallBusinesse
 	  */
 	public int getUpdatedBy();
 
-    /** Column name ZZBusinessesName */
-    public static final String COLUMNNAME_ZZBusinessesName = "ZZBusinessesName";
+    /** Column name Value */
+    public static final String COLUMNNAME_Value = "Value";
 
-	/** Set Businesses Name.
-	  * Name of business/cooperative/NPO/NGO/CBO to be supported
+	/** Set Search Key.
+	  * Search key for the record in the format required - must be unique
 	  */
-	public void setZZBusinessesName (String ZZBusinessesName);
+	public void setValue (String Value);
 
-	/** Get Businesses Name.
-	  * Name of business/cooperative/NPO/NGO/CBO to be supported
+	/** Get Search Key.
+	  * Search key for the record in the format required - must be unique
 	  */
-	public String getZZBusinessesName();
+	public String getValue();
 
-    /** Column name ZZDetailSmallBusinesse_ID */
-    public static final String COLUMNNAME_ZZDetailSmallBusinesse_ID = "ZZDetailSmallBusinesse_ID";
+    /** Column name ZZ_LI_HomeLanguage_ID */
+    public static final String COLUMNNAME_ZZ_LI_HomeLanguage_ID = "ZZ_LI_HomeLanguage_ID";
 
-	/** Set Detail Small Businesse.
-	  * LIST OF BUSINESSES/COOPERATIVES/NPO/NGO/CBO TO BE SUPPORTED AND TRAINING PROGRAMMES
-	  */
-	public void setZZDetailSmallBusinesse_ID (int ZZDetailSmallBusinesse_ID);
+	/** Set HomeLanguage	  */
+	public void setZZ_LI_HomeLanguage_ID (int ZZ_LI_HomeLanguage_ID);
 
-	/** Get Detail Small Businesse.
-	  * LIST OF BUSINESSES/COOPERATIVES/NPO/NGO/CBO TO BE SUPPORTED AND TRAINING PROGRAMMES
-	  */
-	public int getZZDetailSmallBusinesse_ID();
+	/** Get HomeLanguage	  */
+	public int getZZ_LI_HomeLanguage_ID();
 
-    /** Column name ZZDetailSmallBusinesse_UU */
-    public static final String COLUMNNAME_ZZDetailSmallBusinesse_UU = "ZZDetailSmallBusinesse_UU";
+    /** Column name ZZ_LI_HomeLanguage_UU */
+    public static final String COLUMNNAME_ZZ_LI_HomeLanguage_UU = "ZZ_LI_HomeLanguage_UU";
 
-	/** Set ZZDetailSmallBusinesse_UU	  */
-	public void setZZDetailSmallBusinesse_UU (String ZZDetailSmallBusinesse_UU);
+	/** Set ZZ_LI_HomeLanguage_UU	  */
+	public void setZZ_LI_HomeLanguage_UU (String ZZ_LI_HomeLanguage_UU);
 
-	/** Get ZZDetailSmallBusinesse_UU	  */
-	public String getZZDetailSmallBusinesse_UU();
-
-    /** Column name ZZNoCreditOffered */
-    public static final String COLUMNNAME_ZZNoCreditOffered = "ZZNoCreditOffered";
-
-	/** Set No Of Credit Offered	  */
-	public void setZZNoCreditOffered (int ZZNoCreditOffered);
-
-	/** Get No Of Credit Offered	  */
-	public int getZZNoCreditOffered();
-
-    /** Column name ZZNoTrainees */
-    public static final String COLUMNNAME_ZZNoTrainees = "ZZNoTrainees";
-
-	/** Set No Trainees	  */
-	public void setZZNoTrainees (int ZZNoTrainees);
-
-	/** Get No Trainees	  */
-	public int getZZNoTrainees();
-
-    /** Column name ZZNoTrainingDay */
-    public static final String COLUMNNAME_ZZNoTrainingDay = "ZZNoTrainingDay";
-
-	/** Set Duration Training Day.
-	  * Duration Of Training In Day
-	  */
-	public void setZZNoTrainingDay (int ZZNoTrainingDay);
-
-	/** Get Duration Training Day.
-	  * Duration Of Training In Day
-	  */
-	public int getZZNoTrainingDay();
-
-    /** Column name ZZProgrammeName */
-    public static final String COLUMNNAME_ZZProgrammeName = "ZZProgrammeName";
-
-	/** Set Programme Name	  */
-	public void setZZProgrammeName (String ZZProgrammeName);
-
-	/** Get Programme Name	  */
-	public String getZZProgrammeName();
-
-    /** Column name ZZ_Application_Form_ID */
-    public static final String COLUMNNAME_ZZ_Application_Form_ID = "ZZ_Application_Form_ID";
-
-	/** Set Application Form	  */
-	public void setZZ_Application_Form_ID (int ZZ_Application_Form_ID);
-
-	/** Get Application Form	  */
-	public int getZZ_Application_Form_ID();
-
-	public I_ZZ_Application_Form getZZ_Application_Form() throws RuntimeException;
+	/** Get ZZ_LI_HomeLanguage_UU	  */
+	public String getZZ_LI_HomeLanguage_UU();
 }
