@@ -237,6 +237,17 @@ public interface I_ZZSubAnnex
 
 	public I_ZZ_Application_Form getZZ_Application_Form() throws RuntimeException;
 
+    /** Column name ZZ_Disciplines_ID */
+    public static final String COLUMNNAME_ZZ_Disciplines_ID = "ZZ_Disciplines_ID";
+
+	/** Set Disciplines	  */
+	public void setZZ_Disciplines_ID (int ZZ_Disciplines_ID);
+
+	/** Get Disciplines	  */
+	public int getZZ_Disciplines_ID();
+
+	public I_ZZ_Disciplines getZZ_Disciplines() throws RuntimeException;
+
     /** Column name ZZ_Trade_ID */
     public static final String COLUMNNAME_ZZ_Trade_ID = "ZZ_Trade_ID";
 

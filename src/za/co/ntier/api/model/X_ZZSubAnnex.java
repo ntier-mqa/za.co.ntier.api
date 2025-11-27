@@ -31,7 +31,7 @@ public class X_ZZSubAnnex extends PO implements I_ZZSubAnnex, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250929L;
+	private static final long serialVersionUID = 20251127L;
 
     /** Standard Constructor */
     public X_ZZSubAnnex (Properties ctx, int ZZSubAnnex_ID, String trxName)
@@ -325,6 +325,33 @@ public class X_ZZSubAnnex extends PO implements I_ZZSubAnnex, I_Persistent
 	public int getZZ_Application_Form_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Application_Form_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZ_Disciplines getZZ_Disciplines() throws RuntimeException
+	{
+		return (I_ZZ_Disciplines)MTable.get(getCtx(), I_ZZ_Disciplines.Table_ID)
+			.getPO(getZZ_Disciplines_ID(), get_TrxName());
+	}
+
+	/** Set Disciplines.
+		@param ZZ_Disciplines_ID Disciplines
+	*/
+	public void setZZ_Disciplines_ID (int ZZ_Disciplines_ID)
+	{
+		if (ZZ_Disciplines_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_Disciplines_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_Disciplines_ID, Integer.valueOf(ZZ_Disciplines_ID));
+	}
+
+	/** Get Disciplines.
+		@return Disciplines	  */
+	public int getZZ_Disciplines_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Disciplines_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
