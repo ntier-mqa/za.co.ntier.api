@@ -21,60 +21,50 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import org.compiere.model.*;
 
-/** Generated Model for ZZSdf
+/** Generated Model for ZZSdfOrganisation_v
  *  @author iDempiere (generated)
  *  @version Release 12 - $Id$ */
-@org.adempiere.base.Model(table="ZZSdf")
-public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
+@org.adempiere.base.Model(table="ZZSdfOrganisation_v")
+public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, I_Persistent
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251206L;
+	private static final long serialVersionUID = 20251202L;
 
     /** Standard Constructor */
-    public X_ZZSdf (Properties ctx, int ZZSdf_ID, String trxName)
+    public X_ZZSdfOrganisation_v (Properties ctx, String ZZSdfOrganisation_v_UU, String trxName)
     {
-      super (ctx, ZZSdf_ID, trxName);
-      /** if (ZZSdf_ID == 0)
+      super (ctx, ZZSdfOrganisation_v_UU, trxName);
+      /** if (ZZSdfOrganisation_v_UU == null)
         {
-			setZZSdf_ID (0);
+			setZZActingForEmployer (false);
+// N
+			setZZReplacingPrimarySDF (false);
+// N
+			setZZSecondarySdf (false);
+// N
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZSdf (Properties ctx, int ZZSdf_ID, String trxName, String ... virtualColumns)
+    public X_ZZSdfOrganisation_v (Properties ctx, String ZZSdfOrganisation_v_UU, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZSdf_ID, trxName, virtualColumns);
-      /** if (ZZSdf_ID == 0)
+      super (ctx, ZZSdfOrganisation_v_UU, trxName, virtualColumns);
+      /** if (ZZSdfOrganisation_v_UU == null)
         {
-			setZZSdf_ID (0);
-        } */
-    }
-
-    /** Standard Constructor */
-    public X_ZZSdf (Properties ctx, String ZZSdf_UU, String trxName)
-    {
-      super (ctx, ZZSdf_UU, trxName);
-      /** if (ZZSdf_UU == null)
-        {
-			setZZSdf_ID (0);
-        } */
-    }
-
-    /** Standard Constructor */
-    public X_ZZSdf (Properties ctx, String ZZSdf_UU, String trxName, String ... virtualColumns)
-    {
-      super (ctx, ZZSdf_UU, trxName, virtualColumns);
-      /** if (ZZSdf_UU == null)
-        {
-			setZZSdf_ID (0);
+			setZZActingForEmployer (false);
+// N
+			setZZReplacingPrimarySDF (false);
+// N
+			setZZSecondarySdf (false);
+// N
         } */
     }
 
     /** Load Constructor */
-    public X_ZZSdf (Properties ctx, ResultSet rs, String trxName)
+    public X_ZZSdfOrganisation_v (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -96,37 +86,101 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 
     public String toString()
     {
-      StringBuilder sb = new StringBuilder ("X_ZZSdf[")
+      StringBuilder sb = new StringBuilder ("X_ZZSdfOrganisation_v[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
 
-	public org.compiere.model.I_AD_User getAD_User() throws RuntimeException
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException
 	{
-		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
-			.getPO(getAD_User_ID(), get_TrxName());
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getC_BPartner_ID(), get_TrxName());
 	}
 
-	/** Set User/Contact.
-		@param AD_User_ID User within the system - Internal or Business Partner Contact
+	/** Set Business Partner.
+		@param C_BPartner_ID Identifies a Business Partner
 	*/
-	public void setAD_User_ID (int AD_User_ID)
+	public void setC_BPartner_ID (int C_BPartner_ID)
 	{
-		if (AD_User_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_AD_User_ID, null);
+		if (C_BPartner_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_C_BPartner_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_AD_User_ID, Integer.valueOf(AD_User_ID));
+			set_ValueNoCheck (COLUMNNAME_C_BPartner_ID, Integer.valueOf(C_BPartner_ID));
 	}
 
-	/** Get User/Contact.
-		@return User within the system - Internal or Business Partner Contact
+	/** Get Business Partner.
+		@return Identifies a Business Partner
 	  */
-	public int getAD_User_ID()
+	public int getC_BPartner_ID()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_AD_User_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_C_BPartner_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set EMail Address.
+		@param EMail Electronic Mail Address
+	*/
+	public void setEMail (String EMail)
+	{
+		set_Value (COLUMNNAME_EMail, EMail);
+	}
+
+	/** Get EMail Address.
+		@return Electronic Mail Address
+	  */
+	public String getEMail()
+	{
+		return (String)get_Value(COLUMNNAME_EMail);
+	}
+
+	/** Set Organization Name.
+		@param OrgName Name of the Organization
+	*/
+	public void setOrgName (String OrgName)
+	{
+		set_ValueNoCheck (COLUMNNAME_OrgName, OrgName);
+	}
+
+	/** Get Organization Name.
+		@return Name of the Organization
+	  */
+	public String getOrgName()
+	{
+		return (String)get_Value(COLUMNNAME_OrgName);
+	}
+
+	/** Set Phone.
+		@param Phone Identifies a telephone number
+	*/
+	public void setPhone (String Phone)
+	{
+		set_ValueNoCheck (COLUMNNAME_Phone, Phone);
+	}
+
+	/** Get Phone.
+		@return Identifies a telephone number
+	  */
+	public String getPhone()
+	{
+		return (String)get_Value(COLUMNNAME_Phone);
+	}
+
+	/** Set 2nd Phone.
+		@param Phone2 Identifies an alternate telephone number.
+	*/
+	public void setPhone2 (String Phone2)
+	{
+		set_Value (COLUMNNAME_Phone2, Phone2);
+	}
+
+	/** Get 2nd Phone.
+		@return Identifies an alternate telephone number.
+	  */
+	public String getPhone2()
+	{
+		return (String)get_Value(COLUMNNAME_Phone2);
 	}
 
 	/** Set Accredited Training Provider.
@@ -144,6 +198,54 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 		return (String)get_Value(COLUMNNAME_ZZAccreditedTrainingProvider);
 	}
 
+	/** Set Acting For Employer.
+		@param ZZActingForEmployer Consultant acting for Employer?
+	*/
+	public void setZZActingForEmployer (boolean ZZActingForEmployer)
+	{
+		set_Value (COLUMNNAME_ZZActingForEmployer, Boolean.valueOf(ZZActingForEmployer));
+	}
+
+	/** Get Acting For Employer.
+		@return Consultant acting for Employer?
+	  */
+	public boolean isZZActingForEmployer()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZActingForEmployer);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Nominated by employees = Employees */
+	public static final String ZZAPPOINTMENTPROCEDURE_NominatedByEmployees = "Employees";
+	/** Appointed by employer = Employer */
+	public static final String ZZAPPOINTMENTPROCEDURE_AppointedByEmployer = "Employer";
+	/** Other, If other please specify = Other */
+	public static final String ZZAPPOINTMENTPROCEDURE_OtherIfOtherPleaseSpecify = "Other";
+	/** Self-appointed = Self */
+	public static final String ZZAPPOINTMENTPROCEDURE_Self_Appointed = "Self";
+	/** Set Appointment Procedure.
+		@param ZZAppointmentProcedure Please indicate method of appointment to SDF position
+	*/
+	public void setZZAppointmentProcedure (String ZZAppointmentProcedure)
+	{
+
+		set_Value (COLUMNNAME_ZZAppointmentProcedure, ZZAppointmentProcedure);
+	}
+
+	/** Get Appointment Procedure.
+		@return Please indicate method of appointment to SDF position
+	  */
+	public String getZZAppointmentProcedure()
+	{
+		return (String)get_Value(COLUMNNAME_ZZAppointmentProcedure);
+	}
+
 	/** Set Current Occupation.
 		@param ZZCurrentOccupation Current Occupation
 	*/
@@ -159,46 +261,19 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 		return (String)get_Value(COLUMNNAME_ZZCurrentOccupation);
 	}
 
-	/** African = Afr */
-	public static final String ZZEQUITY_African = "Afr";
-	/** Coloured = Col */
-	public static final String ZZEQUITY_Coloured = "Col";
-	/** Indian = Ind */
-	public static final String ZZEQUITY_Indian = "Ind";
-	/** White = Wh */
-	public static final String ZZEQUITY_White = "Wh";
-	/** Set Equity.
-		@param ZZEquity Equity
+	/** Set Experience.
+		@param ZZExperience Experience
 	*/
-	public void setZZEquity (String ZZEquity)
+	public void setZZExperience (String ZZExperience)
 	{
-
-		set_Value (COLUMNNAME_ZZEquity, ZZEquity);
+		set_Value (COLUMNNAME_ZZExperience, ZZExperience);
 	}
 
-	/** Get Equity.
-		@return Equity	  */
-	public String getZZEquity()
+	/** Get Experience.
+		@return Experience	  */
+	public String getZZExperience()
 	{
-		return (String)get_Value(COLUMNNAME_ZZEquity);
-	}
-
-	/** Set Experience (Years).
-		@param ZZExperience Experience (Years)
-	*/
-	public void setZZExperience (int ZZExperience)
-	{
-		set_Value (COLUMNNAME_ZZExperience, Integer.valueOf(ZZExperience));
-	}
-
-	/** Get Experience (Years).
-		@return Experience (Years)	  */
-	public int getZZExperience()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZExperience);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
+		return (String)get_Value(COLUMNNAME_ZZExperience);
 	}
 
 	/** Set First Name.
@@ -216,43 +291,6 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 		return (String)get_Value(COLUMNNAME_ZZFirstName);
 	}
 
-	/** Famale = F */
-	public static final String ZZGENDER_Famale = "F";
-	/** Male = M */
-	public static final String ZZGENDER_Male = "M";
-	/** Other = O */
-	public static final String ZZGENDER_Other = "O";
-	/** Set Gender.
-		@param ZZGender Gender
-	*/
-	public void setZZGender (String ZZGender)
-	{
-
-		set_Value (COLUMNNAME_ZZGender, ZZGender);
-	}
-
-	/** Get Gender.
-		@return Gender	  */
-	public String getZZGender()
-	{
-		return (String)get_Value(COLUMNNAME_ZZGender);
-	}
-
-	/** Set General Comments.
-		@param ZZGeneralComments General Comments
-	*/
-	public void setZZGeneralComments (String ZZGeneralComments)
-	{
-		set_Value (COLUMNNAME_ZZGeneralComments, ZZGeneralComments);
-	}
-
-	/** Get General Comments.
-		@return General Comments	  */
-	public String getZZGeneralComments()
-	{
-		return (String)get_Value(COLUMNNAME_ZZGeneralComments);
-	}
-
 	/** Set Highest Education Description.
 		@param ZZHighestEducationDesc Highest Education Description
 	*/
@@ -266,56 +304,6 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	public String getZZHighestEducationDesc()
 	{
 		return (String)get_Value(COLUMNNAME_ZZHighestEducationDesc);
-	}
-
-	/** Set Initials.
-		@param ZZInitials Initials
-	*/
-	public void setZZInitials (String ZZInitials)
-	{
-		set_Value (COLUMNNAME_ZZInitials, ZZInitials);
-	}
-
-	/** Get Initials.
-		@return Initials	  */
-	public String getZZInitials()
-	{
-		return (String)get_Value(COLUMNNAME_ZZInitials);
-	}
-
-	/** Adv = Adv */
-	public static final String ZZLKPTITLE_Adv = "Adv";
-	/** Dr = Dr */
-	public static final String ZZLKPTITLE_Dr = "Dr";
-	/** Me = Me */
-	public static final String ZZLKPTITLE_Me = "Me";
-	/** Miss = Miss */
-	public static final String ZZLKPTITLE_Miss = "Miss";
-	/** Mr = Mr */
-	public static final String ZZLKPTITLE_Mr = "Mr";
-	/** Mrs = Mrs */
-	public static final String ZZLKPTITLE_Mrs = "Mrs";
-	/** Ms = Ms */
-	public static final String ZZLKPTITLE_Ms = "Ms";
-	/** Other = Other */
-	public static final String ZZLKPTITLE_Other = "Other";
-	/** Prof = Prof */
-	public static final String ZZLKPTITLE_Prof = "Prof";
-	/** Set Title.
-		@param ZZLkpTitle Lkp Title
-	*/
-	public void setZZLkpTitle (String ZZLkpTitle)
-	{
-
-		set_Value (COLUMNNAME_ZZLkpTitle, ZZLkpTitle);
-	}
-
-	/** Get Title.
-		@return Lkp Title
-	  */
-	public String getZZLkpTitle()
-	{
-		return (String)get_Value(COLUMNNAME_ZZLkpTitle);
 	}
 
 	/** Set Middle Name.
@@ -333,40 +321,130 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 		return (String)get_Value(COLUMNNAME_ZZMiddleName);
 	}
 
-	/** Set Sdf.
-		@param ZZSdf_ID Sdf
+	/** Set Replacing Primary SDF.
+		@param ZZReplacingPrimarySDF Are you replacing the previous primary SDF of this Company?
 	*/
-	public void setZZSdf_ID (int ZZSdf_ID)
+	public void setZZReplacingPrimarySDF (boolean ZZReplacingPrimarySDF)
 	{
-		if (ZZSdf_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZSdf_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZSdf_ID, Integer.valueOf(ZZSdf_ID));
+		set_Value (COLUMNNAME_ZZReplacingPrimarySDF, Boolean.valueOf(ZZReplacingPrimarySDF));
 	}
 
-	/** Get Sdf.
-		@return Sdf	  */
-	public int getZZSdf_ID()
+	/** Get Replacing Primary SDF.
+		@return Are you replacing the previous primary SDF of this Company?
+	  */
+	public boolean isZZReplacingPrimarySDF()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZSdf_ID);
+		Object oo = get_Value(COLUMNNAME_ZZReplacingPrimarySDF);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Group of organisations = Group */
+	public static final String ZZSDFFUNCTION_GroupOfOrganisations = "Group";
+	/** Multiple organisations = Multiple */
+	public static final String ZZSDFFUNCTION_MultipleOrganisations = "Multiple";
+	/** Multiple branch of an organisation = Multiple branch */
+	public static final String ZZSDFFUNCTION_MultipleBranchOfAnOrganisation = "Multiple branch";
+	/** Single establishment = Single */
+	public static final String ZZSDFFUNCTION_SingleEstablishment = "Single";
+	/** Single branch of an organisation = Single branch */
+	public static final String ZZSDFFUNCTION_SingleBranchOfAnOrganisation = "Single branch";
+	/** Set Sdf Function.
+		@param ZZSdfFunction Will you perform your SDF function in respect of
+	*/
+	public void setZZSdfFunction (String ZZSdfFunction)
+	{
+
+		set_Value (COLUMNNAME_ZZSdfFunction, ZZSdfFunction);
+	}
+
+	/** Get Sdf Function.
+		@return Will you perform your SDF function in respect of
+	  */
+	public String getZZSdfFunction()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSdfFunction);
+	}
+
+	public I_ZZSdfOrganisation getZZSdfOrganisation() throws RuntimeException
+	{
+		return (I_ZZSdfOrganisation)MTable.get(getCtx(), I_ZZSdfOrganisation.Table_ID)
+			.getPO(getZZSdfOrganisation_ID(), get_TrxName());
+	}
+
+	/** Set SDF Organisation.
+		@param ZZSdfOrganisation_ID Link Organisation And SDF
+	*/
+	public void setZZSdfOrganisation_ID (int ZZSdfOrganisation_ID)
+	{
+		if (ZZSdfOrganisation_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZSdfOrganisation_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZSdfOrganisation_ID, Integer.valueOf(ZZSdfOrganisation_ID));
+	}
+
+	/** Get SDF Organisation.
+		@return Link Organisation And SDF
+	  */
+	public int getZZSdfOrganisation_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZSdfOrganisation_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
 	}
 
-	/** Set ZZSdf_UU.
-		@param ZZSdf_UU ZZSdf_UU
+	/** Approved = Approved */
+	public static final String ZZSDFSTATUS_Approved = "Approved";
+	/** Deactivated = Deactivated */
+	public static final String ZZSDFSTATUS_Deactivated = "Deactivated";
+	/** Pending = Pending */
+	public static final String ZZSDFSTATUS_Pending = "Pending";
+	/** Rejected = Rejected */
+	public static final String ZZSDFSTATUS_Rejected = "Rejected";
+	/** Set Sdf Status.
+		@param ZZSdfStatus Status Of Organisation Link
 	*/
-	public void setZZSdf_UU (String ZZSdf_UU)
+	public void setZZSdfStatus (String ZZSdfStatus)
 	{
-		set_Value (COLUMNNAME_ZZSdf_UU, ZZSdf_UU);
+
+		set_Value (COLUMNNAME_ZZSdfStatus, ZZSdfStatus);
 	}
 
-	/** Get ZZSdf_UU.
-		@return ZZSdf_UU	  */
-	public String getZZSdf_UU()
+	/** Get Sdf Status.
+		@return Status Of Organisation Link
+	  */
+	public String getZZSdfStatus()
 	{
-		return (String)get_Value(COLUMNNAME_ZZSdf_UU);
+		return (String)get_Value(COLUMNNAME_ZZSdfStatus);
+	}
+
+	/** Set Secondary Sdf.
+		@param ZZSecondarySdf Are you registering as secondary SDF for this Company?
+	*/
+	public void setZZSecondarySdf (boolean ZZSecondarySdf)
+	{
+		set_Value (COLUMNNAME_ZZSecondarySdf, Boolean.valueOf(ZZSecondarySdf));
+	}
+
+	/** Get Secondary Sdf.
+		@return Are you registering as secondary SDF for this Company?
+	  */
+	public boolean isZZSecondarySdf()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZSecondarySdf);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	/** Set Surname.
@@ -397,33 +475,6 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	public int getZZYearsInOccupation()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZYearsInOccupation);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException
-	{
-		return (I_ZZ_AlternateIDType)MTable.get(getCtx(), I_ZZ_AlternateIDType.Table_ID)
-			.getPO(getZZ_AlternateIDType_ID(), get_TrxName());
-	}
-
-	/** Set Alternate ID Type.
-		@param ZZ_AlternateIDType_ID Alternate ID Type
-	*/
-	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID)
-	{
-		if (ZZ_AlternateIDType_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_AlternateIDType_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_AlternateIDType_ID, Integer.valueOf(ZZ_AlternateIDType_ID));
-	}
-
-	/** Get Alternate ID Type.
-		@return Alternate ID Type	  */
-	public int getZZ_AlternateIDType_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_AlternateIDType_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -535,7 +586,7 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	public void setZZ_DocStatus (String ZZ_DocStatus)
 	{
 
-		set_Value (COLUMNNAME_ZZ_DocStatus, ZZ_DocStatus);
+		set_ValueNoCheck (COLUMNNAME_ZZ_DocStatus, ZZ_DocStatus);
 	}
 
 	/** Get Document Status.
@@ -558,60 +609,6 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	public String getZZ_ID_Passport_No()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_ID_Passport_No);
-	}
-
-	public I_ZZ_LI_CitizenResidentialStatus getZZ_LI_CitizenResidentialStatus() throws RuntimeException
-	{
-		return (I_ZZ_LI_CitizenResidentialStatus)MTable.get(getCtx(), I_ZZ_LI_CitizenResidentialStatus.Table_ID)
-			.getPO(getZZ_LI_CitizenResidentialStatus_ID(), get_TrxName());
-	}
-
-	/** Set Citizen Residential Status.
-		@param ZZ_LI_CitizenResidentialStatus_ID Citizen Residential Status
-	*/
-	public void setZZ_LI_CitizenResidentialStatus_ID (int ZZ_LI_CitizenResidentialStatus_ID)
-	{
-		if (ZZ_LI_CitizenResidentialStatus_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, Integer.valueOf(ZZ_LI_CitizenResidentialStatus_ID));
-	}
-
-	/** Get Citizen Residential Status.
-		@return Citizen Residential Status	  */
-	public int getZZ_LI_CitizenResidentialStatus_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	public I_ZZ_LI_Disability getZZ_LI_Disability() throws RuntimeException
-	{
-		return (I_ZZ_LI_Disability)MTable.get(getCtx(), I_ZZ_LI_Disability.Table_ID)
-			.getPO(getZZ_LI_Disability_ID(), get_TrxName());
-	}
-
-	/** Set Disability.
-		@param ZZ_LI_Disability_ID Disability
-	*/
-	public void setZZ_LI_Disability_ID (int ZZ_LI_Disability_ID)
-	{
-		if (ZZ_LI_Disability_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_Disability_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_Disability_ID, Integer.valueOf(ZZ_LI_Disability_ID));
-	}
-
-	/** Get Disability.
-		@return Disability	  */
-	public int getZZ_LI_Disability_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_LI_Disability_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
 	}
 
 	public I_ZZ_LI_HighestEducation getZZ_LI_HighestEducation() throws RuntimeException
@@ -641,99 +638,18 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 		return ii.intValue();
 	}
 
-	public I_ZZ_LI_HomeLanguage getZZ_LI_HomeLanguage() throws RuntimeException
-	{
-		return (I_ZZ_LI_HomeLanguage)MTable.get(getCtx(), I_ZZ_LI_HomeLanguage.Table_ID)
-			.getPO(getZZ_LI_HomeLanguage_ID(), get_TrxName());
-	}
-
-	/** Set Home Language.
-		@param ZZ_LI_HomeLanguage_ID Home Language
+	/** Set SDL Number.
+		@param ZZ_SDL_No SDL Number
 	*/
-	public void setZZ_LI_HomeLanguage_ID (int ZZ_LI_HomeLanguage_ID)
+	public void setZZ_SDL_No (String ZZ_SDL_No)
 	{
-		if (ZZ_LI_HomeLanguage_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_HomeLanguage_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_HomeLanguage_ID, Integer.valueOf(ZZ_LI_HomeLanguage_ID));
+		set_Value (COLUMNNAME_ZZ_SDL_No, ZZ_SDL_No);
 	}
 
-	/** Get Home Language.
-		@return Home Language	  */
-	public int getZZ_LI_HomeLanguage_ID()
+	/** Get SDL Number.
+		@return SDL Number	  */
+	public String getZZ_SDL_No()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_LI_HomeLanguage_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	public I_ZZ_LI_SocioEconomicStatus getZZ_LI_SocioEconomicStatus() throws RuntimeException
-	{
-		return (I_ZZ_LI_SocioEconomicStatus)MTable.get(getCtx(), I_ZZ_LI_SocioEconomicStatus.Table_ID)
-			.getPO(getZZ_LI_SocioEconomicStatus_ID(), get_TrxName());
-	}
-
-	/** Set Socio Economic Status.
-		@param ZZ_LI_SocioEconomicStatus_ID Socio Economic Status
-	*/
-	public void setZZ_LI_SocioEconomicStatus_ID (int ZZ_LI_SocioEconomicStatus_ID)
-	{
-		if (ZZ_LI_SocioEconomicStatus_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, Integer.valueOf(ZZ_LI_SocioEconomicStatus_ID));
-	}
-
-	/** Get Socio Economic Status.
-		@return Socio Economic Status	  */
-	public int getZZ_LI_SocioEconomicStatus_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	public I_ZZ_Nationality getZZ_Nationality() throws RuntimeException
-	{
-		return (I_ZZ_Nationality)MTable.get(getCtx(), I_ZZ_Nationality.Table_ID)
-			.getPO(getZZ_Nationality_ID(), get_TrxName());
-	}
-
-	/** Set Nationality.
-		@param ZZ_Nationality_ID Nationality
-	*/
-	public void setZZ_Nationality_ID (int ZZ_Nationality_ID)
-	{
-		if (ZZ_Nationality_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_Nationality_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_Nationality_ID, Integer.valueOf(ZZ_Nationality_ID));
-	}
-
-	/** Get Nationality.
-		@return Nationality	  */
-	public int getZZ_Nationality_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Nationality_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	/** Set Passport No.
-		@param ZZ_Passport_No Passport No
-	*/
-	public void setZZ_Passport_No (String ZZ_Passport_No)
-	{
-		set_Value (COLUMNNAME_ZZ_Passport_No, ZZ_Passport_No);
-	}
-
-	/** Get Passport No.
-		@return Passport No	  */
-	public String getZZ_Passport_No()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_Passport_No);
+		return (String)get_Value(COLUMNNAME_ZZ_SDL_No);
 	}
 }

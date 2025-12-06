@@ -21,18 +21,18 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for ZZSdf
+/** Generated Interface for ZZSdfOrganisation_v
  *  @author iDempiere (generated) 
  *  @version Release 12
  */
 @SuppressWarnings("all")
-public interface I_ZZSdf 
+public interface I_ZZSdfOrganisation_v 
 {
 
-    /** TableName=ZZSdf */
-    public static final String Table_Name = "ZZSdf";
+    /** TableName=ZZSdfOrganisation_v */
+    public static final String Table_Name = "ZZSdfOrganisation_v";
 
-    /** AD_Table_ID=1000085 */
+    /** AD_Table_ID=1000154 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -64,20 +64,20 @@ public interface I_ZZSdf
 	  */
 	public int getAD_Org_ID();
 
-    /** Column name AD_User_ID */
-    public static final String COLUMNNAME_AD_User_ID = "AD_User_ID";
+    /** Column name C_BPartner_ID */
+    public static final String COLUMNNAME_C_BPartner_ID = "C_BPartner_ID";
 
-	/** Set User/Contact.
-	  * User within the system - Internal or Business Partner Contact
+	/** Set Business Partner.
+	  * Identifies a Business Partner
 	  */
-	public void setAD_User_ID (int AD_User_ID);
+	public void setC_BPartner_ID (int C_BPartner_ID);
 
-	/** Get User/Contact.
-	  * User within the system - Internal or Business Partner Contact
+	/** Get Business Partner.
+	  * Identifies a Business Partner
 	  */
-	public int getAD_User_ID();
+	public int getC_BPartner_ID();
 
-	public org.compiere.model.I_AD_User getAD_User() throws RuntimeException;
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -95,6 +95,19 @@ public interface I_ZZSdf
 	  */
 	public int getCreatedBy();
 
+    /** Column name EMail */
+    public static final String COLUMNNAME_EMail = "EMail";
+
+	/** Set EMail Address.
+	  * Electronic Mail Address
+	  */
+	public void setEMail (String EMail);
+
+	/** Get EMail Address.
+	  * Electronic Mail Address
+	  */
+	public String getEMail();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -107,6 +120,45 @@ public interface I_ZZSdf
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name OrgName */
+    public static final String COLUMNNAME_OrgName = "OrgName";
+
+	/** Set Organization Name.
+	  * Name of the Organization
+	  */
+	public void setOrgName (String OrgName);
+
+	/** Get Organization Name.
+	  * Name of the Organization
+	  */
+	public String getOrgName();
+
+    /** Column name Phone */
+    public static final String COLUMNNAME_Phone = "Phone";
+
+	/** Set Phone.
+	  * Identifies a telephone number
+	  */
+	public void setPhone (String Phone);
+
+	/** Get Phone.
+	  * Identifies a telephone number
+	  */
+	public String getPhone();
+
+    /** Column name Phone2 */
+    public static final String COLUMNNAME_Phone2 = "Phone2";
+
+	/** Set 2nd Phone.
+	  * Identifies an alternate telephone number.
+	  */
+	public void setPhone2 (String Phone2);
+
+	/** Get 2nd Phone.
+	  * Identifies an alternate telephone number.
+	  */
+	public String getPhone2();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -133,6 +185,32 @@ public interface I_ZZSdf
 	/** Get Accredited Training Provider	  */
 	public String getZZAccreditedTrainingProvider();
 
+    /** Column name ZZActingForEmployer */
+    public static final String COLUMNNAME_ZZActingForEmployer = "ZZActingForEmployer";
+
+	/** Set Acting For Employer.
+	  * Consultant acting for Employer?
+	  */
+	public void setZZActingForEmployer (boolean ZZActingForEmployer);
+
+	/** Get Acting For Employer.
+	  * Consultant acting for Employer?
+	  */
+	public boolean isZZActingForEmployer();
+
+    /** Column name ZZAppointmentProcedure */
+    public static final String COLUMNNAME_ZZAppointmentProcedure = "ZZAppointmentProcedure";
+
+	/** Set Appointment Procedure.
+	  * Please indicate method of appointment to SDF position
+	  */
+	public void setZZAppointmentProcedure (String ZZAppointmentProcedure);
+
+	/** Get Appointment Procedure.
+	  * Please indicate method of appointment to SDF position
+	  */
+	public String getZZAppointmentProcedure();
+
     /** Column name ZZCurrentOccupation */
     public static final String COLUMNNAME_ZZCurrentOccupation = "ZZCurrentOccupation";
 
@@ -142,23 +220,14 @@ public interface I_ZZSdf
 	/** Get Current Occupation	  */
 	public String getZZCurrentOccupation();
 
-    /** Column name ZZEquity */
-    public static final String COLUMNNAME_ZZEquity = "ZZEquity";
-
-	/** Set Equity	  */
-	public void setZZEquity (String ZZEquity);
-
-	/** Get Equity	  */
-	public String getZZEquity();
-
     /** Column name ZZExperience */
     public static final String COLUMNNAME_ZZExperience = "ZZExperience";
 
-	/** Set Experience (Years)	  */
-	public void setZZExperience (int ZZExperience);
+	/** Set Experience	  */
+	public void setZZExperience (String ZZExperience);
 
-	/** Get Experience (Years)	  */
-	public int getZZExperience();
+	/** Get Experience	  */
+	public String getZZExperience();
 
     /** Column name ZZFirstName */
     public static final String COLUMNNAME_ZZFirstName = "ZZFirstName";
@@ -169,24 +238,6 @@ public interface I_ZZSdf
 	/** Get First Name	  */
 	public String getZZFirstName();
 
-    /** Column name ZZGender */
-    public static final String COLUMNNAME_ZZGender = "ZZGender";
-
-	/** Set Gender	  */
-	public void setZZGender (String ZZGender);
-
-	/** Get Gender	  */
-	public String getZZGender();
-
-    /** Column name ZZGeneralComments */
-    public static final String COLUMNNAME_ZZGeneralComments = "ZZGeneralComments";
-
-	/** Set General Comments	  */
-	public void setZZGeneralComments (String ZZGeneralComments);
-
-	/** Get General Comments	  */
-	public String getZZGeneralComments();
-
     /** Column name ZZHighestEducationDesc */
     public static final String COLUMNNAME_ZZHighestEducationDesc = "ZZHighestEducationDesc";
 
@@ -195,28 +246,6 @@ public interface I_ZZSdf
 
 	/** Get Highest Education Description	  */
 	public String getZZHighestEducationDesc();
-
-    /** Column name ZZInitials */
-    public static final String COLUMNNAME_ZZInitials = "ZZInitials";
-
-	/** Set Initials	  */
-	public void setZZInitials (String ZZInitials);
-
-	/** Get Initials	  */
-	public String getZZInitials();
-
-    /** Column name ZZLkpTitle */
-    public static final String COLUMNNAME_ZZLkpTitle = "ZZLkpTitle";
-
-	/** Set Title.
-	  * Lkp Title
-	  */
-	public void setZZLkpTitle (String ZZLkpTitle);
-
-	/** Get Title.
-	  * Lkp Title
-	  */
-	public String getZZLkpTitle();
 
     /** Column name ZZMiddleName */
     public static final String COLUMNNAME_ZZMiddleName = "ZZMiddleName";
@@ -227,23 +256,72 @@ public interface I_ZZSdf
 	/** Get Middle Name	  */
 	public String getZZMiddleName();
 
-    /** Column name ZZSdf_ID */
-    public static final String COLUMNNAME_ZZSdf_ID = "ZZSdf_ID";
+    /** Column name ZZReplacingPrimarySDF */
+    public static final String COLUMNNAME_ZZReplacingPrimarySDF = "ZZReplacingPrimarySDF";
 
-	/** Set Sdf	  */
-	public void setZZSdf_ID (int ZZSdf_ID);
+	/** Set Replacing Primary SDF.
+	  * Are you replacing the previous primary SDF of this Company?
+	  */
+	public void setZZReplacingPrimarySDF (boolean ZZReplacingPrimarySDF);
 
-	/** Get Sdf	  */
-	public int getZZSdf_ID();
+	/** Get Replacing Primary SDF.
+	  * Are you replacing the previous primary SDF of this Company?
+	  */
+	public boolean isZZReplacingPrimarySDF();
 
-    /** Column name ZZSdf_UU */
-    public static final String COLUMNNAME_ZZSdf_UU = "ZZSdf_UU";
+    /** Column name ZZSdfFunction */
+    public static final String COLUMNNAME_ZZSdfFunction = "ZZSdfFunction";
 
-	/** Set ZZSdf_UU	  */
-	public void setZZSdf_UU (String ZZSdf_UU);
+	/** Set Sdf Function.
+	  * Will you perform your SDF function in respect of
+	  */
+	public void setZZSdfFunction (String ZZSdfFunction);
 
-	/** Get ZZSdf_UU	  */
-	public String getZZSdf_UU();
+	/** Get Sdf Function.
+	  * Will you perform your SDF function in respect of
+	  */
+	public String getZZSdfFunction();
+
+    /** Column name ZZSdfOrganisation_ID */
+    public static final String COLUMNNAME_ZZSdfOrganisation_ID = "ZZSdfOrganisation_ID";
+
+	/** Set SDF Organisation.
+	  * Link Organisation And SDF
+	  */
+	public void setZZSdfOrganisation_ID (int ZZSdfOrganisation_ID);
+
+	/** Get SDF Organisation.
+	  * Link Organisation And SDF
+	  */
+	public int getZZSdfOrganisation_ID();
+
+	public I_ZZSdfOrganisation getZZSdfOrganisation() throws RuntimeException;
+
+    /** Column name ZZSdfStatus */
+    public static final String COLUMNNAME_ZZSdfStatus = "ZZSdfStatus";
+
+	/** Set Sdf Status.
+	  * Status Of Organisation Link
+	  */
+	public void setZZSdfStatus (String ZZSdfStatus);
+
+	/** Get Sdf Status.
+	  * Status Of Organisation Link
+	  */
+	public String getZZSdfStatus();
+
+    /** Column name ZZSecondarySdf */
+    public static final String COLUMNNAME_ZZSecondarySdf = "ZZSecondarySdf";
+
+	/** Set Secondary Sdf.
+	  * Are you registering as secondary SDF for this Company?
+	  */
+	public void setZZSecondarySdf (boolean ZZSecondarySdf);
+
+	/** Get Secondary Sdf.
+	  * Are you registering as secondary SDF for this Company?
+	  */
+	public boolean isZZSecondarySdf();
 
     /** Column name ZZSurname */
     public static final String COLUMNNAME_ZZSurname = "ZZSurname";
@@ -262,17 +340,6 @@ public interface I_ZZSdf
 
 	/** Get Years In Occupation	  */
 	public int getZZYearsInOccupation();
-
-    /** Column name ZZ_AlternateIDType_ID */
-    public static final String COLUMNNAME_ZZ_AlternateIDType_ID = "ZZ_AlternateIDType_ID";
-
-	/** Set Alternate ID Type	  */
-	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID);
-
-	/** Get Alternate ID Type	  */
-	public int getZZ_AlternateIDType_ID();
-
-	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException;
 
     /** Column name ZZ_DocAction */
     public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
@@ -301,28 +368,6 @@ public interface I_ZZSdf
 	/** Get ID/Passport No	  */
 	public String getZZ_ID_Passport_No();
 
-    /** Column name ZZ_LI_CitizenResidentialStatus_ID */
-    public static final String COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID = "ZZ_LI_CitizenResidentialStatus_ID";
-
-	/** Set Citizen Residential Status	  */
-	public void setZZ_LI_CitizenResidentialStatus_ID (int ZZ_LI_CitizenResidentialStatus_ID);
-
-	/** Get Citizen Residential Status	  */
-	public int getZZ_LI_CitizenResidentialStatus_ID();
-
-	public I_ZZ_LI_CitizenResidentialStatus getZZ_LI_CitizenResidentialStatus() throws RuntimeException;
-
-    /** Column name ZZ_LI_Disability_ID */
-    public static final String COLUMNNAME_ZZ_LI_Disability_ID = "ZZ_LI_Disability_ID";
-
-	/** Set Disability	  */
-	public void setZZ_LI_Disability_ID (int ZZ_LI_Disability_ID);
-
-	/** Get Disability	  */
-	public int getZZ_LI_Disability_ID();
-
-	public I_ZZ_LI_Disability getZZ_LI_Disability() throws RuntimeException;
-
     /** Column name ZZ_LI_HighestEducation_ID */
     public static final String COLUMNNAME_ZZ_LI_HighestEducation_ID = "ZZ_LI_HighestEducation_ID";
 
@@ -334,45 +379,12 @@ public interface I_ZZSdf
 
 	public I_ZZ_LI_HighestEducation getZZ_LI_HighestEducation() throws RuntimeException;
 
-    /** Column name ZZ_LI_HomeLanguage_ID */
-    public static final String COLUMNNAME_ZZ_LI_HomeLanguage_ID = "ZZ_LI_HomeLanguage_ID";
+    /** Column name ZZ_SDL_No */
+    public static final String COLUMNNAME_ZZ_SDL_No = "ZZ_SDL_No";
 
-	/** Set Home Language	  */
-	public void setZZ_LI_HomeLanguage_ID (int ZZ_LI_HomeLanguage_ID);
+	/** Set SDL Number	  */
+	public void setZZ_SDL_No (String ZZ_SDL_No);
 
-	/** Get Home Language	  */
-	public int getZZ_LI_HomeLanguage_ID();
-
-	public I_ZZ_LI_HomeLanguage getZZ_LI_HomeLanguage() throws RuntimeException;
-
-    /** Column name ZZ_LI_SocioEconomicStatus_ID */
-    public static final String COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID = "ZZ_LI_SocioEconomicStatus_ID";
-
-	/** Set Socio Economic Status	  */
-	public void setZZ_LI_SocioEconomicStatus_ID (int ZZ_LI_SocioEconomicStatus_ID);
-
-	/** Get Socio Economic Status	  */
-	public int getZZ_LI_SocioEconomicStatus_ID();
-
-	public I_ZZ_LI_SocioEconomicStatus getZZ_LI_SocioEconomicStatus() throws RuntimeException;
-
-    /** Column name ZZ_Nationality_ID */
-    public static final String COLUMNNAME_ZZ_Nationality_ID = "ZZ_Nationality_ID";
-
-	/** Set Nationality	  */
-	public void setZZ_Nationality_ID (int ZZ_Nationality_ID);
-
-	/** Get Nationality	  */
-	public int getZZ_Nationality_ID();
-
-	public I_ZZ_Nationality getZZ_Nationality() throws RuntimeException;
-
-    /** Column name ZZ_Passport_No */
-    public static final String COLUMNNAME_ZZ_Passport_No = "ZZ_Passport_No";
-
-	/** Set Passport No	  */
-	public void setZZ_Passport_No (String ZZ_Passport_No);
-
-	/** Get Passport No	  */
-	public String getZZ_Passport_No();
+	/** Get SDL Number	  */
+	public String getZZ_SDL_No();
 }

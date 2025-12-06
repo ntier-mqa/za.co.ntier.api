@@ -31,7 +31,7 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251103L;
+	private static final long serialVersionUID = 20251201L;
 
     /** Standard Constructor */
     public X_ZZPersonAddress (Properties ctx, int ZZPersonAddress_ID, String trxName)
@@ -177,6 +177,62 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 		return (String)get_Value(COLUMNNAME_Address3);
 	}
 
+	public org.compiere.model.I_C_City getC_City() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_City)MTable.get(getCtx(), org.compiere.model.I_C_City.Table_ID)
+			.getPO(getC_City_ID(), get_TrxName());
+	}
+
+	/** Set City.
+		@param C_City_ID City
+	*/
+	public void setC_City_ID (int C_City_ID)
+	{
+		if (C_City_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_C_City_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_C_City_ID, Integer.valueOf(C_City_ID));
+	}
+
+	/** Get City.
+		@return City
+	  */
+	public int getC_City_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_C_City_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_C_Region getC_Region() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_Region)MTable.get(getCtx(), org.compiere.model.I_C_Region.Table_ID)
+			.getPO(getC_Region_ID(), get_TrxName());
+	}
+
+	/** Set Region.
+		@param C_Region_ID Identifies a geographical Region
+	*/
+	public void setC_Region_ID (int C_Region_ID)
+	{
+		if (C_Region_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_C_Region_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_C_Region_ID, Integer.valueOf(C_Region_ID));
+	}
+
+	/** Get Region.
+		@return Identifies a geographical Region
+	  */
+	public int getC_Region_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_C_Region_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set ZIP.
 		@param Postal Postal code
 	*/
@@ -206,6 +262,22 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 	public String getZZAddressType()
 	{
 		return (String)get_Value(COLUMNNAME_ZZAddressType);
+	}
+
+	/** Set Complex Section Farm.
+		@param ZZComplexSectionFarm Complex/Section/Farm
+	*/
+	public void setZZComplexSectionFarm (String ZZComplexSectionFarm)
+	{
+		set_Value (COLUMNNAME_ZZComplexSectionFarm, ZZComplexSectionFarm);
+	}
+
+	/** Get Complex Section Farm.
+		@return Complex/Section/Farm
+	  */
+	public String getZZComplexSectionFarm()
+	{
+		return (String)get_Value(COLUMNNAME_ZZComplexSectionFarm);
 	}
 
 	/** Set Person Address.
@@ -242,21 +314,6 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 	public String getZZPersonAddress_UU()
 	{
 		return (String)get_Value(COLUMNNAME_ZZPersonAddress_UU);
-	}
-
-	/** Set Province.
-		@param ZZProvince Province
-	*/
-	public void setZZProvince (String ZZProvince)
-	{
-		set_Value (COLUMNNAME_ZZProvince, ZZProvince);
-	}
-
-	/** Get Province.
-		@return Province	  */
-	public String getZZProvince()
-	{
-		return (String)get_Value(COLUMNNAME_ZZProvince);
 	}
 
 	public I_ZZSdf getZZSdf() throws RuntimeException

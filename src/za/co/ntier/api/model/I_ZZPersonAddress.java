@@ -32,7 +32,7 @@ public interface I_ZZPersonAddress
     /** TableName=ZZPersonAddress */
     public static final String Table_Name = "ZZPersonAddress";
 
-    /** AD_Table_ID=1000081 */
+    /** AD_Table_ID=1000105 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -118,6 +118,36 @@ public interface I_ZZPersonAddress
 	  */
 	public String getAddress3();
 
+    /** Column name C_City_ID */
+    public static final String COLUMNNAME_C_City_ID = "C_City_ID";
+
+	/** Set City.
+	  * City
+	  */
+	public void setC_City_ID (int C_City_ID);
+
+	/** Get City.
+	  * City
+	  */
+	public int getC_City_ID();
+
+	public org.compiere.model.I_C_City getC_City() throws RuntimeException;
+
+    /** Column name C_Region_ID */
+    public static final String COLUMNNAME_C_Region_ID = "C_Region_ID";
+
+	/** Set Region.
+	  * Identifies a geographical Region
+	  */
+	public void setC_Region_ID (int C_Region_ID);
+
+	/** Get Region.
+	  * Identifies a geographical Region
+	  */
+	public int getC_Region_ID();
+
+	public org.compiere.model.I_C_Region getC_Region() throws RuntimeException;
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -185,6 +215,19 @@ public interface I_ZZPersonAddress
 	/** Get Address Type	  */
 	public String getZZAddressType();
 
+    /** Column name ZZComplexSectionFarm */
+    public static final String COLUMNNAME_ZZComplexSectionFarm = "ZZComplexSectionFarm";
+
+	/** Set Complex Section Farm.
+	  * Complex/Section/Farm
+	  */
+	public void setZZComplexSectionFarm (String ZZComplexSectionFarm);
+
+	/** Get Complex Section Farm.
+	  * Complex/Section/Farm
+	  */
+	public String getZZComplexSectionFarm();
+
     /** Column name ZZPersonAddress_ID */
     public static final String COLUMNNAME_ZZPersonAddress_ID = "ZZPersonAddress_ID";
 
@@ -202,15 +245,6 @@ public interface I_ZZPersonAddress
 
 	/** Get ZZPersonAddress_UU	  */
 	public String getZZPersonAddress_UU();
-
-    /** Column name ZZProvince */
-    public static final String COLUMNNAME_ZZProvince = "ZZProvince";
-
-	/** Set Province	  */
-	public void setZZProvince (String ZZProvince);
-
-	/** Get Province	  */
-	public String getZZProvince();
 
     /** Column name ZZSdf_ID */
     public static final String COLUMNNAME_ZZSdf_ID = "ZZSdf_ID";
