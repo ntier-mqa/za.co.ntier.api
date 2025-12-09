@@ -402,31 +402,6 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		return ii.intValue();
 	}
 
-	/** Approved = Approved */
-	public static final String ZZSDFSTATUS_Approved = "Approved";
-	/** Deactivated = Deactivated */
-	public static final String ZZSDFSTATUS_Deactivated = "Deactivated";
-	/** Pending = Pending */
-	public static final String ZZSDFSTATUS_Pending = "Pending";
-	/** Rejected = Rejected */
-	public static final String ZZSDFSTATUS_Rejected = "Rejected";
-	/** Set Sdf Status.
-		@param ZZSdfStatus Status Of Organisation Link
-	*/
-	public void setZZSdfStatus (String ZZSdfStatus)
-	{
-
-		set_Value (COLUMNNAME_ZZSdfStatus, ZZSdfStatus);
-	}
-
-	/** Get Sdf Status.
-		@return Status Of Organisation Link
-	  */
-	public String getZZSdfStatus()
-	{
-		return (String)get_Value(COLUMNNAME_ZZSdfStatus);
-	}
-
 	/** Set Secondary Sdf.
 		@param ZZSecondarySdf Are you registering as secondary SDF for this Company?
 	*/

@@ -297,19 +297,6 @@ public interface I_ZZSdfOrganisation_v
 
 	public I_ZZSdfOrganisation getZZSdfOrganisation() throws RuntimeException;
 
-    /** Column name ZZSdfStatus */
-    public static final String COLUMNNAME_ZZSdfStatus = "ZZSdfStatus";
-
-	/** Set Sdf Status.
-	  * Status Of Organisation Link
-	  */
-	public void setZZSdfStatus (String ZZSdfStatus);
-
-	/** Get Sdf Status.
-	  * Status Of Organisation Link
-	  */
-	public String getZZSdfStatus();
-
     /** Column name ZZSecondarySdf */
     public static final String COLUMNNAME_ZZSecondarySdf = "ZZSecondarySdf";
 
