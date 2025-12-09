@@ -223,11 +223,11 @@ public interface I_ZZSdfOrganisation_v
     /** Column name ZZExperience */
     public static final String COLUMNNAME_ZZExperience = "ZZExperience";
 
-	/** Set Experience	  */
-	public void setZZExperience (String ZZExperience);
+	/** Set Experience (Years)	  */
+	public void setZZExperience (int ZZExperience);
 
-	/** Get Experience	  */
-	public String getZZExperience();
+	/** Get Experience (Years)	  */
+	public int getZZExperience();
 
     /** Column name ZZFirstName */
     public static final String COLUMNNAME_ZZFirstName = "ZZFirstName";

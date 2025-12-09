@@ -31,7 +31,7 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251206L;
+	private static final long serialVersionUID = 20251209L;
 
     /** Standard Constructor */
     public X_ZZSdf (Properties ctx, int ZZSdf_ID, String trxName)
@@ -427,137 +427,6 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
-	}
-
-	/** Exec Approve = AE */
-	public static final String ZZ_DOCACTION_ExecApprove = "AE";
-	/** Approve/Do Not Approve = AP */
-	public static final String ZZ_DOCACTION_ApproveDoNotApprove = "AP";
-	/** Complete = CO */
-	public static final String ZZ_DOCACTION_Complete = "CO";
-	/** Final Approval/Do not Approve = FA */
-	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
-	/** Recommend = RE */
-	public static final String ZZ_DOCACTION_Recommend = "RE";
-	/** Submit to Manager Finance Consumables = SC */
-	public static final String ZZ_DOCACTION_SubmitToManagerFinanceConsumables = "SC";
-	/** Submit to SDL Finance Mgr = SD */
-	public static final String ZZ_DOCACTION_SubmitToSDLFinanceMgr = "SD";
-	/** Submit to Snr Mgr LP = SL */
-	public static final String ZZ_DOCACTION_SubmitToSnrMgrLP = "SL";
-	/** Submit to Snr Mgr Ops = SO */
-	public static final String ZZ_DOCACTION_SubmitToSnrMgrOps = "SO";
-	/** Submit to Snr Mgr Projects = SP */
-	public static final String ZZ_DOCACTION_SubmitToSnrMgrProjects = "SP";
-	/** Submit to Snr Mgr QA = SQ */
-	public static final String ZZ_DOCACTION_SubmitToSnrMgrQA = "SQ";
-	/** Submit to Recommender = SR */
-	public static final String ZZ_DOCACTION_SubmitToRecommender = "SR";
-	/** Submit to Snr Mgr SRU = SS */
-	public static final String ZZ_DOCACTION_SubmitToSnrMgrSRU = "SS";
-	/** Submit to Line Manager = SU */
-	public static final String ZZ_DOCACTION_SubmitToLineManager = "SU";
-	/** Set Document Action.
-		@param ZZ_DocAction Document Action
-	*/
-	public void setZZ_DocAction (String ZZ_DocAction)
-	{
-
-		set_Value (COLUMNNAME_ZZ_DocAction, ZZ_DocAction);
-	}
-
-	/** Get Document Action.
-		@return Document Action	  */
-	public String getZZ_DocAction()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_DocAction);
-	}
-
-	/** Approved By Manager Finance Consumables = AC */
-	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
-	/** Approved = AP */
-	public static final String ZZ_DOCSTATUS_Approved = "AP";
-	/** Completed = CO */
-	public static final String ZZ_DOCSTATUS_Completed = "CO";
-	/** Draft = DR */
-	public static final String ZZ_DOCSTATUS_Draft = "DR";
-	/** In Progress = IP */
-	public static final String ZZ_DOCSTATUS_InProgress = "IP";
-	/** Not Recommended By Senior Mgr SDR = N1 */
-	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrSDR = "N1";
-	/** Not Recommended By Senior Mgr Finance = N2 */
-	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrFinance = "N2";
-	/** Not Recommended By COO = N3 */
-	public static final String ZZ_DOCSTATUS_NotRecommendedByCOO = "N3";
-	/** Not Recommended By CFO = N4 */
-	public static final String ZZ_DOCSTATUS_NotRecommendedByCFO = "N4";
-	/** Not Recommended By CEO = N5 */
-	public static final String ZZ_DOCSTATUS_NotRecommendedByCEO = "N5";
-	/** Not Approved by Snr Manager = NA */
-	public static final String ZZ_DOCSTATUS_NotApprovedBySnrManager = "NA";
-	/** Not Approved By Manager Finance Consumables = NC */
-	public static final String ZZ_DOCSTATUS_NotApprovedByManagerFinanceConsumables = "NC";
-	/** Not Approved By SDL Finance Mgr = ND */
-	public static final String ZZ_DOCSTATUS_NotApprovedBySDLFinanceMgr = "ND";
-	/** Not Approved By IT Manager = NI */
-	public static final String ZZ_DOCSTATUS_NotApprovedByITManager = "NI";
-	/** Not Approved by LM = NL */
-	public static final String ZZ_DOCSTATUS_NotApprovedByLM = "NL";
-	/** Not Recommended = NR */
-	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
-	/** Not Approved by Snr Admin Finance = NS */
-	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
-	/** Pending = PE */
-	public static final String ZZ_DOCSTATUS_Pending = "PE";
-	/** Recommended By Senior Mgr Finance = R1 */
-	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
-	/** Recommended By COO = R2 */
-	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
-	/** Recommended By CFO = R3 */
-	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
-	/** Recommended = RC */
-	public static final String ZZ_DOCSTATUS_Recommended = "RC";
-	/** Recommended By Senior Mgr SDR = RD */
-	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
-	/** Submitted to Manager Finance Consumables = SC */
-	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
-	/** Submitted To SDL Finance Mgr = SD */
-	public static final String ZZ_DOCSTATUS_SubmittedToSDLFinanceMgr = "SD";
-	/** Submitted To IT Manager = SI */
-	public static final String ZZ_DOCSTATUS_SubmittedToITManager = "SI";
-	/** Submitted To IT Admin = ST */
-	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
-	/** Submitted = SU */
-	public static final String ZZ_DOCSTATUS_Submitted = "SU";
-	/** Set Document Status.
-		@param ZZ_DocStatus Document Status
-	*/
-	public void setZZ_DocStatus (String ZZ_DocStatus)
-	{
-
-		set_Value (COLUMNNAME_ZZ_DocStatus, ZZ_DocStatus);
-	}
-
-	/** Get Document Status.
-		@return Document Status	  */
-	public String getZZ_DocStatus()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
-	}
-
-	/** Set ID/Passport No.
-		@param ZZ_ID_Passport_No ID/Passport No
-	*/
-	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No)
-	{
-		set_Value (COLUMNNAME_ZZ_ID_Passport_No, ZZ_ID_Passport_No);
-	}
-
-	/** Get ID/Passport No.
-		@return ID/Passport No	  */
-	public String getZZ_ID_Passport_No()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_ID_Passport_No);
 	}
 
 	public I_ZZ_LI_CitizenResidentialStatus getZZ_LI_CitizenResidentialStatus() throws RuntimeException

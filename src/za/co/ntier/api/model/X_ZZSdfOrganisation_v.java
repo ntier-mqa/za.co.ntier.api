@@ -31,7 +31,7 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251202L;
+	private static final long serialVersionUID = 20251209L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation_v (Properties ctx, String ZZSdfOrganisation_v_UU, String trxName)
@@ -261,19 +261,22 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		return (String)get_Value(COLUMNNAME_ZZCurrentOccupation);
 	}
 
-	/** Set Experience.
-		@param ZZExperience Experience
+	/** Set Experience (Years).
+		@param ZZExperience Experience (Years)
 	*/
-	public void setZZExperience (String ZZExperience)
+	public void setZZExperience (int ZZExperience)
 	{
-		set_Value (COLUMNNAME_ZZExperience, ZZExperience);
+		set_Value (COLUMNNAME_ZZExperience, Integer.valueOf(ZZExperience));
 	}
 
-	/** Get Experience.
-		@return Experience	  */
-	public String getZZExperience()
+	/** Get Experience (Years).
+		@return Experience (Years)	  */
+	public int getZZExperience()
 	{
-		return (String)get_Value(COLUMNNAME_ZZExperience);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZExperience);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set First Name.
