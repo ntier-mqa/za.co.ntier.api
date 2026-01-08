@@ -118,6 +118,21 @@ public interface I_ZZPersonAddress
 	  */
 	public String getAddress3();
 
+    /** Column name C_BPartner_ID */
+    public static final String COLUMNNAME_C_BPartner_ID = "C_BPartner_ID";
+
+	/** Set Business Partner.
+	  * Identifies a Business Partner
+	  */
+	public void setC_BPartner_ID (int C_BPartner_ID);
+
+	/** Get Business Partner.
+	  * Identifies a Business Partner
+	  */
+	public int getC_BPartner_ID();
+
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException;
+
     /** Column name C_City_ID */
     public static final String COLUMNNAME_C_City_ID = "C_City_ID";
 
@@ -245,6 +260,15 @@ public interface I_ZZPersonAddress
 
 	/** Get ZZPersonAddress_UU	  */
 	public String getZZPersonAddress_UU();
+
+    /** Column name ZZProvince */
+    public static final String COLUMNNAME_ZZProvince = "ZZProvince";
+
+	/** Set Province	  */
+	public void setZZProvince (String ZZProvince);
+
+	/** Get Province	  */
+	public String getZZProvince();
 
     /** Column name ZZSdf_ID */
     public static final String COLUMNNAME_ZZSdf_ID = "ZZSdf_ID";

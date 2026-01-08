@@ -18,7 +18,7 @@ package za.co.ntier.api.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-
+import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for C_BPartner
@@ -981,6 +981,127 @@ s business as a percentage
 	  * Search key for the record in the format required - must be unique
 	  */
 	public String getValue();
+
+    /** Column name ZZChamberCode */
+    public static final String COLUMNNAME_ZZChamberCode = "ZZChamberCode";
+
+	/** Set Chamber Code	  */
+	public void setZZChamberCode (String ZZChamberCode);
+
+	/** Get Chamber Code	  */
+	public String getZZChamberCode();
+
+    /** Column name ZZLevyNumberType */
+    public static final String COLUMNNAME_ZZLevyNumberType = "ZZLevyNumberType";
+
+	/** Set SDL Number Type	  */
+	public void setZZLevyNumberType (String ZZLevyNumberType);
+
+	/** Get SDL Number Type	  */
+	public String getZZLevyNumberType();
+
+    /** Column name ZZNumberOfEmployeesProfile */
+    public static final String COLUMNNAME_ZZNumberOfEmployeesProfile = "ZZNumberOfEmployeesProfile";
+
+	/** Set Number Employees Profile.
+	  * Number of Employees as per the Employment Profile
+	  */
+	public void setZZNumberOfEmployeesProfile (int ZZNumberOfEmployeesProfile);
+
+	/** Get Number Employees Profile.
+	  * Number of Employees as per the Employment Profile
+	  */
+	public int getZZNumberOfEmployeesProfile();
+
+    /** Column name ZZOrgEmail */
+    public static final String COLUMNNAME_ZZOrgEmail = "ZZOrgEmail";
+
+	/** Set Organisation Email Address	  */
+	public void setZZOrgEmail (String ZZOrgEmail);
+
+	/** Get Organisation Email Address	  */
+	public String getZZOrgEmail();
+
+    /** Column name ZZOrgFax */
+    public static final String COLUMNNAME_ZZOrgFax = "ZZOrgFax";
+
+	/** Set Organisation Fax Number	  */
+	public void setZZOrgFax (String ZZOrgFax);
+
+	/** Get Organisation Fax Number	  */
+	public String getZZOrgFax();
+
+    /** Column name ZZOrgPhone */
+    public static final String COLUMNNAME_ZZOrgPhone = "ZZOrgPhone";
+
+	/** Set Organisation Phone Number	  */
+	public void setZZOrgPhone (String ZZOrgPhone);
+
+	/** Get Organisation Phone Number	  */
+	public String getZZOrgPhone();
+
+    /** Column name ZZOrgRegistrationNumber */
+    public static final String COLUMNNAME_ZZOrgRegistrationNumber = "ZZOrgRegistrationNumber";
+
+	/** Set Registration Number	  */
+	public void setZZOrgRegistrationNumber (String ZZOrgRegistrationNumber);
+
+	/** Get Registration Number	  */
+	public String getZZOrgRegistrationNumber();
+
+    /** Column name ZZOrgRegistrationNumberType */
+    public static final String COLUMNNAME_ZZOrgRegistrationNumberType = "ZZOrgRegistrationNumberType";
+
+	/** Set Organisation Registration Number Type	  */
+	public void setZZOrgRegistrationNumberType (String ZZOrgRegistrationNumberType);
+
+	/** Get Organisation Registration Number Type	  */
+	public String getZZOrgRegistrationNumberType();
+
+    /** Column name ZZOrganisationType */
+    public static final String COLUMNNAME_ZZOrganisationType = "ZZOrganisationType";
+
+	/** Set Organisation Type	  */
+	public void setZZOrganisationType (String ZZOrganisationType);
+
+	/** Get Organisation Type	  */
+	public String getZZOrganisationType();
+
+    /** Column name ZZSarsNumber */
+    public static final String COLUMNNAME_ZZSarsNumber = "ZZSarsNumber";
+
+	/** Set SARS Number	  */
+	public void setZZSarsNumber (String ZZSarsNumber);
+
+	/** Get SARS Number	  */
+	public String getZZSarsNumber();
+
+    /** Column name ZZSicCode */
+    public static final String COLUMNNAME_ZZSicCode = "ZZSicCode";
+
+	/** Set SIC Code	  */
+	public void setZZSicCode (String ZZSicCode);
+
+	/** Get SIC Code	  */
+	public String getZZSicCode();
+
+    /** Column name ZZSubSector */
+    public static final String COLUMNNAME_ZZSubSector = "ZZSubSector";
+
+	/** Set Sub Sector	  */
+	public void setZZSubSector (String ZZSubSector);
+
+	/** Get Sub Sector	  */
+	public String getZZSubSector();
+
+    /** Column name ZZTerminatedEmployees */
+    public static final String COLUMNNAME_ZZTerminatedEmployees = "ZZTerminatedEmployees";
+
+	/** Set Terminated Employees	  */
+	public void setZZTerminatedEmployees (int ZZTerminatedEmployees);
+
+	/** Get Terminated Employees	  */
+	public int getZZTerminatedEmployees();
 
     /** Column name ZZ_Business_Reg_No */
     public static final String COLUMNNAME_ZZ_Business_Reg_No = "ZZ_Business_Reg_No";

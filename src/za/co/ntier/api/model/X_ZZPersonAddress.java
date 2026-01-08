@@ -31,7 +31,7 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251201L;
+	private static final long serialVersionUID = 20251231L;
 
     /** Standard Constructor */
     public X_ZZPersonAddress (Properties ctx, int ZZPersonAddress_ID, String trxName)
@@ -177,6 +177,34 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 		return (String)get_Value(COLUMNNAME_Address3);
 	}
 
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getC_BPartner_ID(), get_TrxName());
+	}
+
+	/** Set Business Partner.
+		@param C_BPartner_ID Identifies a Business Partner
+	*/
+	public void setC_BPartner_ID (int C_BPartner_ID)
+	{
+		if (C_BPartner_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_C_BPartner_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_C_BPartner_ID, Integer.valueOf(C_BPartner_ID));
+	}
+
+	/** Get Business Partner.
+		@return Identifies a Business Partner
+	  */
+	public int getC_BPartner_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_C_BPartner_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	public org.compiere.model.I_C_City getC_City() throws RuntimeException
 	{
 		return (org.compiere.model.I_C_City)MTable.get(getCtx(), org.compiere.model.I_C_City.Table_ID)
@@ -314,6 +342,21 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 	public String getZZPersonAddress_UU()
 	{
 		return (String)get_Value(COLUMNNAME_ZZPersonAddress_UU);
+	}
+
+	/** Set Province.
+		@param ZZProvince Province
+	*/
+	public void setZZProvince (String ZZProvince)
+	{
+		set_Value (COLUMNNAME_ZZProvince, ZZProvince);
+	}
+
+	/** Get Province.
+		@return Province	  */
+	public String getZZProvince()
+	{
+		return (String)get_Value(COLUMNNAME_ZZProvince);
 	}
 
 	public I_ZZSdf getZZSdf() throws RuntimeException
