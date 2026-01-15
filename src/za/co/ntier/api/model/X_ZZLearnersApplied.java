@@ -19,11 +19,7 @@ package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
 import java.util.Properties;
-
-import org.compiere.model.I_Persistent;
-import org.compiere.model.MTable;
-import org.compiere.model.PO;
-import org.compiere.model.POInfo;
+import org.compiere.model.*;
 
 /** Generated Model for ZZLearnersApplied
  *  @author iDempiere (generated)
@@ -35,7 +31,7 @@ public class X_ZZLearnersApplied extends PO implements I_ZZLearnersApplied, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250929L;
+	private static final long serialVersionUID = 20260115L;
 
     /** Standard Constructor */
     public X_ZZLearnersApplied (Properties ctx, int ZZLearnersApplied_ID, String trxName)
@@ -473,6 +469,33 @@ public class X_ZZLearnersApplied extends PO implements I_ZZLearnersApplied, I_Pe
 	public int getZZ_Application_Form_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Application_Form_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZ_Trade getZZ_Trade() throws RuntimeException
+	{
+		return (I_ZZ_Trade)MTable.get(getCtx(), I_ZZ_Trade.Table_ID)
+			.getPO(getZZ_Trade_ID(), get_TrxName());
+	}
+
+	/** Set Trade.
+		@param ZZ_Trade_ID Trade
+	*/
+	public void setZZ_Trade_ID (int ZZ_Trade_ID)
+	{
+		if (ZZ_Trade_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_Trade_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_Trade_ID, Integer.valueOf(ZZ_Trade_ID));
+	}
+
+	/** Get Trade.
+		@return Trade	  */
+	public int getZZ_Trade_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Trade_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

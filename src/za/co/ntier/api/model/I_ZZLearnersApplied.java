@@ -18,8 +18,7 @@ package za.co.ntier.api.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-
-import org.compiere.model.MTable;
+import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for ZZLearnersApplied
@@ -349,6 +348,17 @@ No. of employed Learners&quot;
 	public int getZZ_Application_Form_ID();
 
 	public I_ZZ_Application_Form getZZ_Application_Form() throws RuntimeException;
+
+    /** Column name ZZ_Trade_ID */
+    public static final String COLUMNNAME_ZZ_Trade_ID = "ZZ_Trade_ID";
+
+	/** Set Trade	  */
+	public void setZZ_Trade_ID (int ZZ_Trade_ID);
+
+	/** Get Trade	  */
+	public int getZZ_Trade_ID();
+
+	public I_ZZ_Trade getZZ_Trade() throws RuntimeException;
 
     /** Column name ZZ_WPAFile */
     public static final String COLUMNNAME_ZZ_WPAFile = "ZZ_WPAFile";
