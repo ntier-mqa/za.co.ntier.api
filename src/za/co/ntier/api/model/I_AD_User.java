@@ -708,12 +708,12 @@ public interface I_AD_User
     /** Column name Phone */
     public static final String COLUMNNAME_Phone = "Phone";
 
-	/** Set Phone.
+	/** Set Cell Phone.
 	  * Identifies a telephone number
 	  */
 	public void setPhone (String Phone);
 
-	/** Get Phone.
+	/** Get Cell Phone.
 	  * Identifies a telephone number
 	  */
 	public String getPhone();
@@ -802,15 +802,6 @@ public interface I_AD_User
 	public int getSupervisor_ID();
 
 	public org.compiere.model.I_AD_User getSupervisor() throws RuntimeException;
-
-    /** Column name Surname */
-    public static final String COLUMNNAME_Surname = "Surname";
-
-	/** Set Surname	  */
-	public void setSurname (String Surname);
-
-	/** Get Surname	  */
-	public String getSurname();
 
     /** Column name Title */
     public static final String COLUMNNAME_Title = "Title";

@@ -28,13 +28,14 @@ import org.compiere.util.KeyNamePair;
 /** Generated Model for C_BPartner
  *  @author iDempiere (generated)
  *  @version Release 12 - $Id$ */
+@org.adempiere.base.Model(table="C_BPartner")
 public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251231L;
+	private static final long serialVersionUID = 20260115L;
 
     /** Standard Constructor */
     public X_C_BPartner (Properties ctx, int C_BPartner_ID, String trxName)
@@ -1782,51 +1783,6 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
-	}
-
-	/** Set Organisation Email Address.
-		@param ZZOrgEmail Organisation Email Address
-	*/
-	public void setZZOrgEmail (String ZZOrgEmail)
-	{
-		set_Value (COLUMNNAME_ZZOrgEmail, ZZOrgEmail);
-	}
-
-	/** Get Organisation Email Address.
-		@return Organisation Email Address	  */
-	public String getZZOrgEmail()
-	{
-		return (String)get_Value(COLUMNNAME_ZZOrgEmail);
-	}
-
-	/** Set Organisation Fax Number.
-		@param ZZOrgFax Organisation Fax Number
-	*/
-	public void setZZOrgFax (String ZZOrgFax)
-	{
-		set_Value (COLUMNNAME_ZZOrgFax, ZZOrgFax);
-	}
-
-	/** Get Organisation Fax Number.
-		@return Organisation Fax Number	  */
-	public String getZZOrgFax()
-	{
-		return (String)get_Value(COLUMNNAME_ZZOrgFax);
-	}
-
-	/** Set Organisation Phone Number.
-		@param ZZOrgPhone Organisation Phone Number
-	*/
-	public void setZZOrgPhone (String ZZOrgPhone)
-	{
-		set_Value (COLUMNNAME_ZZOrgPhone, ZZOrgPhone);
-	}
-
-	/** Get Organisation Phone Number.
-		@return Organisation Phone Number	  */
-	public String getZZOrgPhone()
-	{
-		return (String)get_Value(COLUMNNAME_ZZOrgPhone);
 	}
 
 	/** Set Registration Number.

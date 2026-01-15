@@ -26,13 +26,14 @@ import org.compiere.util.KeyNamePair;
 /** Generated Model for AD_User
  *  @author iDempiere (generated)
  *  @version Release 12 - $Id$ */
+@org.adempiere.base.Model(table="AD_User")
 public class X_AD_User extends PO implements I_AD_User, I_Persistent
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251116L;
+	private static final long serialVersionUID = 20260115L;
 
     /** Standard Constructor */
     public X_AD_User (Properties ctx, int AD_User_ID, String trxName)
@@ -1263,7 +1264,7 @@ public class X_AD_User extends PO implements I_AD_User, I_Persistent
 		return (String)get_Value(COLUMNNAME_Password);
 	}
 
-	/** Set Phone.
+	/** Set Cell Phone.
 		@param Phone Identifies a telephone number
 	*/
 	public void setPhone (String Phone)
@@ -1271,7 +1272,7 @@ public class X_AD_User extends PO implements I_AD_User, I_Persistent
 		set_Value (COLUMNNAME_Phone, Phone);
 	}
 
-	/** Get Phone.
+	/** Get Cell Phone.
 		@return Identifies a telephone number
 	  */
 	public String getPhone()
@@ -1429,21 +1430,6 @@ public class X_AD_User extends PO implements I_AD_User, I_Persistent
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
-	}
-
-	/** Set Surname.
-		@param Surname Surname
-	*/
-	public void setSurname (String Surname)
-	{
-		set_Value (COLUMNNAME_Surname, Surname);
-	}
-
-	/** Get Surname.
-		@return Surname	  */
-	public String getSurname()
-	{
-		return (String)get_Value(COLUMNNAME_Surname);
 	}
 
 	/** Set Title.

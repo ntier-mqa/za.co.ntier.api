@@ -1013,33 +1013,6 @@ s business as a percentage
 	  */
 	public int getZZNumberOfEmployeesProfile();
 
-    /** Column name ZZOrgEmail */
-    public static final String COLUMNNAME_ZZOrgEmail = "ZZOrgEmail";
-
-	/** Set Organisation Email Address	  */
-	public void setZZOrgEmail (String ZZOrgEmail);
-
-	/** Get Organisation Email Address	  */
-	public String getZZOrgEmail();
-
-    /** Column name ZZOrgFax */
-    public static final String COLUMNNAME_ZZOrgFax = "ZZOrgFax";
-
-	/** Set Organisation Fax Number	  */
-	public void setZZOrgFax (String ZZOrgFax);
-
-	/** Get Organisation Fax Number	  */
-	public String getZZOrgFax();
-
-    /** Column name ZZOrgPhone */
-    public static final String COLUMNNAME_ZZOrgPhone = "ZZOrgPhone";
-
-	/** Set Organisation Phone Number	  */
-	public void setZZOrgPhone (String ZZOrgPhone);
-
-	/** Get Organisation Phone Number	  */
-	public String getZZOrgPhone();
-
     /** Column name ZZOrgRegistrationNumber */
     public static final String COLUMNNAME_ZZOrgRegistrationNumber = "ZZOrgRegistrationNumber";
 
