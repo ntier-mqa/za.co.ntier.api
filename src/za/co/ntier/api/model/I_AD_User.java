@@ -854,6 +854,24 @@ public interface I_AD_User
 	  */
 	public String getValue();
 
+    /** Column name ZZSurname */
+    public static final String COLUMNNAME_ZZSurname = "ZZSurname";
+
+	/** Set Surname	  */
+	public void setZZSurname (String ZZSurname);
+
+	/** Get Surname	  */
+	public String getZZSurname();
+
+    /** Column name ZZ_Designation */
+    public static final String COLUMNNAME_ZZ_Designation = "ZZ_Designation";
+
+	/** Set Designation	  */
+	public void setZZ_Designation (String ZZ_Designation);
+
+	/** Get Designation	  */
+	public String getZZ_Designation();
+
     /** Column name ZZ_ID_Passport_No */
     public static final String COLUMNNAME_ZZ_ID_Passport_No = "ZZ_ID_Passport_No";
 
