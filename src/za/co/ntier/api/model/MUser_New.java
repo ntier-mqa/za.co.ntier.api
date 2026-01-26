@@ -20,37 +20,37 @@ public class MUser_New extends MUser implements I_AD_User {
 
 	public MUser_New(Properties ctx, String AD_User_UU, String trxName) {
 		super(ctx, AD_User_UU, trxName);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public MUser_New(Properties ctx, int AD_User_ID, String trxName) {
 		super(ctx, AD_User_ID, trxName);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public MUser_New(X_C_BPartner partner) {
 		super(partner);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public MUser_New(Properties ctx, ResultSet rs, String trxName) {
 		super(ctx, rs, trxName);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public MUser_New(MUser copy) {
 		super(copy);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public MUser_New(Properties ctx, MUser copy) {
 		super(ctx, copy);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public MUser_New(Properties ctx, MUser copy, String trxName) {
 		super(ctx, copy, trxName);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public static MUser_New get (Properties ctx, int AD_User_ID)
@@ -127,11 +127,40 @@ public class MUser_New extends MUser implements I_AD_User {
 		return true;
 	}
 
-	public boolean isValidPhoneNumber(String phoneNumber) {
-		String regex = "^\\+[1-9]\\d{1,14}$";
+	public static boolean isValidPhoneNumber(String phoneNumber) {
+		String regex = "^[1-9]\\d{1,14}$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(phoneNumber);
-		return matcher.matches();
+		return true;
 	}
 
+	/** Set Surname.
+		@param ZZSurname Surname
+	*/
+	public void setZZSurname (String ZZSurname)
+	{
+		set_Value (COLUMNNAME_ZZSurname, ZZSurname);
+	}
+
+	/** Get Surname.
+		@return Surname	  */
+	public String getZZSurname()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSurname);
+	}
+
+	/** Set Designation.
+		@param ZZ_Designation Designation
+	*/
+	public void setZZ_Designation (String ZZ_Designation)
+	{
+		set_Value (COLUMNNAME_ZZ_Designation, ZZ_Designation);
+	}
+
+	/** Get Designation.
+		@return Designation	  */
+	public String getZZ_Designation()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Designation);
+	}
 }
