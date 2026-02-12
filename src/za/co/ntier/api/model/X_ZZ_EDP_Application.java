@@ -31,7 +31,7 @@ public class X_ZZ_EDP_Application extends PO implements I_ZZ_EDP_Application, I_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260129L;
+	private static final long serialVersionUID = 20260212L;
 
     /** Standard Constructor */
     public X_ZZ_EDP_Application (Properties ctx, int ZZ_EDP_Application_ID, String trxName)
@@ -224,6 +224,26 @@ public class X_ZZ_EDP_Application extends PO implements I_ZZ_EDP_Application, I_
 		return (String)get_Value(COLUMNNAME_Surname);
 	}
 
+	/** Aspiring Executive = ASPIRING */
+	public static final String ZZEXECUTIVESTATUS_AspiringExecutive = "ASPIRING";
+	/** Already an Executive = EXECUTIVE */
+	public static final String ZZEXECUTIVESTATUS_AlreadyAnExecutive = "EXECUTIVE";
+	/** Set Executive Status.
+		@param ZZExecutiveStatus Executive Status
+	*/
+	public void setZZExecutiveStatus (String ZZExecutiveStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZExecutiveStatus, ZZExecutiveStatus);
+	}
+
+	/** Get Executive Status.
+		@return Executive Status	  */
+	public String getZZExecutiveStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZExecutiveStatus);
+	}
+
 	/** Famale = F */
 	public static final String ZZGENDER_Famale = "F";
 	/** Male = M */
@@ -309,16 +329,16 @@ public class X_ZZ_EDP_Application extends PO implements I_ZZ_EDP_Application, I_
 		return (String)get_Value(COLUMNNAME_ZZ_EDP_Application_UU);
 	}
 
-	/** Set ID/Passport No.
-		@param ZZ_ID_Passport_No ID/Passport No
+	/** Set ID No.
+		@param ZZ_ID_Passport_No ID No
 	*/
 	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No)
 	{
 		set_Value (COLUMNNAME_ZZ_ID_Passport_No, ZZ_ID_Passport_No);
 	}
 
-	/** Get ID/Passport No.
-		@return ID/Passport No	  */
+	/** Get ID No.
+		@return ID No	  */
 	public String getZZ_ID_Passport_No()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_ID_Passport_No);
