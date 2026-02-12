@@ -184,6 +184,15 @@ public interface I_ZZ_EDP_Application
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZExecutiveStatus */
+    public static final String COLUMNNAME_ZZExecutiveStatus = "ZZExecutiveStatus";
+
+	/** Set Executive Status	  */
+	public void setZZExecutiveStatus (String ZZExecutiveStatus);
+
+	/** Get Executive Status	  */
+	public String getZZExecutiveStatus();
+
     /** Column name ZZGender */
     public static final String COLUMNNAME_ZZGender = "ZZGender";
 
@@ -225,10 +234,10 @@ public interface I_ZZ_EDP_Application
     /** Column name ZZ_ID_Passport_No */
     public static final String COLUMNNAME_ZZ_ID_Passport_No = "ZZ_ID_Passport_No";
 
-	/** Set ID/Passport No	  */
+	/** Set ID No	  */
 	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No);
 
-	/** Get ID/Passport No	  */
+	/** Get ID No	  */
 	public String getZZ_ID_Passport_No();
 
     /** Column name ZZ_LI_HighestEducation_ID */
