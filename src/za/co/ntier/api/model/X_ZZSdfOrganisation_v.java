@@ -18,6 +18,7 @@
 package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
@@ -31,7 +32,37 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251209L;
+	private static final long serialVersionUID = 20260214L;
+
+    /** Standard Constructor */
+    public X_ZZSdfOrganisation_v (Properties ctx, int ZZSdfOrganisation_v_ID, String trxName)
+    {
+      super (ctx, ZZSdfOrganisation_v_ID, trxName);
+      /** if (ZZSdfOrganisation_v_ID == 0)
+        {
+			setZZActingForEmployer (false);
+// N
+			setZZReplacingPrimarySDF (false);
+// N
+			setZZSecondarySdf (false);
+// N
+        } */
+    }
+
+    /** Standard Constructor */
+    public X_ZZSdfOrganisation_v (Properties ctx, int ZZSdfOrganisation_v_ID, String trxName, String ... virtualColumns)
+    {
+      super (ctx, ZZSdfOrganisation_v_ID, trxName, virtualColumns);
+      /** if (ZZSdfOrganisation_v_ID == 0)
+        {
+			setZZActingForEmployer (false);
+// N
+			setZZReplacingPrimarySDF (false);
+// N
+			setZZSecondarySdf (false);
+// N
+        } */
+    }
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation_v (Properties ctx, String ZZSdfOrganisation_v_UU, String trxName)
@@ -402,6 +433,42 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		return ii.intValue();
 	}
 
+	/** Set Sdf Organisation View.
+		@param ZZSdfOrganisation_v_ID Sdf Organisation View
+	*/
+	public void setZZSdfOrganisation_v_ID (int ZZSdfOrganisation_v_ID)
+	{
+		if (ZZSdfOrganisation_v_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZSdfOrganisation_v_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZSdfOrganisation_v_ID, Integer.valueOf(ZZSdfOrganisation_v_ID));
+	}
+
+	/** Get Sdf Organisation View.
+		@return Sdf Organisation View	  */
+	public int getZZSdfOrganisation_v_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZSdfOrganisation_v_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Sdf Organisation View UU.
+		@param ZZSdfOrganisation_v_UU Sdf Organisation View UU
+	*/
+	public void setZZSdfOrganisation_v_UU (String ZZSdfOrganisation_v_UU)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZSdfOrganisation_v_UU, ZZSdfOrganisation_v_UU);
+	}
+
+	/** Get Sdf Organisation View UU.
+		@return Sdf Organisation View UU	  */
+	public String getZZSdfOrganisation_v_UU()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSdfOrganisation_v_UU);
+	}
+
 	/** Set Secondary Sdf.
 		@param ZZSecondarySdf Are you registering as secondary SDF for this Company?
 	*/
@@ -458,6 +525,63 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		return ii.intValue();
 	}
 
+	public org.compiere.model.I_AD_User getZZ_Approved() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Approved_ID(), get_TrxName());
+	}
+
+	/** Set Approved By.
+		@param ZZ_Approved_ID Approved By
+	*/
+	public void setZZ_Approved_ID (int ZZ_Approved_ID)
+	{
+		if (ZZ_Approved_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_Approved_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_Approved_ID, Integer.valueOf(ZZ_Approved_ID));
+	}
+
+	/** Get Approved By.
+		@return Approved By	  */
+	public int getZZ_Approved_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Approved_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Date Approved.
+		@param ZZ_Date_Approved Date Approved
+	*/
+	public void setZZ_Date_Approved (Timestamp ZZ_Date_Approved)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_Date_Approved, ZZ_Date_Approved);
+	}
+
+	/** Get Date Approved.
+		@return Date Approved	  */
+	public Timestamp getZZ_Date_Approved()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Approved);
+	}
+
+	/** Set Date Rejected.
+		@param ZZ_Date_Rejected Date Rejected
+	*/
+	public void setZZ_Date_Rejected (Timestamp ZZ_Date_Rejected)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_Date_Rejected, ZZ_Date_Rejected);
+	}
+
+	/** Get Date Rejected.
+		@return Date Rejected	  */
+	public Timestamp getZZ_Date_Rejected()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Rejected);
+	}
+
 	/** Exec Approve = AE */
 	public static final String ZZ_DOCACTION_ExecApprove = "AE";
 	/** Approve/Do Not Approve = AP */
@@ -468,6 +592,8 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Submit = S1 */
+	public static final String ZZ_DOCACTION_Submit = "S1";
 	/** Submit to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCACTION_SubmitToManagerFinanceConsumables = "SC";
 	/** Submit to SDL Finance Mgr = SD */
@@ -558,6 +684,8 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
 	/** Submitted = SU */
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
+	/** Delinked = UnSdfOrg */
+	public static final String ZZ_DOCSTATUS_Delinked = "UnSdfOrg";
 	/** Set Document Status.
 		@param ZZ_DocStatus Document Status
 	*/
@@ -574,16 +702,16 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
-	/** Set ID/Passport No.
-		@param ZZ_ID_Passport_No ID/Passport No
+	/** Set ID No.
+		@param ZZ_ID_Passport_No ID No
 	*/
 	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No)
 	{
 		set_Value (COLUMNNAME_ZZ_ID_Passport_No, ZZ_ID_Passport_No);
 	}
 
-	/** Get ID/Passport No.
-		@return ID/Passport No	  */
+	/** Get ID No.
+		@return ID No	  */
 	public String getZZ_ID_Passport_No()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_ID_Passport_No);
@@ -611,6 +739,33 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public int getZZ_LI_HighestEducation_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_LI_HighestEducation_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_Rejected() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Rejected_ID(), get_TrxName());
+	}
+
+	/** Set Rejected ID.
+		@param ZZ_Rejected_ID Rejected ID
+	*/
+	public void setZZ_Rejected_ID (int ZZ_Rejected_ID)
+	{
+		if (ZZ_Rejected_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_Rejected_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_Rejected_ID, Integer.valueOf(ZZ_Rejected_ID));
+	}
+
+	/** Get Rejected ID.
+		@return Rejected ID	  */
+	public int getZZ_Rejected_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Rejected_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
