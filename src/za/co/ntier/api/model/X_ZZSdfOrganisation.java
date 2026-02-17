@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251209L;
+	private static final long serialVersionUID = 20260214L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation (Properties ctx, int ZZSdfOrganisation_ID, String trxName)
@@ -404,58 +404,61 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 		return false;
 	}
 
-	public org.compiere.model.I_AD_Column getZZ_Approved_TS_COL() throws RuntimeException
+	public org.compiere.model.I_AD_User getZZ_Approved() throws RuntimeException
 	{
-		return (org.compiere.model.I_AD_Column)MTable.get(getCtx(), org.compiere.model.I_AD_Column.Table_ID)
-			.getPO(getZZ_Approved_TS_COL_ID(), get_TrxName());
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Approved_ID(), get_TrxName());
 	}
 
-	/** Set Zz Approved Ts Col Id.
-		@param ZZ_Approved_TS_COL_ID Zz Approved Ts Col Id
+	/** Set Approved By.
+		@param ZZ_Approved_ID Approved By
 	*/
-	public void setZZ_Approved_TS_COL_ID (int ZZ_Approved_TS_COL_ID)
+	public void setZZ_Approved_ID (int ZZ_Approved_ID)
 	{
-		if (ZZ_Approved_TS_COL_ID < 1)
-			set_Value (COLUMNNAME_ZZ_Approved_TS_COL_ID, null);
+		if (ZZ_Approved_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Approved_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZ_Approved_TS_COL_ID, Integer.valueOf(ZZ_Approved_TS_COL_ID));
+			set_Value (COLUMNNAME_ZZ_Approved_ID, Integer.valueOf(ZZ_Approved_ID));
 	}
 
-	/** Get Zz Approved Ts Col Id.
-		@return Zz Approved Ts Col Id	  */
-	public int getZZ_Approved_TS_COL_ID()
+	/** Get Approved By.
+		@return Approved By	  */
+	public int getZZ_Approved_ID()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Approved_TS_COL_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Approved_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
 	}
 
-	public org.compiere.model.I_AD_Column getZZ_Approved_User_COL() throws RuntimeException
-	{
-		return (org.compiere.model.I_AD_Column)MTable.get(getCtx(), org.compiere.model.I_AD_Column.Table_ID)
-			.getPO(getZZ_Approved_User_COL_ID(), get_TrxName());
-	}
-
-	/** Set Approved User Col Id.
-		@param ZZ_Approved_User_COL_ID Approved User Col Id
+	/** Set Date Approved.
+		@param ZZ_Date_Approved Date Approved
 	*/
-	public void setZZ_Approved_User_COL_ID (int ZZ_Approved_User_COL_ID)
+	public void setZZ_Date_Approved (Timestamp ZZ_Date_Approved)
 	{
-		if (ZZ_Approved_User_COL_ID < 1)
-			set_Value (COLUMNNAME_ZZ_Approved_User_COL_ID, null);
-		else
-			set_Value (COLUMNNAME_ZZ_Approved_User_COL_ID, Integer.valueOf(ZZ_Approved_User_COL_ID));
+		set_Value (COLUMNNAME_ZZ_Date_Approved, ZZ_Date_Approved);
 	}
 
-	/** Get Approved User Col Id.
-		@return Approved User Col Id	  */
-	public int getZZ_Approved_User_COL_ID()
+	/** Get Date Approved.
+		@return Date Approved	  */
+	public Timestamp getZZ_Date_Approved()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Approved_User_COL_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Approved);
+	}
+
+	/** Set Date Rejected.
+		@param ZZ_Date_Rejected Date Rejected
+	*/
+	public void setZZ_Date_Rejected (Timestamp ZZ_Date_Rejected)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Rejected, ZZ_Date_Rejected);
+	}
+
+	/** Get Date Rejected.
+		@return Date Rejected	  */
+	public Timestamp getZZ_Date_Rejected()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Rejected);
 	}
 
 	/** Exec Approve = AE */
@@ -468,6 +471,8 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Submit = S1 */
+	public static final String ZZ_DOCACTION_Submit = "S1";
 	/** Submit to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCACTION_SubmitToManagerFinanceConsumables = "SC";
 	/** Submit to SDL Finance Mgr = SD */
@@ -558,6 +563,8 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
 	/** Submitted = SU */
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
+	/** Delinked = UnSdfOrg */
+	public static final String ZZ_DOCSTATUS_Delinked = "UnSdfOrg";
 	/** Set Document Status.
 		@param ZZ_DocStatus Document Status
 	*/
@@ -574,55 +581,28 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
-	public org.compiere.model.I_AD_Column getZZ_Rejected_TS_COL() throws RuntimeException
+	public org.compiere.model.I_AD_User getZZ_Rejected() throws RuntimeException
 	{
-		return (org.compiere.model.I_AD_Column)MTable.get(getCtx(), org.compiere.model.I_AD_Column.Table_ID)
-			.getPO(getZZ_Rejected_TS_COL_ID(), get_TrxName());
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Rejected_ID(), get_TrxName());
 	}
 
-	/** Set Zz Rejected Ts Col Id.
-		@param ZZ_Rejected_TS_COL_ID Zz Rejected Ts Col Id
+	/** Set Rejected ID.
+		@param ZZ_Rejected_ID Rejected ID
 	*/
-	public void setZZ_Rejected_TS_COL_ID (int ZZ_Rejected_TS_COL_ID)
+	public void setZZ_Rejected_ID (int ZZ_Rejected_ID)
 	{
-		if (ZZ_Rejected_TS_COL_ID < 1)
-			set_Value (COLUMNNAME_ZZ_Rejected_TS_COL_ID, null);
+		if (ZZ_Rejected_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Rejected_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZ_Rejected_TS_COL_ID, Integer.valueOf(ZZ_Rejected_TS_COL_ID));
+			set_Value (COLUMNNAME_ZZ_Rejected_ID, Integer.valueOf(ZZ_Rejected_ID));
 	}
 
-	/** Get Zz Rejected Ts Col Id.
-		@return Zz Rejected Ts Col Id	  */
-	public int getZZ_Rejected_TS_COL_ID()
+	/** Get Rejected ID.
+		@return Rejected ID	  */
+	public int getZZ_Rejected_ID()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Rejected_TS_COL_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	public org.compiere.model.I_AD_Column getZZ_Rejected_User_COL() throws RuntimeException
-	{
-		return (org.compiere.model.I_AD_Column)MTable.get(getCtx(), org.compiere.model.I_AD_Column.Table_ID)
-			.getPO(getZZ_Rejected_User_COL_ID(), get_TrxName());
-	}
-
-	/** Set Zz Rejected User Col Id.
-		@param ZZ_Rejected_User_COL_ID Zz Rejected User Col Id
-	*/
-	public void setZZ_Rejected_User_COL_ID (int ZZ_Rejected_User_COL_ID)
-	{
-		if (ZZ_Rejected_User_COL_ID < 1)
-			set_Value (COLUMNNAME_ZZ_Rejected_User_COL_ID, null);
-		else
-			set_Value (COLUMNNAME_ZZ_Rejected_User_COL_ID, Integer.valueOf(ZZ_Rejected_User_COL_ID));
-	}
-
-	/** Get Zz Rejected User Col Id.
-		@return Zz Rejected User Col Id	  */
-	public int getZZ_Rejected_User_COL_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Rejected_User_COL_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Rejected_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

@@ -297,6 +297,24 @@ public interface I_ZZSdfOrganisation_v
 
 	public I_ZZSdfOrganisation getZZSdfOrganisation() throws RuntimeException;
 
+    /** Column name ZZSdfOrganisation_v_ID */
+    public static final String COLUMNNAME_ZZSdfOrganisation_v_ID = "ZZSdfOrganisation_v_ID";
+
+	/** Set Sdf Organisation View	  */
+	public void setZZSdfOrganisation_v_ID (int ZZSdfOrganisation_v_ID);
+
+	/** Get Sdf Organisation View	  */
+	public int getZZSdfOrganisation_v_ID();
+
+    /** Column name ZZSdfOrganisation_v_UU */
+    public static final String COLUMNNAME_ZZSdfOrganisation_v_UU = "ZZSdfOrganisation_v_UU";
+
+	/** Set Sdf Organisation View UU	  */
+	public void setZZSdfOrganisation_v_UU (String ZZSdfOrganisation_v_UU);
+
+	/** Get Sdf Organisation View UU	  */
+	public String getZZSdfOrganisation_v_UU();
+
     /** Column name ZZSecondarySdf */
     public static final String COLUMNNAME_ZZSecondarySdf = "ZZSecondarySdf";
 
@@ -328,6 +346,35 @@ public interface I_ZZSdfOrganisation_v
 	/** Get Years In Occupation	  */
 	public int getZZYearsInOccupation();
 
+    /** Column name ZZ_Approved_ID */
+    public static final String COLUMNNAME_ZZ_Approved_ID = "ZZ_Approved_ID";
+
+	/** Set Approved By	  */
+	public void setZZ_Approved_ID (int ZZ_Approved_ID);
+
+	/** Get Approved By	  */
+	public int getZZ_Approved_ID();
+
+	public org.compiere.model.I_AD_User getZZ_Approved() throws RuntimeException;
+
+    /** Column name ZZ_Date_Approved */
+    public static final String COLUMNNAME_ZZ_Date_Approved = "ZZ_Date_Approved";
+
+	/** Set Date Approved	  */
+	public void setZZ_Date_Approved (Timestamp ZZ_Date_Approved);
+
+	/** Get Date Approved	  */
+	public Timestamp getZZ_Date_Approved();
+
+    /** Column name ZZ_Date_Rejected */
+    public static final String COLUMNNAME_ZZ_Date_Rejected = "ZZ_Date_Rejected";
+
+	/** Set Date Rejected	  */
+	public void setZZ_Date_Rejected (Timestamp ZZ_Date_Rejected);
+
+	/** Get Date Rejected	  */
+	public Timestamp getZZ_Date_Rejected();
+
     /** Column name ZZ_DocAction */
     public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
 
@@ -349,10 +396,10 @@ public interface I_ZZSdfOrganisation_v
     /** Column name ZZ_ID_Passport_No */
     public static final String COLUMNNAME_ZZ_ID_Passport_No = "ZZ_ID_Passport_No";
 
-	/** Set ID/Passport No	  */
+	/** Set ID No	  */
 	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No);
 
-	/** Get ID/Passport No	  */
+	/** Get ID No	  */
 	public String getZZ_ID_Passport_No();
 
     /** Column name ZZ_LI_HighestEducation_ID */
@@ -365,6 +412,17 @@ public interface I_ZZSdfOrganisation_v
 	public int getZZ_LI_HighestEducation_ID();
 
 	public I_ZZ_LI_HighestEducation getZZ_LI_HighestEducation() throws RuntimeException;
+
+    /** Column name ZZ_Rejected_ID */
+    public static final String COLUMNNAME_ZZ_Rejected_ID = "ZZ_Rejected_ID";
+
+	/** Set Rejected ID	  */
+	public void setZZ_Rejected_ID (int ZZ_Rejected_ID);
+
+	/** Get Rejected ID	  */
+	public int getZZ_Rejected_ID();
+
+	public org.compiere.model.I_AD_User getZZ_Rejected() throws RuntimeException;
 
     /** Column name ZZ_SDL_No */
     public static final String COLUMNNAME_ZZ_SDL_No = "ZZ_SDL_No";
