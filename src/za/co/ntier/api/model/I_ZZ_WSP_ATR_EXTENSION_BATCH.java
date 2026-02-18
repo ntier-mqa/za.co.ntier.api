@@ -32,7 +32,7 @@ public interface I_ZZ_WSP_ATR_EXTENSION_BATCH
     /** TableName=ZZ_WSP_ATR_EXTENSION_BATCH */
     public static final String Table_Name = "ZZ_WSP_ATR_EXTENSION_BATCH";
 
-    /** AD_Table_ID=1000182 */
+    /** AD_Table_ID=1000195 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
