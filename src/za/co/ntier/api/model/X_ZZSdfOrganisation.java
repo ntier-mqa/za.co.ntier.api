@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260223L;
+	private static final long serialVersionUID = 20260224L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation (Properties ctx, int ZZSdfOrganisation_ID, String trxName)
@@ -333,10 +333,10 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 		return (String)get_Value(COLUMNNAME_ZZSdfOrganisation_UU);
 	}
 
-	/** Are you replacing the previous primary SDF of this Company? = Primary */
-	public static final String ZZSDFROLETYPE_AreYouReplacingThePreviousPrimarySDFOfThisCompany = "Primary";
-	/** Are you registering as secondary SDF for this Company? = Secondary */
-	public static final String ZZSDFROLETYPE_AreYouRegisteringAsSecondarySDFForThisCompany = "Secondary";
+	/** Primary = Primary */
+	public static final String ZZSDFROLETYPE_Primary = "Primary";
+	/** Secondary = Secondary */
+	public static final String ZZSDFROLETYPE_Secondary = "Secondary";
 	/** Set Sdf Role Type.
 		@param ZZSdfRoleType Sdf Role Type
 	*/
