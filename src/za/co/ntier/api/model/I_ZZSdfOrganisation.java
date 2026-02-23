@@ -226,6 +226,15 @@ public interface I_ZZSdfOrganisation
 	/** Get SDF Organisation UU	  */
 	public String getZZSdfOrganisation_UU();
 
+    /** Column name ZZSdfRoleType */
+    public static final String COLUMNNAME_ZZSdfRoleType = "ZZSdfRoleType";
+
+	/** Set Sdf Role Type	  */
+	public void setZZSdfRoleType (String ZZSdfRoleType);
+
+	/** Get Sdf Role Type	  */
+	public String getZZSdfRoleType();
+
     /** Column name ZZSdfType */
     public static final String COLUMNNAME_ZZSdfType = "ZZSdfType";
 

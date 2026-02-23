@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260214L;
+	private static final long serialVersionUID = 20260223L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation (Properties ctx, int ZZSdfOrganisation_ID, String trxName)
@@ -333,6 +333,26 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 		return (String)get_Value(COLUMNNAME_ZZSdfOrganisation_UU);
 	}
 
+	/** Are you replacing the previous primary SDF of this Company? = Primary */
+	public static final String ZZSDFROLETYPE_AreYouReplacingThePreviousPrimarySDFOfThisCompany = "Primary";
+	/** Are you registering as secondary SDF for this Company? = Secondary */
+	public static final String ZZSDFROLETYPE_AreYouRegisteringAsSecondarySDFForThisCompany = "Secondary";
+	/** Set Sdf Role Type.
+		@param ZZSdfRoleType Sdf Role Type
+	*/
+	public void setZZSdfRoleType (String ZZSdfRoleType)
+	{
+
+		set_Value (COLUMNNAME_ZZSdfRoleType, ZZSdfRoleType);
+	}
+
+	/** Get Sdf Role Type.
+		@return Sdf Role Type	  */
+	public String getZZSdfRoleType()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSdfRoleType);
+	}
+
 	/** Primary = Primary */
 	public static final String ZZSDFTYPE_Primary = "Primary";
 	/** Secondary = Secondary */
@@ -467,12 +487,18 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCACTION_ApproveDoNotApprove = "AP";
 	/** Complete = CO */
 	public static final String ZZ_DOCACTION_Complete = "CO";
+	/** Evaluate = EV */
+	public static final String ZZ_DOCACTION_Evaluate = "EV";
 	/** Final Approval/Do not Approve = FA */
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Re-Submit = RS */
+	public static final String ZZ_DOCACTION_Re_Submit = "RS";
 	/** Submit = S1 */
 	public static final String ZZ_DOCACTION_Submit = "S1";
+	/** System Only (No manual action) = S2 */
+	public static final String ZZ_DOCACTION_SystemOnlyNoManualAction = "S2";
 	/** Submit to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCACTION_SubmitToManagerFinanceConsumables = "SC";
 	/** Submit to SDL Finance Mgr = SD */
@@ -515,6 +541,8 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCSTATUS_Completed = "CO";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Evaluated = EV */
+	public static final String ZZ_DOCSTATUS_Evaluated = "EV";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
 	/** Not Recommended By Senior Mgr SDR = N1 */
@@ -543,16 +571,22 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
 	/** Pending = PE */
 	public static final String ZZ_DOCSTATUS_Pending = "PE";
+	/** Query = QR */
+	public static final String ZZ_DOCSTATUS_Query = "QR";
 	/** Recommended By Senior Mgr Finance = R1 */
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
 	/** Recommended By COO = R2 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
 	/** Recommended By CFO = R3 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
+	/** Recommended for Approval = RA */
+	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
 	public static final String ZZ_DOCSTATUS_Recommended = "RC";
 	/** Recommended By Senior Mgr SDR = RD */
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
+	/** Recommended for Evaluation = RE */
+	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
