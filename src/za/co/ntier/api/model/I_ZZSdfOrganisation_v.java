@@ -64,6 +64,21 @@ public interface I_ZZSdfOrganisation_v
 	  */
 	public int getAD_Org_ID();
 
+    /** Column name AD_User_ID */
+    public static final String COLUMNNAME_AD_User_ID = "AD_User_ID";
+
+	/** Set User/Contact.
+	  * User within the system - Internal or Business Partner Contact
+	  */
+	public void setAD_User_ID (int AD_User_ID);
+
+	/** Get User/Contact.
+	  * User within the system - Internal or Business Partner Contact
+	  */
+	public int getAD_User_ID();
+
+	public org.compiere.model.I_AD_User getAD_User() throws RuntimeException;
+
     /** Column name C_BPartner_ID */
     public static final String COLUMNNAME_C_BPartner_ID = "C_BPartner_ID";
 
@@ -256,19 +271,6 @@ public interface I_ZZSdfOrganisation_v
 	/** Get Middle Name	  */
 	public String getZZMiddleName();
 
-    /** Column name ZZReplacingPrimarySDF */
-    public static final String COLUMNNAME_ZZReplacingPrimarySDF = "ZZReplacingPrimarySDF";
-
-	/** Set Replacing Primary SDF.
-	  * Are you replacing the previous primary SDF of this Company?
-	  */
-	public void setZZReplacingPrimarySDF (boolean ZZReplacingPrimarySDF);
-
-	/** Get Replacing Primary SDF.
-	  * Are you replacing the previous primary SDF of this Company?
-	  */
-	public boolean isZZReplacingPrimarySDF();
-
     /** Column name ZZSdfFunction */
     public static final String COLUMNNAME_ZZSdfFunction = "ZZSdfFunction";
 
@@ -315,18 +317,14 @@ public interface I_ZZSdfOrganisation_v
 	/** Get Sdf Organisation View UU	  */
 	public String getZZSdfOrganisation_v_UU();
 
-    /** Column name ZZSecondarySdf */
-    public static final String COLUMNNAME_ZZSecondarySdf = "ZZSecondarySdf";
+    /** Column name ZZSdfRoleType */
+    public static final String COLUMNNAME_ZZSdfRoleType = "ZZSdfRoleType";
 
-	/** Set Secondary Sdf.
-	  * Are you registering as secondary SDF for this Company?
-	  */
-	public void setZZSecondarySdf (boolean ZZSecondarySdf);
+	/** Set Sdf Role Type	  */
+	public void setZZSdfRoleType (String ZZSdfRoleType);
 
-	/** Get Secondary Sdf.
-	  * Are you registering as secondary SDF for this Company?
-	  */
-	public boolean isZZSecondarySdf();
+	/** Get Sdf Role Type	  */
+	public String getZZSdfRoleType();
 
     /** Column name ZZSurname */
     public static final String COLUMNNAME_ZZSurname = "ZZSurname";

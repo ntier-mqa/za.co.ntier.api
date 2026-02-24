@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260214L;
+	private static final long serialVersionUID = 20260224L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation_v (Properties ctx, int ZZSdfOrganisation_v_ID, String trxName)
@@ -41,10 +41,6 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
       /** if (ZZSdfOrganisation_v_ID == 0)
         {
 			setZZActingForEmployer (false);
-// N
-			setZZReplacingPrimarySDF (false);
-// N
-			setZZSecondarySdf (false);
 // N
         } */
     }
@@ -57,10 +53,6 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
         {
 			setZZActingForEmployer (false);
 // N
-			setZZReplacingPrimarySDF (false);
-// N
-			setZZSecondarySdf (false);
-// N
         } */
     }
 
@@ -72,10 +64,6 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
         {
 			setZZActingForEmployer (false);
 // N
-			setZZReplacingPrimarySDF (false);
-// N
-			setZZSecondarySdf (false);
-// N
         } */
     }
 
@@ -86,10 +74,6 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
       /** if (ZZSdfOrganisation_v_UU == null)
         {
 			setZZActingForEmployer (false);
-// N
-			setZZReplacingPrimarySDF (false);
-// N
-			setZZSecondarySdf (false);
 // N
         } */
     }
@@ -121,6 +105,34 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
         .append(get_ID()).append("]");
       return sb.toString();
     }
+
+	public org.compiere.model.I_AD_User getAD_User() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getAD_User_ID(), get_TrxName());
+	}
+
+	/** Set User/Contact.
+		@param AD_User_ID User within the system - Internal or Business Partner Contact
+	*/
+	public void setAD_User_ID (int AD_User_ID)
+	{
+		if (AD_User_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_AD_User_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_AD_User_ID, Integer.valueOf(AD_User_ID));
+	}
+
+	/** Get User/Contact.
+		@return User within the system - Internal or Business Partner Contact
+	  */
+	public int getAD_User_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_AD_User_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
 
 	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException
 	{
@@ -355,29 +367,6 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		return (String)get_Value(COLUMNNAME_ZZMiddleName);
 	}
 
-	/** Set Replacing Primary SDF.
-		@param ZZReplacingPrimarySDF Are you replacing the previous primary SDF of this Company?
-	*/
-	public void setZZReplacingPrimarySDF (boolean ZZReplacingPrimarySDF)
-	{
-		set_Value (COLUMNNAME_ZZReplacingPrimarySDF, Boolean.valueOf(ZZReplacingPrimarySDF));
-	}
-
-	/** Get Replacing Primary SDF.
-		@return Are you replacing the previous primary SDF of this Company?
-	  */
-	public boolean isZZReplacingPrimarySDF()
-	{
-		Object oo = get_Value(COLUMNNAME_ZZReplacingPrimarySDF);
-		if (oo != null)
-		{
-			 if (oo instanceof Boolean)
-				 return ((Boolean)oo).booleanValue();
-			return "Y".equals(oo);
-		}
-		return false;
-	}
-
 	/** Group of organisations = Group */
 	public static final String ZZSDFFUNCTION_GroupOfOrganisations = "Group";
 	/** Multiple organisations = Multiple */
@@ -469,27 +458,24 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		return (String)get_Value(COLUMNNAME_ZZSdfOrganisation_v_UU);
 	}
 
-	/** Set Secondary Sdf.
-		@param ZZSecondarySdf Are you registering as secondary SDF for this Company?
+	/** Primary = Primary */
+	public static final String ZZSDFROLETYPE_Primary = "Primary";
+	/** Secondary = Secondary */
+	public static final String ZZSDFROLETYPE_Secondary = "Secondary";
+	/** Set Sdf Role Type.
+		@param ZZSdfRoleType Sdf Role Type
 	*/
-	public void setZZSecondarySdf (boolean ZZSecondarySdf)
+	public void setZZSdfRoleType (String ZZSdfRoleType)
 	{
-		set_Value (COLUMNNAME_ZZSecondarySdf, Boolean.valueOf(ZZSecondarySdf));
+
+		set_Value (COLUMNNAME_ZZSdfRoleType, ZZSdfRoleType);
 	}
 
-	/** Get Secondary Sdf.
-		@return Are you registering as secondary SDF for this Company?
-	  */
-	public boolean isZZSecondarySdf()
+	/** Get Sdf Role Type.
+		@return Sdf Role Type	  */
+	public String getZZSdfRoleType()
 	{
-		Object oo = get_Value(COLUMNNAME_ZZSecondarySdf);
-		if (oo != null)
-		{
-			 if (oo instanceof Boolean)
-				 return ((Boolean)oo).booleanValue();
-			return "Y".equals(oo);
-		}
-		return false;
+		return (String)get_Value(COLUMNNAME_ZZSdfRoleType);
 	}
 
 	/** Set Surname.
@@ -588,12 +574,18 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCACTION_ApproveDoNotApprove = "AP";
 	/** Complete = CO */
 	public static final String ZZ_DOCACTION_Complete = "CO";
+	/** Evaluate = EV */
+	public static final String ZZ_DOCACTION_Evaluate = "EV";
 	/** Final Approval/Do not Approve = FA */
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Re-Submit = RS */
+	public static final String ZZ_DOCACTION_Re_Submit = "RS";
 	/** Submit = S1 */
 	public static final String ZZ_DOCACTION_Submit = "S1";
+	/** System Only (No manual action) = S2 */
+	public static final String ZZ_DOCACTION_SystemOnlyNoManualAction = "S2";
 	/** Submit to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCACTION_SubmitToManagerFinanceConsumables = "SC";
 	/** Submit to SDL Finance Mgr = SD */
@@ -636,6 +628,8 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCSTATUS_Completed = "CO";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Evaluated = EV */
+	public static final String ZZ_DOCSTATUS_Evaluated = "EV";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
 	/** Not Recommended By Senior Mgr SDR = N1 */
@@ -664,16 +658,22 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
 	/** Pending = PE */
 	public static final String ZZ_DOCSTATUS_Pending = "PE";
+	/** Query = QR */
+	public static final String ZZ_DOCSTATUS_Query = "QR";
 	/** Recommended By Senior Mgr Finance = R1 */
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
 	/** Recommended By COO = R2 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
 	/** Recommended By CFO = R3 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
+	/** Recommended for Approval = RA */
+	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
 	public static final String ZZ_DOCSTATUS_Recommended = "RC";
 	/** Recommended By Senior Mgr SDR = RD */
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
+	/** Recommended for Evaluation = RE */
+	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
