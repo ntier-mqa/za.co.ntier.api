@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Ntier Common
-Bundle-SymbolicName: za.co.ntier.api
+Bundle-SymbolicName: za.co.ntier.api;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Ntier
 Automatic-Module-Name: za.co.ntier.api
