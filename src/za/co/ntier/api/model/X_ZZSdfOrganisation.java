@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260224L;
+	private static final long serialVersionUID = 20260226L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation (Properties ctx, int ZZSdfOrganisation_ID, String trxName)
@@ -180,6 +180,22 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Document No.
+		@param DocumentNo Document sequence number of the document
+	*/
+	public void setDocumentNo (String DocumentNo)
+	{
+		set_ValueNoCheck (COLUMNNAME_DocumentNo, DocumentNo);
+	}
+
+	/** Get Document No.
+		@return Document sequence number of the document
+	  */
+	public String getDocumentNo()
+	{
+		return (String)get_Value(COLUMNNAME_DocumentNo);
 	}
 
 	/** Set Acting For Employer.
@@ -351,27 +367,6 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public String getZZSdfRoleType()
 	{
 		return (String)get_Value(COLUMNNAME_ZZSdfRoleType);
-	}
-
-	/** Primary = Primary */
-	public static final String ZZSDFTYPE_Primary = "Primary";
-	/** Secondary = Secondary */
-	public static final String ZZSDFTYPE_Secondary = "Secondary";
-	/** Set Sdf Type.
-		@param ZZSdfType Secondary Or Master
-	*/
-	public void setZZSdfType (String ZZSdfType)
-	{
-
-		set_Value (COLUMNNAME_ZZSdfType, ZZSdfType);
-	}
-
-	/** Get Sdf Type.
-		@return Secondary Or Master
-	  */
-	public String getZZSdfType()
-	{
-		return (String)get_Value(COLUMNNAME_ZZSdfType);
 	}
 
 	public I_ZZSdf getZZSdf() throws RuntimeException

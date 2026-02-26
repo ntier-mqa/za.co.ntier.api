@@ -110,6 +110,19 @@ public interface I_ZZSdfOrganisation
 	  */
 	public int getCreatedBy();
 
+    /** Column name DocumentNo */
+    public static final String COLUMNNAME_DocumentNo = "DocumentNo";
+
+	/** Set Document No.
+	  * Document sequence number of the document
+	  */
+	public void setDocumentNo (String DocumentNo);
+
+	/** Get Document No.
+	  * Document sequence number of the document
+	  */
+	public String getDocumentNo();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -234,19 +247,6 @@ public interface I_ZZSdfOrganisation
 
 	/** Get Sdf Role Type	  */
 	public String getZZSdfRoleType();
-
-    /** Column name ZZSdfType */
-    public static final String COLUMNNAME_ZZSdfType = "ZZSdfType";
-
-	/** Set Sdf Type.
-	  * Secondary Or Master
-	  */
-	public void setZZSdfType (String ZZSdfType);
-
-	/** Get Sdf Type.
-	  * Secondary Or Master
-	  */
-	public String getZZSdfType();
 
     /** Column name ZZSdf_ID */
     public static final String COLUMNNAME_ZZSdf_ID = "ZZSdf_ID";
