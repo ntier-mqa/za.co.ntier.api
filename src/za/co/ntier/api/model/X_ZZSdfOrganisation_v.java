@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260224L;
+	private static final long serialVersionUID = 20260226L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation_v (Properties ctx, int ZZSdfOrganisation_v_ID, String trxName)
@@ -160,6 +160,22 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Document No.
+		@param DocumentNo Document sequence number of the document
+	*/
+	public void setDocumentNo (String DocumentNo)
+	{
+		set_ValueNoCheck (COLUMNNAME_DocumentNo, DocumentNo);
+	}
+
+	/** Get Document No.
+		@return Document sequence number of the document
+	  */
+	public String getDocumentNo()
+	{
+		return (String)get_Value(COLUMNNAME_DocumentNo);
 	}
 
 	/** Set EMail Address.
