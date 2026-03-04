@@ -31,7 +31,7 @@ public class X_ZZOrganisationLinkage extends PO implements I_ZZOrganisationLinka
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260219L;
+	private static final long serialVersionUID = 20260304L;
 
     /** Standard Constructor */
     public X_ZZOrganisationLinkage (Properties ctx, int ZZOrganisationLinkage_ID, String trxName)
@@ -40,6 +40,8 @@ public class X_ZZOrganisationLinkage extends PO implements I_ZZOrganisationLinka
       /** if (ZZOrganisationLinkage_ID == 0)
         {
 			setZZOrganisationLinkage_ID (0);
+			setZZ_Parent_Uploads (null);
+// N
         } */
     }
 
@@ -50,6 +52,8 @@ public class X_ZZOrganisationLinkage extends PO implements I_ZZOrganisationLinka
       /** if (ZZOrganisationLinkage_ID == 0)
         {
 			setZZOrganisationLinkage_ID (0);
+			setZZ_Parent_Uploads (null);
+// N
         } */
     }
 
@@ -60,6 +64,8 @@ public class X_ZZOrganisationLinkage extends PO implements I_ZZOrganisationLinka
       /** if (ZZOrganisationLinkage_UU == null)
         {
 			setZZOrganisationLinkage_ID (0);
+			setZZ_Parent_Uploads (null);
+// N
         } */
     }
 
@@ -70,6 +76,8 @@ public class X_ZZOrganisationLinkage extends PO implements I_ZZOrganisationLinka
       /** if (ZZOrganisationLinkage_UU == null)
         {
 			setZZOrganisationLinkage_ID (0);
+			setZZ_Parent_Uploads (null);
+// N
         } */
     }
 
@@ -221,6 +229,28 @@ public class X_ZZOrganisationLinkage extends PO implements I_ZZOrganisationLinka
 	public String getZZOrganisationLinkage_UU()
 	{
 		return (String)get_Value(COLUMNNAME_ZZOrganisationLinkage_UU);
+	}
+
+	/** ZZ_Parent_Uploads AD_Reference_ID=319 */
+	public static final int ZZ_PARENT_UPLOADS_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZ_PARENT_UPLOADS_No = "N";
+	/** Yes = Y */
+	public static final String ZZ_PARENT_UPLOADS_Yes = "Y";
+	/** Set Parent Uploads.
+		@param ZZ_Parent_Uploads Parent Uploads
+	*/
+	public void setZZ_Parent_Uploads (String ZZ_Parent_Uploads)
+	{
+
+		set_Value (COLUMNNAME_ZZ_Parent_Uploads, ZZ_Parent_Uploads);
+	}
+
+	/** Get Parent Uploads.
+		@return Parent Uploads	  */
+	public String getZZ_Parent_Uploads()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Parent_Uploads);
 	}
 
 	/** Set SDL Number.

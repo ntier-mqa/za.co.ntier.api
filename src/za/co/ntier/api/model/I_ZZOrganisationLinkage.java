@@ -32,7 +32,7 @@ public interface I_ZZOrganisationLinkage
     /** TableName=ZZOrganisationLinkage */
     public static final String Table_Name = "ZZOrganisationLinkage";
 
-    /** AD_Table_ID=1000209 */
+    /** AD_Table_ID=1000210 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -172,6 +172,15 @@ public interface I_ZZOrganisationLinkage
 
 	/** Get ZZOrganisationLinkage_UU	  */
 	public String getZZOrganisationLinkage_UU();
+
+    /** Column name ZZ_Parent_Uploads */
+    public static final String COLUMNNAME_ZZ_Parent_Uploads = "ZZ_Parent_Uploads";
+
+	/** Set Parent Uploads	  */
+	public void setZZ_Parent_Uploads (String ZZ_Parent_Uploads);
+
+	/** Get Parent Uploads	  */
+	public String getZZ_Parent_Uploads();
 
     /** Column name ZZ_SDL_No */
     public static final String COLUMNNAME_ZZ_SDL_No = "ZZ_SDL_No";
