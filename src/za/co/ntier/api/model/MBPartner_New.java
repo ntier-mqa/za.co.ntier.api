@@ -247,20 +247,6 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 		return ii.intValue();
 	}
 
-	/** Set Registration Number.
-		@param ZZOrgRegistrationNumber Registration Number
-	*/
-	public void setZZOrgRegistrationNumber (String ZZOrgRegistrationNumber)
-	{
-		set_Value (COLUMNNAME_ZZOrgRegistrationNumber, ZZOrgRegistrationNumber);
-	}
-
-	/** Get Registration Number.
-		@return Registration Number	  */
-	public String getZZOrgRegistrationNumber()
-	{
-		return (String)get_Value(COLUMNNAME_ZZOrgRegistrationNumber);
-	}
 	/** Set Organisation Registration Number Type.
 	@param ZZOrgRegistrationNumberType Organisation Registration Number Type
 	*/
@@ -380,8 +366,48 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	 */
 
 
+	/** ZZMaintainStatus AD_Reference_ID=319 */
+	public static final int ZZMAINTAINSTATUS_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZMAINTAINSTATUS_No = "N";
+	/** Yes = Y */
+	public static final String ZZMAINTAINSTATUS_Yes = "Y";
+	/** Set Maintain Status.
+		@param ZZMaintainStatus Maintain Status
+	*/
+	public void setZZMaintainStatus (String ZZMaintainStatus)
+	{
 
+		set_Value (COLUMNNAME_ZZMaintainStatus, ZZMaintainStatus);
+	}
 
-
+	/** Get Maintain Status.
+		@return Maintain Status	  */
+	public String getZZMaintainStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZMaintainStatus);
+	}
+	
+	/** Set IsSDRUser.
+	@param ZZ_IsSDRUser IsSDRUser
+	 */
+	public void setZZ_IsSDRUser (boolean ZZ_IsSDRUser)
+	{
+		set_Value (COLUMNNAME_ZZ_IsSDRUser, Boolean.valueOf(ZZ_IsSDRUser));
+	}
+	
+	/** Get IsSDRUser.
+		@return IsSDRUser	  */
+	public boolean isZZ_IsSDRUser()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsSDRUser);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
 
 }

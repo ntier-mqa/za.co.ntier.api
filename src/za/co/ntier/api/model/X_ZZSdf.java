@@ -31,7 +31,7 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251209L;
+	private static final long serialVersionUID = 20260305L;
 
     /** Standard Constructor */
     public X_ZZSdf (Properties ctx, int ZZSdf_ID, String trxName)
@@ -316,6 +316,28 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	public String getZZLkpTitle()
 	{
 		return (String)get_Value(COLUMNNAME_ZZLkpTitle);
+	}
+
+	/** ZZMaintainStatus AD_Reference_ID=319 */
+	public static final int ZZMAINTAINSTATUS_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZMAINTAINSTATUS_No = "N";
+	/** Yes = Y */
+	public static final String ZZMAINTAINSTATUS_Yes = "Y";
+	/** Set Maintain Status.
+		@param ZZMaintainStatus Maintain Status
+	*/
+	public void setZZMaintainStatus (String ZZMaintainStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZMaintainStatus, ZZMaintainStatus);
+	}
+
+	/** Get Maintain Status.
+		@return Maintain Status	  */
+	public String getZZMaintainStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZMaintainStatus);
 	}
 
 	/** Set Middle Name.

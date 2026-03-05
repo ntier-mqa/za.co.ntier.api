@@ -1000,6 +1000,15 @@ s business as a percentage
 	/** Get SDL Number Type	  */
 	public String getZZLevyNumberType();
 
+    /** Column name ZZMaintainStatus */
+    public static final String COLUMNNAME_ZZMaintainStatus = "ZZMaintainStatus";
+
+	/** Set Maintain Status	  */
+	public void setZZMaintainStatus (String ZZMaintainStatus);
+
+	/** Get Maintain Status	  */
+	public String getZZMaintainStatus();
+
     /** Column name ZZNumberOfEmployeesProfile */
     public static final String COLUMNNAME_ZZNumberOfEmployeesProfile = "ZZNumberOfEmployeesProfile";
 
@@ -1012,15 +1021,6 @@ s business as a percentage
 	  * Number of Employees as per the Employment Profile
 	  */
 	public int getZZNumberOfEmployeesProfile();
-
-    /** Column name ZZOrgRegistrationNumber */
-    public static final String COLUMNNAME_ZZOrgRegistrationNumber = "ZZOrgRegistrationNumber";
-
-	/** Set Registration Number	  */
-	public void setZZOrgRegistrationNumber (String ZZOrgRegistrationNumber);
-
-	/** Get Registration Number	  */
-	public String getZZOrgRegistrationNumber();
 
     /** Column name ZZOrgRegistrationNumberType */
     public static final String COLUMNNAME_ZZOrgRegistrationNumberType = "ZZOrgRegistrationNumberType";
@@ -1084,6 +1084,15 @@ s business as a percentage
 
 	/** Get Business Registration No	  */
 	public String getZZ_Business_Reg_No();
+
+    /** Column name ZZ_IsSDRUser */
+    public static final String COLUMNNAME_ZZ_IsSDRUser = "ZZ_IsSDRUser";
+
+	/** Set IsSDRUser	  */
+	public void setZZ_IsSDRUser (boolean ZZ_IsSDRUser);
+
+	/** Get IsSDRUser	  */
+	public boolean isZZ_IsSDRUser();
 
     /** Column name ZZ_Is_Employer */
     public static final String COLUMNNAME_ZZ_Is_Employer = "ZZ_Is_Employer";
