@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260226L;
+	private static final long serialVersionUID = 20260311L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation_v (Properties ctx, int ZZSdfOrganisation_v_ID, String trxName)
@@ -368,6 +368,28 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 		return (String)get_Value(COLUMNNAME_ZZHighestEducationDesc);
 	}
 
+	/** ZZMaintainStatus AD_Reference_ID=319 */
+	public static final int ZZMAINTAINSTATUS_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZMAINTAINSTATUS_No = "N";
+	/** Yes = Y */
+	public static final String ZZMAINTAINSTATUS_Yes = "Y";
+	/** Set Maintain Status.
+		@param ZZMaintainStatus Maintain Status
+	*/
+	public void setZZMaintainStatus (String ZZMaintainStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZMaintainStatus, ZZMaintainStatus);
+	}
+
+	/** Get Maintain Status.
+		@return Maintain Status	  */
+	public String getZZMaintainStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZMaintainStatus);
+	}
+
 	/** Set Middle Name.
 		@param ZZMiddleName Middle Name
 	*/
@@ -594,6 +616,8 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCACTION_Evaluate = "EV";
 	/** Final Approval/Do not Approve = FA */
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
+	/** PrepareCEO = PC */
+	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
 	/** Re-Submit = RS */
@@ -620,6 +644,10 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCACTION_SubmitToSnrMgrSRU = "SS";
 	/** Submit to Line Manager = SU */
 	public static final String ZZ_DOCACTION_SubmitToLineManager = "SU";
+	/** Update = UP */
+	public static final String ZZ_DOCACTION_Update = "UP";
+	/** Verify = VE */
+	public static final String ZZ_DOCACTION_Verify = "VE";
 	/** Set Document Action.
 		@param ZZ_DocAction Document Action
 	*/
@@ -640,12 +668,22 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
+	/** Prepared for CEO = CF */
+	public static final String ZZ_DOCSTATUS_PreparedForCEO = "CF";
 	/** Completed = CO */
 	public static final String ZZ_DOCSTATUS_Completed = "CO";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Error Importing = EE */
+	public static final String ZZ_DOCSTATUS_ErrorImporting = "EE";
+	/** Validation Error = ER */
+	public static final String ZZ_DOCSTATUS_ValidationError = "ER";
 	/** Evaluated = EV */
 	public static final String ZZ_DOCSTATUS_Evaluated = "EV";
+	/** Importing = IG */
+	public static final String ZZ_DOCSTATUS_Importing = "IG";
+	/** Imported = IM */
+	public static final String ZZ_DOCSTATUS_Imported = "IM";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
 	/** Not Recommended By Senior Mgr SDR = N1 */
@@ -700,8 +738,18 @@ public class X_ZZSdfOrganisation_v extends PO implements I_ZZSdfOrganisation_v, 
 	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
 	/** Submitted = SU */
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
+	/** Transfer Out = TO */
+	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
+	/** Updated by SDR Admin = UA */
+	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
+	/** Uploaded = UP */
+	public static final String ZZ_DOCSTATUS_Uploaded = "UP";
 	/** Delinked = UnSdfOrg */
 	public static final String ZZ_DOCSTATUS_Delinked = "UnSdfOrg";
+	/** Validating = VA */
+	public static final String ZZ_DOCSTATUS_Validating = "VA";
+	/** Verified = VE */
+	public static final String ZZ_DOCSTATUS_Verified = "VE";
 	/** Set Document Status.
 		@param ZZ_DocStatus Document Status
 	*/

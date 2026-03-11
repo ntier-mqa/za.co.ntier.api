@@ -409,5 +409,28 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 		}
 		return false;
 	}
+	
+
+	/** ZZUnionised AD_Reference_ID=319 */
+	public static final int ZZUNIONISED_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZUNIONISED_No = "N";
+	/** Yes = Y */
+	public static final String ZZUNIONISED_Yes = "Y";
+	/** Set Unionised.
+		@param ZZUnionised Unionised
+	*/
+	public void setZZUnionised (String ZZUnionised)
+	{
+
+		set_Value (COLUMNNAME_ZZUnionised, ZZUnionised);
+	}
+
+	/** Get Unionised.
+		@return Unionised	  */
+	public String getZZUnionised()
+	{
+		return (String)get_Value(COLUMNNAME_ZZUnionised);
+	}
 
 }

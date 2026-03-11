@@ -275,6 +275,15 @@ public interface I_ZZSdfOrganisation_v
 	/** Get Highest Education Description	  */
 	public String getZZHighestEducationDesc();
 
+    /** Column name ZZMaintainStatus */
+    public static final String COLUMNNAME_ZZMaintainStatus = "ZZMaintainStatus";
+
+	/** Set Maintain Status	  */
+	public void setZZMaintainStatus (String ZZMaintainStatus);
+
+	/** Get Maintain Status	  */
+	public String getZZMaintainStatus();
+
     /** Column name ZZMiddleName */
     public static final String COLUMNNAME_ZZMiddleName = "ZZMiddleName";
 

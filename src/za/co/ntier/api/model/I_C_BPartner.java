@@ -1076,6 +1076,15 @@ s business as a percentage
 	/** Get Terminated Employees	  */
 	public int getZZTerminatedEmployees();
 
+    /** Column name ZZUnionised */
+    public static final String COLUMNNAME_ZZUnionised = "ZZUnionised";
+
+	/** Set Unionised	  */
+	public void setZZUnionised (String ZZUnionised);
+
+	/** Get Unionised	  */
+	public String getZZUnionised();
+
     /** Column name ZZ_Business_Reg_No */
     public static final String COLUMNNAME_ZZ_Business_Reg_No = "ZZ_Business_Reg_No";
 
