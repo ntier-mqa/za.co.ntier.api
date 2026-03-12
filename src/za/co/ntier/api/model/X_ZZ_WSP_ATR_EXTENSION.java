@@ -34,7 +34,7 @@ public class X_ZZ_WSP_ATR_EXTENSION extends PO implements I_ZZ_WSP_ATR_EXTENSION
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260216L;
+	private static final long serialVersionUID = 20260312L;
 
     /** Standard Constructor */
     public X_ZZ_WSP_ATR_EXTENSION (Properties ctx, int ZZ_WSP_ATR_EXTENSION_ID, String trxName)
@@ -99,6 +99,22 @@ public class X_ZZ_WSP_ATR_EXTENSION extends PO implements I_ZZ_WSP_ATR_EXTENSION
         .append(get_ID()).append("]");
       return sb.toString();
     }
+
+	/** Set Document No.
+		@param DocumentNo Document sequence number of the document
+	*/
+	public void setDocumentNo (String DocumentNo)
+	{
+		set_ValueNoCheck (COLUMNNAME_DocumentNo, DocumentNo);
+	}
+
+	/** Get Document No.
+		@return Document sequence number of the document
+	  */
+	public String getDocumentNo()
+	{
+		return (String)get_Value(COLUMNNAME_DocumentNo);
+	}
 
 	/** Set Designation.
 		@param ZZ_Designation Designation

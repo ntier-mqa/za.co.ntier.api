@@ -80,6 +80,19 @@ public interface I_ZZ_WSP_ATR_EXTENSION
 	  */
 	public int getCreatedBy();
 
+    /** Column name DocumentNo */
+    public static final String COLUMNNAME_DocumentNo = "DocumentNo";
+
+	/** Set Document No.
+	  * Document sequence number of the document
+	  */
+	public void setDocumentNo (String DocumentNo);
+
+	/** Get Document No.
+	  * Document sequence number of the document
+	  */
+	public String getDocumentNo();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
