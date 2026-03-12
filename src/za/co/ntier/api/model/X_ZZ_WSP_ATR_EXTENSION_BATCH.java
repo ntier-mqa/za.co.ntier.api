@@ -32,7 +32,7 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260216L;
+	private static final long serialVersionUID = 20260312L;
 
     /** Standard Constructor */
     public X_ZZ_WSP_ATR_EXTENSION_BATCH (Properties ctx, int ZZ_WSP_ATR_EXTENSION_BATCH_ID, String trxName)
@@ -106,6 +106,22 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
       return sb.toString();
     }
 
+	/** Set Document No.
+		@param DocumentNo Document sequence number of the document
+	*/
+	public void setDocumentNo (String DocumentNo)
+	{
+		set_ValueNoCheck (COLUMNNAME_DocumentNo, DocumentNo);
+	}
+
+	/** Get Document No.
+		@return Document sequence number of the document
+	  */
+	public String getDocumentNo()
+	{
+		return (String)get_Value(COLUMNNAME_DocumentNo);
+	}
+
 	/** Set Processed.
 		@param Processed The document has been processed
 	*/
@@ -129,6 +145,195 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
 		return false;
 	}
 
+	public org.compiere.model.I_AD_User getZZ_CEO() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_CEO_ID(), get_TrxName());
+	}
+
+	/** Set CEO.
+		@param ZZ_CEO_ID CEO
+	*/
+	public void setZZ_CEO_ID (int ZZ_CEO_ID)
+	{
+		if (ZZ_CEO_ID < 1)
+			set_Value (COLUMNNAME_ZZ_CEO_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_CEO_ID, Integer.valueOf(ZZ_CEO_ID));
+	}
+
+	/** Get CEO.
+		@return CEO	  */
+	public int getZZ_CEO_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_CEO_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_COO() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_COO_ID(), get_TrxName());
+	}
+
+	/** Set COO.
+		@param ZZ_COO_ID COO
+	*/
+	public void setZZ_COO_ID (int ZZ_COO_ID)
+	{
+		if (ZZ_COO_ID < 1)
+			set_Value (COLUMNNAME_ZZ_COO_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_COO_ID, Integer.valueOf(ZZ_COO_ID));
+	}
+
+	/** Get COO.
+		@return COO	  */
+	public int getZZ_COO_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_COO_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Date Not Approved By CEO.
+		@param ZZ_Date_Not_Recom_CEO Date Not Approved By CEO
+	*/
+	public void setZZ_Date_Not_Recom_CEO (Timestamp ZZ_Date_Not_Recom_CEO)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recom_CEO, ZZ_Date_Not_Recom_CEO);
+	}
+
+	/** Get Date Not Approved By CEO.
+		@return Date Not Approved By CEO	  */
+	public Timestamp getZZ_Date_Not_Recom_CEO()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recom_CEO);
+	}
+
+	/** Set Date Not Recommended By COO.
+		@param ZZ_Date_Not_Recom_COO Date Not Recommended By COO
+	*/
+	public void setZZ_Date_Not_Recom_COO (Timestamp ZZ_Date_Not_Recom_COO)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recom_COO, ZZ_Date_Not_Recom_COO);
+	}
+
+	/** Get Date Not Recommended By COO.
+		@return Date Not Recommended By COO	  */
+	public Timestamp getZZ_Date_Not_Recom_COO()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recom_COO);
+	}
+
+	/** Set Date Not Approved By MQA Board.
+		@param ZZ_Date_Not_Recom_MQA_Board Date Not Approved By MQA Board
+	*/
+	public void setZZ_Date_Not_Recom_MQA_Board (Timestamp ZZ_Date_Not_Recom_MQA_Board)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recom_MQA_Board, ZZ_Date_Not_Recom_MQA_Board);
+	}
+
+	/** Get Date Not Approved By MQA Board.
+		@return Date Not Approved By MQA Board	  */
+	public Timestamp getZZ_Date_Not_Recom_MQA_Board()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recom_MQA_Board);
+	}
+
+	/** Set Date Not Recommended By Snr Mgr SDR.
+		@param ZZ_Date_Not_Recom_Snr_Mgr_SDR Date Not Recommended By Snr Mgr SDR
+	*/
+	public void setZZ_Date_Not_Recom_Snr_Mgr_SDR (Timestamp ZZ_Date_Not_Recom_Snr_Mgr_SDR)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recom_Snr_Mgr_SDR, ZZ_Date_Not_Recom_Snr_Mgr_SDR);
+	}
+
+	/** Get Date Not Recommended By Snr Mgr SDR.
+		@return Date Not Recommended By Snr Mgr SDR	  */
+	public Timestamp getZZ_Date_Not_Recom_Snr_Mgr_SDR()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recom_Snr_Mgr_SDR);
+	}
+
+	/** Set Date Recommended By Snr Mgr SDR.
+		@param ZZ_Date_Recom_Snr_Mgr_SDR Date Recommended By Snr Mgr SDR
+	*/
+	public void setZZ_Date_Recom_Snr_Mgr_SDR (Timestamp ZZ_Date_Recom_Snr_Mgr_SDR)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recom_Snr_Mgr_SDR, ZZ_Date_Recom_Snr_Mgr_SDR);
+	}
+
+	/** Get Date Recommended By Snr Mgr SDR.
+		@return Date Recommended By Snr Mgr SDR	  */
+	public Timestamp getZZ_Date_Recom_Snr_Mgr_SDR()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recom_Snr_Mgr_SDR);
+	}
+
+	/** Set Date Recommended By CEO.
+		@param ZZ_Date_Recomm_CEO Date Recommended By CEO
+	*/
+	public void setZZ_Date_Recomm_CEO (Timestamp ZZ_Date_Recomm_CEO)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recomm_CEO, ZZ_Date_Recomm_CEO);
+	}
+
+	/** Get Date Recommended By CEO.
+		@return Date Recommended By CEO	  */
+	public Timestamp getZZ_Date_Recomm_CEO()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recomm_CEO);
+	}
+
+	/** Set Date Recommended By COO.
+		@param ZZ_Date_Recomm_COO Date Recommended By COO
+	*/
+	public void setZZ_Date_Recomm_COO (Timestamp ZZ_Date_Recomm_COO)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recomm_COO, ZZ_Date_Recomm_COO);
+	}
+
+	/** Get Date Recommended By COO.
+		@return Date Recommended By COO	  */
+	public Timestamp getZZ_Date_Recomm_COO()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recomm_COO);
+	}
+
+	/** Set Date Recommended By MQA Board.
+		@param ZZ_Date_Recomm_MQA_Board Date Recommended By MQA Board
+	*/
+	public void setZZ_Date_Recomm_MQA_Board (Timestamp ZZ_Date_Recomm_MQA_Board)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recomm_MQA_Board, ZZ_Date_Recomm_MQA_Board);
+	}
+
+	/** Get Date Recommended By MQA Board.
+		@return Date Recommended By MQA Board	  */
+	public Timestamp getZZ_Date_Recomm_MQA_Board()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recomm_MQA_Board);
+	}
+
+	/** Set Date Submitted.
+		@param ZZ_Date_Submitted Date Submitted
+	*/
+	public void setZZ_Date_Submitted (Timestamp ZZ_Date_Submitted)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Submitted, ZZ_Date_Submitted);
+	}
+
+	/** Get Date Submitted.
+		@return Date Submitted	  */
+	public Timestamp getZZ_Date_Submitted()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Submitted);
+	}
+
 	/** Exec Approve = AE */
 	public static final String ZZ_DOCACTION_ExecApprove = "AE";
 	/** Approve/Do Not Approve = AP */
@@ -139,6 +344,8 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
 	public static final String ZZ_DOCACTION_Evaluate = "EV";
 	/** Final Approval/Do not Approve = FA */
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
+	/** PrepareCEO = PC */
+	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
 	/** Re-Submit = RS */
@@ -165,6 +372,10 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
 	public static final String ZZ_DOCACTION_SubmitToSnrMgrSRU = "SS";
 	/** Submit to Line Manager = SU */
 	public static final String ZZ_DOCACTION_SubmitToLineManager = "SU";
+	/** Update = UP */
+	public static final String ZZ_DOCACTION_Update = "UP";
+	/** Verify = VE */
+	public static final String ZZ_DOCACTION_Verify = "VE";
 	/** Set Document Action.
 		@param ZZ_DocAction Document Action
 	*/
@@ -185,12 +396,22 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
+	/** Prepared for CEO = CF */
+	public static final String ZZ_DOCSTATUS_PreparedForCEO = "CF";
 	/** Completed = CO */
 	public static final String ZZ_DOCSTATUS_Completed = "CO";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Error Importing = EE */
+	public static final String ZZ_DOCSTATUS_ErrorImporting = "EE";
+	/** Validation Error = ER */
+	public static final String ZZ_DOCSTATUS_ValidationError = "ER";
 	/** Evaluated = EV */
 	public static final String ZZ_DOCSTATUS_Evaluated = "EV";
+	/** Importing = IG */
+	public static final String ZZ_DOCSTATUS_Importing = "IG";
+	/** Imported = IM */
+	public static final String ZZ_DOCSTATUS_Imported = "IM";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
 	/** Not Recommended By Senior Mgr SDR = N1 */
@@ -227,6 +448,8 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
 	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
 	/** Recommended By CFO = R3 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
+	/** Recommended By CEO = R4 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCEO = "R4";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
@@ -245,8 +468,18 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
 	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
 	/** Submitted = SU */
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
+	/** Transfer Out = TO */
+	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
+	/** Updated by SDR Admin = UA */
+	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
+	/** Uploaded = UP */
+	public static final String ZZ_DOCSTATUS_Uploaded = "UP";
 	/** Delinked = UnSdfOrg */
 	public static final String ZZ_DOCSTATUS_Delinked = "UnSdfOrg";
+	/** Validating = VA */
+	public static final String ZZ_DOCSTATUS_Validating = "VA";
+	/** Verified = VE */
+	public static final String ZZ_DOCSTATUS_Verified = "VE";
 	/** Set Document Status.
 		@param ZZ_DocStatus Document Status
 	*/
@@ -261,6 +494,87 @@ public class X_ZZ_WSP_ATR_EXTENSION_BATCH extends PO implements I_ZZ_WSP_ATR_EXT
 	public String getZZ_DocStatus()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
+	}
+
+	public org.compiere.model.I_AD_User getZZ_MQA_BOARD() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_MQA_BOARD_ID(), get_TrxName());
+	}
+
+	/** Set MQA Board.
+		@param ZZ_MQA_BOARD_ID MQA Board
+	*/
+	public void setZZ_MQA_BOARD_ID (int ZZ_MQA_BOARD_ID)
+	{
+		if (ZZ_MQA_BOARD_ID < 1)
+			set_Value (COLUMNNAME_ZZ_MQA_BOARD_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_MQA_BOARD_ID, Integer.valueOf(ZZ_MQA_BOARD_ID));
+	}
+
+	/** Get MQA Board.
+		@return MQA Board	  */
+	public int getZZ_MQA_BOARD_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_MQA_BOARD_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_Recommender() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Recommender_ID(), get_TrxName());
+	}
+
+	/** Set Recommender.
+		@param ZZ_Recommender_ID Recommender
+	*/
+	public void setZZ_Recommender_ID (int ZZ_Recommender_ID)
+	{
+		if (ZZ_Recommender_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Recommender_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Recommender_ID, Integer.valueOf(ZZ_Recommender_ID));
+	}
+
+	/** Get Recommender.
+		@return Recommender	  */
+	public int getZZ_Recommender_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Recommender_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_Submitter() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Submitter_ID(), get_TrxName());
+	}
+
+	/** Set Submitted By.
+		@param ZZ_Submitter_ID Submitted By
+	*/
+	public void setZZ_Submitter_ID (int ZZ_Submitter_ID)
+	{
+		if (ZZ_Submitter_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Submitter_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Submitter_ID, Integer.valueOf(ZZ_Submitter_ID));
+	}
+
+	/** Get Submitted By.
+		@return Submitted By	  */
+	public int getZZ_Submitter_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Submitter_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set ZZ_WSP_ATR_EXTENSION_BATCH_ID.

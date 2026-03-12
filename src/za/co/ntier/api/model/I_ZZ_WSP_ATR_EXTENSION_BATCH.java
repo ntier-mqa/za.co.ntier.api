@@ -80,6 +80,19 @@ public interface I_ZZ_WSP_ATR_EXTENSION_BATCH
 	  */
 	public int getCreatedBy();
 
+    /** Column name DocumentNo */
+    public static final String COLUMNNAME_DocumentNo = "DocumentNo";
+
+	/** Set Document No.
+	  * Document sequence number of the document
+	  */
+	public void setDocumentNo (String DocumentNo);
+
+	/** Get Document No.
+	  * Document sequence number of the document
+	  */
+	public String getDocumentNo();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -122,6 +135,109 @@ public interface I_ZZ_WSP_ATR_EXTENSION_BATCH
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZ_CEO_ID */
+    public static final String COLUMNNAME_ZZ_CEO_ID = "ZZ_CEO_ID";
+
+	/** Set CEO	  */
+	public void setZZ_CEO_ID (int ZZ_CEO_ID);
+
+	/** Get CEO	  */
+	public int getZZ_CEO_ID();
+
+	public org.compiere.model.I_AD_User getZZ_CEO() throws RuntimeException;
+
+    /** Column name ZZ_COO_ID */
+    public static final String COLUMNNAME_ZZ_COO_ID = "ZZ_COO_ID";
+
+	/** Set COO	  */
+	public void setZZ_COO_ID (int ZZ_COO_ID);
+
+	/** Get COO	  */
+	public int getZZ_COO_ID();
+
+	public org.compiere.model.I_AD_User getZZ_COO() throws RuntimeException;
+
+    /** Column name ZZ_Date_Not_Recom_CEO */
+    public static final String COLUMNNAME_ZZ_Date_Not_Recom_CEO = "ZZ_Date_Not_Recom_CEO";
+
+	/** Set Date Not Approved By CEO	  */
+	public void setZZ_Date_Not_Recom_CEO (Timestamp ZZ_Date_Not_Recom_CEO);
+
+	/** Get Date Not Approved By CEO	  */
+	public Timestamp getZZ_Date_Not_Recom_CEO();
+
+    /** Column name ZZ_Date_Not_Recom_COO */
+    public static final String COLUMNNAME_ZZ_Date_Not_Recom_COO = "ZZ_Date_Not_Recom_COO";
+
+	/** Set Date Not Recommended By COO	  */
+	public void setZZ_Date_Not_Recom_COO (Timestamp ZZ_Date_Not_Recom_COO);
+
+	/** Get Date Not Recommended By COO	  */
+	public Timestamp getZZ_Date_Not_Recom_COO();
+
+    /** Column name ZZ_Date_Not_Recom_MQA_Board */
+    public static final String COLUMNNAME_ZZ_Date_Not_Recom_MQA_Board = "ZZ_Date_Not_Recom_MQA_Board";
+
+	/** Set Date Not Approved By MQA Board	  */
+	public void setZZ_Date_Not_Recom_MQA_Board (Timestamp ZZ_Date_Not_Recom_MQA_Board);
+
+	/** Get Date Not Approved By MQA Board	  */
+	public Timestamp getZZ_Date_Not_Recom_MQA_Board();
+
+    /** Column name ZZ_Date_Not_Recom_Snr_Mgr_SDR */
+    public static final String COLUMNNAME_ZZ_Date_Not_Recom_Snr_Mgr_SDR = "ZZ_Date_Not_Recom_Snr_Mgr_SDR";
+
+	/** Set Date Not Recommended By Snr Mgr SDR	  */
+	public void setZZ_Date_Not_Recom_Snr_Mgr_SDR (Timestamp ZZ_Date_Not_Recom_Snr_Mgr_SDR);
+
+	/** Get Date Not Recommended By Snr Mgr SDR	  */
+	public Timestamp getZZ_Date_Not_Recom_Snr_Mgr_SDR();
+
+    /** Column name ZZ_Date_Recom_Snr_Mgr_SDR */
+    public static final String COLUMNNAME_ZZ_Date_Recom_Snr_Mgr_SDR = "ZZ_Date_Recom_Snr_Mgr_SDR";
+
+	/** Set Date Recommended By Snr Mgr SDR	  */
+	public void setZZ_Date_Recom_Snr_Mgr_SDR (Timestamp ZZ_Date_Recom_Snr_Mgr_SDR);
+
+	/** Get Date Recommended By Snr Mgr SDR	  */
+	public Timestamp getZZ_Date_Recom_Snr_Mgr_SDR();
+
+    /** Column name ZZ_Date_Recomm_CEO */
+    public static final String COLUMNNAME_ZZ_Date_Recomm_CEO = "ZZ_Date_Recomm_CEO";
+
+	/** Set Date Recommended By CEO	  */
+	public void setZZ_Date_Recomm_CEO (Timestamp ZZ_Date_Recomm_CEO);
+
+	/** Get Date Recommended By CEO	  */
+	public Timestamp getZZ_Date_Recomm_CEO();
+
+    /** Column name ZZ_Date_Recomm_COO */
+    public static final String COLUMNNAME_ZZ_Date_Recomm_COO = "ZZ_Date_Recomm_COO";
+
+	/** Set Date Recommended By COO	  */
+	public void setZZ_Date_Recomm_COO (Timestamp ZZ_Date_Recomm_COO);
+
+	/** Get Date Recommended By COO	  */
+	public Timestamp getZZ_Date_Recomm_COO();
+
+    /** Column name ZZ_Date_Recomm_MQA_Board */
+    public static final String COLUMNNAME_ZZ_Date_Recomm_MQA_Board = "ZZ_Date_Recomm_MQA_Board";
+
+	/** Set Date Recommended By MQA Board	  */
+	public void setZZ_Date_Recomm_MQA_Board (Timestamp ZZ_Date_Recomm_MQA_Board);
+
+	/** Get Date Recommended By MQA Board	  */
+	public Timestamp getZZ_Date_Recomm_MQA_Board();
+
+    /** Column name ZZ_Date_Submitted */
+    public static final String COLUMNNAME_ZZ_Date_Submitted = "ZZ_Date_Submitted";
+
+	/** Set Date Submitted	  */
+	public void setZZ_Date_Submitted (Timestamp ZZ_Date_Submitted);
+
+	/** Get Date Submitted	  */
+	public Timestamp getZZ_Date_Submitted();
+
     /** Column name ZZ_DocAction */
     public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
 
@@ -139,6 +255,39 @@ public interface I_ZZ_WSP_ATR_EXTENSION_BATCH
 
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
+
+    /** Column name ZZ_MQA_BOARD_ID */
+    public static final String COLUMNNAME_ZZ_MQA_BOARD_ID = "ZZ_MQA_BOARD_ID";
+
+	/** Set MQA Board	  */
+	public void setZZ_MQA_BOARD_ID (int ZZ_MQA_BOARD_ID);
+
+	/** Get MQA Board	  */
+	public int getZZ_MQA_BOARD_ID();
+
+	public org.compiere.model.I_AD_User getZZ_MQA_BOARD() throws RuntimeException;
+
+    /** Column name ZZ_Recommender_ID */
+    public static final String COLUMNNAME_ZZ_Recommender_ID = "ZZ_Recommender_ID";
+
+	/** Set Recommender	  */
+	public void setZZ_Recommender_ID (int ZZ_Recommender_ID);
+
+	/** Get Recommender	  */
+	public int getZZ_Recommender_ID();
+
+	public org.compiere.model.I_AD_User getZZ_Recommender() throws RuntimeException;
+
+    /** Column name ZZ_Submitter_ID */
+    public static final String COLUMNNAME_ZZ_Submitter_ID = "ZZ_Submitter_ID";
+
+	/** Set Submitted By	  */
+	public void setZZ_Submitter_ID (int ZZ_Submitter_ID);
+
+	/** Get Submitted By	  */
+	public int getZZ_Submitter_ID();
+
+	public org.compiere.model.I_AD_User getZZ_Submitter() throws RuntimeException;
 
     /** Column name ZZ_WSP_ATR_EXTENSION_BATCH_ID */
     public static final String COLUMNNAME_ZZ_WSP_ATR_EXTENSION_BATCH_ID = "ZZ_WSP_ATR_EXTENSION_BATCH_ID";
