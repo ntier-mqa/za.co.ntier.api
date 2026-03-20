@@ -32,7 +32,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260318L;
+	private static final long serialVersionUID = 20260320L;
 
     /** Standard Constructor */
     public X_ZZ_QCTO_Alloc_OC (Properties ctx, int ZZ_QCTO_Alloc_OC_ID, String trxName)
@@ -98,7 +98,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
       return sb.toString();
     }
 
-	/** Set Address 1.
+	/** Set Physical Address.
 		@param Address1 Address line 1 for this location
 	*/
 	public void setAddress1 (String Address1)
@@ -106,7 +106,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_ValueNoCheck (COLUMNNAME_Address1, Address1);
 	}
 
-	/** Get Address 1.
+	/** Get Physical Address.
 		@return Address line 1 for this location
 	  */
 	public String getAddress1()
@@ -114,7 +114,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_Address1);
 	}
 
-	/** Set Address 2.
+	/** Set Building Name/Floor.
 		@param Address2 Address line 2 for this location
 	*/
 	public void setAddress2 (String Address2)
@@ -122,7 +122,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_ValueNoCheck (COLUMNNAME_Address2, Address2);
 	}
 
-	/** Get Address 2.
+	/** Get Building Name/Floor.
 		@return Address line 2 for this location
 	  */
 	public String getAddress2()
@@ -158,7 +158,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return ii.intValue();
 	}
 
-	/** Set City.
+	/** Set Town/City.
 		@param City Identifies a City
 	*/
 	public void setCity (String City)
@@ -166,7 +166,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_ValueNoCheck (COLUMNNAME_City, City);
 	}
 
-	/** Get City.
+	/** Get Town/City.
 		@return Identifies a City
 	  */
 	public String getCity()
@@ -240,16 +240,16 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_Postalcode);
 	}
 
-	/** Set Region.
-		@param Region Region
+	/** Set Province.
+		@param Region Province
 	*/
 	public void setRegion (String Region)
 	{
 		set_ValueNoCheck (COLUMNNAME_Region, Region);
 	}
 
-	/** Get Region.
-		@return Region	  */
+	/** Get Province.
+		@return Province	  */
 	public String getRegion()
 	{
 		return (String)get_Value(COLUMNNAME_Region);
@@ -285,7 +285,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZSurname);
 	}
 
-	/** Set ZZ_AllocationMonth.
+	/** Set Allocation Month.
 		@param ZZ_AllocationMonth Allocation Month
 	*/
 	public void setZZ_AllocationMonth (String ZZ_AllocationMonth)
@@ -293,7 +293,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_AllocationMonth, ZZ_AllocationMonth);
 	}
 
-	/** Get ZZ_AllocationMonth.
+	/** Get Allocation Month.
 		@return Allocation Month
 	  */
 	public String getZZ_AllocationMonth()
@@ -301,22 +301,22 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_AllocationMonth);
 	}
 
-	/** Set ZZ_AllocationNo.
-		@param ZZ_AllocationNo ZZ_AllocationNo
+	/** Set Allocation No.
+		@param ZZ_AllocationNo Allocation No
 	*/
 	public void setZZ_AllocationNo (String ZZ_AllocationNo)
 	{
 		set_Value (COLUMNNAME_ZZ_AllocationNo, ZZ_AllocationNo);
 	}
 
-	/** Get ZZ_AllocationNo.
-		@return ZZ_AllocationNo	  */
+	/** Get Allocation No.
+		@return Allocation No	  */
 	public String getZZ_AllocationNo()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_AllocationNo);
 	}
 
-	/** Set ZZ_AltContactEmail.
+	/** Set Alt Contact Email.
 		@param ZZ_AltContactEmail Email of Alt Contact
 	*/
 	public void setZZ_AltContactEmail (String ZZ_AltContactEmail)
@@ -324,7 +324,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_AltContactEmail, ZZ_AltContactEmail);
 	}
 
-	/** Get ZZ_AltContactEmail.
+	/** Get Alt Contact Email.
 		@return Email of Alt Contact
 	  */
 	public String getZZ_AltContactEmail()
@@ -332,7 +332,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_AltContactEmail);
 	}
 
-	/** Set ZZ_AltContactName.
+	/** Set Alt Contact Name.
 		@param ZZ_AltContactName Full Name(s) of Additional Contact Person
 	*/
 	public void setZZ_AltContactName (String ZZ_AltContactName)
@@ -340,7 +340,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_AltContactName, ZZ_AltContactName);
 	}
 
-	/** Get ZZ_AltContactName.
+	/** Get Alt Contact Name.
 		@return Full Name(s) of Additional Contact Person
 	  */
 	public String getZZ_AltContactName()
@@ -348,7 +348,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_AltContactName);
 	}
 
-	/** Set ZZ_AltContactSurname.
+	/** Set Alt Contact Surname.
 		@param ZZ_AltContactSurname Surname of Alt Contact
 	*/
 	public void setZZ_AltContactSurname (String ZZ_AltContactSurname)
@@ -356,7 +356,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_AltContactSurname, ZZ_AltContactSurname);
 	}
 
-	/** Get ZZ_AltContactSurname.
+	/** Get Alt Contact Surname.
 		@return Surname of Alt Contact
 	  */
 	public String getZZ_AltContactSurname()
@@ -364,7 +364,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_AltContactSurname);
 	}
 
-	/** Set ZZ_AltContactTitle.
+	/** Set Alt Contact Title.
 		@param ZZ_AltContactTitle Title of Additional Contact Person
 	*/
 	public void setZZ_AltContactTitle (String ZZ_AltContactTitle)
@@ -372,7 +372,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_AltContactTitle, ZZ_AltContactTitle);
 	}
 
-	/** Get ZZ_AltContactTitle.
+	/** Get Alt Contact Title.
 		@return Title of Additional Contact Person
 	  */
 	public String getZZ_AltContactTitle()
@@ -380,7 +380,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_AltContactTitle);
 	}
 
-	/** Set ZZ_CIPCNumber.
+	/** Set CIPC Registration.
 		@param ZZ_CIPCNumber CIPC Registration
 	*/
 	public void setZZ_CIPCNumber (String ZZ_CIPCNumber)
@@ -388,7 +388,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_CIPCNumber, ZZ_CIPCNumber);
 	}
 
-	/** Get ZZ_CIPCNumber.
+	/** Get CIPC Registration.
 		@return CIPC Registration
 	  */
 	public String getZZ_CIPCNumber()
@@ -396,7 +396,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_CIPCNumber);
 	}
 
-	/** Set ZZ_ContactTitle.
+	/** Set Title of Contact Person.
 		@param ZZ_ContactTitle Title of Contact Person
 	*/
 	public void setZZ_ContactTitle (String ZZ_ContactTitle)
@@ -404,7 +404,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_ContactTitle, ZZ_ContactTitle);
 	}
 
-	/** Get ZZ_ContactTitle.
+	/** Get Title of Contact Person.
 		@return Title of Contact Person
 	  */
 	public String getZZ_ContactTitle()
@@ -425,6 +425,40 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 	public String getZZ_Designation()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_Designation);
+	}
+
+	/** Approved = AP */
+	public static final String ZZ_DOCSTATUS_Approved = "AP";
+	/** Awaiting QCTO Recommendation = AW */
+	public static final String ZZ_DOCSTATUS_AwaitingQCTORecommendation = "AW";
+	/** Draft = DR */
+	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Not Approved = NA */
+	public static final String ZZ_DOCSTATUS_NotApproved = "NA";
+	/** Not Recommended = NR */
+	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
+	/** Recommended = RC */
+	public static final String ZZ_DOCSTATUS_Recommended = "RC";
+	/** Received from QCTO = RF */
+	public static final String ZZ_DOCSTATUS_ReceivedFromQCTO = "RF";
+	/** Site Visit Notification Sent = SV */
+	public static final String ZZ_DOCSTATUS_SiteVisitNotificationSent = "SV";
+	/** Site Visit Date Confirmed = VC */
+	public static final String ZZ_DOCSTATUS_SiteVisitDateConfirmed = "VC";
+	/** Set Document Status.
+		@param ZZ_DocStatus Document Status
+	*/
+	public void setZZ_DocStatus (String ZZ_DocStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZ_DocStatus, ZZ_DocStatus);
+	}
+
+	/** Get Document Status.
+		@return Document Status	  */
+	public String getZZ_DocStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
 	/** Level 1 = 01 */
@@ -547,7 +581,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_Qualification);
 	}
 
-	/** Set ZZ_QualityPartner.
+	/** Set Quality Partner.
 		@param ZZ_QualityPartner Quality Partner
 	*/
 	public void setZZ_QualityPartner (String ZZ_QualityPartner)
@@ -555,7 +589,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_QualityPartner, ZZ_QualityPartner);
 	}
 
-	/** Get ZZ_QualityPartner.
+	/** Get Quality Partner.
 		@return Quality Partner
 	  */
 	public String getZZ_QualityPartner()
@@ -563,7 +597,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_QualityPartner);
 	}
 
-	/** Set ZZ_SAQAIDOrSPID.
+	/** Set SAQA ID Number.
 		@param ZZ_SAQAIDOrSPID SAQA ID Number
 	*/
 	public void setZZ_SAQAIDOrSPID (String ZZ_SAQAIDOrSPID)
@@ -571,7 +605,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_SAQAIDOrSPID, ZZ_SAQAIDOrSPID);
 	}
 
-	/** Get ZZ_SAQAIDOrSPID.
+	/** Get SAQA ID Number.
 		@return SAQA ID Number
 	  */
 	public String getZZ_SAQAIDOrSPID()
@@ -579,7 +613,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_SAQAIDOrSPID);
 	}
 
-	/** Set ZZ_SiteVisitDate.
+	/** Set Site Visit Date.
 		@param ZZ_SiteVisitDate Site Visit Date
 	*/
 	public void setZZ_SiteVisitDate (Timestamp ZZ_SiteVisitDate)
@@ -587,7 +621,7 @@ public class X_ZZ_QCTO_Alloc_OC extends PO implements I_ZZ_QCTO_Alloc_OC, I_Pers
 		set_Value (COLUMNNAME_ZZ_SiteVisitDate, ZZ_SiteVisitDate);
 	}
 
-	/** Get ZZ_SiteVisitDate.
+	/** Get Site Visit Date.
 		@return Site Visit Date
 	  */
 	public Timestamp getZZ_SiteVisitDate()

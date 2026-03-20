@@ -32,7 +32,7 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** TableName=ZZ_QCTO_Alloc_Skills */
     public static final String Table_Name = "ZZ_QCTO_Alloc_Skills";
 
-    /** AD_Table_ID=1000219 */
+    /** AD_Table_ID=1000220 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -67,12 +67,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name Address1 */
     public static final String COLUMNNAME_Address1 = "Address1";
 
-	/** Set Address 1.
+	/** Set Physical Address.
 	  * Address line 1 for this location
 	  */
 	public void setAddress1 (String Address1);
 
-	/** Get Address 1.
+	/** Get Physical Address.
 	  * Address line 1 for this location
 	  */
 	public String getAddress1();
@@ -80,12 +80,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name Address2 */
     public static final String COLUMNNAME_Address2 = "Address2";
 
-	/** Set Address 2.
+	/** Set Building Name/Floor.
 	  * Address line 2 for this location
 	  */
 	public void setAddress2 (String Address2);
 
-	/** Get Address 2.
+	/** Get Building Name/Floor.
 	  * Address line 2 for this location
 	  */
 	public String getAddress2();
@@ -108,12 +108,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name City */
     public static final String COLUMNNAME_City = "City";
 
-	/** Set City.
+	/** Set Town/City.
 	  * Identifies a City
 	  */
 	public void setCity (String City);
 
-	/** Get City.
+	/** Get Town/City.
 	  * Identifies a City
 	  */
 	public String getCity();
@@ -198,10 +198,10 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name Region */
     public static final String COLUMNNAME_Region = "Region";
 
-	/** Set Region	  */
+	/** Set Province	  */
 	public void setRegion (String Region);
 
-	/** Get Region	  */
+	/** Get Province	  */
 	public String getRegion();
 
     /** Column name Updated */
@@ -241,12 +241,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_AllocationMonth */
     public static final String COLUMNNAME_ZZ_AllocationMonth = "ZZ_AllocationMonth";
 
-	/** Set ZZ_AllocationMonth.
+	/** Set Allocation Month.
 	  * Allocation Month
 	  */
 	public void setZZ_AllocationMonth (String ZZ_AllocationMonth);
 
-	/** Get ZZ_AllocationMonth.
+	/** Get Allocation Month.
 	  * Allocation Month
 	  */
 	public String getZZ_AllocationMonth();
@@ -254,21 +254,21 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_AllocationNo */
     public static final String COLUMNNAME_ZZ_AllocationNo = "ZZ_AllocationNo";
 
-	/** Set ZZ_AllocationNo	  */
+	/** Set Allocation No	  */
 	public void setZZ_AllocationNo (String ZZ_AllocationNo);
 
-	/** Get ZZ_AllocationNo	  */
+	/** Get Allocation No	  */
 	public String getZZ_AllocationNo();
 
     /** Column name ZZ_AltContactEmail */
     public static final String COLUMNNAME_ZZ_AltContactEmail = "ZZ_AltContactEmail";
 
-	/** Set ZZ_AltContactEmail.
+	/** Set Alt Contact Email.
 	  * Email of Alt Contact
 	  */
 	public void setZZ_AltContactEmail (String ZZ_AltContactEmail);
 
-	/** Get ZZ_AltContactEmail.
+	/** Get Alt Contact Email.
 	  * Email of Alt Contact
 	  */
 	public String getZZ_AltContactEmail();
@@ -276,12 +276,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_AltContactName */
     public static final String COLUMNNAME_ZZ_AltContactName = "ZZ_AltContactName";
 
-	/** Set ZZ_AltContactName.
+	/** Set Alt Contact Name.
 	  * Full Name(s) of Additional Contact Person
 	  */
 	public void setZZ_AltContactName (String ZZ_AltContactName);
 
-	/** Get ZZ_AltContactName.
+	/** Get Alt Contact Name.
 	  * Full Name(s) of Additional Contact Person
 	  */
 	public String getZZ_AltContactName();
@@ -289,12 +289,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_AltContactSurname */
     public static final String COLUMNNAME_ZZ_AltContactSurname = "ZZ_AltContactSurname";
 
-	/** Set ZZ_AltContactSurname.
+	/** Set Alt Contact Surname.
 	  * Surname of Alt Contact
 	  */
 	public void setZZ_AltContactSurname (String ZZ_AltContactSurname);
 
-	/** Get ZZ_AltContactSurname.
+	/** Get Alt Contact Surname.
 	  * Surname of Alt Contact
 	  */
 	public String getZZ_AltContactSurname();
@@ -302,12 +302,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_AltContactTitle */
     public static final String COLUMNNAME_ZZ_AltContactTitle = "ZZ_AltContactTitle";
 
-	/** Set ZZ_AltContactTitle.
+	/** Set Alt Contact Title.
 	  * Title of Additional Contact Person
 	  */
 	public void setZZ_AltContactTitle (String ZZ_AltContactTitle);
 
-	/** Get ZZ_AltContactTitle.
+	/** Get Alt Contact Title.
 	  * Title of Additional Contact Person
 	  */
 	public String getZZ_AltContactTitle();
@@ -315,12 +315,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_CIPCNumber */
     public static final String COLUMNNAME_ZZ_CIPCNumber = "ZZ_CIPCNumber";
 
-	/** Set ZZ_CIPCNumber.
+	/** Set CIPC Registration.
 	  * CIPC Registration
 	  */
 	public void setZZ_CIPCNumber (String ZZ_CIPCNumber);
 
-	/** Get ZZ_CIPCNumber.
+	/** Get CIPC Registration.
 	  * CIPC Registration
 	  */
 	public String getZZ_CIPCNumber();
@@ -328,12 +328,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_ContactTitle */
     public static final String COLUMNNAME_ZZ_ContactTitle = "ZZ_ContactTitle";
 
-	/** Set ZZ_ContactTitle.
+	/** Set Title of Contact Person.
 	  * Title of Contact Person
 	  */
 	public void setZZ_ContactTitle (String ZZ_ContactTitle);
 
-	/** Get ZZ_ContactTitle.
+	/** Get Title of Contact Person.
 	  * Title of Contact Person
 	  */
 	public String getZZ_ContactTitle();
@@ -346,6 +346,15 @@ public interface I_ZZ_QCTO_Alloc_Skills
 
 	/** Get Designation	  */
 	public String getZZ_Designation();
+
+    /** Column name ZZ_DocStatus */
+    public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
+
+	/** Set Document Status	  */
+	public void setZZ_DocStatus (String ZZ_DocStatus);
+
+	/** Get Document Status	  */
+	public String getZZ_DocStatus();
 
     /** Column name ZZ_NQF_Level */
     public static final String COLUMNNAME_ZZ_NQF_Level = "ZZ_NQF_Level";
@@ -397,12 +406,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_QualityPartner */
     public static final String COLUMNNAME_ZZ_QualityPartner = "ZZ_QualityPartner";
 
-	/** Set ZZ_QualityPartner.
+	/** Set Quality Partner.
 	  * Quality Partner
 	  */
 	public void setZZ_QualityPartner (String ZZ_QualityPartner);
 
-	/** Get ZZ_QualityPartner.
+	/** Get Quality Partner.
 	  * Quality Partner
 	  */
 	public String getZZ_QualityPartner();
@@ -410,12 +419,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_SAQAIDOrSPID */
     public static final String COLUMNNAME_ZZ_SAQAIDOrSPID = "ZZ_SAQAIDOrSPID";
 
-	/** Set ZZ_SAQAIDOrSPID.
+	/** Set SAQA ID Number.
 	  * SAQA ID Number
 	  */
 	public void setZZ_SAQAIDOrSPID (String ZZ_SAQAIDOrSPID);
 
-	/** Get ZZ_SAQAIDOrSPID.
+	/** Get SAQA ID Number.
 	  * SAQA ID Number
 	  */
 	public String getZZ_SAQAIDOrSPID();
@@ -423,12 +432,12 @@ public interface I_ZZ_QCTO_Alloc_Skills
     /** Column name ZZ_SiteVisitDate */
     public static final String COLUMNNAME_ZZ_SiteVisitDate = "ZZ_SiteVisitDate";
 
-	/** Set ZZ_SiteVisitDate.
+	/** Set Site Visit Date.
 	  * Site Visit Date
 	  */
 	public void setZZ_SiteVisitDate (Timestamp ZZ_SiteVisitDate);
 
-	/** Get ZZ_SiteVisitDate.
+	/** Get Site Visit Date.
 	  * Site Visit Date
 	  */
 	public Timestamp getZZ_SiteVisitDate();

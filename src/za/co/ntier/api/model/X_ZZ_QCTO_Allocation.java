@@ -32,7 +32,7 @@ public class X_ZZ_QCTO_Allocation extends PO implements I_ZZ_QCTO_Allocation, I_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260318L;
+	private static final long serialVersionUID = 20260320L;
 
     /** Standard Constructor */
     public X_ZZ_QCTO_Allocation (Properties ctx, int ZZ_QCTO_Allocation_ID, String trxName)
@@ -105,6 +105,34 @@ public class X_ZZ_QCTO_Allocation extends PO implements I_ZZ_QCTO_Allocation, I_
         .append(get_ID()).append("]");
       return sb.toString();
     }
+
+	public org.compiere.model.I_C_Year getC_Year() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_Year)MTable.get(getCtx(), org.compiere.model.I_C_Year.Table_ID)
+			.getPO(getC_Year_ID(), get_TrxName());
+	}
+
+	/** Set Year.
+		@param C_Year_ID Calendar Year
+	*/
+	public void setC_Year_ID (int C_Year_ID)
+	{
+		if (C_Year_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_C_Year_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_C_Year_ID, Integer.valueOf(C_Year_ID));
+	}
+
+	/** Get Year.
+		@return Calendar Year
+	  */
+	public int getC_Year_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_C_Year_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
 
 	/** Set Date Received.
 		@param DateReceived Date a product was received
@@ -296,37 +324,44 @@ public class X_ZZ_QCTO_Allocation extends PO implements I_ZZ_QCTO_Allocation, I_
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
-	/** Set ZZ_FileMonth.
-		@param ZZ_FileMonth ZZ_FileMonth
+	/** January = 01 */
+	public static final String ZZ_FILEMONTH_January = "01";
+	/** February = 02 */
+	public static final String ZZ_FILEMONTH_February = "02";
+	/** March = 03 */
+	public static final String ZZ_FILEMONTH_March = "03";
+	/** April = 04 */
+	public static final String ZZ_FILEMONTH_April = "04";
+	/** May = 05 */
+	public static final String ZZ_FILEMONTH_May = "05";
+	/** June = 06 */
+	public static final String ZZ_FILEMONTH_June = "06";
+	/** July = 07 */
+	public static final String ZZ_FILEMONTH_July = "07";
+	/** August = 08 */
+	public static final String ZZ_FILEMONTH_August = "08";
+	/** September = 09 */
+	public static final String ZZ_FILEMONTH_September = "09";
+	/** October = 10 */
+	public static final String ZZ_FILEMONTH_October = "10";
+	/** November = 11 */
+	public static final String ZZ_FILEMONTH_November = "11";
+	/** December = 12 */
+	public static final String ZZ_FILEMONTH_December = "12";
+	/** Set File Month.
+		@param ZZ_FileMonth File Month
 	*/
 	public void setZZ_FileMonth (String ZZ_FileMonth)
 	{
+
 		set_Value (COLUMNNAME_ZZ_FileMonth, ZZ_FileMonth);
 	}
 
-	/** Get ZZ_FileMonth.
-		@return ZZ_FileMonth	  */
+	/** Get File Month.
+		@return File Month	  */
 	public String getZZ_FileMonth()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_FileMonth);
-	}
-
-	/** Set ZZ_FileYear.
-		@param ZZ_FileYear ZZ_FileYear
-	*/
-	public void setZZ_FileYear (int ZZ_FileYear)
-	{
-		set_Value (COLUMNNAME_ZZ_FileYear, Integer.valueOf(ZZ_FileYear));
-	}
-
-	/** Get ZZ_FileYear.
-		@return ZZ_FileYear	  */
-	public int getZZ_FileYear()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_FileYear);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
 	}
 
 	/** Set ZZ_QCTO_Allocation_ID.

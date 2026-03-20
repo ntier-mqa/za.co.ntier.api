@@ -32,7 +32,7 @@ public interface I_ZZ_QCTO_Allocation
     /** TableName=ZZ_QCTO_Allocation */
     public static final String Table_Name = "ZZ_QCTO_Allocation";
 
-    /** AD_Table_ID=1000217 */
+    /** AD_Table_ID=1000218 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -63,6 +63,21 @@ public interface I_ZZ_QCTO_Allocation
 	  * Organizational entity within tenant
 	  */
 	public int getAD_Org_ID();
+
+    /** Column name C_Year_ID */
+    public static final String COLUMNNAME_C_Year_ID = "C_Year_ID";
+
+	/** Set Year.
+	  * Calendar Year
+	  */
+	public void setC_Year_ID (int C_Year_ID);
+
+	/** Get Year.
+	  * Calendar Year
+	  */
+	public int getC_Year_ID();
+
+	public org.compiere.model.I_C_Year getC_Year() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -182,20 +197,11 @@ public interface I_ZZ_QCTO_Allocation
     /** Column name ZZ_FileMonth */
     public static final String COLUMNNAME_ZZ_FileMonth = "ZZ_FileMonth";
 
-	/** Set ZZ_FileMonth	  */
+	/** Set File Month	  */
 	public void setZZ_FileMonth (String ZZ_FileMonth);
 
-	/** Get ZZ_FileMonth	  */
+	/** Get File Month	  */
 	public String getZZ_FileMonth();
-
-    /** Column name ZZ_FileYear */
-    public static final String COLUMNNAME_ZZ_FileYear = "ZZ_FileYear";
-
-	/** Set ZZ_FileYear	  */
-	public void setZZ_FileYear (int ZZ_FileYear);
-
-	/** Get ZZ_FileYear	  */
-	public int getZZ_FileYear();
 
     /** Column name ZZ_QCTO_Allocation_ID */
     public static final String COLUMNNAME_ZZ_QCTO_Allocation_ID = "ZZ_QCTO_Allocation_ID";
