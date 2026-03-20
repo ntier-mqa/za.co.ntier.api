@@ -6,8 +6,10 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Ntier
 Automatic-Module-Name: za.co.ntier.api
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: za.co.ntier.api.model
+Export-Package: za.co.ntier.api.model,
+ za.co.ntier.api.util
 Import-Package: org.adempiere.base,
+ org.adempiere.exceptions,
  org.compiere.model,
  org.compiere.util,
  org.eevolution.model,
