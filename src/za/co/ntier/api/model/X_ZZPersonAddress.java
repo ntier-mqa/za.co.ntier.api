@@ -31,7 +31,7 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251231L;
+	private static final long serialVersionUID = 20260318L;
 
     /** Standard Constructor */
     public X_ZZPersonAddress (Properties ctx, int ZZPersonAddress_ID, String trxName)
@@ -290,6 +290,33 @@ public class X_ZZPersonAddress extends PO implements I_ZZPersonAddress, I_Persis
 	public String getZZAddressType()
 	{
 		return (String)get_Value(COLUMNNAME_ZZAddressType);
+	}
+
+	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException
+	{
+		return (I_ZZAssessorPerson)MTable.get(getCtx(), I_ZZAssessorPerson.Table_ID)
+			.getPO(getZZAssessorPerson_ID(), get_TrxName());
+	}
+
+	/** Set Assessor Person.
+		@param ZZAssessorPerson_ID Assessor Person
+	*/
+	public void setZZAssessorPerson_ID (int ZZAssessorPerson_ID)
+	{
+		if (ZZAssessorPerson_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZAssessorPerson_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZAssessorPerson_ID, Integer.valueOf(ZZAssessorPerson_ID));
+	}
+
+	/** Get Assessor Person.
+		@return Assessor Person	  */
+	public int getZZAssessorPerson_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZAssessorPerson_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Complex Section Farm.

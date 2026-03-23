@@ -230,6 +230,17 @@ public interface I_ZZPersonAddress
 	/** Get Address Type	  */
 	public String getZZAddressType();
 
+    /** Column name ZZAssessorPerson_ID */
+    public static final String COLUMNNAME_ZZAssessorPerson_ID = "ZZAssessorPerson_ID";
+
+	/** Set Assessor Person	  */
+	public void setZZAssessorPerson_ID (int ZZAssessorPerson_ID);
+
+	/** Get Assessor Person	  */
+	public int getZZAssessorPerson_ID();
+
+	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException;
+
     /** Column name ZZComplexSectionFarm */
     public static final String COLUMNNAME_ZZComplexSectionFarm = "ZZComplexSectionFarm";
 

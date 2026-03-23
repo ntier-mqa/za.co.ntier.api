@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260226L;
+	private static final long serialVersionUID = 20260323L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation (Properties ctx, int ZZSdfOrganisation_ID, String trxName)
@@ -349,10 +349,10 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 		return (String)get_Value(COLUMNNAME_ZZSdfOrganisation_UU);
 	}
 
-	/** Primary = Primary */
-	public static final String ZZSDFROLETYPE_Primary = "Primary";
-	/** Secondary = Secondary */
-	public static final String ZZSDFROLETYPE_Secondary = "Secondary";
+	/** Primary SDF = Primary */
+	public static final String ZZSDFROLETYPE_PrimarySDF = "Primary";
+	/** Secondary SDF = Secondary */
+	public static final String ZZSDFROLETYPE_SecondarySDF = "Secondary";
 	/** Set Sdf Role Type.
 		@param ZZSdfRoleType Sdf Role Type
 	*/
@@ -486,6 +486,8 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCACTION_Evaluate = "EV";
 	/** Final Approval/Do not Approve = FA */
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
+	/** PrepareCEO = PC */
+	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
 	/** Re-Submit = RS */
@@ -512,6 +514,10 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCACTION_SubmitToSnrMgrSRU = "SS";
 	/** Submit to Line Manager = SU */
 	public static final String ZZ_DOCACTION_SubmitToLineManager = "SU";
+	/** Update = UP */
+	public static final String ZZ_DOCACTION_Update = "UP";
+	/** Verify = VE */
+	public static final String ZZ_DOCACTION_Verify = "VE";
 	/** Set Document Action.
 		@param ZZ_DocAction Document Action
 	*/
@@ -532,12 +538,22 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
+	/** Prepared for CEO = CF */
+	public static final String ZZ_DOCSTATUS_PreparedForCEO = "CF";
 	/** Completed = CO */
 	public static final String ZZ_DOCSTATUS_Completed = "CO";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Error Importing = EE */
+	public static final String ZZ_DOCSTATUS_ErrorImporting = "EE";
+	/** Validation Error = ER */
+	public static final String ZZ_DOCSTATUS_ValidationError = "ER";
 	/** Evaluated = EV */
 	public static final String ZZ_DOCSTATUS_Evaluated = "EV";
+	/** Importing = IG */
+	public static final String ZZ_DOCSTATUS_Importing = "IG";
+	/** Imported = IM */
+	public static final String ZZ_DOCSTATUS_Imported = "IM";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
 	/** Not Recommended By Senior Mgr SDR = N1 */
@@ -574,6 +590,8 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
 	/** Recommended By CFO = R3 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
+	/** Recommended By CEO = R4 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCEO = "R4";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
@@ -592,8 +610,18 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
 	/** Submitted = SU */
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
+	/** Transfer Out = TO */
+	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
+	/** Updated by SDR Admin = UA */
+	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
+	/** Uploaded = UP */
+	public static final String ZZ_DOCSTATUS_Uploaded = "UP";
 	/** Delinked = UnSdfOrg */
 	public static final String ZZ_DOCSTATUS_Delinked = "UnSdfOrg";
+	/** Validating = VA */
+	public static final String ZZ_DOCSTATUS_Validating = "VA";
+	/** Verified = VE */
+	public static final String ZZ_DOCSTATUS_Verified = "VE";
 	/** Set Document Status.
 		@param ZZ_DocStatus Document Status
 	*/
