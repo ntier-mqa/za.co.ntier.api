@@ -32,7 +32,7 @@ public interface I_ZZAssessorPerson
     /** TableName=ZZAssessorPerson */
     public static final String Table_Name = "ZZAssessorPerson";
 
-    /** AD_Table_ID=1000217 */
+    /** AD_Table_ID=1000224 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -286,17 +286,6 @@ public interface I_ZZAssessorPerson
 
 	/** Get Surname	  */
 	public String getZZSurname();
-
-    /** Column name ZZ_AlternateIDType_ID */
-    public static final String COLUMNNAME_ZZ_AlternateIDType_ID = "ZZ_AlternateIDType_ID";
-
-	/** Set Alternate ID Type	  */
-	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID);
-
-	/** Get Alternate ID Type	  */
-	public int getZZ_AlternateIDType_ID();
-
-	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException;
 
     /** Column name ZZ_DocStatus */
     public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";

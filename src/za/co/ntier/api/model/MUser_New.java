@@ -5,6 +5,7 @@ import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.compiere.model.MTable;
 import org.compiere.model.MUser;
 import org.compiere.model.SystemIDs;
 import org.compiere.model.X_C_BPartner;
@@ -134,20 +135,6 @@ public class MUser_New extends MUser implements I_AD_User {
 		return true;
 	}
 
-	/** Set Surname.
-		@param ZZSurname Surname
-	*/
-	public void setZZSurname (String ZZSurname)
-	{
-		set_Value (COLUMNNAME_ZZSurname, ZZSurname);
-	}
-
-	/** Get Surname.
-		@return Surname	  */
-	public String getZZSurname()
-	{
-		return (String)get_Value(COLUMNNAME_ZZSurname);
-	}
 
 	/** Set Designation.
 		@param ZZ_Designation Designation
@@ -163,4 +150,65 @@ public class MUser_New extends MUser implements I_AD_User {
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_Designation);
 	}
+	
+
+	/** Set Other ID No.
+		@param ZZOtherIDNo RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
+	*/
+	public void setZZOtherIDNo (String ZZOtherIDNo)
+	{
+		set_Value (COLUMNNAME_ZZOtherIDNo, ZZOtherIDNo);
+	}
+
+	/** Get Other ID No.
+		@return RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
+	  */
+	public String getZZOtherIDNo()
+	{
+		return (String)get_Value(COLUMNNAME_ZZOtherIDNo);
+	}
+
+	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException
+	{
+		return (I_ZZ_AlternateIDType)MTable.get(getCtx(), I_ZZ_AlternateIDType.Table_ID)
+			.getPO(getZZ_AlternateIDType_ID(), get_TrxName());
+	}
+
+	/** Set Alternate ID Type.
+		@param ZZ_AlternateIDType_ID Alternate ID Type
+	*/
+	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID)
+	{
+		if (ZZ_AlternateIDType_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_AlternateIDType_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_AlternateIDType_ID, Integer.valueOf(ZZ_AlternateIDType_ID));
+	}
+
+	/** Get Alternate ID Type.
+		@return Alternate ID Type	  */
+	public int getZZ_AlternateIDType_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_AlternateIDType_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+	
+
+	/** Set Surname.
+		@param ZZSurname Surname
+	*/
+	public void setZZSurname (String ZZSurname)
+	{
+		set_Value (COLUMNNAME_ZZSurname, ZZSurname);
+	}
+
+	/** Get Surname.
+		@return Surname	  */
+	public String getZZSurname()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSurname);
+	}
+
 }

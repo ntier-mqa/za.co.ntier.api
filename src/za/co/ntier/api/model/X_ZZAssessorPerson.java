@@ -31,7 +31,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260325L;
+	private static final long serialVersionUID = 20260327L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -502,33 +502,6 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public String getZZSurname()
 	{
 		return (String)get_Value(COLUMNNAME_ZZSurname);
-	}
-
-	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException
-	{
-		return (I_ZZ_AlternateIDType)MTable.get(getCtx(), I_ZZ_AlternateIDType.Table_ID)
-			.getPO(getZZ_AlternateIDType_ID(), get_TrxName());
-	}
-
-	/** Set Alternate ID Type.
-		@param ZZ_AlternateIDType_ID Alternate ID Type
-	*/
-	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID)
-	{
-		if (ZZ_AlternateIDType_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_AlternateIDType_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_AlternateIDType_ID, Integer.valueOf(ZZ_AlternateIDType_ID));
-	}
-
-	/** Get Alternate ID Type.
-		@return Alternate ID Type	  */
-	public int getZZ_AlternateIDType_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_AlternateIDType_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
 	}
 
 	/** Approved By Manager Finance Consumables = AC */

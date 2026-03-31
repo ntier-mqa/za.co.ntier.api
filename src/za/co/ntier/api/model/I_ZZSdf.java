@@ -272,16 +272,32 @@ public interface I_ZZSdf
 	/** Get Years In Occupation	  */
 	public int getZZYearsInOccupation();
 
-    /** Column name ZZ_AlternateIDType_ID */
-    public static final String COLUMNNAME_ZZ_AlternateIDType_ID = "ZZ_AlternateIDType_ID";
+    /** Column name ZZ_DocAction */
+    public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
 
-	/** Set Alternate ID Type	  */
-	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID);
+	/** Set Document Action	  */
+	public void setZZ_DocAction (String ZZ_DocAction);
 
-	/** Get Alternate ID Type	  */
-	public int getZZ_AlternateIDType_ID();
+	/** Get Document Action	  */
+	public String getZZ_DocAction();
 
-	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException;
+    /** Column name ZZ_DocStatus */
+    public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
+
+	/** Set Document Status	  */
+	public void setZZ_DocStatus (String ZZ_DocStatus);
+
+	/** Get Document Status	  */
+	public String getZZ_DocStatus();
+
+    /** Column name ZZ_ID_Passport_No */
+    public static final String COLUMNNAME_ZZ_ID_Passport_No = "ZZ_ID_Passport_No";
+
+	/** Set ID No	  */
+	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No);
+
+	/** Get ID No	  */
+	public String getZZ_ID_Passport_No();
 
     /** Column name ZZ_LI_CitizenResidentialStatus_ID */
     public static final String COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID = "ZZ_LI_CitizenResidentialStatus_ID";

@@ -708,12 +708,12 @@ public interface I_AD_User
     /** Column name Phone */
     public static final String COLUMNNAME_Phone = "Phone";
 
-	/** Set Cell Phone.
+	/** Set Phone.
 	  * Identifies a telephone number
 	  */
 	public void setPhone (String Phone);
 
-	/** Get Cell Phone.
+	/** Get Phone.
 	  * Identifies a telephone number
 	  */
 	public String getPhone();
@@ -854,6 +854,19 @@ public interface I_AD_User
 	  */
 	public String getValue();
 
+    /** Column name ZZOtherIDNo */
+    public static final String COLUMNNAME_ZZOtherIDNo = "ZZOtherIDNo";
+
+	/** Set Other ID No.
+	  * RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
+	  */
+	public void setZZOtherIDNo (String ZZOtherIDNo);
+
+	/** Get Other ID No.
+	  * RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
+	  */
+	public String getZZOtherIDNo();
+
     /** Column name ZZSurname */
     public static final String COLUMNNAME_ZZSurname = "ZZSurname";
 
@@ -862,6 +875,17 @@ public interface I_AD_User
 
 	/** Get Surname	  */
 	public String getZZSurname();
+
+    /** Column name ZZ_AlternateIDType_ID */
+    public static final String COLUMNNAME_ZZ_AlternateIDType_ID = "ZZ_AlternateIDType_ID";
+
+	/** Set ID Type	  */
+	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID);
+
+	/** Get ID Type	  */
+	public int getZZ_AlternateIDType_ID();
+
+	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException;
 
     /** Column name ZZ_Designation */
     public static final String COLUMNNAME_ZZ_Designation = "ZZ_Designation";
@@ -875,18 +899,9 @@ public interface I_AD_User
     /** Column name ZZ_ID_Passport_No */
     public static final String COLUMNNAME_ZZ_ID_Passport_No = "ZZ_ID_Passport_No";
 
-	/** Set ID/Passport No	  */
+	/** Set ID No	  */
 	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No);
 
-	/** Get ID/Passport No	  */
+	/** Get ID No	  */
 	public String getZZ_ID_Passport_No();
-
-    /** Column name ZZ_Passport_No */
-    public static final String COLUMNNAME_ZZ_Passport_No = "ZZ_Passport_No";
-
-	/** Set Passport No	  */
-	public void setZZ_Passport_No (String ZZ_Passport_No);
-
-	/** Get Passport No	  */
-	public String getZZ_Passport_No();
 }
