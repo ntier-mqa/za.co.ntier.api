@@ -32,7 +32,7 @@ public class X_ZZ_QCTO_Alloc_AC extends PO implements I_ZZ_QCTO_Alloc_AC, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260320L;
+	private static final long serialVersionUID = 20260401L;
 
     /** Standard Constructor */
     public X_ZZ_QCTO_Alloc_AC (Properties ctx, int ZZ_QCTO_Alloc_AC_ID, String trxName)
@@ -128,34 +128,6 @@ public class X_ZZ_QCTO_Alloc_AC extends PO implements I_ZZ_QCTO_Alloc_AC, I_Pers
 	public String getAddress2()
 	{
 		return (String)get_Value(COLUMNNAME_Address2);
-	}
-
-	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException
-	{
-		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
-			.getPO(getC_BPartner_ID(), get_TrxName());
-	}
-
-	/** Set Business Partner.
-		@param C_BPartner_ID Identifies a Business Partner
-	*/
-	public void setC_BPartner_ID (int C_BPartner_ID)
-	{
-		if (C_BPartner_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_C_BPartner_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_C_BPartner_ID, Integer.valueOf(C_BPartner_ID));
-	}
-
-	/** Get Business Partner.
-		@return Identifies a Business Partner
-	  */
-	public int getC_BPartner_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_C_BPartner_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
 	}
 
 	/** Set Town/City.
@@ -283,6 +255,21 @@ public class X_ZZ_QCTO_Alloc_AC extends PO implements I_ZZ_QCTO_Alloc_AC, I_Pers
 	public String getZZSurname()
 	{
 		return (String)get_Value(COLUMNNAME_ZZSurname);
+	}
+
+	/** Set Trade Name.
+		@param ZZTradeName Trade Name
+	*/
+	public void setZZTradeName (String ZZTradeName)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZTradeName, ZZTradeName);
+	}
+
+	/** Get Trade Name.
+		@return Trade Name	  */
+	public String getZZTradeName()
+	{
+		return (String)get_Value(COLUMNNAME_ZZTradeName);
 	}
 
 	/** Set Allocation Month.

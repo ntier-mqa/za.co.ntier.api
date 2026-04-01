@@ -90,21 +90,6 @@ public interface I_ZZ_QCTO_Alloc_AC
 	  */
 	public String getAddress2();
 
-    /** Column name C_BPartner_ID */
-    public static final String COLUMNNAME_C_BPartner_ID = "C_BPartner_ID";
-
-	/** Set Business Partner.
-	  * Identifies a Business Partner
-	  */
-	public void setC_BPartner_ID (int C_BPartner_ID);
-
-	/** Get Business Partner.
-	  * Identifies a Business Partner
-	  */
-	public int getC_BPartner_ID();
-
-	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException;
-
     /** Column name City */
     public static final String COLUMNNAME_City = "City";
 
@@ -237,6 +222,15 @@ public interface I_ZZ_QCTO_Alloc_AC
 
 	/** Get Surname	  */
 	public String getZZSurname();
+
+    /** Column name ZZTradeName */
+    public static final String COLUMNNAME_ZZTradeName = "ZZTradeName";
+
+	/** Set Trade Name	  */
+	public void setZZTradeName (String ZZTradeName);
+
+	/** Get Trade Name	  */
+	public String getZZTradeName();
 
     /** Column name ZZ_AllocationMonth */
     public static final String COLUMNNAME_ZZ_AllocationMonth = "ZZ_AllocationMonth";
