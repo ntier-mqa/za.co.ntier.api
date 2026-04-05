@@ -256,6 +256,37 @@ public interface I_ZZAssessorPerson
 	/** Get Initials	  */
 	public String getZZInitials();
 
+    /** Column name ZZLastSchoolYear */
+    public static final String COLUMNNAME_ZZLastSchoolYear = "ZZLastSchoolYear";
+
+	/** Set Last School Year	  */
+	public void setZZLastSchoolYear (int ZZLastSchoolYear);
+
+	/** Get Last School Year	  */
+	public int getZZLastSchoolYear();
+
+    /** Column name ZZLkpSchoolEmis_ID */
+    public static final String COLUMNNAME_ZZLkpSchoolEmis_ID = "ZZLkpSchoolEmis_ID";
+
+	/** Set School EMIS	  */
+	public void setZZLkpSchoolEmis_ID (int ZZLkpSchoolEmis_ID);
+
+	/** Get School EMIS	  */
+	public int getZZLkpSchoolEmis_ID();
+
+	public I_ZZLkpSchoolEmis getZZLkpSchoolEmis() throws RuntimeException;
+
+    /** Column name ZZLkpStatssaAreaCode_ID */
+    public static final String COLUMNNAME_ZZLkpStatssaAreaCode_ID = "ZZLkpStatssaAreaCode_ID";
+
+	/** Set STATSSA Area Code	  */
+	public void setZZLkpStatssaAreaCode_ID (int ZZLkpStatssaAreaCode_ID);
+
+	/** Get STATSSA Area Code	  */
+	public int getZZLkpStatssaAreaCode_ID();
+
+	public I_ZZLkpStatssaAreaCode getZZLkpStatssaAreaCode() throws RuntimeException;
+
     /** Column name ZZLkpTitle */
     public static final String COLUMNNAME_ZZLkpTitle = "ZZLkpTitle";
 
@@ -277,6 +308,24 @@ public interface I_ZZAssessorPerson
 
 	/** Get Middle Name	  */
 	public String getZZMiddleName();
+
+    /** Column name ZZPopiActStatus */
+    public static final String COLUMNNAME_ZZPopiActStatus = "ZZPopiActStatus";
+
+	/** Set POPI Act Status	  */
+	public void setZZPopiActStatus (String ZZPopiActStatus);
+
+	/** Get POPI Act Status	  */
+	public String getZZPopiActStatus();
+
+    /** Column name ZZPopiActStatusDate */
+    public static final String COLUMNNAME_ZZPopiActStatusDate = "ZZPopiActStatusDate";
+
+	/** Set POPI Act Status Date	  */
+	public void setZZPopiActStatusDate (Timestamp ZZPopiActStatusDate);
+
+	/** Get POPI Act Status Date	  */
+	public Timestamp getZZPopiActStatusDate();
 
     /** Column name ZZSurname */
     public static final String COLUMNNAME_ZZSurname = "ZZSurname";

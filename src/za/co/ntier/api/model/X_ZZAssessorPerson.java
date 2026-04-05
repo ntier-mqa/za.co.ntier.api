@@ -18,6 +18,7 @@
 package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
@@ -31,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260327L;
+	private static final long serialVersionUID = 20260404L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -439,6 +440,78 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZInitials);
 	}
 
+	/** Set Last School Year.
+		@param ZZLastSchoolYear Last School Year
+	*/
+	public void setZZLastSchoolYear (int ZZLastSchoolYear)
+	{
+		set_Value (COLUMNNAME_ZZLastSchoolYear, Integer.valueOf(ZZLastSchoolYear));
+	}
+
+	/** Get Last School Year.
+		@return Last School Year	  */
+	public int getZZLastSchoolYear()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLastSchoolYear);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZLkpSchoolEmis getZZLkpSchoolEmis() throws RuntimeException
+	{
+		return (I_ZZLkpSchoolEmis)MTable.get(getCtx(), I_ZZLkpSchoolEmis.Table_ID)
+			.getPO(getZZLkpSchoolEmis_ID(), get_TrxName());
+	}
+
+	/** Set School EMIS.
+		@param ZZLkpSchoolEmis_ID School EMIS
+	*/
+	public void setZZLkpSchoolEmis_ID (int ZZLkpSchoolEmis_ID)
+	{
+		if (ZZLkpSchoolEmis_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLkpSchoolEmis_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLkpSchoolEmis_ID, Integer.valueOf(ZZLkpSchoolEmis_ID));
+	}
+
+	/** Get School EMIS.
+		@return School EMIS	  */
+	public int getZZLkpSchoolEmis_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpSchoolEmis_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZLkpStatssaAreaCode getZZLkpStatssaAreaCode() throws RuntimeException
+	{
+		return (I_ZZLkpStatssaAreaCode)MTable.get(getCtx(), I_ZZLkpStatssaAreaCode.Table_ID)
+			.getPO(getZZLkpStatssaAreaCode_ID(), get_TrxName());
+	}
+
+	/** Set STATSSA Area Code.
+		@param ZZLkpStatssaAreaCode_ID STATSSA Area Code
+	*/
+	public void setZZLkpStatssaAreaCode_ID (int ZZLkpStatssaAreaCode_ID)
+	{
+		if (ZZLkpStatssaAreaCode_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLkpStatssaAreaCode_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLkpStatssaAreaCode_ID, Integer.valueOf(ZZLkpStatssaAreaCode_ID));
+	}
+
+	/** Get STATSSA Area Code.
+		@return STATSSA Area Code	  */
+	public int getZZLkpStatssaAreaCode_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpStatssaAreaCode_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Adv = Adv */
 	public static final String ZZLKPTITLE_Adv = "Adv";
 	/** Dr = Dr */
@@ -479,7 +552,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	*/
 	public void setZZMiddleName (String ZZMiddleName)
 	{
-		set_ValueNoCheck (COLUMNNAME_ZZMiddleName, ZZMiddleName);
+		set_Value (COLUMNNAME_ZZMiddleName, ZZMiddleName);
 	}
 
 	/** Get Middle Name.
@@ -487,6 +560,41 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public String getZZMiddleName()
 	{
 		return (String)get_Value(COLUMNNAME_ZZMiddleName);
+	}
+
+	/** Agree = Agree */
+	public static final String ZZPOPIACTSTATUS_Agree = "Agree";
+	/** disagree = disagree */
+	public static final String ZZPOPIACTSTATUS_Disagree = "disagree";
+	/** Set POPI Act Status.
+		@param ZZPopiActStatus POPI Act Status
+	*/
+	public void setZZPopiActStatus (String ZZPopiActStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZPopiActStatus, ZZPopiActStatus);
+	}
+
+	/** Get POPI Act Status.
+		@return POPI Act Status	  */
+	public String getZZPopiActStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZPopiActStatus);
+	}
+
+	/** Set POPI Act Status Date.
+		@param ZZPopiActStatusDate POPI Act Status Date
+	*/
+	public void setZZPopiActStatusDate (Timestamp ZZPopiActStatusDate)
+	{
+		set_Value (COLUMNNAME_ZZPopiActStatusDate, ZZPopiActStatusDate);
+	}
+
+	/** Get POPI Act Status Date.
+		@return POPI Act Status Date	  */
+	public Timestamp getZZPopiActStatusDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZPopiActStatusDate);
 	}
 
 	/** Set Surname.
@@ -647,9 +755,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZ_LI_HomeLanguage_ID (int ZZ_LI_HomeLanguage_ID)
 	{
 		if (ZZ_LI_HomeLanguage_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_HomeLanguage_ID, null);
+			set_Value (COLUMNNAME_ZZ_LI_HomeLanguage_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_HomeLanguage_ID, Integer.valueOf(ZZ_LI_HomeLanguage_ID));
+			set_Value (COLUMNNAME_ZZ_LI_HomeLanguage_ID, Integer.valueOf(ZZ_LI_HomeLanguage_ID));
 	}
 
 	/** Get Home Language.
@@ -674,9 +782,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZ_LI_SocioEconomicStatus_ID (int ZZ_LI_SocioEconomicStatus_ID)
 	{
 		if (ZZ_LI_SocioEconomicStatus_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, null);
+			set_Value (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, Integer.valueOf(ZZ_LI_SocioEconomicStatus_ID));
+			set_Value (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, Integer.valueOf(ZZ_LI_SocioEconomicStatus_ID));
 	}
 
 	/** Get Socio Economic Status.
@@ -701,9 +809,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZ_Nationality_ID (int ZZ_Nationality_ID)
 	{
 		if (ZZ_Nationality_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_Nationality_ID, null);
+			set_Value (COLUMNNAME_ZZ_Nationality_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_Nationality_ID, Integer.valueOf(ZZ_Nationality_ID));
+			set_Value (COLUMNNAME_ZZ_Nationality_ID, Integer.valueOf(ZZ_Nationality_ID));
 	}
 
 	/** Get Nationality.
