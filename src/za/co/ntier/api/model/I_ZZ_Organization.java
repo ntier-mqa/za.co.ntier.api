@@ -135,14 +135,14 @@ public interface I_ZZ_Organization
 	  */
 	public int getUpdatedBy();
 
-    /** Column name ZZTradeName */
-    public static final String COLUMNNAME_ZZTradeName = "ZZTradeName";
+    /** Column name ZZLegalName */
+    public static final String COLUMNNAME_ZZLegalName = "ZZLegalName";
 
-	/** Set Trade Name	  */
-	public void setZZTradeName (String ZZTradeName);
+	/** Set Legal Name	  */
+	public void setZZLegalName (String ZZLegalName);
 
-	/** Get Trade Name	  */
-	public String getZZTradeName();
+	/** Get Legal Name	  */
+	public String getZZLegalName();
 
     /** Column name ZZ_AllocationSchedule_ID */
     public static final String COLUMNNAME_ZZ_AllocationSchedule_ID = "ZZ_AllocationSchedule_ID";

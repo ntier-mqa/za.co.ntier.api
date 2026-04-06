@@ -32,7 +32,7 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260403L;
+	private static final long serialVersionUID = 20260406L;
 
     /** Standard Constructor */
     public X_ZZ_Organization (Properties ctx, int ZZ_Organization_ID, String trxName)
@@ -130,19 +130,19 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 		return (Timestamp)get_Value(COLUMNNAME_DateTo);
 	}
 
-	/** Set Trade Name.
-		@param ZZTradeName Trade Name
+	/** Set Legal Name.
+		@param ZZLegalName Legal Name
 	*/
-	public void setZZTradeName (String ZZTradeName)
+	public void setZZLegalName (String ZZLegalName)
 	{
-		set_ValueNoCheck (COLUMNNAME_ZZTradeName, ZZTradeName);
+		set_Value (COLUMNNAME_ZZLegalName, ZZLegalName);
 	}
 
-	/** Get Trade Name.
-		@return Trade Name	  */
-	public String getZZTradeName()
+	/** Get Legal Name.
+		@return Legal Name	  */
+	public String getZZLegalName()
 	{
-		return (String)get_Value(COLUMNNAME_ZZTradeName);
+		return (String)get_Value(COLUMNNAME_ZZLegalName);
 	}
 
 	public I_ZZ_AllocationSchedule getZZ_AllocationSchedule() throws RuntimeException
