@@ -17,12 +17,10 @@
 /** Generated Model - DO NOT CHANGE */
 package za.co.ntier.api.model;
 
-import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
-import org.compiere.util.Env;
 
 /** Generated Model for ZZSkillsProgramme
  *  @author iDempiere (generated)
@@ -34,7 +32,7 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260406L;
+	private static final long serialVersionUID = 20260407L;
 
     /** Standard Constructor */
     public X_ZZSkillsProgramme (Properties ctx, int ZZSkillsProgramme_ID, String trxName)
@@ -195,19 +193,41 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 	/** Set Credits.
 		@param ZZCredits Credits
 	*/
-	public void setZZCredits (BigDecimal ZZCredits)
+	public void setZZCredits (int ZZCredits)
 	{
-		set_Value (COLUMNNAME_ZZCredits, ZZCredits);
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
 	}
 
 	/** Get Credits.
 		@return Credits	  */
-	public BigDecimal getZZCredits()
+	public int getZZCredits()
 	{
-		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_ZZCredits);
-		if (bd == null)
-			 return Env.ZERO;
-		return bd;
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** ZZIsOhs AD_Reference_ID=319 */
+	public static final int ZZISOHS_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZISOHS_No = "N";
+	/** Yes = Y */
+	public static final String ZZISOHS_Yes = "Y";
+	/** Set OHS.
+		@param ZZIsOhs OHS
+	*/
+	public void setZZIsOhs (String ZZIsOhs)
+	{
+
+		set_Value (COLUMNNAME_ZZIsOhs, ZZIsOhs);
+	}
+
+	/** Get OHS.
+		@return OHS	  */
+	public String getZZIsOhs()
+	{
+		return (String)get_Value(COLUMNNAME_ZZIsOhs);
 	}
 
 	public I_ZZLkpOfoOccupation getZZLkpOfoOccupation() throws RuntimeException
@@ -241,19 +261,19 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 	/** Set Minimum Elective Credits.
 		@param ZZMinimumElectiveCredits Minimum Elective Credits
 	*/
-	public void setZZMinimumElectiveCredits (BigDecimal ZZMinimumElectiveCredits)
+	public void setZZMinimumElectiveCredits (int ZZMinimumElectiveCredits)
 	{
-		set_Value (COLUMNNAME_ZZMinimumElectiveCredits, ZZMinimumElectiveCredits);
+		set_Value (COLUMNNAME_ZZMinimumElectiveCredits, Integer.valueOf(ZZMinimumElectiveCredits));
 	}
 
 	/** Get Minimum Elective Credits.
 		@return Minimum Elective Credits	  */
-	public BigDecimal getZZMinimumElectiveCredits()
+	public int getZZMinimumElectiveCredits()
 	{
-		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_ZZMinimumElectiveCredits);
-		if (bd == null)
-			 return Env.ZERO;
-		return bd;
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZMinimumElectiveCredits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Below Level 01 = 0 */

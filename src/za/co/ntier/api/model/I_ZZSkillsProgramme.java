@@ -166,10 +166,19 @@ public interface I_ZZSkillsProgramme
     public static final String COLUMNNAME_ZZCredits = "ZZCredits";
 
 	/** Set Credits	  */
-	public void setZZCredits (BigDecimal ZZCredits);
+	public void setZZCredits (int ZZCredits);
 
 	/** Get Credits	  */
-	public BigDecimal getZZCredits();
+	public int getZZCredits();
+
+    /** Column name ZZIsOhs */
+    public static final String COLUMNNAME_ZZIsOhs = "ZZIsOhs";
+
+	/** Set OHS	  */
+	public void setZZIsOhs (String ZZIsOhs);
+
+	/** Get OHS	  */
+	public String getZZIsOhs();
 
     /** Column name ZZLkpOfoOccupation_ID */
     public static final String COLUMNNAME_ZZLkpOfoOccupation_ID = "ZZLkpOfoOccupation_ID";
@@ -190,10 +199,10 @@ public interface I_ZZSkillsProgramme
     public static final String COLUMNNAME_ZZMinimumElectiveCredits = "ZZMinimumElectiveCredits";
 
 	/** Set Minimum Elective Credits	  */
-	public void setZZMinimumElectiveCredits (BigDecimal ZZMinimumElectiveCredits);
+	public void setZZMinimumElectiveCredits (int ZZMinimumElectiveCredits);
 
 	/** Get Minimum Elective Credits	  */
-	public BigDecimal getZZMinimumElectiveCredits();
+	public int getZZMinimumElectiveCredits();
 
     /** Column name ZZNqfLevel */
     public static final String COLUMNNAME_ZZNqfLevel = "ZZNqfLevel";

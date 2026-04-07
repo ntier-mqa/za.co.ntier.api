@@ -17,12 +17,10 @@
 /** Generated Model - DO NOT CHANGE */
 package za.co.ntier.api.model;
 
-import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
-import org.compiere.util.Env;
 
 /** Generated Model for ZZQualification
  *  @author iDempiere (generated)
@@ -34,7 +32,7 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260406L;
+	private static final long serialVersionUID = 20260407L;
 
     /** Standard Constructor */
     public X_ZZQualification (Properties ctx, int ZZQualification_ID, String trxName)
@@ -189,19 +187,19 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	/** Set Credits.
 		@param ZZCredits Credits
 	*/
-	public void setZZCredits (BigDecimal ZZCredits)
+	public void setZZCredits (int ZZCredits)
 	{
-		set_Value (COLUMNNAME_ZZCredits, ZZCredits);
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
 	}
 
 	/** Get Credits.
 		@return Credits	  */
-	public BigDecimal getZZCredits()
+	public int getZZCredits()
 	{
-		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_ZZCredits);
-		if (bd == null)
-			 return Env.ZERO;
-		return bd;
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Last Achievement Date.
@@ -265,19 +263,19 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	/** Set Minimum Elective Credits.
 		@param ZZMinimumElectiveCredits Minimum Elective Credits
 	*/
-	public void setZZMinimumElectiveCredits (BigDecimal ZZMinimumElectiveCredits)
+	public void setZZMinimumElectiveCredits (int ZZMinimumElectiveCredits)
 	{
-		set_Value (COLUMNNAME_ZZMinimumElectiveCredits, ZZMinimumElectiveCredits);
+		set_Value (COLUMNNAME_ZZMinimumElectiveCredits, Integer.valueOf(ZZMinimumElectiveCredits));
 	}
 
 	/** Get Minimum Elective Credits.
 		@return Minimum Elective Credits	  */
-	public BigDecimal getZZMinimumElectiveCredits()
+	public int getZZMinimumElectiveCredits()
 	{
-		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_ZZMinimumElectiveCredits);
-		if (bd == null)
-			 return Env.ZERO;
-		return bd;
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZMinimumElectiveCredits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set New Last Achievement Date.

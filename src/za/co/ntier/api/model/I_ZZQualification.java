@@ -170,10 +170,10 @@ public interface I_ZZQualification
     public static final String COLUMNNAME_ZZCredits = "ZZCredits";
 
 	/** Set Credits	  */
-	public void setZZCredits (BigDecimal ZZCredits);
+	public void setZZCredits (int ZZCredits);
 
 	/** Get Credits	  */
-	public BigDecimal getZZCredits();
+	public int getZZCredits();
 
     /** Column name ZZLastAchievementDate */
     public static final String COLUMNNAME_ZZLastAchievementDate = "ZZLastAchievementDate";
@@ -212,10 +212,10 @@ public interface I_ZZQualification
     public static final String COLUMNNAME_ZZMinimumElectiveCredits = "ZZMinimumElectiveCredits";
 
 	/** Set Minimum Elective Credits	  */
-	public void setZZMinimumElectiveCredits (BigDecimal ZZMinimumElectiveCredits);
+	public void setZZMinimumElectiveCredits (int ZZMinimumElectiveCredits);
 
 	/** Get Minimum Elective Credits	  */
-	public BigDecimal getZZMinimumElectiveCredits();
+	public int getZZMinimumElectiveCredits();
 
     /** Column name ZZNewLastAchievementDate */
     public static final String COLUMNNAME_ZZNewLastAchievementDate = "ZZNewLastAchievementDate";
