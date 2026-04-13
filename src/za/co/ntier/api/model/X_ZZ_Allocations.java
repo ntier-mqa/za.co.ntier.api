@@ -32,7 +32,7 @@ public class X_ZZ_Allocations extends PO implements I_ZZ_Allocations, I_Persiste
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260403L;
+	private static final long serialVersionUID = 20260413L;
 
     /** Standard Constructor */
     public X_ZZ_Allocations (Properties ctx, int ZZ_Allocations_ID, String trxName)
@@ -480,10 +480,14 @@ public class X_ZZ_Allocations extends PO implements I_ZZ_Allocations, I_Persiste
 		return (String)get_Value(COLUMNNAME_ZZ_Designation);
 	}
 
+	/** Audit Confirmed = AC */
+	public static final String ZZ_DOCSTATUS_AuditConfirmed = "AC";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
 	/** Awaiting QCTO Recommendation = AW */
 	public static final String ZZ_DOCSTATUS_AwaitingQCTORecommendation = "AW";
+	/** Audit Cancelled = AX */
+	public static final String ZZ_DOCSTATUS_AuditCancelled = "AX";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
 	/** Not Approved = NA */

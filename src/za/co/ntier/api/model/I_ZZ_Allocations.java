@@ -32,7 +32,7 @@ public interface I_ZZ_Allocations
     /** TableName=ZZ_Allocations */
     public static final String Table_Name = "ZZ_Allocations";
 
-    /** AD_Table_ID=1000231 */
+    /** AD_Table_ID=1000236 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
