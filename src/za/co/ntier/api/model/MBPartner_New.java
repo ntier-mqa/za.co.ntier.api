@@ -91,7 +91,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set Business Registration No.
 		@param ZZ_Business_Reg_No Business Registration No
-	*/
+	 */
 	public void setZZ_Business_Reg_No (String ZZ_Business_Reg_No)
 	{
 		set_Value (COLUMNNAME_ZZ_Business_Reg_No, ZZ_Business_Reg_No);
@@ -106,7 +106,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set Is Employer.
 		@param ZZ_Is_Employer Is Employer
-	*/
+	 */
 	public void setZZ_Is_Employer (boolean ZZ_Is_Employer)
 	{
 		set_Value (COLUMNNAME_ZZ_Is_Employer, Boolean.valueOf(ZZ_Is_Employer));
@@ -119,8 +119,8 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 		Object oo = get_Value(COLUMNNAME_ZZ_Is_Employer);
 		if (oo != null)
 		{
-			 if (oo instanceof Boolean)
-				 return ((Boolean)oo).booleanValue();
+			if (oo instanceof Boolean)
+				return ((Boolean)oo).booleanValue();
 			return "Y".equals(oo);
 		}
 		return false;
@@ -149,7 +149,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set Municipality/District.
 		@param ZZ_Municipality_District Municipality/District
-	*/
+	 */
 	public void setZZ_Municipality_District (String ZZ_Municipality_District)
 	{
 		set_Value (COLUMNNAME_ZZ_Municipality_District, ZZ_Municipality_District);
@@ -183,7 +183,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set SDL Number.
 		@param ZZ_SDL_No SDL Number
-	*/
+	 */
 	public void setZZ_SDL_No (String ZZ_SDL_No)
 	{
 		set_Value (COLUMNNAME_ZZ_SDL_No, ZZ_SDL_No);
@@ -198,29 +198,29 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set Chamber Code.
 	@param ZZChamberCode Chamber Code
-	*/
+	 */
 	public void setZZChamberCode (String ZZChamberCode)
 	{
-	
+
 		set_Value (COLUMNNAME_ZZChamberCode, ZZChamberCode);
 	}
-	
+
 	/** Get Chamber Code.
 		@return Chamber Code	  */
 	public String getZZChamberCode()
 	{
 		return (String)get_Value(COLUMNNAME_ZZChamberCode);
 	}
-	
+
 	/** Set SDL Number Type.
 	@param ZZLevyNumberType SDL Number Type
-	*/
+	 */
 	public void setZZLevyNumberType (String ZZLevyNumberType)
 	{
-	
+
 		set_Value (COLUMNNAME_ZZLevyNumberType, ZZLevyNumberType);
 	}
-	
+
 	/** Get SDL Number Type.
 		@return SDL Number Type	  */
 	public String getZZLevyNumberType()
@@ -230,7 +230,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set Number Employees Profile.
 		@param ZZNumberOfEmployeesProfile Number of Employees as per the Employment Profile
-	*/
+	 */
 	public void setZZNumberOfEmployeesProfile (int ZZNumberOfEmployeesProfile)
 	{
 		set_Value (COLUMNNAME_ZZNumberOfEmployeesProfile, Integer.valueOf(ZZNumberOfEmployeesProfile));
@@ -238,24 +238,24 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Get Number Employees Profile.
 		@return Number of Employees as per the Employment Profile
-	  */
+	 */
 	public int getZZNumberOfEmployeesProfile()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZNumberOfEmployeesProfile);
 		if (ii == null)
-			 return 0;
+			return 0;
 		return ii.intValue();
 	}
 
 	/** Set Organisation Registration Number Type.
 	@param ZZOrgRegistrationNumberType Organisation Registration Number Type
-	*/
+	 */
 	public void setZZOrgRegistrationNumberType (String ZZOrgRegistrationNumberType)
 	{
-	
+
 		set_Value (COLUMNNAME_ZZOrgRegistrationNumberType, ZZOrgRegistrationNumberType);
 	}
-	
+
 	/** Get Organisation Registration Number Type.
 		@return Organisation Registration Number Type	  */
 	public String getZZOrgRegistrationNumberType()
@@ -264,10 +264,10 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	}
 	/** Set Organisation Type.
 	@param ZZOrganisationType Organisation Type
-	*/
+	 */
 	public void setZZOrganisationType (String ZZOrganisationType)
 	{
-	
+
 		set_Value (COLUMNNAME_ZZOrganisationType, ZZOrganisationType);
 	}
 
@@ -281,7 +281,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set SARS Number.
 		@param ZZSarsNumber SARS Number
-	*/
+	 */
 	public void setZZSarsNumber (String ZZSarsNumber)
 	{
 		set_Value (COLUMNNAME_ZZSarsNumber, ZZSarsNumber);
@@ -295,13 +295,13 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	}
 	/** Set SIC Code.
 	@param ZZSicCode SIC Code
-	*/
+	 */
 	public void setZZSicCode (String ZZSicCode)
 	{
-	
+
 		set_Value (COLUMNNAME_ZZSicCode, ZZSicCode);
 	}
-	
+
 	/** Get SIC Code.
 		@return SIC Code	  */
 	public String getZZSicCode()
@@ -311,13 +311,13 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set Sub Sector.
 	@param ZZSubSector Sub Sector
-	*/
+	 */
 	public void setZZSubSector (String ZZSubSector)
 	{
-	
+
 		set_Value (COLUMNNAME_ZZSubSector, ZZSubSector);
 	}
-	
+
 	/** Get Sub Sector.
 		@return Sub Sector	  */
 	public String getZZSubSector()
@@ -327,7 +327,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	/** Set Terminated Employees.
 		@param ZZTerminatedEmployees Terminated Employees
-	*/
+	 */
 	public void setZZTerminatedEmployees (int ZZTerminatedEmployees)
 	{
 		set_Value (COLUMNNAME_ZZTerminatedEmployees, Integer.valueOf(ZZTerminatedEmployees));
@@ -339,7 +339,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZTerminatedEmployees);
 		if (ii == null)
-			 return 0;
+			return 0;
 		return ii.intValue();
 	}
 
@@ -374,7 +374,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	public static final String ZZMAINTAINSTATUS_Yes = "Y";
 	/** Set Maintain Status.
 		@param ZZMaintainStatus Maintain Status
-	*/
+	 */
 	public void setZZMaintainStatus (String ZZMaintainStatus)
 	{
 
@@ -387,7 +387,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	{
 		return (String)get_Value(COLUMNNAME_ZZMaintainStatus);
 	}
-	
+
 	/** Set IsSDRUser.
 	@param ZZ_IsSDRUser IsSDRUser
 	 */
@@ -395,7 +395,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	{
 		set_Value (COLUMNNAME_ZZ_IsSDRUser, Boolean.valueOf(ZZ_IsSDRUser));
 	}
-	
+
 	/** Get IsSDRUser.
 		@return IsSDRUser	  */
 	public boolean isZZ_IsSDRUser()
@@ -403,13 +403,13 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 		Object oo = get_Value(COLUMNNAME_ZZ_IsSDRUser);
 		if (oo != null)
 		{
-			 if (oo instanceof Boolean)
-				 return ((Boolean)oo).booleanValue();
+			if (oo instanceof Boolean)
+				return ((Boolean)oo).booleanValue();
 			return "Y".equals(oo);
 		}
 		return false;
 	}
-	
+
 
 	/** ZZUnionised AD_Reference_ID=319 */
 	public static final int ZZUNIONISED_AD_Reference_ID=319;
@@ -419,7 +419,7 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	public static final String ZZUNIONISED_Yes = "Y";
 	/** Set Unionised.
 		@param ZZUnionised Unionised
-	*/
+	 */
 	public void setZZUnionised (String ZZUnionised)
 	{
 
@@ -431,6 +431,51 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 	public String getZZUnionised()
 	{
 		return (String)get_Value(COLUMNNAME_ZZUnionised);
+	}
+
+	@Override
+	public void setParentValue(String ParentValue) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getParentValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setZZBPartner_Parent_ID(int ZZBPartner_Parent_ID) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int getZZBPartner_Parent_ID() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public org.compiere.model.I_C_BPartner getZZBPartner_Parent() throws RuntimeException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/** Set T Number.
+	@param ZZ_T_Number T Number
+	 */
+	public void setZZ_T_Number (String ZZ_T_Number)
+	{
+		set_Value (COLUMNNAME_ZZ_T_Number, ZZ_T_Number);
+	}
+
+	/** Get T Number.
+	@return T Number	  */
+	public String getZZ_T_Number()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_T_Number);
 	}
 
 }

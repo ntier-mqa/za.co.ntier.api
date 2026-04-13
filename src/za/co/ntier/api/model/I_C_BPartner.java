@@ -726,6 +726,19 @@ public interface I_C_BPartner
 
 	public org.compiere.model.I_M_PriceList getPO_PriceList() throws RuntimeException;
 
+    /** Column name ParentValue */
+    public static final String COLUMNNAME_ParentValue = "ParentValue";
+
+	/** Set Parent Key.
+	  * Key if the Parent
+	  */
+	public void setParentValue (String ParentValue);
+
+	/** Get Parent Key.
+	  * Key if the Parent
+	  */
+	public String getParentValue();
+
     /** Column name PaymentRule */
     public static final String COLUMNNAME_PaymentRule = "PaymentRule";
 
@@ -982,6 +995,17 @@ s business as a percentage
 	  */
 	public String getValue();
 
+    /** Column name ZZBPartner_Parent_ID */
+    public static final String COLUMNNAME_ZZBPartner_Parent_ID = "ZZBPartner_Parent_ID";
+
+	/** Set Parent Organisation	  */
+	public void setZZBPartner_Parent_ID (int ZZBPartner_Parent_ID);
+
+	/** Get Parent Organisation	  */
+	public int getZZBPartner_Parent_ID();
+
+	public org.compiere.model.I_C_BPartner getZZBPartner_Parent() throws RuntimeException;
+
     /** Column name ZZChamberCode */
     public static final String COLUMNNAME_ZZChamberCode = "ZZChamberCode";
 
@@ -1013,12 +1037,12 @@ s business as a percentage
     public static final String COLUMNNAME_ZZNumberOfEmployeesProfile = "ZZNumberOfEmployeesProfile";
 
 	/** Set Number Employees Profile.
-	  * Number of Employees as per the Employment Profile
+	  * Number of Employees as per the SARS Profile
 	  */
 	public void setZZNumberOfEmployeesProfile (int ZZNumberOfEmployeesProfile);
 
 	/** Get Number Employees Profile.
-	  * Number of Employees as per the Employment Profile
+	  * Number of Employees as per the SARS Profile
 	  */
 	public int getZZNumberOfEmployeesProfile();
 
@@ -1147,4 +1171,13 @@ s business as a percentage
 
 	/** Get SDL Number	  */
 	public String getZZ_SDL_No();
+
+    /** Column name ZZ_T_Number */
+    public static final String COLUMNNAME_ZZ_T_Number = "ZZ_T_Number";
+
+	/** Set T Number	  */
+	public void setZZ_T_Number (String ZZ_T_Number);
+
+	/** Get T Number	  */
+	public String getZZ_T_Number();
 }
