@@ -31,7 +31,7 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260327L;
+	private static final long serialVersionUID = 20260413L;
 
     /** Standard Constructor */
     public X_ZZSdf (Properties ctx, int ZZSdf_ID, String trxName)
@@ -627,9 +627,9 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 		return ii.intValue();
 	}
 
-	public I_ZZ_LI_Disability getZZ_LI_Disability() throws RuntimeException
+	public I_ZZ_No_Yes_Ref getZZ_LI_Disability() throws RuntimeException
 	{
-		return (I_ZZ_LI_Disability)MTable.get(getCtx(), I_ZZ_LI_Disability.Table_ID)
+		return (I_ZZ_No_Yes_Ref)MTable.get(getCtx(), I_ZZ_No_Yes_Ref.Table_ID)
 			.getPO(getZZ_LI_Disability_ID(), get_TrxName());
 	}
 
