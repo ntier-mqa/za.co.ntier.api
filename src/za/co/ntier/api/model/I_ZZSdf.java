@@ -319,7 +319,7 @@ public interface I_ZZSdf
 	/** Get Disability	  */
 	public int getZZ_LI_Disability_ID();
 
-	public I_ZZ_LI_Disability getZZ_LI_Disability() throws RuntimeException;
+	public I_ZZ_No_Yes_Ref getZZ_LI_Disability() throws RuntimeException;
 
     /** Column name ZZ_LI_HighestEducation_ID */
     public static final String COLUMNNAME_ZZ_LI_HighestEducation_ID = "ZZ_LI_HighestEducation_ID";
