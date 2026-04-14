@@ -21,18 +21,18 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for ZZ_Organization
+/** Generated Interface for ZZ_QAAudit
  *  @author iDempiere (generated) 
  *  @version Release 12
  */
 @SuppressWarnings("all")
-public interface I_ZZ_Organization 
+public interface I_ZZ_QAAudit 
 {
 
-    /** TableName=ZZ_Organization */
-    public static final String Table_Name = "ZZ_Organization";
+    /** TableName=ZZ_QAAudit */
+    public static final String Table_Name = "ZZ_QAAudit";
 
-    /** AD_Table_ID=1000235 */
+    /** AD_Table_ID=1000238 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -157,17 +157,6 @@ public interface I_ZZ_Organization
 	/** Get Legal Name	  */
 	public String getZZLegalName();
 
-    /** Column name ZZ_AllocationSchedule_ID */
-    public static final String COLUMNNAME_ZZ_AllocationSchedule_ID = "ZZ_AllocationSchedule_ID";
-
-	/** Set ZZ_AllocationSchedule_ID	  */
-	public void setZZ_AllocationSchedule_ID (int ZZ_AllocationSchedule_ID);
-
-	/** Get ZZ_AllocationSchedule_ID	  */
-	public int getZZ_AllocationSchedule_ID();
-
-	public I_ZZ_AllocationSchedule getZZ_AllocationSchedule() throws RuntimeException;
-
     /** Column name ZZ_AuditLead_ID */
     public static final String COLUMNNAME_ZZ_AuditLead_ID = "ZZ_AuditLead_ID";
 
@@ -179,14 +168,14 @@ public interface I_ZZ_Organization
 
 	public org.compiere.model.I_AD_User getZZ_AuditLead() throws RuntimeException;
 
-    /** Column name ZZ_IsQAAuditGenerated */
-    public static final String COLUMNNAME_ZZ_IsQAAuditGenerated = "ZZ_IsQAAuditGenerated";
+    /** Column name ZZ_OnsiteAssessmentDate */
+    public static final String COLUMNNAME_ZZ_OnsiteAssessmentDate = "ZZ_OnsiteAssessmentDate";
 
-	/** Set QA Audit Generated	  */
-	public void setZZ_IsQAAuditGenerated (boolean ZZ_IsQAAuditGenerated);
+	/** Set Date of Onsite Assessment	  */
+	public void setZZ_OnsiteAssessmentDate (Timestamp ZZ_OnsiteAssessmentDate);
 
-	/** Get QA Audit Generated	  */
-	public boolean isZZ_IsQAAuditGenerated();
+	/** Get Date of Onsite Assessment	  */
+	public Timestamp getZZ_OnsiteAssessmentDate();
 
     /** Column name ZZ_Organization_ID */
     public static final String COLUMNNAME_ZZ_Organization_ID = "ZZ_Organization_ID";
@@ -197,12 +186,23 @@ public interface I_ZZ_Organization
 	/** Get Organization	  */
 	public int getZZ_Organization_ID();
 
-    /** Column name ZZ_Organization_UU */
-    public static final String COLUMNNAME_ZZ_Organization_UU = "ZZ_Organization_UU";
+	public I_ZZ_Organization getZZ_Organization() throws RuntimeException;
 
-	/** Set ZZ_Organization_UU	  */
-	public void setZZ_Organization_UU (String ZZ_Organization_UU);
+    /** Column name ZZ_QAAudit_ID */
+    public static final String COLUMNNAME_ZZ_QAAudit_ID = "ZZ_QAAudit_ID";
 
-	/** Get ZZ_Organization_UU	  */
-	public String getZZ_Organization_UU();
+	/** Set QA Audit	  */
+	public void setZZ_QAAudit_ID (int ZZ_QAAudit_ID);
+
+	/** Get QA Audit	  */
+	public int getZZ_QAAudit_ID();
+
+    /** Column name ZZ_QAAudit_UU */
+    public static final String COLUMNNAME_ZZ_QAAudit_UU = "ZZ_QAAudit_UU";
+
+	/** Set ZZ_QAAudit_UU	  */
+	public void setZZ_QAAudit_UU (String ZZ_QAAudit_UU);
+
+	/** Get ZZ_QAAudit_UU	  */
+	public String getZZ_QAAudit_UU();
 }

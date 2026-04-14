@@ -22,11 +22,11 @@ import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
-/** Generated Model for ZZ_Organization
+/** Generated Model for ZZ_QAAudit
  *  @author iDempiere (generated)
  *  @version Release 12 - $Id$ */
-@org.adempiere.base.Model(table="ZZ_Organization")
-public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persistent
+@org.adempiere.base.Model(table="ZZ_QAAudit")
+public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
 {
 
 	/**
@@ -35,51 +35,43 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 	private static final long serialVersionUID = 20260414L;
 
     /** Standard Constructor */
-    public X_ZZ_Organization (Properties ctx, int ZZ_Organization_ID, String trxName)
+    public X_ZZ_QAAudit (Properties ctx, int ZZ_QAAudit_ID, String trxName)
     {
-      super (ctx, ZZ_Organization_ID, trxName);
-      /** if (ZZ_Organization_ID == 0)
+      super (ctx, ZZ_QAAudit_ID, trxName);
+      /** if (ZZ_QAAudit_ID == 0)
         {
-			setZZ_IsQAAuditGenerated (false);
-// N
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZ_Organization (Properties ctx, int ZZ_Organization_ID, String trxName, String ... virtualColumns)
+    public X_ZZ_QAAudit (Properties ctx, int ZZ_QAAudit_ID, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZ_Organization_ID, trxName, virtualColumns);
-      /** if (ZZ_Organization_ID == 0)
+      super (ctx, ZZ_QAAudit_ID, trxName, virtualColumns);
+      /** if (ZZ_QAAudit_ID == 0)
         {
-			setZZ_IsQAAuditGenerated (false);
-// N
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZ_Organization (Properties ctx, String ZZ_Organization_UU, String trxName)
+    public X_ZZ_QAAudit (Properties ctx, String ZZ_QAAudit_UU, String trxName)
     {
-      super (ctx, ZZ_Organization_UU, trxName);
-      /** if (ZZ_Organization_UU == null)
+      super (ctx, ZZ_QAAudit_UU, trxName);
+      /** if (ZZ_QAAudit_UU == null)
         {
-			setZZ_IsQAAuditGenerated (false);
-// N
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZ_Organization (Properties ctx, String ZZ_Organization_UU, String trxName, String ... virtualColumns)
+    public X_ZZ_QAAudit (Properties ctx, String ZZ_QAAudit_UU, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZ_Organization_UU, trxName, virtualColumns);
-      /** if (ZZ_Organization_UU == null)
+      super (ctx, ZZ_QAAudit_UU, trxName, virtualColumns);
+      /** if (ZZ_QAAudit_UU == null)
         {
-			setZZ_IsQAAuditGenerated (false);
-// N
         } */
     }
 
     /** Load Constructor */
-    public X_ZZ_Organization (Properties ctx, ResultSet rs, String trxName)
+    public X_ZZ_QAAudit (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -101,7 +93,7 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 
     public String toString()
     {
-      StringBuilder sb = new StringBuilder ("X_ZZ_Organization[")
+      StringBuilder sb = new StringBuilder ("X_ZZ_QAAudit[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -169,33 +161,6 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 		return (String)get_Value(COLUMNNAME_ZZLegalName);
 	}
 
-	public I_ZZ_AllocationSchedule getZZ_AllocationSchedule() throws RuntimeException
-	{
-		return (I_ZZ_AllocationSchedule)MTable.get(getCtx(), I_ZZ_AllocationSchedule.Table_ID)
-			.getPO(getZZ_AllocationSchedule_ID(), get_TrxName());
-	}
-
-	/** Set ZZ_AllocationSchedule_ID.
-		@param ZZ_AllocationSchedule_ID ZZ_AllocationSchedule_ID
-	*/
-	public void setZZ_AllocationSchedule_ID (int ZZ_AllocationSchedule_ID)
-	{
-		if (ZZ_AllocationSchedule_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_AllocationSchedule_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_AllocationSchedule_ID, Integer.valueOf(ZZ_AllocationSchedule_ID));
-	}
-
-	/** Get ZZ_AllocationSchedule_ID.
-		@return ZZ_AllocationSchedule_ID	  */
-	public int getZZ_AllocationSchedule_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_AllocationSchedule_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
 	public org.compiere.model.I_AD_User getZZ_AuditLead() throws RuntimeException
 	{
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
@@ -223,26 +188,25 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 		return ii.intValue();
 	}
 
-	/** Set QA Audit Generated.
-		@param ZZ_IsQAAuditGenerated QA Audit Generated
+	/** Set Date of Onsite Assessment.
+		@param ZZ_OnsiteAssessmentDate Date of Onsite Assessment
 	*/
-	public void setZZ_IsQAAuditGenerated (boolean ZZ_IsQAAuditGenerated)
+	public void setZZ_OnsiteAssessmentDate (Timestamp ZZ_OnsiteAssessmentDate)
 	{
-		set_Value (COLUMNNAME_ZZ_IsQAAuditGenerated, Boolean.valueOf(ZZ_IsQAAuditGenerated));
+		set_Value (COLUMNNAME_ZZ_OnsiteAssessmentDate, ZZ_OnsiteAssessmentDate);
 	}
 
-	/** Get QA Audit Generated.
-		@return QA Audit Generated	  */
-	public boolean isZZ_IsQAAuditGenerated()
+	/** Get Date of Onsite Assessment.
+		@return Date of Onsite Assessment	  */
+	public Timestamp getZZ_OnsiteAssessmentDate()
 	{
-		Object oo = get_Value(COLUMNNAME_ZZ_IsQAAuditGenerated);
-		if (oo != null)
-		{
-			 if (oo instanceof Boolean)
-				 return ((Boolean)oo).booleanValue();
-			return "Y".equals(oo);
-		}
-		return false;
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_OnsiteAssessmentDate);
+	}
+
+	public I_ZZ_Organization getZZ_Organization() throws RuntimeException
+	{
+		return (I_ZZ_Organization)MTable.get(getCtx(), I_ZZ_Organization.Table_ID)
+			.getPO(getZZ_Organization_ID(), get_TrxName());
 	}
 
 	/** Set Organization.
@@ -266,18 +230,39 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 		return ii.intValue();
 	}
 
-	/** Set ZZ_Organization_UU.
-		@param ZZ_Organization_UU ZZ_Organization_UU
+	/** Set QA Audit.
+		@param ZZ_QAAudit_ID QA Audit
 	*/
-	public void setZZ_Organization_UU (String ZZ_Organization_UU)
+	public void setZZ_QAAudit_ID (int ZZ_QAAudit_ID)
 	{
-		set_ValueNoCheck (COLUMNNAME_ZZ_Organization_UU, ZZ_Organization_UU);
+		if (ZZ_QAAudit_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_QAAudit_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_QAAudit_ID, Integer.valueOf(ZZ_QAAudit_ID));
 	}
 
-	/** Get ZZ_Organization_UU.
-		@return ZZ_Organization_UU	  */
-	public String getZZ_Organization_UU()
+	/** Get QA Audit.
+		@return QA Audit	  */
+	public int getZZ_QAAudit_ID()
 	{
-		return (String)get_Value(COLUMNNAME_ZZ_Organization_UU);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_QAAudit_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set ZZ_QAAudit_UU.
+		@param ZZ_QAAudit_UU ZZ_QAAudit_UU
+	*/
+	public void setZZ_QAAudit_UU (String ZZ_QAAudit_UU)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_QAAudit_UU, ZZ_QAAudit_UU);
+	}
+
+	/** Get ZZ_QAAudit_UU.
+		@return ZZ_QAAudit_UU	  */
+	public String getZZ_QAAudit_UU()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_QAAudit_UU);
 	}
 }
