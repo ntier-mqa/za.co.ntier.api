@@ -205,4 +205,13 @@ public interface I_ZZ_QAAudit
 
 	/** Get ZZ_QAAudit_UU	  */
 	public String getZZ_QAAudit_UU();
+
+    /** Column name ZZ_isSentToQCTONAMB */
+    public static final String COLUMNNAME_ZZ_isSentToQCTONAMB = "ZZ_isSentToQCTONAMB";
+
+	/** Set Sent to QCTO/NAMB	  */
+	public void setZZ_isSentToQCTONAMB (boolean ZZ_isSentToQCTONAMB);
+
+	/** Get Sent to QCTO/NAMB	  */
+	public boolean isZZ_isSentToQCTONAMB();
 }

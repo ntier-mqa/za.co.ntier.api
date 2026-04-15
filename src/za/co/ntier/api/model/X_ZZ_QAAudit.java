@@ -32,7 +32,7 @@ public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260414L;
+	private static final long serialVersionUID = 20260415L;
 
     /** Standard Constructor */
     public X_ZZ_QAAudit (Properties ctx, int ZZ_QAAudit_ID, String trxName)
@@ -40,6 +40,8 @@ public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
       super (ctx, ZZ_QAAudit_ID, trxName);
       /** if (ZZ_QAAudit_ID == 0)
         {
+			setZZ_isSentToQCTONAMB (false);
+// N
         } */
     }
 
@@ -49,6 +51,8 @@ public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
       super (ctx, ZZ_QAAudit_ID, trxName, virtualColumns);
       /** if (ZZ_QAAudit_ID == 0)
         {
+			setZZ_isSentToQCTONAMB (false);
+// N
         } */
     }
 
@@ -58,6 +62,8 @@ public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
       super (ctx, ZZ_QAAudit_UU, trxName);
       /** if (ZZ_QAAudit_UU == null)
         {
+			setZZ_isSentToQCTONAMB (false);
+// N
         } */
     }
 
@@ -67,6 +73,8 @@ public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
       super (ctx, ZZ_QAAudit_UU, trxName, virtualColumns);
       /** if (ZZ_QAAudit_UU == null)
         {
+			setZZ_isSentToQCTONAMB (false);
+// N
         } */
     }
 
@@ -264,5 +272,27 @@ public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
 	public String getZZ_QAAudit_UU()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_QAAudit_UU);
+	}
+
+	/** Set Sent to QCTO/NAMB.
+		@param ZZ_isSentToQCTONAMB Sent to QCTO/NAMB
+	*/
+	public void setZZ_isSentToQCTONAMB (boolean ZZ_isSentToQCTONAMB)
+	{
+		set_Value (COLUMNNAME_ZZ_isSentToQCTONAMB, Boolean.valueOf(ZZ_isSentToQCTONAMB));
+	}
+
+	/** Get Sent to QCTO/NAMB.
+		@return Sent to QCTO/NAMB	  */
+	public boolean isZZ_isSentToQCTONAMB()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_isSentToQCTONAMB);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 }
