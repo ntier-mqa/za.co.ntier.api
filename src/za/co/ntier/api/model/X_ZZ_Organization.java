@@ -32,7 +32,7 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260414L;
+	private static final long serialVersionUID = 20260415L;
 
     /** Standard Constructor */
     public X_ZZ_Organization (Properties ctx, int ZZ_Organization_ID, String trxName)
@@ -40,7 +40,7 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
       super (ctx, ZZ_Organization_ID, trxName);
       /** if (ZZ_Organization_ID == 0)
         {
-			setZZ_IsQAAuditGenerated (false);
+			setZZ_IsAuditResultsEntered (false);
 // N
         } */
     }
@@ -51,7 +51,7 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
       super (ctx, ZZ_Organization_ID, trxName, virtualColumns);
       /** if (ZZ_Organization_ID == 0)
         {
-			setZZ_IsQAAuditGenerated (false);
+			setZZ_IsAuditResultsEntered (false);
 // N
         } */
     }
@@ -62,7 +62,7 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
       super (ctx, ZZ_Organization_UU, trxName);
       /** if (ZZ_Organization_UU == null)
         {
-			setZZ_IsQAAuditGenerated (false);
+			setZZ_IsAuditResultsEntered (false);
 // N
         } */
     }
@@ -73,7 +73,7 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
       super (ctx, ZZ_Organization_UU, trxName, virtualColumns);
       /** if (ZZ_Organization_UU == null)
         {
-			setZZ_IsQAAuditGenerated (false);
+			setZZ_IsAuditResultsEntered (false);
 // N
         } */
     }
@@ -196,6 +196,26 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 		return ii.intValue();
 	}
 
+	/** Cancelled = CA */
+	public static final String ZZ_AUDITCONFIRMATION_Cancelled = "CA";
+	/** Confirmed = CO */
+	public static final String ZZ_AUDITCONFIRMATION_Confirmed = "CO";
+	/** Set Audit Confirmation.
+		@param ZZ_AuditConfirmation Audit Confirmation
+	*/
+	public void setZZ_AuditConfirmation (String ZZ_AuditConfirmation)
+	{
+
+		set_Value (COLUMNNAME_ZZ_AuditConfirmation, ZZ_AuditConfirmation);
+	}
+
+	/** Get Audit Confirmation.
+		@return Audit Confirmation	  */
+	public String getZZ_AuditConfirmation()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_AuditConfirmation);
+	}
+
 	public org.compiere.model.I_AD_User getZZ_AuditLead() throws RuntimeException
 	{
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
@@ -223,19 +243,19 @@ public class X_ZZ_Organization extends PO implements I_ZZ_Organization, I_Persis
 		return ii.intValue();
 	}
 
-	/** Set QA Audit Generated.
-		@param ZZ_IsQAAuditGenerated QA Audit Generated
+	/** Set Audit Results Entered.
+		@param ZZ_IsAuditResultsEntered Audit Results Entered
 	*/
-	public void setZZ_IsQAAuditGenerated (boolean ZZ_IsQAAuditGenerated)
+	public void setZZ_IsAuditResultsEntered (boolean ZZ_IsAuditResultsEntered)
 	{
-		set_Value (COLUMNNAME_ZZ_IsQAAuditGenerated, Boolean.valueOf(ZZ_IsQAAuditGenerated));
+		set_Value (COLUMNNAME_ZZ_IsAuditResultsEntered, Boolean.valueOf(ZZ_IsAuditResultsEntered));
 	}
 
-	/** Get QA Audit Generated.
-		@return QA Audit Generated	  */
-	public boolean isZZ_IsQAAuditGenerated()
+	/** Get Audit Results Entered.
+		@return Audit Results Entered	  */
+	public boolean isZZ_IsAuditResultsEntered()
 	{
-		Object oo = get_Value(COLUMNNAME_ZZ_IsQAAuditGenerated);
+		Object oo = get_Value(COLUMNNAME_ZZ_IsAuditResultsEntered);
 		if (oo != null)
 		{
 			 if (oo instanceof Boolean)
