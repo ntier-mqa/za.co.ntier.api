@@ -168,6 +168,15 @@ public interface I_ZZ_Organization
 
 	public I_ZZ_AllocationSchedule getZZ_AllocationSchedule() throws RuntimeException;
 
+    /** Column name ZZ_AuditConfirmation */
+    public static final String COLUMNNAME_ZZ_AuditConfirmation = "ZZ_AuditConfirmation";
+
+	/** Set Audit Confirmation	  */
+	public void setZZ_AuditConfirmation (String ZZ_AuditConfirmation);
+
+	/** Get Audit Confirmation	  */
+	public String getZZ_AuditConfirmation();
+
     /** Column name ZZ_AuditLead_ID */
     public static final String COLUMNNAME_ZZ_AuditLead_ID = "ZZ_AuditLead_ID";
 
@@ -179,14 +188,14 @@ public interface I_ZZ_Organization
 
 	public org.compiere.model.I_AD_User getZZ_AuditLead() throws RuntimeException;
 
-    /** Column name ZZ_IsQAAuditGenerated */
-    public static final String COLUMNNAME_ZZ_IsQAAuditGenerated = "ZZ_IsQAAuditGenerated";
+    /** Column name ZZ_IsAuditResultsEntered */
+    public static final String COLUMNNAME_ZZ_IsAuditResultsEntered = "ZZ_IsAuditResultsEntered";
 
-	/** Set QA Audit Generated	  */
-	public void setZZ_IsQAAuditGenerated (boolean ZZ_IsQAAuditGenerated);
+	/** Set Audit Results Entered	  */
+	public void setZZ_IsAuditResultsEntered (boolean ZZ_IsAuditResultsEntered);
 
-	/** Get QA Audit Generated	  */
-	public boolean isZZ_IsQAAuditGenerated();
+	/** Get Audit Results Entered	  */
+	public boolean isZZ_IsAuditResultsEntered();
 
     /** Column name ZZ_Organization_ID */
     public static final String COLUMNNAME_ZZ_Organization_ID = "ZZ_Organization_ID";
