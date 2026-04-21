@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260404L;
+	private static final long serialVersionUID = 20260419L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -470,9 +470,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZLkpSchoolEmis_ID (int ZZLkpSchoolEmis_ID)
 	{
 		if (ZZLkpSchoolEmis_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZLkpSchoolEmis_ID, null);
+			set_Value (COLUMNNAME_ZZLkpSchoolEmis_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_ZZLkpSchoolEmis_ID, Integer.valueOf(ZZLkpSchoolEmis_ID));
+			set_Value (COLUMNNAME_ZZLkpSchoolEmis_ID, Integer.valueOf(ZZLkpSchoolEmis_ID));
 	}
 
 	/** Get School EMIS.
@@ -497,9 +497,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZLkpStatssaAreaCode_ID (int ZZLkpStatssaAreaCode_ID)
 	{
 		if (ZZLkpStatssaAreaCode_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZLkpStatssaAreaCode_ID, null);
+			set_Value (COLUMNNAME_ZZLkpStatssaAreaCode_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_ZZLkpStatssaAreaCode_ID, Integer.valueOf(ZZLkpStatssaAreaCode_ID));
+			set_Value (COLUMNNAME_ZZLkpStatssaAreaCode_ID, Integer.valueOf(ZZLkpStatssaAreaCode_ID));
 	}
 
 	/** Get STATSSA Area Code.
@@ -562,6 +562,33 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZMiddleName);
 	}
 
+	public org.compiere.model.I_C_Location getZZPhysicalLocation() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_Location)MTable.get(getCtx(), org.compiere.model.I_C_Location.Table_ID)
+			.getPO(getZZPhysicalLocation_ID(), get_TrxName());
+	}
+
+	/** Set Physical Address.
+		@param ZZPhysicalLocation_ID Physical Address
+	*/
+	public void setZZPhysicalLocation_ID (int ZZPhysicalLocation_ID)
+	{
+		if (ZZPhysicalLocation_ID < 1)
+			set_Value (COLUMNNAME_ZZPhysicalLocation_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZPhysicalLocation_ID, Integer.valueOf(ZZPhysicalLocation_ID));
+	}
+
+	/** Get Physical Address.
+		@return Physical Address	  */
+	public int getZZPhysicalLocation_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZPhysicalLocation_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Agree = Agree */
 	public static final String ZZPOPIACTSTATUS_Agree = "Agree";
 	/** disagree = disagree */
@@ -595,6 +622,33 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public Timestamp getZZPopiActStatusDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZPopiActStatusDate);
+	}
+
+	public org.compiere.model.I_C_Location getZZPostalLocation() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_Location)MTable.get(getCtx(), org.compiere.model.I_C_Location.Table_ID)
+			.getPO(getZZPostalLocation_ID(), get_TrxName());
+	}
+
+	/** Set Postal Address.
+		@param ZZPostalLocation_ID Postal Address
+	*/
+	public void setZZPostalLocation_ID (int ZZPostalLocation_ID)
+	{
+		if (ZZPostalLocation_ID < 1)
+			set_Value (COLUMNNAME_ZZPostalLocation_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZPostalLocation_ID, Integer.valueOf(ZZPostalLocation_ID));
+	}
+
+	/** Get Postal Address.
+		@return Postal Address	  */
+	public int getZZPostalLocation_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZPostalLocation_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Surname.
@@ -728,9 +782,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZ_LI_CitizenResidentialStatus_ID (int ZZ_LI_CitizenResidentialStatus_ID)
 	{
 		if (ZZ_LI_CitizenResidentialStatus_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, null);
+			set_Value (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, null);
 		else
-			set_ValueNoCheck (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, Integer.valueOf(ZZ_LI_CitizenResidentialStatus_ID));
+			set_Value (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, Integer.valueOf(ZZ_LI_CitizenResidentialStatus_ID));
 	}
 
 	/** Get Citizen Residential Status.

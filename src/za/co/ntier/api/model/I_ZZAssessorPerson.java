@@ -309,6 +309,17 @@ public interface I_ZZAssessorPerson
 	/** Get Middle Name	  */
 	public String getZZMiddleName();
 
+    /** Column name ZZPhysicalLocation_ID */
+    public static final String COLUMNNAME_ZZPhysicalLocation_ID = "ZZPhysicalLocation_ID";
+
+	/** Set Physical Address	  */
+	public void setZZPhysicalLocation_ID (int ZZPhysicalLocation_ID);
+
+	/** Get Physical Address	  */
+	public int getZZPhysicalLocation_ID();
+
+	public org.compiere.model.I_C_Location getZZPhysicalLocation() throws RuntimeException;
+
     /** Column name ZZPopiActStatus */
     public static final String COLUMNNAME_ZZPopiActStatus = "ZZPopiActStatus";
 
@@ -326,6 +337,17 @@ public interface I_ZZAssessorPerson
 
 	/** Get POPI Act Status Date	  */
 	public Timestamp getZZPopiActStatusDate();
+
+    /** Column name ZZPostalLocation_ID */
+    public static final String COLUMNNAME_ZZPostalLocation_ID = "ZZPostalLocation_ID";
+
+	/** Set Postal Address	  */
+	public void setZZPostalLocation_ID (int ZZPostalLocation_ID);
+
+	/** Get Postal Address	  */
+	public int getZZPostalLocation_ID();
+
+	public org.compiere.model.I_C_Location getZZPostalLocation() throws RuntimeException;
 
     /** Column name ZZSurname */
     public static final String COLUMNNAME_ZZSurname = "ZZSurname";
