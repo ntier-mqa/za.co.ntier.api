@@ -32,7 +32,7 @@ public class X_ZZ_Allocations extends PO implements I_ZZ_Allocations, I_Persiste
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260413L;
+	private static final long serialVersionUID = 20260422L;
 
     /** Standard Constructor */
     public X_ZZ_Allocations (Properties ctx, int ZZ_Allocations_ID, String trxName)
@@ -518,6 +518,87 @@ public class X_ZZ_Allocations extends PO implements I_ZZ_Allocations, I_Persiste
 	public String getZZ_DocStatus()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
+	}
+
+	public I_ZZ_NAMB_Alloc_TTC getZZ_NAMB_Alloc_TTC() throws RuntimeException
+	{
+		return (I_ZZ_NAMB_Alloc_TTC)MTable.get(getCtx(), I_ZZ_NAMB_Alloc_TTC.Table_ID)
+			.getPO(getZZ_NAMB_Alloc_TTC_ID(), get_TrxName());
+	}
+
+	/** Set TTC.
+		@param ZZ_NAMB_Alloc_TTC_ID TTC
+	*/
+	public void setZZ_NAMB_Alloc_TTC_ID (int ZZ_NAMB_Alloc_TTC_ID)
+	{
+		if (ZZ_NAMB_Alloc_TTC_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_NAMB_Alloc_TTC_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_NAMB_Alloc_TTC_ID, Integer.valueOf(ZZ_NAMB_Alloc_TTC_ID));
+	}
+
+	/** Get TTC.
+		@return TTC	  */
+	public int getZZ_NAMB_Alloc_TTC_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_NAMB_Alloc_TTC_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZ_NAMB_Alloc_Trades getZZ_NAMB_Alloc_Trades() throws RuntimeException
+	{
+		return (I_ZZ_NAMB_Alloc_Trades)MTable.get(getCtx(), I_ZZ_NAMB_Alloc_Trades.Table_ID)
+			.getPO(getZZ_NAMB_Alloc_Trades_ID(), get_TrxName());
+	}
+
+	/** Set ZZ_NAMB_Alloc_Trades_ID.
+		@param ZZ_NAMB_Alloc_Trades_ID ZZ_NAMB_Alloc_Trades_ID
+	*/
+	public void setZZ_NAMB_Alloc_Trades_ID (int ZZ_NAMB_Alloc_Trades_ID)
+	{
+		if (ZZ_NAMB_Alloc_Trades_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_NAMB_Alloc_Trades_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_NAMB_Alloc_Trades_ID, Integer.valueOf(ZZ_NAMB_Alloc_Trades_ID));
+	}
+
+	/** Get ZZ_NAMB_Alloc_Trades_ID.
+		@return ZZ_NAMB_Alloc_Trades_ID	  */
+	public int getZZ_NAMB_Alloc_Trades_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_NAMB_Alloc_Trades_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZ_NAMB_Allocations getZZ_NAMB_Allocations() throws RuntimeException
+	{
+		return (I_ZZ_NAMB_Allocations)MTable.get(getCtx(), I_ZZ_NAMB_Allocations.Table_ID)
+			.getPO(getZZ_NAMB_Allocations_ID(), get_TrxName());
+	}
+
+	/** Set NAMB Allocations.
+		@param ZZ_NAMB_Allocations_ID NAMB Allocations
+	*/
+	public void setZZ_NAMB_Allocations_ID (int ZZ_NAMB_Allocations_ID)
+	{
+		if (ZZ_NAMB_Allocations_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_NAMB_Allocations_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_NAMB_Allocations_ID, Integer.valueOf(ZZ_NAMB_Allocations_ID));
+	}
+
+	/** Get NAMB Allocations.
+		@return NAMB Allocations	  */
+	public int getZZ_NAMB_Allocations_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_NAMB_Allocations_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Level 1 = 01 */

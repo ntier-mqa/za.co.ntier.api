@@ -377,6 +377,39 @@ public interface I_ZZ_Allocations
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
 
+    /** Column name ZZ_NAMB_Alloc_TTC_ID */
+    public static final String COLUMNNAME_ZZ_NAMB_Alloc_TTC_ID = "ZZ_NAMB_Alloc_TTC_ID";
+
+	/** Set TTC	  */
+	public void setZZ_NAMB_Alloc_TTC_ID (int ZZ_NAMB_Alloc_TTC_ID);
+
+	/** Get TTC	  */
+	public int getZZ_NAMB_Alloc_TTC_ID();
+
+	public I_ZZ_NAMB_Alloc_TTC getZZ_NAMB_Alloc_TTC() throws RuntimeException;
+
+    /** Column name ZZ_NAMB_Alloc_Trades_ID */
+    public static final String COLUMNNAME_ZZ_NAMB_Alloc_Trades_ID = "ZZ_NAMB_Alloc_Trades_ID";
+
+	/** Set ZZ_NAMB_Alloc_Trades_ID	  */
+	public void setZZ_NAMB_Alloc_Trades_ID (int ZZ_NAMB_Alloc_Trades_ID);
+
+	/** Get ZZ_NAMB_Alloc_Trades_ID	  */
+	public int getZZ_NAMB_Alloc_Trades_ID();
+
+	public I_ZZ_NAMB_Alloc_Trades getZZ_NAMB_Alloc_Trades() throws RuntimeException;
+
+    /** Column name ZZ_NAMB_Allocations_ID */
+    public static final String COLUMNNAME_ZZ_NAMB_Allocations_ID = "ZZ_NAMB_Allocations_ID";
+
+	/** Set NAMB Allocations	  */
+	public void setZZ_NAMB_Allocations_ID (int ZZ_NAMB_Allocations_ID);
+
+	/** Get NAMB Allocations	  */
+	public int getZZ_NAMB_Allocations_ID();
+
+	public I_ZZ_NAMB_Allocations getZZ_NAMB_Allocations() throws RuntimeException;
+
     /** Column name ZZ_NQF_Level */
     public static final String COLUMNNAME_ZZ_NQF_Level = "ZZ_NQF_Level";
 
