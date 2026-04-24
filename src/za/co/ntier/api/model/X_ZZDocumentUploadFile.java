@@ -18,6 +18,7 @@
 package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
@@ -31,7 +32,7 @@ public class X_ZZDocumentUploadFile extends PO implements I_ZZDocumentUploadFile
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260501L;
+	private static final long serialVersionUID = 20260424L;
 
     /** Standard Constructor */
     public X_ZZDocumentUploadFile (Properties ctx, int ZZDocumentUploadFile_ID, String trxName)
@@ -142,6 +143,53 @@ public class X_ZZDocumentUploadFile extends PO implements I_ZZDocumentUploadFile
 		return ii.intValue();
 	}
 
+	/** Set Old Value.
+		@param OldValue The old file data
+	*/
+	public void setOldValue (String OldValue)
+	{
+		set_Value (COLUMNNAME_OldValue, OldValue);
+	}
+
+	/** Get Old Value.
+		@return The old file data
+	  */
+	public String getOldValue()
+	{
+		return (String)get_Value(COLUMNNAME_OldValue);
+	}
+
+	/** Set DateTime.
+		@param T_DateTime DateTime
+	*/
+	public void setT_DateTime (Timestamp T_DateTime)
+	{
+		set_Value (COLUMNNAME_T_DateTime, T_DateTime);
+	}
+
+	/** Get DateTime.
+		@return DateTime	  */
+	public Timestamp getT_DateTime()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_T_DateTime);
+	}
+
+	/** Set Attachment Path.
+		@param ZZAttachmentPath Curent Attachment Path
+	*/
+	public void setZZAttachmentPath (String ZZAttachmentPath)
+	{
+		set_Value (COLUMNNAME_ZZAttachmentPath, ZZAttachmentPath);
+	}
+
+	/** Get Attachment Path.
+		@return Curent Attachment Path
+	  */
+	public String getZZAttachmentPath()
+	{
+		return (String)get_Value(COLUMNNAME_ZZAttachmentPath);
+	}
+
 	/** Set Document Upload File.
 		@param ZZDocumentUploadFile_ID Document Upload File
 	*/
@@ -219,6 +267,21 @@ public class X_ZZDocumentUploadFile extends PO implements I_ZZDocumentUploadFile
 	public byte[] getZZDocumentUploaded()
 	{
 		return (byte[])get_Value(COLUMNNAME_ZZDocumentUploaded);
+	}
+
+	/** Set Old Attachment Path.
+		@param ZZOldAttachmentPath Old Attachment Path
+	*/
+	public void setZZOldAttachmentPath (String ZZOldAttachmentPath)
+	{
+		set_Value (COLUMNNAME_ZZOldAttachmentPath, ZZOldAttachmentPath);
+	}
+
+	/** Get Old Attachment Path.
+		@return Old Attachment Path	  */
+	public String getZZOldAttachmentPath()
+	{
+		return (String)get_Value(COLUMNNAME_ZZOldAttachmentPath);
 	}
 
 	public I_ZZ_Application_Form getZZ_Application_Form() throws RuntimeException

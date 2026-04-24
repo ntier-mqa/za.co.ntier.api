@@ -106,6 +106,28 @@ public interface I_ZZDocumentUploadFile
 	  */
 	public String getName();
 
+    /** Column name OldValue */
+    public static final String COLUMNNAME_OldValue = "OldValue";
+
+	/** Set Old Value.
+	  * The old file data
+	  */
+	public void setOldValue (String OldValue);
+
+	/** Get Old Value.
+	  * The old file data
+	  */
+	public String getOldValue();
+
+    /** Column name T_DateTime */
+    public static final String COLUMNNAME_T_DateTime = "T_DateTime";
+
+	/** Set DateTime	  */
+	public void setT_DateTime (Timestamp T_DateTime);
+
+	/** Get DateTime	  */
+	public Timestamp getT_DateTime();
+
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
 
@@ -130,6 +152,19 @@ public interface I_ZZDocumentUploadFile
 
 	/** Get Assessor Person	  */
 	public int getZZAssessorPerson_ID();
+
+    /** Column name ZZAttachmentPath */
+    public static final String COLUMNNAME_ZZAttachmentPath = "ZZAttachmentPath";
+
+	/** Set Attachment Path.
+	  * Curent Attachment Path
+	  */
+	public void setZZAttachmentPath (String ZZAttachmentPath);
+
+	/** Get Attachment Path.
+	  * Curent Attachment Path
+	  */
+	public String getZZAttachmentPath();
 
     /** Column name ZZDocumentUploadFile_ID */
     public static final String COLUMNNAME_ZZDocumentUploadFile_ID = "ZZDocumentUploadFile_ID";
@@ -172,6 +207,15 @@ public interface I_ZZDocumentUploadFile
 	  * Binary Of Document Upload
 	  */
 	public byte[] getZZDocumentUploaded();
+
+    /** Column name ZZOldAttachmentPath */
+    public static final String COLUMNNAME_ZZOldAttachmentPath = "ZZOldAttachmentPath";
+
+	/** Set Old Attachment Path	  */
+	public void setZZOldAttachmentPath (String ZZOldAttachmentPath);
+
+	/** Get Old Attachment Path	  */
+	public String getZZOldAttachmentPath();
 
     /** Column name ZZ_Application_Form_ID */
     public static final String COLUMNNAME_ZZ_Application_Form_ID = "ZZ_Application_Form_ID";
