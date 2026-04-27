@@ -157,16 +157,14 @@ public interface I_ZZ_QAAudit
 	/** Get Legal Name	  */
 	public String getZZLegalName();
 
-    /** Column name ZZ_AuditLead_ID */
-    public static final String COLUMNNAME_ZZ_AuditLead_ID = "ZZ_AuditLead_ID";
+    /** Column name ZZ_AuditLead_IDs */
+    public static final String COLUMNNAME_ZZ_AuditLead_IDs = "ZZ_AuditLead_IDs";
 
-	/** Set ZZ_AuditLead_ID	  */
-	public void setZZ_AuditLead_ID (int ZZ_AuditLead_ID);
+	/** Set ZZ_AuditLead_IDs	  */
+	public void setZZ_AuditLead_IDs (String ZZ_AuditLead_IDs);
 
-	/** Get ZZ_AuditLead_ID	  */
-	public int getZZ_AuditLead_ID();
-
-	public org.compiere.model.I_AD_User getZZ_AuditLead() throws RuntimeException;
+	/** Get ZZ_AuditLead_IDs	  */
+	public String getZZ_AuditLead_IDs();
 
     /** Column name ZZ_OnsiteAssessmentDate */
     public static final String COLUMNNAME_ZZ_OnsiteAssessmentDate = "ZZ_OnsiteAssessmentDate";

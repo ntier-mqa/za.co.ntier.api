@@ -32,7 +32,7 @@ public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260415L;
+	private static final long serialVersionUID = 20260427L;
 
     /** Standard Constructor */
     public X_ZZ_QAAudit (Properties ctx, int ZZ_QAAudit_ID, String trxName)
@@ -169,31 +169,20 @@ public class X_ZZ_QAAudit extends PO implements I_ZZ_QAAudit, I_Persistent
 		return (String)get_Value(COLUMNNAME_ZZLegalName);
 	}
 
-	public org.compiere.model.I_AD_User getZZ_AuditLead() throws RuntimeException
-	{
-		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
-			.getPO(getZZ_AuditLead_ID(), get_TrxName());
-	}
-
-	/** Set ZZ_AuditLead_ID.
-		@param ZZ_AuditLead_ID ZZ_AuditLead_ID
+	/** Set ZZ_AuditLead_IDs.
+		@param ZZ_AuditLead_IDs ZZ_AuditLead_IDs
 	*/
-	public void setZZ_AuditLead_ID (int ZZ_AuditLead_ID)
+	public void setZZ_AuditLead_IDs (String ZZ_AuditLead_IDs)
 	{
-		if (ZZ_AuditLead_ID < 1)
-			set_Value (COLUMNNAME_ZZ_AuditLead_ID, null);
-		else
-			set_Value (COLUMNNAME_ZZ_AuditLead_ID, Integer.valueOf(ZZ_AuditLead_ID));
+
+		set_Value (COLUMNNAME_ZZ_AuditLead_IDs, ZZ_AuditLead_IDs);
 	}
 
-	/** Get ZZ_AuditLead_ID.
-		@return ZZ_AuditLead_ID	  */
-	public int getZZ_AuditLead_ID()
+	/** Get ZZ_AuditLead_IDs.
+		@return ZZ_AuditLead_IDs	  */
+	public String getZZ_AuditLead_IDs()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_AuditLead_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
+		return (String)get_Value(COLUMNNAME_ZZ_AuditLead_IDs);
 	}
 
 	/** Set Date of Onsite Assessment.
