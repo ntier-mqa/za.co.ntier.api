@@ -32,7 +32,7 @@ public class X_ZZ_QAAuditAllocations extends PO implements I_ZZ_QAAuditAllocatio
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260422L;
+	private static final long serialVersionUID = 20260428L;
 
     /** Standard Constructor */
     public X_ZZ_QAAuditAllocations (Properties ctx, int ZZ_QAAuditAllocations_ID, String trxName)
@@ -162,6 +162,22 @@ public class X_ZZ_QAAuditAllocations extends PO implements I_ZZ_QAAuditAllocatio
 		return (String)get_Value(COLUMNNAME_EMail);
 	}
 
+	/** Set End Date.
+		@param EndDate Last effective date (inclusive)
+	*/
+	public void setEndDate (Timestamp EndDate)
+	{
+		set_Value (COLUMNNAME_EndDate, EndDate);
+	}
+
+	/** Get End Date.
+		@return Last effective date (inclusive)
+	  */
+	public Timestamp getEndDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_EndDate);
+	}
+
 	/** Set Line.
 		@param LineNo Line No
 	*/
@@ -243,6 +259,22 @@ public class X_ZZ_QAAuditAllocations extends PO implements I_ZZ_QAAuditAllocatio
 		return (String)get_Value(COLUMNNAME_Region);
 	}
 
+	/** Set Start Date.
+		@param StartDate First effective day (inclusive)
+	*/
+	public void setStartDate (Timestamp StartDate)
+	{
+		set_Value (COLUMNNAME_StartDate, StartDate);
+	}
+
+	/** Get Start Date.
+		@return First effective day (inclusive)
+	  */
+	public Timestamp getStartDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_StartDate);
+	}
+
 	/** Set Legal Name.
 		@param ZZLegalName Legal Name
 	*/
@@ -286,6 +318,21 @@ public class X_ZZ_QAAuditAllocations extends PO implements I_ZZ_QAAuditAllocatio
 	public String getZZTradeName()
 	{
 		return (String)get_Value(COLUMNNAME_ZZTradeName);
+	}
+
+	/** Set Accreditation Number.
+		@param ZZ_AccreditationNumber Accreditation Number
+	*/
+	public void setZZ_AccreditationNumber (String ZZ_AccreditationNumber)
+	{
+		set_Value (COLUMNNAME_ZZ_AccreditationNumber, ZZ_AccreditationNumber);
+	}
+
+	/** Get Accreditation Number.
+		@return Accreditation Number	  */
+	public String getZZ_AccreditationNumber()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_AccreditationNumber);
 	}
 
 	/** Set Allocation Month.
@@ -383,6 +430,48 @@ public class X_ZZ_QAAuditAllocations extends PO implements I_ZZ_QAAuditAllocatio
 		return (String)get_Value(COLUMNNAME_ZZ_AltContactTitle);
 	}
 
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_ApprovedBy_ID(), get_TrxName());
+	}
+
+	/** Set Approved By.
+		@param ZZ_ApprovedBy_ID Approved By
+	*/
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID)
+	{
+		if (ZZ_ApprovedBy_ID < 1)
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, Integer.valueOf(ZZ_ApprovedBy_ID));
+	}
+
+	/** Get Approved By.
+		@return Approved By	  */
+	public int getZZ_ApprovedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_ApprovedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Approved Date.
+		@param ZZ_ApprovedDate Approved Date
+	*/
+	public void setZZ_ApprovedDate (Timestamp ZZ_ApprovedDate)
+	{
+		set_Value (COLUMNNAME_ZZ_ApprovedDate, ZZ_ApprovedDate);
+	}
+
+	/** Get Approved Date.
+		@return Approved Date	  */
+	public Timestamp getZZ_ApprovedDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_ApprovedDate);
+	}
+
 	/** Set CIPC Registration.
 		@param ZZ_CIPCNumber CIPC Registration
 	*/
@@ -413,6 +502,21 @@ public class X_ZZ_QAAuditAllocations extends PO implements I_ZZ_QAAuditAllocatio
 	public String getZZ_ContactTitle()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_ContactTitle);
+	}
+
+	/** Set Date Not Approved.
+		@param ZZ_Date_Not_Approved Date Not Approved
+	*/
+	public void setZZ_Date_Not_Approved (Timestamp ZZ_Date_Not_Approved)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Approved, ZZ_Date_Not_Approved);
+	}
+
+	/** Get Date Not Approved.
+		@return Date Not Approved	  */
+	public Timestamp getZZ_Date_Not_Approved()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Approved);
 	}
 
 	/** Set Date Not Recommended.
@@ -528,8 +632,8 @@ public class X_ZZ_QAAuditAllocations extends PO implements I_ZZ_QAAuditAllocatio
 	public static final String ZZ_DOCSTATUS_AuditCancelled = "AX";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
-	/** Not Approved = NA */
-	public static final String ZZ_DOCSTATUS_NotApproved = "NA";
+	/** Not Approved = NP */
+	public static final String ZZ_DOCSTATUS_NotApproved = "NP";
 	/** Not Recommended = NR */
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Recommended = RC */

@@ -132,6 +132,19 @@ public interface I_ZZ_QAAuditAllocations
 	  */
 	public String getEMail();
 
+    /** Column name EndDate */
+    public static final String COLUMNNAME_EndDate = "EndDate";
+
+	/** Set End Date.
+	  * Last effective date (inclusive)
+	  */
+	public void setEndDate (Timestamp EndDate);
+
+	/** Get End Date.
+	  * Last effective date (inclusive)
+	  */
+	public Timestamp getEndDate();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -202,6 +215,19 @@ public interface I_ZZ_QAAuditAllocations
 	/** Get Region	  */
 	public String getRegion();
 
+    /** Column name StartDate */
+    public static final String COLUMNNAME_StartDate = "StartDate";
+
+	/** Set Start Date.
+	  * First effective day (inclusive)
+	  */
+	public void setStartDate (Timestamp StartDate);
+
+	/** Get Start Date.
+	  * First effective day (inclusive)
+	  */
+	public Timestamp getStartDate();
+
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
 
@@ -244,6 +270,15 @@ public interface I_ZZ_QAAuditAllocations
 
 	/** Get Trade Name	  */
 	public String getZZTradeName();
+
+    /** Column name ZZ_AccreditationNumber */
+    public static final String COLUMNNAME_ZZ_AccreditationNumber = "ZZ_AccreditationNumber";
+
+	/** Set Accreditation Number	  */
+	public void setZZ_AccreditationNumber (String ZZ_AccreditationNumber);
+
+	/** Get Accreditation Number	  */
+	public String getZZ_AccreditationNumber();
 
     /** Column name ZZ_AllocationMonth */
     public static final String COLUMNNAME_ZZ_AllocationMonth = "ZZ_AllocationMonth";
@@ -319,6 +354,26 @@ public interface I_ZZ_QAAuditAllocations
 	  */
 	public String getZZ_AltContactTitle();
 
+    /** Column name ZZ_ApprovedBy_ID */
+    public static final String COLUMNNAME_ZZ_ApprovedBy_ID = "ZZ_ApprovedBy_ID";
+
+	/** Set Approved By	  */
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID);
+
+	/** Get Approved By	  */
+	public int getZZ_ApprovedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException;
+
+    /** Column name ZZ_ApprovedDate */
+    public static final String COLUMNNAME_ZZ_ApprovedDate = "ZZ_ApprovedDate";
+
+	/** Set Approved Date	  */
+	public void setZZ_ApprovedDate (Timestamp ZZ_ApprovedDate);
+
+	/** Get Approved Date	  */
+	public Timestamp getZZ_ApprovedDate();
+
     /** Column name ZZ_CIPCNumber */
     public static final String COLUMNNAME_ZZ_CIPCNumber = "ZZ_CIPCNumber";
 
@@ -344,6 +399,15 @@ public interface I_ZZ_QAAuditAllocations
 	  * Title of Contact Person
 	  */
 	public String getZZ_ContactTitle();
+
+    /** Column name ZZ_Date_Not_Approved */
+    public static final String COLUMNNAME_ZZ_Date_Not_Approved = "ZZ_Date_Not_Approved";
+
+	/** Set Date Not Approved	  */
+	public void setZZ_Date_Not_Approved (Timestamp ZZ_Date_Not_Approved);
+
+	/** Get Date Not Approved	  */
+	public Timestamp getZZ_Date_Not_Approved();
 
     /** Column name ZZ_Date_Not_Recommended */
     public static final String COLUMNNAME_ZZ_Date_Not_Recommended = "ZZ_Date_Not_Recommended";
