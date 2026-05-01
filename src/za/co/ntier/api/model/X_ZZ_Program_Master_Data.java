@@ -20,11 +20,7 @@ package za.co.ntier.api.model;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
-
-import org.compiere.model.I_Persistent;
-import org.compiere.model.MTable;
-import org.compiere.model.PO;
-import org.compiere.model.POInfo;
+import org.compiere.model.*;
 
 /** Generated Model for ZZ_Program_Master_Data
  *  @author iDempiere (generated)
@@ -36,7 +32,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20251118L;
+	private static final long serialVersionUID = 20260501L;
 
     /** Standard Constructor */
     public X_ZZ_Program_Master_Data (Properties ctx, int ZZ_Program_Master_Data_ID, String trxName)
@@ -105,6 +101,34 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         .append(get_ID()).append(",Name=").append(getName()).append("]");
       return sb.toString();
     }
+
+	public org.compiere.model.I_AD_Form getAD_Form() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_Form)MTable.get(getCtx(), org.compiere.model.I_AD_Form.Table_ID)
+			.getPO(getAD_Form_ID(), get_TrxName());
+	}
+
+	/** Set Special Form.
+		@param AD_Form_ID Special Form
+	*/
+	public void setAD_Form_ID (int AD_Form_ID)
+	{
+		if (AD_Form_ID < 1)
+			set_Value (COLUMNNAME_AD_Form_ID, null);
+		else
+			set_Value (COLUMNNAME_AD_Form_ID, Integer.valueOf(AD_Form_ID));
+	}
+
+	/** Get Special Form.
+		@return Special Form
+	  */
+	public int getAD_Form_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_AD_Form_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
 
 	public org.compiere.model.I_C_Project getC_Project() throws RuntimeException
 	{
@@ -200,8 +224,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			.getPO(getLine_Manager_ID(), get_TrxName());
 	}
 
-	/** Set Snr Mgr.
-		@param Line_Manager_ID Snr Mgr
+	/** Set Line Manager.
+		@param Line_Manager_ID Line Manager
 	*/
 	public void setLine_Manager_ID (int Line_Manager_ID)
 	{
@@ -211,8 +235,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			set_Value (COLUMNNAME_Line_Manager_ID, Integer.valueOf(Line_Manager_ID));
 	}
 
-	/** Get Snr Mgr.
-		@return Snr Mgr	  */
+	/** Get Line Manager.
+		@return Line Manager	  */
 	public int getLine_Manager_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_Line_Manager_ID);
@@ -341,10 +365,20 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCACTION_ApproveDoNotApprove = "AP";
 	/** Complete = CO */
 	public static final String ZZ_DOCACTION_Complete = "CO";
+	/** Evaluate = EV */
+	public static final String ZZ_DOCACTION_Evaluate = "EV";
 	/** Final Approval/Do not Approve = FA */
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
+	/** PrepareCEO = PC */
+	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Re-Submit = RS */
+	public static final String ZZ_DOCACTION_Re_Submit = "RS";
+	/** Submit = S1 */
+	public static final String ZZ_DOCACTION_Submit = "S1";
+	/** System Only (No manual action) = S2 */
+	public static final String ZZ_DOCACTION_SystemOnlyNoManualAction = "S2";
 	/** Submit to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCACTION_SubmitToManagerFinanceConsumables = "SC";
 	/** Submit to SDL Finance Mgr = SD */
@@ -363,6 +397,10 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCACTION_SubmitToSnrMgrSRU = "SS";
 	/** Submit to Line Manager = SU */
 	public static final String ZZ_DOCACTION_SubmitToLineManager = "SU";
+	/** Update = UP */
+	public static final String ZZ_DOCACTION_Update = "UP";
+	/** Verify = VE */
+	public static final String ZZ_DOCACTION_Verify = "VE";
 	/** Set Document Action.
 		@param ZZ_DocAction Document Action
 	*/
@@ -383,10 +421,22 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
+	/** Prepared for CEO = CF */
+	public static final String ZZ_DOCSTATUS_PreparedForCEO = "CF";
 	/** Completed = CO */
 	public static final String ZZ_DOCSTATUS_Completed = "CO";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Error Importing = EE */
+	public static final String ZZ_DOCSTATUS_ErrorImporting = "EE";
+	/** Validation Error = ER */
+	public static final String ZZ_DOCSTATUS_ValidationError = "ER";
+	/** Evaluated = EV */
+	public static final String ZZ_DOCSTATUS_Evaluated = "EV";
+	/** Importing = IG */
+	public static final String ZZ_DOCSTATUS_Importing = "IG";
+	/** Imported = IM */
+	public static final String ZZ_DOCSTATUS_Imported = "IM";
 	/** In Progress = IP */
 	public static final String ZZ_DOCSTATUS_InProgress = "IP";
 	/** Not Recommended By Senior Mgr SDR = N1 */
@@ -413,16 +463,26 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Not Approved by Snr Admin Finance = NS */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Pending = PE */
+	public static final String ZZ_DOCSTATUS_Pending = "PE";
+	/** Query = QR */
+	public static final String ZZ_DOCSTATUS_Query = "QR";
 	/** Recommended By Senior Mgr Finance = R1 */
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
 	/** Recommended By COO = R2 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
 	/** Recommended By CFO = R3 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
+	/** Recommended By CEO = R4 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCEO = "R4";
+	/** Recommended for Approval = RA */
+	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
 	public static final String ZZ_DOCSTATUS_Recommended = "RC";
 	/** Recommended By Senior Mgr SDR = RD */
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
+	/** Recommended for Evaluation = RE */
+	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
@@ -433,6 +493,18 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
 	/** Submitted = SU */
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
+	/** Transfer Out = TO */
+	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
+	/** Updated by SDR Admin = UA */
+	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
+	/** Uploaded = UP */
+	public static final String ZZ_DOCSTATUS_Uploaded = "UP";
+	/** Delinked = UnSdfOrg */
+	public static final String ZZ_DOCSTATUS_Delinked = "UnSdfOrg";
+	/** Validating = VA */
+	public static final String ZZ_DOCSTATUS_Validating = "VA";
+	/** Verified = VE */
+	public static final String ZZ_DOCSTATUS_Verified = "VE";
 	/** Set Document Status.
 		@param ZZ_DocStatus Document Status
 	*/

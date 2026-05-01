@@ -19,11 +19,7 @@ package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
 import java.util.Properties;
-
-import org.compiere.model.I_Persistent;
-import org.compiere.model.MTable;
-import org.compiere.model.PO;
-import org.compiere.model.POInfo;
+import org.compiere.model.*;
 
 /** Generated Model for ZZDocumentUploadFile
  *  @author iDempiere (generated)
@@ -35,7 +31,7 @@ public class X_ZZDocumentUploadFile extends PO implements I_ZZDocumentUploadFile
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250904L;
+	private static final long serialVersionUID = 20260501L;
 
     /** Standard Constructor */
     public X_ZZDocumentUploadFile (Properties ctx, int ZZDocumentUploadFile_ID, String trxName)
@@ -123,6 +119,27 @@ public class X_ZZDocumentUploadFile extends PO implements I_ZZDocumentUploadFile
 	public String getName()
 	{
 		return (String)get_Value(COLUMNNAME_Name);
+	}
+
+	/** Set Assessor Person.
+		@param ZZAssessorPerson_ID Assessor Person
+	*/
+	public void setZZAssessorPerson_ID (int ZZAssessorPerson_ID)
+	{
+		if (ZZAssessorPerson_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZAssessorPerson_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZAssessorPerson_ID, Integer.valueOf(ZZAssessorPerson_ID));
+	}
+
+	/** Get Assessor Person.
+		@return Assessor Person	  */
+	public int getZZAssessorPerson_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZAssessorPerson_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Document Upload File.

@@ -18,8 +18,7 @@ package za.co.ntier.api.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-
-import org.compiere.model.MTable;
+import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for ZZ_Program_Master_Data
@@ -51,6 +50,21 @@ public interface I_ZZ_Program_Master_Data
 	  * Tenant for this installation.
 	  */
 	public int getAD_Client_ID();
+
+    /** Column name AD_Form_ID */
+    public static final String COLUMNNAME_AD_Form_ID = "AD_Form_ID";
+
+	/** Set Special Form.
+	  * Special Form
+	  */
+	public void setAD_Form_ID (int AD_Form_ID);
+
+	/** Get Special Form.
+	  * Special Form
+	  */
+	public int getAD_Form_ID();
+
+	public org.compiere.model.I_AD_Form getAD_Form() throws RuntimeException;
 
     /** Column name AD_Org_ID */
     public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
@@ -153,10 +167,10 @@ public interface I_ZZ_Program_Master_Data
     /** Column name Line_Manager_ID */
     public static final String COLUMNNAME_Line_Manager_ID = "Line_Manager_ID";
 
-	/** Set Snr Mgr	  */
+	/** Set Line Manager	  */
 	public void setLine_Manager_ID (int Line_Manager_ID);
 
-	/** Get Snr Mgr	  */
+	/** Get Line Manager	  */
 	public int getLine_Manager_ID();
 
 	public org.compiere.model.I_AD_User getLine_Manager() throws RuntimeException;

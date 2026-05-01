@@ -18,8 +18,7 @@ package za.co.ntier.api.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-
-import org.compiere.model.MTable;
+import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for ZZDocumentUploadFile
@@ -33,7 +32,7 @@ public interface I_ZZDocumentUploadFile
     /** TableName=ZZDocumentUploadFile */
     public static final String Table_Name = "ZZDocumentUploadFile";
 
-    /** AD_Table_ID=1000061 */
+    /** AD_Table_ID=1000059 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -122,6 +121,15 @@ public interface I_ZZDocumentUploadFile
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
+
+    /** Column name ZZAssessorPerson_ID */
+    public static final String COLUMNNAME_ZZAssessorPerson_ID = "ZZAssessorPerson_ID";
+
+	/** Set Assessor Person	  */
+	public void setZZAssessorPerson_ID (int ZZAssessorPerson_ID);
+
+	/** Get Assessor Person	  */
+	public int getZZAssessorPerson_ID();
 
     /** Column name ZZDocumentUploadFile_ID */
     public static final String COLUMNNAME_ZZDocumentUploadFile_ID = "ZZDocumentUploadFile_ID";
