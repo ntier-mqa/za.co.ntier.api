@@ -22,11 +22,11 @@ import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
-/** Generated Model for ZZAssessorPerson
+/** Generated Model for ZZAssessorPerson_v
  *  @author iDempiere (generated)
  *  @version Release 12 - $Id$ */
-@org.adempiere.base.Model(table="ZZAssessorPerson")
-public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Persistent
+@org.adempiere.base.Model(table="ZZAssessorPerson_v")
+public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_Persistent
 {
 
 	/**
@@ -35,47 +35,43 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	private static final long serialVersionUID = 20260506L;
 
     /** Standard Constructor */
-    public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
+    public X_ZZAssessorPerson_v (Properties ctx, int ZZAssessorPerson_v_ID, String trxName)
     {
-      super (ctx, ZZAssessorPerson_ID, trxName);
-      /** if (ZZAssessorPerson_ID == 0)
+      super (ctx, ZZAssessorPerson_v_ID, trxName);
+      /** if (ZZAssessorPerson_v_ID == 0)
         {
-			setZZAssessorPerson_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName, String ... virtualColumns)
+    public X_ZZAssessorPerson_v (Properties ctx, int ZZAssessorPerson_v_ID, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZAssessorPerson_ID, trxName, virtualColumns);
-      /** if (ZZAssessorPerson_ID == 0)
+      super (ctx, ZZAssessorPerson_v_ID, trxName, virtualColumns);
+      /** if (ZZAssessorPerson_v_ID == 0)
         {
-			setZZAssessorPerson_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZAssessorPerson (Properties ctx, String ZZAssessorPerson_UU, String trxName)
+    public X_ZZAssessorPerson_v (Properties ctx, String ZZAssessorPerson_v_UU, String trxName)
     {
-      super (ctx, ZZAssessorPerson_UU, trxName);
-      /** if (ZZAssessorPerson_UU == null)
+      super (ctx, ZZAssessorPerson_v_UU, trxName);
+      /** if (ZZAssessorPerson_v_UU == null)
         {
-			setZZAssessorPerson_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZAssessorPerson (Properties ctx, String ZZAssessorPerson_UU, String trxName, String ... virtualColumns)
+    public X_ZZAssessorPerson_v (Properties ctx, String ZZAssessorPerson_v_UU, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZAssessorPerson_UU, trxName, virtualColumns);
-      /** if (ZZAssessorPerson_UU == null)
+      super (ctx, ZZAssessorPerson_v_UU, trxName, virtualColumns);
+      /** if (ZZAssessorPerson_v_UU == null)
         {
-			setZZAssessorPerson_ID (0);
         } */
     }
 
     /** Load Constructor */
-    public X_ZZAssessorPerson (Properties ctx, ResultSet rs, String trxName)
+    public X_ZZAssessorPerson_v (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -97,7 +93,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 
     public String toString()
     {
-      StringBuilder sb = new StringBuilder ("X_ZZAssessorPerson[")
+      StringBuilder sb = new StringBuilder ("X_ZZAssessorPerson_v[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -130,6 +126,70 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return ii.intValue();
 	}
 
+	/** Set Birthday.
+		@param Birthday Birthday or Anniversary day
+	*/
+	public void setBirthday (Timestamp Birthday)
+	{
+		set_Value (COLUMNNAME_Birthday, Birthday);
+	}
+
+	/** Get Birthday.
+		@return Birthday or Anniversary day
+	  */
+	public Timestamp getBirthday()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Birthday);
+	}
+
+	/** Set EMail Address.
+		@param EMail Electronic Mail Address
+	*/
+	public void setEMail (String EMail)
+	{
+		set_Value (COLUMNNAME_EMail, EMail);
+	}
+
+	/** Get EMail Address.
+		@return Electronic Mail Address
+	  */
+	public String getEMail()
+	{
+		return (String)get_Value(COLUMNNAME_EMail);
+	}
+
+	/** Set Phone.
+		@param Phone Identifies a telephone number
+	*/
+	public void setPhone (String Phone)
+	{
+		set_ValueNoCheck (COLUMNNAME_Phone, Phone);
+	}
+
+	/** Get Phone.
+		@return Identifies a telephone number
+	  */
+	public String getPhone()
+	{
+		return (String)get_Value(COLUMNNAME_Phone);
+	}
+
+	/** Set 2nd Phone.
+		@param Phone2 Identifies an alternate telephone number.
+	*/
+	public void setPhone2 (String Phone2)
+	{
+		set_Value (COLUMNNAME_Phone2, Phone2);
+	}
+
+	/** Get 2nd Phone.
+		@return Identifies an alternate telephone number.
+	  */
+	public String getPhone2()
+	{
+		return (String)get_Value(COLUMNNAME_Phone2);
+	}
+
 	/** Set Assessor Person.
 		@param ZZAssessorPerson_ID Assessor Person
 	*/
@@ -151,19 +211,40 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return ii.intValue();
 	}
 
-	/** Set ZZAssessorPerson_UU.
-		@param ZZAssessorPerson_UU ZZAssessorPerson_UU
+	/** Set Assessor Person View.
+		@param ZZAssessorPerson_v_ID Assessor Person View
 	*/
-	public void setZZAssessorPerson_UU (String ZZAssessorPerson_UU)
+	public void setZZAssessorPerson_v_ID (int ZZAssessorPerson_v_ID)
 	{
-		set_Value (COLUMNNAME_ZZAssessorPerson_UU, ZZAssessorPerson_UU);
+		if (ZZAssessorPerson_v_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZAssessorPerson_v_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZAssessorPerson_v_ID, Integer.valueOf(ZZAssessorPerson_v_ID));
 	}
 
-	/** Get ZZAssessorPerson_UU.
-		@return ZZAssessorPerson_UU	  */
-	public String getZZAssessorPerson_UU()
+	/** Get Assessor Person View.
+		@return Assessor Person View	  */
+	public int getZZAssessorPerson_v_ID()
 	{
-		return (String)get_Value(COLUMNNAME_ZZAssessorPerson_UU);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZAssessorPerson_v_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Assessor Person View UU.
+		@param ZZAssessorPerson_v_UU Assessor Person View UU
+	*/
+	public void setZZAssessorPerson_v_UU (String ZZAssessorPerson_v_UU)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZAssessorPerson_v_UU, ZZAssessorPerson_v_UU);
+	}
+
+	/** Get Assessor Person View UU.
+		@return Assessor Person View UU	  */
+	public String getZZAssessorPerson_v_UU()
+	{
+		return (String)get_Value(COLUMNNAME_ZZAssessorPerson_v_UU);
 	}
 
 	/** Assessor = Assessor */
@@ -445,21 +526,6 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZHealthWalking);
 	}
 
-	/** Set Initials.
-		@param ZZInitials Initials
-	*/
-	public void setZZInitials (String ZZInitials)
-	{
-		set_Value (COLUMNNAME_ZZInitials, ZZInitials);
-	}
-
-	/** Get Initials.
-		@return Initials	  */
-	public String getZZInitials()
-	{
-		return (String)get_Value(COLUMNNAME_ZZInitials);
-	}
-
 	/** Set Last School Year.
 		@param ZZLastSchoolYear Last School Year
 	*/
@@ -478,21 +544,15 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return ii.intValue();
 	}
 
-	public I_ZZLkpSchoolEmis getZZLkpSchoolEmis() throws RuntimeException
-	{
-		return (I_ZZLkpSchoolEmis)MTable.get(getCtx(), I_ZZLkpSchoolEmis.Table_ID)
-			.getPO(getZZLkpSchoolEmis_ID(), get_TrxName());
-	}
-
 	/** Set School EMIS.
 		@param ZZLkpSchoolEmis_ID School EMIS
 	*/
 	public void setZZLkpSchoolEmis_ID (int ZZLkpSchoolEmis_ID)
 	{
 		if (ZZLkpSchoolEmis_ID < 1)
-			set_Value (COLUMNNAME_ZZLkpSchoolEmis_ID, null);
+			set_ValueNoCheck (COLUMNNAME_ZZLkpSchoolEmis_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZLkpSchoolEmis_ID, Integer.valueOf(ZZLkpSchoolEmis_ID));
+			set_ValueNoCheck (COLUMNNAME_ZZLkpSchoolEmis_ID, Integer.valueOf(ZZLkpSchoolEmis_ID));
 	}
 
 	/** Get School EMIS.
@@ -505,21 +565,15 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return ii.intValue();
 	}
 
-	public I_ZZLkpStatssaAreaCode getZZLkpStatssaAreaCode() throws RuntimeException
-	{
-		return (I_ZZLkpStatssaAreaCode)MTable.get(getCtx(), I_ZZLkpStatssaAreaCode.Table_ID)
-			.getPO(getZZLkpStatssaAreaCode_ID(), get_TrxName());
-	}
-
 	/** Set STATSSA Area Code.
 		@param ZZLkpStatssaAreaCode_ID STATSSA Area Code
 	*/
 	public void setZZLkpStatssaAreaCode_ID (int ZZLkpStatssaAreaCode_ID)
 	{
 		if (ZZLkpStatssaAreaCode_ID < 1)
-			set_Value (COLUMNNAME_ZZLkpStatssaAreaCode_ID, null);
+			set_ValueNoCheck (COLUMNNAME_ZZLkpStatssaAreaCode_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZLkpStatssaAreaCode_ID, Integer.valueOf(ZZLkpStatssaAreaCode_ID));
+			set_ValueNoCheck (COLUMNNAME_ZZLkpStatssaAreaCode_ID, Integer.valueOf(ZZLkpStatssaAreaCode_ID));
 	}
 
 	/** Get STATSSA Area Code.
@@ -580,6 +634,22 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public String getZZMiddleName()
 	{
 		return (String)get_Value(COLUMNNAME_ZZMiddleName);
+	}
+
+	/** Set Other ID No.
+		@param ZZOtherIDNo RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
+	*/
+	public void setZZOtherIDNo (String ZZOtherIDNo)
+	{
+		set_Value (COLUMNNAME_ZZOtherIDNo, ZZOtherIDNo);
+	}
+
+	/** Get Other ID No.
+		@return RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
+	  */
+	public String getZZOtherIDNo()
+	{
+		return (String)get_Value(COLUMNNAME_ZZOtherIDNo);
 	}
 
 	public I_C_Location getZZPhysicalLocation() throws RuntimeException
@@ -686,6 +756,33 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZSurname);
 	}
 
+	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException
+	{
+		return (I_ZZ_AlternateIDType)MTable.get(getCtx(), I_ZZ_AlternateIDType.Table_ID)
+			.getPO(getZZ_AlternateIDType_ID(), get_TrxName());
+	}
+
+	/** Set ID Type.
+		@param ZZ_AlternateIDType_ID ID Type
+	*/
+	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID)
+	{
+		if (ZZ_AlternateIDType_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_AlternateIDType_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_AlternateIDType_ID, Integer.valueOf(ZZ_AlternateIDType_ID));
+	}
+
+	/** Get ID Type.
+		@return ID Type	  */
+	public int getZZ_AlternateIDType_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_AlternateIDType_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
@@ -790,6 +887,21 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
+	/** Set ID No.
+		@param ZZ_ID_Passport_No ID No
+	*/
+	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No)
+	{
+		set_Value (COLUMNNAME_ZZ_ID_Passport_No, ZZ_ID_Passport_No);
+	}
+
+	/** Get ID No.
+		@return ID No	  */
+	public String getZZ_ID_Passport_No()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_ID_Passport_No);
+	}
+
 	public I_ZZ_LI_CitizenResidentialStatus getZZ_LI_CitizenResidentialStatus() throws RuntimeException
 	{
 		return (I_ZZ_LI_CitizenResidentialStatus)MTable.get(getCtx(), I_ZZ_LI_CitizenResidentialStatus.Table_ID)
@@ -802,9 +914,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZ_LI_CitizenResidentialStatus_ID (int ZZ_LI_CitizenResidentialStatus_ID)
 	{
 		if (ZZ_LI_CitizenResidentialStatus_ID < 1)
-			set_Value (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, null);
+			set_ValueNoCheck (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, Integer.valueOf(ZZ_LI_CitizenResidentialStatus_ID));
+			set_ValueNoCheck (COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID, Integer.valueOf(ZZ_LI_CitizenResidentialStatus_ID));
 	}
 
 	/** Get Citizen Residential Status.
@@ -829,9 +941,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZ_LI_HomeLanguage_ID (int ZZ_LI_HomeLanguage_ID)
 	{
 		if (ZZ_LI_HomeLanguage_ID < 1)
-			set_Value (COLUMNNAME_ZZ_LI_HomeLanguage_ID, null);
+			set_ValueNoCheck (COLUMNNAME_ZZ_LI_HomeLanguage_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZ_LI_HomeLanguage_ID, Integer.valueOf(ZZ_LI_HomeLanguage_ID));
+			set_ValueNoCheck (COLUMNNAME_ZZ_LI_HomeLanguage_ID, Integer.valueOf(ZZ_LI_HomeLanguage_ID));
 	}
 
 	/** Get Home Language.
@@ -856,9 +968,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZ_LI_SocioEconomicStatus_ID (int ZZ_LI_SocioEconomicStatus_ID)
 	{
 		if (ZZ_LI_SocioEconomicStatus_ID < 1)
-			set_Value (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, null);
+			set_ValueNoCheck (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, Integer.valueOf(ZZ_LI_SocioEconomicStatus_ID));
+			set_ValueNoCheck (COLUMNNAME_ZZ_LI_SocioEconomicStatus_ID, Integer.valueOf(ZZ_LI_SocioEconomicStatus_ID));
 	}
 
 	/** Get Socio Economic Status.
@@ -883,9 +995,9 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public void setZZ_Nationality_ID (int ZZ_Nationality_ID)
 	{
 		if (ZZ_Nationality_ID < 1)
-			set_Value (COLUMNNAME_ZZ_Nationality_ID, null);
+			set_ValueNoCheck (COLUMNNAME_ZZ_Nationality_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZ_Nationality_ID, Integer.valueOf(ZZ_Nationality_ID));
+			set_ValueNoCheck (COLUMNNAME_ZZ_Nationality_ID, Integer.valueOf(ZZ_Nationality_ID));
 	}
 
 	/** Get Nationality.

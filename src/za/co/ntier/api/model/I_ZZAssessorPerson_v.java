@@ -21,18 +21,18 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for ZZAssessorPerson
+/** Generated Interface for ZZAssessorPerson_v
  *  @author iDempiere (generated) 
  *  @version Release 12
  */
 @SuppressWarnings("all")
-public interface I_ZZAssessorPerson 
+public interface I_ZZAssessorPerson_v 
 {
 
-    /** TableName=ZZAssessorPerson */
-    public static final String Table_Name = "ZZAssessorPerson";
+    /** TableName=ZZAssessorPerson_v */
+    public static final String Table_Name = "ZZAssessorPerson_v";
 
-    /** AD_Table_ID=1000224 */
+    /** AD_Table_ID=1000238 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -79,6 +79,19 @@ public interface I_ZZAssessorPerson
 
 	public org.compiere.model.I_AD_User getAD_User() throws RuntimeException;
 
+    /** Column name Birthday */
+    public static final String COLUMNNAME_Birthday = "Birthday";
+
+	/** Set Birthday.
+	  * Birthday or Anniversary day
+	  */
+	public void setBirthday (Timestamp Birthday);
+
+	/** Get Birthday.
+	  * Birthday or Anniversary day
+	  */
+	public Timestamp getBirthday();
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -95,6 +108,19 @@ public interface I_ZZAssessorPerson
 	  */
 	public int getCreatedBy();
 
+    /** Column name EMail */
+    public static final String COLUMNNAME_EMail = "EMail";
+
+	/** Set EMail Address.
+	  * Electronic Mail Address
+	  */
+	public void setEMail (String EMail);
+
+	/** Get EMail Address.
+	  * Electronic Mail Address
+	  */
+	public String getEMail();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -107,6 +133,32 @@ public interface I_ZZAssessorPerson
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name Phone */
+    public static final String COLUMNNAME_Phone = "Phone";
+
+	/** Set Phone.
+	  * Identifies a telephone number
+	  */
+	public void setPhone (String Phone);
+
+	/** Get Phone.
+	  * Identifies a telephone number
+	  */
+	public String getPhone();
+
+    /** Column name Phone2 */
+    public static final String COLUMNNAME_Phone2 = "Phone2";
+
+	/** Set 2nd Phone.
+	  * Identifies an alternate telephone number.
+	  */
+	public void setPhone2 (String Phone2);
+
+	/** Get 2nd Phone.
+	  * Identifies an alternate telephone number.
+	  */
+	public String getPhone2();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -133,14 +185,23 @@ public interface I_ZZAssessorPerson
 	/** Get Assessor Person	  */
 	public int getZZAssessorPerson_ID();
 
-    /** Column name ZZAssessorPerson_UU */
-    public static final String COLUMNNAME_ZZAssessorPerson_UU = "ZZAssessorPerson_UU";
+    /** Column name ZZAssessorPerson_v_ID */
+    public static final String COLUMNNAME_ZZAssessorPerson_v_ID = "ZZAssessorPerson_v_ID";
 
-	/** Set ZZAssessorPerson_UU	  */
-	public void setZZAssessorPerson_UU (String ZZAssessorPerson_UU);
+	/** Set Assessor Person View	  */
+	public void setZZAssessorPerson_v_ID (int ZZAssessorPerson_v_ID);
 
-	/** Get ZZAssessorPerson_UU	  */
-	public String getZZAssessorPerson_UU();
+	/** Get Assessor Person View	  */
+	public int getZZAssessorPerson_v_ID();
+
+    /** Column name ZZAssessorPerson_v_UU */
+    public static final String COLUMNNAME_ZZAssessorPerson_v_UU = "ZZAssessorPerson_v_UU";
+
+	/** Set Assessor Person View UU	  */
+	public void setZZAssessorPerson_v_UU (String ZZAssessorPerson_v_UU);
+
+	/** Get Assessor Person View UU	  */
+	public String getZZAssessorPerson_v_UU();
 
     /** Column name ZZAssessorRole */
     public static final String COLUMNNAME_ZZAssessorRole = "ZZAssessorRole";
@@ -256,15 +317,6 @@ public interface I_ZZAssessorPerson
 	  */
 	public String getZZHealthWalking();
 
-    /** Column name ZZInitials */
-    public static final String COLUMNNAME_ZZInitials = "ZZInitials";
-
-	/** Set Initials	  */
-	public void setZZInitials (String ZZInitials);
-
-	/** Get Initials	  */
-	public String getZZInitials();
-
     /** Column name ZZLastSchoolYear */
     public static final String COLUMNNAME_ZZLastSchoolYear = "ZZLastSchoolYear";
 
@@ -283,8 +335,6 @@ public interface I_ZZAssessorPerson
 	/** Get School EMIS	  */
 	public int getZZLkpSchoolEmis_ID();
 
-	public I_ZZLkpSchoolEmis getZZLkpSchoolEmis() throws RuntimeException;
-
     /** Column name ZZLkpStatssaAreaCode_ID */
     public static final String COLUMNNAME_ZZLkpStatssaAreaCode_ID = "ZZLkpStatssaAreaCode_ID";
 
@@ -293,8 +343,6 @@ public interface I_ZZAssessorPerson
 
 	/** Get STATSSA Area Code	  */
 	public int getZZLkpStatssaAreaCode_ID();
-
-	public I_ZZLkpStatssaAreaCode getZZLkpStatssaAreaCode() throws RuntimeException;
 
     /** Column name ZZLkpTitle */
     public static final String COLUMNNAME_ZZLkpTitle = "ZZLkpTitle";
@@ -317,6 +365,19 @@ public interface I_ZZAssessorPerson
 
 	/** Get Middle Name	  */
 	public String getZZMiddleName();
+
+    /** Column name ZZOtherIDNo */
+    public static final String COLUMNNAME_ZZOtherIDNo = "ZZOtherIDNo";
+
+	/** Set Other ID No.
+	  * RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
+	  */
+	public void setZZOtherIDNo (String ZZOtherIDNo);
+
+	/** Get Other ID No.
+	  * RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
+	  */
+	public String getZZOtherIDNo();
 
     /** Column name ZZPhysicalLocation_ID */
     public static final String COLUMNNAME_ZZPhysicalLocation_ID = "ZZPhysicalLocation_ID";
@@ -367,6 +428,17 @@ public interface I_ZZAssessorPerson
 	/** Get Surname	  */
 	public String getZZSurname();
 
+    /** Column name ZZ_AlternateIDType_ID */
+    public static final String COLUMNNAME_ZZ_AlternateIDType_ID = "ZZ_AlternateIDType_ID";
+
+	/** Set ID Type	  */
+	public void setZZ_AlternateIDType_ID (int ZZ_AlternateIDType_ID);
+
+	/** Get ID Type	  */
+	public int getZZ_AlternateIDType_ID();
+
+	public I_ZZ_AlternateIDType getZZ_AlternateIDType() throws RuntimeException;
+
     /** Column name ZZ_DocStatus */
     public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
 
@@ -375,6 +447,15 @@ public interface I_ZZAssessorPerson
 
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
+
+    /** Column name ZZ_ID_Passport_No */
+    public static final String COLUMNNAME_ZZ_ID_Passport_No = "ZZ_ID_Passport_No";
+
+	/** Set ID No	  */
+	public void setZZ_ID_Passport_No (String ZZ_ID_Passport_No);
+
+	/** Get ID No	  */
+	public String getZZ_ID_Passport_No();
 
     /** Column name ZZ_LI_CitizenResidentialStatus_ID */
     public static final String COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID = "ZZ_LI_CitizenResidentialStatus_ID";
