@@ -95,6 +95,32 @@ public interface I_ZZAssessorPerson
 	  */
 	public int getCreatedBy();
 
+    /** Column name DocumentNo */
+    public static final String COLUMNNAME_DocumentNo = "DocumentNo";
+
+	/** Set Document No.
+	  * Document sequence number of the document
+	  */
+	public void setDocumentNo (String DocumentNo);
+
+	/** Get Document No.
+	  * Document sequence number of the document
+	  */
+	public String getDocumentNo();
+
+    /** Column name EndDate */
+    public static final String COLUMNNAME_EndDate = "EndDate";
+
+	/** Set End Date.
+	  * Last effective date (inclusive)
+	  */
+	public void setEndDate (Timestamp EndDate);
+
+	/** Get End Date.
+	  * Last effective date (inclusive)
+	  */
+	public Timestamp getEndDate();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -107,6 +133,19 @@ public interface I_ZZAssessorPerson
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name StartDate */
+    public static final String COLUMNNAME_StartDate = "StartDate";
+
+	/** Set Start Date.
+	  * First effective day (inclusive)
+	  */
+	public void setStartDate (Timestamp StartDate);
+
+	/** Get Start Date.
+	  * First effective day (inclusive)
+	  */
+	public Timestamp getStartDate();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -367,6 +406,75 @@ public interface I_ZZAssessorPerson
 	/** Get Surname	  */
 	public String getZZSurname();
 
+    /** Column name ZZ_ApprovedBy_ID */
+    public static final String COLUMNNAME_ZZ_ApprovedBy_ID = "ZZ_ApprovedBy_ID";
+
+	/** Set Approved By	  */
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID);
+
+	/** Get Approved By	  */
+	public int getZZ_ApprovedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException;
+
+    /** Column name ZZ_ApprovedDate */
+    public static final String COLUMNNAME_ZZ_ApprovedDate = "ZZ_ApprovedDate";
+
+	/** Set Approved Date	  */
+	public void setZZ_ApprovedDate (Timestamp ZZ_ApprovedDate);
+
+	/** Get Approved Date	  */
+	public Timestamp getZZ_ApprovedDate();
+
+    /** Column name ZZ_Assessor */
+    public static final String COLUMNNAME_ZZ_Assessor = "ZZ_Assessor";
+
+	/** Set Assessor.
+	  * Assessor number
+	  */
+	public void setZZ_Assessor (String ZZ_Assessor);
+
+	/** Get Assessor.
+	  * Assessor number
+	  */
+	public String getZZ_Assessor();
+
+    /** Column name ZZ_Date_Not_Approved */
+    public static final String COLUMNNAME_ZZ_Date_Not_Approved = "ZZ_Date_Not_Approved";
+
+	/** Set Date Not Approved	  */
+	public void setZZ_Date_Not_Approved (Timestamp ZZ_Date_Not_Approved);
+
+	/** Get Date Not Approved	  */
+	public Timestamp getZZ_Date_Not_Approved();
+
+    /** Column name ZZ_Date_Not_Recommended */
+    public static final String COLUMNNAME_ZZ_Date_Not_Recommended = "ZZ_Date_Not_Recommended";
+
+	/** Set Date Not Recommended	  */
+	public void setZZ_Date_Not_Recommended (Timestamp ZZ_Date_Not_Recommended);
+
+	/** Get Date Not Recommended	  */
+	public Timestamp getZZ_Date_Not_Recommended();
+
+    /** Column name ZZ_Date_Recommended */
+    public static final String COLUMNNAME_ZZ_Date_Recommended = "ZZ_Date_Recommended";
+
+	/** Set Date Recommended	  */
+	public void setZZ_Date_Recommended (Timestamp ZZ_Date_Recommended);
+
+	/** Get Date Recommended	  */
+	public Timestamp getZZ_Date_Recommended();
+
+    /** Column name ZZ_DocAction */
+    public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
+
+	/** Set Document Action	  */
+	public void setZZ_DocAction (String ZZ_DocAction);
+
+	/** Get Document Action	  */
+	public String getZZ_DocAction();
+
     /** Column name ZZ_DocStatus */
     public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
 
@@ -419,4 +527,15 @@ public interface I_ZZAssessorPerson
 	public int getZZ_Nationality_ID();
 
 	public I_ZZ_Nationality getZZ_Nationality() throws RuntimeException;
+
+    /** Column name ZZ_Recommender_ID */
+    public static final String COLUMNNAME_ZZ_Recommender_ID = "ZZ_Recommender_ID";
+
+	/** Set Recommender	  */
+	public void setZZ_Recommender_ID (int ZZ_Recommender_ID);
+
+	/** Get Recommender	  */
+	public int getZZ_Recommender_ID();
+
+	public org.compiere.model.I_AD_User getZZ_Recommender() throws RuntimeException;
 }

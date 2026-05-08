@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260506L;
+	private static final long serialVersionUID = 20260508L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -128,6 +128,54 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Document No.
+		@param DocumentNo Document sequence number of the document
+	*/
+	public void setDocumentNo (String DocumentNo)
+	{
+		set_ValueNoCheck (COLUMNNAME_DocumentNo, DocumentNo);
+	}
+
+	/** Get Document No.
+		@return Document sequence number of the document
+	  */
+	public String getDocumentNo()
+	{
+		return (String)get_Value(COLUMNNAME_DocumentNo);
+	}
+
+	/** Set End Date.
+		@param EndDate Last effective date (inclusive)
+	*/
+	public void setEndDate (Timestamp EndDate)
+	{
+		set_Value (COLUMNNAME_EndDate, EndDate);
+	}
+
+	/** Get End Date.
+		@return Last effective date (inclusive)
+	  */
+	public Timestamp getEndDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_EndDate);
+	}
+
+	/** Set Start Date.
+		@param StartDate First effective day (inclusive)
+	*/
+	public void setStartDate (Timestamp StartDate)
+	{
+		set_Value (COLUMNNAME_StartDate, StartDate);
+	}
+
+	/** Get Start Date.
+		@return First effective day (inclusive)
+	  */
+	public Timestamp getStartDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_StartDate);
 	}
 
 	/** Set Assessor Person.
@@ -686,6 +734,167 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZSurname);
 	}
 
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_ApprovedBy_ID(), get_TrxName());
+	}
+
+	/** Set Approved By.
+		@param ZZ_ApprovedBy_ID Approved By
+	*/
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID)
+	{
+		if (ZZ_ApprovedBy_ID < 1)
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, Integer.valueOf(ZZ_ApprovedBy_ID));
+	}
+
+	/** Get Approved By.
+		@return Approved By	  */
+	public int getZZ_ApprovedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_ApprovedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Approved Date.
+		@param ZZ_ApprovedDate Approved Date
+	*/
+	public void setZZ_ApprovedDate (Timestamp ZZ_ApprovedDate)
+	{
+		set_Value (COLUMNNAME_ZZ_ApprovedDate, ZZ_ApprovedDate);
+	}
+
+	/** Get Approved Date.
+		@return Approved Date	  */
+	public Timestamp getZZ_ApprovedDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_ApprovedDate);
+	}
+
+	/** Set Assessor.
+		@param ZZ_Assessor Assessor number
+	*/
+	public void setZZ_Assessor (String ZZ_Assessor)
+	{
+		set_Value (COLUMNNAME_ZZ_Assessor, ZZ_Assessor);
+	}
+
+	/** Get Assessor.
+		@return Assessor number
+	  */
+	public String getZZ_Assessor()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Assessor);
+	}
+
+	/** Set Date Not Approved.
+		@param ZZ_Date_Not_Approved Date Not Approved
+	*/
+	public void setZZ_Date_Not_Approved (Timestamp ZZ_Date_Not_Approved)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Approved, ZZ_Date_Not_Approved);
+	}
+
+	/** Get Date Not Approved.
+		@return Date Not Approved	  */
+	public Timestamp getZZ_Date_Not_Approved()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Approved);
+	}
+
+	/** Set Date Not Recommended.
+		@param ZZ_Date_Not_Recommended Date Not Recommended
+	*/
+	public void setZZ_Date_Not_Recommended (Timestamp ZZ_Date_Not_Recommended)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recommended, ZZ_Date_Not_Recommended);
+	}
+
+	/** Get Date Not Recommended.
+		@return Date Not Recommended	  */
+	public Timestamp getZZ_Date_Not_Recommended()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recommended);
+	}
+
+	/** Set Date Recommended.
+		@param ZZ_Date_Recommended Date Recommended
+	*/
+	public void setZZ_Date_Recommended (Timestamp ZZ_Date_Recommended)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recommended, ZZ_Date_Recommended);
+	}
+
+	/** Get Date Recommended.
+		@return Date Recommended	  */
+	public Timestamp getZZ_Date_Recommended()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recommended);
+	}
+
+	/** Exec Approve = AE */
+	public static final String ZZ_DOCACTION_ExecApprove = "AE";
+	/** Approve/Do Not Approve = AP */
+	public static final String ZZ_DOCACTION_ApproveDoNotApprove = "AP";
+	/** Complete = CO */
+	public static final String ZZ_DOCACTION_Complete = "CO";
+	/** Evaluate = EV */
+	public static final String ZZ_DOCACTION_Evaluate = "EV";
+	/** Final Approval/Do not Approve = FA */
+	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
+	/** PrepareCEO = PC */
+	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
+	/** Recommend = RE */
+	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Re-Submit = RS */
+	public static final String ZZ_DOCACTION_Re_Submit = "RS";
+	/** Submit = S1 */
+	public static final String ZZ_DOCACTION_Submit = "S1";
+	/** System Only (No manual action) = S2 */
+	public static final String ZZ_DOCACTION_SystemOnlyNoManualAction = "S2";
+	/** Submit to Manager Finance Consumables = SC */
+	public static final String ZZ_DOCACTION_SubmitToManagerFinanceConsumables = "SC";
+	/** Submit to SDL Finance Mgr = SD */
+	public static final String ZZ_DOCACTION_SubmitToSDLFinanceMgr = "SD";
+	/** Submit to Snr Mgr LP = SL */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrLP = "SL";
+	/** Submit to Snr Mgr Ops = SO */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrOps = "SO";
+	/** Submit to Snr Mgr Projects = SP */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrProjects = "SP";
+	/** Submit to Snr Mgr QA = SQ */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrQA = "SQ";
+	/** Submit to Recommender = SR */
+	public static final String ZZ_DOCACTION_SubmitToRecommender = "SR";
+	/** Submit to Snr Mgr SRU = SS */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrSRU = "SS";
+	/** Submit to Line Manager = SU */
+	public static final String ZZ_DOCACTION_SubmitToLineManager = "SU";
+	/** Update = UP */
+	public static final String ZZ_DOCACTION_Update = "UP";
+	/** Verify = VE */
+	public static final String ZZ_DOCACTION_Verify = "VE";
+	/** Set Document Action.
+		@param ZZ_DocAction Document Action
+	*/
+	public void setZZ_DocAction (String ZZ_DocAction)
+	{
+
+		set_Value (COLUMNNAME_ZZ_DocAction, ZZ_DocAction);
+	}
+
+	/** Get Document Action.
+		@return Document Action	  */
+	public String getZZ_DocAction()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_DocAction);
+	}
+
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
@@ -728,10 +937,14 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public static final String ZZ_DOCSTATUS_NotApprovedByITManager = "NI";
 	/** Not Approved by LM = NL */
 	public static final String ZZ_DOCSTATUS_NotApprovedByLM = "NL";
+	/** Not Approved = NP */
+	public static final String ZZ_DOCSTATUS_NotApproved = "NP";
 	/** Not Recommended = NR */
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Not Approved by Snr Admin Finance = NS */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Not Verified = NV */
+	public static final String ZZ_DOCSTATUS_NotVerified = "NV";
 	/** Pending = PE */
 	public static final String ZZ_DOCSTATUS_Pending = "PE";
 	/** Query = QR */
@@ -893,6 +1106,33 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public int getZZ_Nationality_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Nationality_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_Recommender() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Recommender_ID(), get_TrxName());
+	}
+
+	/** Set Recommender.
+		@param ZZ_Recommender_ID Recommender
+	*/
+	public void setZZ_Recommender_ID (int ZZ_Recommender_ID)
+	{
+		if (ZZ_Recommender_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Recommender_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Recommender_ID, Integer.valueOf(ZZ_Recommender_ID));
+	}
+
+	/** Get Recommender.
+		@return Recommender	  */
+	public int getZZ_Recommender_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Recommender_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
