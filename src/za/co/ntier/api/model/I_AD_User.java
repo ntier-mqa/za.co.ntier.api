@@ -854,6 +854,37 @@ public interface I_AD_User
 	  */
 	public String getValue();
 
+    /** Column name ZZFirstName */
+    public static final String COLUMNNAME_ZZFirstName = "ZZFirstName";
+
+	/** Set First Name	  */
+	public void setZZFirstName (String ZZFirstName);
+
+	/** Get First Name	  */
+	public String getZZFirstName();
+
+    /** Column name ZZLkpTitle */
+    public static final String COLUMNNAME_ZZLkpTitle = "ZZLkpTitle";
+
+	/** Set Title.
+	  * Lkp Title
+	  */
+	public void setZZLkpTitle (String ZZLkpTitle);
+
+	/** Get Title.
+	  * Lkp Title
+	  */
+	public String getZZLkpTitle();
+
+    /** Column name ZZMiddleName */
+    public static final String COLUMNNAME_ZZMiddleName = "ZZMiddleName";
+
+	/** Set Middle Name	  */
+	public void setZZMiddleName (String ZZMiddleName);
+
+	/** Get Middle Name	  */
+	public String getZZMiddleName();
+
     /** Column name ZZOtherIDNo */
     public static final String COLUMNNAME_ZZOtherIDNo = "ZZOtherIDNo";
 

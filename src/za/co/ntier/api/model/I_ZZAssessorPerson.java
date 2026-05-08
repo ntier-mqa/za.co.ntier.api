@@ -199,15 +199,6 @@ public interface I_ZZAssessorPerson
 	/** Get Equity	  */
 	public String getZZEquity();
 
-    /** Column name ZZFirstName */
-    public static final String COLUMNNAME_ZZFirstName = "ZZFirstName";
-
-	/** Set First Name	  */
-	public void setZZFirstName (String ZZFirstName);
-
-	/** Get First Name	  */
-	public String getZZFirstName();
-
     /** Column name ZZGender */
     public static final String COLUMNNAME_ZZGender = "ZZGender";
 
@@ -334,28 +325,6 @@ public interface I_ZZAssessorPerson
 	public int getZZLkpStatssaAreaCode_ID();
 
 	public I_ZZLkpStatssaAreaCode getZZLkpStatssaAreaCode() throws RuntimeException;
-
-    /** Column name ZZLkpTitle */
-    public static final String COLUMNNAME_ZZLkpTitle = "ZZLkpTitle";
-
-	/** Set Title.
-	  * Lkp Title
-	  */
-	public void setZZLkpTitle (String ZZLkpTitle);
-
-	/** Get Title.
-	  * Lkp Title
-	  */
-	public String getZZLkpTitle();
-
-    /** Column name ZZMiddleName */
-    public static final String COLUMNNAME_ZZMiddleName = "ZZMiddleName";
-
-	/** Set Middle Name	  */
-	public void setZZMiddleName (String ZZMiddleName);
-
-	/** Get Middle Name	  */
-	public String getZZMiddleName();
 
     /** Column name ZZPhysicalLocation_ID */
     public static final String COLUMNNAME_ZZPhysicalLocation_ID = "ZZPhysicalLocation_ID";

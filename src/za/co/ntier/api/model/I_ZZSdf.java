@@ -160,15 +160,6 @@ public interface I_ZZSdf
 	/** Get Experience (Years)	  */
 	public int getZZExperience();
 
-    /** Column name ZZFirstName */
-    public static final String COLUMNNAME_ZZFirstName = "ZZFirstName";
-
-	/** Set First Name	  */
-	public void setZZFirstName (String ZZFirstName);
-
-	/** Get First Name	  */
-	public String getZZFirstName();
-
     /** Column name ZZGender */
     public static final String COLUMNNAME_ZZGender = "ZZGender";
 
@@ -205,19 +196,6 @@ public interface I_ZZSdf
 	/** Get Initials	  */
 	public String getZZInitials();
 
-    /** Column name ZZLkpTitle */
-    public static final String COLUMNNAME_ZZLkpTitle = "ZZLkpTitle";
-
-	/** Set Title.
-	  * Lkp Title
-	  */
-	public void setZZLkpTitle (String ZZLkpTitle);
-
-	/** Get Title.
-	  * Lkp Title
-	  */
-	public String getZZLkpTitle();
-
     /** Column name ZZMaintainStatus */
     public static final String COLUMNNAME_ZZMaintainStatus = "ZZMaintainStatus";
 
@@ -226,15 +204,6 @@ public interface I_ZZSdf
 
 	/** Get Maintain Status	  */
 	public String getZZMaintainStatus();
-
-    /** Column name ZZMiddleName */
-    public static final String COLUMNNAME_ZZMiddleName = "ZZMiddleName";
-
-	/** Set Middle Name	  */
-	public void setZZMiddleName (String ZZMiddleName);
-
-	/** Get Middle Name	  */
-	public String getZZMiddleName();
 
     /** Column name ZZSdf_ID */
     public static final String COLUMNNAME_ZZSdf_ID = "ZZSdf_ID";
@@ -253,15 +222,6 @@ public interface I_ZZSdf
 
 	/** Get ZZSdf_UU	  */
 	public String getZZSdf_UU();
-
-    /** Column name ZZSurname */
-    public static final String COLUMNNAME_ZZSurname = "ZZSurname";
-
-	/** Set Surname	  */
-	public void setZZSurname (String ZZSurname);
-
-	/** Get Surname	  */
-	public String getZZSurname();
 
     /** Column name ZZYearsInOccupation */
     public static final String COLUMNNAME_ZZYearsInOccupation = "ZZYearsInOccupation";

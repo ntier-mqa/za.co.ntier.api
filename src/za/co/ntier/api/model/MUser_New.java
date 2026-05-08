@@ -210,5 +210,70 @@ public class MUser_New extends MUser implements I_AD_User {
 	{
 		return (String)get_Value(COLUMNNAME_ZZSurname);
 	}
+	
 
+	/** Set First Name.
+		@param ZZFirstName First Name
+	*/
+	public void setZZFirstName (String ZZFirstName)
+	{
+		set_Value (COLUMNNAME_ZZFirstName, ZZFirstName);
+	}
+
+	/** Get First Name.
+		@return First Name	  */
+	public String getZZFirstName()
+	{
+		return (String)get_Value(COLUMNNAME_ZZFirstName);
+	}
+
+	/** Set Middle Name.
+		@param ZZMiddleName Middle Name
+	*/
+	public void setZZMiddleName (String ZZMiddleName)
+	{
+		set_Value (COLUMNNAME_ZZMiddleName, ZZMiddleName);
+	}
+
+	/** Get Middle Name.
+		@return Middle Name	  */
+	public String getZZMiddleName()
+	{
+		return (String)get_Value(COLUMNNAME_ZZMiddleName);
+	}
+
+	/** Adv = Adv */
+	public static final String ZZLKPTITLE_Adv = "Adv";
+	/** Dr = Dr */
+	public static final String ZZLKPTITLE_Dr = "Dr";
+	/** Me = Me */
+	public static final String ZZLKPTITLE_Me = "Me";
+	/** Miss = Miss */
+	public static final String ZZLKPTITLE_Miss = "Miss";
+	/** Mr = Mr */
+	public static final String ZZLKPTITLE_Mr = "Mr";
+	/** Mrs = Mrs */
+	public static final String ZZLKPTITLE_Mrs = "Mrs";
+	/** Ms = Ms */
+	public static final String ZZLKPTITLE_Ms = "Ms";
+	/** Other = Other */
+	public static final String ZZLKPTITLE_Other = "Other";
+	/** Prof = Prof */
+	public static final String ZZLKPTITLE_Prof = "Prof";
+	/** Set Title.
+		@param ZZLkpTitle Lkp Title
+	*/
+	public void setZZLkpTitle (String ZZLkpTitle)
+	{
+
+		set_Value (COLUMNNAME_ZZLkpTitle, ZZLkpTitle);
+	}
+
+	/** Get Title.
+		@return Lkp Title
+	  */
+	public String getZZLkpTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZLkpTitle);
+	}
 }
