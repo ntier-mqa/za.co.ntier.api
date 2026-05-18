@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260508L;
+	private static final long serialVersionUID = 20260518L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -654,21 +654,6 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return ii.intValue();
 	}
 
-	/** Set Surname.
-		@param ZZSurname Surname
-	*/
-	public void setZZSurname (String ZZSurname)
-	{
-		set_Value (COLUMNNAME_ZZSurname, ZZSurname);
-	}
-
-	/** Get Surname.
-		@return Surname	  */
-	public String getZZSurname()
-	{
-		return (String)get_Value(COLUMNNAME_ZZSurname);
-	}
-
 	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException
 	{
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
@@ -712,7 +697,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	}
 
 	/** Set Assessor.
-		@param ZZ_Assessor Assessor number
+		@param ZZ_Assessor Assessor number (Auto Generated)
 	*/
 	public void setZZ_Assessor (String ZZ_Assessor)
 	{
@@ -720,7 +705,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	}
 
 	/** Get Assessor.
-		@return Assessor number
+		@return Assessor number (Auto Generated)
 	  */
 	public String getZZ_Assessor()
 	{

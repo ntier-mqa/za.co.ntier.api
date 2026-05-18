@@ -31,7 +31,7 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260508L;
+	private static final long serialVersionUID = 20260518L;
 
     /** Standard Constructor */
     public X_ZZSdf (Properties ctx, int ZZSdf_ID, String trxName)
@@ -444,10 +444,14 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 	public static final String ZZ_DOCSTATUS_NotApprovedByITManager = "NI";
 	/** Not Approved by LM = NL */
 	public static final String ZZ_DOCSTATUS_NotApprovedByLM = "NL";
+	/** Not Approved = NP */
+	public static final String ZZ_DOCSTATUS_NotApproved = "NP";
 	/** Not Recommended = NR */
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Not Approved by Snr Admin Finance = NS */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Not Verified = NV */
+	public static final String ZZ_DOCSTATUS_NotVerified = "NV";
 	/** Pending = PE */
 	public static final String ZZ_DOCSTATUS_Pending = "PE";
 	/** Query = QR */
@@ -680,20 +684,5 @@ public class X_ZZSdf extends PO implements I_ZZSdf, I_Persistent
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
-	}
-
-	/** Set Passport No.
-		@param ZZ_Passport_No Passport No
-	*/
-	public void setZZ_Passport_No (String ZZ_Passport_No)
-	{
-		set_Value (COLUMNNAME_ZZ_Passport_No, ZZ_Passport_No);
-	}
-
-	/** Get Passport No.
-		@return Passport No	  */
-	public String getZZ_Passport_No()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_Passport_No);
 	}
 }

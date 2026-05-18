@@ -366,15 +366,6 @@ public interface I_ZZAssessorPerson
 
 	public I_C_Location getZZPostalLocation() throws RuntimeException;
 
-    /** Column name ZZSurname */
-    public static final String COLUMNNAME_ZZSurname = "ZZSurname";
-
-	/** Set Surname	  */
-	public void setZZSurname (String ZZSurname);
-
-	/** Get Surname	  */
-	public String getZZSurname();
-
     /** Column name ZZ_ApprovedBy_ID */
     public static final String COLUMNNAME_ZZ_ApprovedBy_ID = "ZZ_ApprovedBy_ID";
 
@@ -399,12 +390,12 @@ public interface I_ZZAssessorPerson
     public static final String COLUMNNAME_ZZ_Assessor = "ZZ_Assessor";
 
 	/** Set Assessor.
-	  * Assessor number
+	  * Assessor number (Auto Generated)
 	  */
 	public void setZZ_Assessor (String ZZ_Assessor);
 
 	/** Get Assessor.
-	  * Assessor number
+	  * Assessor number (Auto Generated)
 	  */
 	public String getZZ_Assessor();
 

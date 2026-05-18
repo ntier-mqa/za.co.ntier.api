@@ -324,13 +324,4 @@ public interface I_ZZSdf
 	public int getZZ_Nationality_ID();
 
 	public I_ZZ_Nationality getZZ_Nationality() throws RuntimeException;
-
-    /** Column name ZZ_Passport_No */
-    public static final String COLUMNNAME_ZZ_Passport_No = "ZZ_Passport_No";
-
-	/** Set Passport No	  */
-	public void setZZ_Passport_No (String ZZ_Passport_No);
-
-	/** Get Passport No	  */
-	public String getZZ_Passport_No();
 }
