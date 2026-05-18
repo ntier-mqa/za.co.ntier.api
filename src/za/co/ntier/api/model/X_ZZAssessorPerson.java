@@ -1004,6 +1004,22 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return ii.intValue();
 	}
 
+	/** Set Moderator.
+		@param ZZ_Moderator Moderator number (Auto Generated)
+	*/
+	public void setZZ_Moderator (String ZZ_Moderator)
+	{
+		set_Value (COLUMNNAME_ZZ_Moderator, ZZ_Moderator);
+	}
+
+	/** Get Moderator.
+		@return Moderator number (Auto Generated)
+	  */
+	public String getZZ_Moderator()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Moderator);
+	}
+
 	public I_ZZ_Nationality getZZ_Nationality() throws RuntimeException
 	{
 		return (I_ZZ_Nationality)MTable.get(getCtx(), I_ZZ_Nationality.Table_ID)

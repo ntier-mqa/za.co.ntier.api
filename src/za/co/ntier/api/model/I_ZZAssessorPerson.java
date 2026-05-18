@@ -477,6 +477,19 @@ public interface I_ZZAssessorPerson
 
 	public I_ZZ_LI_SocioEconomicStatus getZZ_LI_SocioEconomicStatus() throws RuntimeException;
 
+    /** Column name ZZ_Moderator */
+    public static final String COLUMNNAME_ZZ_Moderator = "ZZ_Moderator";
+
+	/** Set Moderator.
+	  * Moderator number (Auto Generated)
+	  */
+	public void setZZ_Moderator (String ZZ_Moderator);
+
+	/** Get Moderator.
+	  * Moderator number (Auto Generated)
+	  */
+	public String getZZ_Moderator();
+
     /** Column name ZZ_Nationality_ID */
     public static final String COLUMNNAME_ZZ_Nationality_ID = "ZZ_Nationality_ID";
 
