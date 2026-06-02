@@ -32,7 +32,7 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260323L;
+	private static final long serialVersionUID = 20260601L;
 
     /** Standard Constructor */
     public X_ZZSdfOrganisation (Properties ctx, int ZZSdfOrganisation_ID, String trxName)
@@ -488,6 +488,8 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** PrepareCEO = PC */
 	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
+	/** Refer Back = RB */
+	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
 	/** Re-Submit = RS */
@@ -576,10 +578,14 @@ public class X_ZZSdfOrganisation extends PO implements I_ZZSdfOrganisation, I_Pe
 	public static final String ZZ_DOCSTATUS_NotApprovedByITManager = "NI";
 	/** Not Approved by LM = NL */
 	public static final String ZZ_DOCSTATUS_NotApprovedByLM = "NL";
+	/** Not Approved = NP */
+	public static final String ZZ_DOCSTATUS_NotApproved = "NP";
 	/** Not Recommended = NR */
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Not Approved by Snr Admin Finance = NS */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Not Verified = NV */
+	public static final String ZZ_DOCSTATUS_NotVerified = "NV";
 	/** Pending = PE */
 	public static final String ZZ_DOCSTATUS_Pending = "PE";
 	/** Query = QR */
