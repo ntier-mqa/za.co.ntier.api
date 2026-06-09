@@ -32,7 +32,7 @@ public class X_C_BP_AC extends PO implements I_C_BP_AC, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260506L;
+	private static final long serialVersionUID = 20260609L;
 
     /** Standard Constructor */
     public X_C_BP_AC (Properties ctx, int C_BP_AC_ID, String trxName)
@@ -234,30 +234,30 @@ public class X_C_BP_AC extends PO implements I_C_BP_AC, I_Persistent
 		return ii.intValue();
 	}
 
-	/** Below Level 01 = 0 */
-	public static final String ZZNQFLEVEL_BelowLevel01 = "0";
-	/** Level 01 = 1 */
-	public static final String ZZNQFLEVEL_Level01 = "1";
-	/** Level 10 = 10 */
-	public static final String ZZNQFLEVEL_Level10 = "10";
-	/** Level 11 = 11 */
-	public static final String ZZNQFLEVEL_Level11 = "11";
-	/** Level 02 = 2 */
-	public static final String ZZNQFLEVEL_Level02 = "2";
-	/** Level 03 = 3 */
-	public static final String ZZNQFLEVEL_Level03 = "3";
-	/** Level 04 = 4 */
-	public static final String ZZNQFLEVEL_Level04 = "4";
-	/** Level 05 = 5 */
-	public static final String ZZNQFLEVEL_Level05 = "5";
-	/** Level 06 = 6 */
-	public static final String ZZNQFLEVEL_Level06 = "6";
-	/** Level 07 = 7 */
-	public static final String ZZNQFLEVEL_Level07 = "7";
-	/** Level 08 = 8 */
-	public static final String ZZNQFLEVEL_Level08 = "8";
-	/** Level 09 = 9 */
-	public static final String ZZNQFLEVEL_Level09 = "9";
+	/** Below Level 01 = Below Level 01 */
+	public static final String ZZNQFLEVEL_BelowLevel01 = "Below Level 01";
+	/** Level 01 = Level 01 */
+	public static final String ZZNQFLEVEL_Level01 = "Level 01";
+	/** Level 02 = Level 02 */
+	public static final String ZZNQFLEVEL_Level02 = "Level 02";
+	/** Level 03 = Level 03 */
+	public static final String ZZNQFLEVEL_Level03 = "Level 03";
+	/** Level 04 = Level 04 */
+	public static final String ZZNQFLEVEL_Level04 = "Level 04";
+	/** Level 05 = Level 05 */
+	public static final String ZZNQFLEVEL_Level05 = "Level 05";
+	/** Level 06 = Level 06 */
+	public static final String ZZNQFLEVEL_Level06 = "Level 06";
+	/** Level 07 = Level 07 */
+	public static final String ZZNQFLEVEL_Level07 = "Level 07";
+	/** Level 08 = Level 08 */
+	public static final String ZZNQFLEVEL_Level08 = "Level 08";
+	/** Level 09 = Level 09 */
+	public static final String ZZNQFLEVEL_Level09 = "Level 09";
+	/** Level 10 = Level 10 */
+	public static final String ZZNQFLEVEL_Level10 = "Level 10";
+	/** Level 11 = Level 11 */
+	public static final String ZZNQFLEVEL_Level11 = "Level 11";
 	/** Set NQF Level.
 		@param ZZNqfLevel NQF Level
 	*/
@@ -272,6 +272,21 @@ public class X_C_BP_AC extends PO implements I_C_BP_AC, I_Persistent
 	public String getZZNqfLevel()
 	{
 		return (String)get_Value(COLUMNNAME_ZZNqfLevel);
+	}
+
+	/** Set Accreditation Number.
+		@param ZZ_AccreditationNumber Accreditation Number
+	*/
+	public void setZZ_AccreditationNumber (String ZZ_AccreditationNumber)
+	{
+		set_Value (COLUMNNAME_ZZ_AccreditationNumber, ZZ_AccreditationNumber);
+	}
+
+	/** Get Accreditation Number.
+		@return Accreditation Number	  */
+	public String getZZ_AccreditationNumber()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_AccreditationNumber);
 	}
 
 	public I_ZZ_Occupational_Certificates getZZ_Occupational_Certificates() throws RuntimeException

@@ -32,7 +32,7 @@ public interface I_C_BP_Trades
     /** TableName=C_BP_Trades */
     public static final String Table_Name = "C_BP_Trades";
 
-    /** AD_Table_ID=1000254 */
+    /** AD_Table_ID=1000247 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -198,6 +198,24 @@ public interface I_C_BP_Trades
 
 	/** Get NQF Level	  */
 	public String getZZNqfLevel();
+
+    /** Column name ZZQctoQualification_ID */
+    public static final String COLUMNNAME_ZZQctoQualification_ID = "ZZQctoQualification_ID";
+
+	/** Set QCTO Qualification	  */
+	public void setZZQctoQualification_ID (int ZZQctoQualification_ID);
+
+	/** Get QCTO Qualification	  */
+	public int getZZQctoQualification_ID();
+
+    /** Column name ZZ_AccreditationNumber */
+    public static final String COLUMNNAME_ZZ_AccreditationNumber = "ZZ_AccreditationNumber";
+
+	/** Set Accreditation Number	  */
+	public void setZZ_AccreditationNumber (String ZZ_AccreditationNumber);
+
+	/** Get Accreditation Number	  */
+	public String getZZ_AccreditationNumber();
 
     /** Column name ZZ_Occupational_Certificates_ID */
     public static final String COLUMNNAME_ZZ_Occupational_Certificates_ID = "ZZ_Occupational_Certificates_ID";

@@ -32,7 +32,7 @@ public interface I_C_BP_SkillsProgramme
     /** TableName=C_BP_SkillsProgramme */
     public static final String Table_Name = "C_BP_SkillsProgramme";
 
-    /** AD_Table_ID=1000252 */
+    /** AD_Table_ID=1000245 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -199,6 +199,15 @@ public interface I_C_BP_SkillsProgramme
 	/** Get NQF Level	  */
 	public String getZZNqfLevel();
 
+    /** Column name ZZQctoSkillsProgramme_ID */
+    public static final String COLUMNNAME_ZZQctoSkillsProgramme_ID = "ZZQctoSkillsProgramme_ID";
+
+	/** Set QCTO Skills Programme	  */
+	public void setZZQctoSkillsProgramme_ID (int ZZQctoSkillsProgramme_ID);
+
+	/** Get QCTO Skills Programme	  */
+	public int getZZQctoSkillsProgramme_ID();
+
     /** Column name ZZSkillsProgramme_ID */
     public static final String COLUMNNAME_ZZSkillsProgramme_ID = "ZZSkillsProgramme_ID";
 
@@ -207,6 +216,15 @@ public interface I_C_BP_SkillsProgramme
 
 	/** Get Skills Programme	  */
 	public int getZZSkillsProgramme_ID();
+
+    /** Column name ZZ_AccreditationNumber */
+    public static final String COLUMNNAME_ZZ_AccreditationNumber = "ZZ_AccreditationNumber";
+
+	/** Set Accreditation Number	  */
+	public void setZZ_AccreditationNumber (String ZZ_AccreditationNumber);
+
+	/** Get Accreditation Number	  */
+	public String getZZ_AccreditationNumber();
 
     /** Column name ZZ_Status */
     public static final String COLUMNNAME_ZZ_Status = "ZZ_Status";
