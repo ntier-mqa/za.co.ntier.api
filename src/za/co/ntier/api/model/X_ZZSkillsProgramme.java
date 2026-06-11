@@ -21,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
+import org.compiere.util.KeyNamePair;
 
 /** Generated Model for ZZSkillsProgramme
  *  @author iDempiere (generated)
@@ -32,7 +33,7 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260407L;
+	private static final long serialVersionUID = 20260611L;
 
     /** Standard Constructor */
     public X_ZZSkillsProgramme (Properties ctx, int ZZSkillsProgramme_ID, String trxName)
@@ -164,16 +165,16 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 		return (String)get_Value(COLUMNNAME_Value);
 	}
 
-	/** ABET Level 0 = 1 */
-	public static final String ZZAETLEVEL_ABETLevel0 = "1";
-	/** ABET Level 1 = 2 */
-	public static final String ZZAETLEVEL_ABETLevel1 = "2";
-	/** ABET Level 2 = 3 */
-	public static final String ZZAETLEVEL_ABETLevel2 = "3";
-	/** ABET Level 3 = 4 */
-	public static final String ZZAETLEVEL_ABETLevel3 = "4";
-	/** ABET Level 4 = 5 */
-	public static final String ZZAETLEVEL_ABETLevel4 = "5";
+	/** ABET Level 0 = ABET Level 0 */
+	public static final String ZZAETLEVEL_ABETLevel0 = "ABET Level 0";
+	/** ABET Level 1 = ABET Level 1 */
+	public static final String ZZAETLEVEL_ABETLevel1 = "ABET Level 1";
+	/** ABET Level 2 = ABET Level 2 */
+	public static final String ZZAETLEVEL_ABETLevel2 = "ABET Level 2";
+	/** ABET Level 3 = ABET Level 3 */
+	public static final String ZZAETLEVEL_ABETLevel3 = "ABET Level 3";
+	/** ABET Level 4 = ABET Level 4 */
+	public static final String ZZAETLEVEL_ABETLevel4 = "ABET Level 4";
 	/** Set AET Level.
 		@param ZZAetLevel AET Level
 	*/
@@ -230,29 +231,61 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 		return (String)get_Value(COLUMNNAME_ZZIsOhs);
 	}
 
-	public I_ZZLkpOfoOccupation getZZLkpOfoOccupation() throws RuntimeException
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException
 	{
-		return (I_ZZLkpOfoOccupation)MTable.get(getCtx(), I_ZZLkpOfoOccupation.Table_ID)
-			.getPO(getZZLkpOfoOccupation_ID(), get_TrxName());
+		return (I_ZZLkpOfoOccupationTree)MTable.get(getCtx(), I_ZZLkpOfoOccupationTree.Table_ID)
+			.getPO(getZZLkpOfoOccupationTree_ID(), get_TrxName());
 	}
 
-	/** Set OFO Occupation.
-		@param ZZLkpOfoOccupation_ID OFO Occupation
+	/** Set Ofo Occupation.
+		@param ZZLkpOfoOccupationTree_ID Ofo Occupation
 	*/
-	public void setZZLkpOfoOccupation_ID (int ZZLkpOfoOccupation_ID)
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID)
 	{
-		if (ZZLkpOfoOccupation_ID < 1)
-			set_Value (COLUMNNAME_ZZLkpOfoOccupation_ID, null);
+		if (ZZLkpOfoOccupationTree_ID < 1)
+			set_Value (COLUMNNAME_ZZLkpOfoOccupationTree_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZLkpOfoOccupation_ID, Integer.valueOf(ZZLkpOfoOccupation_ID));
+			set_Value (COLUMNNAME_ZZLkpOfoOccupationTree_ID, Integer.valueOf(ZZLkpOfoOccupationTree_ID));
 	}
 
-	/** Get OFO Occupation.
-		@return OFO Occupation
-	  */
-	public int getZZLkpOfoOccupation_ID()
+	/** Get Ofo Occupation.
+		@return Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpOfoOccupation_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpOfoOccupationTree_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Migrate Values.
+		@param ZZMigrateValues Migrate Values
+	*/
+	public void setZZMigrateValues (String ZZMigrateValues)
+	{
+		set_Value (COLUMNNAME_ZZMigrateValues, ZZMigrateValues);
+	}
+
+	/** Get Migrate Values.
+		@return Migrate Values	  */
+	public String getZZMigrateValues()
+	{
+		return (String)get_Value(COLUMNNAME_ZZMigrateValues);
+	}
+
+	/** Set Migration Code.
+		@param ZZMigrationCode Migration Code
+	*/
+	public void setZZMigrationCode (int ZZMigrationCode)
+	{
+		set_Value (COLUMNNAME_ZZMigrationCode, Integer.valueOf(ZZMigrationCode));
+	}
+
+	/** Get Migration Code.
+		@return Migration Code	  */
+	public int getZZMigrationCode()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZMigrationCode);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -276,30 +309,30 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 		return ii.intValue();
 	}
 
-	/** Below Level 01 = 0 */
-	public static final String ZZNQFLEVEL_BelowLevel01 = "0";
-	/** Level 01 = 1 */
-	public static final String ZZNQFLEVEL_Level01 = "1";
-	/** Level 10 = 10 */
-	public static final String ZZNQFLEVEL_Level10 = "10";
-	/** Level 11 = 11 */
-	public static final String ZZNQFLEVEL_Level11 = "11";
-	/** Level 02 = 2 */
-	public static final String ZZNQFLEVEL_Level02 = "2";
-	/** Level 03 = 3 */
-	public static final String ZZNQFLEVEL_Level03 = "3";
-	/** Level 04 = 4 */
-	public static final String ZZNQFLEVEL_Level04 = "4";
-	/** Level 05 = 5 */
-	public static final String ZZNQFLEVEL_Level05 = "5";
-	/** Level 06 = 6 */
-	public static final String ZZNQFLEVEL_Level06 = "6";
-	/** Level 07 = 7 */
-	public static final String ZZNQFLEVEL_Level07 = "7";
-	/** Level 08 = 8 */
-	public static final String ZZNQFLEVEL_Level08 = "8";
-	/** Level 09 = 9 */
-	public static final String ZZNQFLEVEL_Level09 = "9";
+	/** Below Level 01 = Below Level 01 */
+	public static final String ZZNQFLEVEL_BelowLevel01 = "Below Level 01";
+	/** Level 01 = Level 01 */
+	public static final String ZZNQFLEVEL_Level01 = "Level 01";
+	/** Level 02 = Level 02 */
+	public static final String ZZNQFLEVEL_Level02 = "Level 02";
+	/** Level 03 = Level 03 */
+	public static final String ZZNQFLEVEL_Level03 = "Level 03";
+	/** Level 04 = Level 04 */
+	public static final String ZZNQFLEVEL_Level04 = "Level 04";
+	/** Level 05 = Level 05 */
+	public static final String ZZNQFLEVEL_Level05 = "Level 05";
+	/** Level 06 = Level 06 */
+	public static final String ZZNQFLEVEL_Level06 = "Level 06";
+	/** Level 07 = Level 07 */
+	public static final String ZZNQFLEVEL_Level07 = "Level 07";
+	/** Level 08 = Level 08 */
+	public static final String ZZNQFLEVEL_Level08 = "Level 08";
+	/** Level 09 = Level 09 */
+	public static final String ZZNQFLEVEL_Level09 = "Level 09";
+	/** Level 10 = Level 10 */
+	public static final String ZZNQFLEVEL_Level10 = "Level 10";
+	/** Level 11 = Level 11 */
+	public static final String ZZNQFLEVEL_Level11 = "Level 11";
 	/** Set NQF Level.
 		@param ZZNqfLevel NQF Level
 	*/
@@ -443,16 +476,70 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 		return (String)get_Value(COLUMNNAME_ZZQualityAssuranceBody);
 	}
 
-	/** Standalone = 1 */
-	public static final String ZZSKILLSPROGRAMMETYPE_Standalone = "1";
-	/** Leads to a Qualification = 2 */
-	public static final String ZZSKILLSPROGRAMMETYPE_LeadsToAQualification = "2";
-	/** Mine Community = 3 */
-	public static final String ZZSKILLSPROGRAMMETYPE_MineCommunity = "3";
-	/** Small Scale Projects = 4 */
-	public static final String ZZSKILLSPROGRAMMETYPE_SmallScaleProjects = "4";
-	/** Unemployed Youth Development = 5 */
-	public static final String ZZSKILLSPROGRAMMETYPE_UnemployedYouthDevelopment = "5";
+	/** Set SkillsProgramme Code.
+		@param ZZSkillsProgrammeCode SkillsProgramme Code
+	*/
+	public void setZZSkillsProgrammeCode (String ZZSkillsProgrammeCode)
+	{
+		set_Value (COLUMNNAME_ZZSkillsProgrammeCode, ZZSkillsProgrammeCode);
+	}
+
+	/** Get SkillsProgramme Code.
+		@return SkillsProgramme Code	  */
+	public String getZZSkillsProgrammeCode()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSkillsProgrammeCode);
+	}
+
+	/** Set Skills Programme Grant Type.
+		@param ZZSkillsProgrammeGrantType Skills Programme Grant Type
+	*/
+	public void setZZSkillsProgrammeGrantType (String ZZSkillsProgrammeGrantType)
+	{
+
+		set_Value (COLUMNNAME_ZZSkillsProgrammeGrantType, ZZSkillsProgrammeGrantType);
+	}
+
+	/** Get Skills Programme Grant Type.
+		@return Skills Programme Grant Type	  */
+	public String getZZSkillsProgrammeGrantType()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSkillsProgrammeGrantType);
+	}
+
+	/** Set Skills Programme Title.
+		@param ZZSkillsProgrammeTitle Skills Programme Title
+	*/
+	public void setZZSkillsProgrammeTitle (String ZZSkillsProgrammeTitle)
+	{
+		set_Value (COLUMNNAME_ZZSkillsProgrammeTitle, ZZSkillsProgrammeTitle);
+	}
+
+	/** Get Skills Programme Title.
+		@return Skills Programme Title	  */
+	public String getZZSkillsProgrammeTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSkillsProgrammeTitle);
+	}
+
+    /** Get Record ID/ColumnName
+        @return ID/ColumnName pair
+      */
+    public KeyNamePair getKeyNamePair()
+    {
+        return new KeyNamePair(get_ID(), getZZSkillsProgrammeTitle());
+    }
+
+	/** Leads to a Qualification = Leads to a Qualification */
+	public static final String ZZSKILLSPROGRAMMETYPE_LeadsToAQualification = "Leads to a Qualification";
+	/** Mine Community = Mine Community */
+	public static final String ZZSKILLSPROGRAMMETYPE_MineCommunity = "Mine Community";
+	/** Small Scale Projects = Small Scale Projects */
+	public static final String ZZSKILLSPROGRAMMETYPE_SmallScaleProjects = "Small Scale Projects";
+	/** Standalone = Standalone */
+	public static final String ZZSKILLSPROGRAMMETYPE_Standalone = "Standalone";
+	/** Unemployed Youth Development = Unemployed Youth Development */
+	public static final String ZZSKILLSPROGRAMMETYPE_UnemployedYouthDevelopment = "Unemployed Youth Development";
 	/** Set Skills Programme Type.
 		@param ZZSkillsProgrammeType Skills Programme Type
 	*/

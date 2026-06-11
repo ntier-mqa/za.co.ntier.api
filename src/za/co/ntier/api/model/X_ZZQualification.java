@@ -21,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
+import org.compiere.util.KeyNamePair;
 
 /** Generated Model for ZZQualification
  *  @author iDempiere (generated)
@@ -32,7 +33,7 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260407L;
+	private static final long serialVersionUID = 20260611L;
 
     /** Standard Constructor */
     public X_ZZQualification (Properties ctx, int ZZQualification_ID, String trxName)
@@ -40,7 +41,6 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
       super (ctx, ZZQualification_ID, trxName);
       /** if (ZZQualification_ID == 0)
         {
-			setName (null);
 			setZZQualification_ID (0);
         } */
     }
@@ -51,7 +51,6 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
       super (ctx, ZZQualification_ID, trxName, virtualColumns);
       /** if (ZZQualification_ID == 0)
         {
-			setName (null);
 			setZZQualification_ID (0);
         } */
     }
@@ -62,7 +61,6 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
       super (ctx, ZZQualification_UU, trxName);
       /** if (ZZQualification_UU == null)
         {
-			setName (null);
 			setZZQualification_ID (0);
         } */
     }
@@ -73,7 +71,6 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
       super (ctx, ZZQualification_UU, trxName, virtualColumns);
       /** if (ZZQualification_UU == null)
         {
-			setName (null);
 			setZZQualification_ID (0);
         } */
     }
@@ -202,6 +199,50 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 		return ii.intValue();
 	}
 
+	/** ZZIsReplacement AD_Reference_ID=319 */
+	public static final int ZZISREPLACEMENT_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZISREPLACEMENT_No = "N";
+	/** Yes = Y */
+	public static final String ZZISREPLACEMENT_Yes = "Y";
+	/** Set Is Replacement.
+		@param ZZIsReplacement Is Replacement
+	*/
+	public void setZZIsReplacement (String ZZIsReplacement)
+	{
+
+		set_Value (COLUMNNAME_ZZIsReplacement, ZZIsReplacement);
+	}
+
+	/** Get Is Replacement.
+		@return Is Replacement	  */
+	public String getZZIsReplacement()
+	{
+		return (String)get_Value(COLUMNNAME_ZZIsReplacement);
+	}
+
+	/** ZZIsReregistered AD_Reference_ID=319 */
+	public static final int ZZISREREGISTERED_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZISREREGISTERED_No = "N";
+	/** Yes = Y */
+	public static final String ZZISREREGISTERED_Yes = "Y";
+	/** Set Is Reregistered.
+		@param ZZIsReregistered Is Reregistered
+	*/
+	public void setZZIsReregistered (String ZZIsReregistered)
+	{
+
+		set_Value (COLUMNNAME_ZZIsReregistered, ZZIsReregistered);
+	}
+
+	/** Get Is Reregistered.
+		@return Is Reregistered	  */
+	public String getZZIsReregistered()
+	{
+		return (String)get_Value(COLUMNNAME_ZZIsReregistered);
+	}
+
 	/** Set Last Achievement Date.
 		@param ZZLastAchievementDate Last Achievement Date
 	*/
@@ -232,29 +273,61 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 		return (Timestamp)get_Value(COLUMNNAME_ZZLastEnrolmentDate);
 	}
 
-	public I_ZZLkpOfoOccupation getZZLkpOfoOccupation() throws RuntimeException
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException
 	{
-		return (I_ZZLkpOfoOccupation)MTable.get(getCtx(), I_ZZLkpOfoOccupation.Table_ID)
-			.getPO(getZZLkpOfoOccupation_ID(), get_TrxName());
+		return (I_ZZLkpOfoOccupationTree)MTable.get(getCtx(), I_ZZLkpOfoOccupationTree.Table_ID)
+			.getPO(getZZLkpOfoOccupationTree_ID(), get_TrxName());
 	}
 
-	/** Set OFO Occupation.
-		@param ZZLkpOfoOccupation_ID OFO Occupation
+	/** Set Ofo Occupation.
+		@param ZZLkpOfoOccupationTree_ID Ofo Occupation
 	*/
-	public void setZZLkpOfoOccupation_ID (int ZZLkpOfoOccupation_ID)
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID)
 	{
-		if (ZZLkpOfoOccupation_ID < 1)
-			set_Value (COLUMNNAME_ZZLkpOfoOccupation_ID, null);
+		if (ZZLkpOfoOccupationTree_ID < 1)
+			set_Value (COLUMNNAME_ZZLkpOfoOccupationTree_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZLkpOfoOccupation_ID, Integer.valueOf(ZZLkpOfoOccupation_ID));
+			set_Value (COLUMNNAME_ZZLkpOfoOccupationTree_ID, Integer.valueOf(ZZLkpOfoOccupationTree_ID));
 	}
 
-	/** Get OFO Occupation.
-		@return OFO Occupation
-	  */
-	public int getZZLkpOfoOccupation_ID()
+	/** Get Ofo Occupation.
+		@return Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpOfoOccupation_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpOfoOccupationTree_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Migrate Values.
+		@param ZZMigrateValues Migrate Values
+	*/
+	public void setZZMigrateValues (String ZZMigrateValues)
+	{
+		set_Value (COLUMNNAME_ZZMigrateValues, ZZMigrateValues);
+	}
+
+	/** Get Migrate Values.
+		@return Migrate Values	  */
+	public String getZZMigrateValues()
+	{
+		return (String)get_Value(COLUMNNAME_ZZMigrateValues);
+	}
+
+	/** Set Migration Code.
+		@param ZZMigrationCode Migration Code
+	*/
+	public void setZZMigrationCode (int ZZMigrationCode)
+	{
+		set_Value (COLUMNNAME_ZZMigrationCode, Integer.valueOf(ZZMigrationCode));
+	}
+
+	/** Get Migration Code.
+		@return Migration Code	  */
+	public int getZZMigrationCode()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZMigrationCode);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -338,30 +411,30 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 		return (Timestamp)get_Value(COLUMNNAME_ZZNewRegistrationStartDate);
 	}
 
-	/** Below Level 01 = 0 */
-	public static final String ZZNQFLEVEL_BelowLevel01 = "0";
-	/** Level 01 = 1 */
-	public static final String ZZNQFLEVEL_Level01 = "1";
-	/** Level 10 = 10 */
-	public static final String ZZNQFLEVEL_Level10 = "10";
-	/** Level 11 = 11 */
-	public static final String ZZNQFLEVEL_Level11 = "11";
-	/** Level 02 = 2 */
-	public static final String ZZNQFLEVEL_Level02 = "2";
-	/** Level 03 = 3 */
-	public static final String ZZNQFLEVEL_Level03 = "3";
-	/** Level 04 = 4 */
-	public static final String ZZNQFLEVEL_Level04 = "4";
-	/** Level 05 = 5 */
-	public static final String ZZNQFLEVEL_Level05 = "5";
-	/** Level 06 = 6 */
-	public static final String ZZNQFLEVEL_Level06 = "6";
-	/** Level 07 = 7 */
-	public static final String ZZNQFLEVEL_Level07 = "7";
-	/** Level 08 = 8 */
-	public static final String ZZNQFLEVEL_Level08 = "8";
-	/** Level 09 = 9 */
-	public static final String ZZNQFLEVEL_Level09 = "9";
+	/** Below Level 01 = Below Level 01 */
+	public static final String ZZNQFLEVEL_BelowLevel01 = "Below Level 01";
+	/** Level 01 = Level 01 */
+	public static final String ZZNQFLEVEL_Level01 = "Level 01";
+	/** Level 02 = Level 02 */
+	public static final String ZZNQFLEVEL_Level02 = "Level 02";
+	/** Level 03 = Level 03 */
+	public static final String ZZNQFLEVEL_Level03 = "Level 03";
+	/** Level 04 = Level 04 */
+	public static final String ZZNQFLEVEL_Level04 = "Level 04";
+	/** Level 05 = Level 05 */
+	public static final String ZZNQFLEVEL_Level05 = "Level 05";
+	/** Level 06 = Level 06 */
+	public static final String ZZNQFLEVEL_Level06 = "Level 06";
+	/** Level 07 = Level 07 */
+	public static final String ZZNQFLEVEL_Level07 = "Level 07";
+	/** Level 08 = Level 08 */
+	public static final String ZZNQFLEVEL_Level08 = "Level 08";
+	/** Level 09 = Level 09 */
+	public static final String ZZNQFLEVEL_Level09 = "Level 09";
+	/** Level 10 = Level 10 */
+	public static final String ZZNQFLEVEL_Level10 = "Level 10";
+	/** Level 11 = Level 11 */
+	public static final String ZZNQFLEVEL_Level11 = "Level 11";
 	/** Set NQF Level.
 		@param ZZNqfLevel NQF Level
 	*/
@@ -378,10 +451,10 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 		return (String)get_Value(COLUMNNAME_ZZNqfLevel);
 	}
 
-	/** Unit Standard Based = 1 */
-	public static final String ZZQUALIFICATIONTYPE_UnitStandardBased = "1";
-	/** Non Unit Standard Based = 2 */
-	public static final String ZZQUALIFICATIONTYPE_NonUnitStandardBased = "2";
+	/** Non Unit Standard Based = Non Unit Standard Based */
+	public static final String ZZQUALIFICATIONTYPE_NonUnitStandardBased = "Non Unit Standard Based";
+	/** Unit Standard Based = Unit Standard Based */
+	public static final String ZZQUALIFICATIONTYPE_UnitStandardBased = "Unit Standard Based";
 	/** Set Qualification Type.
 		@param ZZQualificationType Qualification Type
 	*/
@@ -533,4 +606,69 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	{
 		return (String)get_Value(COLUMNNAME_ZZQualityAssuranceBody);
 	}
+
+	public I_ZZQualification getZZReplacementQualification() throws RuntimeException
+	{
+		return (I_ZZQualification)MTable.get(getCtx(), I_ZZQualification.Table_ID)
+			.getPO(getZZReplacementQualification_ID(), get_TrxName());
+	}
+
+	/** Set Replacement Qualification.
+		@param ZZReplacementQualification_ID Replacement Qualification
+	*/
+	public void setZZReplacementQualification_ID (int ZZReplacementQualification_ID)
+	{
+		if (ZZReplacementQualification_ID < 1)
+			set_Value (COLUMNNAME_ZZReplacementQualification_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZReplacementQualification_ID, Integer.valueOf(ZZReplacementQualification_ID));
+	}
+
+	/** Get Replacement Qualification.
+		@return Replacement Qualification	  */
+	public int getZZReplacementQualification_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZReplacementQualification_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set SAQA Qualification Code.
+		@param ZZSaqaQualificationCode SAQA Qualification Code
+	*/
+	public void setZZSaqaQualificationCode (String ZZSaqaQualificationCode)
+	{
+		set_Value (COLUMNNAME_ZZSaqaQualificationCode, ZZSaqaQualificationCode);
+	}
+
+	/** Get SAQA Qualification Code.
+		@return SAQA Qualification Code	  */
+	public String getZZSaqaQualificationCode()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSaqaQualificationCode);
+	}
+
+	/** Set SAQA Qualification Title.
+		@param ZZSaqaQualificationTitle SAQA Qualification Title
+	*/
+	public void setZZSaqaQualificationTitle (String ZZSaqaQualificationTitle)
+	{
+		set_Value (COLUMNNAME_ZZSaqaQualificationTitle, ZZSaqaQualificationTitle);
+	}
+
+	/** Get SAQA Qualification Title.
+		@return SAQA Qualification Title	  */
+	public String getZZSaqaQualificationTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSaqaQualificationTitle);
+	}
+
+    /** Get Record ID/ColumnName
+        @return ID/ColumnName pair
+      */
+    public KeyNamePair getKeyNamePair()
+    {
+        return new KeyNamePair(get_ID(), getZZSaqaQualificationTitle());
+    }
 }

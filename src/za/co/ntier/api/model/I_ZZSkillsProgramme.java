@@ -32,7 +32,7 @@ public interface I_ZZSkillsProgramme
     /** TableName=ZZSkillsProgramme */
     public static final String Table_Name = "ZZSkillsProgramme";
 
-    /** AD_Table_ID=1000225 */
+    /** AD_Table_ID=1000229 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -180,20 +180,34 @@ public interface I_ZZSkillsProgramme
 	/** Get OHS	  */
 	public String getZZIsOhs();
 
-    /** Column name ZZLkpOfoOccupation_ID */
-    public static final String COLUMNNAME_ZZLkpOfoOccupation_ID = "ZZLkpOfoOccupation_ID";
+    /** Column name ZZLkpOfoOccupationTree_ID */
+    public static final String COLUMNNAME_ZZLkpOfoOccupationTree_ID = "ZZLkpOfoOccupationTree_ID";
 
-	/** Set OFO Occupation.
-	  * OFO Occupation
-	  */
-	public void setZZLkpOfoOccupation_ID (int ZZLkpOfoOccupation_ID);
+	/** Set Ofo Occupation	  */
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID);
 
-	/** Get OFO Occupation.
-	  * OFO Occupation
-	  */
-	public int getZZLkpOfoOccupation_ID();
+	/** Get Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID();
 
-	public I_ZZLkpOfoOccupation getZZLkpOfoOccupation() throws RuntimeException;
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException;
+
+    /** Column name ZZMigrateValues */
+    public static final String COLUMNNAME_ZZMigrateValues = "ZZMigrateValues";
+
+	/** Set Migrate Values	  */
+	public void setZZMigrateValues (String ZZMigrateValues);
+
+	/** Get Migrate Values	  */
+	public String getZZMigrateValues();
+
+    /** Column name ZZMigrationCode */
+    public static final String COLUMNNAME_ZZMigrationCode = "ZZMigrationCode";
+
+	/** Set Migration Code	  */
+	public void setZZMigrationCode (int ZZMigrationCode);
+
+	/** Get Migration Code	  */
+	public int getZZMigrationCode();
 
     /** Column name ZZMinimumElectiveCredits */
     public static final String COLUMNNAME_ZZMinimumElectiveCredits = "ZZMinimumElectiveCredits";
@@ -232,6 +246,33 @@ public interface I_ZZSkillsProgramme
 
 	/** Get Quality Assurance Body	  */
 	public String getZZQualityAssuranceBody();
+
+    /** Column name ZZSkillsProgrammeCode */
+    public static final String COLUMNNAME_ZZSkillsProgrammeCode = "ZZSkillsProgrammeCode";
+
+	/** Set SkillsProgramme Code	  */
+	public void setZZSkillsProgrammeCode (String ZZSkillsProgrammeCode);
+
+	/** Get SkillsProgramme Code	  */
+	public String getZZSkillsProgrammeCode();
+
+    /** Column name ZZSkillsProgrammeGrantType */
+    public static final String COLUMNNAME_ZZSkillsProgrammeGrantType = "ZZSkillsProgrammeGrantType";
+
+	/** Set Skills Programme Grant Type	  */
+	public void setZZSkillsProgrammeGrantType (String ZZSkillsProgrammeGrantType);
+
+	/** Get Skills Programme Grant Type	  */
+	public String getZZSkillsProgrammeGrantType();
+
+    /** Column name ZZSkillsProgrammeTitle */
+    public static final String COLUMNNAME_ZZSkillsProgrammeTitle = "ZZSkillsProgrammeTitle";
+
+	/** Set Skills Programme Title	  */
+	public void setZZSkillsProgrammeTitle (String ZZSkillsProgrammeTitle);
+
+	/** Get Skills Programme Title	  */
+	public String getZZSkillsProgrammeTitle();
 
     /** Column name ZZSkillsProgrammeType */
     public static final String COLUMNNAME_ZZSkillsProgrammeType = "ZZSkillsProgrammeType";

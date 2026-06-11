@@ -175,6 +175,24 @@ public interface I_ZZQualification
 	/** Get Credits	  */
 	public int getZZCredits();
 
+    /** Column name ZZIsReplacement */
+    public static final String COLUMNNAME_ZZIsReplacement = "ZZIsReplacement";
+
+	/** Set Is Replacement	  */
+	public void setZZIsReplacement (String ZZIsReplacement);
+
+	/** Get Is Replacement	  */
+	public String getZZIsReplacement();
+
+    /** Column name ZZIsReregistered */
+    public static final String COLUMNNAME_ZZIsReregistered = "ZZIsReregistered";
+
+	/** Set Is Reregistered	  */
+	public void setZZIsReregistered (String ZZIsReregistered);
+
+	/** Get Is Reregistered	  */
+	public String getZZIsReregistered();
+
     /** Column name ZZLastAchievementDate */
     public static final String COLUMNNAME_ZZLastAchievementDate = "ZZLastAchievementDate";
 
@@ -193,20 +211,34 @@ public interface I_ZZQualification
 	/** Get Last Enrolment Date	  */
 	public Timestamp getZZLastEnrolmentDate();
 
-    /** Column name ZZLkpOfoOccupation_ID */
-    public static final String COLUMNNAME_ZZLkpOfoOccupation_ID = "ZZLkpOfoOccupation_ID";
+    /** Column name ZZLkpOfoOccupationTree_ID */
+    public static final String COLUMNNAME_ZZLkpOfoOccupationTree_ID = "ZZLkpOfoOccupationTree_ID";
 
-	/** Set OFO Occupation.
-	  * OFO Occupation
-	  */
-	public void setZZLkpOfoOccupation_ID (int ZZLkpOfoOccupation_ID);
+	/** Set Ofo Occupation	  */
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID);
 
-	/** Get OFO Occupation.
-	  * OFO Occupation
-	  */
-	public int getZZLkpOfoOccupation_ID();
+	/** Get Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID();
 
-	public I_ZZLkpOfoOccupation getZZLkpOfoOccupation() throws RuntimeException;
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException;
+
+    /** Column name ZZMigrateValues */
+    public static final String COLUMNNAME_ZZMigrateValues = "ZZMigrateValues";
+
+	/** Set Migrate Values	  */
+	public void setZZMigrateValues (String ZZMigrateValues);
+
+	/** Get Migrate Values	  */
+	public String getZZMigrateValues();
+
+    /** Column name ZZMigrationCode */
+    public static final String COLUMNNAME_ZZMigrationCode = "ZZMigrationCode";
+
+	/** Set Migration Code	  */
+	public void setZZMigrationCode (int ZZMigrationCode);
+
+	/** Get Migration Code	  */
+	public int getZZMigrationCode();
 
     /** Column name ZZMinimumElectiveCredits */
     public static final String COLUMNNAME_ZZMinimumElectiveCredits = "ZZMinimumElectiveCredits";
@@ -297,4 +329,33 @@ public interface I_ZZQualification
 
 	/** Get Quality Assurance Body	  */
 	public String getZZQualityAssuranceBody();
+
+    /** Column name ZZReplacementQualification_ID */
+    public static final String COLUMNNAME_ZZReplacementQualification_ID = "ZZReplacementQualification_ID";
+
+	/** Set Replacement Qualification	  */
+	public void setZZReplacementQualification_ID (int ZZReplacementQualification_ID);
+
+	/** Get Replacement Qualification	  */
+	public int getZZReplacementQualification_ID();
+
+	public I_ZZQualification getZZReplacementQualification() throws RuntimeException;
+
+    /** Column name ZZSaqaQualificationCode */
+    public static final String COLUMNNAME_ZZSaqaQualificationCode = "ZZSaqaQualificationCode";
+
+	/** Set SAQA Qualification Code	  */
+	public void setZZSaqaQualificationCode (String ZZSaqaQualificationCode);
+
+	/** Get SAQA Qualification Code	  */
+	public String getZZSaqaQualificationCode();
+
+    /** Column name ZZSaqaQualificationTitle */
+    public static final String COLUMNNAME_ZZSaqaQualificationTitle = "ZZSaqaQualificationTitle";
+
+	/** Set SAQA Qualification Title	  */
+	public void setZZSaqaQualificationTitle (String ZZSaqaQualificationTitle);
+
+	/** Get SAQA Qualification Title	  */
+	public String getZZSaqaQualificationTitle();
 }
