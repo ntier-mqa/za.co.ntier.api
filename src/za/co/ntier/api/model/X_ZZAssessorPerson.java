@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260626L;
+	private static final long serialVersionUID = 20260627L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -511,12 +511,6 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return ii.intValue();
 	}
 
-	public I_ZZLkpSchoolEmis getZZLkpSchoolEmis() throws RuntimeException
-	{
-		return (I_ZZLkpSchoolEmis)MTable.get(getCtx(), I_ZZLkpSchoolEmis.Table_ID)
-			.getPO(getZZLkpSchoolEmis_ID(), get_TrxName());
-	}
-
 	/** Set School EMIS.
 		@param ZZLkpSchoolEmis_ID School EMIS
 	*/
@@ -536,12 +530,6 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
-	}
-
-	public I_ZZLkpStatssaAreaCode getZZLkpStatssaAreaCode() throws RuntimeException
-	{
-		return (I_ZZLkpStatssaAreaCode)MTable.get(getCtx(), I_ZZLkpStatssaAreaCode.Table_ID)
-			.getPO(getZZLkpStatssaAreaCode_ID(), get_TrxName());
 	}
 
 	/** Set STATSSA Area Code.
@@ -652,6 +640,28 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** ZZScopeExtension AD_Reference_ID=319 */
+	public static final int ZZSCOPEEXTENSION_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZSCOPEEXTENSION_No = "N";
+	/** Yes = Y */
+	public static final String ZZSCOPEEXTENSION_Yes = "Y";
+	/** Set Scope Extension.
+		@param ZZScopeExtension Scope Extension
+	*/
+	public void setZZScopeExtension (String ZZScopeExtension)
+	{
+
+		set_Value (COLUMNNAME_ZZScopeExtension, ZZScopeExtension);
+	}
+
+	/** Get Scope Extension.
+		@return Scope Extension	  */
+	public String getZZScopeExtension()
+	{
+		return (String)get_Value(COLUMNNAME_ZZScopeExtension);
 	}
 
 	/** Set Submitted Date.

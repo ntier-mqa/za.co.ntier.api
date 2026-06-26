@@ -313,8 +313,6 @@ public interface I_ZZAssessorPerson
 	/** Get School EMIS	  */
 	public int getZZLkpSchoolEmis_ID();
 
-	public I_ZZLkpSchoolEmis getZZLkpSchoolEmis() throws RuntimeException;
-
     /** Column name ZZLkpStatssaAreaCode_ID */
     public static final String COLUMNNAME_ZZLkpStatssaAreaCode_ID = "ZZLkpStatssaAreaCode_ID";
 
@@ -323,8 +321,6 @@ public interface I_ZZAssessorPerson
 
 	/** Get STATSSA Area Code	  */
 	public int getZZLkpStatssaAreaCode_ID();
-
-	public I_ZZLkpStatssaAreaCode getZZLkpStatssaAreaCode() throws RuntimeException;
 
     /** Column name ZZPhysicalLocation_ID */
     public static final String COLUMNNAME_ZZPhysicalLocation_ID = "ZZPhysicalLocation_ID";
@@ -365,6 +361,15 @@ public interface I_ZZAssessorPerson
 	public int getZZPostalLocation_ID();
 
 	public I_C_Location getZZPostalLocation() throws RuntimeException;
+
+    /** Column name ZZScopeExtension */
+    public static final String COLUMNNAME_ZZScopeExtension = "ZZScopeExtension";
+
+	/** Set Scope Extension	  */
+	public void setZZScopeExtension (String ZZScopeExtension);
+
+	/** Get Scope Extension	  */
+	public String getZZScopeExtension();
 
     /** Column name ZZSubmittedDate */
     public static final String COLUMNNAME_ZZSubmittedDate = "ZZSubmittedDate";
