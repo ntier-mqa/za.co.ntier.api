@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260518L;
+	private static final long serialVersionUID = 20260626L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -218,8 +218,8 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public static final String ZZASSESSORROLE_Assessor = "Assessor";
 	/** Moderator = Moderator */
 	public static final String ZZASSESSORROLE_Moderator = "Moderator";
-	/** Set Role.
-		@param ZZAssessorRole Role
+	/** Set Assesssor - Moderator.
+		@param ZZAssessorRole Assesssor - Moderator
 	*/
 	public void setZZAssessorRole (String ZZAssessorRole)
 	{
@@ -227,8 +227,8 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		set_Value (COLUMNNAME_ZZAssessorRole, ZZAssessorRole);
 	}
 
-	/** Get Role.
-		@return Role	  */
+	/** Get Assesssor - Moderator.
+		@return Assesssor - Moderator	  */
 	public String getZZAssessorRole()
 	{
 		return (String)get_Value(COLUMNNAME_ZZAssessorRole);
@@ -258,8 +258,8 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return (String)get_Value(COLUMNNAME_ZZEquity);
 	}
 
-	/** Famale = F */
-	public static final String ZZGENDER_Famale = "F";
+	/** Female = F */
+	public static final String ZZGENDER_Female = "F";
 	/** Male = M */
 	public static final String ZZGENDER_Male = "M";
 	/** Other = O */
@@ -654,6 +654,21 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		return ii.intValue();
 	}
 
+	/** Set Submitted Date.
+		@param ZZSubmittedDate Submitted Date
+	*/
+	public void setZZSubmittedDate (Timestamp ZZSubmittedDate)
+	{
+		set_Value (COLUMNNAME_ZZSubmittedDate, ZZSubmittedDate);
+	}
+
+	/** Get Submitted Date.
+		@return Submitted Date	  */
+	public Timestamp getZZSubmittedDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZSubmittedDate);
+	}
+
 	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException
 	{
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
@@ -769,6 +784,8 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** PrepareCEO = PC */
 	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
+	/** Refer Back = RB */
+	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
 	/** Re-Submit = RS */

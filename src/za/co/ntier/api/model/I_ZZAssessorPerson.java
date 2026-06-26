@@ -184,10 +184,10 @@ public interface I_ZZAssessorPerson
     /** Column name ZZAssessorRole */
     public static final String COLUMNNAME_ZZAssessorRole = "ZZAssessorRole";
 
-	/** Set Role	  */
+	/** Set Assesssor - Moderator	  */
 	public void setZZAssessorRole (String ZZAssessorRole);
 
-	/** Get Role	  */
+	/** Get Assesssor - Moderator	  */
 	public String getZZAssessorRole();
 
     /** Column name ZZEquity */
@@ -365,6 +365,15 @@ public interface I_ZZAssessorPerson
 	public int getZZPostalLocation_ID();
 
 	public I_C_Location getZZPostalLocation() throws RuntimeException;
+
+    /** Column name ZZSubmittedDate */
+    public static final String COLUMNNAME_ZZSubmittedDate = "ZZSubmittedDate";
+
+	/** Set Submitted Date	  */
+	public void setZZSubmittedDate (Timestamp ZZSubmittedDate);
+
+	/** Get Submitted Date	  */
+	public Timestamp getZZSubmittedDate();
 
     /** Column name ZZ_ApprovedBy_ID */
     public static final String COLUMNNAME_ZZ_ApprovedBy_ID = "ZZ_ApprovedBy_ID";
