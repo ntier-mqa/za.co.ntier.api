@@ -21,18 +21,18 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for ZZLearner
+/** Generated Interface for ZZAssessorRegistrationHistory
  *  @author iDempiere (generated) 
  *  @version Release 12
  */
 @SuppressWarnings("all")
-public interface I_ZZLearner 
+public interface I_ZZAssessorRegistrationHistory 
 {
 
-    /** TableName=ZZLearner */
-    public static final String Table_Name = "ZZLearner";
+    /** TableName=ZZAssessorRegistrationHistory */
+    public static final String Table_Name = "ZZAssessorRegistrationHistory";
 
-    /** AD_Table_ID=1000261 */
+    /** AD_Table_ID=1000302 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -109,101 +109,43 @@ public interface I_ZZLearner
 	  */
 	public int getUpdatedBy();
 
-    /** Column name ZZLearner_ID */
-    public static final String COLUMNNAME_ZZLearner_ID = "ZZLearner_ID";
+    /** Column name ZZAssessorPerson_ID */
+    public static final String COLUMNNAME_ZZAssessorPerson_ID = "ZZAssessorPerson_ID";
 
-	/** Set Learner	  */
-	public void setZZLearner_ID (int ZZLearner_ID);
+	/** Set Assessor Person	  */
+	public void setZZAssessorPerson_ID (int ZZAssessorPerson_ID);
 
-	/** Get Learner	  */
-	public int getZZLearner_ID();
+	/** Get Assessor Person	  */
+	public int getZZAssessorPerson_ID();
 
-    /** Column name ZZLearner_UU */
-    public static final String COLUMNNAME_ZZLearner_UU = "ZZLearner_UU";
+	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException;
 
-	/** Set ZZLearner_UU	  */
-	public void setZZLearner_UU (String ZZLearner_UU);
+    /** Column name ZZAssessorRegistrationHistory_ID */
+    public static final String COLUMNNAME_ZZAssessorRegistrationHistory_ID = "ZZAssessorRegistrationHistory_ID";
 
-	/** Get ZZLearner_UU	  */
-	public String getZZLearner_UU();
+	/** Set Assessor Registration History	  */
+	public void setZZAssessorRegistrationHistory_ID (int ZZAssessorRegistrationHistory_ID);
 
-    /** Column name ZZMatriculatedLocation_ID */
-    public static final String COLUMNNAME_ZZMatriculatedLocation_ID = "ZZMatriculatedLocation_ID";
+	/** Get Assessor Registration History	  */
+	public int getZZAssessorRegistrationHistory_ID();
 
-	/** Set Matriculated Location	  */
-	public void setZZMatriculatedLocation_ID (int ZZMatriculatedLocation_ID);
+    /** Column name ZZAssessorRegistrationHistory_UU */
+    public static final String COLUMNNAME_ZZAssessorRegistrationHistory_UU = "ZZAssessorRegistrationHistory_UU";
 
-	/** Get Matriculated Location	  */
-	public int getZZMatriculatedLocation_ID();
+	/** Set ZZAssessorRegistrationHistory_UU	  */
+	public void setZZAssessorRegistrationHistory_UU (String ZZAssessorRegistrationHistory_UU);
 
-	public org.compiere.model.I_C_Location getZZMatriculatedLocation() throws RuntimeException;
+	/** Get ZZAssessorRegistrationHistory_UU	  */
+	public String getZZAssessorRegistrationHistory_UU();
 
-    /** Column name ZZPerson_ID */
-    public static final String COLUMNNAME_ZZPerson_ID = "ZZPerson_ID";
+    /** Column name ZZSubmittedDate */
+    public static final String COLUMNNAME_ZZSubmittedDate = "ZZSubmittedDate";
 
-	/** Set Person	  */
-	public void setZZPerson_ID (int ZZPerson_ID);
+	/** Set Submitted Date	  */
+	public void setZZSubmittedDate (Timestamp ZZSubmittedDate);
 
-	/** Get Person	  */
-	public int getZZPerson_ID();
-
-	public I_ZZPerson getZZPerson() throws RuntimeException;
-
-    /** Column name ZZ_ApprovedBy_ID */
-    public static final String COLUMNNAME_ZZ_ApprovedBy_ID = "ZZ_ApprovedBy_ID";
-
-	/** Set Approved By	  */
-	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID);
-
-	/** Get Approved By	  */
-	public int getZZ_ApprovedBy_ID();
-
-	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException;
-
-    /** Column name ZZ_ApprovedDate */
-    public static final String COLUMNNAME_ZZ_ApprovedDate = "ZZ_ApprovedDate";
-
-	/** Set Approved Date	  */
-	public void setZZ_ApprovedDate (Timestamp ZZ_ApprovedDate);
-
-	/** Get Approved Date	  */
-	public Timestamp getZZ_ApprovedDate();
-
-    /** Column name ZZ_Date_Not_Approved */
-    public static final String COLUMNNAME_ZZ_Date_Not_Approved = "ZZ_Date_Not_Approved";
-
-	/** Set Date Not Approved	  */
-	public void setZZ_Date_Not_Approved (Timestamp ZZ_Date_Not_Approved);
-
-	/** Get Date Not Approved	  */
-	public Timestamp getZZ_Date_Not_Approved();
-
-    /** Column name ZZ_Date_Not_Recommended */
-    public static final String COLUMNNAME_ZZ_Date_Not_Recommended = "ZZ_Date_Not_Recommended";
-
-	/** Set Date Not Recommended	  */
-	public void setZZ_Date_Not_Recommended (Timestamp ZZ_Date_Not_Recommended);
-
-	/** Get Date Not Recommended	  */
-	public Timestamp getZZ_Date_Not_Recommended();
-
-    /** Column name ZZ_Date_Recommended */
-    public static final String COLUMNNAME_ZZ_Date_Recommended = "ZZ_Date_Recommended";
-
-	/** Set Date Recommended	  */
-	public void setZZ_Date_Recommended (Timestamp ZZ_Date_Recommended);
-
-	/** Get Date Recommended	  */
-	public Timestamp getZZ_Date_Recommended();
-
-    /** Column name ZZ_DocAction */
-    public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
-
-	/** Set Document Action	  */
-	public void setZZ_DocAction (String ZZ_DocAction);
-
-	/** Get Document Action	  */
-	public String getZZ_DocAction();
+	/** Get Submitted Date	  */
+	public Timestamp getZZSubmittedDate();
 
     /** Column name ZZ_DocStatus */
     public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
@@ -213,15 +155,4 @@ public interface I_ZZLearner
 
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
-
-    /** Column name ZZ_Recommender_ID */
-    public static final String COLUMNNAME_ZZ_Recommender_ID = "ZZ_Recommender_ID";
-
-	/** Set Recommender	  */
-	public void setZZ_Recommender_ID (int ZZ_Recommender_ID);
-
-	/** Get Recommender	  */
-	public int getZZ_Recommender_ID();
-
-	public org.compiere.model.I_AD_User getZZ_Recommender() throws RuntimeException;
 }

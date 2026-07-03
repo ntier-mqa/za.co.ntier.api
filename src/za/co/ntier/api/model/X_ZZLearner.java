@@ -32,7 +32,7 @@ public class X_ZZLearner extends PO implements I_ZZLearner, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260529L;
+	private static final long serialVersionUID = 20260702L;
 
     /** Standard Constructor */
     public X_ZZLearner (Properties ctx, int ZZLearner_ID, String trxName)
@@ -291,6 +291,8 @@ public class X_ZZLearner extends PO implements I_ZZLearner, I_Persistent
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** PrepareCEO = PC */
 	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
+	/** Refer Back = RB */
+	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
 	/** Re-Submit = RS */

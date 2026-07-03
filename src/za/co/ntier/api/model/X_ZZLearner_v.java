@@ -22,60 +22,56 @@ import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
-/** Generated Model for ZZPerson
+/** Generated Model for ZZLearner_v
  *  @author iDempiere (generated)
  *  @version Release 12 - $Id$ */
-@org.adempiere.base.Model(table="ZZPerson")
-public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
+@org.adempiere.base.Model(table="ZZLearner_v")
+public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260703L;
+	private static final long serialVersionUID = 20260701L;
 
     /** Standard Constructor */
-    public X_ZZPerson (Properties ctx, int ZZPerson_ID, String trxName)
+    public X_ZZLearner_v (Properties ctx, int ZZLearner_v_ID, String trxName)
     {
-      super (ctx, ZZPerson_ID, trxName);
-      /** if (ZZPerson_ID == 0)
+      super (ctx, ZZLearner_v_ID, trxName);
+      /** if (ZZLearner_v_ID == 0)
         {
-			setZZPerson_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZPerson (Properties ctx, int ZZPerson_ID, String trxName, String ... virtualColumns)
+    public X_ZZLearner_v (Properties ctx, int ZZLearner_v_ID, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZPerson_ID, trxName, virtualColumns);
-      /** if (ZZPerson_ID == 0)
+      super (ctx, ZZLearner_v_ID, trxName, virtualColumns);
+      /** if (ZZLearner_v_ID == 0)
         {
-			setZZPerson_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZPerson (Properties ctx, String ZZPerson_UU, String trxName)
+    public X_ZZLearner_v (Properties ctx, String ZZLearner_v_UU, String trxName)
     {
-      super (ctx, ZZPerson_UU, trxName);
-      /** if (ZZPerson_UU == null)
+      super (ctx, ZZLearner_v_UU, trxName);
+      /** if (ZZLearner_v_UU == null)
         {
-			setZZPerson_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZPerson (Properties ctx, String ZZPerson_UU, String trxName, String ... virtualColumns)
+    public X_ZZLearner_v (Properties ctx, String ZZLearner_v_UU, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZPerson_UU, trxName, virtualColumns);
-      /** if (ZZPerson_UU == null)
+      super (ctx, ZZLearner_v_UU, trxName, virtualColumns);
+      /** if (ZZLearner_v_UU == null)
         {
-			setZZPerson_ID (0);
         } */
     }
 
     /** Load Constructor */
-    public X_ZZPerson (Properties ctx, ResultSet rs, String trxName)
+    public X_ZZLearner_v (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -97,38 +93,10 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 
     public String toString()
     {
-      StringBuilder sb = new StringBuilder ("X_ZZPerson[")
+      StringBuilder sb = new StringBuilder ("X_ZZLearner_v[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
-
-	public org.compiere.model.I_AD_User getAD_User() throws RuntimeException
-	{
-		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
-			.getPO(getAD_User_ID(), get_TrxName());
-	}
-
-	/** Set User/Contact.
-		@param AD_User_ID User within the system - Internal or Business Partner Contact
-	*/
-	public void setAD_User_ID (int AD_User_ID)
-	{
-		if (AD_User_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_AD_User_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_AD_User_ID, Integer.valueOf(AD_User_ID));
-	}
-
-	/** Get User/Contact.
-		@return User within the system - Internal or Business Partner Contact
-	  */
-	public int getAD_User_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_AD_User_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
 
 	/** Set Birthday.
 		@param Birthday Birthday or Anniversary day
@@ -565,6 +533,84 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 		return ii.intValue();
 	}
 
+	public I_ZZLearner getZZLearner() throws RuntimeException
+	{
+		return (I_ZZLearner)MTable.get(getCtx(), I_ZZLearner.Table_ID)
+			.getPO(getZZLearner_ID(), get_TrxName());
+	}
+
+	/** Set Learner.
+		@param ZZLearner_ID Learner
+	*/
+	public void setZZLearner_ID (int ZZLearner_ID)
+	{
+		if (ZZLearner_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLearner_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLearner_ID, Integer.valueOf(ZZLearner_ID));
+	}
+
+	/** Get Learner.
+		@return Learner	  */
+	public int getZZLearner_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLearner_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set ZZLearner_UU.
+		@param ZZLearner_UU ZZLearner_UU
+	*/
+	public void setZZLearner_UU (String ZZLearner_UU)
+	{
+		set_Value (COLUMNNAME_ZZLearner_UU, ZZLearner_UU);
+	}
+
+	/** Get ZZLearner_UU.
+		@return ZZLearner_UU	  */
+	public String getZZLearner_UU()
+	{
+		return (String)get_Value(COLUMNNAME_ZZLearner_UU);
+	}
+
+	/** Set Learner View.
+		@param ZZLearner_v_ID Learner View
+	*/
+	public void setZZLearner_v_ID (int ZZLearner_v_ID)
+	{
+		if (ZZLearner_v_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLearner_v_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLearner_v_ID, Integer.valueOf(ZZLearner_v_ID));
+	}
+
+	/** Get Learner View.
+		@return Learner View	  */
+	public int getZZLearner_v_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLearner_v_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Learner View UU.
+		@param ZZLearner_v_UU Learner View UU
+	*/
+	public void setZZLearner_v_UU (String ZZLearner_v_UU)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZLearner_v_UU, ZZLearner_v_UU);
+	}
+
+	/** Get Learner View UU.
+		@return Learner View UU	  */
+	public String getZZLearner_v_UU()
+	{
+		return (String)get_Value(COLUMNNAME_ZZLearner_v_UU);
+	}
+
 	/** Set School EMIS.
 		@param ZZLkpSchoolEmis_ID School EMIS
 	*/
@@ -642,6 +688,33 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 		return (String)get_Value(COLUMNNAME_ZZLkpTitle);
 	}
 
+	public org.compiere.model.I_C_Location getZZMatriculatedLocation() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_Location)MTable.get(getCtx(), org.compiere.model.I_C_Location.Table_ID)
+			.getPO(getZZMatriculatedLocation_ID(), get_TrxName());
+	}
+
+	/** Set Matriculated Location.
+		@param ZZMatriculatedLocation_ID Matriculated Location
+	*/
+	public void setZZMatriculatedLocation_ID (int ZZMatriculatedLocation_ID)
+	{
+		if (ZZMatriculatedLocation_ID < 1)
+			set_Value (COLUMNNAME_ZZMatriculatedLocation_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZMatriculatedLocation_ID, Integer.valueOf(ZZMatriculatedLocation_ID));
+	}
+
+	/** Get Matriculated Location.
+		@return Matriculated Location	  */
+	public int getZZMatriculatedLocation_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZMatriculatedLocation_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Middle Name.
 		@param ZZMiddleName Middle Name
 	*/
@@ -655,36 +728,6 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 	public String getZZMiddleName()
 	{
 		return (String)get_Value(COLUMNNAME_ZZMiddleName);
-	}
-
-	/** Set Middle Name 2.
-		@param ZZMiddleName2 Middle Name 2
-	*/
-	public void setZZMiddleName2 (String ZZMiddleName2)
-	{
-		set_Value (COLUMNNAME_ZZMiddleName2, ZZMiddleName2);
-	}
-
-	/** Get Middle Name 2.
-		@return Middle Name 2	  */
-	public String getZZMiddleName2()
-	{
-		return (String)get_Value(COLUMNNAME_ZZMiddleName2);
-	}
-
-	/** Set Migrate Values.
-		@param ZZMigrateValues Migrate Values
-	*/
-	public void setZZMigrateValues (String ZZMigrateValues)
-	{
-		set_Value (COLUMNNAME_ZZMigrateValues, ZZMigrateValues);
-	}
-
-	/** Get Migrate Values.
-		@return Migrate Values	  */
-	public String getZZMigrateValues()
-	{
-		return (String)get_Value(COLUMNNAME_ZZMigrateValues);
 	}
 
 	/** Set Migration Code.
@@ -719,69 +762,6 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 	public String getZZOtherIDNo()
 	{
 		return (String)get_Value(COLUMNNAME_ZZOtherIDNo);
-	}
-
-	public I_ZZPerson getZZParentPerson() throws RuntimeException
-	{
-		return (I_ZZPerson)MTable.get(getCtx(), I_ZZPerson.Table_ID)
-			.getPO(getZZParentPerson_ID(), get_TrxName());
-	}
-
-	/** Set Parent Person.
-		@param ZZParentPerson_ID Parent Person
-	*/
-	public void setZZParentPerson_ID (int ZZParentPerson_ID)
-	{
-		if (ZZParentPerson_ID < 1)
-			set_Value (COLUMNNAME_ZZParentPerson_ID, null);
-		else
-			set_Value (COLUMNNAME_ZZParentPerson_ID, Integer.valueOf(ZZParentPerson_ID));
-	}
-
-	/** Get Parent Person.
-		@return Parent Person	  */
-	public int getZZParentPerson_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZParentPerson_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	/** Set Person.
-		@param ZZPerson_ID Person
-	*/
-	public void setZZPerson_ID (int ZZPerson_ID)
-	{
-		if (ZZPerson_ID < 1)
-			set_ValueNoCheck (COLUMNNAME_ZZPerson_ID, null);
-		else
-			set_ValueNoCheck (COLUMNNAME_ZZPerson_ID, Integer.valueOf(ZZPerson_ID));
-	}
-
-	/** Get Person.
-		@return Person	  */
-	public int getZZPerson_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZPerson_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	/** Set ZZPerson_UU.
-		@param ZZPerson_UU ZZPerson_UU
-	*/
-	public void setZZPerson_UU (String ZZPerson_UU)
-	{
-		set_Value (COLUMNNAME_ZZPerson_UU, ZZPerson_UU);
-	}
-
-	/** Get ZZPerson_UU.
-		@return ZZPerson_UU	  */
-	public String getZZPerson_UU()
-	{
-		return (String)get_Value(COLUMNNAME_ZZPerson_UU);
 	}
 
 	/** Set Photograph File Name.
@@ -931,6 +911,261 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_ApprovedBy_ID(), get_TrxName());
+	}
+
+	/** Set Approved By.
+		@param ZZ_ApprovedBy_ID Approved By
+	*/
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID)
+	{
+		if (ZZ_ApprovedBy_ID < 1)
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, Integer.valueOf(ZZ_ApprovedBy_ID));
+	}
+
+	/** Get Approved By.
+		@return Approved By	  */
+	public int getZZ_ApprovedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_ApprovedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Approved Date.
+		@param ZZ_ApprovedDate Approved Date
+	*/
+	public void setZZ_ApprovedDate (Timestamp ZZ_ApprovedDate)
+	{
+		set_Value (COLUMNNAME_ZZ_ApprovedDate, ZZ_ApprovedDate);
+	}
+
+	/** Get Approved Date.
+		@return Approved Date	  */
+	public Timestamp getZZ_ApprovedDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_ApprovedDate);
+	}
+
+	/** Set Date Not Approved.
+		@param ZZ_Date_Not_Approved Date Not Approved
+	*/
+	public void setZZ_Date_Not_Approved (Timestamp ZZ_Date_Not_Approved)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Approved, ZZ_Date_Not_Approved);
+	}
+
+	/** Get Date Not Approved.
+		@return Date Not Approved	  */
+	public Timestamp getZZ_Date_Not_Approved()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Approved);
+	}
+
+	/** Set Date Not Recommended.
+		@param ZZ_Date_Not_Recommended Date Not Recommended
+	*/
+	public void setZZ_Date_Not_Recommended (Timestamp ZZ_Date_Not_Recommended)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recommended, ZZ_Date_Not_Recommended);
+	}
+
+	/** Get Date Not Recommended.
+		@return Date Not Recommended	  */
+	public Timestamp getZZ_Date_Not_Recommended()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recommended);
+	}
+
+	/** Set Date Recommended.
+		@param ZZ_Date_Recommended Date Recommended
+	*/
+	public void setZZ_Date_Recommended (Timestamp ZZ_Date_Recommended)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recommended, ZZ_Date_Recommended);
+	}
+
+	/** Get Date Recommended.
+		@return Date Recommended	  */
+	public Timestamp getZZ_Date_Recommended()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recommended);
+	}
+
+	/** Exec Approve = AE */
+	public static final String ZZ_DOCACTION_ExecApprove = "AE";
+	/** Approve/Do Not Approve = AP */
+	public static final String ZZ_DOCACTION_ApproveDoNotApprove = "AP";
+	/** Complete = CO */
+	public static final String ZZ_DOCACTION_Complete = "CO";
+	/** Evaluate = EV */
+	public static final String ZZ_DOCACTION_Evaluate = "EV";
+	/** Final Approval/Do not Approve = FA */
+	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
+	/** PrepareCEO = PC */
+	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
+	/** Refer Back = RB */
+	public static final String ZZ_DOCACTION_ReferBack = "RB";
+	/** Recommend = RE */
+	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Re-Submit = RS */
+	public static final String ZZ_DOCACTION_Re_Submit = "RS";
+	/** Submit = S1 */
+	public static final String ZZ_DOCACTION_Submit = "S1";
+	/** System Only (No manual action) = S2 */
+	public static final String ZZ_DOCACTION_SystemOnlyNoManualAction = "S2";
+	/** Submit to Manager Finance Consumables = SC */
+	public static final String ZZ_DOCACTION_SubmitToManagerFinanceConsumables = "SC";
+	/** Submit to SDL Finance Mgr = SD */
+	public static final String ZZ_DOCACTION_SubmitToSDLFinanceMgr = "SD";
+	/** Submit to Snr Mgr LP = SL */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrLP = "SL";
+	/** Submit to Snr Mgr Ops = SO */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrOps = "SO";
+	/** Submit to Snr Mgr Projects = SP */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrProjects = "SP";
+	/** Submit to Snr Mgr QA = SQ */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrQA = "SQ";
+	/** Submit to Recommender = SR */
+	public static final String ZZ_DOCACTION_SubmitToRecommender = "SR";
+	/** Submit to Snr Mgr SRU = SS */
+	public static final String ZZ_DOCACTION_SubmitToSnrMgrSRU = "SS";
+	/** Submit to Line Manager = SU */
+	public static final String ZZ_DOCACTION_SubmitToLineManager = "SU";
+	/** Update = UP */
+	public static final String ZZ_DOCACTION_Update = "UP";
+	/** Verify = VE */
+	public static final String ZZ_DOCACTION_Verify = "VE";
+	/** Set Document Action.
+		@param ZZ_DocAction Document Action
+	*/
+	public void setZZ_DocAction (String ZZ_DocAction)
+	{
+
+		set_Value (COLUMNNAME_ZZ_DocAction, ZZ_DocAction);
+	}
+
+	/** Get Document Action.
+		@return Document Action	  */
+	public String getZZ_DocAction()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_DocAction);
+	}
+
+	/** Approved By Manager Finance Consumables = AC */
+	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
+	/** Approved = AP */
+	public static final String ZZ_DOCSTATUS_Approved = "AP";
+	/** Prepared for CEO = CF */
+	public static final String ZZ_DOCSTATUS_PreparedForCEO = "CF";
+	/** Completed = CO */
+	public static final String ZZ_DOCSTATUS_Completed = "CO";
+	/** Draft = DR */
+	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Error Importing = EE */
+	public static final String ZZ_DOCSTATUS_ErrorImporting = "EE";
+	/** Validation Error = ER */
+	public static final String ZZ_DOCSTATUS_ValidationError = "ER";
+	/** Evaluated = EV */
+	public static final String ZZ_DOCSTATUS_Evaluated = "EV";
+	/** Importing = IG */
+	public static final String ZZ_DOCSTATUS_Importing = "IG";
+	/** Imported = IM */
+	public static final String ZZ_DOCSTATUS_Imported = "IM";
+	/** In Progress = IP */
+	public static final String ZZ_DOCSTATUS_InProgress = "IP";
+	/** Not Recommended By Senior Mgr SDR = N1 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrSDR = "N1";
+	/** Not Recommended By Senior Mgr Finance = N2 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrFinance = "N2";
+	/** Not Recommended By COO = N3 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCOO = "N3";
+	/** Not Recommended By CFO = N4 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCFO = "N4";
+	/** Not Recommended By CEO = N5 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCEO = "N5";
+	/** Not Approved by Snr Manager = NA */
+	public static final String ZZ_DOCSTATUS_NotApprovedBySnrManager = "NA";
+	/** Not Approved By Manager Finance Consumables = NC */
+	public static final String ZZ_DOCSTATUS_NotApprovedByManagerFinanceConsumables = "NC";
+	/** Not Approved By SDL Finance Mgr = ND */
+	public static final String ZZ_DOCSTATUS_NotApprovedBySDLFinanceMgr = "ND";
+	/** Not Approved By IT Manager = NI */
+	public static final String ZZ_DOCSTATUS_NotApprovedByITManager = "NI";
+	/** Not Approved by LM = NL */
+	public static final String ZZ_DOCSTATUS_NotApprovedByLM = "NL";
+	/** Not Approved = NP */
+	public static final String ZZ_DOCSTATUS_NotApproved = "NP";
+	/** Not Recommended = NR */
+	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
+	/** Not Approved by Snr Admin Finance = NS */
+	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Not Verified = NV */
+	public static final String ZZ_DOCSTATUS_NotVerified = "NV";
+	/** Pending = PE */
+	public static final String ZZ_DOCSTATUS_Pending = "PE";
+	/** Query = QR */
+	public static final String ZZ_DOCSTATUS_Query = "QR";
+	/** Recommended By Senior Mgr Finance = R1 */
+	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
+	/** Recommended By COO = R2 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
+	/** Recommended By CFO = R3 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
+	/** Recommended By CEO = R4 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCEO = "R4";
+	/** Recommended for Approval = RA */
+	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
+	/** Recommended = RC */
+	public static final String ZZ_DOCSTATUS_Recommended = "RC";
+	/** Recommended By Senior Mgr SDR = RD */
+	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
+	/** Recommended for Evaluation = RE */
+	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
+	/** Submitted to Manager Finance Consumables = SC */
+	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
+	/** Submitted To SDL Finance Mgr = SD */
+	public static final String ZZ_DOCSTATUS_SubmittedToSDLFinanceMgr = "SD";
+	/** Submitted To IT Manager = SI */
+	public static final String ZZ_DOCSTATUS_SubmittedToITManager = "SI";
+	/** Submitted To IT Admin = ST */
+	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
+	/** Submitted = SU */
+	public static final String ZZ_DOCSTATUS_Submitted = "SU";
+	/** Transfer Out = TO */
+	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
+	/** Updated by SDR Admin = UA */
+	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
+	/** Uploaded = UP */
+	public static final String ZZ_DOCSTATUS_Uploaded = "UP";
+	/** Delinked = UnSdfOrg */
+	public static final String ZZ_DOCSTATUS_Delinked = "UnSdfOrg";
+	/** Validating = VA */
+	public static final String ZZ_DOCSTATUS_Validating = "VA";
+	/** Verified = VE */
+	public static final String ZZ_DOCSTATUS_Verified = "VE";
+	/** Set Document Status.
+		@param ZZ_DocStatus Document Status
+	*/
+	public void setZZ_DocStatus (String ZZ_DocStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZ_DocStatus, ZZ_DocStatus);
+	}
+
+	/** Get Document Status.
+		@return Document Status	  */
+	public String getZZ_DocStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
 	/** Set ID No.
@@ -1105,6 +1340,33 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 	public int getZZ_Nationality_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Nationality_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_Recommender() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Recommender_ID(), get_TrxName());
+	}
+
+	/** Set Recommender.
+		@param ZZ_Recommender_ID Recommender
+	*/
+	public void setZZ_Recommender_ID (int ZZ_Recommender_ID)
+	{
+		if (ZZ_Recommender_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Recommender_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Recommender_ID, Integer.valueOf(ZZ_Recommender_ID));
+	}
+
+	/** Get Recommender.
+		@return Recommender	  */
+	public int getZZ_Recommender_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Recommender_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

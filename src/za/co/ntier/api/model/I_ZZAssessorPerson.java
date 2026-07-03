@@ -134,6 +134,21 @@ public interface I_ZZAssessorPerson
 	  */
 	public boolean isActive();
 
+    /** Column name Parent_ID */
+    public static final String COLUMNNAME_Parent_ID = "Parent_ID";
+
+	/** Set Parent.
+	  * Parent of Entity
+	  */
+	public void setParent_ID (int Parent_ID);
+
+	/** Get Parent.
+	  * Parent of Entity
+	  */
+	public int getParent_ID();
+
+	public I_ZZAssessorPerson getParent() throws RuntimeException;
+
     /** Column name StartDate */
     public static final String COLUMNNAME_StartDate = "StartDate";
 

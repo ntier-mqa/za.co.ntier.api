@@ -1,0 +1,250 @@
+/******************************************************************************
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
+ * This program is free software, you can redistribute it and/or modify it    *
+ * under the terms version 2 of the GNU General Public License as published   *
+ * by the Free Software Foundation. This program is distributed in the hope   *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
+ * See the GNU General Public License for more details.                       *
+ * You should have received a copy of the GNU General Public License along    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
+ * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
+ * For the text or an alternative of this public license, you may reach us    *
+ * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
+ * or via info@compiere.org or http://www.compiere.org/license.html           *
+ *****************************************************************************/
+package za.co.ntier.api.model;
+
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+import org.compiere.model.*;
+import org.compiere.util.KeyNamePair;
+
+/** Generated Interface for ZZArtisans
+ *  @author iDempiere (generated) 
+ *  @version Release 12
+ */
+@SuppressWarnings("all")
+public interface I_ZZArtisans 
+{
+
+    /** TableName=ZZArtisans */
+    public static final String Table_Name = "ZZArtisans";
+
+    /** AD_Table_ID=1000312 */
+    public static final int Table_ID = MTable.getTable_ID(Table_Name);
+
+    KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
+
+    /** AccessLevel = 3 - Client - Org 
+     */
+    BigDecimal accessLevel = BigDecimal.valueOf(3);
+
+    /** Load Meta Data */
+
+    /** Column name AD_Client_ID */
+    public static final String COLUMNNAME_AD_Client_ID = "AD_Client_ID";
+
+	/** Get Tenant.
+	  * Tenant for this installation.
+	  */
+	public int getAD_Client_ID();
+
+    /** Column name AD_Org_ID */
+    public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
+
+	/** Set Unit.
+	  * Organizational entity within tenant
+	  */
+	public void setAD_Org_ID (int AD_Org_ID);
+
+	/** Get Unit.
+	  * Organizational entity within tenant
+	  */
+	public int getAD_Org_ID();
+
+    /** Column name Created */
+    public static final String COLUMNNAME_Created = "Created";
+
+	/** Get Created.
+	  * Date this record was created
+	  */
+	public Timestamp getCreated();
+
+    /** Column name CreatedBy */
+    public static final String COLUMNNAME_CreatedBy = "CreatedBy";
+
+	/** Get Created By.
+	  * User who created this records
+	  */
+	public int getCreatedBy();
+
+    /** Column name IsActive */
+    public static final String COLUMNNAME_IsActive = "IsActive";
+
+	/** Set Active.
+	  * The record is active in the system
+	  */
+	public void setIsActive (boolean IsActive);
+
+	/** Get Active.
+	  * The record is active in the system
+	  */
+	public boolean isActive();
+
+    /** Column name Registrationenddate */
+    public static final String COLUMNNAME_Registrationenddate = "Registrationenddate";
+
+	/** Set Registration End Date	  */
+	public void setRegistrationenddate (Timestamp Registrationenddate);
+
+	/** Get Registration End Date	  */
+	public Timestamp getRegistrationenddate();
+
+    /** Column name Registrationstartdate */
+    public static final String COLUMNNAME_Registrationstartdate = "Registrationstartdate";
+
+	/** Set Registration Start Date	  */
+	public void setRegistrationstartdate (Timestamp Registrationstartdate);
+
+	/** Get Registration Start Date	  */
+	public Timestamp getRegistrationstartdate();
+
+    /** Column name Updated */
+    public static final String COLUMNNAME_Updated = "Updated";
+
+	/** Get Updated.
+	  * Date this record was updated
+	  */
+	public Timestamp getUpdated();
+
+    /** Column name UpdatedBy */
+    public static final String COLUMNNAME_UpdatedBy = "UpdatedBy";
+
+	/** Get Updated By.
+	  * User who updated this records
+	  */
+	public int getUpdatedBy();
+
+    /** Column name ZZArtisanCode */
+    public static final String COLUMNNAME_ZZArtisanCode = "ZZArtisanCode";
+
+	/** Set Artisan Code	  */
+	public void setZZArtisanCode (String ZZArtisanCode);
+
+	/** Get Artisan Code	  */
+	public String getZZArtisanCode();
+
+    /** Column name ZZArtisanTitle */
+    public static final String COLUMNNAME_ZZArtisanTitle = "ZZArtisanTitle";
+
+	/** Set Artisan Title	  */
+	public void setZZArtisanTitle (String ZZArtisanTitle);
+
+	/** Get Artisan Title	  */
+	public String getZZArtisanTitle();
+
+    /** Column name ZZArtisanType */
+    public static final String COLUMNNAME_ZZArtisanType = "ZZArtisanType";
+
+	/** Set Artisan Type	  */
+	public void setZZArtisanType (String ZZArtisanType);
+
+	/** Get Artisan Type	  */
+	public String getZZArtisanType();
+
+    /** Column name ZZArtisans_ID */
+    public static final String COLUMNNAME_ZZArtisans_ID = "ZZArtisans_ID";
+
+	/** Set Artisans	  */
+	public void setZZArtisans_ID (int ZZArtisans_ID);
+
+	/** Get Artisans	  */
+	public int getZZArtisans_ID();
+
+    /** Column name ZZArtisans_UU */
+    public static final String COLUMNNAME_ZZArtisans_UU = "ZZArtisans_UU";
+
+	/** Set ZZArtisans_UU	  */
+	public void setZZArtisans_UU (String ZZArtisans_UU);
+
+	/** Get ZZArtisans_UU	  */
+	public String getZZArtisans_UU();
+
+    /** Column name ZZCanCompleteBefore18 */
+    public static final String COLUMNNAME_ZZCanCompleteBefore18 = "ZZCanCompleteBefore18";
+
+	/** Set Can Complete Before 18	  */
+	public void setZZCanCompleteBefore18 (String ZZCanCompleteBefore18);
+
+	/** Get Can Complete Before 18	  */
+	public String getZZCanCompleteBefore18();
+
+    /** Column name ZZIsTvetncv */
+    public static final String COLUMNNAME_ZZIsTvetncv = "ZZIsTvetncv";
+
+	/** Set TVET-NCV	  */
+	public void setZZIsTvetncv (String ZZIsTvetncv);
+
+	/** Get TVET-NCV	  */
+	public String getZZIsTvetncv();
+
+    /** Column name ZZLkpOfoOccupationTree_ID */
+    public static final String COLUMNNAME_ZZLkpOfoOccupationTree_ID = "ZZLkpOfoOccupationTree_ID";
+
+	/** Set Ofo Occupation	  */
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID);
+
+	/** Get Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID();
+
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException;
+
+    /** Column name ZZMigrateValues */
+    public static final String COLUMNNAME_ZZMigrateValues = "ZZMigrateValues";
+
+	/** Set Migrate Values	  */
+	public void setZZMigrateValues (String ZZMigrateValues);
+
+	/** Get Migrate Values	  */
+	public String getZZMigrateValues();
+
+    /** Column name ZZMigrationCode */
+    public static final String COLUMNNAME_ZZMigrationCode = "ZZMigrationCode";
+
+	/** Set Migration Code	  */
+	public void setZZMigrationCode (int ZZMigrationCode);
+
+	/** Get Migration Code	  */
+	public int getZZMigrationCode();
+
+    /** Column name ZZNqfLevel */
+    public static final String COLUMNNAME_ZZNqfLevel = "ZZNqfLevel";
+
+	/** Set NQF Level	  */
+	public void setZZNqfLevel (String ZZNqfLevel);
+
+	/** Get NQF Level	  */
+	public String getZZNqfLevel();
+
+    /** Column name ZZQualityAssuranceBody */
+    public static final String COLUMNNAME_ZZQualityAssuranceBody = "ZZQualityAssuranceBody";
+
+	/** Set Quality Assurance Body	  */
+	public void setZZQualityAssuranceBody (String ZZQualityAssuranceBody);
+
+	/** Get Quality Assurance Body	  */
+	public String getZZQualityAssuranceBody();
+
+    /** Column name ZZTradeQualification_ID */
+    public static final String COLUMNNAME_ZZTradeQualification_ID = "ZZTradeQualification_ID";
+
+	/** Set Trade Qualification	  */
+	public void setZZTradeQualification_ID (int ZZTradeQualification_ID);
+
+	/** Get Trade Qualification	  */
+	public int getZZTradeQualification_ID();
+
+	public I_ZZTradeQualification getZZTradeQualification() throws RuntimeException;
+}

@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260627L;
+	private static final long serialVersionUID = 20260703L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -160,6 +160,34 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	public Timestamp getEndDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_EndDate);
+	}
+
+	public I_ZZAssessorPerson getParent() throws RuntimeException
+	{
+		return (I_ZZAssessorPerson)MTable.get(getCtx(), I_ZZAssessorPerson.Table_ID)
+			.getPO(getParent_ID(), get_TrxName());
+	}
+
+	/** Set Parent.
+		@param Parent_ID Parent of Entity
+	*/
+	public void setParent_ID (int Parent_ID)
+	{
+		if (Parent_ID < 1)
+			set_Value (COLUMNNAME_Parent_ID, null);
+		else
+			set_Value (COLUMNNAME_Parent_ID, Integer.valueOf(Parent_ID));
+	}
+
+	/** Get Parent.
+		@return Parent of Entity
+	  */
+	public int getParent_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Parent_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Start Date.
