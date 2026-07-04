@@ -43,4 +43,8 @@ public class MZZAssessorPersonV extends X_ZZAssessorPerson_v {
 		MRefList refListItem = MRefList.get(getCtx(), columnDef.getAD_Reference_Value_ID(), getZZAssessorRole(), null);
 		return refListItem == null ? null:refListItem.getName();
 	}
+	
+	public String getZZScopeExtensionText() {
+		return getParent_ID() == 0 ? "False" : "True";
+	}
 }

@@ -32,7 +32,7 @@ public interface I_ZZAssessorPerson_v
     /** TableName=ZZAssessorPerson_v */
     public static final String Table_Name = "ZZAssessorPerson_v";
 
-    /** AD_Table_ID=1000257 */
+    /** AD_Table_ID=1000249 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -160,6 +160,21 @@ public interface I_ZZAssessorPerson_v
 	  */
 	public boolean isActive();
 
+    /** Column name Parent_ID */
+    public static final String COLUMNNAME_Parent_ID = "Parent_ID";
+
+	/** Set Parent.
+	  * Parent of Entity
+	  */
+	public void setParent_ID (int Parent_ID);
+
+	/** Get Parent.
+	  * Parent of Entity
+	  */
+	public int getParent_ID();
+
+	public I_ZZAssessorPerson getParent() throws RuntimeException;
+
     /** Column name Phone */
     public static final String COLUMNNAME_Phone = "Phone";
 
@@ -224,6 +239,8 @@ public interface I_ZZAssessorPerson_v
 	/** Get Assessor Person	  */
 	public int getZZAssessorPerson_ID();
 
+	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException;
+
     /** Column name ZZAssessorPerson_v_ID */
     public static final String COLUMNNAME_ZZAssessorPerson_v_ID = "ZZAssessorPerson_v_ID";
 
@@ -245,10 +262,10 @@ public interface I_ZZAssessorPerson_v
     /** Column name ZZAssessorRole */
     public static final String COLUMNNAME_ZZAssessorRole = "ZZAssessorRole";
 
-	/** Set Role	  */
+	/** Set Assesssor - Moderator	  */
 	public void setZZAssessorRole (String ZZAssessorRole);
 
-	/** Get Role	  */
+	/** Get Assesssor - Moderator	  */
 	public String getZZAssessorRole();
 
     /** Column name ZZEquity */
@@ -458,6 +475,24 @@ public interface I_ZZAssessorPerson_v
 
 	public I_C_Location getZZPostalLocation() throws RuntimeException;
 
+    /** Column name ZZScopeExtension */
+    public static final String COLUMNNAME_ZZScopeExtension = "ZZScopeExtension";
+
+	/** Set Scope Extension	  */
+	public void setZZScopeExtension (String ZZScopeExtension);
+
+	/** Get Scope Extension	  */
+	public String getZZScopeExtension();
+
+    /** Column name ZZSubmittedDate */
+    public static final String COLUMNNAME_ZZSubmittedDate = "ZZSubmittedDate";
+
+	/** Set Submitted Date	  */
+	public void setZZSubmittedDate (Timestamp ZZSubmittedDate);
+
+	/** Get Submitted Date	  */
+	public Timestamp getZZSubmittedDate();
+
     /** Column name ZZSurname */
     public static final String COLUMNNAME_ZZSurname = "ZZSurname";
 
@@ -502,12 +537,12 @@ public interface I_ZZAssessorPerson_v
     public static final String COLUMNNAME_ZZ_Assessor = "ZZ_Assessor";
 
 	/** Set Assessor.
-	  * Assessor number
+	  * Assessor number (Auto Generated)
 	  */
 	public void setZZ_Assessor (String ZZ_Assessor);
 
 	/** Get Assessor.
-	  * Assessor number
+	  * Assessor number (Auto Generated)
 	  */
 	public String getZZ_Assessor();
 
@@ -597,6 +632,19 @@ public interface I_ZZAssessorPerson_v
 	public int getZZ_LI_SocioEconomicStatus_ID();
 
 	public I_ZZ_LI_SocioEconomicStatus getZZ_LI_SocioEconomicStatus() throws RuntimeException;
+
+    /** Column name ZZ_Moderator */
+    public static final String COLUMNNAME_ZZ_Moderator = "ZZ_Moderator";
+
+	/** Set Moderator.
+	  * Moderator number (Auto Generated)
+	  */
+	public void setZZ_Moderator (String ZZ_Moderator);
+
+	/** Get Moderator.
+	  * Moderator number (Auto Generated)
+	  */
+	public String getZZ_Moderator();
 
     /** Column name ZZ_Nationality_ID */
     public static final String COLUMNNAME_ZZ_Nationality_ID = "ZZ_Nationality_ID";

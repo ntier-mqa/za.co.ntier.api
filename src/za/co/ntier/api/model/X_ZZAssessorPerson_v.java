@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260508L;
+	private static final long serialVersionUID = 20260703L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson_v (Properties ctx, int ZZAssessorPerson_v_ID, String trxName)
@@ -190,6 +190,34 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 		return (Timestamp)get_Value(COLUMNNAME_EndDate);
 	}
 
+	public I_ZZAssessorPerson getParent() throws RuntimeException
+	{
+		return (I_ZZAssessorPerson)MTable.get(getCtx(), I_ZZAssessorPerson.Table_ID)
+			.getPO(getParent_ID(), get_TrxName());
+	}
+
+	/** Set Parent.
+		@param Parent_ID Parent of Entity
+	*/
+	public void setParent_ID (int Parent_ID)
+	{
+		if (Parent_ID < 1)
+			set_Value (COLUMNNAME_Parent_ID, null);
+		else
+			set_Value (COLUMNNAME_Parent_ID, Integer.valueOf(Parent_ID));
+	}
+
+	/** Get Parent.
+		@return Parent of Entity
+	  */
+	public int getParent_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Parent_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Phone.
 		@param Phone Identifies a telephone number
 	*/
@@ -236,6 +264,12 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 	public Timestamp getStartDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_StartDate);
+	}
+
+	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException
+	{
+		return (I_ZZAssessorPerson)MTable.get(getCtx(), I_ZZAssessorPerson.Table_ID)
+			.getPO(getZZAssessorPerson_ID(), get_TrxName());
 	}
 
 	/** Set Assessor Person.
@@ -299,8 +333,8 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 	public static final String ZZASSESSORROLE_Assessor = "Assessor";
 	/** Moderator = Moderator */
 	public static final String ZZASSESSORROLE_Moderator = "Moderator";
-	/** Set Role.
-		@param ZZAssessorRole Role
+	/** Set Assesssor - Moderator.
+		@param ZZAssessorRole Assesssor - Moderator
 	*/
 	public void setZZAssessorRole (String ZZAssessorRole)
 	{
@@ -308,8 +342,8 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 		set_Value (COLUMNNAME_ZZAssessorRole, ZZAssessorRole);
 	}
 
-	/** Get Role.
-		@return Role	  */
+	/** Get Assesssor - Moderator.
+		@return Assesssor - Moderator	  */
 	public String getZZAssessorRole()
 	{
 		return (String)get_Value(COLUMNNAME_ZZAssessorRole);
@@ -354,8 +388,8 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 		return (String)get_Value(COLUMNNAME_ZZFirstName);
 	}
 
-	/** Famale = F */
-	public static final String ZZGENDER_Famale = "F";
+	/** Female = F */
+	public static final String ZZGENDER_Female = "F";
 	/** Male = M */
 	public static final String ZZGENDER_Male = "M";
 	/** Other = O */
@@ -789,6 +823,43 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 		return ii.intValue();
 	}
 
+	/** ZZScopeExtension AD_Reference_ID=319 */
+	public static final int ZZSCOPEEXTENSION_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZSCOPEEXTENSION_No = "N";
+	/** Yes = Y */
+	public static final String ZZSCOPEEXTENSION_Yes = "Y";
+	/** Set Scope Extension.
+		@param ZZScopeExtension Scope Extension
+	*/
+	public void setZZScopeExtension (String ZZScopeExtension)
+	{
+
+		set_Value (COLUMNNAME_ZZScopeExtension, ZZScopeExtension);
+	}
+
+	/** Get Scope Extension.
+		@return Scope Extension	  */
+	public String getZZScopeExtension()
+	{
+		return (String)get_Value(COLUMNNAME_ZZScopeExtension);
+	}
+
+	/** Set Submitted Date.
+		@param ZZSubmittedDate Submitted Date
+	*/
+	public void setZZSubmittedDate (Timestamp ZZSubmittedDate)
+	{
+		set_Value (COLUMNNAME_ZZSubmittedDate, ZZSubmittedDate);
+	}
+
+	/** Get Submitted Date.
+		@return Submitted Date	  */
+	public Timestamp getZZSubmittedDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZSubmittedDate);
+	}
+
 	/** Set Surname.
 		@param ZZSurname Surname
 	*/
@@ -874,7 +945,7 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 	}
 
 	/** Set Assessor.
-		@param ZZ_Assessor Assessor number
+		@param ZZ_Assessor Assessor number (Auto Generated)
 	*/
 	public void setZZ_Assessor (String ZZ_Assessor)
 	{
@@ -882,7 +953,7 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 	}
 
 	/** Get Assessor.
-		@return Assessor number
+		@return Assessor number (Auto Generated)
 	  */
 	public String getZZ_Assessor()
 	{
@@ -946,6 +1017,8 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** PrepareCEO = PC */
 	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
+	/** Refer Back = RB */
+	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
 	/** Re-Submit = RS */
@@ -1194,6 +1267,22 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Moderator.
+		@param ZZ_Moderator Moderator number (Auto Generated)
+	*/
+	public void setZZ_Moderator (String ZZ_Moderator)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_Moderator, ZZ_Moderator);
+	}
+
+	/** Get Moderator.
+		@return Moderator number (Auto Generated)
+	  */
+	public String getZZ_Moderator()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Moderator);
 	}
 
 	public I_ZZ_Nationality getZZ_Nationality() throws RuntimeException
