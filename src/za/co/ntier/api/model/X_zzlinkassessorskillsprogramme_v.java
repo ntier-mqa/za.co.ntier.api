@@ -18,14 +18,15 @@
 package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
-/** Generated Model for ZZLinkAssessorSkillsProgramme
+/** Generated Model for zzlinkassessorskillsprogramme_v
  *  @author iDempiere (generated)
  *  @version Release 12 - $Id$ */
-@org.adempiere.base.Model(table="ZZLinkAssessorSkillsProgramme")
-public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAssessorSkillsProgramme, I_Persistent
+@org.adempiere.base.Model(table="zzlinkassessorskillsprogramme_v")
+public class X_zzlinkassessorskillsprogramme_v extends PO implements I_zzlinkassessorskillsprogramme_v, I_Persistent
 {
 
 	/**
@@ -34,47 +35,43 @@ public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAsses
 	private static final long serialVersionUID = 20260709L;
 
     /** Standard Constructor */
-    public X_ZZLinkAssessorSkillsProgramme (Properties ctx, int ZZLinkAssessorSkillsProgramme_ID, String trxName)
+    public X_zzlinkassessorskillsprogramme_v (Properties ctx, int zzlinkassessorskillsprogramme_v_ID, String trxName)
     {
-      super (ctx, ZZLinkAssessorSkillsProgramme_ID, trxName);
-      /** if (ZZLinkAssessorSkillsProgramme_ID == 0)
+      super (ctx, zzlinkassessorskillsprogramme_v_ID, trxName);
+      /** if (zzlinkassessorskillsprogramme_v_ID == 0)
         {
-			setZZLinkAssessorSkillsProgramme_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZLinkAssessorSkillsProgramme (Properties ctx, int ZZLinkAssessorSkillsProgramme_ID, String trxName, String ... virtualColumns)
+    public X_zzlinkassessorskillsprogramme_v (Properties ctx, int zzlinkassessorskillsprogramme_v_ID, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZLinkAssessorSkillsProgramme_ID, trxName, virtualColumns);
-      /** if (ZZLinkAssessorSkillsProgramme_ID == 0)
+      super (ctx, zzlinkassessorskillsprogramme_v_ID, trxName, virtualColumns);
+      /** if (zzlinkassessorskillsprogramme_v_ID == 0)
         {
-			setZZLinkAssessorSkillsProgramme_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZLinkAssessorSkillsProgramme (Properties ctx, String ZZLinkAssessorSkillsProgramme_UU, String trxName)
+    public X_zzlinkassessorskillsprogramme_v (Properties ctx, String zzlinkassessorskillsprogramme_v_UU, String trxName)
     {
-      super (ctx, ZZLinkAssessorSkillsProgramme_UU, trxName);
-      /** if (ZZLinkAssessorSkillsProgramme_UU == null)
+      super (ctx, zzlinkassessorskillsprogramme_v_UU, trxName);
+      /** if (zzlinkassessorskillsprogramme_v_UU == null)
         {
-			setZZLinkAssessorSkillsProgramme_ID (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZLinkAssessorSkillsProgramme (Properties ctx, String ZZLinkAssessorSkillsProgramme_UU, String trxName, String ... virtualColumns)
+    public X_zzlinkassessorskillsprogramme_v (Properties ctx, String zzlinkassessorskillsprogramme_v_UU, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZLinkAssessorSkillsProgramme_UU, trxName, virtualColumns);
-      /** if (ZZLinkAssessorSkillsProgramme_UU == null)
+      super (ctx, zzlinkassessorskillsprogramme_v_UU, trxName, virtualColumns);
+      /** if (zzlinkassessorskillsprogramme_v_UU == null)
         {
-			setZZLinkAssessorSkillsProgramme_ID (0);
         } */
     }
 
     /** Load Constructor */
-    public X_ZZLinkAssessorSkillsProgramme (Properties ctx, ResultSet rs, String trxName)
+    public X_zzlinkassessorskillsprogramme_v (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -96,7 +93,7 @@ public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAsses
 
     public String toString()
     {
-      StringBuilder sb = new StringBuilder ("X_ZZLinkAssessorSkillsProgramme[")
+      StringBuilder sb = new StringBuilder ("X_zzlinkassessorskillsprogramme_v[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -106,7 +103,7 @@ public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAsses
 	*/
 	public void setComments (String Comments)
 	{
-		set_Value (COLUMNNAME_Comments, Comments);
+		set_ValueNoCheck (COLUMNNAME_Comments, Comments);
 	}
 
 	/** Get Comments.
@@ -117,10 +114,49 @@ public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAsses
 		return (String)get_Value(COLUMNNAME_Comments);
 	}
 
-	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException
+	/** Set Registration End Date.
+		@param Registrationenddate Registration End Date
+	*/
+	public void setRegistrationenddate (Timestamp Registrationenddate)
 	{
-		return (I_ZZAssessorPerson)MTable.get(getCtx(), I_ZZAssessorPerson.Table_ID)
-			.getPO(getZZAssessorPerson_ID(), get_TrxName());
+		set_Value (COLUMNNAME_Registrationenddate, Registrationenddate);
+	}
+
+	/** Get Registration End Date.
+		@return Registration End Date	  */
+	public Timestamp getRegistrationenddate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Registrationenddate);
+	}
+
+	/** Set Registration Start Date.
+		@param Registrationstartdate Registration Start Date
+	*/
+	public void setRegistrationstartdate (Timestamp Registrationstartdate)
+	{
+		set_Value (COLUMNNAME_Registrationstartdate, Registrationstartdate);
+	}
+
+	/** Get Registration Start Date.
+		@return Registration Start Date	  */
+	public Timestamp getRegistrationstartdate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Registrationstartdate);
+	}
+
+	/** Set Update Recommend or Comment.
+		@param UpdateRecommendComment Update Recommend or Comment
+	*/
+	public void setUpdateRecommendComment (String UpdateRecommendComment)
+	{
+		set_Value (COLUMNNAME_UpdateRecommendComment, UpdateRecommendComment);
+	}
+
+	/** Get Update Recommend or Comment.
+		@return Update Recommend or Comment	  */
+	public String getUpdateRecommendComment()
+	{
+		return (String)get_Value(COLUMNNAME_UpdateRecommendComment);
 	}
 
 	/** Set Assessor Person.
@@ -139,6 +175,24 @@ public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAsses
 	public int getZZAssessorPerson_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZAssessorPerson_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Credits.
+		@param ZZCredits Credits
+	*/
+	public void setZZCredits (int ZZCredits)
+	{
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
+	}
+
+	/** Get Credits.
+		@return Credits	  */
+	public int getZZCredits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -166,25 +220,41 @@ public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAsses
 		return ii.intValue();
 	}
 
-	/** Set ZZLinkAssessorSkillsProgramme_UU.
-		@param ZZLinkAssessorSkillsProgramme_UU ZZLinkAssessorSkillsProgramme_UU
+	/** Set Link Assessor Skills Programme View.
+		@param ZZLinkAssessorSkillsProgramme_v_ID Link Assessor Skills Programme View
 	*/
-	public void setZZLinkAssessorSkillsProgramme_UU (String ZZLinkAssessorSkillsProgramme_UU)
+	public void setZZLinkAssessorSkillsProgramme_v_ID (int ZZLinkAssessorSkillsProgramme_v_ID)
 	{
-		set_Value (COLUMNNAME_ZZLinkAssessorSkillsProgramme_UU, ZZLinkAssessorSkillsProgramme_UU);
+		if (ZZLinkAssessorSkillsProgramme_v_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLinkAssessorSkillsProgramme_v_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLinkAssessorSkillsProgramme_v_ID, Integer.valueOf(ZZLinkAssessorSkillsProgramme_v_ID));
 	}
 
-	/** Get ZZLinkAssessorSkillsProgramme_UU.
-		@return ZZLinkAssessorSkillsProgramme_UU	  */
-	public String getZZLinkAssessorSkillsProgramme_UU()
+	/** Get Link Assessor Skills Programme View.
+		@return Link Assessor Skills Programme View
+	  */
+	public int getZZLinkAssessorSkillsProgramme_v_ID()
 	{
-		return (String)get_Value(COLUMNNAME_ZZLinkAssessorSkillsProgramme_UU);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLinkAssessorSkillsProgramme_v_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
-	public I_ZZQctoSkillsProgramme getZZQctoSkillsProgramme() throws RuntimeException
+	/** Set Link Assessor Skills Programme View UU.
+		@param ZZLinkAssessorSkillsProgramme_v_UU Link Assessor Skills Programme View UU
+	*/
+	public void setZZLinkAssessorSkillsProgramme_v_UU (String ZZLinkAssessorSkillsProgramme_v_UU)
 	{
-		return (I_ZZQctoSkillsProgramme)MTable.get(getCtx(), I_ZZQctoSkillsProgramme.Table_ID)
-			.getPO(getZZQctoSkillsProgramme_ID(), get_TrxName());
+		set_Value (COLUMNNAME_ZZLinkAssessorSkillsProgramme_v_UU, ZZLinkAssessorSkillsProgramme_v_UU);
+	}
+
+	/** Get Link Assessor Skills Programme View UU.
+		@return Link Assessor Skills Programme View UU	  */
+	public String getZZLinkAssessorSkillsProgramme_v_UU()
+	{
+		return (String)get_Value(COLUMNNAME_ZZLinkAssessorSkillsProgramme_v_UU);
 	}
 
 	/** Set QCTO Skills Programme.
@@ -208,10 +278,34 @@ public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAsses
 		return ii.intValue();
 	}
 
-	public I_ZZSkillsProgramme getZZSkillsProgramme() throws RuntimeException
+	/** Set SkillsProgramme Code.
+		@param ZZSkillsProgrammeCode SkillsProgramme Code
+	*/
+	public void setZZSkillsProgrammeCode (String ZZSkillsProgrammeCode)
 	{
-		return (I_ZZSkillsProgramme)MTable.get(getCtx(), I_ZZSkillsProgramme.Table_ID)
-			.getPO(getZZSkillsProgramme_ID(), get_TrxName());
+		set_Value (COLUMNNAME_ZZSkillsProgrammeCode, ZZSkillsProgrammeCode);
+	}
+
+	/** Get SkillsProgramme Code.
+		@return SkillsProgramme Code	  */
+	public String getZZSkillsProgrammeCode()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSkillsProgrammeCode);
+	}
+
+	/** Set Skills Programme Title.
+		@param ZZSkillsProgrammeTitle Skills Programme Title
+	*/
+	public void setZZSkillsProgrammeTitle (String ZZSkillsProgrammeTitle)
+	{
+		set_Value (COLUMNNAME_ZZSkillsProgrammeTitle, ZZSkillsProgrammeTitle);
+	}
+
+	/** Get Skills Programme Title.
+		@return Skills Programme Title	  */
+	public String getZZSkillsProgrammeTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSkillsProgrammeTitle);
 	}
 
 	/** Set Skills Programme.
@@ -245,7 +339,7 @@ public class X_ZZLinkAssessorSkillsProgramme extends PO implements I_ZZLinkAsses
 	public void setZZ_isRecommended (String ZZ_isRecommended)
 	{
 
-		set_Value (COLUMNNAME_ZZ_isRecommended, ZZ_isRecommended);
+		set_ValueNoCheck (COLUMNNAME_ZZ_isRecommended, ZZ_isRecommended);
 	}
 
 	/** Get Recommended.

@@ -21,18 +21,18 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for ZZLinkAssessorSkillsProgramme
+/** Generated Interface for zzlinkassessorskillsprogramme_v
  *  @author iDempiere (generated) 
  *  @version Release 12
  */
 @SuppressWarnings("all")
-public interface I_ZZLinkAssessorSkillsProgramme 
+public interface I_zzlinkassessorskillsprogramme_v 
 {
 
-    /** TableName=ZZLinkAssessorSkillsProgramme */
-    public static final String Table_Name = "ZZLinkAssessorSkillsProgramme";
+    /** TableName=zzlinkassessorskillsprogramme_v */
+    public static final String Table_Name = "zzlinkassessorskillsprogramme_v";
 
-    /** AD_Table_ID=1000232 */
+    /** AD_Table_ID=1000251 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -106,6 +106,33 @@ public interface I_ZZLinkAssessorSkillsProgramme
 	  */
 	public boolean isActive();
 
+    /** Column name Registrationenddate */
+    public static final String COLUMNNAME_Registrationenddate = "Registrationenddate";
+
+	/** Set Registration End Date	  */
+	public void setRegistrationenddate (Timestamp Registrationenddate);
+
+	/** Get Registration End Date	  */
+	public Timestamp getRegistrationenddate();
+
+    /** Column name Registrationstartdate */
+    public static final String COLUMNNAME_Registrationstartdate = "Registrationstartdate";
+
+	/** Set Registration Start Date	  */
+	public void setRegistrationstartdate (Timestamp Registrationstartdate);
+
+	/** Get Registration Start Date	  */
+	public Timestamp getRegistrationstartdate();
+
+    /** Column name UpdateRecommendComment */
+    public static final String COLUMNNAME_UpdateRecommendComment = "UpdateRecommendComment";
+
+	/** Set Update Recommend or Comment	  */
+	public void setUpdateRecommendComment (String UpdateRecommendComment);
+
+	/** Get Update Recommend or Comment	  */
+	public String getUpdateRecommendComment();
+
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
 
@@ -131,7 +158,14 @@ public interface I_ZZLinkAssessorSkillsProgramme
 	/** Get Assessor Person	  */
 	public int getZZAssessorPerson_ID();
 
-	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException;
+    /** Column name ZZCredits */
+    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+
+	/** Set Credits	  */
+	public void setZZCredits (int ZZCredits);
+
+	/** Get Credits	  */
+	public int getZZCredits();
 
     /** Column name ZZLinkAssessorSkillsProgramme_ID */
     public static final String COLUMNNAME_ZZLinkAssessorSkillsProgramme_ID = "ZZLinkAssessorSkillsProgramme_ID";
@@ -146,14 +180,27 @@ public interface I_ZZLinkAssessorSkillsProgramme
 	  */
 	public int getZZLinkAssessorSkillsProgramme_ID();
 
-    /** Column name ZZLinkAssessorSkillsProgramme_UU */
-    public static final String COLUMNNAME_ZZLinkAssessorSkillsProgramme_UU = "ZZLinkAssessorSkillsProgramme_UU";
+    /** Column name ZZLinkAssessorSkillsProgramme_v_ID */
+    public static final String COLUMNNAME_ZZLinkAssessorSkillsProgramme_v_ID = "ZZLinkAssessorSkillsProgramme_v_ID";
 
-	/** Set ZZLinkAssessorSkillsProgramme_UU	  */
-	public void setZZLinkAssessorSkillsProgramme_UU (String ZZLinkAssessorSkillsProgramme_UU);
+	/** Set Link Assessor Skills Programme View.
+	  * Link Assessor Skills Programme View
+	  */
+	public void setZZLinkAssessorSkillsProgramme_v_ID (int ZZLinkAssessorSkillsProgramme_v_ID);
 
-	/** Get ZZLinkAssessorSkillsProgramme_UU	  */
-	public String getZZLinkAssessorSkillsProgramme_UU();
+	/** Get Link Assessor Skills Programme View.
+	  * Link Assessor Skills Programme View
+	  */
+	public int getZZLinkAssessorSkillsProgramme_v_ID();
+
+    /** Column name ZZLinkAssessorSkillsProgramme_v_UU */
+    public static final String COLUMNNAME_ZZLinkAssessorSkillsProgramme_v_UU = "ZZLinkAssessorSkillsProgramme_v_UU";
+
+	/** Set Link Assessor Skills Programme View UU	  */
+	public void setZZLinkAssessorSkillsProgramme_v_UU (String ZZLinkAssessorSkillsProgramme_v_UU);
+
+	/** Get Link Assessor Skills Programme View UU	  */
+	public String getZZLinkAssessorSkillsProgramme_v_UU();
 
     /** Column name ZZQctoSkillsProgramme_ID */
     public static final String COLUMNNAME_ZZQctoSkillsProgramme_ID = "ZZQctoSkillsProgramme_ID";
@@ -164,7 +211,23 @@ public interface I_ZZLinkAssessorSkillsProgramme
 	/** Get QCTO Skills Programme	  */
 	public int getZZQctoSkillsProgramme_ID();
 
-	public I_ZZQctoSkillsProgramme getZZQctoSkillsProgramme() throws RuntimeException;
+    /** Column name ZZSkillsProgrammeCode */
+    public static final String COLUMNNAME_ZZSkillsProgrammeCode = "ZZSkillsProgrammeCode";
+
+	/** Set SkillsProgramme Code	  */
+	public void setZZSkillsProgrammeCode (String ZZSkillsProgrammeCode);
+
+	/** Get SkillsProgramme Code	  */
+	public String getZZSkillsProgrammeCode();
+
+    /** Column name ZZSkillsProgrammeTitle */
+    public static final String COLUMNNAME_ZZSkillsProgrammeTitle = "ZZSkillsProgrammeTitle";
+
+	/** Set Skills Programme Title	  */
+	public void setZZSkillsProgrammeTitle (String ZZSkillsProgrammeTitle);
+
+	/** Get Skills Programme Title	  */
+	public String getZZSkillsProgrammeTitle();
 
     /** Column name ZZSkillsProgramme_ID */
     public static final String COLUMNNAME_ZZSkillsProgramme_ID = "ZZSkillsProgramme_ID";
@@ -174,8 +237,6 @@ public interface I_ZZLinkAssessorSkillsProgramme
 
 	/** Get Skills Programme	  */
 	public int getZZSkillsProgramme_ID();
-
-	public I_ZZSkillsProgramme getZZSkillsProgramme() throws RuntimeException;
 
     /** Column name ZZ_isRecommended */
     public static final String COLUMNNAME_ZZ_isRecommended = "ZZ_isRecommended";

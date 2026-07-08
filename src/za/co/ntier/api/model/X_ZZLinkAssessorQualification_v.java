@@ -18,14 +18,15 @@
 package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
-/** Generated Model for ZZLinkAssessorQualification
+/** Generated Model for ZZLinkAssessorQualification_v
  *  @author iDempiere (generated)
  *  @version Release 12 - $Id$ */
-@org.adempiere.base.Model(table="ZZLinkAssessorQualification")
-public class X_ZZLinkAssessorQualification extends PO implements I_ZZLinkAssessorQualification, I_Persistent
+@org.adempiere.base.Model(table="ZZLinkAssessorQualification_v")
+public class X_ZZLinkAssessorQualification_v extends PO implements I_ZZLinkAssessorQualification_v, I_Persistent
 {
 
 	/**
@@ -34,47 +35,51 @@ public class X_ZZLinkAssessorQualification extends PO implements I_ZZLinkAssesso
 	private static final long serialVersionUID = 20260709L;
 
     /** Standard Constructor */
-    public X_ZZLinkAssessorQualification (Properties ctx, int ZZLinkAssessorQualification_ID, String trxName)
+    public X_ZZLinkAssessorQualification_v (Properties ctx, int ZZLinkAssessorQualification_v_ID, String trxName)
     {
-      super (ctx, ZZLinkAssessorQualification_ID, trxName);
-      /** if (ZZLinkAssessorQualification_ID == 0)
+      super (ctx, ZZLinkAssessorQualification_v_ID, trxName);
+      /** if (ZZLinkAssessorQualification_v_ID == 0)
         {
-			setZZLinkAssessorQualification_ID (0);
+			setZZ_isRecommended (null);
+// Y
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZLinkAssessorQualification (Properties ctx, int ZZLinkAssessorQualification_ID, String trxName, String ... virtualColumns)
+    public X_ZZLinkAssessorQualification_v (Properties ctx, int ZZLinkAssessorQualification_v_ID, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZLinkAssessorQualification_ID, trxName, virtualColumns);
-      /** if (ZZLinkAssessorQualification_ID == 0)
+      super (ctx, ZZLinkAssessorQualification_v_ID, trxName, virtualColumns);
+      /** if (ZZLinkAssessorQualification_v_ID == 0)
         {
-			setZZLinkAssessorQualification_ID (0);
+			setZZ_isRecommended (null);
+// Y
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZLinkAssessorQualification (Properties ctx, String ZZLinkAssessorQualification_UU, String trxName)
+    public X_ZZLinkAssessorQualification_v (Properties ctx, String ZZLinkAssessorQualification_v_UU, String trxName)
     {
-      super (ctx, ZZLinkAssessorQualification_UU, trxName);
-      /** if (ZZLinkAssessorQualification_UU == null)
+      super (ctx, ZZLinkAssessorQualification_v_UU, trxName);
+      /** if (ZZLinkAssessorQualification_v_UU == null)
         {
-			setZZLinkAssessorQualification_ID (0);
+			setZZ_isRecommended (null);
+// Y
         } */
     }
 
     /** Standard Constructor */
-    public X_ZZLinkAssessorQualification (Properties ctx, String ZZLinkAssessorQualification_UU, String trxName, String ... virtualColumns)
+    public X_ZZLinkAssessorQualification_v (Properties ctx, String ZZLinkAssessorQualification_v_UU, String trxName, String ... virtualColumns)
     {
-      super (ctx, ZZLinkAssessorQualification_UU, trxName, virtualColumns);
-      /** if (ZZLinkAssessorQualification_UU == null)
+      super (ctx, ZZLinkAssessorQualification_v_UU, trxName, virtualColumns);
+      /** if (ZZLinkAssessorQualification_v_UU == null)
         {
-			setZZLinkAssessorQualification_ID (0);
+			setZZ_isRecommended (null);
+// Y
         } */
     }
 
     /** Load Constructor */
-    public X_ZZLinkAssessorQualification (Properties ctx, ResultSet rs, String trxName)
+    public X_ZZLinkAssessorQualification_v (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -96,7 +101,7 @@ public class X_ZZLinkAssessorQualification extends PO implements I_ZZLinkAssesso
 
     public String toString()
     {
-      StringBuilder sb = new StringBuilder ("X_ZZLinkAssessorQualification[")
+      StringBuilder sb = new StringBuilder ("X_ZZLinkAssessorQualification_v[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -117,10 +122,49 @@ public class X_ZZLinkAssessorQualification extends PO implements I_ZZLinkAssesso
 		return (String)get_Value(COLUMNNAME_Comments);
 	}
 
-	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException
+	/** Set Registration End Date.
+		@param Registrationenddate Registration End Date
+	*/
+	public void setRegistrationenddate (Timestamp Registrationenddate)
 	{
-		return (I_ZZAssessorPerson)MTable.get(getCtx(), I_ZZAssessorPerson.Table_ID)
-			.getPO(getZZAssessorPerson_ID(), get_TrxName());
+		set_Value (COLUMNNAME_Registrationenddate, Registrationenddate);
+	}
+
+	/** Get Registration End Date.
+		@return Registration End Date	  */
+	public Timestamp getRegistrationenddate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Registrationenddate);
+	}
+
+	/** Set Registration Start Date.
+		@param Registrationstartdate Registration Start Date
+	*/
+	public void setRegistrationstartdate (Timestamp Registrationstartdate)
+	{
+		set_Value (COLUMNNAME_Registrationstartdate, Registrationstartdate);
+	}
+
+	/** Get Registration Start Date.
+		@return Registration Start Date	  */
+	public Timestamp getRegistrationstartdate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Registrationstartdate);
+	}
+
+	/** Set Update Recommend or Comment.
+		@param UpdateRecommendComment Update Recommend or Comment
+	*/
+	public void setUpdateRecommendComment (String UpdateRecommendComment)
+	{
+		set_Value (COLUMNNAME_UpdateRecommendComment, UpdateRecommendComment);
+	}
+
+	/** Get Update Recommend or Comment.
+		@return Update Recommend or Comment	  */
+	public String getUpdateRecommendComment()
+	{
+		return (String)get_Value(COLUMNNAME_UpdateRecommendComment);
 	}
 
 	/** Set Assessor Person.
@@ -139,6 +183,24 @@ public class X_ZZLinkAssessorQualification extends PO implements I_ZZLinkAssesso
 	public int getZZAssessorPerson_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZAssessorPerson_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Credits.
+		@param ZZCredits Credits
+	*/
+	public void setZZCredits (int ZZCredits)
+	{
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
+	}
+
+	/** Get Credits.
+		@return Credits	  */
+	public int getZZCredits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -165,25 +227,40 @@ public class X_ZZLinkAssessorQualification extends PO implements I_ZZLinkAssesso
 		return ii.intValue();
 	}
 
-	/** Set ZZLinkAssessorQualification_UU.
-		@param ZZLinkAssessorQualification_UU ZZLinkAssessorQualification_UU
+	/** Set Link Assessor Qualification View.
+		@param ZZLinkAssessorQualification_v_ID Link Assessor Qualification View
 	*/
-	public void setZZLinkAssessorQualification_UU (String ZZLinkAssessorQualification_UU)
+	public void setZZLinkAssessorQualification_v_ID (int ZZLinkAssessorQualification_v_ID)
 	{
-		set_Value (COLUMNNAME_ZZLinkAssessorQualification_UU, ZZLinkAssessorQualification_UU);
+		if (ZZLinkAssessorQualification_v_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLinkAssessorQualification_v_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLinkAssessorQualification_v_ID, Integer.valueOf(ZZLinkAssessorQualification_v_ID));
 	}
 
-	/** Get ZZLinkAssessorQualification_UU.
-		@return ZZLinkAssessorQualification_UU	  */
-	public String getZZLinkAssessorQualification_UU()
+	/** Get Link Assessor Qualification View.
+		@return Link Assessor Qualification View	  */
+	public int getZZLinkAssessorQualification_v_ID()
 	{
-		return (String)get_Value(COLUMNNAME_ZZLinkAssessorQualification_UU);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLinkAssessorQualification_v_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
-	public I_ZZQctoQualification getZZQctoQualification() throws RuntimeException
+	/** Set LinkAssessor Qualification Vew UU.
+		@param ZZLinkAssessorQualification_v_UU LinkAssessor Qualification Vew UU
+	*/
+	public void setZZLinkAssessorQualification_v_UU (String ZZLinkAssessorQualification_v_UU)
 	{
-		return (I_ZZQctoQualification)MTable.get(getCtx(), I_ZZQctoQualification.Table_ID)
-			.getPO(getZZQctoQualification_ID(), get_TrxName());
+		set_ValueNoCheck (COLUMNNAME_ZZLinkAssessorQualification_v_UU, ZZLinkAssessorQualification_v_UU);
+	}
+
+	/** Get LinkAssessor Qualification Vew UU.
+		@return LinkAssessor Qualification Vew UU	  */
+	public String getZZLinkAssessorQualification_v_UU()
+	{
+		return (String)get_Value(COLUMNNAME_ZZLinkAssessorQualification_v_UU);
 	}
 
 	/** Set QCTO Qualification.
@@ -207,10 +284,34 @@ public class X_ZZLinkAssessorQualification extends PO implements I_ZZLinkAssesso
 		return ii.intValue();
 	}
 
-	public I_ZZQualification getZZQualification() throws RuntimeException
+	/** Set Qualification Code.
+		@param ZZQualificationCode Qualification Code
+	*/
+	public void setZZQualificationCode (String ZZQualificationCode)
 	{
-		return (I_ZZQualification)MTable.get(getCtx(), I_ZZQualification.Table_ID)
-			.getPO(getZZQualification_ID(), get_TrxName());
+		set_Value (COLUMNNAME_ZZQualificationCode, ZZQualificationCode);
+	}
+
+	/** Get Qualification Code.
+		@return Qualification Code	  */
+	public String getZZQualificationCode()
+	{
+		return (String)get_Value(COLUMNNAME_ZZQualificationCode);
+	}
+
+	/** Set Qualification Title.
+		@param ZZQualificationTitle Qualification Title
+	*/
+	public void setZZQualificationTitle (String ZZQualificationTitle)
+	{
+		set_Value (COLUMNNAME_ZZQualificationTitle, ZZQualificationTitle);
+	}
+
+	/** Get Qualification Title.
+		@return Qualification Title	  */
+	public String getZZQualificationTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZQualificationTitle);
 	}
 
 	/** Set Qualification.

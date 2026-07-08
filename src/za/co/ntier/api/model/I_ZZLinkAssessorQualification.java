@@ -64,6 +64,19 @@ public interface I_ZZLinkAssessorQualification
 	  */
 	public int getAD_Org_ID();
 
+    /** Column name Comments */
+    public static final String COLUMNNAME_Comments = "Comments";
+
+	/** Set Comments.
+	  * Comments or additional information
+	  */
+	public void setComments (String Comments);
+
+	/** Get Comments.
+	  * Comments or additional information
+	  */
+	public String getComments();
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -138,6 +151,17 @@ public interface I_ZZLinkAssessorQualification
 	/** Get ZZLinkAssessorQualification_UU	  */
 	public String getZZLinkAssessorQualification_UU();
 
+    /** Column name ZZQctoQualification_ID */
+    public static final String COLUMNNAME_ZZQctoQualification_ID = "ZZQctoQualification_ID";
+
+	/** Set QCTO Qualification	  */
+	public void setZZQctoQualification_ID (int ZZQctoQualification_ID);
+
+	/** Get QCTO Qualification	  */
+	public int getZZQctoQualification_ID();
+
+	public I_ZZQctoQualification getZZQctoQualification() throws RuntimeException;
+
     /** Column name ZZQualification_ID */
     public static final String COLUMNNAME_ZZQualification_ID = "ZZQualification_ID";
 
@@ -148,4 +172,13 @@ public interface I_ZZLinkAssessorQualification
 	public int getZZQualification_ID();
 
 	public I_ZZQualification getZZQualification() throws RuntimeException;
+
+    /** Column name ZZ_isRecommended */
+    public static final String COLUMNNAME_ZZ_isRecommended = "ZZ_isRecommended";
+
+	/** Set Recommended	  */
+	public void setZZ_isRecommended (String ZZ_isRecommended);
+
+	/** Get Recommended	  */
+	public String getZZ_isRecommended();
 }
