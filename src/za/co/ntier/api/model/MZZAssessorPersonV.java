@@ -45,6 +45,6 @@ public class MZZAssessorPersonV extends X_ZZAssessorPerson_v {
 	}
 	
 	public String getZZScopeExtensionText() {
-		return getParent_ID() == 0 ? "False" : "True";
+		return getParent_ID() == 0 ? "" : "Scope Extension";
 	}
 }
