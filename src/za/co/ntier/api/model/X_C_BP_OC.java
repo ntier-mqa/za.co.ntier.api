@@ -32,7 +32,7 @@ public class X_C_BP_OC extends PO implements I_C_BP_OC, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260609L;
+	private static final long serialVersionUID = 20260714L;
 
     /** Standard Constructor */
     public X_C_BP_OC (Properties ctx, int C_BP_OC_ID, String trxName)
@@ -290,6 +290,27 @@ public class X_C_BP_OC extends PO implements I_C_BP_OC, I_Persistent
 	public int getZZQctoQualification_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZQctoQualification_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Qualification.
+		@param ZZQualification_ID Qualification
+	*/
+	public void setZZQualification_ID (int ZZQualification_ID)
+	{
+		if (ZZQualification_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZQualification_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZQualification_ID, Integer.valueOf(ZZQualification_ID));
+	}
+
+	/** Get Qualification.
+		@return Qualification	  */
+	public int getZZQualification_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZQualification_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

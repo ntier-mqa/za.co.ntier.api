@@ -208,6 +208,15 @@ public interface I_C_BP_OC
 	/** Get QCTO Qualification	  */
 	public int getZZQctoQualification_ID();
 
+    /** Column name ZZQualification_ID */
+    public static final String COLUMNNAME_ZZQualification_ID = "ZZQualification_ID";
+
+	/** Set Qualification	  */
+	public void setZZQualification_ID (int ZZQualification_ID);
+
+	/** Get Qualification	  */
+	public int getZZQualification_ID();
+
     /** Column name ZZ_AccreditationNumber */
     public static final String COLUMNNAME_ZZ_AccreditationNumber = "ZZ_AccreditationNumber";
 
