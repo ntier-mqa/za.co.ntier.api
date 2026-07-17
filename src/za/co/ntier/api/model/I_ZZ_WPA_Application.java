@@ -32,7 +32,7 @@ public interface I_ZZ_WPA_Application
     /** TableName=ZZ_WPA_Application */
     public static final String Table_Name = "ZZ_WPA_Application";
 
-    /** AD_Table_ID=1000250 */
+    /** AD_Table_ID=1000243 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -63,6 +63,21 @@ public interface I_ZZ_WPA_Application
 	  * Organizational entity within tenant
 	  */
 	public int getAD_Org_ID();
+
+    /** Column name C_BPartner_ID */
+    public static final String COLUMNNAME_C_BPartner_ID = "C_BPartner_ID";
+
+	/** Set Business Partner.
+	  * Identifies a Business Partner
+	  */
+	public void setC_BPartner_ID (int C_BPartner_ID);
+
+	/** Get Business Partner.
+	  * Identifies a Business Partner
+	  */
+	public int getC_BPartner_ID();
+
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -109,36 +124,18 @@ public interface I_ZZ_WPA_Application
 	  */
 	public int getUpdatedBy();
 
-    /** Column name ZZCredits */
-    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+    /** Column name Value */
+    public static final String COLUMNNAME_Value = "Value";
 
-	/** Set Credits	  */
-	public void setZZCredits (int ZZCredits);
-
-	/** Get Credits	  */
-	public int getZZCredits();
-
-    /** Column name ZZProgrammeName */
-    public static final String COLUMNNAME_ZZProgrammeName = "ZZProgrammeName";
-
-	/** Set Programme Name	  */
-	public void setZZProgrammeName (String ZZProgrammeName);
-
-	/** Get Programme Name	  */
-	public String getZZProgrammeName();
-
-    /** Column name ZZQualification_IDs */
-    public static final String COLUMNNAME_ZZQualification_IDs = "ZZQualification_IDs";
-
-	/** Set Qualifications.
-	  * For multi selection reference
+	/** Set Search Key.
+	  * Search key for the record in the format required - must be unique
 	  */
-	public void setZZQualification_IDs (String ZZQualification_IDs);
+	public void setValue (String Value);
 
-	/** Get Qualifications.
-	  * For multi selection reference
+	/** Get Search Key.
+	  * Search key for the record in the format required - must be unique
 	  */
-	public String getZZQualification_IDs();
+	public String getValue();
 
     /** Column name ZZVerifiedDate */
     public static final String COLUMNNAME_ZZVerifiedDate = "ZZVerifiedDate";
@@ -159,6 +156,15 @@ public interface I_ZZ_WPA_Application
 	public int getZZ_ApprovedBy_ID();
 
 	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException;
+
+    /** Column name ZZ_Date_Application */
+    public static final String COLUMNNAME_ZZ_Date_Application = "ZZ_Date_Application";
+
+	/** Set Application Date	  */
+	public void setZZ_Date_Application (Timestamp ZZ_Date_Application);
+
+	/** Get Application Date	  */
+	public Timestamp getZZ_Date_Application();
 
     /** Column name ZZ_Date_Approved */
     public static final String COLUMNNAME_ZZ_Date_Approved = "ZZ_Date_Approved";
@@ -214,24 +220,6 @@ public interface I_ZZ_WPA_Application
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
 
-    /** Column name ZZ_NQF_Level */
-    public static final String COLUMNNAME_ZZ_NQF_Level = "ZZ_NQF_Level";
-
-	/** Set NQF Level	  */
-	public void setZZ_NQF_Level (String ZZ_NQF_Level);
-
-	/** Get NQF Level	  */
-	public String getZZ_NQF_Level();
-
-    /** Column name ZZ_OCO_Code */
-    public static final String COLUMNNAME_ZZ_OCO_Code = "ZZ_OCO_Code";
-
-	/** Set OCO Code	  */
-	public void setZZ_OCO_Code (String ZZ_OCO_Code);
-
-	/** Get OCO Code	  */
-	public String getZZ_OCO_Code();
-
     /** Column name ZZ_RecommendedDate */
     public static final String COLUMNNAME_ZZ_RecommendedDate = "ZZ_RecommendedDate";
 
@@ -266,10 +254,10 @@ public interface I_ZZ_WPA_Application
     /** Column name ZZ_WPA_Application_ID */
     public static final String COLUMNNAME_ZZ_WPA_Application_ID = "ZZ_WPA_Application_ID";
 
-	/** Set WAP Application	  */
+	/** Set WPA Application	  */
 	public void setZZ_WPA_Application_ID (int ZZ_WPA_Application_ID);
 
-	/** Get WAP Application	  */
+	/** Get WPA Application	  */
 	public int getZZ_WPA_Application_ID();
 
     /** Column name ZZ_WPA_Application_UU */

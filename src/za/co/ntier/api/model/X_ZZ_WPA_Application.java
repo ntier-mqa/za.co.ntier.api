@@ -32,7 +32,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260504L;
+	private static final long serialVersionUID = 20260717L;
 
     /** Standard Constructor */
     public X_ZZ_WPA_Application (Properties ctx, int ZZ_WPA_Application_ID, String trxName)
@@ -40,6 +40,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
       super (ctx, ZZ_WPA_Application_ID, trxName);
       /** if (ZZ_WPA_Application_ID == 0)
         {
+			setZZ_Date_Application (new Timestamp( System.currentTimeMillis() ));
         } */
     }
 
@@ -49,6 +50,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
       super (ctx, ZZ_WPA_Application_ID, trxName, virtualColumns);
       /** if (ZZ_WPA_Application_ID == 0)
         {
+			setZZ_Date_Application (new Timestamp( System.currentTimeMillis() ));
         } */
     }
 
@@ -58,6 +60,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
       super (ctx, ZZ_WPA_Application_UU, trxName);
       /** if (ZZ_WPA_Application_UU == null)
         {
+			setZZ_Date_Application (new Timestamp( System.currentTimeMillis() ));
         } */
     }
 
@@ -67,6 +70,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
       super (ctx, ZZ_WPA_Application_UU, trxName, virtualColumns);
       /** if (ZZ_WPA_Application_UU == null)
         {
+			setZZ_Date_Application (new Timestamp( System.currentTimeMillis() ));
         } */
     }
 
@@ -98,54 +102,48 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
       return sb.toString();
     }
 
-	/** Set Credits.
-		@param ZZCredits Credits
-	*/
-	public void setZZCredits (int ZZCredits)
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException
 	{
-		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getC_BPartner_ID(), get_TrxName());
 	}
 
-	/** Get Credits.
-		@return Credits	  */
-	public int getZZCredits()
+	/** Set Business Partner.
+		@param C_BPartner_ID Identifies a Business Partner
+	*/
+	public void setC_BPartner_ID (int C_BPartner_ID)
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
+		if (C_BPartner_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_C_BPartner_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_C_BPartner_ID, Integer.valueOf(C_BPartner_ID));
+	}
+
+	/** Get Business Partner.
+		@return Identifies a Business Partner
+	  */
+	public int getC_BPartner_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_C_BPartner_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
 	}
 
-	/** Set Programme Name.
-		@param ZZProgrammeName Programme Name
+	/** Set Search Key.
+		@param Value Search key for the record in the format required - must be unique
 	*/
-	public void setZZProgrammeName (String ZZProgrammeName)
+	public void setValue (String Value)
 	{
-		set_Value (COLUMNNAME_ZZProgrammeName, ZZProgrammeName);
+		set_Value (COLUMNNAME_Value, Value);
 	}
 
-	/** Get Programme Name.
-		@return Programme Name	  */
-	public String getZZProgrammeName()
-	{
-		return (String)get_Value(COLUMNNAME_ZZProgrammeName);
-	}
-
-	/** Set Qualifications.
-		@param ZZQualification_IDs For multi selection reference
-	*/
-	public void setZZQualification_IDs (String ZZQualification_IDs)
-	{
-
-		set_Value (COLUMNNAME_ZZQualification_IDs, ZZQualification_IDs);
-	}
-
-	/** Get Qualifications.
-		@return For multi selection reference
+	/** Get Search Key.
+		@return Search key for the record in the format required - must be unique
 	  */
-	public String getZZQualification_IDs()
+	public String getValue()
 	{
-		return (String)get_Value(COLUMNNAME_ZZQualification_IDs);
+		return (String)get_Value(COLUMNNAME_Value);
 	}
 
 	/** Set Verified Date.
@@ -188,6 +186,21 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Application Date.
+		@param ZZ_Date_Application Application Date
+	*/
+	public void setZZ_Date_Application (Timestamp ZZ_Date_Application)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Application, ZZ_Date_Application);
+	}
+
+	/** Get Application Date.
+		@return Application Date	  */
+	public Timestamp getZZ_Date_Application()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Application);
 	}
 
 	/** Set Date Approved.
@@ -262,6 +275,8 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** PrepareCEO = PC */
 	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
+	/** Refer Back = RB */
+	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
 	/** Re-Submit = RS */
@@ -356,6 +371,8 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Not Approved by Snr Admin Finance = NS */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Not Verified = NV */
+	public static final String ZZ_DOCSTATUS_NotVerified = "NV";
 	/** Pending = PE */
 	public static final String ZZ_DOCSTATUS_Pending = "PE";
 	/** Query = QR */
@@ -412,63 +429,6 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	public String getZZ_DocStatus()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
-	}
-
-	/** Level 1 = 01 */
-	public static final String ZZ_NQF_LEVEL_Level1 = "01";
-	/** Level 2 = 02 */
-	public static final String ZZ_NQF_LEVEL_Level2 = "02";
-	/** Level 3 = 03 */
-	public static final String ZZ_NQF_LEVEL_Level3 = "03";
-	/** Level 4 = 04 */
-	public static final String ZZ_NQF_LEVEL_Level4 = "04";
-	/** Level 5 = 05 */
-	public static final String ZZ_NQF_LEVEL_Level5 = "05";
-	/** Level 6 = 06 */
-	public static final String ZZ_NQF_LEVEL_Level6 = "06";
-	/** Level 7 = 07 */
-	public static final String ZZ_NQF_LEVEL_Level7 = "07";
-	/** Level 8 = 08 */
-	public static final String ZZ_NQF_LEVEL_Level8 = "08";
-	/** Level 9 = 09 */
-	public static final String ZZ_NQF_LEVEL_Level9 = "09";
-	/** Level 10 = 10 */
-	public static final String ZZ_NQF_LEVEL_Level10 = "10";
-	/** Level1-3 = L3 */
-	public static final String ZZ_NQF_LEVEL_Level1_3 = "L3";
-	/** N1 - N3 = NN */
-	public static final String ZZ_NQF_LEVEL_N1_N3 = "NN";
-	/** Pre Basic = PB */
-	public static final String ZZ_NQF_LEVEL_PreBasic = "PB";
-	/** Set NQF Level.
-		@param ZZ_NQF_Level NQF Level
-	*/
-	public void setZZ_NQF_Level (String ZZ_NQF_Level)
-	{
-
-		set_Value (COLUMNNAME_ZZ_NQF_Level, ZZ_NQF_Level);
-	}
-
-	/** Get NQF Level.
-		@return NQF Level	  */
-	public String getZZ_NQF_Level()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_NQF_Level);
-	}
-
-	/** Set OCO Code.
-		@param ZZ_OCO_Code OCO Code
-	*/
-	public void setZZ_OCO_Code (String ZZ_OCO_Code)
-	{
-		set_Value (COLUMNNAME_ZZ_OCO_Code, ZZ_OCO_Code);
-	}
-
-	/** Get OCO Code.
-		@return OCO Code	  */
-	public String getZZ_OCO_Code()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_OCO_Code);
 	}
 
 	/** Set Recommended Date.
@@ -540,8 +500,8 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return ii.intValue();
 	}
 
-	/** Set WAP Application.
-		@param ZZ_WPA_Application_ID WAP Application
+	/** Set WPA Application.
+		@param ZZ_WPA_Application_ID WPA Application
 	*/
 	public void setZZ_WPA_Application_ID (int ZZ_WPA_Application_ID)
 	{
@@ -551,8 +511,8 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 			set_ValueNoCheck (COLUMNNAME_ZZ_WPA_Application_ID, Integer.valueOf(ZZ_WPA_Application_ID));
 	}
 
-	/** Get WAP Application.
-		@return WAP Application	  */
+	/** Get WPA Application.
+		@return WPA Application	  */
 	public int getZZ_WPA_Application_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_WPA_Application_ID);
