@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260703L;
+	private static final long serialVersionUID = 20260720L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson_v (Properties ctx, int ZZAssessorPerson_v_ID, String trxName)
@@ -140,6 +140,45 @@ public class X_ZZAssessorPerson_v extends PO implements I_ZZAssessorPerson_v, I_
 	public Timestamp getBirthday()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_Birthday);
+	}
+
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getC_BPartner_ID(), get_TrxName());
+	}
+
+	/** Set Business Partner.
+		@param C_BPartner_ID Identifies a Business Partner
+	*/
+	public void setC_BPartner_ID (int C_BPartner_ID)
+	{
+		throw new IllegalArgumentException ("C_BPartner_ID is virtual column");	}
+
+	/** Get Business Partner.
+		@return Identifies a Business Partner
+	  */
+	public int getC_BPartner_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_C_BPartner_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Column SQL.
+		@param ColumnSQL Virtual Column (r/o)
+	*/
+	public void setColumnSQL (String ColumnSQL)
+	{
+		throw new IllegalArgumentException ("ColumnSQL is virtual column");	}
+
+	/** Get Column SQL.
+		@return Virtual Column (r/o)
+	  */
+	public String getColumnSQL()
+	{
+		return (String)get_Value(COLUMNNAME_ColumnSQL);
 	}
 
 	/** Set Document No.

@@ -31,7 +31,7 @@ public class X_ZZ_QA_Configuration extends PO implements I_ZZ_QA_Configuration, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260403L;
+	private static final long serialVersionUID = 20260720L;
 
     /** Standard Constructor */
     public X_ZZ_QA_Configuration (Properties ctx, int ZZ_QA_Configuration_ID, String trxName)
@@ -115,6 +115,24 @@ public class X_ZZ_QA_Configuration extends PO implements I_ZZ_QA_Configuration, 
 	public String getDescription()
 	{
 		return (String)get_Value(COLUMNNAME_Description);
+	}
+
+	/** Set Months Before Expiry Notify.
+		@param ZZ_MonthsBeforeExpiryNotify Months Before Expiry Notify
+	*/
+	public void setZZ_MonthsBeforeExpiryNotify (int ZZ_MonthsBeforeExpiryNotify)
+	{
+		set_Value (COLUMNNAME_ZZ_MonthsBeforeExpiryNotify, Integer.valueOf(ZZ_MonthsBeforeExpiryNotify));
+	}
+
+	/** Get Months Before Expiry Notify.
+		@return Months Before Expiry Notify	  */
+	public int getZZ_MonthsBeforeExpiryNotify()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_MonthsBeforeExpiryNotify);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set ZZ_QA_Configuration_ID.

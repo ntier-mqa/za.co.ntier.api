@@ -32,7 +32,7 @@ public interface I_ZZ_QA_Configuration
     /** TableName=ZZ_QA_Configuration */
     public static final String Table_Name = "ZZ_QA_Configuration";
 
-    /** AD_Table_ID=1000232 */
+    /** AD_Table_ID=1000237 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -121,6 +121,15 @@ public interface I_ZZ_QA_Configuration
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
+
+    /** Column name ZZ_MonthsBeforeExpiryNotify */
+    public static final String COLUMNNAME_ZZ_MonthsBeforeExpiryNotify = "ZZ_MonthsBeforeExpiryNotify";
+
+	/** Set Months Before Expiry Notify	  */
+	public void setZZ_MonthsBeforeExpiryNotify (int ZZ_MonthsBeforeExpiryNotify);
+
+	/** Get Months Before Expiry Notify	  */
+	public int getZZ_MonthsBeforeExpiryNotify();
 
     /** Column name ZZ_QA_Configuration_ID */
     public static final String COLUMNNAME_ZZ_QA_Configuration_ID = "ZZ_QA_Configuration_ID";

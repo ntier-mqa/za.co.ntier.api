@@ -92,6 +92,34 @@ public interface I_ZZAssessorPerson_v
 	  */
 	public Timestamp getBirthday();
 
+    /** Column name C_BPartner_ID */
+    public static final String COLUMNNAME_C_BPartner_ID = "C_BPartner_ID";
+
+	/** Set Business Partner.
+	  * Identifies a Business Partner
+	  */
+	public void setC_BPartner_ID (int C_BPartner_ID);
+
+	/** Get Business Partner.
+	  * Identifies a Business Partner
+	  */
+	public int getC_BPartner_ID();
+
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException;
+
+    /** Column name ColumnSQL */
+    public static final String COLUMNNAME_ColumnSQL = "ColumnSQL";
+
+	/** Set Column SQL.
+	  * Virtual Column (r/o)
+	  */
+	public void setColumnSQL (String ColumnSQL);
+
+	/** Get Column SQL.
+	  * Virtual Column (r/o)
+	  */
+	public String getColumnSQL();
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
