@@ -118,6 +118,15 @@ public interface I_ZZ_WPA_App_QCTOQualifications
 	/** Get Credits	  */
 	public int getZZCredits();
 
+    /** Column name ZZNqfLevel */
+    public static final String COLUMNNAME_ZZNqfLevel = "ZZNqfLevel";
+
+	/** Set NQF Level	  */
+	public void setZZNqfLevel (String ZZNqfLevel);
+
+	/** Get NQF Level	  */
+	public String getZZNqfLevel();
+
     /** Column name ZZProgrammeName */
     public static final String COLUMNNAME_ZZProgrammeName = "ZZProgrammeName";
 
@@ -135,15 +144,6 @@ public interface I_ZZ_WPA_App_QCTOQualifications
 
 	/** Get QCTO Qualification	  */
 	public int getZZQctoQualification_ID();
-
-    /** Column name ZZ_NQF_Level */
-    public static final String COLUMNNAME_ZZ_NQF_Level = "ZZ_NQF_Level";
-
-	/** Set NQF Level	  */
-	public void setZZ_NQF_Level (String ZZ_NQF_Level);
-
-	/** Get NQF Level	  */
-	public String getZZ_NQF_Level();
 
     /** Column name ZZ_OCO_Code */
     public static final String COLUMNNAME_ZZ_OCO_Code = "ZZ_OCO_Code";

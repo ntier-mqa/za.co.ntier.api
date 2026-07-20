@@ -31,7 +31,7 @@ public class X_ZZ_WPA_App_Qualifications extends PO implements I_ZZ_WPA_App_Qual
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260717L;
+	private static final long serialVersionUID = 20260720L;
 
     /** Standard Constructor */
     public X_ZZ_WPA_App_Qualifications (Properties ctx, int ZZ_WPA_App_Qualifications_ID, String trxName)
@@ -115,6 +115,46 @@ public class X_ZZ_WPA_App_Qualifications extends PO implements I_ZZ_WPA_App_Qual
 		return ii.intValue();
 	}
 
+	/** Below Level 01 = Below Level 01 */
+	public static final String ZZNQFLEVEL_BelowLevel01 = "Below Level 01";
+	/** Level 01 = Level 01 */
+	public static final String ZZNQFLEVEL_Level01 = "Level 01";
+	/** Level 02 = Level 02 */
+	public static final String ZZNQFLEVEL_Level02 = "Level 02";
+	/** Level 03 = Level 03 */
+	public static final String ZZNQFLEVEL_Level03 = "Level 03";
+	/** Level 04 = Level 04 */
+	public static final String ZZNQFLEVEL_Level04 = "Level 04";
+	/** Level 05 = Level 05 */
+	public static final String ZZNQFLEVEL_Level05 = "Level 05";
+	/** Level 06 = Level 06 */
+	public static final String ZZNQFLEVEL_Level06 = "Level 06";
+	/** Level 07 = Level 07 */
+	public static final String ZZNQFLEVEL_Level07 = "Level 07";
+	/** Level 08 = Level 08 */
+	public static final String ZZNQFLEVEL_Level08 = "Level 08";
+	/** Level 09 = Level 09 */
+	public static final String ZZNQFLEVEL_Level09 = "Level 09";
+	/** Level 10 = Level 10 */
+	public static final String ZZNQFLEVEL_Level10 = "Level 10";
+	/** Level 11 = Level 11 */
+	public static final String ZZNQFLEVEL_Level11 = "Level 11";
+	/** Set NQF Level.
+		@param ZZNqfLevel NQF Level
+	*/
+	public void setZZNqfLevel (String ZZNqfLevel)
+	{
+
+		set_Value (COLUMNNAME_ZZNqfLevel, ZZNqfLevel);
+	}
+
+	/** Get NQF Level.
+		@return NQF Level	  */
+	public String getZZNqfLevel()
+	{
+		return (String)get_Value(COLUMNNAME_ZZNqfLevel);
+	}
+
 	/** Set Programme Name.
 		@param ZZProgrammeName Programme Name
 	*/
@@ -149,48 +189,6 @@ public class X_ZZ_WPA_App_Qualifications extends PO implements I_ZZ_WPA_App_Qual
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
-	}
-
-	/** Level 1 = 01 */
-	public static final String ZZ_NQF_LEVEL_Level1 = "01";
-	/** Level 2 = 02 */
-	public static final String ZZ_NQF_LEVEL_Level2 = "02";
-	/** Level 3 = 03 */
-	public static final String ZZ_NQF_LEVEL_Level3 = "03";
-	/** Level 4 = 04 */
-	public static final String ZZ_NQF_LEVEL_Level4 = "04";
-	/** Level 5 = 05 */
-	public static final String ZZ_NQF_LEVEL_Level5 = "05";
-	/** Level 6 = 06 */
-	public static final String ZZ_NQF_LEVEL_Level6 = "06";
-	/** Level 7 = 07 */
-	public static final String ZZ_NQF_LEVEL_Level7 = "07";
-	/** Level 8 = 08 */
-	public static final String ZZ_NQF_LEVEL_Level8 = "08";
-	/** Level 9 = 09 */
-	public static final String ZZ_NQF_LEVEL_Level9 = "09";
-	/** Level 10 = 10 */
-	public static final String ZZ_NQF_LEVEL_Level10 = "10";
-	/** Level1-3 = L3 */
-	public static final String ZZ_NQF_LEVEL_Level1_3 = "L3";
-	/** N1 - N3 = NN */
-	public static final String ZZ_NQF_LEVEL_N1_N3 = "NN";
-	/** Pre Basic = PB */
-	public static final String ZZ_NQF_LEVEL_PreBasic = "PB";
-	/** Set NQF Level.
-		@param ZZ_NQF_Level NQF Level
-	*/
-	public void setZZ_NQF_Level (String ZZ_NQF_Level)
-	{
-
-		set_Value (COLUMNNAME_ZZ_NQF_Level, ZZ_NQF_Level);
-	}
-
-	/** Get NQF Level.
-		@return NQF Level	  */
-	public String getZZ_NQF_Level()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_NQF_Level);
 	}
 
 	/** Set OCO Code.
