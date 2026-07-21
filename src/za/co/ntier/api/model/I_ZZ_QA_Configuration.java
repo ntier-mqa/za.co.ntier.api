@@ -122,6 +122,15 @@ public interface I_ZZ_QA_Configuration
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZ_DaysUntilAuditConfirmReminder */
+    public static final String COLUMNNAME_ZZ_DaysUntilAuditConfirmReminder = "ZZ_DaysUntilAuditConfirmReminder";
+
+	/** Set Days Until Audit Confirm Reminder	  */
+	public void setZZ_DaysUntilAuditConfirmReminder (int ZZ_DaysUntilAuditConfirmReminder);
+
+	/** Get Days Until Audit Confirm Reminder	  */
+	public int getZZ_DaysUntilAuditConfirmReminder();
+
     /** Column name ZZ_MonthsBeforeExpiryNotify */
     public static final String COLUMNNAME_ZZ_MonthsBeforeExpiryNotify = "ZZ_MonthsBeforeExpiryNotify";
 

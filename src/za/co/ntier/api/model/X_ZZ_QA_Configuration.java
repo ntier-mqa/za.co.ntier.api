@@ -31,7 +31,7 @@ public class X_ZZ_QA_Configuration extends PO implements I_ZZ_QA_Configuration, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260720L;
+	private static final long serialVersionUID = 20260721L;
 
     /** Standard Constructor */
     public X_ZZ_QA_Configuration (Properties ctx, int ZZ_QA_Configuration_ID, String trxName)
@@ -115,6 +115,24 @@ public class X_ZZ_QA_Configuration extends PO implements I_ZZ_QA_Configuration, 
 	public String getDescription()
 	{
 		return (String)get_Value(COLUMNNAME_Description);
+	}
+
+	/** Set Days Until Audit Confirm Reminder.
+		@param ZZ_DaysUntilAuditConfirmReminder Days Until Audit Confirm Reminder
+	*/
+	public void setZZ_DaysUntilAuditConfirmReminder (int ZZ_DaysUntilAuditConfirmReminder)
+	{
+		set_Value (COLUMNNAME_ZZ_DaysUntilAuditConfirmReminder, Integer.valueOf(ZZ_DaysUntilAuditConfirmReminder));
+	}
+
+	/** Get Days Until Audit Confirm Reminder.
+		@return Days Until Audit Confirm Reminder	  */
+	public int getZZ_DaysUntilAuditConfirmReminder()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_DaysUntilAuditConfirmReminder);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Months Before Expiry Notify.
