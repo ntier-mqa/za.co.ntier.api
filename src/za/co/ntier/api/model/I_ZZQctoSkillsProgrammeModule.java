@@ -109,6 +109,15 @@ public interface I_ZZQctoSkillsProgrammeModule
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZCredits */
+    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+
+	/** Set Credits	  */
+	public void setZZCredits (int ZZCredits);
+
+	/** Get Credits	  */
+	public int getZZCredits();
+
     /** Column name ZZMigrateValues */
     public static final String COLUMNNAME_ZZMigrateValues = "ZZMigrateValues";
 
@@ -127,6 +136,15 @@ public interface I_ZZQctoSkillsProgrammeModule
 	/** Get Migration Code	  */
 	public int getZZMigrationCode();
 
+    /** Column name ZZModuleCode */
+    public static final String COLUMNNAME_ZZModuleCode = "ZZModuleCode";
+
+	/** Set Module Code	  */
+	public void setZZModuleCode (String ZZModuleCode);
+
+	/** Get Module Code	  */
+	public String getZZModuleCode();
+
     /** Column name ZZModuleType */
     public static final String COLUMNNAME_ZZModuleType = "ZZModuleType";
 
@@ -135,6 +153,15 @@ public interface I_ZZQctoSkillsProgrammeModule
 
 	/** Get Module Type	  */
 	public String getZZModuleType();
+
+    /** Column name ZZNqfLevel */
+    public static final String COLUMNNAME_ZZNqfLevel = "ZZNqfLevel";
+
+	/** Set NQF Level	  */
+	public void setZZNqfLevel (String ZZNqfLevel);
+
+	/** Get NQF Level	  */
+	public String getZZNqfLevel();
 
     /** Column name ZZQctoModule_ID */
     public static final String COLUMNNAME_ZZQctoModule_ID = "ZZQctoModule_ID";

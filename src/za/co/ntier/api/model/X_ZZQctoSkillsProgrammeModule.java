@@ -31,7 +31,7 @@ public class X_ZZQctoSkillsProgrammeModule extends PO implements I_ZZQctoSkillsP
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260702L;
+	private static final long serialVersionUID = 20260722L;
 
     /** Standard Constructor */
     public X_ZZQctoSkillsProgrammeModule (Properties ctx, String ZZQctoSkillsProgrammeModule_UU, String trxName)
@@ -79,6 +79,24 @@ public class X_ZZQctoSkillsProgrammeModule extends PO implements I_ZZQctoSkillsP
       return sb.toString();
     }
 
+	/** Set Credits.
+		@param ZZCredits Credits
+	*/
+	public void setZZCredits (int ZZCredits)
+	{
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
+	}
+
+	/** Get Credits.
+		@return Credits	  */
+	public int getZZCredits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Migrate Values.
 		@param ZZMigrateValues Migrate Values
 	*/
@@ -112,6 +130,21 @@ public class X_ZZQctoSkillsProgrammeModule extends PO implements I_ZZQctoSkillsP
 		return ii.intValue();
 	}
 
+	/** Set Module Code.
+		@param ZZModuleCode Module Code
+	*/
+	public void setZZModuleCode (String ZZModuleCode)
+	{
+		set_Value (COLUMNNAME_ZZModuleCode, ZZModuleCode);
+	}
+
+	/** Get Module Code.
+		@return Module Code	  */
+	public String getZZModuleCode()
+	{
+		return (String)get_Value(COLUMNNAME_ZZModuleCode);
+	}
+
 	/** Core = Core */
 	public static final String ZZMODULETYPE_Core = "Core";
 	/** Elective = Elective */
@@ -130,6 +163,46 @@ public class X_ZZQctoSkillsProgrammeModule extends PO implements I_ZZQctoSkillsP
 	public String getZZModuleType()
 	{
 		return (String)get_Value(COLUMNNAME_ZZModuleType);
+	}
+
+	/** Below Level 01 = Below Level 01 */
+	public static final String ZZNQFLEVEL_BelowLevel01 = "Below Level 01";
+	/** Level 01 = Level 01 */
+	public static final String ZZNQFLEVEL_Level01 = "Level 01";
+	/** Level 02 = Level 02 */
+	public static final String ZZNQFLEVEL_Level02 = "Level 02";
+	/** Level 03 = Level 03 */
+	public static final String ZZNQFLEVEL_Level03 = "Level 03";
+	/** Level 04 = Level 04 */
+	public static final String ZZNQFLEVEL_Level04 = "Level 04";
+	/** Level 05 = Level 05 */
+	public static final String ZZNQFLEVEL_Level05 = "Level 05";
+	/** Level 06 = Level 06 */
+	public static final String ZZNQFLEVEL_Level06 = "Level 06";
+	/** Level 07 = Level 07 */
+	public static final String ZZNQFLEVEL_Level07 = "Level 07";
+	/** Level 08 = Level 08 */
+	public static final String ZZNQFLEVEL_Level08 = "Level 08";
+	/** Level 09 = Level 09 */
+	public static final String ZZNQFLEVEL_Level09 = "Level 09";
+	/** Level 10 = Level 10 */
+	public static final String ZZNQFLEVEL_Level10 = "Level 10";
+	/** Level 11 = Level 11 */
+	public static final String ZZNQFLEVEL_Level11 = "Level 11";
+	/** Set NQF Level.
+		@param ZZNqfLevel NQF Level
+	*/
+	public void setZZNqfLevel (String ZZNqfLevel)
+	{
+
+		set_Value (COLUMNNAME_ZZNqfLevel, ZZNqfLevel);
+	}
+
+	/** Get NQF Level.
+		@return NQF Level	  */
+	public String getZZNqfLevel()
+	{
+		return (String)get_Value(COLUMNNAME_ZZNqfLevel);
 	}
 
 	public I_ZZQctoModule getZZQctoModule() throws RuntimeException
