@@ -503,6 +503,15 @@ public interface I_ZZAssessorPerson_v
 
 	public I_C_Location getZZPostalLocation() throws RuntimeException;
 
+    /** Column name ZZRegistrationType */
+    public static final String COLUMNNAME_ZZRegistrationType = "ZZRegistrationType";
+
+	/** Set Registration Type	  */
+	public void setZZRegistrationType (String ZZRegistrationType);
+
+	/** Get Registration Type	  */
+	public String getZZRegistrationType();
+
     /** Column name ZZScopeExtension */
     public static final String COLUMNNAME_ZZScopeExtension = "ZZScopeExtension";
 
