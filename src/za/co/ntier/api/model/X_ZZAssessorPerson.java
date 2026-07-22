@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260703L;
+	private static final long serialVersionUID = 20260722L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -668,6 +668,26 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Re-Registration = Re-Registration */
+	public static final String ZZREGISTRATIONTYPE_Re_Registration = "Re-Registration";
+	/** Registration = Registration */
+	public static final String ZZREGISTRATIONTYPE_Registration = "Registration";
+	/** Set Registration Type.
+		@param ZZRegistrationType Registration Type
+	*/
+	public void setZZRegistrationType (String ZZRegistrationType)
+	{
+
+		set_Value (COLUMNNAME_ZZRegistrationType, ZZRegistrationType);
+	}
+
+	/** Get Registration Type.
+		@return Registration Type	  */
+	public String getZZRegistrationType()
+	{
+		return (String)get_Value(COLUMNNAME_ZZRegistrationType);
 	}
 
 	/** ZZScopeExtension AD_Reference_ID=319 */
