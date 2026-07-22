@@ -109,6 +109,15 @@ public interface I_ZZSkillsProgrammeUnitStandard
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZCredits */
+    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+
+	/** Set Credits	  */
+	public void setZZCredits (int ZZCredits);
+
+	/** Get Credits	  */
+	public int getZZCredits();
+
     /** Column name ZZMigrateValues */
     public static final String COLUMNNAME_ZZMigrateValues = "ZZMigrateValues";
 
@@ -126,6 +135,24 @@ public interface I_ZZSkillsProgrammeUnitStandard
 
 	/** Get Migration Code	  */
 	public int getZZMigrationCode();
+
+    /** Column name ZZNqfLevel */
+    public static final String COLUMNNAME_ZZNqfLevel = "ZZNqfLevel";
+
+	/** Set NQF Level	  */
+	public void setZZNqfLevel (String ZZNqfLevel);
+
+	/** Get NQF Level	  */
+	public String getZZNqfLevel();
+
+    /** Column name ZZSaqaUnitStandardCode */
+    public static final String COLUMNNAME_ZZSaqaUnitStandardCode = "ZZSaqaUnitStandardCode";
+
+	/** Set SAQA Unit Standard Code	  */
+	public void setZZSaqaUnitStandardCode (String ZZSaqaUnitStandardCode);
+
+	/** Get SAQA Unit Standard Code	  */
+	public String getZZSaqaUnitStandardCode();
 
     /** Column name ZZSkillsProgrammeUnitStandard_ID */
     public static final String COLUMNNAME_ZZSkillsProgrammeUnitStandard_ID = "ZZSkillsProgrammeUnitStandard_ID";
