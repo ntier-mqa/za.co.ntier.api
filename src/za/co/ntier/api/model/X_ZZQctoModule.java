@@ -33,7 +33,7 @@ public class X_ZZQctoModule extends PO implements I_ZZQctoModule, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260702L;
+	private static final long serialVersionUID = 20260723L;
 
     /** Standard Constructor */
     public X_ZZQctoModule (Properties ctx, int ZZQctoModule_ID, String trxName)
@@ -329,10 +329,12 @@ public class X_ZZQctoModule extends PO implements I_ZZQctoModule, I_Persistent
         return new KeyNamePair(get_ID(), getZZModuleTitle());
     }
 
-	/** Core = Core */
-	public static final String ZZMODULETYPE_Core = "Core";
-	/** Elective = Elective */
-	public static final String ZZMODULETYPE_Elective = "Elective";
+	/** Application = Application */
+	public static final String ZZMODULETYPE_Application = "Application";
+	/** Knowledge = Knowledge */
+	public static final String ZZMODULETYPE_Knowledge = "Knowledge";
+	/** Work experience = Work experience */
+	public static final String ZZMODULETYPE_WorkExperience = "Work experience";
 	/** Set Module Type.
 		@param ZZModuleType Module Type
 	*/
