@@ -145,6 +145,15 @@ public interface I_ZZSkillsProgramme_v
 	/** Get Credits	  */
 	public int getZZCredits();
 
+    /** Column name ZZFromQcto */
+    public static final String COLUMNNAME_ZZFromQcto = "ZZFromQcto";
+
+	/** Set From Qcto	  */
+	public void setZZFromQcto (String ZZFromQcto);
+
+	/** Get From Qcto	  */
+	public String getZZFromQcto();
+
     /** Column name ZZIsOhs */
     public static final String COLUMNNAME_ZZIsOhs = "ZZIsOhs";
 
@@ -191,15 +200,6 @@ public interface I_ZZSkillsProgramme_v
 
 	/** Get NQF Level	  */
 	public String getZZNqfLevel();
-
-    /** Column name ZZQcto */
-    public static final String COLUMNNAME_ZZQcto = "ZZQcto";
-
-	/** Set Qcto	  */
-	public void setZZQcto (String ZZQcto);
-
-	/** Get Qcto	  */
-	public String getZZQcto();
 
     /** Column name ZZQualification_ID */
     public static final String COLUMNNAME_ZZQualification_ID = "ZZQualification_ID";

@@ -33,7 +33,7 @@ public class X_ZZQualification_v extends PO implements I_ZZQualification_v, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260728L;
+	private static final long serialVersionUID = 20260729L;
 
     /** Standard Constructor */
     public X_ZZQualification_v (Properties ctx, int ZZQualification_v_ID, String trxName)
@@ -41,7 +41,7 @@ public class X_ZZQualification_v extends PO implements I_ZZQualification_v, I_Pe
       super (ctx, ZZQualification_v_ID, trxName);
       /** if (ZZQualification_v_ID == 0)
         {
-			setZZQcto (null);
+			setZZFromQcto (null);
 // N
 			setZZQualification_ID (0);
         } */
@@ -53,7 +53,7 @@ public class X_ZZQualification_v extends PO implements I_ZZQualification_v, I_Pe
       super (ctx, ZZQualification_v_ID, trxName, virtualColumns);
       /** if (ZZQualification_v_ID == 0)
         {
-			setZZQcto (null);
+			setZZFromQcto (null);
 // N
 			setZZQualification_ID (0);
         } */
@@ -65,7 +65,7 @@ public class X_ZZQualification_v extends PO implements I_ZZQualification_v, I_Pe
       super (ctx, ZZQualification_v_UU, trxName);
       /** if (ZZQualification_v_UU == null)
         {
-			setZZQcto (null);
+			setZZFromQcto (null);
 // N
 			setZZQualification_ID (0);
         } */
@@ -77,7 +77,7 @@ public class X_ZZQualification_v extends PO implements I_ZZQualification_v, I_Pe
       super (ctx, ZZQualification_v_UU, trxName, virtualColumns);
       /** if (ZZQualification_v_UU == null)
         {
-			setZZQcto (null);
+			setZZFromQcto (null);
 // N
 			setZZQualification_ID (0);
         } */
@@ -157,6 +157,28 @@ public class X_ZZQualification_v extends PO implements I_ZZQualification_v, I_Pe
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** ZZFromQcto AD_Reference_ID=319 */
+	public static final int ZZFROMQCTO_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZFROMQCTO_No = "N";
+	/** Yes = Y */
+	public static final String ZZFROMQCTO_Yes = "Y";
+	/** Set From Qcto.
+		@param ZZFromQcto From Qcto
+	*/
+	public void setZZFromQcto (String ZZFromQcto)
+	{
+
+		set_ValueNoCheck (COLUMNNAME_ZZFromQcto, ZZFromQcto);
+	}
+
+	/** Get From Qcto.
+		@return From Qcto	  */
+	public String getZZFromQcto()
+	{
+		return (String)get_Value(COLUMNNAME_ZZFromQcto);
 	}
 
 	/** ZZIsReplacement AD_Reference_ID=319 */
@@ -376,28 +398,6 @@ public class X_ZZQualification_v extends PO implements I_ZZQualification_v, I_Pe
 	public String getZZNqfLevel()
 	{
 		return (String)get_Value(COLUMNNAME_ZZNqfLevel);
-	}
-
-	/** ZZQcto AD_Reference_ID=319 */
-	public static final int ZZQCTO_AD_Reference_ID=319;
-	/** No = N */
-	public static final String ZZQCTO_No = "N";
-	/** Yes = Y */
-	public static final String ZZQCTO_Yes = "Y";
-	/** Set Qcto.
-		@param ZZQcto Qcto
-	*/
-	public void setZZQcto (String ZZQcto)
-	{
-
-		set_ValueNoCheck (COLUMNNAME_ZZQcto, ZZQcto);
-	}
-
-	/** Get Qcto.
-		@return Qcto	  */
-	public String getZZQcto()
-	{
-		return (String)get_Value(COLUMNNAME_ZZQcto);
 	}
 
 	/** Non Unit Standard Based = Non Unit Standard Based */

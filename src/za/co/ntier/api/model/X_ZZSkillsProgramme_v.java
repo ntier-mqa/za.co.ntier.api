@@ -172,6 +172,28 @@ public class X_ZZSkillsProgramme_v extends PO implements I_ZZSkillsProgramme_v, 
 		return ii.intValue();
 	}
 
+	/** ZZFromQcto AD_Reference_ID=319 */
+	public static final int ZZFROMQCTO_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZFROMQCTO_No = "N";
+	/** Yes = Y */
+	public static final String ZZFROMQCTO_Yes = "Y";
+	/** Set From Qcto.
+		@param ZZFromQcto From Qcto
+	*/
+	public void setZZFromQcto (String ZZFromQcto)
+	{
+
+		set_ValueNoCheck (COLUMNNAME_ZZFromQcto, ZZFromQcto);
+	}
+
+	/** Get From Qcto.
+		@return From Qcto	  */
+	public String getZZFromQcto()
+	{
+		return (String)get_Value(COLUMNNAME_ZZFromQcto);
+	}
+
 	/** ZZIsOhs AD_Reference_ID=319 */
 	public static final int ZZISOHS_AD_Reference_ID=319;
 	/** No = N */
@@ -292,28 +314,6 @@ public class X_ZZSkillsProgramme_v extends PO implements I_ZZSkillsProgramme_v, 
 	public String getZZNqfLevel()
 	{
 		return (String)get_Value(COLUMNNAME_ZZNqfLevel);
-	}
-
-	/** ZZQcto AD_Reference_ID=319 */
-	public static final int ZZQCTO_AD_Reference_ID=319;
-	/** No = N */
-	public static final String ZZQCTO_No = "N";
-	/** Yes = Y */
-	public static final String ZZQCTO_Yes = "Y";
-	/** Set Qcto.
-		@param ZZQcto Qcto
-	*/
-	public void setZZQcto (String ZZQcto)
-	{
-
-		set_ValueNoCheck (COLUMNNAME_ZZQcto, ZZQcto);
-	}
-
-	/** Get Qcto.
-		@return Qcto	  */
-	public String getZZQcto()
-	{
-		return (String)get_Value(COLUMNNAME_ZZQcto);
 	}
 
 	public I_ZZQualification getZZQualification() throws RuntimeException
