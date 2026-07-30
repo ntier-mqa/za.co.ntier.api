@@ -32,7 +32,7 @@ public class X_ZZLearnership extends PO implements I_ZZLearnership, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260702L;
+	private static final long serialVersionUID = 20260730L;
 
     /** Standard Constructor */
     public X_ZZLearnership (Properties ctx, int ZZLearnership_ID, String trxName)
@@ -180,6 +180,21 @@ public class X_ZZLearnership extends PO implements I_ZZLearnership, I_Persistent
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Last Enrolment Date.
+		@param ZZLastEnrolmentDate Last Enrolment Date
+	*/
+	public void setZZLastEnrolmentDate (Timestamp ZZLastEnrolmentDate)
+	{
+		set_Value (COLUMNNAME_ZZLastEnrolmentDate, ZZLastEnrolmentDate);
+	}
+
+	/** Get Last Enrolment Date.
+		@return Last Enrolment Date	  */
+	public Timestamp getZZLastEnrolmentDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZLastEnrolmentDate);
 	}
 
 	/** Set Learnership Code.

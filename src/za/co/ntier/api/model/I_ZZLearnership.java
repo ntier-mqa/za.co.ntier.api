@@ -162,6 +162,15 @@ public interface I_ZZLearnership
 	/** Get Credits	  */
 	public int getZZCredits();
 
+    /** Column name ZZLastEnrolmentDate */
+    public static final String COLUMNNAME_ZZLastEnrolmentDate = "ZZLastEnrolmentDate";
+
+	/** Set Last Enrolment Date	  */
+	public void setZZLastEnrolmentDate (Timestamp ZZLastEnrolmentDate);
+
+	/** Get Last Enrolment Date	  */
+	public Timestamp getZZLastEnrolmentDate();
+
     /** Column name ZZLearnershipCode */
     public static final String COLUMNNAME_ZZLearnershipCode = "ZZLearnershipCode";
 
