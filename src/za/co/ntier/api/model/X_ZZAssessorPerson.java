@@ -32,7 +32,7 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260722L;
+	private static final long serialVersionUID = 20260804L;
 
     /** Standard Constructor */
     public X_ZZAssessorPerson (Properties ctx, int ZZAssessorPerson_ID, String trxName)
@@ -537,6 +537,22 @@ public class X_ZZAssessorPerson extends PO implements I_ZZAssessorPerson, I_Pers
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set School Emis Text.
+		@param ZZLkpSchoolEmisText When use choose other on LkpSchoolEmis he can input value here
+	*/
+	public void setZZLkpSchoolEmisText (String ZZLkpSchoolEmisText)
+	{
+		set_Value (COLUMNNAME_ZZLkpSchoolEmisText, ZZLkpSchoolEmisText);
+	}
+
+	/** Get School Emis Text.
+		@return When use choose other on LkpSchoolEmis he can input value here
+	  */
+	public String getZZLkpSchoolEmisText()
+	{
+		return (String)get_Value(COLUMNNAME_ZZLkpSchoolEmisText);
 	}
 
 	/** Set School EMIS.

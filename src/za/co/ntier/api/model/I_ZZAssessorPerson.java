@@ -319,6 +319,19 @@ public interface I_ZZAssessorPerson
 	/** Get Last School Year	  */
 	public int getZZLastSchoolYear();
 
+    /** Column name ZZLkpSchoolEmisText */
+    public static final String COLUMNNAME_ZZLkpSchoolEmisText = "ZZLkpSchoolEmisText";
+
+	/** Set School Emis Text.
+	  * When use choose other on LkpSchoolEmis he can input value here
+	  */
+	public void setZZLkpSchoolEmisText (String ZZLkpSchoolEmisText);
+
+	/** Get School Emis Text.
+	  * When use choose other on LkpSchoolEmis he can input value here
+	  */
+	public String getZZLkpSchoolEmisText();
+
     /** Column name ZZLkpSchoolEmis_ID */
     public static final String COLUMNNAME_ZZLkpSchoolEmis_ID = "ZZLkpSchoolEmis_ID";
 
