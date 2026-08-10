@@ -95,6 +95,19 @@ public interface I_ZZ_WPA_Application
 	  */
 	public int getCreatedBy();
 
+    /** Column name EMail */
+    public static final String COLUMNNAME_EMail = "EMail";
+
+	/** Set Applicant EMail Address.
+	  * Electronic Mail Address
+	  */
+	public void setEMail (String EMail);
+
+	/** Get Applicant EMail Address.
+	  * Electronic Mail Address
+	  */
+	public String getEMail();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -107,6 +120,45 @@ public interface I_ZZ_WPA_Application
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name Name */
+    public static final String COLUMNNAME_Name = "Name";
+
+	/** Set Applicant Name.
+	  * Alphanumeric identifier of the entity
+	  */
+	public void setName (String Name);
+
+	/** Get Applicant Name.
+	  * Alphanumeric identifier of the entity
+	  */
+	public String getName();
+
+    /** Column name Phone */
+    public static final String COLUMNNAME_Phone = "Phone";
+
+	/** Set Contact Number.
+	  * Identifies a telephone number
+	  */
+	public void setPhone (String Phone);
+
+	/** Get Contact Number.
+	  * Identifies a telephone number
+	  */
+	public String getPhone();
+
+    /** Column name Phone2 */
+    public static final String COLUMNNAME_Phone2 = "Phone2";
+
+	/** Set Alternate Contact Number.
+	  * Identifies an alternate telephone number.
+	  */
+	public void setPhone2 (String Phone2);
+
+	/** Get Alternate Contact Number.
+	  * Identifies an alternate telephone number.
+	  */
+	public String getPhone2();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -136,6 +188,15 @@ public interface I_ZZ_WPA_Application
 	  * Search key for the record in the format required - must be unique
 	  */
 	public String getValue();
+
+    /** Column name ZZSurname */
+    public static final String COLUMNNAME_ZZSurname = "ZZSurname";
+
+	/** Set Applicant Surname	  */
+	public void setZZSurname (String ZZSurname);
+
+	/** Get Applicant Surname	  */
+	public String getZZSurname();
 
     /** Column name ZZVerifiedDate */
     public static final String COLUMNNAME_ZZVerifiedDate = "ZZVerifiedDate";

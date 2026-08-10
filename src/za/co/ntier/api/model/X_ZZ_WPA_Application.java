@@ -32,7 +32,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260717L;
+	private static final long serialVersionUID = 20260810L;
 
     /** Standard Constructor */
     public X_ZZ_WPA_Application (Properties ctx, int ZZ_WPA_Application_ID, String trxName)
@@ -98,7 +98,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
     public String toString()
     {
       StringBuilder sb = new StringBuilder ("X_ZZ_WPA_Application[")
-        .append(get_ID()).append("]");
+        .append(get_ID()).append(",Name=").append(getName()).append("]");
       return sb.toString();
     }
 
@@ -130,6 +130,70 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return ii.intValue();
 	}
 
+	/** Set Applicant EMail Address.
+		@param EMail Electronic Mail Address
+	*/
+	public void setEMail (String EMail)
+	{
+		set_Value (COLUMNNAME_EMail, EMail);
+	}
+
+	/** Get Applicant EMail Address.
+		@return Electronic Mail Address
+	  */
+	public String getEMail()
+	{
+		return (String)get_Value(COLUMNNAME_EMail);
+	}
+
+	/** Set Applicant Name.
+		@param Name Alphanumeric identifier of the entity
+	*/
+	public void setName (String Name)
+	{
+		set_Value (COLUMNNAME_Name, Name);
+	}
+
+	/** Get Applicant Name.
+		@return Alphanumeric identifier of the entity
+	  */
+	public String getName()
+	{
+		return (String)get_Value(COLUMNNAME_Name);
+	}
+
+	/** Set Contact Number.
+		@param Phone Identifies a telephone number
+	*/
+	public void setPhone (String Phone)
+	{
+		set_Value (COLUMNNAME_Phone, Phone);
+	}
+
+	/** Get Contact Number.
+		@return Identifies a telephone number
+	  */
+	public String getPhone()
+	{
+		return (String)get_Value(COLUMNNAME_Phone);
+	}
+
+	/** Set Alternate Contact Number.
+		@param Phone2 Identifies an alternate telephone number.
+	*/
+	public void setPhone2 (String Phone2)
+	{
+		set_Value (COLUMNNAME_Phone2, Phone2);
+	}
+
+	/** Get Alternate Contact Number.
+		@return Identifies an alternate telephone number.
+	  */
+	public String getPhone2()
+	{
+		return (String)get_Value(COLUMNNAME_Phone2);
+	}
+
 	/** Set Search Key.
 		@param Value Search key for the record in the format required - must be unique
 	*/
@@ -144,6 +208,21 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	public String getValue()
 	{
 		return (String)get_Value(COLUMNNAME_Value);
+	}
+
+	/** Set Applicant Surname.
+		@param ZZSurname Applicant Surname
+	*/
+	public void setZZSurname (String ZZSurname)
+	{
+		set_Value (COLUMNNAME_ZZSurname, ZZSurname);
+	}
+
+	/** Get Applicant Surname.
+		@return Applicant Surname	  */
+	public String getZZSurname()
+	{
+		return (String)get_Value(COLUMNNAME_ZZSurname);
 	}
 
 	/** Set Verified Date.
