@@ -98,12 +98,12 @@ public interface I_ZZ_WPA_Application
     /** Column name EMail */
     public static final String COLUMNNAME_EMail = "EMail";
 
-	/** Set Applicant EMail Address.
+	/** Set EMail Address.
 	  * Electronic Mail Address
 	  */
 	public void setEMail (String EMail);
 
-	/** Get Applicant EMail Address.
+	/** Get EMail Address.
 	  * Electronic Mail Address
 	  */
 	public String getEMail();
@@ -124,12 +124,12 @@ public interface I_ZZ_WPA_Application
     /** Column name Name */
     public static final String COLUMNNAME_Name = "Name";
 
-	/** Set Applicant Name.
+	/** Set Name.
 	  * Alphanumeric identifier of the entity
 	  */
 	public void setName (String Name);
 
-	/** Get Applicant Name.
+	/** Get Name.
 	  * Alphanumeric identifier of the entity
 	  */
 	public String getName();
@@ -137,12 +137,12 @@ public interface I_ZZ_WPA_Application
     /** Column name Phone */
     public static final String COLUMNNAME_Phone = "Phone";
 
-	/** Set Contact Number.
+	/** Set Phone.
 	  * Identifies a telephone number
 	  */
 	public void setPhone (String Phone);
 
-	/** Get Contact Number.
+	/** Get Phone.
 	  * Identifies a telephone number
 	  */
 	public String getPhone();
@@ -150,12 +150,12 @@ public interface I_ZZ_WPA_Application
     /** Column name Phone2 */
     public static final String COLUMNNAME_Phone2 = "Phone2";
 
-	/** Set Alternate Contact Number.
+	/** Set 2nd Phone.
 	  * Identifies an alternate telephone number.
 	  */
 	public void setPhone2 (String Phone2);
 
-	/** Get Alternate Contact Number.
+	/** Get 2nd Phone.
 	  * Identifies an alternate telephone number.
 	  */
 	public String getPhone2();
@@ -192,10 +192,10 @@ public interface I_ZZ_WPA_Application
     /** Column name ZZSurname */
     public static final String COLUMNNAME_ZZSurname = "ZZSurname";
 
-	/** Set Applicant Surname	  */
+	/** Set Surname	  */
 	public void setZZSurname (String ZZSurname);
 
-	/** Get Applicant Surname	  */
+	/** Get Surname	  */
 	public String getZZSurname();
 
     /** Column name ZZVerifiedDate */
@@ -245,6 +245,33 @@ public interface I_ZZ_WPA_Application
 	/** Get Date Not Approved	  */
 	public Timestamp getZZ_Date_Not_Approved();
 
+    /** Column name ZZ_Date_Not_Recom_Mgr_QA_AC */
+    public static final String COLUMNNAME_ZZ_Date_Not_Recom_Mgr_QA_AC = "ZZ_Date_Not_Recom_Mgr_QA_AC";
+
+	/** Set Date Not Recommended By Mgr QA AC	  */
+	public void setZZ_Date_Not_Recom_Mgr_QA_AC (Timestamp ZZ_Date_Not_Recom_Mgr_QA_AC);
+
+	/** Get Date Not Recommended By Mgr QA AC	  */
+	public Timestamp getZZ_Date_Not_Recom_Mgr_QA_AC();
+
+    /** Column name ZZ_Date_Not_Recom_Officer_QA_AC */
+    public static final String COLUMNNAME_ZZ_Date_Not_Recom_Officer_QA_AC = "ZZ_Date_Not_Recom_Officer_QA_AC";
+
+	/** Set Date Not Recommended By Officer QA AC	  */
+	public void setZZ_Date_Not_Recom_Officer_QA_AC (Timestamp ZZ_Date_Not_Recom_Officer_QA_AC);
+
+	/** Get Date Not Recommended By Officer QA AC	  */
+	public Timestamp getZZ_Date_Not_Recom_Officer_QA_AC();
+
+    /** Column name ZZ_Date_Not_Recom_Snr_Mgr_QA */
+    public static final String COLUMNNAME_ZZ_Date_Not_Recom_Snr_Mgr_QA = "ZZ_Date_Not_Recom_Snr_Mgr_QA";
+
+	/** Set Date Not Recommended By Snr Mgr QA	  */
+	public void setZZ_Date_Not_Recom_Snr_Mgr_QA (Timestamp ZZ_Date_Not_Recom_Snr_Mgr_QA);
+
+	/** Get Date Not Recommended By Snr Mgr QA	  */
+	public Timestamp getZZ_Date_Not_Recom_Snr_Mgr_QA();
+
     /** Column name ZZ_Date_Not_Recommended */
     public static final String COLUMNNAME_ZZ_Date_Not_Recommended = "ZZ_Date_Not_Recommended";
 
@@ -263,6 +290,33 @@ public interface I_ZZ_WPA_Application
 	/** Get Date Not Verified	  */
 	public Timestamp getZZ_Date_Not_Verified();
 
+    /** Column name ZZ_Date_Recom_Mgr_QA_AC */
+    public static final String COLUMNNAME_ZZ_Date_Recom_Mgr_QA_AC = "ZZ_Date_Recom_Mgr_QA_AC";
+
+	/** Set Date Recommended By Mgr QA AC	  */
+	public void setZZ_Date_Recom_Mgr_QA_AC (Timestamp ZZ_Date_Recom_Mgr_QA_AC);
+
+	/** Get Date Recommended By Mgr QA AC	  */
+	public Timestamp getZZ_Date_Recom_Mgr_QA_AC();
+
+    /** Column name ZZ_Date_Recom_Officer_QA_AC */
+    public static final String COLUMNNAME_ZZ_Date_Recom_Officer_QA_AC = "ZZ_Date_Recom_Officer_QA_AC";
+
+	/** Set Date Recommended By Officer QA AC	  */
+	public void setZZ_Date_Recom_Officer_QA_AC (Timestamp ZZ_Date_Recom_Officer_QA_AC);
+
+	/** Get Date Recommended By Officer QA AC	  */
+	public Timestamp getZZ_Date_Recom_Officer_QA_AC();
+
+    /** Column name ZZ_Date_Recom_Snr_Mgr_QA */
+    public static final String COLUMNNAME_ZZ_Date_Recom_Snr_Mgr_QA = "ZZ_Date_Recom_Snr_Mgr_QA";
+
+	/** Set Date Recommended By Snr Mgr QA	  */
+	public void setZZ_Date_Recom_Snr_Mgr_QA (Timestamp ZZ_Date_Recom_Snr_Mgr_QA);
+
+	/** Get Date Recommended By Snr Mgr QA	  */
+	public Timestamp getZZ_Date_Recom_Snr_Mgr_QA();
+
     /** Column name ZZ_DocAction */
     public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
 
@@ -280,6 +334,17 @@ public interface I_ZZ_WPA_Application
 
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
+
+    /** Column name ZZ_Mgr_QA_AC_ID */
+    public static final String COLUMNNAME_ZZ_Mgr_QA_AC_ID = "ZZ_Mgr_QA_AC_ID";
+
+	/** Set Mgr QA AC	  */
+	public void setZZ_Mgr_QA_AC_ID (int ZZ_Mgr_QA_AC_ID);
+
+	/** Get Mgr QA AC	  */
+	public int getZZ_Mgr_QA_AC_ID();
+
+	public org.compiere.model.I_AD_User getZZ_Mgr_QA_AC() throws RuntimeException;
 
     /** Column name ZZ_RecommendedDate */
     public static final String COLUMNNAME_ZZ_RecommendedDate = "ZZ_RecommendedDate";
@@ -300,6 +365,17 @@ public interface I_ZZ_WPA_Application
 	public int getZZ_Recommender_ID();
 
 	public org.compiere.model.I_AD_User getZZ_Recommender() throws RuntimeException;
+
+    /** Column name ZZ_Snr_Mgr_QA_ID */
+    public static final String COLUMNNAME_ZZ_Snr_Mgr_QA_ID = "ZZ_Snr_Mgr_QA_ID";
+
+	/** Set Snr Mgr QA	  */
+	public void setZZ_Snr_Mgr_QA_ID (int ZZ_Snr_Mgr_QA_ID);
+
+	/** Get Snr Mgr QA	  */
+	public int getZZ_Snr_Mgr_QA_ID();
+
+	public org.compiere.model.I_AD_User getZZ_Snr_Mgr_QA() throws RuntimeException;
 
     /** Column name ZZ_VerifiedBy_ID */
     public static final String COLUMNNAME_ZZ_VerifiedBy_ID = "ZZ_VerifiedBy_ID";

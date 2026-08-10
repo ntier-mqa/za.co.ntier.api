@@ -130,7 +130,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return ii.intValue();
 	}
 
-	/** Set Applicant EMail Address.
+	/** Set EMail Address.
 		@param EMail Electronic Mail Address
 	*/
 	public void setEMail (String EMail)
@@ -138,7 +138,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		set_Value (COLUMNNAME_EMail, EMail);
 	}
 
-	/** Get Applicant EMail Address.
+	/** Get EMail Address.
 		@return Electronic Mail Address
 	  */
 	public String getEMail()
@@ -146,7 +146,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return (String)get_Value(COLUMNNAME_EMail);
 	}
 
-	/** Set Applicant Name.
+	/** Set Name.
 		@param Name Alphanumeric identifier of the entity
 	*/
 	public void setName (String Name)
@@ -154,7 +154,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		set_Value (COLUMNNAME_Name, Name);
 	}
 
-	/** Get Applicant Name.
+	/** Get Name.
 		@return Alphanumeric identifier of the entity
 	  */
 	public String getName()
@@ -162,7 +162,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return (String)get_Value(COLUMNNAME_Name);
 	}
 
-	/** Set Contact Number.
+	/** Set Phone.
 		@param Phone Identifies a telephone number
 	*/
 	public void setPhone (String Phone)
@@ -170,7 +170,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		set_Value (COLUMNNAME_Phone, Phone);
 	}
 
-	/** Get Contact Number.
+	/** Get Phone.
 		@return Identifies a telephone number
 	  */
 	public String getPhone()
@@ -178,7 +178,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return (String)get_Value(COLUMNNAME_Phone);
 	}
 
-	/** Set Alternate Contact Number.
+	/** Set 2nd Phone.
 		@param Phone2 Identifies an alternate telephone number.
 	*/
 	public void setPhone2 (String Phone2)
@@ -186,7 +186,7 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		set_Value (COLUMNNAME_Phone2, Phone2);
 	}
 
-	/** Get Alternate Contact Number.
+	/** Get 2nd Phone.
 		@return Identifies an alternate telephone number.
 	  */
 	public String getPhone2()
@@ -210,16 +210,16 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return (String)get_Value(COLUMNNAME_Value);
 	}
 
-	/** Set Applicant Surname.
-		@param ZZSurname Applicant Surname
+	/** Set Surname.
+		@param ZZSurname Surname
 	*/
 	public void setZZSurname (String ZZSurname)
 	{
 		set_Value (COLUMNNAME_ZZSurname, ZZSurname);
 	}
 
-	/** Get Applicant Surname.
-		@return Applicant Surname	  */
+	/** Get Surname.
+		@return Surname	  */
 	public String getZZSurname()
 	{
 		return (String)get_Value(COLUMNNAME_ZZSurname);
@@ -312,6 +312,51 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Approved);
 	}
 
+	/** Set Date Not Recommended By Mgr QA AC.
+		@param ZZ_Date_Not_Recom_Mgr_QA_AC Date Not Recommended By Mgr QA AC
+	*/
+	public void setZZ_Date_Not_Recom_Mgr_QA_AC (Timestamp ZZ_Date_Not_Recom_Mgr_QA_AC)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recom_Mgr_QA_AC, ZZ_Date_Not_Recom_Mgr_QA_AC);
+	}
+
+	/** Get Date Not Recommended By Mgr QA AC.
+		@return Date Not Recommended By Mgr QA AC	  */
+	public Timestamp getZZ_Date_Not_Recom_Mgr_QA_AC()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recom_Mgr_QA_AC);
+	}
+
+	/** Set Date Not Recommended By Officer QA AC.
+		@param ZZ_Date_Not_Recom_Officer_QA_AC Date Not Recommended By Officer QA AC
+	*/
+	public void setZZ_Date_Not_Recom_Officer_QA_AC (Timestamp ZZ_Date_Not_Recom_Officer_QA_AC)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recom_Officer_QA_AC, ZZ_Date_Not_Recom_Officer_QA_AC);
+	}
+
+	/** Get Date Not Recommended By Officer QA AC.
+		@return Date Not Recommended By Officer QA AC	  */
+	public Timestamp getZZ_Date_Not_Recom_Officer_QA_AC()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recom_Officer_QA_AC);
+	}
+
+	/** Set Date Not Recommended By Snr Mgr QA.
+		@param ZZ_Date_Not_Recom_Snr_Mgr_QA Date Not Recommended By Snr Mgr QA
+	*/
+	public void setZZ_Date_Not_Recom_Snr_Mgr_QA (Timestamp ZZ_Date_Not_Recom_Snr_Mgr_QA)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Not_Recom_Snr_Mgr_QA, ZZ_Date_Not_Recom_Snr_Mgr_QA);
+	}
+
+	/** Get Date Not Recommended By Snr Mgr QA.
+		@return Date Not Recommended By Snr Mgr QA	  */
+	public Timestamp getZZ_Date_Not_Recom_Snr_Mgr_QA()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Recom_Snr_Mgr_QA);
+	}
+
 	/** Set Date Not Recommended.
 		@param ZZ_Date_Not_Recommended Date Not Recommended
 	*/
@@ -340,6 +385,51 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	public Timestamp getZZ_Date_Not_Verified()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Not_Verified);
+	}
+
+	/** Set Date Recommended By Mgr QA AC.
+		@param ZZ_Date_Recom_Mgr_QA_AC Date Recommended By Mgr QA AC
+	*/
+	public void setZZ_Date_Recom_Mgr_QA_AC (Timestamp ZZ_Date_Recom_Mgr_QA_AC)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recom_Mgr_QA_AC, ZZ_Date_Recom_Mgr_QA_AC);
+	}
+
+	/** Get Date Recommended By Mgr QA AC.
+		@return Date Recommended By Mgr QA AC	  */
+	public Timestamp getZZ_Date_Recom_Mgr_QA_AC()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recom_Mgr_QA_AC);
+	}
+
+	/** Set Date Recommended By Officer QA AC.
+		@param ZZ_Date_Recom_Officer_QA_AC Date Recommended By Officer QA AC
+	*/
+	public void setZZ_Date_Recom_Officer_QA_AC (Timestamp ZZ_Date_Recom_Officer_QA_AC)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recom_Officer_QA_AC, ZZ_Date_Recom_Officer_QA_AC);
+	}
+
+	/** Get Date Recommended By Officer QA AC.
+		@return Date Recommended By Officer QA AC	  */
+	public Timestamp getZZ_Date_Recom_Officer_QA_AC()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recom_Officer_QA_AC);
+	}
+
+	/** Set Date Recommended By Snr Mgr QA.
+		@param ZZ_Date_Recom_Snr_Mgr_QA Date Recommended By Snr Mgr QA
+	*/
+	public void setZZ_Date_Recom_Snr_Mgr_QA (Timestamp ZZ_Date_Recom_Snr_Mgr_QA)
+	{
+		set_Value (COLUMNNAME_ZZ_Date_Recom_Snr_Mgr_QA, ZZ_Date_Recom_Snr_Mgr_QA);
+	}
+
+	/** Get Date Recommended By Snr Mgr QA.
+		@return Date Recommended By Snr Mgr QA	  */
+	public Timestamp getZZ_Date_Recom_Snr_Mgr_QA()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_Date_Recom_Snr_Mgr_QA);
 	}
 
 	/** Exec Approve = AE */
@@ -464,6 +554,12 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
 	/** Recommended By CEO = R4 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCEO = "R4";
+	/** Recommended By Officer - QA Accreditation = R5 */
+	public static final String ZZ_DOCSTATUS_RecommendedByOfficer_QAAccreditation = "R5";
+	/** Recommended By Mgr - QA Accreditation = R6 */
+	public static final String ZZ_DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
+	/** Recommended By Snr Mgr QA = R7 */
+	public static final String ZZ_DOCSTATUS_RecommendedBySnrMgrQA = "R7";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
@@ -510,6 +606,33 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
+	public org.compiere.model.I_AD_User getZZ_Mgr_QA_AC() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Mgr_QA_AC_ID(), get_TrxName());
+	}
+
+	/** Set Mgr QA AC.
+		@param ZZ_Mgr_QA_AC_ID Mgr QA AC
+	*/
+	public void setZZ_Mgr_QA_AC_ID (int ZZ_Mgr_QA_AC_ID)
+	{
+		if (ZZ_Mgr_QA_AC_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Mgr_QA_AC_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Mgr_QA_AC_ID, Integer.valueOf(ZZ_Mgr_QA_AC_ID));
+	}
+
+	/** Get Mgr QA AC.
+		@return Mgr QA AC	  */
+	public int getZZ_Mgr_QA_AC_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Mgr_QA_AC_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Recommended Date.
 		@param ZZ_RecommendedDate Recommended Date
 	*/
@@ -547,6 +670,33 @@ public class X_ZZ_WPA_Application extends PO implements I_ZZ_WPA_Application, I_
 	public int getZZ_Recommender_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Recommender_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_Snr_Mgr_QA() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_Snr_Mgr_QA_ID(), get_TrxName());
+	}
+
+	/** Set Snr Mgr QA.
+		@param ZZ_Snr_Mgr_QA_ID Snr Mgr QA
+	*/
+	public void setZZ_Snr_Mgr_QA_ID (int ZZ_Snr_Mgr_QA_ID)
+	{
+		if (ZZ_Snr_Mgr_QA_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Snr_Mgr_QA_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Snr_Mgr_QA_ID, Integer.valueOf(ZZ_Snr_Mgr_QA_ID));
+	}
+
+	/** Get Snr Mgr QA.
+		@return Snr Mgr QA	  */
+	public int getZZ_Snr_Mgr_QA_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Snr_Mgr_QA_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
