@@ -32,7 +32,7 @@ public interface I_ZZQctoSkillsProgramme
     /** TableName=ZZQctoSkillsProgramme */
     public static final String Table_Name = "ZZQctoSkillsProgramme";
 
-    /** AD_Table_ID=1000263 */
+    /** AD_Table_ID=1000262 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -163,18 +163,16 @@ public interface I_ZZQctoSkillsProgramme
 	/** Get Last Enrolment Date	  */
 	public Timestamp getZZLastEnrolmentDate();
 
-    /** Column name ZZLkpOfoOccupation_ID */
-    public static final String COLUMNNAME_ZZLkpOfoOccupation_ID = "ZZLkpOfoOccupation_ID";
+    /** Column name ZZLkpOfoOccupationTree_ID */
+    public static final String COLUMNNAME_ZZLkpOfoOccupationTree_ID = "ZZLkpOfoOccupationTree_ID";
 
-	/** Set OFO Occupation.
-	  * OFO Occupation
-	  */
-	public void setZZLkpOfoOccupation_ID (int ZZLkpOfoOccupation_ID);
+	/** Set Ofo Occupation	  */
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID);
 
-	/** Get OFO Occupation.
-	  * OFO Occupation
-	  */
-	public int getZZLkpOfoOccupation_ID();
+	/** Get Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID();
+
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException;
 
     /** Column name ZZMigrateValues */
     public static final String COLUMNNAME_ZZMigrateValues = "ZZMigrateValues";

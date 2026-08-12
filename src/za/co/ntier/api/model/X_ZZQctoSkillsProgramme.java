@@ -32,7 +32,7 @@ public class X_ZZQctoSkillsProgramme extends PO implements I_ZZQctoSkillsProgram
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260609L;
+	private static final long serialVersionUID = 20260812L;
 
     /** Standard Constructor */
     public X_ZZQctoSkillsProgramme (Properties ctx, int ZZQctoSkillsProgramme_ID, String trxName)
@@ -213,23 +213,28 @@ public class X_ZZQctoSkillsProgramme extends PO implements I_ZZQctoSkillsProgram
 		return (Timestamp)get_Value(COLUMNNAME_ZZLastEnrolmentDate);
 	}
 
-	/** Set OFO Occupation.
-		@param ZZLkpOfoOccupation_ID OFO Occupation
-	*/
-	public void setZZLkpOfoOccupation_ID (int ZZLkpOfoOccupation_ID)
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException
 	{
-		if (ZZLkpOfoOccupation_ID < 1)
-			set_Value (COLUMNNAME_ZZLkpOfoOccupation_ID, null);
-		else
-			set_Value (COLUMNNAME_ZZLkpOfoOccupation_ID, Integer.valueOf(ZZLkpOfoOccupation_ID));
+		return (I_ZZLkpOfoOccupationTree)MTable.get(getCtx(), I_ZZLkpOfoOccupationTree.Table_ID)
+			.getPO(getZZLkpOfoOccupationTree_ID(), get_TrxName());
 	}
 
-	/** Get OFO Occupation.
-		@return OFO Occupation
-	  */
-	public int getZZLkpOfoOccupation_ID()
+	/** Set Ofo Occupation.
+		@param ZZLkpOfoOccupationTree_ID Ofo Occupation
+	*/
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID)
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpOfoOccupation_ID);
+		if (ZZLkpOfoOccupationTree_ID < 1)
+			set_Value (COLUMNNAME_ZZLkpOfoOccupationTree_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZLkpOfoOccupationTree_ID, Integer.valueOf(ZZLkpOfoOccupationTree_ID));
+	}
+
+	/** Get Ofo Occupation.
+		@return Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpOfoOccupationTree_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -389,18 +394,6 @@ public class X_ZZQctoSkillsProgramme extends PO implements I_ZZQctoSkillsProgram
 		return ii.intValue();
 	}
 
-	/** IEB = 14 */
-	public static final String ZZQUALITYASSURANCEBODY_IEB = "14";
-	/** DHET = 48 */
-	public static final String ZZQUALITYASSURANCEBODY_DHET = "48";
-	/** DHET SETA-support = 49 */
-	public static final String ZZQUALITYASSURANCEBODY_DHETSETA_Support = "49";
-	/** DIDTETA = 50 */
-	public static final String ZZQUALITYASSURANCEBODY_DIDTETA = "50";
-	/** EWSETA = 53 */
-	public static final String ZZQUALITYASSURANCEBODY_EWSETA = "53";
-	/** Indlela NAMB = 54 */
-	public static final String ZZQUALITYASSURANCEBODY_IndlelaNAMB = "54";
 	/** UMALUSI = 541 */
 	public static final String ZZQUALITYASSURANCEBODY_UMALUSI = "541";
 	/** BANKSETA = 557 */
@@ -431,8 +424,6 @@ public class X_ZZQctoSkillsProgramme extends PO implements I_ZZQctoSkillsProgram
 	public static final String ZZQUALITYASSURANCEBODY_LGSETA = "597";
 	/** MERSETA = 599 */
 	public static final String ZZQUALITYASSURANCEBODY_MERSETA = "599";
-	/** QCTO = 60 */
-	public static final String ZZQUALITYASSURANCEBODY_QCTO = "60";
 	/** MAPPP-SETA = 601 */
 	public static final String ZZQUALITYASSURANCEBODY_MAPPP_SETA = "601";
 	/** PSETA = 607 */
@@ -471,8 +462,22 @@ public class X_ZZQctoSkillsProgramme extends PO implements I_ZZQctoSkillsProgram
 	public static final String ZZQUALITYASSURANCEBODY_CATHSSETA = "755";
 	/** MICT = 756 */
 	public static final String ZZQUALITYASSURANCEBODY_MICT = "756";
-	/** FETMIS = 9 */
-	public static final String ZZQUALITYASSURANCEBODY_FETMIS = "9";
+	/** DHET = DHET */
+	public static final String ZZQUALITYASSURANCEBODY_DHET = "DHET";
+	/** DHET SETA-support = DHET SETA-support */
+	public static final String ZZQUALITYASSURANCEBODY_DHETSETA_Support = "DHET SETA-support";
+	/** DIDTETA = DIDTETA */
+	public static final String ZZQUALITYASSURANCEBODY_DIDTETA = "DIDTETA";
+	/** EWSETA = EWSETA */
+	public static final String ZZQUALITYASSURANCEBODY_EWSETA = "EWSETA";
+	/** FETMIS = FETMIS */
+	public static final String ZZQUALITYASSURANCEBODY_FETMIS = "FETMIS";
+	/** IEB = IEB */
+	public static final String ZZQUALITYASSURANCEBODY_IEB = "IEB";
+	/** Indlela NAMB = Indlela NAMB */
+	public static final String ZZQUALITYASSURANCEBODY_IndlelaNAMB = "Indlela NAMB";
+	/** QCTO = QCTO */
+	public static final String ZZQUALITYASSURANCEBODY_QCTO = "QCTO";
 	/** Set Quality Assurance Body.
 		@param ZZQualityAssuranceBody Quality Assurance Body
 	*/

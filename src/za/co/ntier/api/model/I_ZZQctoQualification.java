@@ -181,18 +181,16 @@ public interface I_ZZQctoQualification
 	/** Get Last Enrolment Date	  */
 	public Timestamp getZZLastEnrolmentDate();
 
-    /** Column name ZZLkpOfoOccupation_ID */
-    public static final String COLUMNNAME_ZZLkpOfoOccupation_ID = "ZZLkpOfoOccupation_ID";
+    /** Column name ZZLkpOfoOccupationTree_ID */
+    public static final String COLUMNNAME_ZZLkpOfoOccupationTree_ID = "ZZLkpOfoOccupationTree_ID";
 
-	/** Set OFO Occupation.
-	  * OFO Occupation
-	  */
-	public void setZZLkpOfoOccupation_ID (int ZZLkpOfoOccupation_ID);
+	/** Set Ofo Occupation	  */
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID);
 
-	/** Get OFO Occupation.
-	  * OFO Occupation
-	  */
-	public int getZZLkpOfoOccupation_ID();
+	/** Get Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID();
+
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException;
 
     /** Column name ZZMigrateValues */
     public static final String COLUMNNAME_ZZMigrateValues = "ZZMigrateValues";
@@ -266,6 +264,17 @@ public interface I_ZZQctoQualification
 	/** Get NQF Level	  */
 	public String getZZNqfLevel();
 
+    /** Column name ZZQctoQualification2_ID */
+    public static final String COLUMNNAME_ZZQctoQualification2_ID = "ZZQctoQualification2_ID";
+
+	/** Set QCTO Qualification	  */
+	public void setZZQctoQualification2_ID (int ZZQctoQualification2_ID);
+
+	/** Get QCTO Qualification	  */
+	public int getZZQctoQualification2_ID();
+
+	public I_ZZQctoQualification getZZQctoQualification2() throws RuntimeException;
+
     /** Column name ZZQctoQualificationType */
     public static final String COLUMNNAME_ZZQctoQualificationType = "ZZQctoQualificationType";
 
@@ -313,7 +322,7 @@ public interface I_ZZQctoQualification
 	/** Get Replacement Qualification	  */
 	public int getZZReplacementQualification_ID();
 
-	public I_ZZQualification getZZReplacementQualification() throws RuntimeException;
+	public I_ZZQctoQualification getZZReplacementQualification() throws RuntimeException;
 
     /** Column name ZZSaqaQualificationCode */
     public static final String COLUMNNAME_ZZSaqaQualificationCode = "ZZSaqaQualificationCode";
@@ -332,4 +341,17 @@ public interface I_ZZQctoQualification
 
 	/** Get SAQA Qualification Title	  */
 	public String getZZSaqaQualificationTitle();
+
+    /** Column name ZZ_QCTOQualsCodeAndTitle */
+    public static final String COLUMNNAME_ZZ_QCTOQualsCodeAndTitle = "ZZ_QCTOQualsCodeAndTitle";
+
+	/** Set QCTO Qualification Code and Title.
+	  * A column sql for the displaying code and title for the QCTO Qualification
+	  */
+	public void setZZ_QCTOQualsCodeAndTitle (String ZZ_QCTOQualsCodeAndTitle);
+
+	/** Get QCTO Qualification Code and Title.
+	  * A column sql for the displaying code and title for the QCTO Qualification
+	  */
+	public String getZZ_QCTOQualsCodeAndTitle();
 }

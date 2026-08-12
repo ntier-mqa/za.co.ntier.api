@@ -358,4 +358,17 @@ public interface I_ZZQualification
 
 	/** Get SAQA Qualification Title	  */
 	public String getZZSaqaQualificationTitle();
+
+    /** Column name ZZ_QualificationCodeAndTitle */
+    public static final String COLUMNNAME_ZZ_QualificationCodeAndTitle = "ZZ_QualificationCodeAndTitle";
+
+	/** Set Qualification Code and Title.
+	  * A column sql for the displaying code and title for the Qualification
+	  */
+	public void setZZ_QualificationCodeAndTitle (String ZZ_QualificationCodeAndTitle);
+
+	/** Get Qualification Code and Title.
+	  * A column sql for the displaying code and title for the Qualification
+	  */
+	public String getZZ_QualificationCodeAndTitle();
 }

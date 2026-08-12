@@ -33,7 +33,7 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260611L;
+	private static final long serialVersionUID = 20260812L;
 
     /** Standard Constructor */
     public X_ZZSkillsProgramme (Properties ctx, int ZZSkillsProgramme_ID, String trxName)
@@ -231,6 +231,21 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 		return (String)get_Value(COLUMNNAME_ZZIsOhs);
 	}
 
+	/** Set Last Enrolment Date.
+		@param ZZLastEnrolmentDate Last Enrolment Date
+	*/
+	public void setZZLastEnrolmentDate (Timestamp ZZLastEnrolmentDate)
+	{
+		set_Value (COLUMNNAME_ZZLastEnrolmentDate, ZZLastEnrolmentDate);
+	}
+
+	/** Get Last Enrolment Date.
+		@return Last Enrolment Date	  */
+	public Timestamp getZZLastEnrolmentDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZLastEnrolmentDate);
+	}
+
 	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException
 	{
 		return (I_ZZLkpOfoOccupationTree)MTable.get(getCtx(), I_ZZLkpOfoOccupationTree.Table_ID)
@@ -376,18 +391,6 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 		return ii.intValue();
 	}
 
-	/** IEB = 14 */
-	public static final String ZZQUALITYASSURANCEBODY_IEB = "14";
-	/** DHET = 48 */
-	public static final String ZZQUALITYASSURANCEBODY_DHET = "48";
-	/** DHET SETA-support = 49 */
-	public static final String ZZQUALITYASSURANCEBODY_DHETSETA_Support = "49";
-	/** DIDTETA = 50 */
-	public static final String ZZQUALITYASSURANCEBODY_DIDTETA = "50";
-	/** EWSETA = 53 */
-	public static final String ZZQUALITYASSURANCEBODY_EWSETA = "53";
-	/** Indlela NAMB = 54 */
-	public static final String ZZQUALITYASSURANCEBODY_IndlelaNAMB = "54";
 	/** UMALUSI = 541 */
 	public static final String ZZQUALITYASSURANCEBODY_UMALUSI = "541";
 	/** BANKSETA = 557 */
@@ -418,8 +421,6 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 	public static final String ZZQUALITYASSURANCEBODY_LGSETA = "597";
 	/** MERSETA = 599 */
 	public static final String ZZQUALITYASSURANCEBODY_MERSETA = "599";
-	/** QCTO = 60 */
-	public static final String ZZQUALITYASSURANCEBODY_QCTO = "60";
 	/** MAPPP-SETA = 601 */
 	public static final String ZZQUALITYASSURANCEBODY_MAPPP_SETA = "601";
 	/** PSETA = 607 */
@@ -458,8 +459,22 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 	public static final String ZZQUALITYASSURANCEBODY_CATHSSETA = "755";
 	/** MICT = 756 */
 	public static final String ZZQUALITYASSURANCEBODY_MICT = "756";
-	/** FETMIS = 9 */
-	public static final String ZZQUALITYASSURANCEBODY_FETMIS = "9";
+	/** DHET = DHET */
+	public static final String ZZQUALITYASSURANCEBODY_DHET = "DHET";
+	/** DHET SETA-support = DHET SETA-support */
+	public static final String ZZQUALITYASSURANCEBODY_DHETSETA_Support = "DHET SETA-support";
+	/** DIDTETA = DIDTETA */
+	public static final String ZZQUALITYASSURANCEBODY_DIDTETA = "DIDTETA";
+	/** EWSETA = EWSETA */
+	public static final String ZZQUALITYASSURANCEBODY_EWSETA = "EWSETA";
+	/** FETMIS = FETMIS */
+	public static final String ZZQUALITYASSURANCEBODY_FETMIS = "FETMIS";
+	/** IEB = IEB */
+	public static final String ZZQUALITYASSURANCEBODY_IEB = "IEB";
+	/** Indlela NAMB = Indlela NAMB */
+	public static final String ZZQUALITYASSURANCEBODY_IndlelaNAMB = "Indlela NAMB";
+	/** QCTO = QCTO */
+	public static final String ZZQUALITYASSURANCEBODY_QCTO = "QCTO";
 	/** Set Quality Assurance Body.
 		@param ZZQualityAssuranceBody Quality Assurance Body
 	*/
@@ -590,5 +605,20 @@ public class X_ZZSkillsProgramme extends PO implements I_ZZSkillsProgramme, I_Pe
 	public String getZZSkillsProgramme_UU()
 	{
 		return (String)get_Value(COLUMNNAME_ZZSkillsProgramme_UU);
+	}
+
+	/** Set Skills Programme Code and Title.
+		@param ZZ_SkillsProgCodeAndTitle A column sql for the displaying code and title for the Skills Programme
+	*/
+	public void setZZ_SkillsProgCodeAndTitle (String ZZ_SkillsProgCodeAndTitle)
+	{
+		throw new IllegalArgumentException ("ZZ_SkillsProgCodeAndTitle is virtual column");	}
+
+	/** Get Skills Programme Code and Title.
+		@return A column sql for the displaying code and title for the Skills Programme
+	  */
+	public String getZZ_SkillsProgCodeAndTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_SkillsProgCodeAndTitle);
 	}
 }

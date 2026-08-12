@@ -180,6 +180,15 @@ public interface I_ZZSkillsProgramme
 	/** Get OHS	  */
 	public String getZZIsOhs();
 
+    /** Column name ZZLastEnrolmentDate */
+    public static final String COLUMNNAME_ZZLastEnrolmentDate = "ZZLastEnrolmentDate";
+
+	/** Set Last Enrolment Date	  */
+	public void setZZLastEnrolmentDate (Timestamp ZZLastEnrolmentDate);
+
+	/** Get Last Enrolment Date	  */
+	public Timestamp getZZLastEnrolmentDate();
+
     /** Column name ZZLkpOfoOccupationTree_ID */
     public static final String COLUMNNAME_ZZLkpOfoOccupationTree_ID = "ZZLkpOfoOccupationTree_ID";
 
@@ -300,4 +309,17 @@ public interface I_ZZSkillsProgramme
 
 	/** Get ZZSkillsProgramme_UU	  */
 	public String getZZSkillsProgramme_UU();
+
+    /** Column name ZZ_SkillsProgCodeAndTitle */
+    public static final String COLUMNNAME_ZZ_SkillsProgCodeAndTitle = "ZZ_SkillsProgCodeAndTitle";
+
+	/** Set Skills Programme Code and Title.
+	  * A column sql for the displaying code and title for the Skills Programme
+	  */
+	public void setZZ_SkillsProgCodeAndTitle (String ZZ_SkillsProgCodeAndTitle);
+
+	/** Get Skills Programme Code and Title.
+	  * A column sql for the displaying code and title for the Skills Programme
+	  */
+	public String getZZ_SkillsProgCodeAndTitle();
 }

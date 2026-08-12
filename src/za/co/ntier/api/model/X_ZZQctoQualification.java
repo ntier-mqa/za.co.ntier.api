@@ -21,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
+import org.compiere.util.KeyNamePair;
 
 /** Generated Model for ZZQctoQualification
  *  @author iDempiere (generated)
@@ -32,7 +33,7 @@ public class X_ZZQctoQualification extends PO implements I_ZZQctoQualification, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260609L;
+	private static final long serialVersionUID = 20260812L;
 
     /** Standard Constructor */
     public X_ZZQctoQualification (Properties ctx, int ZZQctoQualification_ID, String trxName)
@@ -246,23 +247,28 @@ public class X_ZZQctoQualification extends PO implements I_ZZQctoQualification, 
 		return (Timestamp)get_Value(COLUMNNAME_ZZLastEnrolmentDate);
 	}
 
-	/** Set OFO Occupation.
-		@param ZZLkpOfoOccupation_ID OFO Occupation
-	*/
-	public void setZZLkpOfoOccupation_ID (int ZZLkpOfoOccupation_ID)
+	public I_ZZLkpOfoOccupationTree getZZLkpOfoOccupationTree() throws RuntimeException
 	{
-		if (ZZLkpOfoOccupation_ID < 1)
-			set_Value (COLUMNNAME_ZZLkpOfoOccupation_ID, null);
-		else
-			set_Value (COLUMNNAME_ZZLkpOfoOccupation_ID, Integer.valueOf(ZZLkpOfoOccupation_ID));
+		return (I_ZZLkpOfoOccupationTree)MTable.get(getCtx(), I_ZZLkpOfoOccupationTree.Table_ID)
+			.getPO(getZZLkpOfoOccupationTree_ID(), get_TrxName());
 	}
 
-	/** Get OFO Occupation.
-		@return OFO Occupation
-	  */
-	public int getZZLkpOfoOccupation_ID()
+	/** Set Ofo Occupation.
+		@param ZZLkpOfoOccupationTree_ID Ofo Occupation
+	*/
+	public void setZZLkpOfoOccupationTree_ID (int ZZLkpOfoOccupationTree_ID)
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpOfoOccupation_ID);
+		if (ZZLkpOfoOccupationTree_ID < 1)
+			set_Value (COLUMNNAME_ZZLkpOfoOccupationTree_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZLkpOfoOccupationTree_ID, Integer.valueOf(ZZLkpOfoOccupationTree_ID));
+	}
+
+	/** Get Ofo Occupation.
+		@return Ofo Occupation	  */
+	public int getZZLkpOfoOccupationTree_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLkpOfoOccupationTree_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -419,6 +425,33 @@ public class X_ZZQctoQualification extends PO implements I_ZZQctoQualification, 
 		return (String)get_Value(COLUMNNAME_ZZNqfLevel);
 	}
 
+	public I_ZZQctoQualification getZZQctoQualification2() throws RuntimeException
+	{
+		return (I_ZZQctoQualification)MTable.get(getCtx(), I_ZZQctoQualification.Table_ID)
+			.getPO(getZZQctoQualification2_ID(), get_TrxName());
+	}
+
+	/** Set QCTO Qualification.
+		@param ZZQctoQualification2_ID QCTO Qualification
+	*/
+	public void setZZQctoQualification2_ID (int ZZQctoQualification2_ID)
+	{
+		if (ZZQctoQualification2_ID < 1)
+			set_Value (COLUMNNAME_ZZQctoQualification2_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZQctoQualification2_ID, Integer.valueOf(ZZQctoQualification2_ID));
+	}
+
+	/** Get QCTO Qualification.
+		@return QCTO Qualification	  */
+	public int getZZQctoQualification2_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZQctoQualification2_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Part Qualification = Part Qualification */
 	public static final String ZZQCTOQUALIFICATIONTYPE_PartQualification = "Part Qualification";
 	/** Qualification = Qualification */
@@ -502,9 +535,9 @@ public class X_ZZQctoQualification extends PO implements I_ZZQctoQualification, 
 		return ii.intValue();
 	}
 
-	public I_ZZQualification getZZReplacementQualification() throws RuntimeException
+	public I_ZZQctoQualification getZZReplacementQualification() throws RuntimeException
 	{
-		return (I_ZZQualification)MTable.get(getCtx(), I_ZZQualification.Table_ID)
+		return (I_ZZQctoQualification)MTable.get(getCtx(), I_ZZQctoQualification.Table_ID)
 			.getPO(getZZReplacementQualification_ID(), get_TrxName());
 	}
 
@@ -557,5 +590,28 @@ public class X_ZZQctoQualification extends PO implements I_ZZQctoQualification, 
 	public String getZZSaqaQualificationTitle()
 	{
 		return (String)get_Value(COLUMNNAME_ZZSaqaQualificationTitle);
+	}
+
+    /** Get Record ID/ColumnName
+        @return ID/ColumnName pair
+      */
+    public KeyNamePair getKeyNamePair()
+    {
+        return new KeyNamePair(get_ID(), getZZSaqaQualificationTitle());
+    }
+
+	/** Set QCTO Qualification Code and Title.
+		@param ZZ_QCTOQualsCodeAndTitle A column sql for the displaying code and title for the QCTO Qualification
+	*/
+	public void setZZ_QCTOQualsCodeAndTitle (String ZZ_QCTOQualsCodeAndTitle)
+	{
+		throw new IllegalArgumentException ("ZZ_QCTOQualsCodeAndTitle is virtual column");	}
+
+	/** Get QCTO Qualification Code and Title.
+		@return A column sql for the displaying code and title for the QCTO Qualification
+	  */
+	public String getZZ_QCTOQualsCodeAndTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_QCTOQualsCodeAndTitle);
 	}
 }

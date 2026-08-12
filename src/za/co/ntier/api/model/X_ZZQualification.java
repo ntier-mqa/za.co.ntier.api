@@ -33,7 +33,7 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260611L;
+	private static final long serialVersionUID = 20260812L;
 
     /** Standard Constructor */
     public X_ZZQualification (Properties ctx, int ZZQualification_ID, String trxName)
@@ -507,18 +507,6 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 		return (String)get_Value(COLUMNNAME_ZZQualification_UU);
 	}
 
-	/** IEB = 14 */
-	public static final String ZZQUALITYASSURANCEBODY_IEB = "14";
-	/** DHET = 48 */
-	public static final String ZZQUALITYASSURANCEBODY_DHET = "48";
-	/** DHET SETA-support = 49 */
-	public static final String ZZQUALITYASSURANCEBODY_DHETSETA_Support = "49";
-	/** DIDTETA = 50 */
-	public static final String ZZQUALITYASSURANCEBODY_DIDTETA = "50";
-	/** EWSETA = 53 */
-	public static final String ZZQUALITYASSURANCEBODY_EWSETA = "53";
-	/** Indlela NAMB = 54 */
-	public static final String ZZQUALITYASSURANCEBODY_IndlelaNAMB = "54";
 	/** UMALUSI = 541 */
 	public static final String ZZQUALITYASSURANCEBODY_UMALUSI = "541";
 	/** BANKSETA = 557 */
@@ -549,8 +537,6 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	public static final String ZZQUALITYASSURANCEBODY_LGSETA = "597";
 	/** MERSETA = 599 */
 	public static final String ZZQUALITYASSURANCEBODY_MERSETA = "599";
-	/** QCTO = 60 */
-	public static final String ZZQUALITYASSURANCEBODY_QCTO = "60";
 	/** MAPPP-SETA = 601 */
 	public static final String ZZQUALITYASSURANCEBODY_MAPPP_SETA = "601";
 	/** PSETA = 607 */
@@ -589,8 +575,22 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	public static final String ZZQUALITYASSURANCEBODY_CATHSSETA = "755";
 	/** MICT = 756 */
 	public static final String ZZQUALITYASSURANCEBODY_MICT = "756";
-	/** FETMIS = 9 */
-	public static final String ZZQUALITYASSURANCEBODY_FETMIS = "9";
+	/** DHET = DHET */
+	public static final String ZZQUALITYASSURANCEBODY_DHET = "DHET";
+	/** DHET SETA-support = DHET SETA-support */
+	public static final String ZZQUALITYASSURANCEBODY_DHETSETA_Support = "DHET SETA-support";
+	/** DIDTETA = DIDTETA */
+	public static final String ZZQUALITYASSURANCEBODY_DIDTETA = "DIDTETA";
+	/** EWSETA = EWSETA */
+	public static final String ZZQUALITYASSURANCEBODY_EWSETA = "EWSETA";
+	/** FETMIS = FETMIS */
+	public static final String ZZQUALITYASSURANCEBODY_FETMIS = "FETMIS";
+	/** IEB = IEB */
+	public static final String ZZQUALITYASSURANCEBODY_IEB = "IEB";
+	/** Indlela NAMB = Indlela NAMB */
+	public static final String ZZQUALITYASSURANCEBODY_IndlelaNAMB = "Indlela NAMB";
+	/** QCTO = QCTO */
+	public static final String ZZQUALITYASSURANCEBODY_QCTO = "QCTO";
 	/** Set Quality Assurance Body.
 		@param ZZQualityAssuranceBody Quality Assurance Body
 	*/
@@ -671,4 +671,19 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
     {
         return new KeyNamePair(get_ID(), getZZSaqaQualificationTitle());
     }
+
+	/** Set Qualification Code and Title.
+		@param ZZ_QualificationCodeAndTitle A column sql for the displaying code and title for the Qualification
+	*/
+	public void setZZ_QualificationCodeAndTitle (String ZZ_QualificationCodeAndTitle)
+	{
+		throw new IllegalArgumentException ("ZZ_QualificationCodeAndTitle is virtual column");	}
+
+	/** Get Qualification Code and Title.
+		@return A column sql for the displaying code and title for the Qualification
+	  */
+	public String getZZ_QualificationCodeAndTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_QualificationCodeAndTitle);
+	}
 }
