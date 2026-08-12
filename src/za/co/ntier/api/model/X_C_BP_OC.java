@@ -32,7 +32,7 @@ public class X_C_BP_OC extends PO implements I_C_BP_OC, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260714L;
+	private static final long serialVersionUID = 20260812L;
 
     /** Standard Constructor */
     public X_C_BP_OC (Properties ctx, int C_BP_OC_ID, String trxName)
@@ -210,6 +210,21 @@ public class X_C_BP_OC extends PO implements I_C_BP_OC, I_Persistent
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Last Achievement Date.
+		@param ZZLastAchievementDate Last Achievement Date
+	*/
+	public void setZZLastAchievementDate (Timestamp ZZLastAchievementDate)
+	{
+		set_Value (COLUMNNAME_ZZLastAchievementDate, ZZLastAchievementDate);
+	}
+
+	/** Get Last Achievement Date.
+		@return Last Achievement Date	  */
+	public Timestamp getZZLastAchievementDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZLastAchievementDate);
 	}
 
 	/** Set OFO Occupation.

@@ -32,7 +32,7 @@ public class X_C_BP_SkillsProgramme extends PO implements I_C_BP_SkillsProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260609L;
+	private static final long serialVersionUID = 20260812L;
 
     /** Standard Constructor */
     public X_C_BP_SkillsProgramme (Properties ctx, int C_BP_SkillsProgramme_ID, String trxName)
@@ -210,6 +210,21 @@ public class X_C_BP_SkillsProgramme extends PO implements I_C_BP_SkillsProgramme
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Last Enrolment Date.
+		@param ZZLastEnrolmentDate Last Enrolment Date
+	*/
+	public void setZZLastEnrolmentDate (Timestamp ZZLastEnrolmentDate)
+	{
+		set_Value (COLUMNNAME_ZZLastEnrolmentDate, ZZLastEnrolmentDate);
+	}
+
+	/** Get Last Enrolment Date.
+		@return Last Enrolment Date	  */
+	public Timestamp getZZLastEnrolmentDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZLastEnrolmentDate);
 	}
 
 	/** Set OFO Occupation.

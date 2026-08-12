@@ -177,6 +177,15 @@ public interface I_C_BP_SkillsProgramme
 	/** Get Credits	  */
 	public int getZZCredits();
 
+    /** Column name ZZLastEnrolmentDate */
+    public static final String COLUMNNAME_ZZLastEnrolmentDate = "ZZLastEnrolmentDate";
+
+	/** Set Last Enrolment Date	  */
+	public void setZZLastEnrolmentDate (Timestamp ZZLastEnrolmentDate);
+
+	/** Get Last Enrolment Date	  */
+	public Timestamp getZZLastEnrolmentDate();
+
     /** Column name ZZLkpOfoOccupation_ID */
     public static final String COLUMNNAME_ZZLkpOfoOccupation_ID = "ZZLkpOfoOccupation_ID";
 

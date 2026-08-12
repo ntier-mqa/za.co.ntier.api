@@ -177,6 +177,15 @@ public interface I_C_BP_OC
 	/** Get Credits	  */
 	public int getZZCredits();
 
+    /** Column name ZZLastAchievementDate */
+    public static final String COLUMNNAME_ZZLastAchievementDate = "ZZLastAchievementDate";
+
+	/** Set Last Achievement Date	  */
+	public void setZZLastAchievementDate (Timestamp ZZLastAchievementDate);
+
+	/** Get Last Achievement Date	  */
+	public Timestamp getZZLastAchievementDate();
+
     /** Column name ZZLkpOfoOccupation_ID */
     public static final String COLUMNNAME_ZZLkpOfoOccupation_ID = "ZZLkpOfoOccupation_ID";
 
