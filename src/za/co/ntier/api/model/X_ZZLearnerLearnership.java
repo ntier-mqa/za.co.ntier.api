@@ -32,7 +32,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260702L;
+	private static final long serialVersionUID = 20260814L;
 
     /** Standard Constructor */
     public X_ZZLearnerLearnership (Properties ctx, int ZZLearnerLearnership_ID, String trxName)
@@ -40,7 +40,15 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
       super (ctx, ZZLearnerLearnership_ID, trxName);
       /** if (ZZLearnerLearnership_ID == 0)
         {
+			setZZEmpContract (false);
+// N
+			setZZEmpContractCopy (false);
+// N
+			setZZIsApproved (false);
+// N
 			setZZLearnerLearnership_ID (0);
+			setZZWPAgreement (false);
+// N
         } */
     }
 
@@ -50,7 +58,15 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
       super (ctx, ZZLearnerLearnership_ID, trxName, virtualColumns);
       /** if (ZZLearnerLearnership_ID == 0)
         {
+			setZZEmpContract (false);
+// N
+			setZZEmpContractCopy (false);
+// N
+			setZZIsApproved (false);
+// N
 			setZZLearnerLearnership_ID (0);
+			setZZWPAgreement (false);
+// N
         } */
     }
 
@@ -60,7 +76,15 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
       super (ctx, ZZLearnerLearnership_UU, trxName);
       /** if (ZZLearnerLearnership_UU == null)
         {
+			setZZEmpContract (false);
+// N
+			setZZEmpContractCopy (false);
+// N
+			setZZIsApproved (false);
+// N
 			setZZLearnerLearnership_ID (0);
+			setZZWPAgreement (false);
+// N
         } */
     }
 
@@ -70,7 +94,15 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
       super (ctx, ZZLearnerLearnership_UU, trxName, virtualColumns);
       /** if (ZZLearnerLearnership_UU == null)
         {
+			setZZEmpContract (false);
+// N
+			setZZEmpContractCopy (false);
+// N
+			setZZIsApproved (false);
+// N
 			setZZLearnerLearnership_ID (0);
+			setZZWPAgreement (false);
+// N
         } */
     }
 
@@ -130,6 +162,47 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public String getZZAmountSpend()
 	{
 		return (String)get_Value(COLUMNNAME_ZZAmountSpend);
+	}
+
+	/** Set ZZApprovalDate.
+		@param ZZApprovalDate ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	*/
+	public void setZZApprovalDate (Timestamp ZZApprovalDate)
+	{
+		set_Value (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
+	}
+
+	/** Get ZZApprovalDate.
+		@return ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
+	public Timestamp getZZApprovalDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);
+	}
+
+	public org.compiere.model.I_AD_User getZZApprove() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZApprovedBy(), get_TrxName());
+	}
+
+	/** Set ZZApprovedBy.
+		@param ZZApprovedBy ms_learnerlearnership.approvedby (ms_user email match)
+	*/
+	public void setZZApprovedBy (int ZZApprovedBy)
+	{
+		set_Value (COLUMNNAME_ZZApprovedBy, Integer.valueOf(ZZApprovedBy));
+	}
+
+	/** Get ZZApprovedBy.
+		@return ms_learnerlearnership.approvedby (ms_user email match)
+	  */
+	public int getZZApprovedBy()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZApprovedBy);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** ZZBelongToFasset AD_Reference_ID=319 */
@@ -239,6 +312,21 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 		return (Timestamp)get_Value(COLUMNNAME_ZZCommencementDate);
 	}
 
+	/** Set Estimate Completion Date.
+		@param ZZCompletionDate Estimate Completion Date
+	*/
+	public void setZZCompletionDate (Timestamp ZZCompletionDate)
+	{
+		set_Value (COLUMNNAME_ZZCompletionDate, ZZCompletionDate);
+	}
+
+	/** Get Estimate Completion Date.
+		@return Estimate Completion Date	  */
+	public Timestamp getZZCompletionDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZCompletionDate);
+	}
+
 	/** Set Contract Number.
 		@param ZZContractNumber Contract Number
 	*/
@@ -252,6 +340,22 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public String getZZContractNumber()
 	{
 		return (String)get_Value(COLUMNNAME_ZZContractNumber);
+	}
+
+	/** Set ZZDateApproved.
+		@param ZZDateApproved ms_learnerlearnership.dateapproved
+	*/
+	public void setZZDateApproved (Timestamp ZZDateApproved)
+	{
+		set_Value (COLUMNNAME_ZZDateApproved, ZZDateApproved);
+	}
+
+	/** Get ZZDateApproved.
+		@return ms_learnerlearnership.dateapproved
+	  */
+	public Timestamp getZZDateApproved()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZDateApproved);
 	}
 
 	/** Set Certificate Created.
@@ -312,6 +416,67 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public Timestamp getZZDateTerminationCaptured()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZDateTerminationCaptured);
+	}
+
+	/** Set Duration Learner Employed.
+		@param ZZDurationLearnerEmployed Duration Learner Employed
+	*/
+	public void setZZDurationLearnerEmployed (String ZZDurationLearnerEmployed)
+	{
+		set_Value (COLUMNNAME_ZZDurationLearnerEmployed, ZZDurationLearnerEmployed);
+	}
+
+	/** Get Duration Learner Employed.
+		@return Duration Learner Employed	  */
+	public String getZZDurationLearnerEmployed()
+	{
+		return (String)get_Value(COLUMNNAME_ZZDurationLearnerEmployed);
+	}
+
+	/** Set ZZEmpContract.
+		@param ZZEmpContract ms_learnerlearnership.empcontract -&gt; MigrationSupport.yesNoIdToFlag()
+	*/
+	public void setZZEmpContract (boolean ZZEmpContract)
+	{
+		set_Value (COLUMNNAME_ZZEmpContract, Boolean.valueOf(ZZEmpContract));
+	}
+
+	/** Get ZZEmpContract.
+		@return ms_learnerlearnership.empcontract -&gt; MigrationSupport.yesNoIdToFlag()
+	  */
+	public boolean isZZEmpContract()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZEmpContract);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set ZZEmpContractCopy.
+		@param ZZEmpContractCopy ms_learnerlearnership.empcontractcopy -&gt; MigrationSupport.yesNoIdToFlag()
+	*/
+	public void setZZEmpContractCopy (boolean ZZEmpContractCopy)
+	{
+		set_Value (COLUMNNAME_ZZEmpContractCopy, Boolean.valueOf(ZZEmpContractCopy));
+	}
+
+	/** Get ZZEmpContractCopy.
+		@return ms_learnerlearnership.empcontractcopy -&gt; MigrationSupport.yesNoIdToFlag()
+	  */
+	public boolean isZZEmpContractCopy()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZEmpContractCopy);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	/** Set Employment Start Date.
@@ -464,6 +629,109 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 		return ii.intValue();
 	}
 
+	/** Set Extension Date.
+		@param ZZExtensionDate Extension Date
+	*/
+	public void setZZExtensionDate (Timestamp ZZExtensionDate)
+	{
+		set_Value (COLUMNNAME_ZZExtensionDate, ZZExtensionDate);
+	}
+
+	/** Get Extension Date.
+		@return Extension Date	  */
+	public Timestamp getZZExtensionDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZExtensionDate);
+	}
+
+	/** Set Extension Reason.
+		@param ZZExtensionReason Extension Reason
+	*/
+	public void setZZExtensionReason (String ZZExtensionReason)
+	{
+		set_Value (COLUMNNAME_ZZExtensionReason, ZZExtensionReason);
+	}
+
+	/** Get Extension Reason.
+		@return Extension Reason	  */
+	public String getZZExtensionReason()
+	{
+		return (String)get_Value(COLUMNNAME_ZZExtensionReason);
+	}
+
+	public I_ZZGrantType getZZGrantType() throws RuntimeException
+	{
+		return (I_ZZGrantType)MTable.get(getCtx(), I_ZZGrantType.Table_ID)
+			.getPO(getZZGrantType_ID(), get_TrxName());
+	}
+
+	/** Set Grant Type.
+		@param ZZGrantType_ID Grant Type
+	*/
+	public void setZZGrantType_ID (int ZZGrantType_ID)
+	{
+		if (ZZGrantType_ID < 1)
+			set_Value (COLUMNNAME_ZZGrantType_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZGrantType_ID, Integer.valueOf(ZZGrantType_ID));
+	}
+
+	/** Get Grant Type.
+		@return Grant Type	  */
+	public int getZZGrantType_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZGrantType_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set ZZIsApproved.
+		@param ZZIsApproved ms_learnerlearnership.isapproved
+	*/
+	public void setZZIsApproved (boolean ZZIsApproved)
+	{
+		set_Value (COLUMNNAME_ZZIsApproved, Boolean.valueOf(ZZIsApproved));
+	}
+
+	/** Get ZZIsApproved.
+		@return ms_learnerlearnership.isapproved
+	  */
+	public boolean isZZIsApproved()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZIsApproved);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** No = No */
+	public static final String ZZISTERMSEMPLOYMENT_No = "No";
+	/** Not Applicable = Not Applicable */
+	public static final String ZZISTERMSEMPLOYMENT_NotApplicable = "Not Applicable";
+	/** Yes = Yes */
+	public static final String ZZISTERMSEMPLOYMENT_Yes = "Yes";
+	/** Set ZZIsTermsEmployment.
+		@param ZZIsTermsEmployment ms_learnerlearnership.istermsemployment -&gt; ms_lkpyesnonotapplicable (same 1/2-only value pattern as levyyesnoid)
+	*/
+	public void setZZIsTermsEmployment (String ZZIsTermsEmployment)
+	{
+
+		set_Value (COLUMNNAME_ZZIsTermsEmployment, ZZIsTermsEmployment);
+	}
+
+	/** Get ZZIsTermsEmployment.
+		@return ms_learnerlearnership.istermsemployment -&gt; ms_lkpyesnonotapplicable (same 1/2-only value pattern as levyyesnoid)
+	  */
+	public String getZZIsTermsEmployment()
+	{
+		return (String)get_Value(COLUMNNAME_ZZIsTermsEmployment);
+	}
+
 	/** Set Learner Employed.
 		@param ZZLearnerEmployed Learner Employed
 	*/
@@ -608,6 +876,38 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 		return (Timestamp)get_Value(COLUMNNAME_ZZMostRecentRegistrationDate);
 	}
 
+	/** Set ZZNonFundedReason.
+		@param ZZNonFundedReason ms_learnerlearnership.nonfundedreason
+	*/
+	public void setZZNonFundedReason (String ZZNonFundedReason)
+	{
+		set_Value (COLUMNNAME_ZZNonFundedReason, ZZNonFundedReason);
+	}
+
+	/** Get ZZNonFundedReason.
+		@return ms_learnerlearnership.nonfundedreason
+	  */
+	public String getZZNonFundedReason()
+	{
+		return (String)get_Value(COLUMNNAME_ZZNonFundedReason);
+	}
+
+	/** Set ZZOccupation.
+		@param ZZOccupation ms_learnerlearnership.occupation
+	*/
+	public void setZZOccupation (String ZZOccupation)
+	{
+		set_Value (COLUMNNAME_ZZOccupation, ZZOccupation);
+	}
+
+	/** Get ZZOccupation.
+		@return ms_learnerlearnership.occupation
+	  */
+	public String getZZOccupation()
+	{
+		return (String)get_Value(COLUMNNAME_ZZOccupation);
+	}
+
 	/** Set Other Seta.
 		@param ZZOtherSeta Other Seta
 	*/
@@ -730,6 +1030,22 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public String getZZProject()
 	{
 		return (String)get_Value(COLUMNNAME_ZZProject);
+	}
+
+	/** Set ZZQCTO.
+		@param ZZQCTO ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
+	*/
+	public void setZZQCTO (String ZZQCTO)
+	{
+		set_Value (COLUMNNAME_ZZQCTO, ZZQCTO);
+	}
+
+	/** Get ZZQCTO.
+		@return ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
+	  */
+	public String getZZQCTO()
+	{
+		return (String)get_Value(COLUMNNAME_ZZQCTO);
 	}
 
 	/** ZZRPL AD_Reference_ID=319 */
@@ -943,8 +1259,8 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public static final String ZZTERMINATIONREASON_LearnerPassedAway = "Learner passed away";
 	/** Learner resigned = Learner resigned */
 	public static final String ZZTERMINATIONREASON_LearnerResigned = "Learner resigned";
-	/** Learner to continue with full time studies/went back to school = Learner to continue with full time studies/went back to school */
-	public static final String ZZTERMINATIONREASON_LearnerToContinueWithFullTimeStudiesWentBackToSchool = "Learner to continue with full time studies/went back to school";
+	/** Learner to continue with full time studies/went back to school = Learner to continue with full time studies/went back to scho */
+	public static final String ZZTERMINATIONREASON_LearnerToContinueWithFullTimeStudiesWentBackToSchool = "Learner to continue with full time studies/went back to scho";
 	/** Learner went AWOL = Learner went AWOL */
 	public static final String ZZTERMINATIONREASON_LearnerWentAWOL = "Learner went AWOL";
 	/** Other = Other */
@@ -964,6 +1280,45 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public String getZZTerminationReason()
 	{
 		return (String)get_Value(COLUMNNAME_ZZTerminationReason);
+	}
+
+	/** Set ZZTermsEmployment.
+		@param ZZTermsEmployment ms_learnerlearnership.termsemployment
+	*/
+	public void setZZTermsEmployment (String ZZTermsEmployment)
+	{
+		set_Value (COLUMNNAME_ZZTermsEmployment, ZZTermsEmployment);
+	}
+
+	/** Get ZZTermsEmployment.
+		@return ms_learnerlearnership.termsemployment
+	  */
+	public String getZZTermsEmployment()
+	{
+		return (String)get_Value(COLUMNNAME_ZZTermsEmployment);
+	}
+
+	/** Set ZZWPAgreement.
+		@param ZZWPAgreement ms_learnerlearnership.wpagreement -&gt; MigrationSupport.yesNoIdToFlag()
+	*/
+	public void setZZWPAgreement (boolean ZZWPAgreement)
+	{
+		set_Value (COLUMNNAME_ZZWPAgreement, Boolean.valueOf(ZZWPAgreement));
+	}
+
+	/** Get ZZWPAgreement.
+		@return ms_learnerlearnership.wpagreement -&gt; MigrationSupport.yesNoIdToFlag()
+	  */
+	public boolean isZZWPAgreement()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZWPAgreement);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	public org.compiere.model.I_C_Year getZZ_FinYear() throws RuntimeException
@@ -988,6 +1343,24 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public int getZZ_FinYear_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_FinYear_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set id.
+		@param id id
+	*/
+	public void setid (int id)
+	{
+		set_Value (COLUMNNAME_id, Integer.valueOf(id));
+	}
+
+	/** Get id.
+		@return id	  */
+	public int getid()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_id);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

@@ -127,6 +127,34 @@ public interface I_ZZLearnerLearnership
 	/** Get Amount Spend	  */
 	public String getZZAmountSpend();
 
+    /** Column name ZZApprovalDate */
+    public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
+
+	/** Set ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
+	public void setZZApprovalDate (Timestamp ZZApprovalDate);
+
+	/** Get ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
+	public Timestamp getZZApprovalDate();
+
+    /** Column name ZZApprovedBy */
+    public static final String COLUMNNAME_ZZApprovedBy = "ZZApprovedBy";
+
+	/** Set ZZApprovedBy.
+	  * ms_learnerlearnership.approvedby (ms_user email match)
+	  */
+	public void setZZApprovedBy (int ZZApprovedBy);
+
+	/** Get ZZApprovedBy.
+	  * ms_learnerlearnership.approvedby (ms_user email match)
+	  */
+	public int getZZApprovedBy();
+
+	public org.compiere.model.I_AD_User getZZApprove() throws RuntimeException;
+
     /** Column name ZZBelongToFasset */
     public static final String COLUMNNAME_ZZBelongToFasset = "ZZBelongToFasset";
 
@@ -183,6 +211,15 @@ public interface I_ZZLearnerLearnership
 	/** Get Commencement Date	  */
 	public Timestamp getZZCommencementDate();
 
+    /** Column name ZZCompletionDate */
+    public static final String COLUMNNAME_ZZCompletionDate = "ZZCompletionDate";
+
+	/** Set Estimate Completion Date	  */
+	public void setZZCompletionDate (Timestamp ZZCompletionDate);
+
+	/** Get Estimate Completion Date	  */
+	public Timestamp getZZCompletionDate();
+
     /** Column name ZZContractNumber */
     public static final String COLUMNNAME_ZZContractNumber = "ZZContractNumber";
 
@@ -191,6 +228,19 @@ public interface I_ZZLearnerLearnership
 
 	/** Get Contract Number	  */
 	public String getZZContractNumber();
+
+    /** Column name ZZDateApproved */
+    public static final String COLUMNNAME_ZZDateApproved = "ZZDateApproved";
+
+	/** Set ZZDateApproved.
+	  * ms_learnerlearnership.dateapproved
+	  */
+	public void setZZDateApproved (Timestamp ZZDateApproved);
+
+	/** Get ZZDateApproved.
+	  * ms_learnerlearnership.dateapproved
+	  */
+	public Timestamp getZZDateApproved();
 
     /** Column name ZZDateCertificateCreated */
     public static final String COLUMNNAME_ZZDateCertificateCreated = "ZZDateCertificateCreated";
@@ -227,6 +277,45 @@ public interface I_ZZLearnerLearnership
 
 	/** Get Date Termination Captured	  */
 	public Timestamp getZZDateTerminationCaptured();
+
+    /** Column name ZZDurationLearnerEmployed */
+    public static final String COLUMNNAME_ZZDurationLearnerEmployed = "ZZDurationLearnerEmployed";
+
+	/** Set Duration Learner Employed	  */
+	public void setZZDurationLearnerEmployed (String ZZDurationLearnerEmployed);
+
+	/** Get Duration Learner Employed	  */
+	public String getZZDurationLearnerEmployed();
+
+    /** Column name ZZEmpContract */
+    public static final String COLUMNNAME_ZZEmpContract = "ZZEmpContract";
+
+	/** Set ZZEmpContract.
+	  * ms_learnerlearnership.empcontract -&gt;
+ MigrationSupport.yesNoIdToFlag()
+	  */
+	public void setZZEmpContract (boolean ZZEmpContract);
+
+	/** Get ZZEmpContract.
+	  * ms_learnerlearnership.empcontract -&gt;
+ MigrationSupport.yesNoIdToFlag()
+	  */
+	public boolean isZZEmpContract();
+
+    /** Column name ZZEmpContractCopy */
+    public static final String COLUMNNAME_ZZEmpContractCopy = "ZZEmpContractCopy";
+
+	/** Set ZZEmpContractCopy.
+	  * ms_learnerlearnership.empcontractcopy -&gt;
+ MigrationSupport.yesNoIdToFlag()
+	  */
+	public void setZZEmpContractCopy (boolean ZZEmpContractCopy);
+
+	/** Get ZZEmpContractCopy.
+	  * ms_learnerlearnership.empcontractcopy -&gt;
+ MigrationSupport.yesNoIdToFlag()
+	  */
+	public boolean isZZEmpContractCopy();
 
     /** Column name ZZEmploymentStartDate */
     public static final String COLUMNNAME_ZZEmploymentStartDate = "ZZEmploymentStartDate";
@@ -285,6 +374,63 @@ public interface I_ZZLearnerLearnership
 	public int getZZExtensionCapturedBy();
 
 	public org.compiere.model.I_AD_User getZZExtensionCapture() throws RuntimeException;
+
+    /** Column name ZZExtensionDate */
+    public static final String COLUMNNAME_ZZExtensionDate = "ZZExtensionDate";
+
+	/** Set Extension Date	  */
+	public void setZZExtensionDate (Timestamp ZZExtensionDate);
+
+	/** Get Extension Date	  */
+	public Timestamp getZZExtensionDate();
+
+    /** Column name ZZExtensionReason */
+    public static final String COLUMNNAME_ZZExtensionReason = "ZZExtensionReason";
+
+	/** Set Extension Reason	  */
+	public void setZZExtensionReason (String ZZExtensionReason);
+
+	/** Get Extension Reason	  */
+	public String getZZExtensionReason();
+
+    /** Column name ZZGrantType_ID */
+    public static final String COLUMNNAME_ZZGrantType_ID = "ZZGrantType_ID";
+
+	/** Set Grant Type	  */
+	public void setZZGrantType_ID (int ZZGrantType_ID);
+
+	/** Get Grant Type	  */
+	public int getZZGrantType_ID();
+
+	public I_ZZGrantType getZZGrantType() throws RuntimeException;
+
+    /** Column name ZZIsApproved */
+    public static final String COLUMNNAME_ZZIsApproved = "ZZIsApproved";
+
+	/** Set ZZIsApproved.
+	  * ms_learnerlearnership.isapproved
+	  */
+	public void setZZIsApproved (boolean ZZIsApproved);
+
+	/** Get ZZIsApproved.
+	  * ms_learnerlearnership.isapproved
+	  */
+	public boolean isZZIsApproved();
+
+    /** Column name ZZIsTermsEmployment */
+    public static final String COLUMNNAME_ZZIsTermsEmployment = "ZZIsTermsEmployment";
+
+	/** Set ZZIsTermsEmployment.
+	  * ms_learnerlearnership.istermsemployment -&gt;
+ ms_lkpyesnonotapplicable (same 1/2-only value pattern as levyyesnoid)
+	  */
+	public void setZZIsTermsEmployment (String ZZIsTermsEmployment);
+
+	/** Get ZZIsTermsEmployment.
+	  * ms_learnerlearnership.istermsemployment -&gt;
+ ms_lkpyesnonotapplicable (same 1/2-only value pattern as levyyesnoid)
+	  */
+	public String getZZIsTermsEmployment();
 
     /** Column name ZZLearnerEmployed */
     public static final String COLUMNNAME_ZZLearnerEmployed = "ZZLearnerEmployed";
@@ -353,6 +499,32 @@ public interface I_ZZLearnerLearnership
 	/** Get Most Recent Registration Date	  */
 	public Timestamp getZZMostRecentRegistrationDate();
 
+    /** Column name ZZNonFundedReason */
+    public static final String COLUMNNAME_ZZNonFundedReason = "ZZNonFundedReason";
+
+	/** Set ZZNonFundedReason.
+	  * ms_learnerlearnership.nonfundedreason
+	  */
+	public void setZZNonFundedReason (String ZZNonFundedReason);
+
+	/** Get ZZNonFundedReason.
+	  * ms_learnerlearnership.nonfundedreason
+	  */
+	public String getZZNonFundedReason();
+
+    /** Column name ZZOccupation */
+    public static final String COLUMNNAME_ZZOccupation = "ZZOccupation";
+
+	/** Set ZZOccupation.
+	  * ms_learnerlearnership.occupation
+	  */
+	public void setZZOccupation (String ZZOccupation);
+
+	/** Get ZZOccupation.
+	  * ms_learnerlearnership.occupation
+	  */
+	public String getZZOccupation();
+
     /** Column name ZZOtherSeta */
     public static final String COLUMNNAME_ZZOtherSeta = "ZZOtherSeta";
 
@@ -410,6 +582,19 @@ public interface I_ZZLearnerLearnership
 
 	/** Get Project	  */
 	public String getZZProject();
+
+    /** Column name ZZQCTO */
+    public static final String COLUMNNAME_ZZQCTO = "ZZQCTO";
+
+	/** Set ZZQCTO.
+	  * ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
+	  */
+	public void setZZQCTO (String ZZQCTO);
+
+	/** Get ZZQCTO.
+	  * ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
+	  */
+	public String getZZQCTO();
 
     /** Column name ZZRPL */
     public static final String COLUMNNAME_ZZRPL = "ZZRPL";
@@ -527,6 +712,34 @@ public interface I_ZZLearnerLearnership
 	  */
 	public String getZZTerminationReason();
 
+    /** Column name ZZTermsEmployment */
+    public static final String COLUMNNAME_ZZTermsEmployment = "ZZTermsEmployment";
+
+	/** Set ZZTermsEmployment.
+	  * ms_learnerlearnership.termsemployment
+	  */
+	public void setZZTermsEmployment (String ZZTermsEmployment);
+
+	/** Get ZZTermsEmployment.
+	  * ms_learnerlearnership.termsemployment
+	  */
+	public String getZZTermsEmployment();
+
+    /** Column name ZZWPAgreement */
+    public static final String COLUMNNAME_ZZWPAgreement = "ZZWPAgreement";
+
+	/** Set ZZWPAgreement.
+	  * ms_learnerlearnership.wpagreement -&gt;
+ MigrationSupport.yesNoIdToFlag()
+	  */
+	public void setZZWPAgreement (boolean ZZWPAgreement);
+
+	/** Get ZZWPAgreement.
+	  * ms_learnerlearnership.wpagreement -&gt;
+ MigrationSupport.yesNoIdToFlag()
+	  */
+	public boolean isZZWPAgreement();
+
     /** Column name ZZ_FinYear_ID */
     public static final String COLUMNNAME_ZZ_FinYear_ID = "ZZ_FinYear_ID";
 
@@ -537,4 +750,13 @@ public interface I_ZZLearnerLearnership
 	public int getZZ_FinYear_ID();
 
 	public org.compiere.model.I_C_Year getZZ_FinYear() throws RuntimeException;
+
+    /** Column name id */
+    public static final String COLUMNNAME_id = "id";
+
+	/** Set id	  */
+	public void setid (int id);
+
+	/** Get id	  */
+	public int getid();
 }

@@ -64,6 +64,38 @@ public interface I_ZZLearnerQCTOLearnership
 	  */
 	public int getAD_Org_ID();
 
+    /** Column name Approved_By */
+    public static final String COLUMNNAME_Approved_By = "Approved_By";
+
+	/** Set Approved By.
+	  * ms_learnerqctoartisans.approvedby (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public void setApproved_By (int Approved_By);
+
+	/** Get Approved By.
+	  * ms_learnerqctoartisans.approvedby (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public int getApproved_By();
+
+	public org.compiere.model.I_AD_User getApproved() throws RuntimeException;
+
+    /** Column name Ass_Partner */
+    public static final String COLUMNNAME_Ass_Partner = "Ass_Partner";
+
+	/** Set Ass Partner.
+	  * ms_learnerqctoartisans.asspartner (free text, e.g. &quot;
+MQA&quot;
+)
+	  */
+	public void setAss_Partner (String Ass_Partner);
+
+	/** Get Ass Partner.
+	  * ms_learnerqctoartisans.asspartner (free text, e.g. &quot;
+MQA&quot;
+)
+	  */
+	public String getAss_Partner();
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -80,6 +112,73 @@ public interface I_ZZLearnerQCTOLearnership
 	  */
 	public int getCreatedBy();
 
+    /** Column name Cur_Reg_Number */
+    public static final String COLUMNNAME_Cur_Reg_Number = "Cur_Reg_Number";
+
+	/** Set Cur Reg Number.
+	  * ms_learnerqctoartisans.curregnumber (free text registration number)
+	  */
+	public void setCur_Reg_Number (String Cur_Reg_Number);
+
+	/** Get Cur Reg Number.
+	  * ms_learnerqctoartisans.curregnumber (free text registration number)
+	  */
+	public String getCur_Reg_Number();
+
+    /** Column name Date_Approved */
+    public static final String COLUMNNAME_Date_Approved = "Date_Approved";
+
+	/** Set Date Approved.
+	  * ms_learnerqctoartisans.dateapproved
+	  */
+	public void setDate_Approved (Timestamp Date_Approved);
+
+	/** Get Date Approved.
+	  * ms_learnerqctoartisans.dateapproved
+	  */
+	public Timestamp getDate_Approved();
+
+    /** Column name Emp_Contract */
+    public static final String COLUMNNAME_Emp_Contract = "Emp_Contract";
+
+	/** Set Emp Contract.
+	  * ms_learnerqctoartisans.empcontract (confirmed only 1/2/null across staged data)
+	  */
+	public void setEmp_Contract (boolean Emp_Contract);
+
+	/** Get Emp Contract.
+	  * ms_learnerqctoartisans.empcontract (confirmed only 1/2/null across staged data)
+	  */
+	public boolean isEmp_Contract();
+
+    /** Column name Emp_Contract_Copy */
+    public static final String COLUMNNAME_Emp_Contract_Copy = "Emp_Contract_Copy";
+
+	/** Set Emp Contract Copy.
+	  * ms_learnerqctoartisans.empcontractcopy (confirmed only 1/2/null across staged data)
+	  */
+	public void setEmp_Contract_Copy (boolean Emp_Contract_Copy);
+
+	/** Get Emp Contract Copy.
+	  * ms_learnerqctoartisans.empcontractcopy (confirmed only 1/2/null across staged data)
+	  */
+	public boolean isEmp_Contract_Copy();
+
+    /** Column name Employer_ID */
+    public static final String COLUMNNAME_Employer_ID = "Employer_ID";
+
+	/** Set Employer ID.
+	  * ms_learnerqctoartisans.employerid, resolved via ms_organisation.sdlnumber = c_bpartner.zz_sdl_no (same as organisationid elsewhere)
+	  */
+	public void setEmployer_ID (int Employer_ID);
+
+	/** Get Employer ID.
+	  * ms_learnerqctoartisans.employerid, resolved via ms_organisation.sdlnumber = c_bpartner.zz_sdl_no (same as organisationid elsewhere)
+	  */
+	public int getEmployer_ID();
+
+	public org.compiere.model.I_C_BPartner getEmployer() throws RuntimeException;
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -92,6 +191,194 @@ public interface I_ZZLearnerQCTOLearnership
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name Is_Approved */
+    public static final String COLUMNNAME_Is_Approved = "Is_Approved";
+
+	/** Set Is Approved.
+	  * ms_learnerqctoartisans.isapproved (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public void setIs_Approved (boolean Is_Approved);
+
+	/** Get Is Approved.
+	  * ms_learnerqctoartisans.isapproved (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public boolean is_Approved();
+
+    /** Column name Is_Terms_Employment */
+    public static final String COLUMNNAME_Is_Terms_Employment = "Is_Terms_Employment";
+
+	/** Set Is Terms Employment.
+	  * ms_learnerqctoartisans.istermsemployment (confirmed only 1/2/null across staged data)
+	  */
+	public void setIs_Terms_Employment (boolean Is_Terms_Employment);
+
+	/** Get Is Terms Employment.
+	  * ms_learnerqctoartisans.istermsemployment (confirmed only 1/2/null across staged data)
+	  */
+	public boolean is_Terms_Employment();
+
+    /** Column name Learner_Employed */
+    public static final String COLUMNNAME_Learner_Employed = "Learner_Employed";
+
+	/** Set Learner Employed.
+	  * ms_learnerqctoartisans.learneremployed (free text - mixed dates/numbers/&quot;
+never worked&quot;
+)
+	  */
+	public void setLearner_Employed (String Learner_Employed);
+
+	/** Get Learner Employed.
+	  * ms_learnerqctoartisans.learneremployed (free text - mixed dates/numbers/&quot;
+never worked&quot;
+)
+	  */
+	public String getLearner_Employed();
+
+    /** Column name Namb_Confirmation */
+    public static final String COLUMNNAME_Namb_Confirmation = "Namb_Confirmation";
+
+	/** Set Namb Confirmation.
+	  * ms_learnerqctoartisans.nambconfirmation (only 1 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public void setNamb_Confirmation (boolean Namb_Confirmation);
+
+	/** Get Namb Confirmation.
+	  * ms_learnerqctoartisans.nambconfirmation (only 1 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public boolean isNamb_Confirmation();
+
+    /** Column name Namb_Confirmation_Date */
+    public static final String COLUMNNAME_Namb_Confirmation_Date = "Namb_Confirmation_Date";
+
+	/** Set Namb Confirmation Date.
+	  * ms_learnerqctoartisans.nambconfirmationdate (only 1 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public void setNamb_Confirmation_Date (Timestamp Namb_Confirmation_Date);
+
+	/** Get Namb Confirmation Date.
+	  * ms_learnerqctoartisans.nambconfirmationdate (only 1 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public Timestamp getNamb_Confirmation_Date();
+
+    /** Column name Namb_Confirmation_User */
+    public static final String COLUMNNAME_Namb_Confirmation_User = "Namb_Confirmation_User";
+
+	/** Set Namb Confirmation User.
+	  * ms_learnerqctoartisans.nambconfirmationuser (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public void setNamb_Confirmation_User (int Namb_Confirmation_User);
+
+	/** Get Namb Confirmation User.
+	  * ms_learnerqctoartisans.nambconfirmationuser (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public int getNamb_Confirmation_User();
+
+	public org.compiere.model.I_AD_User getNamb_Confirmation_U() throws RuntimeException;
+
+    /** Column name Occupation */
+    public static final String COLUMNNAME_Occupation = "Occupation";
+
+	/** Set Occupation.
+	  * ms_learnerqctoartisans.occupation (OFO-code-looking free text, e.g. &quot;
+651302&quot;
+ - does NOT match zzlkpofooccupation.Value&#039;
+s format, kept as plain text)
+	  */
+	public void setOccupation (String Occupation);
+
+	/** Get Occupation.
+	  * ms_learnerqctoartisans.occupation (OFO-code-looking free text, e.g. &quot;
+651302&quot;
+ - does NOT match zzlkpofooccupation.Value&#039;
+s format, kept as plain text)
+	  */
+	public String getOccupation();
+
+    /** Column name Previous_Employed */
+    public static final String COLUMNNAME_Previous_Employed = "Previous_Employed";
+
+	/** Set Previous Employed.
+	  * ms_learnerqctoartisans.previousemployed (confirmed only 1/2/null across staged data)
+	  */
+	public void setPrevious_Employed (boolean Previous_Employed);
+
+	/** Get Previous Employed.
+	  * ms_learnerqctoartisans.previousemployed (confirmed only 1/2/null across staged data)
+	  */
+	public boolean isPrevious_Employed();
+
+    /** Column name Qcto */
+    public static final String COLUMNNAME_Qcto = "Qcto";
+
+	/** Set Qcto.
+	  * ms_learnerqctoartisans.qcto (free text, e.g. &quot;
+NAMB&quot;
+/&quot;
+MQA&quot;
+)
+	  */
+	public void setQcto (String Qcto);
+
+	/** Get Qcto.
+	  * ms_learnerqctoartisans.qcto (free text, e.g. &quot;
+NAMB&quot;
+/&quot;
+MQA&quot;
+)
+	  */
+	public String getQcto();
+
+    /** Column name Reg_Saqa */
+    public static final String COLUMNNAME_Reg_Saqa = "Reg_Saqa";
+
+	/** Set Reg Saqa.
+	  * ms_learnerqctoartisans.regsaqa (free text, e.g. &quot;
+MQA&quot;
+)
+	  */
+	public void setReg_Saqa (String Reg_Saqa);
+
+	/** Get Reg Saqa.
+	  * ms_learnerqctoartisans.regsaqa (free text, e.g. &quot;
+MQA&quot;
+)
+	  */
+	public String getReg_Saqa();
+
+    /** Column name Responsible_Seta */
+    public static final String COLUMNNAME_Responsible_Seta = "Responsible_Seta";
+
+	/** Set Responsible Seta.
+	  * ms_learnerqctoartisans.responsibleseta (free text, e.g. &quot;
+MQA&quot;
+)
+	  */
+	public void setResponsible_Seta (String Responsible_Seta);
+
+	/** Get Responsible Seta.
+	  * ms_learnerqctoartisans.responsibleseta (free text, e.g. &quot;
+MQA&quot;
+)
+	  */
+	public String getResponsible_Seta();
+
+    /** Column name Terms_Employment */
+    public static final String COLUMNNAME_Terms_Employment = "Terms_Employment";
+
+	/** Set Terms Employment.
+	  * ms_learnerqctoartisans.termsemployment (free text, e.g. &quot;
+Contract&quot;
+)
+	  */
+	public void setTerms_Employment (String Terms_Employment);
+
+	/** Get Terms Employment.
+	  * ms_learnerqctoartisans.termsemployment (free text, e.g. &quot;
+Contract&quot;
+)
+	  */
+	public String getTerms_Employment();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -108,6 +395,19 @@ public interface I_ZZLearnerQCTOLearnership
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
+
+    /** Column name WP_Agreement */
+    public static final String COLUMNNAME_WP_Agreement = "WP_Agreement";
+
+	/** Set WP Agreement.
+	  * ms_learnerqctoartisans.wpagreement (confirmed only 1/2/null across staged data)
+	  */
+	public void setWP_Agreement (boolean WP_Agreement);
+
+	/** Get WP Agreement.
+	  * ms_learnerqctoartisans.wpagreement (confirmed only 1/2/null across staged data)
+	  */
+	public boolean isWP_Agreement();
 
     /** Column name ZZAgreementReferenceNumber */
     public static final String COLUMNNAME_ZZAgreementReferenceNumber = "ZZAgreementReferenceNumber";

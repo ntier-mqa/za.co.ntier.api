@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260702L;
+	private static final long serialVersionUID = 20260814L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOLearnership (Properties ctx, int ZZLearnerQCTOLearnership_ID, String trxName)
@@ -40,6 +40,20 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
       super (ctx, ZZLearnerQCTOLearnership_ID, trxName);
       /** if (ZZLearnerQCTOLearnership_ID == 0)
         {
+			setEmp_Contract (false);
+// N
+			setEmp_Contract_Copy (false);
+// N
+			setIs_Approved (false);
+// N
+			setIs_Terms_Employment (false);
+// N
+			setNamb_Confirmation (false);
+// N
+			setPrevious_Employed (false);
+// N
+			setWP_Agreement (false);
+// N
 			setZZLearnerQCTOLearnership_ID (0);
         } */
     }
@@ -50,6 +64,20 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
       super (ctx, ZZLearnerQCTOLearnership_ID, trxName, virtualColumns);
       /** if (ZZLearnerQCTOLearnership_ID == 0)
         {
+			setEmp_Contract (false);
+// N
+			setEmp_Contract_Copy (false);
+// N
+			setIs_Approved (false);
+// N
+			setIs_Terms_Employment (false);
+// N
+			setNamb_Confirmation (false);
+// N
+			setPrevious_Employed (false);
+// N
+			setWP_Agreement (false);
+// N
 			setZZLearnerQCTOLearnership_ID (0);
         } */
     }
@@ -60,6 +88,20 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
       super (ctx, ZZLearnerQCTOLearnership_UU, trxName);
       /** if (ZZLearnerQCTOLearnership_UU == null)
         {
+			setEmp_Contract (false);
+// N
+			setEmp_Contract_Copy (false);
+// N
+			setIs_Approved (false);
+// N
+			setIs_Terms_Employment (false);
+// N
+			setNamb_Confirmation (false);
+// N
+			setPrevious_Employed (false);
+// N
+			setWP_Agreement (false);
+// N
 			setZZLearnerQCTOLearnership_ID (0);
         } */
     }
@@ -70,6 +112,20 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
       super (ctx, ZZLearnerQCTOLearnership_UU, trxName, virtualColumns);
       /** if (ZZLearnerQCTOLearnership_UU == null)
         {
+			setEmp_Contract (false);
+// N
+			setEmp_Contract_Copy (false);
+// N
+			setIs_Approved (false);
+// N
+			setIs_Terms_Employment (false);
+// N
+			setNamb_Confirmation (false);
+// N
+			setPrevious_Employed (false);
+// N
+			setWP_Agreement (false);
+// N
 			setZZLearnerQCTOLearnership_ID (0);
         } */
     }
@@ -101,6 +157,405 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
         .append(get_ID()).append("]");
       return sb.toString();
     }
+
+	public org.compiere.model.I_AD_User getApproved() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getApproved_By(), get_TrxName());
+	}
+
+	/** Set Approved By.
+		@param Approved_By ms_learnerqctoartisans.approvedby (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	*/
+	public void setApproved_By (int Approved_By)
+	{
+		set_Value (COLUMNNAME_Approved_By, Integer.valueOf(Approved_By));
+	}
+
+	/** Get Approved By.
+		@return ms_learnerqctoartisans.approvedby (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public int getApproved_By()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Approved_By);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Ass Partner.
+		@param Ass_Partner ms_learnerqctoartisans.asspartner (free text, e.g. &quot;MQA&quot;)
+	*/
+	public void setAss_Partner (String Ass_Partner)
+	{
+		set_Value (COLUMNNAME_Ass_Partner, Ass_Partner);
+	}
+
+	/** Get Ass Partner.
+		@return ms_learnerqctoartisans.asspartner (free text, e.g. &quot;MQA&quot;)
+	  */
+	public String getAss_Partner()
+	{
+		return (String)get_Value(COLUMNNAME_Ass_Partner);
+	}
+
+	/** Set Cur Reg Number.
+		@param Cur_Reg_Number ms_learnerqctoartisans.curregnumber (free text registration number)
+	*/
+	public void setCur_Reg_Number (String Cur_Reg_Number)
+	{
+		set_Value (COLUMNNAME_Cur_Reg_Number, Cur_Reg_Number);
+	}
+
+	/** Get Cur Reg Number.
+		@return ms_learnerqctoartisans.curregnumber (free text registration number)
+	  */
+	public String getCur_Reg_Number()
+	{
+		return (String)get_Value(COLUMNNAME_Cur_Reg_Number);
+	}
+
+	/** Set Date Approved.
+		@param Date_Approved ms_learnerqctoartisans.dateapproved
+	*/
+	public void setDate_Approved (Timestamp Date_Approved)
+	{
+		set_Value (COLUMNNAME_Date_Approved, Date_Approved);
+	}
+
+	/** Get Date Approved.
+		@return ms_learnerqctoartisans.dateapproved
+	  */
+	public Timestamp getDate_Approved()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Date_Approved);
+	}
+
+	/** Set Emp Contract.
+		@param Emp_Contract ms_learnerqctoartisans.empcontract (confirmed only 1/2/null across staged data)
+	*/
+	public void setEmp_Contract (boolean Emp_Contract)
+	{
+		set_Value (COLUMNNAME_Emp_Contract, Boolean.valueOf(Emp_Contract));
+	}
+
+	/** Get Emp Contract.
+		@return ms_learnerqctoartisans.empcontract (confirmed only 1/2/null across staged data)
+	  */
+	public boolean isEmp_Contract()
+	{
+		Object oo = get_Value(COLUMNNAME_Emp_Contract);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Emp Contract Copy.
+		@param Emp_Contract_Copy ms_learnerqctoartisans.empcontractcopy (confirmed only 1/2/null across staged data)
+	*/
+	public void setEmp_Contract_Copy (boolean Emp_Contract_Copy)
+	{
+		set_Value (COLUMNNAME_Emp_Contract_Copy, Boolean.valueOf(Emp_Contract_Copy));
+	}
+
+	/** Get Emp Contract Copy.
+		@return ms_learnerqctoartisans.empcontractcopy (confirmed only 1/2/null across staged data)
+	  */
+	public boolean isEmp_Contract_Copy()
+	{
+		Object oo = get_Value(COLUMNNAME_Emp_Contract_Copy);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	public org.compiere.model.I_C_BPartner getEmployer() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getEmployer_ID(), get_TrxName());
+	}
+
+	/** Set Employer ID.
+		@param Employer_ID ms_learnerqctoartisans.employerid, resolved via ms_organisation.sdlnumber = c_bpartner.zz_sdl_no (same as organisationid elsewhere)
+	*/
+	public void setEmployer_ID (int Employer_ID)
+	{
+		if (Employer_ID < 1)
+			set_Value (COLUMNNAME_Employer_ID, null);
+		else
+			set_Value (COLUMNNAME_Employer_ID, Integer.valueOf(Employer_ID));
+	}
+
+	/** Get Employer ID.
+		@return ms_learnerqctoartisans.employerid, resolved via ms_organisation.sdlnumber = c_bpartner.zz_sdl_no (same as organisationid elsewhere)
+	  */
+	public int getEmployer_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Employer_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Is Approved.
+		@param Is_Approved ms_learnerqctoartisans.isapproved (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	*/
+	public void setIs_Approved (boolean Is_Approved)
+	{
+		set_Value (COLUMNNAME_Is_Approved, Boolean.valueOf(Is_Approved));
+	}
+
+	/** Get Is Approved.
+		@return ms_learnerqctoartisans.isapproved (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public boolean is_Approved()
+	{
+		Object oo = get_Value(COLUMNNAME_Is_Approved);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Is Terms Employment.
+		@param Is_Terms_Employment ms_learnerqctoartisans.istermsemployment (confirmed only 1/2/null across staged data)
+	*/
+	public void setIs_Terms_Employment (boolean Is_Terms_Employment)
+	{
+		set_Value (COLUMNNAME_Is_Terms_Employment, Boolean.valueOf(Is_Terms_Employment));
+	}
+
+	/** Get Is Terms Employment.
+		@return ms_learnerqctoartisans.istermsemployment (confirmed only 1/2/null across staged data)
+	  */
+	public boolean is_Terms_Employment()
+	{
+		Object oo = get_Value(COLUMNNAME_Is_Terms_Employment);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Learner Employed.
+		@param Learner_Employed ms_learnerqctoartisans.learneremployed (free text - mixed dates/numbers/&quot;never worked&quot;)
+	*/
+	public void setLearner_Employed (String Learner_Employed)
+	{
+		set_Value (COLUMNNAME_Learner_Employed, Learner_Employed);
+	}
+
+	/** Get Learner Employed.
+		@return ms_learnerqctoartisans.learneremployed (free text - mixed dates/numbers/&quot;never worked&quot;)
+	  */
+	public String getLearner_Employed()
+	{
+		return (String)get_Value(COLUMNNAME_Learner_Employed);
+	}
+
+	/** Set Namb Confirmation.
+		@param Namb_Confirmation ms_learnerqctoartisans.nambconfirmation (only 1 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	*/
+	public void setNamb_Confirmation (boolean Namb_Confirmation)
+	{
+		set_Value (COLUMNNAME_Namb_Confirmation, Boolean.valueOf(Namb_Confirmation));
+	}
+
+	/** Get Namb Confirmation.
+		@return ms_learnerqctoartisans.nambconfirmation (only 1 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public boolean isNamb_Confirmation()
+	{
+		Object oo = get_Value(COLUMNNAME_Namb_Confirmation);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Namb Confirmation Date.
+		@param Namb_Confirmation_Date ms_learnerqctoartisans.nambconfirmationdate (only 1 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	*/
+	public void setNamb_Confirmation_Date (Timestamp Namb_Confirmation_Date)
+	{
+		set_Value (COLUMNNAME_Namb_Confirmation_Date, Namb_Confirmation_Date);
+	}
+
+	/** Get Namb Confirmation Date.
+		@return ms_learnerqctoartisans.nambconfirmationdate (only 1 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public Timestamp getNamb_Confirmation_Date()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Namb_Confirmation_Date);
+	}
+
+	public org.compiere.model.I_AD_User getNamb_Confirmation_U() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getNamb_Confirmation_User(), get_TrxName());
+	}
+
+	/** Set Namb Confirmation User.
+		@param Namb_Confirmation_User ms_learnerqctoartisans.nambconfirmationuser (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	*/
+	public void setNamb_Confirmation_User (int Namb_Confirmation_User)
+	{
+		set_Value (COLUMNNAME_Namb_Confirmation_User, Integer.valueOf(Namb_Confirmation_User));
+	}
+
+	/** Get Namb Confirmation User.
+		@return ms_learnerqctoartisans.nambconfirmationuser (0 of 1230 staged rows populated as of 2026-07-16, added anyway)
+	  */
+	public int getNamb_Confirmation_User()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Namb_Confirmation_User);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Occupation.
+		@param Occupation ms_learnerqctoartisans.occupation (OFO-code-looking free text, e.g. &quot;651302&quot; - does NOT match zzlkpofooccupation.Value&#039;s format, kept as plain text)
+	*/
+	public void setOccupation (String Occupation)
+	{
+		set_Value (COLUMNNAME_Occupation, Occupation);
+	}
+
+	/** Get Occupation.
+		@return ms_learnerqctoartisans.occupation (OFO-code-looking free text, e.g. &quot;651302&quot; - does NOT match zzlkpofooccupation.Value&#039;s format, kept as plain text)
+	  */
+	public String getOccupation()
+	{
+		return (String)get_Value(COLUMNNAME_Occupation);
+	}
+
+	/** Set Previous Employed.
+		@param Previous_Employed ms_learnerqctoartisans.previousemployed (confirmed only 1/2/null across staged data)
+	*/
+	public void setPrevious_Employed (boolean Previous_Employed)
+	{
+		set_Value (COLUMNNAME_Previous_Employed, Boolean.valueOf(Previous_Employed));
+	}
+
+	/** Get Previous Employed.
+		@return ms_learnerqctoartisans.previousemployed (confirmed only 1/2/null across staged data)
+	  */
+	public boolean isPrevious_Employed()
+	{
+		Object oo = get_Value(COLUMNNAME_Previous_Employed);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Qcto.
+		@param Qcto ms_learnerqctoartisans.qcto (free text, e.g. &quot;NAMB&quot;/&quot;MQA&quot;)
+	*/
+	public void setQcto (String Qcto)
+	{
+		set_Value (COLUMNNAME_Qcto, Qcto);
+	}
+
+	/** Get Qcto.
+		@return ms_learnerqctoartisans.qcto (free text, e.g. &quot;NAMB&quot;/&quot;MQA&quot;)
+	  */
+	public String getQcto()
+	{
+		return (String)get_Value(COLUMNNAME_Qcto);
+	}
+
+	/** Set Reg Saqa.
+		@param Reg_Saqa ms_learnerqctoartisans.regsaqa (free text, e.g. &quot;MQA&quot;)
+	*/
+	public void setReg_Saqa (String Reg_Saqa)
+	{
+		set_Value (COLUMNNAME_Reg_Saqa, Reg_Saqa);
+	}
+
+	/** Get Reg Saqa.
+		@return ms_learnerqctoartisans.regsaqa (free text, e.g. &quot;MQA&quot;)
+	  */
+	public String getReg_Saqa()
+	{
+		return (String)get_Value(COLUMNNAME_Reg_Saqa);
+	}
+
+	/** Set Responsible Seta.
+		@param Responsible_Seta ms_learnerqctoartisans.responsibleseta (free text, e.g. &quot;MQA&quot;)
+	*/
+	public void setResponsible_Seta (String Responsible_Seta)
+	{
+		set_Value (COLUMNNAME_Responsible_Seta, Responsible_Seta);
+	}
+
+	/** Get Responsible Seta.
+		@return ms_learnerqctoartisans.responsibleseta (free text, e.g. &quot;MQA&quot;)
+	  */
+	public String getResponsible_Seta()
+	{
+		return (String)get_Value(COLUMNNAME_Responsible_Seta);
+	}
+
+	/** Set Terms Employment.
+		@param Terms_Employment ms_learnerqctoartisans.termsemployment (free text, e.g. &quot;Contract&quot;)
+	*/
+	public void setTerms_Employment (String Terms_Employment)
+	{
+		set_Value (COLUMNNAME_Terms_Employment, Terms_Employment);
+	}
+
+	/** Get Terms Employment.
+		@return ms_learnerqctoartisans.termsemployment (free text, e.g. &quot;Contract&quot;)
+	  */
+	public String getTerms_Employment()
+	{
+		return (String)get_Value(COLUMNNAME_Terms_Employment);
+	}
+
+	/** Set WP Agreement.
+		@param WP_Agreement ms_learnerqctoartisans.wpagreement (confirmed only 1/2/null across staged data)
+	*/
+	public void setWP_Agreement (boolean WP_Agreement)
+	{
+		set_Value (COLUMNNAME_WP_Agreement, Boolean.valueOf(WP_Agreement));
+	}
+
+	/** Get WP Agreement.
+		@return ms_learnerqctoartisans.wpagreement (confirmed only 1/2/null across staged data)
+	  */
+	public boolean isWP_Agreement()
+	{
+		Object oo = get_Value(COLUMNNAME_WP_Agreement);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
 
 	/** Set Agreement Reference Number.
 		@param ZZAgreementReferenceNumber Agreement Reference Number
@@ -1071,8 +1526,8 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	public static final String ZZTERMINATIONREASON_LearnerPassedAway = "Learner passed away";
 	/** Learner resigned = Learner resigned */
 	public static final String ZZTERMINATIONREASON_LearnerResigned = "Learner resigned";
-	/** Learner to continue with full time studies/went back to school = Learner to continue with full time studies/went back to school */
-	public static final String ZZTERMINATIONREASON_LearnerToContinueWithFullTimeStudiesWentBackToSchool = "Learner to continue with full time studies/went back to school";
+	/** Learner to continue with full time studies/went back to school = Learner to continue with full time studies/went back to scho */
+	public static final String ZZTERMINATIONREASON_LearnerToContinueWithFullTimeStudiesWentBackToSchool = "Learner to continue with full time studies/went back to scho";
 	/** Learner went AWOL = Learner went AWOL */
 	public static final String ZZTERMINATIONREASON_LearnerWentAWOL = "Learner went AWOL";
 	/** Other = Other */
