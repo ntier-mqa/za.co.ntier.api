@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOSkillsProgrammeAssessments extends PO implements I_Z
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260814L;
+	private static final long serialVersionUID = 20260818L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOSkillsProgrammeAssessments (Properties ctx, int ZZLearnerQCTOSkillsProgrammeAssessments_ID, String trxName)
@@ -342,6 +342,26 @@ public class X_ZZLearnerQCTOSkillsProgrammeAssessments extends PO implements I_Z
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Competent = CO */
+	public static final String ZZASSESSMENTSTATUS_Competent = "CO";
+	/** Not Competent = NC */
+	public static final String ZZASSESSMENTSTATUS_NotCompetent = "NC";
+	/** Set Assessment Status.
+		@param ZZAssessmentStatus Assessment Status
+	*/
+	public void setZZAssessmentStatus (String ZZAssessmentStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZAssessmentStatus, ZZAssessmentStatus);
+	}
+
+	/** Get Assessment Status.
+		@return Assessment Status	  */
+	public String getZZAssessmentStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZAssessmentStatus);
 	}
 
 	/** Set ZZLearnerQCTOSkillsProgrammeAssessments.

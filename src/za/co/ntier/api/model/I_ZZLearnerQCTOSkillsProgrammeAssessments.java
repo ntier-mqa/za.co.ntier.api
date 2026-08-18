@@ -243,6 +243,15 @@ public interface I_ZZLearnerQCTOSkillsProgrammeAssessments
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZAssessmentStatus */
+    public static final String COLUMNNAME_ZZAssessmentStatus = "ZZAssessmentStatus";
+
+	/** Set Assessment Status	  */
+	public void setZZAssessmentStatus (String ZZAssessmentStatus);
+
+	/** Get Assessment Status	  */
+	public String getZZAssessmentStatus();
+
     /** Column name ZZLearnerQCTOSkillsProgrammeAssessments_ID */
     public static final String COLUMNNAME_ZZLearnerQCTOSkillsProgrammeAssessments_ID = "ZZLearnerQCTOSkillsProgrammeAssessments_ID";
 
