@@ -899,4 +899,13 @@ Contract&quot;
 
 	/** Get Termination Reason	  */
 	public String getZZTerminationReasonText();
+
+    /** Column name ZZ_DocStatus */
+    public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
+
+	/** Set Document Status	  */
+	public void setZZ_DocStatus (String ZZ_DocStatus);
+
+	/** Get Document Status	  */
+	public String getZZ_DocStatus();
 }

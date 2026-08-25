@@ -235,4 +235,15 @@ public interface I_ZZLearnerSkillsProgrammeAssessments
 	public int getZZSkillsProgrammeUnitStandard_ID();
 
 	public I_ZZSkillsProgrammeUnitStandard getZZSkillsProgrammeUnitStandard() throws RuntimeException;
+
+    /** Column name ZZUnitStandard_ID */
+    public static final String COLUMNNAME_ZZUnitStandard_ID = "ZZUnitStandard_ID";
+
+	/** Set Unit Standard	  */
+	public void setZZUnitStandard_ID (int ZZUnitStandard_ID);
+
+	/** Get Unit Standard	  */
+	public int getZZUnitStandard_ID();
+
+	public I_ZZUnitStandard getZZUnitStandard() throws RuntimeException;
 }

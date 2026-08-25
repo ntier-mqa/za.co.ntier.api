@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260814L;
+	private static final long serialVersionUID = 20260825L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOLearnership (Properties ctx, int ZZLearnerQCTOLearnership_ID, String trxName)
@@ -1562,5 +1562,119 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	public String getZZTerminationReasonText()
 	{
 		return (String)get_Value(COLUMNNAME_ZZTerminationReasonText);
+	}
+
+	/** Approved By Manager Finance Consumables = AC */
+	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
+	/** Approved = AP */
+	public static final String ZZ_DOCSTATUS_Approved = "AP";
+	/** Prepared for CEO = CF */
+	public static final String ZZ_DOCSTATUS_PreparedForCEO = "CF";
+	/** Completed = CO */
+	public static final String ZZ_DOCSTATUS_Completed = "CO";
+	/** Draft = DR */
+	public static final String ZZ_DOCSTATUS_Draft = "DR";
+	/** Error Importing = EE */
+	public static final String ZZ_DOCSTATUS_ErrorImporting = "EE";
+	/** Validation Error = ER */
+	public static final String ZZ_DOCSTATUS_ValidationError = "ER";
+	/** Evaluated = EV */
+	public static final String ZZ_DOCSTATUS_Evaluated = "EV";
+	/** Importing = IG */
+	public static final String ZZ_DOCSTATUS_Importing = "IG";
+	/** Imported = IM */
+	public static final String ZZ_DOCSTATUS_Imported = "IM";
+	/** In Progress = IP */
+	public static final String ZZ_DOCSTATUS_InProgress = "IP";
+	/** Not Recommended By Senior Mgr SDR = N1 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrSDR = "N1";
+	/** Not Recommended By Senior Mgr Finance = N2 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedBySeniorMgrFinance = "N2";
+	/** Not Recommended By COO = N3 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCOO = "N3";
+	/** Not Recommended By CFO = N4 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCFO = "N4";
+	/** Not Recommended By CEO = N5 */
+	public static final String ZZ_DOCSTATUS_NotRecommendedByCEO = "N5";
+	/** Not Approved by Snr Manager = NA */
+	public static final String ZZ_DOCSTATUS_NotApprovedBySnrManager = "NA";
+	/** Not Approved By Manager Finance Consumables = NC */
+	public static final String ZZ_DOCSTATUS_NotApprovedByManagerFinanceConsumables = "NC";
+	/** Not Approved By SDL Finance Mgr = ND */
+	public static final String ZZ_DOCSTATUS_NotApprovedBySDLFinanceMgr = "ND";
+	/** Not Approved By IT Manager = NI */
+	public static final String ZZ_DOCSTATUS_NotApprovedByITManager = "NI";
+	/** Not Approved by LM = NL */
+	public static final String ZZ_DOCSTATUS_NotApprovedByLM = "NL";
+	/** Not Approved = NP */
+	public static final String ZZ_DOCSTATUS_NotApproved = "NP";
+	/** Not Recommended = NR */
+	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
+	/** Not Approved by Snr Admin Finance = NS */
+	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Not Verified = NV */
+	public static final String ZZ_DOCSTATUS_NotVerified = "NV";
+	/** Pending = PE */
+	public static final String ZZ_DOCSTATUS_Pending = "PE";
+	/** Query = QR */
+	public static final String ZZ_DOCSTATUS_Query = "QR";
+	/** Recommended By Senior Mgr Finance = R1 */
+	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
+	/** Recommended By COO = R2 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCOO = "R2";
+	/** Recommended By CFO = R3 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
+	/** Recommended By CEO = R4 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCEO = "R4";
+	/** Recommended By Officer - QA Accreditation = R5 */
+	public static final String ZZ_DOCSTATUS_RecommendedByOfficer_QAAccreditation = "R5";
+	/** Recommended By Mgr - QA Accreditation = R6 */
+	public static final String ZZ_DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
+	/** Recommended By Snr Mgr QA = R7 */
+	public static final String ZZ_DOCSTATUS_RecommendedBySnrMgrQA = "R7";
+	/** Recommended for Approval = RA */
+	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
+	/** Recommended = RC */
+	public static final String ZZ_DOCSTATUS_Recommended = "RC";
+	/** Recommended By Senior Mgr SDR = RD */
+	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
+	/** Recommended for Evaluation = RE */
+	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
+	/** Submitted to Manager Finance Consumables = SC */
+	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
+	/** Submitted To SDL Finance Mgr = SD */
+	public static final String ZZ_DOCSTATUS_SubmittedToSDLFinanceMgr = "SD";
+	/** Submitted To IT Manager = SI */
+	public static final String ZZ_DOCSTATUS_SubmittedToITManager = "SI";
+	/** Submitted To IT Admin = ST */
+	public static final String ZZ_DOCSTATUS_SubmittedToITAdmin = "ST";
+	/** Submitted = SU */
+	public static final String ZZ_DOCSTATUS_Submitted = "SU";
+	/** Transfer Out = TO */
+	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
+	/** Updated by SDR Admin = UA */
+	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
+	/** Uploaded = UP */
+	public static final String ZZ_DOCSTATUS_Uploaded = "UP";
+	/** Delinked = UnSdfOrg */
+	public static final String ZZ_DOCSTATUS_Delinked = "UnSdfOrg";
+	/** Validating = VA */
+	public static final String ZZ_DOCSTATUS_Validating = "VA";
+	/** Verified = VE */
+	public static final String ZZ_DOCSTATUS_Verified = "VE";
+	/** Set Document Status.
+		@param ZZ_DocStatus Document Status
+	*/
+	public void setZZ_DocStatus (String ZZ_DocStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZ_DocStatus, ZZ_DocStatus);
+	}
+
+	/** Get Document Status.
+		@return Document Status	  */
+	public String getZZ_DocStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 }

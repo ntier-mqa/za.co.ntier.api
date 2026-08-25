@@ -233,4 +233,13 @@ public interface I_ZZLearnerSkillsProgramme
 	public int getZZWA_ID();
 
 	public I_ZZWorkplaceApproval getZZWA() throws RuntimeException;
+
+    /** Column name ZZ_DocStatus */
+    public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
+
+	/** Set Document Status	  */
+	public void setZZ_DocStatus (String ZZ_DocStatus);
+
+	/** Get Document Status	  */
+	public String getZZ_DocStatus();
 }

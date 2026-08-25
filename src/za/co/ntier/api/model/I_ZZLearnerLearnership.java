@@ -740,6 +740,15 @@ public interface I_ZZLearnerLearnership
 	  */
 	public boolean isZZWPAgreement();
 
+    /** Column name ZZ_DocStatus */
+    public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
+
+	/** Set Document Status	  */
+	public void setZZ_DocStatus (String ZZ_DocStatus);
+
+	/** Get Document Status	  */
+	public String getZZ_DocStatus();
+
     /** Column name ZZ_FinYear_ID */
     public static final String COLUMNNAME_ZZ_FinYear_ID = "ZZ_FinYear_ID";
 

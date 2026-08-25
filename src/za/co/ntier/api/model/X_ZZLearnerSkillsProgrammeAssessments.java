@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260818L;
+	private static final long serialVersionUID = 20260824L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgrammeAssessments (Properties ctx, int ZZLearnerSkillsProgrammeAssessments_ID, String trxName)
@@ -341,6 +341,33 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
 	public int getZZSkillsProgrammeUnitStandard_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZSkillsProgrammeUnitStandard_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZUnitStandard getZZUnitStandard() throws RuntimeException
+	{
+		return (I_ZZUnitStandard)MTable.get(getCtx(), I_ZZUnitStandard.Table_ID)
+			.getPO(getZZUnitStandard_ID(), get_TrxName());
+	}
+
+	/** Set Unit Standard.
+		@param ZZUnitStandard_ID Unit Standard
+	*/
+	public void setZZUnitStandard_ID (int ZZUnitStandard_ID)
+	{
+		if (ZZUnitStandard_ID < 1)
+			set_Value (COLUMNNAME_ZZUnitStandard_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZUnitStandard_ID, Integer.valueOf(ZZUnitStandard_ID));
+	}
+
+	/** Get Unit Standard.
+		@return Unit Standard	  */
+	public int getZZUnitStandard_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZUnitStandard_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
