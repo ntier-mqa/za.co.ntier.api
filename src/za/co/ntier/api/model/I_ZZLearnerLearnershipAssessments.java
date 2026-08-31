@@ -149,6 +149,15 @@ public interface I_ZZLearnerLearnershipAssessments
 
 	public org.compiere.model.I_AD_User getZZAssessorPerson() throws RuntimeException;
 
+    /** Column name ZZCredits */
+    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+
+	/** Set Credits	  */
+	public void setZZCredits (int ZZCredits);
+
+	/** Get Credits	  */
+	public int getZZCredits();
+
     /** Column name ZZDateAssessmentCaptured */
     public static final String COLUMNNAME_ZZDateAssessmentCaptured = "ZZDateAssessmentCaptured";
 

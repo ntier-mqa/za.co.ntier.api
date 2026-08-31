@@ -32,7 +32,7 @@ public class X_ZZLearnerLearnershipAssessments extends PO implements I_ZZLearner
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260814L;
+	private static final long serialVersionUID = 20260831L;
 
     /** Standard Constructor */
     public X_ZZLearnerLearnershipAssessments (Properties ctx, int ZZLearnerLearnershipAssessments_ID, String trxName)
@@ -202,6 +202,24 @@ public class X_ZZLearnerLearnershipAssessments extends PO implements I_ZZLearner
 	public int getZZAssessorPerson_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZAssessorPerson_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Credits.
+		@param ZZCredits Credits
+	*/
+	public void setZZCredits (int ZZCredits)
+	{
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
+	}
+
+	/** Get Credits.
+		@return Credits	  */
+	public int getZZCredits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

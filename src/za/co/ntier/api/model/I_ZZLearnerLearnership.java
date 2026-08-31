@@ -229,6 +229,15 @@ public interface I_ZZLearnerLearnership
 	/** Get Contract Number	  */
 	public String getZZContractNumber();
 
+    /** Column name ZZCredits */
+    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+
+	/** Set Credits	  */
+	public void setZZCredits (int ZZCredits);
+
+	/** Get Credits	  */
+	public int getZZCredits();
+
     /** Column name ZZDateApproved */
     public static final String COLUMNNAME_ZZDateApproved = "ZZDateApproved";
 
