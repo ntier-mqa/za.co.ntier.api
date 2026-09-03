@@ -33,7 +33,7 @@ public class X_ZZQctoLearnership extends PO implements I_ZZQctoLearnership, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260703L;
+	private static final long serialVersionUID = 20260903L;
 
     /** Standard Constructor */
     public X_ZZQctoLearnership (Properties ctx, int ZZQctoLearnership_ID, String trxName)
@@ -413,6 +413,33 @@ public class X_ZZQctoLearnership extends PO implements I_ZZQctoLearnership, I_Pe
 	public String getZZQctoLearnership_UU()
 	{
 		return (String)get_Value(COLUMNNAME_ZZQctoLearnership_UU);
+	}
+
+	public I_ZZQctoQualification getZZQctoQualification() throws RuntimeException
+	{
+		return (I_ZZQctoQualification)MTable.get(getCtx(), I_ZZQctoQualification.Table_ID)
+			.getPO(getZZQctoQualification_ID(), get_TrxName());
+	}
+
+	/** Set QCTO Qualification.
+		@param ZZQctoQualification_ID QCTO Qualification
+	*/
+	public void setZZQctoQualification_ID (int ZZQctoQualification_ID)
+	{
+		if (ZZQctoQualification_ID < 1)
+			set_Value (COLUMNNAME_ZZQctoQualification_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZQctoQualification_ID, Integer.valueOf(ZZQctoQualification_ID));
+	}
+
+	/** Get QCTO Qualification.
+		@return QCTO Qualification	  */
+	public int getZZQctoQualification_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZQctoQualification_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	public I_ZZQualification getZZQualification() throws RuntimeException

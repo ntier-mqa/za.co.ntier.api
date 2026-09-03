@@ -255,6 +255,17 @@ public interface I_ZZQctoLearnership
 	/** Get ZZQctoLearnership_UU	  */
 	public String getZZQctoLearnership_UU();
 
+    /** Column name ZZQctoQualification_ID */
+    public static final String COLUMNNAME_ZZQctoQualification_ID = "ZZQctoQualification_ID";
+
+	/** Set QCTO Qualification	  */
+	public void setZZQctoQualification_ID (int ZZQctoQualification_ID);
+
+	/** Get QCTO Qualification	  */
+	public int getZZQctoQualification_ID();
+
+	public I_ZZQctoQualification getZZQctoQualification() throws RuntimeException;
+
     /** Column name ZZQualification_ID */
     public static final String COLUMNNAME_ZZQualification_ID = "ZZQualification_ID";
 
