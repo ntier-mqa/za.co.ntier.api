@@ -32,7 +32,7 @@ public class X_ZZLearnerLearnershipAssessments extends PO implements I_ZZLearner
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260831L;
+	private static final long serialVersionUID = 20260903L;
 
     /** Standard Constructor */
     public X_ZZLearnerLearnershipAssessments (Properties ctx, int ZZLearnerLearnershipAssessments_ID, String trxName)
@@ -118,28 +118,57 @@ public class X_ZZLearnerLearnershipAssessments extends PO implements I_ZZLearner
       return sb.toString();
     }
 
-	public I_Assessment_Status getAssessment_Status() throws RuntimeException
+	public org.compiere.model.I_AD_User getAssessor() throws RuntimeException
 	{
-		return (I_Assessment_Status)MTable.get(getCtx(), I_Assessment_Status.Table_ID)
-			.getPO(getAssessment_Status_ID(), get_TrxName());
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getAssessor_ID(), get_TrxName());
 	}
 
-	/** Set Assessment Status.
-		@param Assessment_Status_ID Assessment Status
+	/** Set Assessor ID.
+		@param Assessor_ID ms_learnerqctoskillsprogrammeassessments.assessorid (ms_user email match)
 	*/
-	public void setAssessment_Status_ID (int Assessment_Status_ID)
+	public void setAssessor_ID (int Assessor_ID)
 	{
-		if (Assessment_Status_ID < 1)
-			set_Value (COLUMNNAME_Assessment_Status_ID, null);
+		if (Assessor_ID < 1)
+			set_Value (COLUMNNAME_Assessor_ID, null);
 		else
-			set_Value (COLUMNNAME_Assessment_Status_ID, Integer.valueOf(Assessment_Status_ID));
+			set_Value (COLUMNNAME_Assessor_ID, Integer.valueOf(Assessor_ID));
 	}
 
-	/** Get Assessment Status.
-		@return Assessment Status	  */
-	public int getAssessment_Status_ID()
+	/** Get Assessor ID.
+		@return ms_learnerqctoskillsprogrammeassessments.assessorid (ms_user email match)
+	  */
+	public int getAssessor_ID()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_Assessment_Status_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_Assessor_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getModerator() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getModerator_ID(), get_TrxName());
+	}
+
+	/** Set Moderator ID.
+		@param Moderator_ID ms_learnerqctoskillsprogrammeassessments.moderatorid (ms_user email match)
+	*/
+	public void setModerator_ID (int Moderator_ID)
+	{
+		if (Moderator_ID < 1)
+			set_Value (COLUMNNAME_Moderator_ID, null);
+		else
+			set_Value (COLUMNNAME_Moderator_ID, Integer.valueOf(Moderator_ID));
+	}
+
+	/** Get Moderator ID.
+		@return ms_learnerqctoskillsprogrammeassessments.moderatorid (ms_user email match)
+	  */
+	public int getModerator_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Moderator_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -180,9 +209,9 @@ public class X_ZZLearnerLearnershipAssessments extends PO implements I_ZZLearner
 		return (String)get_Value(COLUMNNAME_ZZAssessmentStatus);
 	}
 
-	public org.compiere.model.I_AD_User getZZAssessorPerson() throws RuntimeException
+	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException
 	{
-		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+		return (I_ZZAssessorPerson)MTable.get(getCtx(), I_ZZAssessorPerson.Table_ID)
 			.getPO(getZZAssessorPerson_ID(), get_TrxName());
 	}
 

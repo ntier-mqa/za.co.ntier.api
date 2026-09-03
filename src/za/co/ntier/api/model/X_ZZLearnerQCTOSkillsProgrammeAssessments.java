@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOSkillsProgrammeAssessments extends PO implements I_Z
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260818L;
+	private static final long serialVersionUID = 20260903L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOSkillsProgrammeAssessments (Properties ctx, int ZZLearnerQCTOSkillsProgrammeAssessments_ID, String trxName)
@@ -140,33 +140,6 @@ public class X_ZZLearnerQCTOSkillsProgrammeAssessments extends PO implements I_Z
 	public Timestamp getAssessment_Date()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_Assessment_Date);
-	}
-
-	public I_Assessment_Status getAssessment_Status() throws RuntimeException
-	{
-		return (I_Assessment_Status)MTable.get(getCtx(), I_Assessment_Status.Table_ID)
-			.getPO(getAssessment_Status_ID(), get_TrxName());
-	}
-
-	/** Set Assessment Status.
-		@param Assessment_Status_ID Assessment Status
-	*/
-	public void setAssessment_Status_ID (int Assessment_Status_ID)
-	{
-		if (Assessment_Status_ID < 1)
-			set_Value (COLUMNNAME_Assessment_Status_ID, null);
-		else
-			set_Value (COLUMNNAME_Assessment_Status_ID, Integer.valueOf(Assessment_Status_ID));
-	}
-
-	/** Get Assessment Status.
-		@return Assessment Status	  */
-	public int getAssessment_Status_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_Assessment_Status_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
 	}
 
 	public org.compiere.model.I_AD_User getAssessor() throws RuntimeException
@@ -314,31 +287,6 @@ public class X_ZZLearnerQCTOSkillsProgrammeAssessments extends PO implements I_Z
 	public int getModerator_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_Moderator_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
-	}
-
-	public org.compiere.model.I_AD_User getPartial_Approved() throws RuntimeException
-	{
-		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
-			.getPO(getPartial_Approved_By(), get_TrxName());
-	}
-
-	/** Set Partial Approved By.
-		@param Partial_Approved_By ms_learnerqctolearnershipassessments.partialapprovedby (ms_user email match)
-	*/
-	public void setPartial_Approved_By (int Partial_Approved_By)
-	{
-		set_Value (COLUMNNAME_Partial_Approved_By, Integer.valueOf(Partial_Approved_By));
-	}
-
-	/** Get Partial Approved By.
-		@return ms_learnerqctolearnershipassessments.partialapprovedby (ms_user email match)
-	  */
-	public int getPartial_Approved_By()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_Partial_Approved_By);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

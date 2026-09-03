@@ -32,7 +32,7 @@ public interface I_ZZLearnerSkillsProgrammeAssessments
     /** TableName=ZZLearnerSkillsProgrammeAssessments */
     public static final String Table_Name = "ZZLearnerSkillsProgrammeAssessments";
 
-    /** AD_Table_ID=1000374 */
+    /** AD_Table_ID=1000639 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);

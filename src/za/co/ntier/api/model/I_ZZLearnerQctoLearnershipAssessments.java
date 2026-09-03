@@ -32,7 +32,7 @@ public interface I_ZZLearnerQctoLearnershipAssessments
     /** TableName=ZZLearnerQctoLearnershipAssessments */
     public static final String Table_Name = "ZZLearnerQctoLearnershipAssessments";
 
-    /** AD_Table_ID=1000313 */
+    /** AD_Table_ID=1000517 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -64,6 +64,21 @@ public interface I_ZZLearnerQctoLearnershipAssessments
 	  */
 	public int getAD_Org_ID();
 
+    /** Column name Assessor_ID */
+    public static final String COLUMNNAME_Assessor_ID = "Assessor_ID";
+
+	/** Set Assessor ID.
+	  * ms_learnerqctoskillsprogrammeassessments.assessorid (ms_user email match)
+	  */
+	public void setAssessor_ID (int Assessor_ID);
+
+	/** Get Assessor ID.
+	  * ms_learnerqctoskillsprogrammeassessments.assessorid (ms_user email match)
+	  */
+	public int getAssessor_ID();
+
+	public org.compiere.model.I_AD_User getAssessor() throws RuntimeException;
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -80,6 +95,19 @@ public interface I_ZZLearnerQctoLearnershipAssessments
 	  */
 	public int getCreatedBy();
 
+    /** Column name Date_Partial_Approved */
+    public static final String COLUMNNAME_Date_Partial_Approved = "Date_Partial_Approved";
+
+	/** Set Date Partial Approved.
+	  * ms_learnerqctolearnershipassessments.datepartialapproved
+	  */
+	public void setDate_Partial_Approved (Timestamp Date_Partial_Approved);
+
+	/** Get Date Partial Approved.
+	  * ms_learnerqctolearnershipassessments.datepartialapproved
+	  */
+	public Timestamp getDate_Partial_Approved();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -92,6 +120,47 @@ public interface I_ZZLearnerQctoLearnershipAssessments
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name Is_Partial_Approved */
+    public static final String COLUMNNAME_Is_Partial_Approved = "Is_Partial_Approved";
+
+	/** Set Is Partial Approved.
+	  * ms_learnerqctolearnershipassessments.ispartialapproved
+	  */
+	public void setIs_Partial_Approved (boolean Is_Partial_Approved);
+
+	/** Get Is Partial Approved.
+	  * ms_learnerqctolearnershipassessments.ispartialapproved
+	  */
+	public boolean is_Partial_Approved();
+
+    /** Column name Is_Previously_Achieved */
+    public static final String COLUMNNAME_Is_Previously_Achieved = "Is_Previously_Achieved";
+
+	/** Set Is Previously Achieved.
+	  * ms_learnerqctolearnershipassessments.ispreviouslyachieved
+	  */
+	public void setIs_Previously_Achieved (boolean Is_Previously_Achieved);
+
+	/** Get Is Previously Achieved.
+	  * ms_learnerqctolearnershipassessments.ispreviouslyachieved
+	  */
+	public boolean is_Previously_Achieved();
+
+    /** Column name Moderator_ID */
+    public static final String COLUMNNAME_Moderator_ID = "Moderator_ID";
+
+	/** Set Moderator ID.
+	  * ms_learnerqctoskillsprogrammeassessments.moderatorid (ms_user email match)
+	  */
+	public void setModerator_ID (int Moderator_ID);
+
+	/** Get Moderator ID.
+	  * ms_learnerqctoskillsprogrammeassessments.moderatorid (ms_user email match)
+	  */
+	public int getModerator_ID();
+
+	public org.compiere.model.I_AD_User getModerator() throws RuntimeException;
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -237,4 +306,13 @@ public interface I_ZZLearnerQctoLearnershipAssessments
 
 	/** Get RPL	  */
 	public String getZZRPL();
+
+    /** Column name id */
+    public static final String COLUMNNAME_id = "id";
+
+	/** Set id	  */
+	public void setid (int id);
+
+	/** Get id	  */
+	public int getid();
 }

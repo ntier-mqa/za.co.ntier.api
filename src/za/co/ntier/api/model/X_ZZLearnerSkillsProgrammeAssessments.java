@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260824L;
+	private static final long serialVersionUID = 20260903L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgrammeAssessments (Properties ctx, int ZZLearnerSkillsProgrammeAssessments_ID, String trxName)

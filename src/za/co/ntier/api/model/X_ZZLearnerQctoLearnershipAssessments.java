@@ -32,7 +32,7 @@ public class X_ZZLearnerQctoLearnershipAssessments extends PO implements I_ZZLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260703L;
+	private static final long serialVersionUID = 20260903L;
 
     /** Standard Constructor */
     public X_ZZLearnerQctoLearnershipAssessments (Properties ctx, int ZZLearnerQctoLearnershipAssessments_ID, String trxName)
@@ -40,6 +40,10 @@ public class X_ZZLearnerQctoLearnershipAssessments extends PO implements I_ZZLea
       super (ctx, ZZLearnerQctoLearnershipAssessments_ID, trxName);
       /** if (ZZLearnerQctoLearnershipAssessments_ID == 0)
         {
+			setIs_Partial_Approved (false);
+// N
+			setIs_Previously_Achieved (false);
+// N
 			setZZLearnerQctoLearnershipAssessments_ID (0);
         } */
     }
@@ -50,6 +54,10 @@ public class X_ZZLearnerQctoLearnershipAssessments extends PO implements I_ZZLea
       super (ctx, ZZLearnerQctoLearnershipAssessments_ID, trxName, virtualColumns);
       /** if (ZZLearnerQctoLearnershipAssessments_ID == 0)
         {
+			setIs_Partial_Approved (false);
+// N
+			setIs_Previously_Achieved (false);
+// N
 			setZZLearnerQctoLearnershipAssessments_ID (0);
         } */
     }
@@ -60,6 +68,10 @@ public class X_ZZLearnerQctoLearnershipAssessments extends PO implements I_ZZLea
       super (ctx, ZZLearnerQctoLearnershipAssessments_UU, trxName);
       /** if (ZZLearnerQctoLearnershipAssessments_UU == null)
         {
+			setIs_Partial_Approved (false);
+// N
+			setIs_Previously_Achieved (false);
+// N
 			setZZLearnerQctoLearnershipAssessments_ID (0);
         } */
     }
@@ -70,6 +82,10 @@ public class X_ZZLearnerQctoLearnershipAssessments extends PO implements I_ZZLea
       super (ctx, ZZLearnerQctoLearnershipAssessments_UU, trxName, virtualColumns);
       /** if (ZZLearnerQctoLearnershipAssessments_UU == null)
         {
+			setIs_Partial_Approved (false);
+// N
+			setIs_Previously_Achieved (false);
+// N
 			setZZLearnerQctoLearnershipAssessments_ID (0);
         } */
     }
@@ -102,6 +118,124 @@ public class X_ZZLearnerQctoLearnershipAssessments extends PO implements I_ZZLea
       return sb.toString();
     }
 
+	public org.compiere.model.I_AD_User getAssessor() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getAssessor_ID(), get_TrxName());
+	}
+
+	/** Set Assessor ID.
+		@param Assessor_ID ms_learnerqctoskillsprogrammeassessments.assessorid (ms_user email match)
+	*/
+	public void setAssessor_ID (int Assessor_ID)
+	{
+		if (Assessor_ID < 1)
+			set_Value (COLUMNNAME_Assessor_ID, null);
+		else
+			set_Value (COLUMNNAME_Assessor_ID, Integer.valueOf(Assessor_ID));
+	}
+
+	/** Get Assessor ID.
+		@return ms_learnerqctoskillsprogrammeassessments.assessorid (ms_user email match)
+	  */
+	public int getAssessor_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Assessor_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Date Partial Approved.
+		@param Date_Partial_Approved ms_learnerqctolearnershipassessments.datepartialapproved
+	*/
+	public void setDate_Partial_Approved (Timestamp Date_Partial_Approved)
+	{
+		set_Value (COLUMNNAME_Date_Partial_Approved, Date_Partial_Approved);
+	}
+
+	/** Get Date Partial Approved.
+		@return ms_learnerqctolearnershipassessments.datepartialapproved
+	  */
+	public Timestamp getDate_Partial_Approved()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Date_Partial_Approved);
+	}
+
+	/** Set Is Partial Approved.
+		@param Is_Partial_Approved ms_learnerqctolearnershipassessments.ispartialapproved
+	*/
+	public void setIs_Partial_Approved (boolean Is_Partial_Approved)
+	{
+		set_Value (COLUMNNAME_Is_Partial_Approved, Boolean.valueOf(Is_Partial_Approved));
+	}
+
+	/** Get Is Partial Approved.
+		@return ms_learnerqctolearnershipassessments.ispartialapproved
+	  */
+	public boolean is_Partial_Approved()
+	{
+		Object oo = get_Value(COLUMNNAME_Is_Partial_Approved);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Is Previously Achieved.
+		@param Is_Previously_Achieved ms_learnerqctolearnershipassessments.ispreviouslyachieved
+	*/
+	public void setIs_Previously_Achieved (boolean Is_Previously_Achieved)
+	{
+		set_Value (COLUMNNAME_Is_Previously_Achieved, Boolean.valueOf(Is_Previously_Achieved));
+	}
+
+	/** Get Is Previously Achieved.
+		@return ms_learnerqctolearnershipassessments.ispreviouslyachieved
+	  */
+	public boolean is_Previously_Achieved()
+	{
+		Object oo = get_Value(COLUMNNAME_Is_Previously_Achieved);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	public org.compiere.model.I_AD_User getModerator() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getModerator_ID(), get_TrxName());
+	}
+
+	/** Set Moderator ID.
+		@param Moderator_ID ms_learnerqctoskillsprogrammeassessments.moderatorid (ms_user email match)
+	*/
+	public void setModerator_ID (int Moderator_ID)
+	{
+		if (Moderator_ID < 1)
+			set_Value (COLUMNNAME_Moderator_ID, null);
+		else
+			set_Value (COLUMNNAME_Moderator_ID, Integer.valueOf(Moderator_ID));
+	}
+
+	/** Get Moderator ID.
+		@return ms_learnerqctoskillsprogrammeassessments.moderatorid (ms_user email match)
+	  */
+	public int getModerator_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Moderator_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Assessment Date.
 		@param ZZAssessmentDate Assessment Date
 	*/
@@ -117,6 +251,10 @@ public class X_ZZLearnerQctoLearnershipAssessments extends PO implements I_ZZLea
 		return (Timestamp)get_Value(COLUMNNAME_ZZAssessmentDate);
 	}
 
+	/** Competent = CO */
+	public static final String ZZASSESSMENTSTATUS_Competent = "CO";
+	/** Not Competent = NC */
+	public static final String ZZASSESSMENTSTATUS_NotCompetent = "NC";
 	/** Set Assessment Status.
 		@param ZZAssessmentStatus Assessment Status
 	*/
@@ -365,5 +503,23 @@ public class X_ZZLearnerQctoLearnershipAssessments extends PO implements I_ZZLea
 	public String getZZRPL()
 	{
 		return (String)get_Value(COLUMNNAME_ZZRPL);
+	}
+
+	/** Set id.
+		@param id id
+	*/
+	public void setid (int id)
+	{
+		set_Value (COLUMNNAME_id, Integer.valueOf(id));
+	}
+
+	/** Get id.
+		@return id	  */
+	public int getid()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_id);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 }
