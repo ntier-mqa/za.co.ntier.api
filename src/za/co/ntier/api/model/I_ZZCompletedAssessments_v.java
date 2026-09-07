@@ -79,6 +79,15 @@ public interface I_ZZCompletedAssessments_v
 
 	public org.compiere.model.I_AD_Table getAD_Table() throws RuntimeException;
 
+    /** Column name AD_Table_UU */
+    public static final String COLUMNNAME_AD_Table_UU = "AD_Table_UU";
+
+	/** Set AD_Table_UU	  */
+	public void setAD_Table_UU (String AD_Table_UU);
+
+	/** Get AD_Table_UU	  */
+	public String getAD_Table_UU();
+
     /** Column name Assessment_Date */
     public static final String COLUMNNAME_Assessment_Date = "Assessment_Date";
 
@@ -107,6 +116,15 @@ public interface I_ZZCompletedAssessments_v
 	  * User who created this records
 	  */
 	public int getCreatedBy();
+
+    /** Column name Idno */
+    public static final String COLUMNNAME_Idno = "Idno";
+
+	/** Set Idno	  */
+	public void setIdno (String Idno);
+
+	/** Get Idno	  */
+	public String getIdno();
 
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
@@ -159,6 +177,15 @@ public interface I_ZZCompletedAssessments_v
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZCertificateNumber */
+    public static final String COLUMNNAME_ZZCertificateNumber = "ZZCertificateNumber";
+
+	/** Set Certificate Number	  */
+	public void setZZCertificateNumber (String ZZCertificateNumber);
+
+	/** Get Certificate Number	  */
+	public String getZZCertificateNumber();
+
     /** Column name ZZCompletedAssessments_v_ID */
     public static final String COLUMNNAME_ZZCompletedAssessments_v_ID = "ZZCompletedAssessments_v_ID";
 
@@ -176,6 +203,15 @@ public interface I_ZZCompletedAssessments_v
 
 	/** Get ZZCompletedAssessments_v_UU	  */
 	public String getZZCompletedAssessments_v_UU();
+
+    /** Column name ZZCompletionDate */
+    public static final String COLUMNNAME_ZZCompletionDate = "ZZCompletionDate";
+
+	/** Set Estimate Completion Date	  */
+	public void setZZCompletionDate (Timestamp ZZCompletionDate);
+
+	/** Get Estimate Completion Date	  */
+	public Timestamp getZZCompletionDate();
 
     /** Column name ZZFirstName */
     public static final String COLUMNNAME_ZZFirstName = "ZZFirstName";
@@ -288,6 +324,15 @@ public interface I_ZZCompletedAssessments_v
 	  */
 	public String getZZOtherIDNo();
 
+    /** Column name ZZProgramType */
+    public static final String COLUMNNAME_ZZProgramType = "ZZProgramType";
+
+	/** Set Program Type	  */
+	public void setZZProgramType (String ZZProgramType);
+
+	/** Get Program Type	  */
+	public String getZZProgramType();
+
     /** Column name ZZQCTO */
     public static final String COLUMNNAME_ZZQCTO = "ZZQCTO";
 
@@ -318,6 +363,24 @@ public interface I_ZZCompletedAssessments_v
 
 	/** Get ID No	  */
 	public String getZZ_ID_Passport_No();
+
+    /** Column name core_requirements_met */
+    public static final String COLUMNNAME_core_requirements_met = "core_requirements_met";
+
+	/** Set core_requirements_met	  */
+	public void setcore_requirements_met (String core_requirements_met);
+
+	/** Get core_requirements_met	  */
+	public String getcore_requirements_met();
+
+    /** Column name fundamentals_met */
+    public static final String COLUMNNAME_fundamentals_met = "fundamentals_met";
+
+	/** Set fundamentals_met	  */
+	public void setfundamentals_met (String fundamentals_met);
+
+	/** Get fundamentals_met	  */
+	public String getfundamentals_met();
 
     /** Column name met_requirements */
     public static final String COLUMNNAME_met_requirements = "met_requirements";

@@ -129,6 +129,15 @@ public interface I_ZZLearnerSkillsProgramme
 	/** Get Agreement Reference Number	  */
 	public String getZZAgreementReferenceNumber();
 
+    /** Column name ZZCertificateNumber */
+    public static final String COLUMNNAME_ZZCertificateNumber = "ZZCertificateNumber";
+
+	/** Set Certificate Number	  */
+	public void setZZCertificateNumber (String ZZCertificateNumber);
+
+	/** Get Certificate Number	  */
+	public String getZZCertificateNumber();
+
     /** Column name ZZCommencementDate */
     public static final String COLUMNNAME_ZZCommencementDate = "ZZCommencementDate";
 
@@ -242,4 +251,17 @@ public interface I_ZZLearnerSkillsProgramme
 
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
+
+    /** Column name ZZ_SkillsProgCodeAndTitle */
+    public static final String COLUMNNAME_ZZ_SkillsProgCodeAndTitle = "ZZ_SkillsProgCodeAndTitle";
+
+	/** Set Skills Programme Code and Title.
+	  * A column sql for the displaying code and title for the Skills Programme
+	  */
+	public void setZZ_SkillsProgCodeAndTitle (String ZZ_SkillsProgCodeAndTitle);
+
+	/** Get Skills Programme Code and Title.
+	  * A column sql for the displaying code and title for the Skills Programme
+	  */
+	public String getZZ_SkillsProgCodeAndTitle();
 }

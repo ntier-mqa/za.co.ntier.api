@@ -34,7 +34,7 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260825L;
+	private static final long serialVersionUID = 20260907L;
 
     /** Standard Constructor */
     public X_ZZCompletedAssessments_v (Properties ctx, int ZZCompletedAssessments_v_ID, String trxName)
@@ -144,6 +144,21 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 		return ii.intValue();
 	}
 
+	/** Set AD_Table_UU.
+		@param AD_Table_UU AD_Table_UU
+	*/
+	public void setAD_Table_UU (String AD_Table_UU)
+	{
+		set_ValueNoCheck (COLUMNNAME_AD_Table_UU, AD_Table_UU);
+	}
+
+	/** Get AD_Table_UU.
+		@return AD_Table_UU	  */
+	public String getAD_Table_UU()
+	{
+		return (String)get_Value(COLUMNNAME_AD_Table_UU);
+	}
+
 	/** Set Assessment Date.
 		@param Assessment_Date ms_learnerqctoskillsprogrammeassessments.assessmentdate
 	*/
@@ -158,6 +173,21 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	public Timestamp getAssessment_Date()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_Assessment_Date);
+	}
+
+	/** Set Idno.
+		@param Idno Idno
+	*/
+	public void setIdno (String Idno)
+	{
+		set_ValueNoCheck (COLUMNNAME_Idno, Idno);
+	}
+
+	/** Get Idno.
+		@return Idno	  */
+	public String getIdno()
+	{
+		return (String)get_Value(COLUMNNAME_Idno);
 	}
 
 	/** Set Record ID.
@@ -197,6 +227,21 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 		return (String)get_Value(COLUMNNAME_Surname);
 	}
 
+	/** Set Certificate Number.
+		@param ZZCertificateNumber Certificate Number
+	*/
+	public void setZZCertificateNumber (String ZZCertificateNumber)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZCertificateNumber, ZZCertificateNumber);
+	}
+
+	/** Get Certificate Number.
+		@return Certificate Number	  */
+	public String getZZCertificateNumber()
+	{
+		return (String)get_Value(COLUMNNAME_ZZCertificateNumber);
+	}
+
 	/** Set Completions.
 		@param ZZCompletedAssessments_v_ID Completions
 	*/
@@ -231,6 +276,21 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	public String getZZCompletedAssessments_v_UU()
 	{
 		return (String)get_Value(COLUMNNAME_ZZCompletedAssessments_v_UU);
+	}
+
+	/** Set Estimate Completion Date.
+		@param ZZCompletionDate Estimate Completion Date
+	*/
+	public void setZZCompletionDate (Timestamp ZZCompletionDate)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZCompletionDate, ZZCompletionDate);
+	}
+
+	/** Get Estimate Completion Date.
+		@return Estimate Completion Date	  */
+	public Timestamp getZZCompletionDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZCompletionDate);
 	}
 
 	/** Set First Name.
@@ -455,6 +515,26 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 		return (String)get_Value(COLUMNNAME_ZZOtherIDNo);
 	}
 
+	/** Learnership = Learnership */
+	public static final String ZZPROGRAMTYPE_Learnership = "Learnership";
+	/** Skills Programme = Skills Programme */
+	public static final String ZZPROGRAMTYPE_SkillsProgramme = "Skills Programme";
+	/** Set Program Type.
+		@param ZZProgramType Program Type
+	*/
+	public void setZZProgramType (String ZZProgramType)
+	{
+
+		set_ValueNoCheck (COLUMNNAME_ZZProgramType, ZZProgramType);
+	}
+
+	/** Get Program Type.
+		@return Program Type	  */
+	public String getZZProgramType()
+	{
+		return (String)get_Value(COLUMNNAME_ZZProgramType);
+	}
+
 	/** Set ZZQCTO.
 		@param ZZQCTO ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
 	*/
@@ -605,6 +685,36 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	public String getZZ_ID_Passport_No()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_ID_Passport_No);
+	}
+
+	/** Set core_requirements_met.
+		@param core_requirements_met core_requirements_met
+	*/
+	public void setcore_requirements_met (String core_requirements_met)
+	{
+		set_ValueNoCheck (COLUMNNAME_core_requirements_met, core_requirements_met);
+	}
+
+	/** Get core_requirements_met.
+		@return core_requirements_met	  */
+	public String getcore_requirements_met()
+	{
+		return (String)get_Value(COLUMNNAME_core_requirements_met);
+	}
+
+	/** Set fundamentals_met.
+		@param fundamentals_met fundamentals_met
+	*/
+	public void setfundamentals_met (String fundamentals_met)
+	{
+		set_ValueNoCheck (COLUMNNAME_fundamentals_met, fundamentals_met);
+	}
+
+	/** Get fundamentals_met.
+		@return fundamentals_met	  */
+	public String getfundamentals_met()
+	{
+		return (String)get_Value(COLUMNNAME_fundamentals_met);
 	}
 
 	/** Set Met Requirements.

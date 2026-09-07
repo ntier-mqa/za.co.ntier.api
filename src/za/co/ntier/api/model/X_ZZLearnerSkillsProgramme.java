@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260825L;
+	private static final long serialVersionUID = 20260907L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgramme (Properties ctx, int ZZLearnerSkillsProgramme_ID, String trxName)
@@ -138,6 +138,21 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	public String getZZAgreementReferenceNumber()
 	{
 		return (String)get_Value(COLUMNNAME_ZZAgreementReferenceNumber);
+	}
+
+	/** Set Certificate Number.
+		@param ZZCertificateNumber Certificate Number
+	*/
+	public void setZZCertificateNumber (String ZZCertificateNumber)
+	{
+		set_Value (COLUMNNAME_ZZCertificateNumber, ZZCertificateNumber);
+	}
+
+	/** Get Certificate Number.
+		@return Certificate Number	  */
+	public String getZZCertificateNumber()
+	{
+		return (String)get_Value(COLUMNNAME_ZZCertificateNumber);
 	}
 
 	/** Set Commencement Date.
@@ -465,5 +480,20 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	public String getZZ_DocStatus()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
+	}
+
+	/** Set Skills Programme Code and Title.
+		@param ZZ_SkillsProgCodeAndTitle A column sql for the displaying code and title for the Skills Programme
+	*/
+	public void setZZ_SkillsProgCodeAndTitle (String ZZ_SkillsProgCodeAndTitle)
+	{
+		throw new IllegalArgumentException ("ZZ_SkillsProgCodeAndTitle is virtual column");	}
+
+	/** Get Skills Programme Code and Title.
+		@return A column sql for the displaying code and title for the Skills Programme
+	  */
+	public String getZZ_SkillsProgCodeAndTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_SkillsProgCodeAndTitle);
 	}
 }
