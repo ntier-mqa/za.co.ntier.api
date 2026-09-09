@@ -32,7 +32,7 @@ public interface I_ZZLearnerQCTOSkillsProgrammeAssessments
     /** TableName=ZZLearnerQCTOSkillsProgrammeAssessments */
     public static final String Table_Name = "ZZLearnerQCTOSkillsProgrammeAssessments";
 
-    /** AD_Table_ID=1000637 */
+    /** AD_Table_ID=1000355 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -226,6 +226,15 @@ public interface I_ZZLearnerQCTOSkillsProgrammeAssessments
 	/** Get Assessment Status	  */
 	public String getZZAssessmentStatus();
 
+    /** Column name ZZCredits */
+    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+
+	/** Set Credits	  */
+	public void setZZCredits (int ZZCredits);
+
+	/** Get Credits	  */
+	public int getZZCredits();
+
     /** Column name ZZLearnerQCTOSkillsProgrammeAssessments_ID */
     public static final String COLUMNNAME_ZZLearnerQCTOSkillsProgrammeAssessments_ID = "ZZLearnerQCTOSkillsProgrammeAssessments_ID";
 
@@ -278,6 +287,17 @@ public interface I_ZZLearnerQCTOSkillsProgrammeAssessments
 
 	/** Get RPL	  */
 	public boolean isZZRPL();
+
+    /** Column name ZZ_SDPAdmin_ID */
+    public static final String COLUMNNAME_ZZ_SDPAdmin_ID = "ZZ_SDPAdmin_ID";
+
+	/** Set SDP Admin	  */
+	public void setZZ_SDPAdmin_ID (int ZZ_SDPAdmin_ID);
+
+	/** Get SDP Admin	  */
+	public int getZZ_SDPAdmin_ID();
+
+	public org.compiere.model.I_AD_User getZZ_SDPAdmin() throws RuntimeException;
 
     /** Column name id */
     public static final String COLUMNNAME_id = "id";

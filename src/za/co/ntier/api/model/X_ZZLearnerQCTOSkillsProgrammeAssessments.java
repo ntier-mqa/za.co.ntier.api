@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOSkillsProgrammeAssessments extends PO implements I_Z
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260903L;
+	private static final long serialVersionUID = 20260909L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOSkillsProgrammeAssessments (Properties ctx, int ZZLearnerQCTOSkillsProgrammeAssessments_ID, String trxName)
@@ -312,6 +312,24 @@ public class X_ZZLearnerQCTOSkillsProgrammeAssessments extends PO implements I_Z
 		return (String)get_Value(COLUMNNAME_ZZAssessmentStatus);
 	}
 
+	/** Set Credits.
+		@param ZZCredits Credits
+	*/
+	public void setZZCredits (int ZZCredits)
+	{
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
+	}
+
+	/** Get Credits.
+		@return Credits	  */
+	public int getZZCredits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set ZZLearnerQCTOSkillsProgrammeAssessments.
 		@param ZZLearnerQCTOSkillsProgrammeAssessments_ID ZZLearnerQCTOSkillsProgrammeAssessments
 	*/
@@ -423,6 +441,33 @@ public class X_ZZLearnerQCTOSkillsProgrammeAssessments extends PO implements I_Z
 			return "Y".equals(oo);
 		}
 		return false;
+	}
+
+	public org.compiere.model.I_AD_User getZZ_SDPAdmin() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_SDPAdmin_ID(), get_TrxName());
+	}
+
+	/** Set SDP Admin.
+		@param ZZ_SDPAdmin_ID SDP Admin
+	*/
+	public void setZZ_SDPAdmin_ID (int ZZ_SDPAdmin_ID)
+	{
+		if (ZZ_SDPAdmin_ID < 1)
+			set_Value (COLUMNNAME_ZZ_SDPAdmin_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_SDPAdmin_ID, Integer.valueOf(ZZ_SDPAdmin_ID));
+	}
+
+	/** Get SDP Admin.
+		@return SDP Admin	  */
+	public int getZZ_SDPAdmin_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SDPAdmin_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set id.
