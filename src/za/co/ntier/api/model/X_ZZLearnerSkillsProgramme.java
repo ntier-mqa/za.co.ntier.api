@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260907L;
+	private static final long serialVersionUID = 20260909L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgramme (Properties ctx, int ZZLearnerSkillsProgramme_ID, String trxName)
@@ -480,6 +480,62 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	public String getZZ_DocStatus()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
+	}
+
+	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getZZ_Employer_ID(), get_TrxName());
+	}
+
+	/** Set Employer.
+		@param ZZ_Employer_ID Lead Workplace Approval
+	*/
+	public void setZZ_Employer_ID (int ZZ_Employer_ID)
+	{
+		if (ZZ_Employer_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Employer_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Employer_ID, Integer.valueOf(ZZ_Employer_ID));
+	}
+
+	/** Get Employer.
+		@return Lead Workplace Approval
+	  */
+	public int getZZ_Employer_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Employer_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getZZ_SDP_ID(), get_TrxName());
+	}
+
+	/** Set SDP.
+		@param ZZ_SDP_ID Lead Skills Development Provider
+	*/
+	public void setZZ_SDP_ID (int ZZ_SDP_ID)
+	{
+		if (ZZ_SDP_ID < 1)
+			set_Value (COLUMNNAME_ZZ_SDP_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_SDP_ID, Integer.valueOf(ZZ_SDP_ID));
+	}
+
+	/** Get SDP.
+		@return Lead Skills Development Provider
+	  */
+	public int getZZ_SDP_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SDP_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Skills Programme Code and Title.

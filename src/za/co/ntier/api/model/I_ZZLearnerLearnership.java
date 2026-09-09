@@ -758,6 +758,21 @@ public interface I_ZZLearnerLearnership
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
 
+    /** Column name ZZ_Employer_ID */
+    public static final String COLUMNNAME_ZZ_Employer_ID = "ZZ_Employer_ID";
+
+	/** Set Employer.
+	  * Lead Workplace Approval
+	  */
+	public void setZZ_Employer_ID (int ZZ_Employer_ID);
+
+	/** Get Employer.
+	  * Lead Workplace Approval
+	  */
+	public int getZZ_Employer_ID();
+
+	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException;
+
     /** Column name ZZ_FinYear_ID */
     public static final String COLUMNNAME_ZZ_FinYear_ID = "ZZ_FinYear_ID";
 
@@ -768,6 +783,34 @@ public interface I_ZZLearnerLearnership
 	public int getZZ_FinYear_ID();
 
 	public org.compiere.model.I_C_Year getZZ_FinYear() throws RuntimeException;
+
+    /** Column name ZZ_LearnershipCodeAndTitle */
+    public static final String COLUMNNAME_ZZ_LearnershipCodeAndTitle = "ZZ_LearnershipCodeAndTitle";
+
+	/** Set Learnership Code and Title.
+	  * A column sql for the displaying code and title for the Learnership
+	  */
+	public void setZZ_LearnershipCodeAndTitle (String ZZ_LearnershipCodeAndTitle);
+
+	/** Get Learnership Code and Title.
+	  * A column sql for the displaying code and title for the Learnership
+	  */
+	public String getZZ_LearnershipCodeAndTitle();
+
+    /** Column name ZZ_SDP_ID */
+    public static final String COLUMNNAME_ZZ_SDP_ID = "ZZ_SDP_ID";
+
+	/** Set SDP.
+	  * Lead Skills Development Provider
+	  */
+	public void setZZ_SDP_ID (int ZZ_SDP_ID);
+
+	/** Get SDP.
+	  * Lead Skills Development Provider
+	  */
+	public int getZZ_SDP_ID();
+
+	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException;
 
     /** Column name id */
     public static final String COLUMNNAME_id = "id";
