@@ -32,7 +32,7 @@ public class X_ZZLearnerLearnershipAssessments extends PO implements I_ZZLearner
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260903L;
+	private static final long serialVersionUID = 20260909L;
 
     /** Standard Constructor */
     public X_ZZLearnerLearnershipAssessments (Properties ctx, int ZZLearnerLearnershipAssessments_ID, String trxName)
@@ -209,9 +209,9 @@ public class X_ZZLearnerLearnershipAssessments extends PO implements I_ZZLearner
 		return (String)get_Value(COLUMNNAME_ZZAssessmentStatus);
 	}
 
-	public I_ZZAssessorPerson getZZAssessorPerson() throws RuntimeException
+	public org.compiere.model.I_AD_User getZZAssessorPerson() throws RuntimeException
 	{
-		return (I_ZZAssessorPerson)MTable.get(getCtx(), I_ZZAssessorPerson.Table_ID)
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
 			.getPO(getZZAssessorPerson_ID(), get_TrxName());
 	}
 
@@ -504,6 +504,33 @@ public class X_ZZLearnerLearnershipAssessments extends PO implements I_ZZLearner
 	public int getZZUnitStandard_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZUnitStandard_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_SDPAdmin() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_SDPAdmin_ID(), get_TrxName());
+	}
+
+	/** Set SDP Admin.
+		@param ZZ_SDPAdmin_ID SDP Admin
+	*/
+	public void setZZ_SDPAdmin_ID (int ZZ_SDPAdmin_ID)
+	{
+		if (ZZ_SDPAdmin_ID < 1)
+			set_Value (COLUMNNAME_ZZ_SDPAdmin_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_SDPAdmin_ID, Integer.valueOf(ZZ_SDPAdmin_ID));
+	}
+
+	/** Get SDP Admin.
+		@return SDP Admin	  */
+	public int getZZ_SDPAdmin_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SDPAdmin_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
