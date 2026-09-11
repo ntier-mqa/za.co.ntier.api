@@ -355,6 +355,21 @@ public interface I_ZZCompletedAssessments_v
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
 
+    /** Column name ZZ_Employer_ID */
+    public static final String COLUMNNAME_ZZ_Employer_ID = "ZZ_Employer_ID";
+
+	/** Set Employer.
+	  * Lead Workplace Approval
+	  */
+	public void setZZ_Employer_ID (int ZZ_Employer_ID);
+
+	/** Get Employer.
+	  * Lead Workplace Approval
+	  */
+	public int getZZ_Employer_ID();
+
+	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException;
+
     /** Column name ZZ_ID_Passport_No */
     public static final String COLUMNNAME_ZZ_ID_Passport_No = "ZZ_ID_Passport_No";
 
@@ -363,6 +378,21 @@ public interface I_ZZCompletedAssessments_v
 
 	/** Get ID No	  */
 	public String getZZ_ID_Passport_No();
+
+    /** Column name ZZ_SDP_ID */
+    public static final String COLUMNNAME_ZZ_SDP_ID = "ZZ_SDP_ID";
+
+	/** Set SDP.
+	  * Lead Skills Development Provider
+	  */
+	public void setZZ_SDP_ID (int ZZ_SDP_ID);
+
+	/** Get SDP.
+	  * Lead Skills Development Provider
+	  */
+	public int getZZ_SDP_ID();
+
+	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException;
 
     /** Column name core_requirements_met */
     public static final String COLUMNNAME_core_requirements_met = "core_requirements_met";

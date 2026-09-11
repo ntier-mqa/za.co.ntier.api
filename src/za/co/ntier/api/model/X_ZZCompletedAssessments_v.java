@@ -34,7 +34,7 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260907L;
+	private static final long serialVersionUID = 20260911L;
 
     /** Standard Constructor */
     public X_ZZCompletedAssessments_v (Properties ctx, int ZZCompletedAssessments_v_ID, String trxName)
@@ -672,6 +672,34 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
+	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getZZ_Employer_ID(), get_TrxName());
+	}
+
+	/** Set Employer.
+		@param ZZ_Employer_ID Lead Workplace Approval
+	*/
+	public void setZZ_Employer_ID (int ZZ_Employer_ID)
+	{
+		if (ZZ_Employer_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_Employer_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_Employer_ID, Integer.valueOf(ZZ_Employer_ID));
+	}
+
+	/** Get Employer.
+		@return Lead Workplace Approval
+	  */
+	public int getZZ_Employer_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Employer_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set ID No.
 		@param ZZ_ID_Passport_No ID No
 	*/
@@ -685,6 +713,34 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	public String getZZ_ID_Passport_No()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_ID_Passport_No);
+	}
+
+	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getZZ_SDP_ID(), get_TrxName());
+	}
+
+	/** Set SDP.
+		@param ZZ_SDP_ID Lead Skills Development Provider
+	*/
+	public void setZZ_SDP_ID (int ZZ_SDP_ID)
+	{
+		if (ZZ_SDP_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_SDP_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_SDP_ID, Integer.valueOf(ZZ_SDP_ID));
+	}
+
+	/** Get SDP.
+		@return Lead Skills Development Provider
+	  */
+	public int getZZ_SDP_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SDP_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set core_requirements_met.
