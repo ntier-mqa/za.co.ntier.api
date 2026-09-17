@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOArtisans extends PO implements I_ZZLearnerQCTOArtisa
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260703L;
+	private static final long serialVersionUID = 20260917L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOArtisans (Properties ctx, int ZZLearnerQCTOArtisans_ID, String trxName)
@@ -619,33 +619,6 @@ public class X_ZZLearnerQCTOArtisans extends PO implements I_ZZLearnerQCTOArtisa
 	public String getZZLeadSDProviderLevy()
 	{
 		return (String)get_Value(COLUMNNAME_ZZLeadSDProviderLevy);
-	}
-
-	public I_ZZProvider getZZLeadSDProvider() throws RuntimeException
-	{
-		return (I_ZZProvider)MTable.get(getCtx(), I_ZZProvider.Table_ID)
-			.getPO(getZZLeadSDProvider_ID(), get_TrxName());
-	}
-
-	/** Set Lead Skills Development Provider.
-		@param ZZLeadSDProvider_ID Lead Skills Development Provider
-	*/
-	public void setZZLeadSDProvider_ID (int ZZLeadSDProvider_ID)
-	{
-		if (ZZLeadSDProvider_ID < 1)
-			set_Value (COLUMNNAME_ZZLeadSDProvider_ID, null);
-		else
-			set_Value (COLUMNNAME_ZZLeadSDProvider_ID, Integer.valueOf(ZZLeadSDProvider_ID));
-	}
-
-	/** Get Lead Skills Development Provider.
-		@return Lead Skills Development Provider	  */
-	public int getZZLeadSDProvider_ID()
-	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLeadSDProvider_ID);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
 	}
 
 	/** Set Learner QCTO Artisans.
@@ -1288,28 +1261,57 @@ public class X_ZZLearnerQCTOArtisans extends PO implements I_ZZLearnerQCTOArtisa
 		return (String)get_Value(COLUMNNAME_ZZWALevy);
 	}
 
-	public I_ZZWorkplaceApproval getZZWA() throws RuntimeException
+	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException
 	{
-		return (I_ZZWorkplaceApproval)MTable.get(getCtx(), I_ZZWorkplaceApproval.Table_ID)
-			.getPO(getZZWA_ID(), get_TrxName());
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getZZ_Employer_ID(), get_TrxName());
 	}
 
-	/** Set Lead Workplace Approval .
-		@param ZZWA_ID Lead Workplace Approval 
+	/** Set Employer.
+		@param ZZ_Employer_ID Lead Workplace Approval
 	*/
-	public void setZZWA_ID (int ZZWA_ID)
+	public void setZZ_Employer_ID (int ZZ_Employer_ID)
 	{
-		if (ZZWA_ID < 1)
-			set_Value (COLUMNNAME_ZZWA_ID, null);
+		if (ZZ_Employer_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Employer_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZWA_ID, Integer.valueOf(ZZWA_ID));
+			set_Value (COLUMNNAME_ZZ_Employer_ID, Integer.valueOf(ZZ_Employer_ID));
 	}
 
-	/** Get Lead Workplace Approval .
-		@return Lead Workplace Approval 	  */
-	public int getZZWA_ID()
+	/** Get Employer.
+		@return Lead Workplace Approval
+	  */
+	public int getZZ_Employer_ID()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_ZZWA_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Employer_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getZZ_SDP_ID(), get_TrxName());
+	}
+
+	/** Set SDP.
+		@param ZZ_SDP_ID Lead Skills Development Provider
+	*/
+	public void setZZ_SDP_ID (int ZZ_SDP_ID)
+	{
+		if (ZZ_SDP_ID < 1)
+			set_Value (COLUMNNAME_ZZ_SDP_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_SDP_ID, Integer.valueOf(ZZ_SDP_ID));
+	}
+
+	/** Get SDP.
+		@return Lead Skills Development Provider
+	  */
+	public int getZZ_SDP_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SDP_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

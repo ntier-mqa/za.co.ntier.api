@@ -355,17 +355,6 @@ public interface I_ZZLearnerQCTOArtisans
 	/** Get Lead SDP Skills Levy	  */
 	public String getZZLeadSDProviderLevy();
 
-    /** Column name ZZLeadSDProvider_ID */
-    public static final String COLUMNNAME_ZZLeadSDProvider_ID = "ZZLeadSDProvider_ID";
-
-	/** Set Lead Skills Development Provider	  */
-	public void setZZLeadSDProvider_ID (int ZZLeadSDProvider_ID);
-
-	/** Get Lead Skills Development Provider	  */
-	public int getZZLeadSDProvider_ID();
-
-	public I_ZZProvider getZZLeadSDProvider() throws RuntimeException;
-
     /** Column name ZZLearnerQCTOArtisans_ID */
     public static final String COLUMNNAME_ZZLearnerQCTOArtisans_ID = "ZZLearnerQCTOArtisans_ID";
 
@@ -658,14 +647,33 @@ public interface I_ZZLearnerQCTOArtisans
 	/** Get Lead Workplace Approval Skills Levy	  */
 	public String getZZWALevy();
 
-    /** Column name ZZWA_ID */
-    public static final String COLUMNNAME_ZZWA_ID = "ZZWA_ID";
+    /** Column name ZZ_Employer_ID */
+    public static final String COLUMNNAME_ZZ_Employer_ID = "ZZ_Employer_ID";
 
-	/** Set Lead Workplace Approval 	  */
-	public void setZZWA_ID (int ZZWA_ID);
+	/** Set Employer.
+	  * Lead Workplace Approval
+	  */
+	public void setZZ_Employer_ID (int ZZ_Employer_ID);
 
-	/** Get Lead Workplace Approval 	  */
-	public int getZZWA_ID();
+	/** Get Employer.
+	  * Lead Workplace Approval
+	  */
+	public int getZZ_Employer_ID();
 
-	public I_ZZWorkplaceApproval getZZWA() throws RuntimeException;
+	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException;
+
+    /** Column name ZZ_SDP_ID */
+    public static final String COLUMNNAME_ZZ_SDP_ID = "ZZ_SDP_ID";
+
+	/** Set SDP.
+	  * Lead Skills Development Provider
+	  */
+	public void setZZ_SDP_ID (int ZZ_SDP_ID);
+
+	/** Get SDP.
+	  * Lead Skills Development Provider
+	  */
+	public int getZZ_SDP_ID();
+
+	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException;
 }
