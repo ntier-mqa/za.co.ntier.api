@@ -156,6 +156,24 @@ public interface I_ZZLearnerSkillsProgramme
 	/** Get Estimate Completion Date	  */
 	public Timestamp getZZCompletionDate();
 
+    /** Column name ZZCredits */
+    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+
+	/** Set Credits	  */
+	public void setZZCredits (int ZZCredits);
+
+	/** Get Credits	  */
+	public int getZZCredits();
+
+    /** Column name ZZDateOfIssue */
+    public static final String COLUMNNAME_ZZDateOfIssue = "ZZDateOfIssue";
+
+	/** Set Date Of Issue	  */
+	public void setZZDateOfIssue (Timestamp ZZDateOfIssue);
+
+	/** Get Date Of Issue	  */
+	public Timestamp getZZDateOfIssue();
+
     /** Column name ZZLearnerSkillsProgramme_ID */
     public static final String COLUMNNAME_ZZLearnerSkillsProgramme_ID = "ZZLearnerSkillsProgramme_ID";
 
@@ -294,4 +312,13 @@ public interface I_ZZLearnerSkillsProgramme
 	  * A column sql for the displaying code and title for the Skills Programme
 	  */
 	public String getZZ_SkillsProgCodeAndTitle();
+
+    /** Column name total_achieved_credits */
+    public static final String COLUMNNAME_total_achieved_credits = "total_achieved_credits";
+
+	/** Set Total Achieved Credits	  */
+	public void settotal_achieved_credits (int total_achieved_credits);
+
+	/** Get Total Achieved Credits	  */
+	public int gettotal_achieved_credits();
 }

@@ -32,7 +32,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260909L;
+	private static final long serialVersionUID = 20260917L;
 
     /** Standard Constructor */
     public X_ZZLearnerLearnership (Properties ctx, int ZZLearnerLearnership_ID, String trxName)
@@ -419,6 +419,21 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public Timestamp getZZDateExtensionCaptured()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZDateExtensionCaptured);
+	}
+
+	/** Set Date Of Issue.
+		@param ZZDateOfIssue Date Of Issue
+	*/
+	public void setZZDateOfIssue (Timestamp ZZDateOfIssue)
+	{
+		set_Value (COLUMNNAME_ZZDateOfIssue, ZZDateOfIssue);
+	}
+
+	/** Get Date Of Issue.
+		@return Date Of Issue	  */
+	public Timestamp getZZDateOfIssue()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZDateOfIssue);
 	}
 
 	/** Set Date Termination Captured.
@@ -1564,6 +1579,23 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public int getid()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_id);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Total Achieved Credits.
+		@param total_achieved_credits Total Achieved Credits
+	*/
+	public void settotal_achieved_credits (int total_achieved_credits)
+	{
+		throw new IllegalArgumentException ("total_achieved_credits is virtual column");	}
+
+	/** Get Total Achieved Credits.
+		@return Total Achieved Credits	  */
+	public int gettotal_achieved_credits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_total_achieved_credits);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260909L;
+	private static final long serialVersionUID = 20260917L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgramme (Properties ctx, int ZZLearnerSkillsProgramme_ID, String trxName)
@@ -183,6 +183,39 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	public Timestamp getZZCompletionDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZCompletionDate);
+	}
+
+	/** Set Credits.
+		@param ZZCredits Credits
+	*/
+	public void setZZCredits (int ZZCredits)
+	{
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
+	}
+
+	/** Get Credits.
+		@return Credits	  */
+	public int getZZCredits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Date Of Issue.
+		@param ZZDateOfIssue Date Of Issue
+	*/
+	public void setZZDateOfIssue (Timestamp ZZDateOfIssue)
+	{
+		set_Value (COLUMNNAME_ZZDateOfIssue, ZZDateOfIssue);
+	}
+
+	/** Get Date Of Issue.
+		@return Date Of Issue	  */
+	public Timestamp getZZDateOfIssue()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZDateOfIssue);
 	}
 
 	/** Set Learner Skills Programme.
@@ -551,5 +584,22 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	public String getZZ_SkillsProgCodeAndTitle()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_SkillsProgCodeAndTitle);
+	}
+
+	/** Set Total Achieved Credits.
+		@param total_achieved_credits Total Achieved Credits
+	*/
+	public void settotal_achieved_credits (int total_achieved_credits)
+	{
+		throw new IllegalArgumentException ("total_achieved_credits is virtual column");	}
+
+	/** Get Total Achieved Credits.
+		@return Total Achieved Credits	  */
+	public int gettotal_achieved_credits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_total_achieved_credits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 }

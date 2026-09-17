@@ -278,6 +278,15 @@ public interface I_ZZLearnerLearnership
 	/** Get Date Extension Captured	  */
 	public Timestamp getZZDateExtensionCaptured();
 
+    /** Column name ZZDateOfIssue */
+    public static final String COLUMNNAME_ZZDateOfIssue = "ZZDateOfIssue";
+
+	/** Set Date Of Issue	  */
+	public void setZZDateOfIssue (Timestamp ZZDateOfIssue);
+
+	/** Get Date Of Issue	  */
+	public Timestamp getZZDateOfIssue();
+
     /** Column name ZZDateTerminationCaptured */
     public static final String COLUMNNAME_ZZDateTerminationCaptured = "ZZDateTerminationCaptured";
 
@@ -820,4 +829,13 @@ public interface I_ZZLearnerLearnership
 
 	/** Get id	  */
 	public int getid();
+
+    /** Column name total_achieved_credits */
+    public static final String COLUMNNAME_total_achieved_credits = "total_achieved_credits";
+
+	/** Set Total Achieved Credits	  */
+	public void settotal_achieved_credits (int total_achieved_credits);
+
+	/** Get Total Achieved Credits	  */
+	public int gettotal_achieved_credits();
 }
