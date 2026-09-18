@@ -196,6 +196,19 @@ public interface I_ZZLearnerSkillsProgrammeAssessments
 	/** Get Credits	  */
 	public int getZZCredits();
 
+    /** Column name ZZIsPreviouslyAchieved */
+    public static final String COLUMNNAME_ZZIsPreviouslyAchieved = "ZZIsPreviouslyAchieved";
+
+	/** Set ZZIsPreviouslyAchieved.
+	  * ms_learnerlearnershipassessments.ispreviouslyachieved
+	  */
+	public void setZZIsPreviouslyAchieved (boolean ZZIsPreviouslyAchieved);
+
+	/** Get ZZIsPreviouslyAchieved.
+	  * ms_learnerlearnershipassessments.ispreviouslyachieved
+	  */
+	public boolean isZZIsPreviouslyAchieved();
+
     /** Column name ZZLearnerSkillsProgrammeAssessments_ID */
     public static final String COLUMNNAME_ZZLearnerSkillsProgrammeAssessments_ID = "ZZLearnerSkillsProgrammeAssessments_ID";
 

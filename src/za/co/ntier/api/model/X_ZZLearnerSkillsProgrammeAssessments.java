@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260909L;
+	private static final long serialVersionUID = 20260918L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgrammeAssessments (Properties ctx, int ZZLearnerSkillsProgrammeAssessments_ID, String trxName)
@@ -40,6 +40,8 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
       super (ctx, ZZLearnerSkillsProgrammeAssessments_ID, trxName);
       /** if (ZZLearnerSkillsProgrammeAssessments_ID == 0)
         {
+			setZZIsPreviouslyAchieved (false);
+// N
 			setZZLearnerSkillsProgrammeAssessments_ID (0);
 			setZZRPL (false);
 // N
@@ -52,6 +54,8 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
       super (ctx, ZZLearnerSkillsProgrammeAssessments_ID, trxName, virtualColumns);
       /** if (ZZLearnerSkillsProgrammeAssessments_ID == 0)
         {
+			setZZIsPreviouslyAchieved (false);
+// N
 			setZZLearnerSkillsProgrammeAssessments_ID (0);
 			setZZRPL (false);
 // N
@@ -64,6 +68,8 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
       super (ctx, ZZLearnerSkillsProgrammeAssessments_UU, trxName);
       /** if (ZZLearnerSkillsProgrammeAssessments_UU == null)
         {
+			setZZIsPreviouslyAchieved (false);
+// N
 			setZZLearnerSkillsProgrammeAssessments_ID (0);
 			setZZRPL (false);
 // N
@@ -76,6 +82,8 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
       super (ctx, ZZLearnerSkillsProgrammeAssessments_UU, trxName, virtualColumns);
       /** if (ZZLearnerSkillsProgrammeAssessments_UU == null)
         {
+			setZZIsPreviouslyAchieved (false);
+// N
 			setZZLearnerSkillsProgrammeAssessments_ID (0);
 			setZZRPL (false);
 // N
@@ -250,6 +258,29 @@ public class X_ZZLearnerSkillsProgrammeAssessments extends PO implements I_ZZLea
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set ZZIsPreviouslyAchieved.
+		@param ZZIsPreviouslyAchieved ms_learnerlearnershipassessments.ispreviouslyachieved
+	*/
+	public void setZZIsPreviouslyAchieved (boolean ZZIsPreviouslyAchieved)
+	{
+		set_Value (COLUMNNAME_ZZIsPreviouslyAchieved, Boolean.valueOf(ZZIsPreviouslyAchieved));
+	}
+
+	/** Get ZZIsPreviouslyAchieved.
+		@return ms_learnerlearnershipassessments.ispreviouslyachieved
+	  */
+	public boolean isZZIsPreviouslyAchieved()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZIsPreviouslyAchieved);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	/** Set Skills Programme Assessments.
