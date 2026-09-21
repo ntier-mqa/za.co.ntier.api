@@ -104,6 +104,33 @@ public interface I_ZZLearnerQCTOArtisansAssessments
 	  */
 	public boolean isActive();
 
+    /** Column name Namb_Confirmation */
+    public static final String COLUMNNAME_Namb_Confirmation = "Namb_Confirmation";
+
+	/** Set Namb Confirmation	  */
+	public void setNamb_Confirmation (boolean Namb_Confirmation);
+
+	/** Get Namb Confirmation	  */
+	public boolean isNamb_Confirmation();
+
+    /** Column name Namb_Confirmation_Date */
+    public static final String COLUMNNAME_Namb_Confirmation_Date = "Namb_Confirmation_Date";
+
+	/** Set Namb Confirmation Date	  */
+	public void setNamb_Confirmation_Date (Timestamp Namb_Confirmation_Date);
+
+	/** Get Namb Confirmation Date	  */
+	public Timestamp getNamb_Confirmation_Date();
+
+    /** Column name Trade_Test_Number */
+    public static final String COLUMNNAME_Trade_Test_Number = "Trade_Test_Number";
+
+	/** Set Trade Test Number	  */
+	public void setTrade_Test_Number (int Trade_Test_Number);
+
+	/** Get Trade Test Number	  */
+	public int getTrade_Test_Number();
+
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
 
@@ -119,6 +146,24 @@ public interface I_ZZLearnerQCTOArtisansAssessments
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
+
+    /** Column name ZZAssessmentStatus */
+    public static final String COLUMNNAME_ZZAssessmentStatus = "ZZAssessmentStatus";
+
+	/** Set Assessment Status	  */
+	public void setZZAssessmentStatus (String ZZAssessmentStatus);
+
+	/** Get Assessment Status	  */
+	public String getZZAssessmentStatus();
+
+    /** Column name ZZDateAssessmentCaptured */
+    public static final String COLUMNNAME_ZZDateAssessmentCaptured = "ZZDateAssessmentCaptured";
+
+	/** Set Date Assessment Captured	  */
+	public void setZZDateAssessmentCaptured (Timestamp ZZDateAssessmentCaptured);
+
+	/** Get Date Assessment Captured	  */
+	public Timestamp getZZDateAssessmentCaptured();
 
     /** Column name ZZLearnerQCTOArtisansAssessments_ID */
     public static final String COLUMNNAME_ZZLearnerQCTOArtisansAssessments_ID = "ZZLearnerQCTOArtisansAssessments_ID";
@@ -159,6 +204,15 @@ public interface I_ZZLearnerQCTOArtisansAssessments
 	public int getZZQctoModule_ID();
 
 	public I_ZZQctoModule getZZQctoModule() throws RuntimeException;
+
+    /** Column name ZZTradeTestDate */
+    public static final String COLUMNNAME_ZZTradeTestDate = "ZZTradeTestDate";
+
+	/** Set Trade Test Date	  */
+	public void setZZTradeTestDate (Timestamp ZZTradeTestDate);
+
+	/** Get Trade Test Date	  */
+	public Timestamp getZZTradeTestDate();
 
     /** Column name id */
     public static final String COLUMNNAME_id = "id";

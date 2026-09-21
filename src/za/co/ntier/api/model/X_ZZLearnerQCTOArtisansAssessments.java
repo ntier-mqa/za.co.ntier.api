@@ -18,6 +18,7 @@
 package za.co.ntier.api.model;
 
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
 
@@ -31,7 +32,7 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260814L;
+	private static final long serialVersionUID = 20260921L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOArtisansAssessments (Properties ctx, int ZZLearnerQCTOArtisansAssessments_ID, String trxName)
@@ -39,6 +40,8 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
       super (ctx, ZZLearnerQCTOArtisansAssessments_ID, trxName);
       /** if (ZZLearnerQCTOArtisansAssessments_ID == 0)
         {
+			setNamb_Confirmation (false);
+// N
 			setZZLearnerQCTOArtisansAssessments_ID (0);
         } */
     }
@@ -49,6 +52,8 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
       super (ctx, ZZLearnerQCTOArtisansAssessments_ID, trxName, virtualColumns);
       /** if (ZZLearnerQCTOArtisansAssessments_ID == 0)
         {
+			setNamb_Confirmation (false);
+// N
 			setZZLearnerQCTOArtisansAssessments_ID (0);
         } */
     }
@@ -59,6 +64,8 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
       super (ctx, ZZLearnerQCTOArtisansAssessments_UU, trxName);
       /** if (ZZLearnerQCTOArtisansAssessments_UU == null)
         {
+			setNamb_Confirmation (false);
+// N
 			setZZLearnerQCTOArtisansAssessments_ID (0);
         } */
     }
@@ -69,6 +76,8 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
       super (ctx, ZZLearnerQCTOArtisansAssessments_UU, trxName, virtualColumns);
       /** if (ZZLearnerQCTOArtisansAssessments_UU == null)
         {
+			setNamb_Confirmation (false);
+// N
 			setZZLearnerQCTOArtisansAssessments_ID (0);
         } */
     }
@@ -126,6 +135,96 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Namb Confirmation.
+		@param Namb_Confirmation Namb Confirmation
+	*/
+	public void setNamb_Confirmation (boolean Namb_Confirmation)
+	{
+		set_Value (COLUMNNAME_Namb_Confirmation, Boolean.valueOf(Namb_Confirmation));
+	}
+
+	/** Get Namb Confirmation.
+		@return Namb Confirmation	  */
+	public boolean isNamb_Confirmation()
+	{
+		Object oo = get_Value(COLUMNNAME_Namb_Confirmation);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Namb Confirmation Date.
+		@param Namb_Confirmation_Date Namb Confirmation Date
+	*/
+	public void setNamb_Confirmation_Date (Timestamp Namb_Confirmation_Date)
+	{
+		set_Value (COLUMNNAME_Namb_Confirmation_Date, Namb_Confirmation_Date);
+	}
+
+	/** Get Namb Confirmation Date.
+		@return Namb Confirmation Date	  */
+	public Timestamp getNamb_Confirmation_Date()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_Namb_Confirmation_Date);
+	}
+
+	/** Set Trade Test Number.
+		@param Trade_Test_Number Trade Test Number
+	*/
+	public void setTrade_Test_Number (int Trade_Test_Number)
+	{
+		set_Value (COLUMNNAME_Trade_Test_Number, Integer.valueOf(Trade_Test_Number));
+	}
+
+	/** Get Trade Test Number.
+		@return Trade Test Number	  */
+	public int getTrade_Test_Number()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_Trade_Test_Number);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Competent = CO */
+	public static final String ZZASSESSMENTSTATUS_Competent = "CO";
+	/** Not Competent = NC */
+	public static final String ZZASSESSMENTSTATUS_NotCompetent = "NC";
+	/** Set Assessment Status.
+		@param ZZAssessmentStatus Assessment Status
+	*/
+	public void setZZAssessmentStatus (String ZZAssessmentStatus)
+	{
+
+		set_Value (COLUMNNAME_ZZAssessmentStatus, ZZAssessmentStatus);
+	}
+
+	/** Get Assessment Status.
+		@return Assessment Status	  */
+	public String getZZAssessmentStatus()
+	{
+		return (String)get_Value(COLUMNNAME_ZZAssessmentStatus);
+	}
+
+	/** Set Date Assessment Captured.
+		@param ZZDateAssessmentCaptured Date Assessment Captured
+	*/
+	public void setZZDateAssessmentCaptured (Timestamp ZZDateAssessmentCaptured)
+	{
+		set_Value (COLUMNNAME_ZZDateAssessmentCaptured, ZZDateAssessmentCaptured);
+	}
+
+	/** Get Date Assessment Captured.
+		@return Date Assessment Captured	  */
+	public Timestamp getZZDateAssessmentCaptured()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZDateAssessmentCaptured);
 	}
 
 	/** Set ZZLearnerQCTOArtisansAssessments.
@@ -216,6 +315,21 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Trade Test Date.
+		@param ZZTradeTestDate Trade Test Date
+	*/
+	public void setZZTradeTestDate (Timestamp ZZTradeTestDate)
+	{
+		set_Value (COLUMNNAME_ZZTradeTestDate, ZZTradeTestDate);
+	}
+
+	/** Get Trade Test Date.
+		@return Trade Test Date	  */
+	public Timestamp getZZTradeTestDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZTradeTestDate);
 	}
 
 	/** Set id.
