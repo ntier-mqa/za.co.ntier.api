@@ -450,6 +450,21 @@ public interface I_ZZLearnerLearnership
 	  */
 	public String getZZIsTermsEmployment();
 
+    /** Column name ZZIssueUser_ID */
+    public static final String COLUMNNAME_ZZIssueUser_ID = "ZZIssueUser_ID";
+
+	/** Set Issue User.
+	  * User who issued the document
+	  */
+	public void setZZIssueUser_ID (int ZZIssueUser_ID);
+
+	/** Get Issue User.
+	  * User who issued the document
+	  */
+	public int getZZIssueUser_ID();
+
+	public org.compiere.model.I_AD_User getZZIssueUser() throws RuntimeException;
+
     /** Column name ZZLearnerEmployed */
     public static final String COLUMNNAME_ZZLearnerEmployed = "ZZLearnerEmployed";
 

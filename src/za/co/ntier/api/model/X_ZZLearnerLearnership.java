@@ -765,6 +765,34 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 		return (String)get_Value(COLUMNNAME_ZZIsTermsEmployment);
 	}
 
+	public org.compiere.model.I_AD_User getZZIssueUser() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZIssueUser_ID(), get_TrxName());
+	}
+
+	/** Set Issue User.
+		@param ZZIssueUser_ID User who issued the document
+	*/
+	public void setZZIssueUser_ID (int ZZIssueUser_ID)
+	{
+		if (ZZIssueUser_ID < 1)
+			set_Value (COLUMNNAME_ZZIssueUser_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZIssueUser_ID, Integer.valueOf(ZZIssueUser_ID));
+	}
+
+	/** Get Issue User.
+		@return User who issued the document
+	  */
+	public int getZZIssueUser_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZIssueUser_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Learner Employed.
 		@param ZZLearnerEmployed Learner Employed
 	*/
