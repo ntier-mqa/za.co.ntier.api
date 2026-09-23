@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOArtisans extends PO implements I_ZZLearnerQCTOArtisa
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260921L;
+	private static final long serialVersionUID = 20260923L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOArtisans (Properties ctx, int ZZLearnerQCTOArtisans_ID, String trxName)
@@ -655,6 +655,21 @@ public class X_ZZLearnerQCTOArtisans extends PO implements I_ZZLearnerQCTOArtisa
 	public String getZZAgreementReferenceNumber()
 	{
 		return (String)get_Value(COLUMNNAME_ZZAgreementReferenceNumber);
+	}
+
+	/** Set Approval Date.
+		@param ZZApprovalDate Approval Date
+	*/
+	public void setZZApprovalDate (Timestamp ZZApprovalDate)
+	{
+		set_Value (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
+	}
+
+	/** Get Approval Date.
+		@return Approval Date	  */
+	public Timestamp getZZApprovalDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);
 	}
 
 	/** Artisan :Apprenticeship section 13 = Artisan :Apprenticeship section 13 */

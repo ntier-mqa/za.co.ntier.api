@@ -120,6 +120,15 @@ public interface I_ZZLearnerQCTOSkillsProgramme
 
 	public I_ZZAssessmentCentre getZZAC() throws RuntimeException;
 
+    /** Column name ZZApprovalDate */
+    public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
+
+	/** Set Approval Date	  */
+	public void setZZApprovalDate (Timestamp ZZApprovalDate);
+
+	/** Get Approval Date	  */
+	public Timestamp getZZApprovalDate();
+
     /** Column name ZZCertificateCreatedBy */
     public static final String COLUMNNAME_ZZCertificateCreatedBy = "ZZCertificateCreatedBy";
 
@@ -184,6 +193,15 @@ public interface I_ZZLearnerQCTOSkillsProgramme
 
 	/** Get Contract Number	  */
 	public String getZZContractNumber();
+
+    /** Column name ZZCredits */
+    public static final String COLUMNNAME_ZZCredits = "ZZCredits";
+
+	/** Set Credits	  */
+	public void setZZCredits (int ZZCredits);
+
+	/** Get Credits	  */
+	public int getZZCredits();
 
     /** Column name ZZDateCertificateCreated */
     public static final String COLUMNNAME_ZZDateCertificateCreated = "ZZDateCertificateCreated";
@@ -615,4 +633,13 @@ public interface I_ZZLearnerQCTOSkillsProgramme
 	public int getZZ_SDP_ID();
 
 	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException;
+
+    /** Column name total_achieved_credits */
+    public static final String COLUMNNAME_total_achieved_credits = "total_achieved_credits";
+
+	/** Set Total Achieved Credits	  */
+	public void settotal_achieved_credits (int total_achieved_credits);
+
+	/** Get Total Achieved Credits	  */
+	public int gettotal_achieved_credits();
 }

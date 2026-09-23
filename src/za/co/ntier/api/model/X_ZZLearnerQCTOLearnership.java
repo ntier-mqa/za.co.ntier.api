@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260909L;
+	private static final long serialVersionUID = 20260923L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOLearnership (Properties ctx, int ZZLearnerQCTOLearnership_ID, String trxName)
@@ -587,6 +587,21 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 		return (String)get_Value(COLUMNNAME_ZZAmountSpend);
 	}
 
+	/** Set Approval Date.
+		@param ZZApprovalDate Approval Date
+	*/
+	public void setZZApprovalDate (Timestamp ZZApprovalDate)
+	{
+		set_Value (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
+	}
+
+	/** Get Approval Date.
+		@return Approval Date	  */
+	public Timestamp getZZApprovalDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);
+	}
+
 	/** ZZBelongToFasset AD_Reference_ID=319 */
 	public static final int ZZBELONGTOFASSET_AD_Reference_ID=319;
 	/** No = N */
@@ -722,6 +737,24 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	public String getZZContractNumber()
 	{
 		return (String)get_Value(COLUMNNAME_ZZContractNumber);
+	}
+
+	/** Set Credits.
+		@param ZZCredits Credits
+	*/
+	public void setZZCredits (int ZZCredits)
+	{
+		set_Value (COLUMNNAME_ZZCredits, Integer.valueOf(ZZCredits));
+	}
+
+	/** Get Credits.
+		@return Credits	  */
+	public int getZZCredits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZCredits);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Certificate Created.
@@ -1632,6 +1665,8 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	public static final String ZZ_DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
 	/** Recommended By Snr Mgr QA = R7 */
 	public static final String ZZ_DOCSTATUS_RecommendedBySnrMgrQA = "R7";
+	/** Recommended By CRO = R8 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCRO = "R8";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
@@ -1729,6 +1764,23 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	public int getZZ_SDP_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SDP_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Total Achieved Credits.
+		@param total_achieved_credits Total Achieved Credits
+	*/
+	public void settotal_achieved_credits (int total_achieved_credits)
+	{
+		throw new IllegalArgumentException ("total_achieved_credits is virtual column");	}
+
+	/** Get Total Achieved Credits.
+		@return Total Achieved Credits	  */
+	public int gettotal_achieved_credits()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_total_achieved_credits);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

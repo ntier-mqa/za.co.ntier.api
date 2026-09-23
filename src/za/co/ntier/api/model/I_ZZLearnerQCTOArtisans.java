@@ -456,6 +456,15 @@ Contract&quot;
 	/** Get Agreement Reference Number	  */
 	public String getZZAgreementReferenceNumber();
 
+    /** Column name ZZApprovalDate */
+    public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
+
+	/** Set Approval Date	  */
+	public void setZZApprovalDate (Timestamp ZZApprovalDate);
+
+	/** Get Approval Date	  */
+	public Timestamp getZZApprovalDate();
+
     /** Column name ZZArtisanProject */
     public static final String COLUMNNAME_ZZArtisanProject = "ZZArtisanProject";
 

@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260917L;
+	private static final long serialVersionUID = 20260923L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgramme (Properties ctx, int ZZLearnerSkillsProgramme_ID, String trxName)
@@ -138,6 +138,21 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	public String getZZAgreementReferenceNumber()
 	{
 		return (String)get_Value(COLUMNNAME_ZZAgreementReferenceNumber);
+	}
+
+	/** Set Approval Date.
+		@param ZZApprovalDate Approval Date
+	*/
+	public void setZZApprovalDate (Timestamp ZZApprovalDate)
+	{
+		set_Value (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
+	}
+
+	/** Get Approval Date.
+		@return Approval Date	  */
+	public Timestamp getZZApprovalDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);
 	}
 
 	/** Set Certificate Number.
@@ -469,6 +484,8 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	public static final String ZZ_DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
 	/** Recommended By Snr Mgr QA = R7 */
 	public static final String ZZ_DOCSTATUS_RecommendedBySnrMgrQA = "R7";
+	/** Recommended By CRO = R8 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCRO = "R8";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */

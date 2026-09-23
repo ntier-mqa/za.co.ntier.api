@@ -32,7 +32,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260917L;
+	private static final long serialVersionUID = 20260923L;
 
     /** Standard Constructor */
     public X_ZZLearnerLearnership (Properties ctx, int ZZLearnerLearnership_ID, String trxName)
@@ -1422,6 +1422,8 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public static final String ZZ_DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
 	/** Recommended By Snr Mgr QA = R7 */
 	public static final String ZZ_DOCSTATUS_RecommendedBySnrMgrQA = "R7";
+	/** Recommended By CRO = R8 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCRO = "R8";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
