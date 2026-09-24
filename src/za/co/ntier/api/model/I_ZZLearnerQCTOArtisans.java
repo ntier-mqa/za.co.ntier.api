@@ -956,6 +956,15 @@ Contract&quot;
 	/** Get Lead Workplace Approval Skills Levy	  */
 	public String getZZWALevy();
 
+    /** Column name ZZ_DocStatus */
+    public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
+
+	/** Set Document Status	  */
+	public void setZZ_DocStatus (String ZZ_DocStatus);
+
+	/** Get Document Status	  */
+	public String getZZ_DocStatus();
+
     /** Column name ZZ_Employer_ID */
     public static final String COLUMNNAME_ZZ_Employer_ID = "ZZ_Employer_ID";
 

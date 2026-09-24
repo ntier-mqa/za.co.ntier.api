@@ -34,7 +34,7 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260911L;
+	private static final long serialVersionUID = 20260924L;
 
     /** Standard Constructor */
     public X_ZZCompletedAssessments_v (Properties ctx, int ZZCompletedAssessments_v_ID, String trxName)
@@ -227,6 +227,22 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 		return (String)get_Value(COLUMNNAME_Surname);
 	}
 
+	/** Set ZZApprovalDate.
+		@param ZZApprovalDate ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	*/
+	public void setZZApprovalDate (Timestamp ZZApprovalDate)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
+	}
+
+	/** Get ZZApprovalDate.
+		@return ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
+	public Timestamp getZZApprovalDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);
+	}
+
 	/** Set Certificate Number.
 		@param ZZCertificateNumber Certificate Number
 	*/
@@ -345,6 +361,48 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	public int getZZLearnerLearnership_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLearnerLearnership_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set ZZLearnerQCTOArtisansAssessments.
+		@param ZZLearnerQCTOArtisansAssessments_ID ZZLearnerQCTOArtisansAssessments
+	*/
+	public void setZZLearnerQCTOArtisansAssessments_ID (int ZZLearnerQCTOArtisansAssessments_ID)
+	{
+		if (ZZLearnerQCTOArtisansAssessments_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLearnerQCTOArtisansAssessments_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLearnerQCTOArtisansAssessments_ID, Integer.valueOf(ZZLearnerQCTOArtisansAssessments_ID));
+	}
+
+	/** Get ZZLearnerQCTOArtisansAssessments.
+		@return ZZLearnerQCTOArtisansAssessments	  */
+	public int getZZLearnerQCTOArtisansAssessments_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLearnerQCTOArtisansAssessments_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Learner QCTO Artisans.
+		@param ZZLearnerQCTOArtisans_ID Learner QCTO Artisans
+	*/
+	public void setZZLearnerQCTOArtisans_ID (int ZZLearnerQCTOArtisans_ID)
+	{
+		if (ZZLearnerQCTOArtisans_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLearnerQCTOArtisans_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLearnerQCTOArtisans_ID, Integer.valueOf(ZZLearnerQCTOArtisans_ID));
+	}
+
+	/** Get Learner QCTO Artisans.
+		@return Learner QCTO Artisans	  */
+	public int getZZLearnerQCTOArtisans_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLearnerQCTOArtisans_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -626,6 +684,8 @@ public class X_ZZCompletedAssessments_v extends PO implements I_ZZCompletedAsses
 	public static final String ZZ_DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
 	/** Recommended By Snr Mgr QA = R7 */
 	public static final String ZZ_DOCSTATUS_RecommendedBySnrMgrQA = "R7";
+	/** Recommended By CRO = R8 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCRO = "R8";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */

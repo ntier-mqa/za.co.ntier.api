@@ -177,6 +177,19 @@ public interface I_ZZCompletedAssessments_v
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZApprovalDate */
+    public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
+
+	/** Set ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
+	public void setZZApprovalDate (Timestamp ZZApprovalDate);
+
+	/** Get ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
+	public Timestamp getZZApprovalDate();
+
     /** Column name ZZCertificateNumber */
     public static final String COLUMNNAME_ZZCertificateNumber = "ZZCertificateNumber";
 
@@ -239,6 +252,24 @@ public interface I_ZZCompletedAssessments_v
 
 	/** Get Learner Learnership	  */
 	public int getZZLearnerLearnership_ID();
+
+    /** Column name ZZLearnerQCTOArtisansAssessments_ID */
+    public static final String COLUMNNAME_ZZLearnerQCTOArtisansAssessments_ID = "ZZLearnerQCTOArtisansAssessments_ID";
+
+	/** Set ZZLearnerQCTOArtisansAssessments	  */
+	public void setZZLearnerQCTOArtisansAssessments_ID (int ZZLearnerQCTOArtisansAssessments_ID);
+
+	/** Get ZZLearnerQCTOArtisansAssessments	  */
+	public int getZZLearnerQCTOArtisansAssessments_ID();
+
+    /** Column name ZZLearnerQCTOArtisans_ID */
+    public static final String COLUMNNAME_ZZLearnerQCTOArtisans_ID = "ZZLearnerQCTOArtisans_ID";
+
+	/** Set Learner QCTO Artisans	  */
+	public void setZZLearnerQCTOArtisans_ID (int ZZLearnerQCTOArtisans_ID);
+
+	/** Get Learner QCTO Artisans	  */
+	public int getZZLearnerQCTOArtisans_ID();
 
     /** Column name ZZLearnerQCTOLearnership_ID */
     public static final String COLUMNNAME_ZZLearnerQCTOLearnership_ID = "ZZLearnerQCTOLearnership_ID";
