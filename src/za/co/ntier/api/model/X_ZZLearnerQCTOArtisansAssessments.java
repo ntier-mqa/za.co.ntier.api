@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260921L;
+	private static final long serialVersionUID = 20260925L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOArtisansAssessments (Properties ctx, int ZZLearnerQCTOArtisansAssessments_ID, String trxName)
@@ -177,19 +177,16 @@ public class X_ZZLearnerQCTOArtisansAssessments extends PO implements I_ZZLearne
 	/** Set Trade Test Number.
 		@param Trade_Test_Number Trade Test Number
 	*/
-	public void setTrade_Test_Number (int Trade_Test_Number)
+	public void setTrade_Test_Number (String Trade_Test_Number)
 	{
-		set_Value (COLUMNNAME_Trade_Test_Number, Integer.valueOf(Trade_Test_Number));
+		set_Value (COLUMNNAME_Trade_Test_Number, Trade_Test_Number);
 	}
 
 	/** Get Trade Test Number.
 		@return Trade Test Number	  */
-	public int getTrade_Test_Number()
+	public String getTrade_Test_Number()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_Trade_Test_Number);
-		if (ii == null)
-			 return 0;
-		return ii.intValue();
+		return (String)get_Value(COLUMNNAME_Trade_Test_Number);
 	}
 
 	/** Competent = CO */

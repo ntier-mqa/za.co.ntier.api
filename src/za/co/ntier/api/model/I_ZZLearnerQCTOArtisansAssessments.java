@@ -126,10 +126,10 @@ public interface I_ZZLearnerQCTOArtisansAssessments
     public static final String COLUMNNAME_Trade_Test_Number = "Trade_Test_Number";
 
 	/** Set Trade Test Number	  */
-	public void setTrade_Test_Number (int Trade_Test_Number);
+	public void setTrade_Test_Number (String Trade_Test_Number);
 
 	/** Get Trade Test Number	  */
-	public int getTrade_Test_Number();
+	public String getTrade_Test_Number();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
