@@ -32,7 +32,7 @@ public interface I_ZZLearnerSkillsProgramme
     /** TableName=ZZLearnerSkillsProgramme */
     public static final String Table_Name = "ZZLearnerSkillsProgramme";
 
-    /** AD_Table_ID=1000373 */
+    /** AD_Table_ID=1000638 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -132,10 +132,14 @@ public interface I_ZZLearnerSkillsProgramme
     /** Column name ZZApprovalDate */
     public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
 
-	/** Set Approval Date	  */
+	/** Set ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public void setZZApprovalDate (Timestamp ZZApprovalDate);
 
-	/** Get Approval Date	  */
+	/** Get ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public Timestamp getZZApprovalDate();
 
     /** Column name ZZCertificateNumber */
@@ -284,6 +288,17 @@ public interface I_ZZLearnerSkillsProgramme
 	public int getZZWA_ID();
 
 	public I_ZZWorkplaceApproval getZZWA() throws RuntimeException;
+
+    /** Column name ZZ_ApprovedBy_ID */
+    public static final String COLUMNNAME_ZZ_ApprovedBy_ID = "ZZ_ApprovedBy_ID";
+
+	/** Set Approved By	  */
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID);
+
+	/** Get Approved By	  */
+	public int getZZ_ApprovedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException;
 
     /** Column name ZZ_DocStatus */
     public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";

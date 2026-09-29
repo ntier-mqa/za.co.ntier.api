@@ -773,6 +773,17 @@ public interface I_ZZLearnerLearnership
 	  */
 	public boolean isZZWPAgreement();
 
+    /** Column name ZZ_ApprovedBy_ID */
+    public static final String COLUMNNAME_ZZ_ApprovedBy_ID = "ZZ_ApprovedBy_ID";
+
+	/** Set Approved By	  */
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID);
+
+	/** Get Approved By	  */
+	public int getZZ_ApprovedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException;
+
     /** Column name ZZ_DocStatus */
     public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
 

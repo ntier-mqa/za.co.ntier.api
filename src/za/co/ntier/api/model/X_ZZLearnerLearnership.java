@@ -32,7 +32,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260923L;
+	private static final long serialVersionUID = 20260929L;
 
     /** Standard Constructor */
     public X_ZZLearnerLearnership (Properties ctx, int ZZLearnerLearnership_ID, String trxName)
@@ -1382,6 +1382,33 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 		return false;
 	}
 
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_ApprovedBy_ID(), get_TrxName());
+	}
+
+	/** Set Approved By.
+		@param ZZ_ApprovedBy_ID Approved By
+	*/
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID)
+	{
+		if (ZZ_ApprovedBy_ID < 1)
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, Integer.valueOf(ZZ_ApprovedBy_ID));
+	}
+
+	/** Get Approved By.
+		@return Approved By	  */
+	public int getZZ_ApprovedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_ApprovedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
@@ -1460,6 +1487,8 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
 	/** Recommended for Evaluation = RE */
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
+	/** Submitted to Snr Admin Finance = SA */
+	public static final String ZZ_DOCSTATUS_SubmittedToSnrAdminFinance = "SA";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */

@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260923L;
+	private static final long serialVersionUID = 20260929L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgramme (Properties ctx, int ZZLearnerSkillsProgramme_ID, String trxName)
@@ -140,16 +140,17 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 		return (String)get_Value(COLUMNNAME_ZZAgreementReferenceNumber);
 	}
 
-	/** Set Approval Date.
-		@param ZZApprovalDate Approval Date
+	/** Set ZZApprovalDate.
+		@param ZZApprovalDate ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
 	*/
 	public void setZZApprovalDate (Timestamp ZZApprovalDate)
 	{
 		set_Value (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
 	}
 
-	/** Get Approval Date.
-		@return Approval Date	  */
+	/** Get ZZApprovalDate.
+		@return ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public Timestamp getZZApprovalDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);
@@ -444,6 +445,33 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 		return ii.intValue();
 	}
 
+	public org.compiere.model.I_AD_User getZZ_ApprovedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_ApprovedBy_ID(), get_TrxName());
+	}
+
+	/** Set Approved By.
+		@param ZZ_ApprovedBy_ID Approved By
+	*/
+	public void setZZ_ApprovedBy_ID (int ZZ_ApprovedBy_ID)
+	{
+		if (ZZ_ApprovedBy_ID < 1)
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_ApprovedBy_ID, Integer.valueOf(ZZ_ApprovedBy_ID));
+	}
+
+	/** Get Approved By.
+		@return Approved By	  */
+	public int getZZ_ApprovedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_ApprovedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
@@ -522,6 +550,8 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
 	/** Recommended for Evaluation = RE */
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
+	/** Submitted to Snr Admin Finance = SA */
+	public static final String ZZ_DOCSTATUS_SubmittedToSnrAdminFinance = "SA";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
