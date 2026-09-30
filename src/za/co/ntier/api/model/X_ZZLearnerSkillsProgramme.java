@@ -32,7 +32,7 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260929L;
+	private static final long serialVersionUID = 20260930L;
 
     /** Standard Constructor */
     public X_ZZLearnerSkillsProgramme (Properties ctx, int ZZLearnerSkillsProgramme_ID, String trxName)
@@ -40,6 +40,8 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
       super (ctx, ZZLearnerSkillsProgramme_ID, trxName);
       /** if (ZZLearnerSkillsProgramme_ID == 0)
         {
+			setIsPrinted (false);
+// N
         } */
     }
 
@@ -49,6 +51,8 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
       super (ctx, ZZLearnerSkillsProgramme_ID, trxName, virtualColumns);
       /** if (ZZLearnerSkillsProgramme_ID == 0)
         {
+			setIsPrinted (false);
+// N
         } */
     }
 
@@ -58,6 +62,8 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
       super (ctx, ZZLearnerSkillsProgramme_UU, trxName);
       /** if (ZZLearnerSkillsProgramme_UU == null)
         {
+			setIsPrinted (false);
+// N
         } */
     }
 
@@ -67,6 +73,8 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
       super (ctx, ZZLearnerSkillsProgramme_UU, trxName, virtualColumns);
       /** if (ZZLearnerSkillsProgramme_UU == null)
         {
+			setIsPrinted (false);
+// N
         } */
     }
 
@@ -97,6 +105,29 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
         .append(get_ID()).append("]");
       return sb.toString();
     }
+
+	/** Set Printed.
+		@param IsPrinted Indicates if this document / line is printed
+	*/
+	public void setIsPrinted (boolean IsPrinted)
+	{
+		set_ValueNoCheck (COLUMNNAME_IsPrinted, Boolean.valueOf(IsPrinted));
+	}
+
+	/** Get Printed.
+		@return Indicates if this document / line is printed
+	  */
+	public boolean isPrinted()
+	{
+		Object oo = get_Value(COLUMNNAME_IsPrinted);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
 
 	public I_ZZAssessmentCentre getZZAC() throws RuntimeException
 	{
@@ -140,17 +171,16 @@ public class X_ZZLearnerSkillsProgramme extends PO implements I_ZZLearnerSkillsP
 		return (String)get_Value(COLUMNNAME_ZZAgreementReferenceNumber);
 	}
 
-	/** Set ZZApprovalDate.
-		@param ZZApprovalDate ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	/** Set Approval Date.
+		@param ZZApprovalDate Approval Date
 	*/
 	public void setZZApprovalDate (Timestamp ZZApprovalDate)
 	{
 		set_Value (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
 	}
 
-	/** Get ZZApprovalDate.
-		@return ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
-	  */
+	/** Get Approval Date.
+		@return Approval Date	  */
 	public Timestamp getZZApprovalDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);

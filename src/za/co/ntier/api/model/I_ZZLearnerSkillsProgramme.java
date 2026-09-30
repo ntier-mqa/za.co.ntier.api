@@ -32,7 +32,7 @@ public interface I_ZZLearnerSkillsProgramme
     /** TableName=ZZLearnerSkillsProgramme */
     public static final String Table_Name = "ZZLearnerSkillsProgramme";
 
-    /** AD_Table_ID=1000638 */
+    /** AD_Table_ID=1000373 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -93,6 +93,19 @@ public interface I_ZZLearnerSkillsProgramme
 	  */
 	public boolean isActive();
 
+    /** Column name IsPrinted */
+    public static final String COLUMNNAME_IsPrinted = "IsPrinted";
+
+	/** Set Printed.
+	  * Indicates if this document / line is printed
+	  */
+	public void setIsPrinted (boolean IsPrinted);
+
+	/** Get Printed.
+	  * Indicates if this document / line is printed
+	  */
+	public boolean isPrinted();
+
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
 
@@ -132,14 +145,10 @@ public interface I_ZZLearnerSkillsProgramme
     /** Column name ZZApprovalDate */
     public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
 
-	/** Set ZZApprovalDate.
-	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
-	  */
+	/** Set Approval Date	  */
 	public void setZZApprovalDate (Timestamp ZZApprovalDate);
 
-	/** Get ZZApprovalDate.
-	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
-	  */
+	/** Get Approval Date	  */
 	public Timestamp getZZApprovalDate();
 
     /** Column name ZZCertificateNumber */

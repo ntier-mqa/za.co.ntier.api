@@ -32,7 +32,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260929L;
+	private static final long serialVersionUID = 20260930L;
 
     /** Standard Constructor */
     public X_ZZLearnerLearnership (Properties ctx, int ZZLearnerLearnership_ID, String trxName)
@@ -40,6 +40,8 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
       super (ctx, ZZLearnerLearnership_ID, trxName);
       /** if (ZZLearnerLearnership_ID == 0)
         {
+			setIsPrinted (false);
+// N
 			setZZEmpContract (false);
 // N
 			setZZEmpContractCopy (false);
@@ -58,6 +60,8 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
       super (ctx, ZZLearnerLearnership_ID, trxName, virtualColumns);
       /** if (ZZLearnerLearnership_ID == 0)
         {
+			setIsPrinted (false);
+// N
 			setZZEmpContract (false);
 // N
 			setZZEmpContractCopy (false);
@@ -76,6 +80,8 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
       super (ctx, ZZLearnerLearnership_UU, trxName);
       /** if (ZZLearnerLearnership_UU == null)
         {
+			setIsPrinted (false);
+// N
 			setZZEmpContract (false);
 // N
 			setZZEmpContractCopy (false);
@@ -94,6 +100,8 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
       super (ctx, ZZLearnerLearnership_UU, trxName, virtualColumns);
       /** if (ZZLearnerLearnership_UU == null)
         {
+			setIsPrinted (false);
+// N
 			setZZEmpContract (false);
 // N
 			setZZEmpContractCopy (false);
@@ -133,6 +141,29 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
         .append(get_ID()).append("]");
       return sb.toString();
     }
+
+	/** Set Printed.
+		@param IsPrinted Indicates if this document / line is printed
+	*/
+	public void setIsPrinted (boolean IsPrinted)
+	{
+		set_ValueNoCheck (COLUMNNAME_IsPrinted, Boolean.valueOf(IsPrinted));
+	}
+
+	/** Get Printed.
+		@return Indicates if this document / line is printed
+	  */
+	public boolean isPrinted()
+	{
+		Object oo = get_Value(COLUMNNAME_IsPrinted);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
 
 	/** Set Agreement Reference Number.
 		@param ZZAgreementReferenceNumber Agreement Reference Number

@@ -131,6 +131,15 @@ public interface I_ZZ_CertificateReprints
 
 	public I_ZZLearnerSkillsProgramme getZZLearnerSkillsProgramme() throws RuntimeException;
 
+    /** Column name ZZReIssueReason */
+    public static final String COLUMNNAME_ZZReIssueReason = "ZZReIssueReason";
+
+	/** Set Reason for Re-Issue	  */
+	public void setZZReIssueReason (String ZZReIssueReason);
+
+	/** Get Reason for Re-Issue	  */
+	public String getZZReIssueReason();
+
     /** Column name ZZReprintDate */
     public static final String COLUMNNAME_ZZReprintDate = "ZZReprintDate";
 
@@ -168,4 +177,15 @@ public interface I_ZZ_CertificateReprints
 
 	/** Get ZZ_CertificateReprints_UU	  */
 	public String getZZ_CertificateReprints_UU();
+
+    /** Column name ZZ_RequestedBy_ID */
+    public static final String COLUMNNAME_ZZ_RequestedBy_ID = "ZZ_RequestedBy_ID";
+
+	/** Set Requested By	  */
+	public void setZZ_RequestedBy_ID (int ZZ_RequestedBy_ID);
+
+	/** Get Requested By	  */
+	public int getZZ_RequestedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_RequestedBy() throws RuntimeException;
 }

@@ -33,7 +33,7 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260928L;
+	private static final long serialVersionUID = 20260930L;
 
     /** Standard Constructor */
     public X_ZZ_CertificateReprints (Properties ctx, int ZZ_CertificateReprints_ID, String trxName)
@@ -157,6 +157,21 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
 		return ii.intValue();
 	}
 
+	/** Set Reason for Re-Issue.
+		@param ZZReIssueReason Reason for Re-Issue
+	*/
+	public void setZZReIssueReason (String ZZReIssueReason)
+	{
+		set_Value (COLUMNNAME_ZZReIssueReason, ZZReIssueReason);
+	}
+
+	/** Get Reason for Re-Issue.
+		@return Reason for Re-Issue	  */
+	public String getZZReIssueReason()
+	{
+		return (String)get_Value(COLUMNNAME_ZZReIssueReason);
+	}
+
 	/** Set Reprint Date.
 		@param ZZReprintDate Reprint Date
 	*/
@@ -238,5 +253,32 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
 	public String getZZ_CertificateReprints_UU()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_CertificateReprints_UU);
+	}
+
+	public org.compiere.model.I_AD_User getZZ_RequestedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_RequestedBy_ID(), get_TrxName());
+	}
+
+	/** Set Requested By.
+		@param ZZ_RequestedBy_ID Requested By
+	*/
+	public void setZZ_RequestedBy_ID (int ZZ_RequestedBy_ID)
+	{
+		if (ZZ_RequestedBy_ID < 1)
+			set_Value (COLUMNNAME_ZZ_RequestedBy_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_RequestedBy_ID, Integer.valueOf(ZZ_RequestedBy_ID));
+	}
+
+	/** Get Requested By.
+		@return Requested By	  */
+	public int getZZ_RequestedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_RequestedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 }

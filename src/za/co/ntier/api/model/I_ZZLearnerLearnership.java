@@ -93,6 +93,19 @@ public interface I_ZZLearnerLearnership
 	  */
 	public boolean isActive();
 
+    /** Column name IsPrinted */
+    public static final String COLUMNNAME_IsPrinted = "IsPrinted";
+
+	/** Set Printed.
+	  * Indicates if this document / line is printed
+	  */
+	public void setIsPrinted (boolean IsPrinted);
+
+	/** Get Printed.
+	  * Indicates if this document / line is printed
+	  */
+	public boolean isPrinted();
+
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
 
