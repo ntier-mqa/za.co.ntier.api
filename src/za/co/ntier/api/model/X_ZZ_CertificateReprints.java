@@ -33,7 +33,7 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260930L;
+	private static final long serialVersionUID = 20261001L;
 
     /** Standard Constructor */
     public X_ZZ_CertificateReprints (Properties ctx, int ZZ_CertificateReprints_ID, String trxName)
@@ -41,6 +41,10 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
       super (ctx, ZZ_CertificateReprints_ID, trxName);
       /** if (ZZ_CertificateReprints_ID == 0)
         {
+			setIsAffidavitAttached (false);
+// N
+			setIsCertifiedIDAttached (false);
+// N
 			setZZ_CertificateReprints_ID (0);
         } */
     }
@@ -51,6 +55,10 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
       super (ctx, ZZ_CertificateReprints_ID, trxName, virtualColumns);
       /** if (ZZ_CertificateReprints_ID == 0)
         {
+			setIsAffidavitAttached (false);
+// N
+			setIsCertifiedIDAttached (false);
+// N
 			setZZ_CertificateReprints_ID (0);
         } */
     }
@@ -61,6 +69,10 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
       super (ctx, ZZ_CertificateReprints_UU, trxName);
       /** if (ZZ_CertificateReprints_UU == null)
         {
+			setIsAffidavitAttached (false);
+// N
+			setIsCertifiedIDAttached (false);
+// N
 			setZZ_CertificateReprints_ID (0);
         } */
     }
@@ -71,6 +83,10 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
       super (ctx, ZZ_CertificateReprints_UU, trxName, virtualColumns);
       /** if (ZZ_CertificateReprints_UU == null)
         {
+			setIsAffidavitAttached (false);
+// N
+			setIsCertifiedIDAttached (false);
+// N
 			setZZ_CertificateReprints_ID (0);
         } */
     }
@@ -102,6 +118,50 @@ public class X_ZZ_CertificateReprints extends PO implements I_ZZ_CertificateRepr
         .append(get_ID()).append("]");
       return sb.toString();
     }
+
+	/** Set Affidavit Attached.
+		@param IsAffidavitAttached Affidavit Attached
+	*/
+	public void setIsAffidavitAttached (boolean IsAffidavitAttached)
+	{
+		set_Value (COLUMNNAME_IsAffidavitAttached, Boolean.valueOf(IsAffidavitAttached));
+	}
+
+	/** Get Affidavit Attached.
+		@return Affidavit Attached	  */
+	public boolean isAffidavitAttached()
+	{
+		Object oo = get_Value(COLUMNNAME_IsAffidavitAttached);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Certified ID Attached.
+		@param IsCertifiedIDAttached Certified ID Attached
+	*/
+	public void setIsCertifiedIDAttached (boolean IsCertifiedIDAttached)
+	{
+		set_Value (COLUMNNAME_IsCertifiedIDAttached, Boolean.valueOf(IsCertifiedIDAttached));
+	}
+
+	/** Get Certified ID Attached.
+		@return Certified ID Attached	  */
+	public boolean isCertifiedIDAttached()
+	{
+		Object oo = get_Value(COLUMNNAME_IsCertifiedIDAttached);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
 
 	public I_ZZLearnerLearnership getZZLearnerLearnership() throws RuntimeException
 	{

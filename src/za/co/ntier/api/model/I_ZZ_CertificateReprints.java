@@ -93,6 +93,24 @@ public interface I_ZZ_CertificateReprints
 	  */
 	public boolean isActive();
 
+    /** Column name IsAffidavitAttached */
+    public static final String COLUMNNAME_IsAffidavitAttached = "IsAffidavitAttached";
+
+	/** Set Affidavit Attached	  */
+	public void setIsAffidavitAttached (boolean IsAffidavitAttached);
+
+	/** Get Affidavit Attached	  */
+	public boolean isAffidavitAttached();
+
+    /** Column name IsCertifiedIDAttached */
+    public static final String COLUMNNAME_IsCertifiedIDAttached = "IsCertifiedIDAttached";
+
+	/** Set Certified ID Attached	  */
+	public void setIsCertifiedIDAttached (boolean IsCertifiedIDAttached);
+
+	/** Get Certified ID Attached	  */
+	public boolean isCertifiedIDAttached();
+
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
 
