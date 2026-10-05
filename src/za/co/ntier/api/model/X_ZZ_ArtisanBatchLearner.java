@@ -31,7 +31,7 @@ public class X_ZZ_ArtisanBatchLearner extends PO implements I_ZZ_ArtisanBatchLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261002L;
+	private static final long serialVersionUID = 20261005L;
 
     /** Standard Constructor */
     public X_ZZ_ArtisanBatchLearner (Properties ctx, int ZZ_ArtisanBatchLearner_ID, String trxName)
@@ -164,32 +164,108 @@ public class X_ZZ_ArtisanBatchLearner extends PO implements I_ZZ_ArtisanBatchLea
 		return (String)get_Value(COLUMNNAME_DocAction);
 	}
 
-	/** DocStatus AD_Reference_ID=131 */
-	public static final int DOCSTATUS_AD_Reference_ID=131;
-	/** Unknown = ?? */
-	public static final String DOCSTATUS_Unknown = "??";
+	/** Approved By Manager Finance Consumables = AC */
+	public static final String DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
 	/** Approved = AP */
 	public static final String DOCSTATUS_Approved = "AP";
-	/** Closed = CL */
-	public static final String DOCSTATUS_Closed = "CL";
+	/** Prepared for CEO = CF */
+	public static final String DOCSTATUS_PreparedForCEO = "CF";
 	/** Completed = CO */
 	public static final String DOCSTATUS_Completed = "CO";
-	/** Drafted = DR */
-	public static final String DOCSTATUS_Drafted = "DR";
-	/** Invalid = IN */
-	public static final String DOCSTATUS_Invalid = "IN";
+	/** Draft = DR */
+	public static final String DOCSTATUS_Draft = "DR";
+	/** Error Importing = EE */
+	public static final String DOCSTATUS_ErrorImporting = "EE";
+	/** Validation Error = ER */
+	public static final String DOCSTATUS_ValidationError = "ER";
+	/** Evaluated = EV */
+	public static final String DOCSTATUS_Evaluated = "EV";
+	/** Importing = IG */
+	public static final String DOCSTATUS_Importing = "IG";
+	/** Imported = IM */
+	public static final String DOCSTATUS_Imported = "IM";
 	/** In Progress = IP */
 	public static final String DOCSTATUS_InProgress = "IP";
-	/** Not Approved = NA */
-	public static final String DOCSTATUS_NotApproved = "NA";
-	/** Reversed = RE */
-	public static final String DOCSTATUS_Reversed = "RE";
-	/** Voided = VO */
-	public static final String DOCSTATUS_Voided = "VO";
-	/** Waiting Confirmation = WC */
-	public static final String DOCSTATUS_WaitingConfirmation = "WC";
-	/** Waiting Payment = WP */
-	public static final String DOCSTATUS_WaitingPayment = "WP";
+	/** Not Recommended By Senior Mgr SDR = N1 */
+	public static final String DOCSTATUS_NotRecommendedBySeniorMgrSDR = "N1";
+	/** Not Recommended By Senior Mgr Finance = N2 */
+	public static final String DOCSTATUS_NotRecommendedBySeniorMgrFinance = "N2";
+	/** Not Recommended By COO = N3 */
+	public static final String DOCSTATUS_NotRecommendedByCOO = "N3";
+	/** Not Recommended By CFO = N4 */
+	public static final String DOCSTATUS_NotRecommendedByCFO = "N4";
+	/** Not Recommended By CEO = N5 */
+	public static final String DOCSTATUS_NotRecommendedByCEO = "N5";
+	/** Not Approved by Snr Manager = NA */
+	public static final String DOCSTATUS_NotApprovedBySnrManager = "NA";
+	/** Not Approved By Manager Finance Consumables = NC */
+	public static final String DOCSTATUS_NotApprovedByManagerFinanceConsumables = "NC";
+	/** Not Approved By SDL Finance Mgr = ND */
+	public static final String DOCSTATUS_NotApprovedBySDLFinanceMgr = "ND";
+	/** Not Approved By IT Manager = NI */
+	public static final String DOCSTATUS_NotApprovedByITManager = "NI";
+	/** Not Approved by LM = NL */
+	public static final String DOCSTATUS_NotApprovedByLM = "NL";
+	/** Not Approved = NP */
+	public static final String DOCSTATUS_NotApproved = "NP";
+	/** Not Recommended = NR */
+	public static final String DOCSTATUS_NotRecommended = "NR";
+	/** Not Approved by Snr Admin Finance = NS */
+	public static final String DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Not Verified = NV */
+	public static final String DOCSTATUS_NotVerified = "NV";
+	/** Pending = PE */
+	public static final String DOCSTATUS_Pending = "PE";
+	/** Query = QR */
+	public static final String DOCSTATUS_Query = "QR";
+	/** Recommended By Senior Mgr Finance = R1 */
+	public static final String DOCSTATUS_RecommendedBySeniorMgrFinance = "R1";
+	/** Recommended By COO = R2 */
+	public static final String DOCSTATUS_RecommendedByCOO = "R2";
+	/** Recommended By CFO = R3 */
+	public static final String DOCSTATUS_RecommendedByCFO = "R3";
+	/** Recommended By CEO = R4 */
+	public static final String DOCSTATUS_RecommendedByCEO = "R4";
+	/** Recommended By Officer - QA Accreditation = R5 */
+	public static final String DOCSTATUS_RecommendedByOfficer_QAAccreditation = "R5";
+	/** Recommended By Mgr - QA Accreditation = R6 */
+	public static final String DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
+	/** Recommended By Snr Mgr QA = R7 */
+	public static final String DOCSTATUS_RecommendedBySnrMgrQA = "R7";
+	/** Recommended By CRO = R8 */
+	public static final String DOCSTATUS_RecommendedByCRO = "R8";
+	/** Recommended for Approval = RA */
+	public static final String DOCSTATUS_RecommendedForApproval = "RA";
+	/** Recommended = RC */
+	public static final String DOCSTATUS_Recommended = "RC";
+	/** Recommended By Senior Mgr SDR = RD */
+	public static final String DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
+	/** Recommended for Evaluation = RE */
+	public static final String DOCSTATUS_RecommendedForEvaluation = "RE";
+	/** Submitted to Snr Admin Finance = SA */
+	public static final String DOCSTATUS_SubmittedToSnrAdminFinance = "SA";
+	/** Submitted to Manager Finance Consumables = SC */
+	public static final String DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
+	/** Submitted To SDL Finance Mgr = SD */
+	public static final String DOCSTATUS_SubmittedToSDLFinanceMgr = "SD";
+	/** Submitted To IT Manager = SI */
+	public static final String DOCSTATUS_SubmittedToITManager = "SI";
+	/** Submitted To IT Admin = ST */
+	public static final String DOCSTATUS_SubmittedToITAdmin = "ST";
+	/** Submitted = SU */
+	public static final String DOCSTATUS_Submitted = "SU";
+	/** Transfer Out = TO */
+	public static final String DOCSTATUS_TransferOut = "TO";
+	/** Updated by SDR Admin = UA */
+	public static final String DOCSTATUS_UpdatedBySDRAdmin = "UA";
+	/** Uploaded = UP */
+	public static final String DOCSTATUS_Uploaded = "UP";
+	/** Delinked = UnSdfOrg */
+	public static final String DOCSTATUS_Delinked = "UnSdfOrg";
+	/** Validating = VA */
+	public static final String DOCSTATUS_Validating = "VA";
+	/** Verified = VE */
+	public static final String DOCSTATUS_Verified = "VE";
 	/** Set Document Status.
 		@param DocStatus The current status of the document
 	*/
@@ -207,9 +283,9 @@ public class X_ZZ_ArtisanBatchLearner extends PO implements I_ZZ_ArtisanBatchLea
 		return (String)get_Value(COLUMNNAME_DocStatus);
 	}
 
-	public I_ZZQctoLearnership getZZLearnerQCTOArtisans() throws RuntimeException
+	public I_ZZLearnerQCTOArtisans getZZLearnerQCTOArtisans() throws RuntimeException
 	{
-		return (I_ZZQctoLearnership)MTable.get(getCtx(), I_ZZQctoLearnership.Table_ID)
+		return (I_ZZLearnerQCTOArtisans)MTable.get(getCtx(), I_ZZLearnerQCTOArtisans.Table_ID)
 			.getPO(getZZLearnerQCTOArtisans_ID(), get_TrxName());
 	}
 
@@ -234,9 +310,9 @@ public class X_ZZ_ArtisanBatchLearner extends PO implements I_ZZ_ArtisanBatchLea
 		return ii.intValue();
 	}
 
-	public I_ZZLearner getZZLearner() throws RuntimeException
+	public I_ZZLearner_v getZZLearner() throws RuntimeException
 	{
-		return (I_ZZLearner)MTable.get(getCtx(), I_ZZLearner.Table_ID)
+		return (I_ZZLearner_v)MTable.get(getCtx(), I_ZZLearner_v.Table_ID)
 			.getPO(getZZLearner_ID(), get_TrxName());
 	}
 
@@ -309,9 +385,9 @@ public class X_ZZ_ArtisanBatchLearner extends PO implements I_ZZ_ArtisanBatchLea
 	public void setZZ_ArtisanReqBatch_ID (int ZZ_ArtisanReqBatch_ID)
 	{
 		if (ZZ_ArtisanReqBatch_ID < 1)
-			set_Value (COLUMNNAME_ZZ_ArtisanReqBatch_ID, null);
+			set_ValueNoCheck (COLUMNNAME_ZZ_ArtisanReqBatch_ID, null);
 		else
-			set_Value (COLUMNNAME_ZZ_ArtisanReqBatch_ID, Integer.valueOf(ZZ_ArtisanReqBatch_ID));
+			set_ValueNoCheck (COLUMNNAME_ZZ_ArtisanReqBatch_ID, Integer.valueOf(ZZ_ArtisanReqBatch_ID));
 	}
 
 	/** Get Artisan Serial Number Request Batch.

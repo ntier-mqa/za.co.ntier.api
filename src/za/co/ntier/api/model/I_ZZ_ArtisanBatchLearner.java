@@ -144,7 +144,7 @@ public interface I_ZZ_ArtisanBatchLearner
 	/** Get Learner QCTO Artisans	  */
 	public int getZZLearnerQCTOArtisans_ID();
 
-	public I_ZZQctoLearnership getZZLearnerQCTOArtisans() throws RuntimeException;
+	public I_ZZLearnerQCTOArtisans getZZLearnerQCTOArtisans() throws RuntimeException;
 
     /** Column name ZZLearner_ID */
     public static final String COLUMNNAME_ZZLearner_ID = "ZZLearner_ID";
@@ -155,7 +155,7 @@ public interface I_ZZ_ArtisanBatchLearner
 	/** Get Learner	  */
 	public int getZZLearner_ID();
 
-	public I_ZZLearner getZZLearner() throws RuntimeException;
+	public I_ZZLearner_v getZZLearner() throws RuntimeException;
 
     /** Column name ZZ_ArtisanBatchLearner_ID */
     public static final String COLUMNNAME_ZZ_ArtisanBatchLearner_ID = "ZZ_ArtisanBatchLearner_ID";
