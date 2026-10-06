@@ -32,7 +32,7 @@ public interface I_ZZQualification
     /** TableName=ZZQualification */
     public static final String Table_Name = "ZZQualification";
 
-    /** AD_Table_ID=1000230 */
+    /** AD_Table_ID=1000417 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -165,6 +165,15 @@ public interface I_ZZQualification
 	  * Search key for the record in the format required - must be unique
 	  */
 	public String getValue();
+
+    /** Column name ZZArtisanLearnership */
+    public static final String COLUMNNAME_ZZArtisanLearnership = "ZZArtisanLearnership";
+
+	/** Set Artisan Learnership	  */
+	public void setZZArtisanLearnership (String ZZArtisanLearnership);
+
+	/** Get Artisan Learnership	  */
+	public String getZZArtisanLearnership();
 
     /** Column name ZZCredits */
     public static final String COLUMNNAME_ZZCredits = "ZZCredits";

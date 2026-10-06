@@ -33,7 +33,7 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260812L;
+	private static final long serialVersionUID = 20261006L;
 
     /** Standard Constructor */
     public X_ZZQualification (Properties ctx, int ZZQualification_ID, String trxName)
@@ -41,6 +41,8 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
       super (ctx, ZZQualification_ID, trxName);
       /** if (ZZQualification_ID == 0)
         {
+			setZZArtisanLearnership (null);
+// N
 			setZZQualification_ID (0);
         } */
     }
@@ -51,6 +53,8 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
       super (ctx, ZZQualification_ID, trxName, virtualColumns);
       /** if (ZZQualification_ID == 0)
         {
+			setZZArtisanLearnership (null);
+// N
 			setZZQualification_ID (0);
         } */
     }
@@ -61,6 +65,8 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
       super (ctx, ZZQualification_UU, trxName);
       /** if (ZZQualification_UU == null)
         {
+			setZZArtisanLearnership (null);
+// N
 			setZZQualification_ID (0);
         } */
     }
@@ -71,6 +77,8 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
       super (ctx, ZZQualification_UU, trxName, virtualColumns);
       /** if (ZZQualification_UU == null)
         {
+			setZZArtisanLearnership (null);
+// N
 			setZZQualification_ID (0);
         } */
     }
@@ -179,6 +187,28 @@ public class X_ZZQualification extends PO implements I_ZZQualification, I_Persis
 	public String getValue()
 	{
 		return (String)get_Value(COLUMNNAME_Value);
+	}
+
+	/** ZZArtisanLearnership AD_Reference_ID=319 */
+	public static final int ZZARTISANLEARNERSHIP_AD_Reference_ID=319;
+	/** No = N */
+	public static final String ZZARTISANLEARNERSHIP_No = "N";
+	/** Yes = Y */
+	public static final String ZZARTISANLEARNERSHIP_Yes = "Y";
+	/** Set Artisan Learnership.
+		@param ZZArtisanLearnership Artisan Learnership
+	*/
+	public void setZZArtisanLearnership (String ZZArtisanLearnership)
+	{
+
+		set_Value (COLUMNNAME_ZZArtisanLearnership, ZZArtisanLearnership);
+	}
+
+	/** Get Artisan Learnership.
+		@return Artisan Learnership	  */
+	public String getZZArtisanLearnership()
+	{
+		return (String)get_Value(COLUMNNAME_ZZArtisanLearnership);
 	}
 
 	/** Set Credits.
