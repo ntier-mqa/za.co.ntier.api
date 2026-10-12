@@ -32,7 +32,7 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260701L;
+	private static final long serialVersionUID = 20261012L;
 
     /** Standard Constructor */
     public X_ZZLearner_v (Properties ctx, int ZZLearner_v_ID, String trxName)
@@ -176,6 +176,22 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 	public String getPhone2()
 	{
 		return (String)get_Value(COLUMNNAME_Phone2);
+	}
+
+	/** Set Reference No.
+		@param ReferenceNo Your customer or vendor number at the Business Partner&#039;s site
+	*/
+	public void setReferenceNo (String ReferenceNo)
+	{
+		set_ValueNoCheck (COLUMNNAME_ReferenceNo, ReferenceNo);
+	}
+
+	/** Get Reference No.
+		@return Your customer or vendor number at the Business Partner&#039;s site
+	  */
+	public String getReferenceNo()
+	{
+		return (String)get_Value(COLUMNNAME_ReferenceNo);
 	}
 
 	/** Set Surname.
@@ -748,6 +764,30 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 		return ii.intValue();
 	}
 
+	public org.compiere.model.I_AD_User getZZNotRegistere() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZNotRegisteredBy(), get_TrxName());
+	}
+
+	/** Set Not Registered By.
+		@param ZZNotRegisteredBy Not Registered By
+	*/
+	public void setZZNotRegisteredBy (int ZZNotRegisteredBy)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZNotRegisteredBy, Integer.valueOf(ZZNotRegisteredBy));
+	}
+
+	/** Get Not Registered By.
+		@return Not Registered By	  */
+	public int getZZNotRegisteredBy()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZNotRegisteredBy);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Other ID No.
 		@param ZZOtherIDNo RSA Id store at ZZ_ID_Passport_No remain tyoe of id store at ZZOtherIDNo
 	*/
@@ -868,6 +908,30 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 		return ii.intValue();
 	}
 
+	public org.compiere.model.I_AD_User getZZRegistere() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZRegisteredBy(), get_TrxName());
+	}
+
+	/** Set RegisteredBy.
+		@param ZZRegisteredBy RegisteredBy
+	*/
+	public void setZZRegisteredBy (int ZZRegisteredBy)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZRegisteredBy, Integer.valueOf(ZZRegisteredBy));
+	}
+
+	/** Get RegisteredBy.
+		@return RegisteredBy	  */
+	public int getZZRegisteredBy()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZRegisteredBy);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Years In Occupation.
 		@param ZZYearsInOccupation Years In Occupation
 	*/
@@ -881,6 +945,90 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 	public int getZZYearsInOccupation()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZYearsInOccupation);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Admin - LP Ops Date Not Recommended.
+		@param ZZ_AdminLPOps_DateNotRecommended Admin - LP Ops Date Not Recommended
+	*/
+	public void setZZ_AdminLPOps_DateNotRecommended (Timestamp ZZ_AdminLPOps_DateNotRecommended)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_AdminLPOps_DateNotRecommended, ZZ_AdminLPOps_DateNotRecommended);
+	}
+
+	/** Get Admin - LP Ops Date Not Recommended.
+		@return Admin - LP Ops Date Not Recommended	  */
+	public Timestamp getZZ_AdminLPOps_DateNotRecommended()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_AdminLPOps_DateNotRecommended);
+	}
+
+	/** Set Admin - LP Ops Date Recommended.
+		@param ZZ_AdminLPOps_DateRecommended Admin - LP Ops Date Recommended
+	*/
+	public void setZZ_AdminLPOps_DateRecommended (Timestamp ZZ_AdminLPOps_DateRecommended)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_AdminLPOps_DateRecommended, ZZ_AdminLPOps_DateRecommended);
+	}
+
+	/** Get Admin - LP Ops Date Recommended.
+		@return Admin - LP Ops Date Recommended	  */
+	public Timestamp getZZ_AdminLPOps_DateRecommended()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_AdminLPOps_DateRecommended);
+	}
+
+	public org.compiere.model.I_AD_User getZZ_AdminLPOps_NotRecommendedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_AdminLPOps_NotRecommendedBy_ID(), get_TrxName());
+	}
+
+	/** Set Admin - LP Ops Not Recommended By.
+		@param ZZ_AdminLPOps_NotRecommendedBy_ID Admin - LP Ops Not Recommended By
+	*/
+	public void setZZ_AdminLPOps_NotRecommendedBy_ID (int ZZ_AdminLPOps_NotRecommendedBy_ID)
+	{
+		if (ZZ_AdminLPOps_NotRecommendedBy_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_AdminLPOps_NotRecommendedBy_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_AdminLPOps_NotRecommendedBy_ID, Integer.valueOf(ZZ_AdminLPOps_NotRecommendedBy_ID));
+	}
+
+	/** Get Admin - LP Ops Not Recommended By.
+		@return Admin - LP Ops Not Recommended By	  */
+	public int getZZ_AdminLPOps_NotRecommendedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_AdminLPOps_NotRecommendedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_AdminLPOps_RecommendedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_AdminLPOps_RecommendedBy_ID(), get_TrxName());
+	}
+
+	/** Set Admin - LP Ops Recommended By.
+		@param ZZ_AdminLPOps_RecommendedBy_ID Admin - LP Ops Recommended By
+	*/
+	public void setZZ_AdminLPOps_RecommendedBy_ID (int ZZ_AdminLPOps_RecommendedBy_ID)
+	{
+		if (ZZ_AdminLPOps_RecommendedBy_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_AdminLPOps_RecommendedBy_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_AdminLPOps_RecommendedBy_ID, Integer.valueOf(ZZ_AdminLPOps_RecommendedBy_ID));
+	}
+
+	/** Get Admin - LP Ops Recommended By.
+		@return Admin - LP Ops Recommended By	  */
+	public int getZZ_AdminLPOps_RecommendedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_AdminLPOps_RecommendedBy_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -953,6 +1101,36 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 	public Timestamp getZZ_ApprovedDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZ_ApprovedDate);
+	}
+
+	/** Set Date Not Registered.
+		@param ZZ_DateNotRegistered Date Not Registered
+	*/
+	public void setZZ_DateNotRegistered (Timestamp ZZ_DateNotRegistered)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_DateNotRegistered, ZZ_DateNotRegistered);
+	}
+
+	/** Get Date Not Registered.
+		@return Date Not Registered	  */
+	public Timestamp getZZ_DateNotRegistered()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_DateNotRegistered);
+	}
+
+	/** Set Date Registered.
+		@param ZZ_DateRegistered Date Registered
+	*/
+	public void setZZ_DateRegistered (Timestamp ZZ_DateRegistered)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_DateRegistered, ZZ_DateRegistered);
+	}
+
+	/** Get Date Registered.
+		@return Date Registered	  */
+	public Timestamp getZZ_DateRegistered()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_DateRegistered);
 	}
 
 	/** Set Date Not Approved.
@@ -1062,6 +1240,8 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
+	/** Recommended &#8211; Admin = AD */
+	public static final String ZZ_DOCSTATUS_RecommendedAdmin = "AD";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
 	/** Prepared for CEO = CF */
@@ -1122,6 +1302,14 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
 	/** Recommended By CEO = R4 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCEO = "R4";
+	/** Recommended By Officer - QA Accreditation = R5 */
+	public static final String ZZ_DOCSTATUS_RecommendedByOfficer_QAAccreditation = "R5";
+	/** Recommended By Mgr - QA Accreditation = R6 */
+	public static final String ZZ_DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
+	/** Recommended By Snr Mgr QA = R7 */
+	public static final String ZZ_DOCSTATUS_RecommendedBySnrMgrQA = "R7";
+	/** Recommended By CRO = R8 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCRO = "R8";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
@@ -1130,6 +1318,10 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
 	/** Recommended for Evaluation = RE */
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
+	/** Registered = RG */
+	public static final String ZZ_DOCSTATUS_Registered = "RG";
+	/** Recommended for Registration - Mgr - LP Ops = RR */
+	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPOps = "RR";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
@@ -1318,6 +1510,90 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 		return ii.intValue();
 	}
 
+	/** Set Mgr - LP Ops Date Not Recommended.
+		@param ZZ_MgrLPOps_DateNotRecommended Mgr - LP Ops Date Not Recommended
+	*/
+	public void setZZ_MgrLPOps_DateNotRecommended (Timestamp ZZ_MgrLPOps_DateNotRecommended)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_MgrLPOps_DateNotRecommended, ZZ_MgrLPOps_DateNotRecommended);
+	}
+
+	/** Get Mgr - LP Ops Date Not Recommended.
+		@return Mgr - LP Ops Date Not Recommended	  */
+	public Timestamp getZZ_MgrLPOps_DateNotRecommended()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_MgrLPOps_DateNotRecommended);
+	}
+
+	/** Set Mgr - LP Ops Date Recommended.
+		@param ZZ_MgrLPOps_DateRecommended Mgr - LP Ops Date Recommended
+	*/
+	public void setZZ_MgrLPOps_DateRecommended (Timestamp ZZ_MgrLPOps_DateRecommended)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_MgrLPOps_DateRecommended, ZZ_MgrLPOps_DateRecommended);
+	}
+
+	/** Get Mgr - LP Ops Date Recommended.
+		@return Mgr - LP Ops Date Recommended	  */
+	public Timestamp getZZ_MgrLPOps_DateRecommended()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZ_MgrLPOps_DateRecommended);
+	}
+
+	public org.compiere.model.I_AD_User getZZ_MgrLPOps_NotRecommendedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_MgrLPOps_NotRecommendedBy_ID(), get_TrxName());
+	}
+
+	/** Set Mgr - LP Ops Not Recommended By.
+		@param ZZ_MgrLPOps_NotRecommendedBy_ID Mgr - LP Ops Not Recommended By
+	*/
+	public void setZZ_MgrLPOps_NotRecommendedBy_ID (int ZZ_MgrLPOps_NotRecommendedBy_ID)
+	{
+		if (ZZ_MgrLPOps_NotRecommendedBy_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_MgrLPOps_NotRecommendedBy_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_MgrLPOps_NotRecommendedBy_ID, Integer.valueOf(ZZ_MgrLPOps_NotRecommendedBy_ID));
+	}
+
+	/** Get Mgr - LP Ops Not Recommended By.
+		@return Mgr - LP Ops Not Recommended By	  */
+	public int getZZ_MgrLPOps_NotRecommendedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_MgrLPOps_NotRecommendedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_MgrLPOps_RecommendedBy() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_MgrLPOps_RecommendedBy_ID(), get_TrxName());
+	}
+
+	/** Set Mgr - LP Ops Recommended By.
+		@param ZZ_MgrLPOps_RecommendedBy_ID Mgr - LP Ops Recommended By
+	*/
+	public void setZZ_MgrLPOps_RecommendedBy_ID (int ZZ_MgrLPOps_RecommendedBy_ID)
+	{
+		if (ZZ_MgrLPOps_RecommendedBy_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_MgrLPOps_RecommendedBy_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_MgrLPOps_RecommendedBy_ID, Integer.valueOf(ZZ_MgrLPOps_RecommendedBy_ID));
+	}
+
+	/** Get Mgr - LP Ops Recommended By.
+		@return Mgr - LP Ops Recommended By	  */
+	public int getZZ_MgrLPOps_RecommendedBy_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_MgrLPOps_RecommendedBy_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	public I_ZZ_Nationality getZZ_Nationality() throws RuntimeException
 	{
 		return (I_ZZ_Nationality)MTable.get(getCtx(), I_ZZ_Nationality.Table_ID)
@@ -1345,6 +1621,21 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 		return ii.intValue();
 	}
 
+	/** Set Reason.
+		@param ZZ_Reason Reason
+	*/
+	public void setZZ_Reason (String ZZ_Reason)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZ_Reason, ZZ_Reason);
+	}
+
+	/** Get Reason.
+		@return Reason	  */
+	public String getZZ_Reason()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Reason);
+	}
+
 	public org.compiere.model.I_AD_User getZZ_Recommender() throws RuntimeException
 	{
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
@@ -1367,6 +1658,33 @@ public class X_ZZLearner_v extends PO implements I_ZZLearner_v, I_Persistent
 	public int getZZ_Recommender_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Recommender_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_User getZZ_SDPAdmin() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZ_SDPAdmin_ID(), get_TrxName());
+	}
+
+	/** Set SDP Admin.
+		@param ZZ_SDPAdmin_ID SDP Admin
+	*/
+	public void setZZ_SDPAdmin_ID (int ZZ_SDPAdmin_ID)
+	{
+		if (ZZ_SDPAdmin_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZ_SDPAdmin_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZ_SDPAdmin_ID, Integer.valueOf(ZZ_SDPAdmin_ID));
+	}
+
+	/** Get SDP Admin.
+		@return SDP Admin	  */
+	public int getZZ_SDPAdmin_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SDPAdmin_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
