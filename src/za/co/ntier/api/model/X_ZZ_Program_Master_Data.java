@@ -610,4 +610,31 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			 return 0;
 		return ii.intValue();
 	}
+	
+	/**
+	 * Set Learner Registration.
+	 * 
+	 * @param ZZ_IsLearnerRegistration Learner Registration
+	 */
+	public void setZZ_IsLearnerRegistration(boolean ZZ_IsLearnerRegistration)
+	{
+		set_Value(COLUMNNAME_ZZ_IsLearnerRegistration, Boolean.valueOf(ZZ_IsLearnerRegistration));
+	}
+
+	/**
+	 * Get Learner Registration.
+	 * 
+	 * @return Learner Registration
+	 */
+	public boolean isZZ_IsLearnerRegistration()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsLearnerRegistration);
+		if (oo != null)
+		{
+			if (oo instanceof Boolean)
+				return ((Boolean) oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
 }

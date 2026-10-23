@@ -319,4 +319,13 @@ public interface I_ZZ_Program_Master_Data
 	public int getZZ_Submitter_ID();
 
 	public org.compiere.model.I_AD_User getZZ_Submitter() throws RuntimeException;
+	
+    /** Column name ZZ_IsLearnerRegistration */
+    public static final String COLUMNNAME_ZZ_IsLearnerRegistration = "ZZ_IsLearnerRegistration";
+
+	/** Set Learner Registration	  */
+	public void setZZ_IsLearnerRegistration (boolean ZZ_IsLearnerRegistration);
+
+	/** Get Learner Registration	  */
+	public boolean isZZ_IsLearnerRegistration();
 }
