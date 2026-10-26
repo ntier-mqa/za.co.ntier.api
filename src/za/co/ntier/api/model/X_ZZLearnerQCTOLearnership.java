@@ -32,7 +32,7 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260923L;
+	private static final long serialVersionUID = 20261026L;
 
     /** Standard Constructor */
     public X_ZZLearnerQCTOLearnership (Properties ctx, int ZZLearnerQCTOLearnership_ID, String trxName)
@@ -54,6 +54,7 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 // N
 			setWP_Agreement (false);
 // N
+			setZZFundingType (null);
 			setZZLearnerQCTOLearnership_ID (0);
         } */
     }
@@ -78,6 +79,7 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 // N
 			setWP_Agreement (false);
 // N
+			setZZFundingType (null);
 			setZZLearnerQCTOLearnership_ID (0);
         } */
     }
@@ -102,6 +104,7 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 // N
 			setWP_Agreement (false);
 // N
+			setZZFundingType (null);
 			setZZLearnerQCTOLearnership_ID (0);
         } */
     }
@@ -126,6 +129,7 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 // N
 			setWP_Agreement (false);
 // N
+			setZZFundingType (null);
 			setZZLearnerQCTOLearnership_ID (0);
         } */
     }
@@ -587,16 +591,17 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 		return (String)get_Value(COLUMNNAME_ZZAmountSpend);
 	}
 
-	/** Set Approval Date.
-		@param ZZApprovalDate Approval Date
+	/** Set ZZApprovalDate.
+		@param ZZApprovalDate ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
 	*/
 	public void setZZApprovalDate (Timestamp ZZApprovalDate)
 	{
 		set_Value (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
 	}
 
-	/** Get Approval Date.
-		@return Approval Date	  */
+	/** Get ZZApprovalDate.
+		@return ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public Timestamp getZZApprovalDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);
@@ -1037,6 +1042,26 @@ public class X_ZZLearnerQCTOLearnership extends PO implements I_ZZLearnerQCTOLea
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Industry Funded = IF */
+	public static final String ZZFUNDINGTYPE_IndustryFunded = "IF";
+	/** SETA Funded = SF */
+	public static final String ZZFUNDINGTYPE_SETAFunded = "SF";
+	/** Set Funding Type.
+		@param ZZFundingType Funding Type
+	*/
+	public void setZZFundingType (String ZZFundingType)
+	{
+
+		set_ValueNoCheck (COLUMNNAME_ZZFundingType, ZZFundingType);
+	}
+
+	/** Get Funding Type.
+		@return Funding Type	  */
+	public String getZZFundingType()
+	{
+		return (String)get_Value(COLUMNNAME_ZZFundingType);
 	}
 
 	public I_ZZGrantType getZZGrantType() throws RuntimeException

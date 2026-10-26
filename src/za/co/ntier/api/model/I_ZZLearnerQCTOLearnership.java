@@ -32,7 +32,7 @@ public interface I_ZZLearnerQCTOLearnership
     /** TableName=ZZLearnerQCTOLearnership */
     public static final String Table_Name = "ZZLearnerQCTOLearnership";
 
-    /** AD_Table_ID=1000300 */
+    /** AD_Table_ID=1000511 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -430,10 +430,14 @@ Contract&quot;
     /** Column name ZZApprovalDate */
     public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
 
-	/** Set Approval Date	  */
+	/** Set ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public void setZZApprovalDate (Timestamp ZZApprovalDate);
 
-	/** Get Approval Date	  */
+	/** Get ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public Timestamp getZZApprovalDate();
 
     /** Column name ZZBelongToFasset */
@@ -651,6 +655,15 @@ Contract&quot;
 
 	public org.compiere.model.I_C_Year getZZFinancialYear() throws RuntimeException;
 
+    /** Column name ZZFundingType */
+    public static final String COLUMNNAME_ZZFundingType = "ZZFundingType";
+
+	/** Set Funding Type	  */
+	public void setZZFundingType (String ZZFundingType);
+
+	/** Get Funding Type	  */
+	public String getZZFundingType();
+
     /** Column name ZZGrantType_ID */
     public static final String COLUMNNAME_ZZGrantType_ID = "ZZGrantType_ID";
 
@@ -712,6 +725,17 @@ Contract&quot;
 
 	/** Get Most Recent Registration Date	  */
 	public Timestamp getZZMostRecentRegistrationDate();
+
+    /** Column name ZZNotRegisteredBy */
+    public static final String COLUMNNAME_ZZNotRegisteredBy = "ZZNotRegisteredBy";
+
+	/** Set Not Registered By	  */
+	public void setZZNotRegisteredBy (int ZZNotRegisteredBy);
+
+	/** Get Not Registered By	  */
+	public int getZZNotRegisteredBy();
+
+	public org.compiere.model.I_AD_User getZZNotRegistere() throws RuntimeException;
 
     /** Column name ZZOtherSeta */
     public static final String COLUMNNAME_ZZOtherSeta = "ZZOtherSeta";
@@ -918,6 +942,73 @@ Contract&quot;
 	/** Get Termination Reason	  */
 	public String getZZTerminationReasonText();
 
+    /** Column name ZZ_AdminLPOps_DateNotRecommended */
+    public static final String COLUMNNAME_ZZ_AdminLPOps_DateNotRecommended = "ZZ_AdminLPOps_DateNotRecommended";
+
+	/** Set Admin - LP Ops Date Not Recommended	  */
+	public void setZZ_AdminLPOps_DateNotRecommended (Timestamp ZZ_AdminLPOps_DateNotRecommended);
+
+	/** Get Admin - LP Ops Date Not Recommended	  */
+	public Timestamp getZZ_AdminLPOps_DateNotRecommended();
+
+    /** Column name ZZ_AdminLPOps_DateRecommended */
+    public static final String COLUMNNAME_ZZ_AdminLPOps_DateRecommended = "ZZ_AdminLPOps_DateRecommended";
+
+	/** Set Admin - LP Ops Date Recommended	  */
+	public void setZZ_AdminLPOps_DateRecommended (Timestamp ZZ_AdminLPOps_DateRecommended);
+
+	/** Get Admin - LP Ops Date Recommended	  */
+	public Timestamp getZZ_AdminLPOps_DateRecommended();
+
+    /** Column name ZZ_AdminLPOps_NotRecommendedBy_ID */
+    public static final String COLUMNNAME_ZZ_AdminLPOps_NotRecommendedBy_ID = "ZZ_AdminLPOps_NotRecommendedBy_ID";
+
+	/** Set Admin - LP Ops Not Recommended By	  */
+	public void setZZ_AdminLPOps_NotRecommendedBy_ID (int ZZ_AdminLPOps_NotRecommendedBy_ID);
+
+	/** Get Admin - LP Ops Not Recommended By	  */
+	public int getZZ_AdminLPOps_NotRecommendedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_AdminLPOps_NotRecommendedBy() throws RuntimeException;
+
+    /** Column name ZZ_AdminLPOps_RecommendedBy_ID */
+    public static final String COLUMNNAME_ZZ_AdminLPOps_RecommendedBy_ID = "ZZ_AdminLPOps_RecommendedBy_ID";
+
+	/** Set Admin - LP Ops Recommended By	  */
+	public void setZZ_AdminLPOps_RecommendedBy_ID (int ZZ_AdminLPOps_RecommendedBy_ID);
+
+	/** Get Admin - LP Ops Recommended By	  */
+	public int getZZ_AdminLPOps_RecommendedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_AdminLPOps_RecommendedBy() throws RuntimeException;
+
+    /** Column name ZZ_DateNotRegistered */
+    public static final String COLUMNNAME_ZZ_DateNotRegistered = "ZZ_DateNotRegistered";
+
+	/** Set Date Not Registered	  */
+	public void setZZ_DateNotRegistered (Timestamp ZZ_DateNotRegistered);
+
+	/** Get Date Not Registered	  */
+	public Timestamp getZZ_DateNotRegistered();
+
+    /** Column name ZZ_DateRegistered */
+    public static final String COLUMNNAME_ZZ_DateRegistered = "ZZ_DateRegistered";
+
+	/** Set Date Registered	  */
+	public void setZZ_DateRegistered (Timestamp ZZ_DateRegistered);
+
+	/** Get Date Registered	  */
+	public Timestamp getZZ_DateRegistered();
+
+    /** Column name ZZ_DocAction */
+    public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
+
+	/** Set Document Action	  */
+	public void setZZ_DocAction (String ZZ_DocAction);
+
+	/** Get Document Action	  */
+	public String getZZ_DocAction();
+
     /** Column name ZZ_DocStatus */
     public static final String COLUMNNAME_ZZ_DocStatus = "ZZ_DocStatus";
 
@@ -941,6 +1032,55 @@ Contract&quot;
 	public int getZZ_Employer_ID();
 
 	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException;
+
+    /** Column name ZZ_MgrLPOps_DateNotRecommended */
+    public static final String COLUMNNAME_ZZ_MgrLPOps_DateNotRecommended = "ZZ_MgrLPOps_DateNotRecommended";
+
+	/** Set Mgr - LP Ops Date Not Recommended	  */
+	public void setZZ_MgrLPOps_DateNotRecommended (Timestamp ZZ_MgrLPOps_DateNotRecommended);
+
+	/** Get Mgr - LP Ops Date Not Recommended	  */
+	public Timestamp getZZ_MgrLPOps_DateNotRecommended();
+
+    /** Column name ZZ_MgrLPOps_DateRecommended */
+    public static final String COLUMNNAME_ZZ_MgrLPOps_DateRecommended = "ZZ_MgrLPOps_DateRecommended";
+
+	/** Set Mgr - LP Ops Date Recommended	  */
+	public void setZZ_MgrLPOps_DateRecommended (Timestamp ZZ_MgrLPOps_DateRecommended);
+
+	/** Get Mgr - LP Ops Date Recommended	  */
+	public Timestamp getZZ_MgrLPOps_DateRecommended();
+
+    /** Column name ZZ_MgrLPOps_NotRecommendedBy_ID */
+    public static final String COLUMNNAME_ZZ_MgrLPOps_NotRecommendedBy_ID = "ZZ_MgrLPOps_NotRecommendedBy_ID";
+
+	/** Set Mgr - LP Ops Not Recommended By	  */
+	public void setZZ_MgrLPOps_NotRecommendedBy_ID (int ZZ_MgrLPOps_NotRecommendedBy_ID);
+
+	/** Get Mgr - LP Ops Not Recommended By	  */
+	public int getZZ_MgrLPOps_NotRecommendedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_MgrLPOps_NotRecommendedBy() throws RuntimeException;
+
+    /** Column name ZZ_MgrLPOps_RecommendedBy_ID */
+    public static final String COLUMNNAME_ZZ_MgrLPOps_RecommendedBy_ID = "ZZ_MgrLPOps_RecommendedBy_ID";
+
+	/** Set Mgr - LP Ops Recommended By	  */
+	public void setZZ_MgrLPOps_RecommendedBy_ID (int ZZ_MgrLPOps_RecommendedBy_ID);
+
+	/** Get Mgr - LP Ops Recommended By	  */
+	public int getZZ_MgrLPOps_RecommendedBy_ID();
+
+	public org.compiere.model.I_AD_User getZZ_MgrLPOps_RecommendedBy() throws RuntimeException;
+
+    /** Column name ZZ_Reason */
+    public static final String COLUMNNAME_ZZ_Reason = "ZZ_Reason";
+
+	/** Set Reason	  */
+	public void setZZ_Reason (String ZZ_Reason);
+
+	/** Get Reason	  */
+	public String getZZ_Reason();
 
     /** Column name ZZ_SDP_ID */
     public static final String COLUMNNAME_ZZ_SDP_ID = "ZZ_SDP_ID";
