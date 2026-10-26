@@ -32,7 +32,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261023L;
+	private static final long serialVersionUID = 20261026L;
 
     /** Standard Constructor */
     public X_ZZLearnerDGProgramme (Properties ctx, int ZZLearnerDGProgramme_ID, String trxName)
@@ -207,6 +207,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public String getZZFundingType()
 	{
 		return (String)get_Value(COLUMNNAME_ZZFundingType);
+	}
+
+	public org.compiere.model.I_AD_User getZZLeadSDProviderContact() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZLeadSDProviderContact_ID(), get_TrxName());
 	}
 
 	/** Set Lead SDP Contact.
@@ -421,9 +427,9 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return (String)get_Value(COLUMNNAME_ZZSecondarySDProviderLevy);
 	}
 
-	public I_ZZProvider getZZSecondarySDProvider() throws RuntimeException
+	public org.compiere.model.I_C_BPartner getZZSecondarySDProvider() throws RuntimeException
 	{
-		return (I_ZZProvider)MTable.get(getCtx(), I_ZZProvider.Table_ID)
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
 			.getPO(getZZSecondarySDProvider_ID(), get_TrxName());
 	}
 
@@ -491,9 +497,9 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return (String)get_Value(COLUMNNAME_ZZSecondaryWALevy);
 	}
 
-	public I_ZZWorkplaceApproval getZZSecondaryWA() throws RuntimeException
+	public org.compiere.model.I_C_BPartner getZZSecondaryWA() throws RuntimeException
 	{
-		return (I_ZZWorkplaceApproval)MTable.get(getCtx(), I_ZZWorkplaceApproval.Table_ID)
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
 			.getPO(getZZSecondaryWA_ID(), get_TrxName());
 	}
 
@@ -566,6 +572,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public String getZZStudentNumber()
 	{
 		return (String)get_Value(COLUMNNAME_ZZStudentNumber);
+	}
+
+	public org.compiere.model.I_AD_User getZZWAContact() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZWAContact_ID(), get_TrxName());
 	}
 
 	/** Set Lead Workplace Approval Contact.

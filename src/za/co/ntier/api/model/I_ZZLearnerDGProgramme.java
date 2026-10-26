@@ -174,6 +174,8 @@ public interface I_ZZLearnerDGProgramme
 	/** Get Lead SDP Contact	  */
 	public int getZZLeadSDProviderContact_ID();
 
+	public org.compiere.model.I_AD_User getZZLeadSDProviderContact() throws RuntimeException;
+
     /** Column name ZZLeadSDProviderLevy */
     public static final String COLUMNNAME_ZZLeadSDProviderLevy = "ZZLeadSDProviderLevy";
 
@@ -270,7 +272,7 @@ public interface I_ZZLearnerDGProgramme
 	/** Get Secondary Skills Development Provider	  */
 	public int getZZSecondarySDProvider_ID();
 
-	public I_ZZProvider getZZSecondarySDProvider() throws RuntimeException;
+	public org.compiere.model.I_C_BPartner getZZSecondarySDProvider() throws RuntimeException;
 
     /** Column name ZZSecondaryWAContact_ID */
     public static final String COLUMNNAME_ZZSecondaryWAContact_ID = "ZZSecondaryWAContact_ID";
@@ -299,7 +301,7 @@ public interface I_ZZLearnerDGProgramme
 	/** Get Secondary Workplace Approval	  */
 	public int getZZSecondaryWA_ID();
 
-	public I_ZZWorkplaceApproval getZZSecondaryWA() throws RuntimeException;
+	public org.compiere.model.I_C_BPartner getZZSecondaryWA() throws RuntimeException;
 
     /** Column name ZZSocioEconomicStatus */
     public static final String COLUMNNAME_ZZSocioEconomicStatus = "ZZSocioEconomicStatus";
@@ -336,6 +338,8 @@ public interface I_ZZLearnerDGProgramme
 
 	/** Get Lead Workplace Approval Contact	  */
 	public int getZZWAContact_ID();
+
+	public org.compiere.model.I_AD_User getZZWAContact() throws RuntimeException;
 
     /** Column name ZZWALevy */
     public static final String COLUMNNAME_ZZWALevy = "ZZWALevy";
