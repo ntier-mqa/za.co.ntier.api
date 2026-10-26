@@ -329,6 +329,21 @@ MQA&quot;
 	  */
 	public String getQcto();
 
+    /** Column name ReferenceNo */
+    public static final String COLUMNNAME_ReferenceNo = "ReferenceNo";
+
+	/** Set Reference No.
+	  * Your customer or vendor number at the Business Partner&#039;
+s site
+	  */
+	public void setReferenceNo (String ReferenceNo);
+
+	/** Get Reference No.
+	  * Your customer or vendor number at the Business Partner&#039;
+s site
+	  */
+	public String getReferenceNo();
+
     /** Column name Reg_Saqa */
     public static final String COLUMNNAME_Reg_Saqa = "Reg_Saqa";
 

@@ -102,6 +102,22 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       return sb.toString();
     }
 
+	/** Set Reference No.
+		@param ReferenceNo Your customer or vendor number at the Business Partner&#039;s site
+	*/
+	public void setReferenceNo (String ReferenceNo)
+	{
+		set_Value (COLUMNNAME_ReferenceNo, ReferenceNo);
+	}
+
+	/** Get Reference No.
+		@return Your customer or vendor number at the Business Partner&#039;s site
+	  */
+	public String getReferenceNo()
+	{
+		return (String)get_Value(COLUMNNAME_ReferenceNo);
+	}
+
 	/** Set Agreement Reference Number.
 		@param ZZAgreementReferenceNumber Agreement Reference Number
 	*/
@@ -807,6 +823,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public static final String ZZ_DOCSTATUS_PreparedForCEO = "CF";
 	/** Completed = CO */
 	public static final String ZZ_DOCSTATUS_Completed = "CO";
+	/** Created = CR */
+	public static final String ZZ_DOCSTATUS_Created = "CR";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
 	/** Error Importing = EE */
