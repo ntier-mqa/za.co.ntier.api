@@ -138,10 +138,14 @@ s site
     /** Column name ZZApprovalDate */
     public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
 
-	/** Set Approval Date	  */
+	/** Set ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public void setZZApprovalDate (Timestamp ZZApprovalDate);
 
-	/** Get Approval Date	  */
+	/** Get ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public Timestamp getZZApprovalDate();
 
     /** Column name ZZCertificateCreatedBy */
@@ -378,6 +382,15 @@ s site
 	public int getZZFinancialYear_ID();
 
 	public org.compiere.model.I_C_Year getZZFinancialYear() throws RuntimeException;
+
+    /** Column name ZZFundingType */
+    public static final String COLUMNNAME_ZZFundingType = "ZZFundingType";
+
+	/** Set Funding Type	  */
+	public void setZZFundingType (String ZZFundingType);
+
+	/** Get Funding Type	  */
+	public String getZZFundingType();
 
     /** Column name ZZGrantType_ID */
     public static final String COLUMNNAME_ZZGrantType_ID = "ZZGrantType_ID";

@@ -40,6 +40,7 @@ public class X_ZZLearnerQCTOSkillsProgramme extends PO implements I_ZZLearnerQCT
       super (ctx, ZZLearnerQCTOSkillsProgramme_ID, trxName);
       /** if (ZZLearnerQCTOSkillsProgramme_ID == 0)
         {
+			setZZFundingType (null);
 			setZZLearnerQCTOSkillsProgramme_ID (0);
         } */
     }
@@ -50,6 +51,7 @@ public class X_ZZLearnerQCTOSkillsProgramme extends PO implements I_ZZLearnerQCT
       super (ctx, ZZLearnerQCTOSkillsProgramme_ID, trxName, virtualColumns);
       /** if (ZZLearnerQCTOSkillsProgramme_ID == 0)
         {
+			setZZFundingType (null);
 			setZZLearnerQCTOSkillsProgramme_ID (0);
         } */
     }
@@ -60,6 +62,7 @@ public class X_ZZLearnerQCTOSkillsProgramme extends PO implements I_ZZLearnerQCT
       super (ctx, ZZLearnerQCTOSkillsProgramme_UU, trxName);
       /** if (ZZLearnerQCTOSkillsProgramme_UU == null)
         {
+			setZZFundingType (null);
 			setZZLearnerQCTOSkillsProgramme_ID (0);
         } */
     }
@@ -70,6 +73,7 @@ public class X_ZZLearnerQCTOSkillsProgramme extends PO implements I_ZZLearnerQCT
       super (ctx, ZZLearnerQCTOSkillsProgramme_UU, trxName, virtualColumns);
       /** if (ZZLearnerQCTOSkillsProgramme_UU == null)
         {
+			setZZFundingType (null);
 			setZZLearnerQCTOSkillsProgramme_ID (0);
         } */
     }
@@ -145,16 +149,17 @@ public class X_ZZLearnerQCTOSkillsProgramme extends PO implements I_ZZLearnerQCT
 		return ii.intValue();
 	}
 
-	/** Set Approval Date.
-		@param ZZApprovalDate Approval Date
+	/** Set ZZApprovalDate.
+		@param ZZApprovalDate ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
 	*/
 	public void setZZApprovalDate (Timestamp ZZApprovalDate)
 	{
 		set_Value (COLUMNNAME_ZZApprovalDate, ZZApprovalDate);
 	}
 
-	/** Get Approval Date.
-		@return Approval Date	  */
+	/** Get ZZApprovalDate.
+		@return ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public Timestamp getZZApprovalDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZApprovalDate);
@@ -628,6 +633,26 @@ public class X_ZZLearnerQCTOSkillsProgramme extends PO implements I_ZZLearnerQCT
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Industry Funded = IF */
+	public static final String ZZFUNDINGTYPE_IndustryFunded = "IF";
+	/** SETA Funded = SF */
+	public static final String ZZFUNDINGTYPE_SETAFunded = "SF";
+	/** Set Funding Type.
+		@param ZZFundingType Funding Type
+	*/
+	public void setZZFundingType (String ZZFundingType)
+	{
+
+		set_Value (COLUMNNAME_ZZFundingType, ZZFundingType);
+	}
+
+	/** Get Funding Type.
+		@return Funding Type	  */
+	public String getZZFundingType()
+	{
+		return (String)get_Value(COLUMNNAME_ZZFundingType);
 	}
 
 	public I_ZZGrantType getZZGrantType() throws RuntimeException

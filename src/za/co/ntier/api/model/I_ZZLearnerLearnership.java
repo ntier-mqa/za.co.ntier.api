@@ -439,6 +439,15 @@ s site
 	/** Get Extension Reason	  */
 	public String getZZExtensionReason();
 
+    /** Column name ZZFundingType */
+    public static final String COLUMNNAME_ZZFundingType = "ZZFundingType";
+
+	/** Set Funding Type	  */
+	public void setZZFundingType (String ZZFundingType);
+
+	/** Get Funding Type	  */
+	public String getZZFundingType();
+
     /** Column name ZZGrantType_ID */
     public static final String COLUMNNAME_ZZGrantType_ID = "ZZGrantType_ID";
 

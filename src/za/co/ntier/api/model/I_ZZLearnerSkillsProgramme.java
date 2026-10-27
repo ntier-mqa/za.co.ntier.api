@@ -160,10 +160,14 @@ s site
     /** Column name ZZApprovalDate */
     public static final String COLUMNNAME_ZZApprovalDate = "ZZApprovalDate";
 
-	/** Set Approval Date	  */
+	/** Set ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public void setZZApprovalDate (Timestamp ZZApprovalDate);
 
-	/** Get Approval Date	  */
+	/** Get ZZApprovalDate.
+	  * ms_learnerlearnership.approvaldate (separate from dateapproved - source has two distinct approval-tracking column pairs, both kept rather than guessing which is authoritative)
+	  */
 	public Timestamp getZZApprovalDate();
 
     /** Column name ZZCertificateNumber */
@@ -210,6 +214,15 @@ s site
 
 	/** Get Date Of Issue	  */
 	public Timestamp getZZDateOfIssue();
+
+    /** Column name ZZFundingType */
+    public static final String COLUMNNAME_ZZFundingType = "ZZFundingType";
+
+	/** Set Funding Type	  */
+	public void setZZFundingType (String ZZFundingType);
+
+	/** Get Funding Type	  */
+	public String getZZFundingType();
 
     /** Column name ZZIssueUser_ID */
     public static final String COLUMNNAME_ZZIssueUser_ID = "ZZIssueUser_ID";

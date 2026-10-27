@@ -46,6 +46,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 // N
 			setZZEmpContractCopy (false);
 // N
+			setZZFundingType (null);
 			setZZIsApproved (false);
 // N
 			setZZLearnerLearnership_ID (0);
@@ -66,6 +67,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 // N
 			setZZEmpContractCopy (false);
 // N
+			setZZFundingType (null);
 			setZZIsApproved (false);
 // N
 			setZZLearnerLearnership_ID (0);
@@ -86,6 +88,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 // N
 			setZZEmpContractCopy (false);
 // N
+			setZZFundingType (null);
 			setZZIsApproved (false);
 // N
 			setZZLearnerLearnership_ID (0);
@@ -106,6 +109,7 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 // N
 			setZZEmpContractCopy (false);
 // N
+			setZZFundingType (null);
 			setZZIsApproved (false);
 // N
 			setZZLearnerLearnership_ID (0);
@@ -737,6 +741,26 @@ public class X_ZZLearnerLearnership extends PO implements I_ZZLearnerLearnership
 	public String getZZExtensionReason()
 	{
 		return (String)get_Value(COLUMNNAME_ZZExtensionReason);
+	}
+
+	/** Industry Funded = IF */
+	public static final String ZZFUNDINGTYPE_IndustryFunded = "IF";
+	/** SETA Funded = SF */
+	public static final String ZZFUNDINGTYPE_SETAFunded = "SF";
+	/** Set Funding Type.
+		@param ZZFundingType Funding Type
+	*/
+	public void setZZFundingType (String ZZFundingType)
+	{
+
+		set_Value (COLUMNNAME_ZZFundingType, ZZFundingType);
+	}
+
+	/** Get Funding Type.
+		@return Funding Type	  */
+	public String getZZFundingType()
+	{
+		return (String)get_Value(COLUMNNAME_ZZFundingType);
 	}
 
 	public I_ZZGrantType getZZGrantType() throws RuntimeException
