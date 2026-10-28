@@ -456,6 +456,15 @@ s site
 
 	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException;
 
+    /** Column name ZZ_IsDisability */
+    public static final String COLUMNNAME_ZZ_IsDisability = "ZZ_IsDisability";
+
+	/** Set Disability	  */
+	public void setZZ_IsDisability (boolean ZZ_IsDisability);
+
+	/** Get Disability	  */
+	public boolean isZZ_IsDisability();
+
     /** Column name ZZ_MgrLPOps_DateNotRecommended */
     public static final String COLUMNNAME_ZZ_MgrLPOps_DateNotRecommended = "ZZ_MgrLPOps_DateNotRecommended";
 

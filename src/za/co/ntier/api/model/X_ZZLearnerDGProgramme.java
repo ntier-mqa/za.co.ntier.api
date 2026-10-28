@@ -32,7 +32,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261026L;
+	private static final long serialVersionUID = 20261028L;
 
     /** Standard Constructor */
     public X_ZZLearnerDGProgramme (Properties ctx, int ZZLearnerDGProgramme_ID, String trxName)
@@ -41,6 +41,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       /** if (ZZLearnerDGProgramme_ID == 0)
         {
 			setZZLearnerDGProgramme_ID (0);
+			setZZ_IsDisability (false);
+// N
         } */
     }
 
@@ -51,6 +53,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       /** if (ZZLearnerDGProgramme_ID == 0)
         {
 			setZZLearnerDGProgramme_ID (0);
+			setZZ_IsDisability (false);
+// N
         } */
     }
 
@@ -61,6 +65,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       /** if (ZZLearnerDGProgramme_UU == null)
         {
 			setZZLearnerDGProgramme_ID (0);
+			setZZ_IsDisability (false);
+// N
         } */
     }
 
@@ -71,6 +77,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       /** if (ZZLearnerDGProgramme_UU == null)
         {
 			setZZLearnerDGProgramme_ID (0);
+			setZZ_IsDisability (false);
+// N
         } */
     }
 
@@ -963,6 +971,28 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Disability.
+		@param ZZ_IsDisability Disability
+	*/
+	public void setZZ_IsDisability (boolean ZZ_IsDisability)
+	{
+		set_Value (COLUMNNAME_ZZ_IsDisability, Boolean.valueOf(ZZ_IsDisability));
+	}
+
+	/** Get Disability.
+		@return Disability	  */
+	public boolean isZZ_IsDisability()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsDisability);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	/** Set Mgr - LP Ops Date Not Recommended.
