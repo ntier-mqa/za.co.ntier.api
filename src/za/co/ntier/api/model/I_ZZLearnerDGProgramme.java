@@ -269,6 +269,8 @@ s site
 	/** Get Secondary SDP Contact	  */
 	public int getZZSecondarySDProviderContact_ID();
 
+	public org.compiere.model.I_AD_User getZZSecondarySDProviderContact() throws RuntimeException;
+
     /** Column name ZZSecondarySDProviderLevy */
     public static final String COLUMNNAME_ZZSecondarySDProviderLevy = "ZZSecondarySDProviderLevy";
 

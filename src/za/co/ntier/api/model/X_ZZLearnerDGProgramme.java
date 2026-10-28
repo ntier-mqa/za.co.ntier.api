@@ -408,6 +408,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return (Timestamp)get_Value(COLUMNNAME_ZZRegistrationDate);
 	}
 
+	public org.compiere.model.I_AD_User getZZSecondarySDProviderContact() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZSecondarySDProviderContact_ID(), get_TrxName());
+	}
+
 	/** Set Secondary SDP Contact.
 		@param ZZSecondarySDProviderContact_ID Secondary SDP Contact
 	*/
