@@ -164,6 +164,15 @@ public interface I_ZZ_Program_Master_Data
 	  */
 	public boolean isActive();
 
+    /** Column name IsEnterQualification */
+    public static final String COLUMNNAME_IsEnterQualification = "IsEnterQualification";
+
+	/** Set Enter Qualification	  */
+	public void setIsEnterQualification (boolean IsEnterQualification);
+
+	/** Get Enter Qualification	  */
+	public boolean isEnterQualification();
+
     /** Column name Line_Manager_ID */
     public static final String COLUMNNAME_Line_Manager_ID = "Line_Manager_ID";
 

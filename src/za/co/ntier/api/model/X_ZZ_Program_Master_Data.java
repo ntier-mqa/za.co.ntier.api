@@ -32,7 +32,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260501L;
+	private static final long serialVersionUID = 20261029L;
 
     /** Standard Constructor */
     public X_ZZ_Program_Master_Data (Properties ctx, int ZZ_Program_Master_Data_ID, String trxName)
@@ -40,6 +40,10 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
       super (ctx, ZZ_Program_Master_Data_ID, trxName);
       /** if (ZZ_Program_Master_Data_ID == 0)
         {
+			setIsEnterQualification (false);
+// N
+			setZZ_IsLearnerRegistration (false);
+// N
 			setZZ_Program_Master_Data_ID (0);
         } */
     }
@@ -50,6 +54,10 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
       super (ctx, ZZ_Program_Master_Data_ID, trxName, virtualColumns);
       /** if (ZZ_Program_Master_Data_ID == 0)
         {
+			setIsEnterQualification (false);
+// N
+			setZZ_IsLearnerRegistration (false);
+// N
 			setZZ_Program_Master_Data_ID (0);
         } */
     }
@@ -60,6 +68,10 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
       super (ctx, ZZ_Program_Master_Data_UU, trxName);
       /** if (ZZ_Program_Master_Data_UU == null)
         {
+			setIsEnterQualification (false);
+// N
+			setZZ_IsLearnerRegistration (false);
+// N
 			setZZ_Program_Master_Data_ID (0);
         } */
     }
@@ -70,6 +82,10 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
       super (ctx, ZZ_Program_Master_Data_UU, trxName, virtualColumns);
       /** if (ZZ_Program_Master_Data_UU == null)
         {
+			setIsEnterQualification (false);
+// N
+			setZZ_IsLearnerRegistration (false);
+// N
 			setZZ_Program_Master_Data_ID (0);
         } */
     }
@@ -216,6 +232,28 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public String getDocumentNo()
 	{
 		return (String)get_Value(COLUMNNAME_DocumentNo);
+	}
+
+	/** Set Enter Qualification.
+		@param IsEnterQualification Enter Qualification
+	*/
+	public void setIsEnterQualification (boolean IsEnterQualification)
+	{
+		set_Value (COLUMNNAME_IsEnterQualification, Boolean.valueOf(IsEnterQualification));
+	}
+
+	/** Get Enter Qualification.
+		@return Enter Qualification	  */
+	public boolean isEnterQualification()
+	{
+		Object oo = get_Value(COLUMNNAME_IsEnterQualification);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	public org.compiere.model.I_AD_User getLine_Manager() throws RuntimeException
