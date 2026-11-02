@@ -535,6 +535,15 @@ public interface I_ZZPerson
 	/** Get ID No	  */
 	public String getZZ_ID_Passport_No();
 
+    /** Column name ZZ_IsDisability */
+    public static final String COLUMNNAME_ZZ_IsDisability = "ZZ_IsDisability";
+
+	/** Set Disability	  */
+	public void setZZ_IsDisability (boolean ZZ_IsDisability);
+
+	/** Get Disability	  */
+	public boolean isZZ_IsDisability();
+
     /** Column name ZZ_LI_CitizenResidentialStatus_ID */
     public static final String COLUMNNAME_ZZ_LI_CitizenResidentialStatus_ID = "ZZ_LI_CitizenResidentialStatus_ID";
 

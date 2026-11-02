@@ -32,7 +32,7 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260703L;
+	private static final long serialVersionUID = 20261102L;
 
     /** Standard Constructor */
     public X_ZZPerson (Properties ctx, int ZZPerson_ID, String trxName)
@@ -41,6 +41,8 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
       /** if (ZZPerson_ID == 0)
         {
 			setZZPerson_ID (0);
+			setZZ_IsDisability (false);
+// N
         } */
     }
 
@@ -51,6 +53,8 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
       /** if (ZZPerson_ID == 0)
         {
 			setZZPerson_ID (0);
+			setZZ_IsDisability (false);
+// N
         } */
     }
 
@@ -61,6 +65,8 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
       /** if (ZZPerson_UU == null)
         {
 			setZZPerson_ID (0);
+			setZZ_IsDisability (false);
+// N
         } */
     }
 
@@ -71,6 +77,8 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
       /** if (ZZPerson_UU == null)
         {
 			setZZPerson_ID (0);
+			setZZ_IsDisability (false);
+// N
         } */
     }
 
@@ -647,7 +655,7 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 	*/
 	public void setZZMiddleName (String ZZMiddleName)
 	{
-		set_ValueNoCheck (COLUMNNAME_ZZMiddleName, ZZMiddleName);
+		set_Value (COLUMNNAME_ZZMiddleName, ZZMiddleName);
 	}
 
 	/** Get Middle Name.
@@ -946,6 +954,28 @@ public class X_ZZPerson extends PO implements I_ZZPerson, I_Persistent
 	public String getZZ_ID_Passport_No()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_ID_Passport_No);
+	}
+
+	/** Set Disability.
+		@param ZZ_IsDisability Disability
+	*/
+	public void setZZ_IsDisability (boolean ZZ_IsDisability)
+	{
+		set_Value (COLUMNNAME_ZZ_IsDisability, Boolean.valueOf(ZZ_IsDisability));
+	}
+
+	/** Get Disability.
+		@return Disability	  */
+	public boolean isZZ_IsDisability()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsDisability);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	public I_ZZ_LI_CitizenResidentialStatus getZZ_LI_CitizenResidentialStatus() throws RuntimeException
