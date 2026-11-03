@@ -32,7 +32,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261028L;
+	private static final long serialVersionUID = 20261103L;
 
     /** Standard Constructor */
     public X_ZZLearnerDGProgramme (Properties ctx, int ZZLearnerDGProgramme_ID, String trxName)
@@ -40,8 +40,9 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       super (ctx, ZZLearnerDGProgramme_ID, trxName);
       /** if (ZZLearnerDGProgramme_ID == 0)
         {
+			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
-			setZZ_IsDisability (false);
+			setZZQCTO (false);
 // N
         } */
     }
@@ -52,8 +53,9 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       super (ctx, ZZLearnerDGProgramme_ID, trxName, virtualColumns);
       /** if (ZZLearnerDGProgramme_ID == 0)
         {
+			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
-			setZZ_IsDisability (false);
+			setZZQCTO (false);
 // N
         } */
     }
@@ -64,8 +66,9 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       super (ctx, ZZLearnerDGProgramme_UU, trxName);
       /** if (ZZLearnerDGProgramme_UU == null)
         {
+			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
-			setZZ_IsDisability (false);
+			setZZQCTO (false);
 // N
         } */
     }
@@ -76,8 +79,9 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       super (ctx, ZZLearnerDGProgramme_UU, trxName, virtualColumns);
       /** if (ZZLearnerDGProgramme_UU == null)
         {
+			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
-			setZZ_IsDisability (false);
+			setZZQCTO (false);
 // N
         } */
     }
@@ -369,6 +373,85 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return ii.intValue();
 	}
 
+	/** Set Program Code.
+		@param ZZProgramCode Program Code
+	*/
+	public void setZZProgramCode (String ZZProgramCode)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZProgramCode, ZZProgramCode);
+	}
+
+	/** Get Program Code.
+		@return Program Code	  */
+	public String getZZProgramCode()
+	{
+		return (String)get_Value(COLUMNNAME_ZZProgramCode);
+	}
+
+	/** Set Program Title.
+		@param ZZProgramTitle Program Title
+	*/
+	public void setZZProgramTitle (String ZZProgramTitle)
+	{
+		set_ValueNoCheck (COLUMNNAME_ZZProgramTitle, ZZProgramTitle);
+	}
+
+	/** Get Program Title.
+		@return Program Title	  */
+	public String getZZProgramTitle()
+	{
+		return (String)get_Value(COLUMNNAME_ZZProgramTitle);
+	}
+
+	/** Learnership = Learnership */
+	public static final String ZZPROGRAMTYPE_Learnership = "Learnership";
+	/** QCTO Artisans = QCTO Artisans */
+	public static final String ZZPROGRAMTYPE_QCTOArtisans = "QCTO Artisans";
+	/** QCTO Learnership = QCTO Learnership */
+	public static final String ZZPROGRAMTYPE_QCTOLearnership = "QCTO Learnership";
+	/** QCTO Skills Programme = QCTO Skills Programme */
+	public static final String ZZPROGRAMTYPE_QCTOSkillsProgramme = "QCTO Skills Programme";
+	/** Skills Programme = Skills Programme */
+	public static final String ZZPROGRAMTYPE_SkillsProgramme = "Skills Programme";
+	/** Set Program Type.
+		@param ZZProgramType Program Type
+	*/
+	public void setZZProgramType (String ZZProgramType)
+	{
+
+		set_ValueNoCheck (COLUMNNAME_ZZProgramType, ZZProgramType);
+	}
+
+	/** Get Program Type.
+		@return Program Type	  */
+	public String getZZProgramType()
+	{
+		return (String)get_Value(COLUMNNAME_ZZProgramType);
+	}
+
+	/** Set ZZQCTO.
+		@param ZZQCTO ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
+	*/
+	public void setZZQCTO (boolean ZZQCTO)
+	{
+		set_Value (COLUMNNAME_ZZQCTO, Boolean.valueOf(ZZQCTO));
+	}
+
+	/** Get ZZQCTO.
+		@return ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
+	  */
+	public boolean isZZQCTO()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZQCTO);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	public org.compiere.model.I_AD_User getZZRegistere() throws RuntimeException
 	{
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
@@ -406,12 +489,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public Timestamp getZZRegistrationDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZRegistrationDate);
-	}
-
-	public org.compiere.model.I_AD_User getZZSecondarySDProviderContact() throws RuntimeException
-	{
-		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
-			.getPO(getZZSecondarySDProviderContact_ID(), get_TrxName());
 	}
 
 	/** Set Secondary SDP Contact.
@@ -737,6 +814,27 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return ii.intValue();
 	}
 
+	/** Set DG Type.
+		@param ZZ_DGProgram_ID DG Type
+	*/
+	public void setZZ_DGProgram_ID (int ZZ_DGProgram_ID)
+	{
+		if (ZZ_DGProgram_ID < 1)
+			set_Value (COLUMNNAME_ZZ_DGProgram_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_DGProgram_ID, Integer.valueOf(ZZ_DGProgram_ID));
+	}
+
+	/** Get DG Type.
+		@return DG Type	  */
+	public int getZZ_DGProgram_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_DGProgram_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	/** Set Date Not Registered.
 		@param ZZ_DateNotRegistered Date Not Registered
 	*/
@@ -913,6 +1011,10 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public static final String ZZ_DOCSTATUS_Registered = "RG";
 	/** Recommended for Registration - Mgr - LP Ops = RR */
 	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPOps = "RR";
+	/** Recommended for Registration - Mgr - LP Strat = RS */
+	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPStrat = "RS";
+	/** Submitted to Snr Admin Finance = SA */
+	public static final String ZZ_DOCSTATUS_SubmittedToSnrAdminFinance = "SA";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
@@ -977,28 +1079,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
-	}
-
-	/** Set Disability.
-		@param ZZ_IsDisability Disability
-	*/
-	public void setZZ_IsDisability (boolean ZZ_IsDisability)
-	{
-		set_Value (COLUMNNAME_ZZ_IsDisability, Boolean.valueOf(ZZ_IsDisability));
-	}
-
-	/** Get Disability.
-		@return Disability	  */
-	public boolean isZZ_IsDisability()
-	{
-		Object oo = get_Value(COLUMNNAME_ZZ_IsDisability);
-		if (oo != null)
-		{
-			 if (oo instanceof Boolean)
-				 return ((Boolean)oo).booleanValue();
-			return "Y".equals(oo);
-		}
-		return false;
 	}
 
 	/** Set Mgr - LP Ops Date Not Recommended.
@@ -1147,5 +1227,20 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set zzlearnerprogram_id.
+		@param zzlearnerprogram_id zzlearnerprogram_id
+	*/
+	public void setzzlearnerprogram_id (String zzlearnerprogram_id)
+	{
+		set_ValueNoCheck (COLUMNNAME_zzlearnerprogram_id, zzlearnerprogram_id);
+	}
+
+	/** Get zzlearnerprogram_id.
+		@return zzlearnerprogram_id	  */
+	public String getzzlearnerprogram_id()
+	{
+		return (String)get_Value(COLUMNNAME_zzlearnerprogram_id);
 	}
 }

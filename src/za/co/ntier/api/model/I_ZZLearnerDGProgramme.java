@@ -32,7 +32,7 @@ public interface I_ZZLearnerDGProgramme
     /** TableName=ZZLearnerDGProgramme */
     public static final String Table_Name = "ZZLearnerDGProgramme";
 
-    /** AD_Table_ID=1000394 */
+    /** AD_Table_ID=1000655 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -240,6 +240,46 @@ s site
 
 	public org.compiere.model.I_AD_User getZZNotRegistere() throws RuntimeException;
 
+    /** Column name ZZProgramCode */
+    public static final String COLUMNNAME_ZZProgramCode = "ZZProgramCode";
+
+	/** Set Program Code	  */
+	public void setZZProgramCode (String ZZProgramCode);
+
+	/** Get Program Code	  */
+	public String getZZProgramCode();
+
+    /** Column name ZZProgramTitle */
+    public static final String COLUMNNAME_ZZProgramTitle = "ZZProgramTitle";
+
+	/** Set Program Title	  */
+	public void setZZProgramTitle (String ZZProgramTitle);
+
+	/** Get Program Title	  */
+	public String getZZProgramTitle();
+
+    /** Column name ZZProgramType */
+    public static final String COLUMNNAME_ZZProgramType = "ZZProgramType";
+
+	/** Set Program Type	  */
+	public void setZZProgramType (String ZZProgramType);
+
+	/** Get Program Type	  */
+	public String getZZProgramType();
+
+    /** Column name ZZQCTO */
+    public static final String COLUMNNAME_ZZQCTO = "ZZQCTO";
+
+	/** Set ZZQCTO.
+	  * ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
+	  */
+	public void setZZQCTO (boolean ZZQCTO);
+
+	/** Get ZZQCTO.
+	  * ms_learnerlearnership.qcto (source data is messy free text - no crosswalk attempted)
+	  */
+	public boolean isZZQCTO();
+
     /** Column name ZZRegisteredBy */
     public static final String COLUMNNAME_ZZRegisteredBy = "ZZRegisteredBy";
 
@@ -268,8 +308,6 @@ s site
 
 	/** Get Secondary SDP Contact	  */
 	public int getZZSecondarySDProviderContact_ID();
-
-	public org.compiere.model.I_AD_User getZZSecondarySDProviderContact() throws RuntimeException;
 
     /** Column name ZZSecondarySDProviderLevy */
     public static final String COLUMNNAME_ZZSecondarySDProviderLevy = "ZZSecondarySDProviderLevy";
@@ -407,6 +445,15 @@ s site
 
 	public org.compiere.model.I_AD_User getZZ_AdminLPOps_RecommendedBy() throws RuntimeException;
 
+    /** Column name ZZ_DGProgram_ID */
+    public static final String COLUMNNAME_ZZ_DGProgram_ID = "ZZ_DGProgram_ID";
+
+	/** Set DG Type	  */
+	public void setZZ_DGProgram_ID (int ZZ_DGProgram_ID);
+
+	/** Get DG Type	  */
+	public int getZZ_DGProgram_ID();
+
     /** Column name ZZ_DateNotRegistered */
     public static final String COLUMNNAME_ZZ_DateNotRegistered = "ZZ_DateNotRegistered";
 
@@ -457,15 +504,6 @@ s site
 	public int getZZ_Employer_ID();
 
 	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException;
-
-    /** Column name ZZ_IsDisability */
-    public static final String COLUMNNAME_ZZ_IsDisability = "ZZ_IsDisability";
-
-	/** Set Disability	  */
-	public void setZZ_IsDisability (boolean ZZ_IsDisability);
-
-	/** Get Disability	  */
-	public boolean isZZ_IsDisability();
 
     /** Column name ZZ_MgrLPOps_DateNotRecommended */
     public static final String COLUMNNAME_ZZ_MgrLPOps_DateNotRecommended = "ZZ_MgrLPOps_DateNotRecommended";
@@ -539,4 +577,13 @@ s site
 	public int getZZ_SDP_ID();
 
 	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException;
+
+    /** Column name zzlearnerprogram_id */
+    public static final String COLUMNNAME_zzlearnerprogram_id = "zzlearnerprogram_id";
+
+	/** Set zzlearnerprogram_id	  */
+	public void setzzlearnerprogram_id (String zzlearnerprogram_id);
+
+	/** Get zzlearnerprogram_id	  */
+	public String getzzlearnerprogram_id();
 }
