@@ -32,7 +32,7 @@ public class X_ZZLearnerTermination extends PO implements I_ZZLearnerTermination
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261103L;
+	private static final long serialVersionUID = 20261104L;
 
     /** Standard Constructor */
     public X_ZZLearnerTermination (Properties ctx, int ZZLearnerTermination_ID, String trxName)
@@ -40,6 +40,8 @@ public class X_ZZLearnerTermination extends PO implements I_ZZLearnerTermination
       super (ctx, ZZLearnerTermination_ID, trxName);
       /** if (ZZLearnerTermination_ID == 0)
         {
+			setZZIsPermanentEmployment (false);
+// N
 			setZZLearnerTermination_ID (0);
         } */
     }
@@ -50,6 +52,8 @@ public class X_ZZLearnerTermination extends PO implements I_ZZLearnerTermination
       super (ctx, ZZLearnerTermination_ID, trxName, virtualColumns);
       /** if (ZZLearnerTermination_ID == 0)
         {
+			setZZIsPermanentEmployment (false);
+// N
 			setZZLearnerTermination_ID (0);
         } */
     }
@@ -60,6 +64,8 @@ public class X_ZZLearnerTermination extends PO implements I_ZZLearnerTermination
       super (ctx, ZZLearnerTermination_UU, trxName);
       /** if (ZZLearnerTermination_UU == null)
         {
+			setZZIsPermanentEmployment (false);
+// N
 			setZZLearnerTermination_ID (0);
         } */
     }
@@ -70,6 +76,8 @@ public class X_ZZLearnerTermination extends PO implements I_ZZLearnerTermination
       super (ctx, ZZLearnerTermination_UU, trxName, virtualColumns);
       /** if (ZZLearnerTermination_UU == null)
         {
+			setZZIsPermanentEmployment (false);
+// N
 			setZZLearnerTermination_ID (0);
         } */
     }
@@ -134,6 +142,28 @@ public class X_ZZLearnerTermination extends PO implements I_ZZLearnerTermination
 		return (String)get_Value(COLUMNNAME_DocumentNo);
 	}
 
+	/** Set Permanent Employment Declaration.
+		@param ZZIsPermanentEmployment Permanent Employment Declaration
+	*/
+	public void setZZIsPermanentEmployment (boolean ZZIsPermanentEmployment)
+	{
+		set_Value (COLUMNNAME_ZZIsPermanentEmployment, Boolean.valueOf(ZZIsPermanentEmployment));
+	}
+
+	/** Get Permanent Employment Declaration.
+		@return Permanent Employment Declaration	  */
+	public boolean isZZIsPermanentEmployment()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZIsPermanentEmployment);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	/** Set Learner Termination.
 		@param ZZLearnerTermination_ID Learner Termination
 	*/
@@ -195,6 +225,21 @@ public class X_ZZLearnerTermination extends PO implements I_ZZLearnerTermination
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Termination Date.
+		@param ZZTerminationDate Termination Date
+	*/
+	public void setZZTerminationDate (Timestamp ZZTerminationDate)
+	{
+		set_Value (COLUMNNAME_ZZTerminationDate, ZZTerminationDate);
+	}
+
+	/** Get Termination Date.
+		@return Termination Date	  */
+	public Timestamp getZZTerminationDate()
+	{
+		return (Timestamp)get_Value(COLUMNNAME_ZZTerminationDate);
 	}
 
 	/** Exec Approve = AE */

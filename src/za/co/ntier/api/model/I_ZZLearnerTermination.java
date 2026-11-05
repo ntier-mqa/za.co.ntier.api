@@ -135,6 +135,15 @@ public interface I_ZZLearnerTermination
 	  */
 	public int getUpdatedBy();
 
+    /** Column name ZZIsPermanentEmployment */
+    public static final String COLUMNNAME_ZZIsPermanentEmployment = "ZZIsPermanentEmployment";
+
+	/** Set Permanent Employment Declaration	  */
+	public void setZZIsPermanentEmployment (boolean ZZIsPermanentEmployment);
+
+	/** Get Permanent Employment Declaration	  */
+	public boolean isZZIsPermanentEmployment();
+
     /** Column name ZZLearnerTermination_ID */
     public static final String COLUMNNAME_ZZLearnerTermination_ID = "ZZLearnerTermination_ID";
 
@@ -163,6 +172,15 @@ public interface I_ZZLearnerTermination
 	public int getZZLearner_ID();
 
 	public I_ZZLearner getZZLearner() throws RuntimeException;
+
+    /** Column name ZZTerminationDate */
+    public static final String COLUMNNAME_ZZTerminationDate = "ZZTerminationDate";
+
+	/** Set Termination Date	  */
+	public void setZZTerminationDate (Timestamp ZZTerminationDate);
+
+	/** Get Termination Date	  */
+	public Timestamp getZZTerminationDate();
 
     /** Column name ZZ_DocAction */
     public static final String COLUMNNAME_ZZ_DocAction = "ZZ_DocAction";
