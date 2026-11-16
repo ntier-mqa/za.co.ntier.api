@@ -160,6 +160,19 @@ s site
 	/** Get Contract Number	  */
 	public String getZZContractNumber();
 
+    /** Column name ZZEmployedBeforeAgreement */
+    public static final String COLUMNNAME_ZZEmployedBeforeAgreement = "ZZEmployedBeforeAgreement";
+
+	/** Set Employed Before Agreement.
+	  * Were you party to a workplace-based learning programme agreement at any time in the past before concluding this agreement?
+	  */
+	public void setZZEmployedBeforeAgreement (boolean ZZEmployedBeforeAgreement);
+
+	/** Get Employed Before Agreement.
+	  * Were you party to a workplace-based learning programme agreement at any time in the past before concluding this agreement?
+	  */
+	public boolean isZZEmployedBeforeAgreement();
+
     /** Column name ZZFinancialYear_ID */
     public static final String COLUMNNAME_ZZFinancialYear_ID = "ZZFinancialYear_ID";
 
@@ -239,6 +252,19 @@ s site
 	public int getZZNotRegisteredBy();
 
 	public org.compiere.model.I_AD_User getZZNotRegistere() throws RuntimeException;
+
+    /** Column name ZZPastWorkplaceAgreement */
+    public static final String COLUMNNAME_ZZPastWorkplaceAgreement = "ZZPastWorkplaceAgreement";
+
+	/** Set Past Workplace Agreement.
+	  * Were you employed by your employer before concluding this Agreement?
+	  */
+	public void setZZPastWorkplaceAgreement (boolean ZZPastWorkplaceAgreement);
+
+	/** Get Past Workplace Agreement.
+	  * Were you employed by your employer before concluding this Agreement?
+	  */
+	public boolean isZZPastWorkplaceAgreement();
 
     /** Column name ZZProgramCode */
     public static final String COLUMNNAME_ZZProgramCode = "ZZProgramCode";

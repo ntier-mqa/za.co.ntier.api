@@ -32,7 +32,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261103L;
+	private static final long serialVersionUID = 20261116L;
 
     /** Standard Constructor */
     public X_ZZLearnerDGProgramme (Properties ctx, int ZZLearnerDGProgramme_ID, String trxName)
@@ -40,8 +40,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       super (ctx, ZZLearnerDGProgramme_ID, trxName);
       /** if (ZZLearnerDGProgramme_ID == 0)
         {
+			setZZEmployedBeforeAgreement (false);
+// N
 			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
+			setZZPastWorkplaceAgreement (false);
+// N
 			setZZQCTO (false);
 // N
         } */
@@ -53,8 +57,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       super (ctx, ZZLearnerDGProgramme_ID, trxName, virtualColumns);
       /** if (ZZLearnerDGProgramme_ID == 0)
         {
+			setZZEmployedBeforeAgreement (false);
+// N
 			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
+			setZZPastWorkplaceAgreement (false);
+// N
 			setZZQCTO (false);
 // N
         } */
@@ -66,8 +74,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       super (ctx, ZZLearnerDGProgramme_UU, trxName);
       /** if (ZZLearnerDGProgramme_UU == null)
         {
+			setZZEmployedBeforeAgreement (false);
+// N
 			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
+			setZZPastWorkplaceAgreement (false);
+// N
 			setZZQCTO (false);
 // N
         } */
@@ -79,8 +91,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
       super (ctx, ZZLearnerDGProgramme_UU, trxName, virtualColumns);
       /** if (ZZLearnerDGProgramme_UU == null)
         {
+			setZZEmployedBeforeAgreement (false);
+// N
 			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
+			setZZPastWorkplaceAgreement (false);
+// N
 			setZZQCTO (false);
 // N
         } */
@@ -188,6 +204,29 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public String getZZContractNumber()
 	{
 		return (String)get_Value(COLUMNNAME_ZZContractNumber);
+	}
+
+	/** Set Employed Before Agreement.
+		@param ZZEmployedBeforeAgreement Were you party to a workplace-based learning programme agreement at any time in the past before concluding this agreement?
+	*/
+	public void setZZEmployedBeforeAgreement (boolean ZZEmployedBeforeAgreement)
+	{
+		set_Value (COLUMNNAME_ZZEmployedBeforeAgreement, Boolean.valueOf(ZZEmployedBeforeAgreement));
+	}
+
+	/** Get Employed Before Agreement.
+		@return Were you party to a workplace-based learning programme agreement at any time in the past before concluding this agreement?
+	  */
+	public boolean isZZEmployedBeforeAgreement()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZEmployedBeforeAgreement);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	public org.compiere.model.I_C_Year getZZFinancialYear() throws RuntimeException
@@ -371,6 +410,29 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Past Workplace Agreement.
+		@param ZZPastWorkplaceAgreement Were you employed by your employer before concluding this Agreement?
+	*/
+	public void setZZPastWorkplaceAgreement (boolean ZZPastWorkplaceAgreement)
+	{
+		set_Value (COLUMNNAME_ZZPastWorkplaceAgreement, Boolean.valueOf(ZZPastWorkplaceAgreement));
+	}
+
+	/** Get Past Workplace Agreement.
+		@return Were you employed by your employer before concluding this Agreement?
+	  */
+	public boolean isZZPastWorkplaceAgreement()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZPastWorkplaceAgreement);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	/** Set Program Code.
