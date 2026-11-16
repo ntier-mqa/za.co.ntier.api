@@ -32,7 +32,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261029L;
+	private static final long serialVersionUID = 20261116L;
 
     /** Standard Constructor */
     public X_ZZ_Program_Master_Data (Properties ctx, int ZZ_Program_Master_Data_ID, String trxName)
@@ -43,6 +43,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			setIsEnterQualification (false);
 // N
 			setZZ_IsLearnerRegistration (false);
+// N
+			setZZ_Is_Employer_Based (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -58,6 +60,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 // N
 			setZZ_IsLearnerRegistration (false);
 // N
+			setZZ_Is_Employer_Based (false);
+// N
 			setZZ_Program_Master_Data_ID (0);
         } */
     }
@@ -72,6 +76,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 // N
 			setZZ_IsLearnerRegistration (false);
 // N
+			setZZ_Is_Employer_Based (false);
+// N
 			setZZ_Program_Master_Data_ID (0);
         } */
     }
@@ -85,6 +91,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			setIsEnterQualification (false);
 // N
 			setZZ_IsLearnerRegistration (false);
+// N
+			setZZ_Is_Employer_Based (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -330,6 +338,21 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 		return (String)get_Value(COLUMNNAME_ZZSupportInfo);
 	}
 
+	/** Set Host Company Financial Obligations.
+		@param ZZ_Comp_Fin_Oblig Host Company Financial Obligations
+	*/
+	public void setZZ_Comp_Fin_Oblig (String ZZ_Comp_Fin_Oblig)
+	{
+		set_Value (COLUMNNAME_ZZ_Comp_Fin_Oblig, ZZ_Comp_Fin_Oblig);
+	}
+
+	/** Get Host Company Financial Obligations.
+		@return Host Company Financial Obligations	  */
+	public String getZZ_Comp_Fin_Oblig()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Comp_Fin_Oblig);
+	}
+
 	/** Levy paying = LP */
 	public static final String ZZ_CRITERIA_LevyPaying = "LP";
 	/** Organization in MQA sector = OS */
@@ -409,8 +432,12 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCACTION_FinalApprovalDoNotApprove = "FA";
 	/** PrepareCEO = PC */
 	public static final String ZZ_DOCACTION_PrepareCEO = "PC";
+	/** Refer Back = RB */
+	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Register = RG */
+	public static final String ZZ_DOCACTION_Register = "RG";
 	/** Re-Submit = RS */
 	public static final String ZZ_DOCACTION_Re_Submit = "RS";
 	/** Submit = S1 */
@@ -457,12 +484,16 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
+	/** Recommended &#8211; Mgr = AD */
+	public static final String ZZ_DOCSTATUS_RecommendedMgr = "AD";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
 	/** Prepared for CEO = CF */
 	public static final String ZZ_DOCSTATUS_PreparedForCEO = "CF";
 	/** Completed = CO */
 	public static final String ZZ_DOCSTATUS_Completed = "CO";
+	/** Created = CR */
+	public static final String ZZ_DOCSTATUS_Created = "CR";
 	/** Draft = DR */
 	public static final String ZZ_DOCSTATUS_Draft = "DR";
 	/** Error Importing = EE */
@@ -497,10 +528,14 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_NotApprovedByITManager = "NI";
 	/** Not Approved by LM = NL */
 	public static final String ZZ_DOCSTATUS_NotApprovedByLM = "NL";
+	/** Not Approved = NP */
+	public static final String ZZ_DOCSTATUS_NotApproved = "NP";
 	/** Not Recommended = NR */
 	public static final String ZZ_DOCSTATUS_NotRecommended = "NR";
 	/** Not Approved by Snr Admin Finance = NS */
 	public static final String ZZ_DOCSTATUS_NotApprovedBySnrAdminFinance = "NS";
+	/** Not Verified = NV */
+	public static final String ZZ_DOCSTATUS_NotVerified = "NV";
 	/** Pending = PE */
 	public static final String ZZ_DOCSTATUS_Pending = "PE";
 	/** Query = QR */
@@ -513,6 +548,14 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_RecommendedByCFO = "R3";
 	/** Recommended By CEO = R4 */
 	public static final String ZZ_DOCSTATUS_RecommendedByCEO = "R4";
+	/** Recommended By Officer - QA Accreditation = R5 */
+	public static final String ZZ_DOCSTATUS_RecommendedByOfficer_QAAccreditation = "R5";
+	/** Recommended By Mgr - QA Accreditation = R6 */
+	public static final String ZZ_DOCSTATUS_RecommendedByMgr_QAAccreditation = "R6";
+	/** Recommended By Snr Mgr QA = R7 */
+	public static final String ZZ_DOCSTATUS_RecommendedBySnrMgrQA = "R7";
+	/** Recommended By CRO = R8 */
+	public static final String ZZ_DOCSTATUS_RecommendedByCRO = "R8";
 	/** Recommended for Approval = RA */
 	public static final String ZZ_DOCSTATUS_RecommendedForApproval = "RA";
 	/** Recommended = RC */
@@ -521,8 +564,16 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_RecommendedBySeniorMgrSDR = "RD";
 	/** Recommended for Evaluation = RE */
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
-	/** Submitted to Manager Finance Consumables = SC */
-	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
+	/** Registered = RG */
+	public static final String ZZ_DOCSTATUS_Registered = "RG";
+	/** Recommended - Mgr = RR */
+	public static final String ZZ_DOCSTATUS_Recommended_Mgr = "RR";
+	/** Recommended for Registration - Mgr - LP Strat = RS */
+	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPStrat = "RS";
+	/** Submitted to Snr Admin Finance = SA */
+	public static final String ZZ_DOCSTATUS_SubmittedToSnrAdminFinance = "SA";
+	/** Submitted to Manager Admin Finance = SC */
+	public static final String ZZ_DOCSTATUS_SubmittedToManagerAdminFinance = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
 	public static final String ZZ_DOCSTATUS_SubmittedToSDLFinanceMgr = "SD";
 	/** Submitted To IT Manager = SI */
@@ -533,6 +584,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
 	/** Transfer Out = TO */
 	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
+	/** Terminated = TR */
+	public static final String ZZ_DOCSTATUS_Terminated = "TR";
 	/** Updated by SDR Admin = UA */
 	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
 	/** Uploaded = UP */
@@ -557,6 +610,28 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public String getZZ_DocStatus()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
+	}
+
+	/** Set Employer Based.
+		@param ZZ_Is_Employer_Based Employer Based
+	*/
+	public void setZZ_Is_Employer_Based (boolean ZZ_Is_Employer_Based)
+	{
+		set_Value (COLUMNNAME_ZZ_Is_Employer_Based, Boolean.valueOf(ZZ_Is_Employer_Based));
+	}
+
+	/** Get Employer Based.
+		@return Employer Based	  */
+	public boolean isZZ_Is_Employer_Based()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Is_Employer_Based);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	/** Set Program Master Data.
@@ -648,7 +723,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			 return 0;
 		return ii.intValue();
 	}
-	
+
 	/**
 	 * Set Learner Registration.
 	 * 

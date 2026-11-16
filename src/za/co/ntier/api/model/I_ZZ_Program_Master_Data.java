@@ -235,6 +235,15 @@ public interface I_ZZ_Program_Master_Data
 	/** Get Support Info	  */
 	public String getZZSupportInfo();
 
+    /** Column name ZZ_Comp_Fin_Oblig */
+    public static final String COLUMNNAME_ZZ_Comp_Fin_Oblig = "ZZ_Comp_Fin_Oblig";
+
+	/** Set Host Company Financial Obligations	  */
+	public void setZZ_Comp_Fin_Oblig (String ZZ_Comp_Fin_Oblig);
+
+	/** Get Host Company Financial Obligations	  */
+	public String getZZ_Comp_Fin_Oblig();
+
     /** Column name ZZ_Criteria */
     public static final String COLUMNNAME_ZZ_Criteria = "ZZ_Criteria";
 
@@ -289,6 +298,15 @@ public interface I_ZZ_Program_Master_Data
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
 
+    /** Column name ZZ_Is_Employer_Based */
+    public static final String COLUMNNAME_ZZ_Is_Employer_Based = "ZZ_Is_Employer_Based";
+
+	/** Set Employer Based	  */
+	public void setZZ_Is_Employer_Based (boolean ZZ_Is_Employer_Based);
+
+	/** Get Employer Based	  */
+	public boolean isZZ_Is_Employer_Based();
+
     /** Column name ZZ_Program_Master_Data_ID */
     public static final String COLUMNNAME_ZZ_Program_Master_Data_ID = "ZZ_Program_Master_Data_ID";
 
@@ -328,7 +346,7 @@ public interface I_ZZ_Program_Master_Data
 	public int getZZ_Submitter_ID();
 
 	public org.compiere.model.I_AD_User getZZ_Submitter() throws RuntimeException;
-	
+
     /** Column name ZZ_IsLearnerRegistration */
     public static final String COLUMNNAME_ZZ_IsLearnerRegistration = "ZZ_IsLearnerRegistration";
 
