@@ -471,6 +471,24 @@ s site
 
 	public org.compiere.model.I_AD_User getZZ_AdminLPOps_RecommendedBy() throws RuntimeException;
 
+    /** Column name ZZ_AltContactNumber */
+    public static final String COLUMNNAME_ZZ_AltContactNumber = "ZZ_AltContactNumber";
+
+	/** Set Alternate Contact Number	  */
+	public void setZZ_AltContactNumber (String ZZ_AltContactNumber);
+
+	/** Get Alternate Contact Number	  */
+	public String getZZ_AltContactNumber();
+
+    /** Column name ZZ_AltContactPerson */
+    public static final String COLUMNNAME_ZZ_AltContactPerson = "ZZ_AltContactPerson";
+
+	/** Set Alternate Contact Person	  */
+	public void setZZ_AltContactPerson (String ZZ_AltContactPerson);
+
+	/** Get Alternate Contact Person	  */
+	public String getZZ_AltContactPerson();
+
     /** Column name ZZ_DGProgram_ID */
     public static final String COLUMNNAME_ZZ_DGProgram_ID = "ZZ_DGProgram_ID";
 
@@ -515,6 +533,33 @@ s site
 
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
+
+    /** Column name ZZ_EmployerContactEmail */
+    public static final String COLUMNNAME_ZZ_EmployerContactEmail = "ZZ_EmployerContactEmail";
+
+	/** Set Employer Contact Email	  */
+	public void setZZ_EmployerContactEmail (String ZZ_EmployerContactEmail);
+
+	/** Get Employer Contact Email	  */
+	public String getZZ_EmployerContactEmail();
+
+    /** Column name ZZ_EmployerContactNo */
+    public static final String COLUMNNAME_ZZ_EmployerContactNo = "ZZ_EmployerContactNo";
+
+	/** Set Employer Contact Number	  */
+	public void setZZ_EmployerContactNo (String ZZ_EmployerContactNo);
+
+	/** Get Employer Contact Number	  */
+	public String getZZ_EmployerContactNo();
+
+    /** Column name ZZ_EmployerContactPerson */
+    public static final String COLUMNNAME_ZZ_EmployerContactPerson = "ZZ_EmployerContactPerson";
+
+	/** Set Employer Contact Person	  */
+	public void setZZ_EmployerContactPerson (String ZZ_EmployerContactPerson);
+
+	/** Get Employer Contact Person	  */
+	public String getZZ_EmployerContactPerson();
 
     /** Column name ZZ_Employer_ID */
     public static final String COLUMNNAME_ZZ_Employer_ID = "ZZ_Employer_ID";

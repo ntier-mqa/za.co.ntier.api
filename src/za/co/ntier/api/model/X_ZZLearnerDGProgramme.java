@@ -32,7 +32,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261116L;
+	private static final long serialVersionUID = 20261117L;
 
     /** Standard Constructor */
     public X_ZZLearnerDGProgramme (Properties ctx, int ZZLearnerDGProgramme_ID, String trxName)
@@ -876,6 +876,36 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return ii.intValue();
 	}
 
+	/** Set Alternate Contact Number.
+		@param ZZ_AltContactNumber Alternate Contact Number
+	*/
+	public void setZZ_AltContactNumber (String ZZ_AltContactNumber)
+	{
+		set_Value (COLUMNNAME_ZZ_AltContactNumber, ZZ_AltContactNumber);
+	}
+
+	/** Get Alternate Contact Number.
+		@return Alternate Contact Number	  */
+	public String getZZ_AltContactNumber()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_AltContactNumber);
+	}
+
+	/** Set Alternate Contact Person.
+		@param ZZ_AltContactPerson Alternate Contact Person
+	*/
+	public void setZZ_AltContactPerson (String ZZ_AltContactPerson)
+	{
+		set_Value (COLUMNNAME_ZZ_AltContactPerson, ZZ_AltContactPerson);
+	}
+
+	/** Get Alternate Contact Person.
+		@return Alternate Contact Person	  */
+	public String getZZ_AltContactPerson()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_AltContactPerson);
+	}
+
 	/** Set DG Type.
 		@param ZZ_DGProgram_ID DG Type
 	*/
@@ -989,8 +1019,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
-	/** Recommended &#8211; Admin = AD */
-	public static final String ZZ_DOCSTATUS_RecommendedAdmin = "AD";
+	/** Recommended &#8211; Mgr = AD */
+	public static final String ZZ_DOCSTATUS_RecommendedMgr = "AD";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
 	/** Prepared for CEO = CF */
@@ -1113,6 +1143,51 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public String getZZ_DocStatus()
 	{
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
+	}
+
+	/** Set Employer Contact Email.
+		@param ZZ_EmployerContactEmail Employer Contact Email
+	*/
+	public void setZZ_EmployerContactEmail (String ZZ_EmployerContactEmail)
+	{
+		set_Value (COLUMNNAME_ZZ_EmployerContactEmail, ZZ_EmployerContactEmail);
+	}
+
+	/** Get Employer Contact Email.
+		@return Employer Contact Email	  */
+	public String getZZ_EmployerContactEmail()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_EmployerContactEmail);
+	}
+
+	/** Set Employer Contact Number.
+		@param ZZ_EmployerContactNo Employer Contact Number
+	*/
+	public void setZZ_EmployerContactNo (String ZZ_EmployerContactNo)
+	{
+		set_Value (COLUMNNAME_ZZ_EmployerContactNo, ZZ_EmployerContactNo);
+	}
+
+	/** Get Employer Contact Number.
+		@return Employer Contact Number	  */
+	public String getZZ_EmployerContactNo()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_EmployerContactNo);
+	}
+
+	/** Set Employer Contact Person.
+		@param ZZ_EmployerContactPerson Employer Contact Person
+	*/
+	public void setZZ_EmployerContactPerson (String ZZ_EmployerContactPerson)
+	{
+		set_Value (COLUMNNAME_ZZ_EmployerContactPerson, ZZ_EmployerContactPerson);
+	}
+
+	/** Get Employer Contact Person.
+		@return Employer Contact Person	  */
+	public String getZZ_EmployerContactPerson()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_EmployerContactPerson);
 	}
 
 	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException

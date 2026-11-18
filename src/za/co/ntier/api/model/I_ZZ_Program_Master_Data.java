@@ -300,12 +300,45 @@ public interface I_ZZ_Program_Master_Data
 
     /** Column name ZZ_Is_Employer_Based */
     public static final String COLUMNNAME_ZZ_Is_Employer_Based = "ZZ_Is_Employer_Based";
+    /** Column name ZZ_IsIncludeFundYear */
+    public static final String COLUMNNAME_ZZ_IsIncludeFundYear = "ZZ_IsIncludeFundYear";
 
 	/** Set Employer Based	  */
 	public void setZZ_Is_Employer_Based (boolean ZZ_Is_Employer_Based);
+	/** Set Include Funding Year	  */
+	public void setZZ_IsIncludeFundYear (boolean ZZ_IsIncludeFundYear);
 
 	/** Get Employer Based	  */
 	public boolean isZZ_Is_Employer_Based();
+	/** Get Include Funding Year	  */
+	public boolean isZZ_IsIncludeFundYear();
+
+    /** Column name ZZ_IsIncludeQual */
+    public static final String COLUMNNAME_ZZ_IsIncludeQual = "ZZ_IsIncludeQual";
+
+	/** Set Include Qualification	  */
+	public void setZZ_IsIncludeQual (boolean ZZ_IsIncludeQual);
+
+	/** Get Include Qualification	  */
+	public boolean isZZ_IsIncludeQual();
+
+    /** Column name ZZ_IsInstitution */
+    public static final String COLUMNNAME_ZZ_IsInstitution = "ZZ_IsInstitution";
+
+	/** Set Institution	  */
+	public void setZZ_IsInstitution (boolean ZZ_IsInstitution);
+
+	/** Get Institution	  */
+	public boolean isZZ_IsInstitution();
+
+    /** Column name ZZ_IsLearnerRegistration */
+    public static final String COLUMNNAME_ZZ_IsLearnerRegistration = "ZZ_IsLearnerRegistration";
+
+	/** Set Learner Registration	  */
+	public void setZZ_IsLearnerRegistration (boolean ZZ_IsLearnerRegistration);
+
+	/** Get Learner Registration	  */
+	public boolean isZZ_IsLearnerRegistration();
 
     /** Column name ZZ_Program_Master_Data_ID */
     public static final String COLUMNNAME_ZZ_Program_Master_Data_ID = "ZZ_Program_Master_Data_ID";
@@ -346,13 +379,4 @@ public interface I_ZZ_Program_Master_Data
 	public int getZZ_Submitter_ID();
 
 	public org.compiere.model.I_AD_User getZZ_Submitter() throws RuntimeException;
-
-    /** Column name ZZ_IsLearnerRegistration */
-    public static final String COLUMNNAME_ZZ_IsLearnerRegistration = "ZZ_IsLearnerRegistration";
-
-	/** Set Learner Registration	  */
-	public void setZZ_IsLearnerRegistration (boolean ZZ_IsLearnerRegistration);
-
-	/** Get Learner Registration	  */
-	public boolean isZZ_IsLearnerRegistration();
 }

@@ -32,7 +32,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261116L;
+	private static final long serialVersionUID = 20261117L;
 
     /** Standard Constructor */
     public X_ZZ_Program_Master_Data (Properties ctx, int ZZ_Program_Master_Data_ID, String trxName)
@@ -42,9 +42,13 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
-			setZZ_IsLearnerRegistration (false);
+			setZZ_IsIncludeFundYear (false);
 // N
-			setZZ_Is_Employer_Based (false);
+			setZZ_IsIncludeQual (false);
+// N
+			setZZ_IsInstitution (false);
+// N
+			setZZ_IsLearnerRegistration (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -58,9 +62,14 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
-			setZZ_IsLearnerRegistration (false);
+			setZZ_IsIncludeFundYear (false);
 // N
 			setZZ_Is_Employer_Based (false);
+			setZZ_IsIncludeQual (false);
+// N
+			setZZ_IsInstitution (false);
+// N
+			setZZ_IsLearnerRegistration (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -74,9 +83,14 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
-			setZZ_IsLearnerRegistration (false);
+			setZZ_IsIncludeFundYear (false);
+// N
+			setZZ_IsIncludeQual (false);
+// N
+			setZZ_IsInstitution (false);
 // N
 			setZZ_Is_Employer_Based (false);
+			setZZ_IsLearnerRegistration (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -90,9 +104,14 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
-			setZZ_IsLearnerRegistration (false);
+			setZZ_IsIncludeFundYear (false);
 // N
 			setZZ_Is_Employer_Based (false);
+			setZZ_IsIncludeQual (false);
+// N
+			setZZ_IsInstitution (false);
+// N
+			setZZ_IsLearnerRegistration (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -566,14 +585,14 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
 	/** Registered = RG */
 	public static final String ZZ_DOCSTATUS_Registered = "RG";
-	/** Recommended - Mgr = RR */
-	public static final String ZZ_DOCSTATUS_Recommended_Mgr = "RR";
+	/** Recommended for Registration - Mgr - LP Ops = RR */
+	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPOps = "RR";
 	/** Recommended for Registration - Mgr - LP Strat = RS */
 	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPStrat = "RS";
 	/** Submitted to Snr Admin Finance = SA */
 	public static final String ZZ_DOCSTATUS_SubmittedToSnrAdminFinance = "SA";
-	/** Submitted to Manager Admin Finance = SC */
-	public static final String ZZ_DOCSTATUS_SubmittedToManagerAdminFinance = "SC";
+	/** Submitted to Manager Finance Consumables = SC */
+	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
 	public static final String ZZ_DOCSTATUS_SubmittedToSDLFinanceMgr = "SD";
 	/** Submitted To IT Manager = SI */
@@ -614,10 +633,17 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 
 	/** Set Employer Based.
 		@param ZZ_Is_Employer_Based Employer Based
+	/** Set Include Funding Year.
+		@param ZZ_IsIncludeFundYear Include Funding Year
 	*/
 	public void setZZ_Is_Employer_Based (boolean ZZ_Is_Employer_Based)
 	{
 		set_Value (COLUMNNAME_ZZ_Is_Employer_Based, Boolean.valueOf(ZZ_Is_Employer_Based));
+	}
+	
+	public void setZZ_IsIncludeFundYear (boolean ZZ_IsIncludeFundYear)
+	{
+		set_Value (COLUMNNAME_ZZ_IsIncludeFundYear, Boolean.valueOf(ZZ_IsIncludeFundYear));
 	}
 
 	/** Get Employer Based.
@@ -625,6 +651,86 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public boolean isZZ_Is_Employer_Based()
 	{
 		Object oo = get_Value(COLUMNNAME_ZZ_Is_Employer_Based);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+	
+	/** Get Include Funding Year.
+		@return Include Funding Year	  */
+	public boolean isZZ_IsIncludeFundYear()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsIncludeFundYear);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Include Qualification.
+		@param ZZ_IsIncludeQual Include Qualification
+	*/
+	public void setZZ_IsIncludeQual (boolean ZZ_IsIncludeQual)
+	{
+		set_Value (COLUMNNAME_ZZ_IsIncludeQual, Boolean.valueOf(ZZ_IsIncludeQual));
+	}
+
+	/** Get Include Qualification.
+		@return Include Qualification	  */
+	public boolean isZZ_IsIncludeQual()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsIncludeQual);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Institution.
+		@param ZZ_IsInstitution Institution
+	*/
+	public void setZZ_IsInstitution (boolean ZZ_IsInstitution)
+	{
+		set_Value (COLUMNNAME_ZZ_IsInstitution, Boolean.valueOf(ZZ_IsInstitution));
+	}
+
+	/** Get Institution.
+		@return Institution	  */
+	public boolean isZZ_IsInstitution()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsInstitution);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Learner Registration.
+		@param ZZ_IsLearnerRegistration Learner Registration
+	*/
+	public void setZZ_IsLearnerRegistration (boolean ZZ_IsLearnerRegistration)
+	{
+		set_Value (COLUMNNAME_ZZ_IsLearnerRegistration, Boolean.valueOf(ZZ_IsLearnerRegistration));
+	}
+
+	/** Get Learner Registration.
+		@return Learner Registration	  */
+	public boolean isZZ_IsLearnerRegistration()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsLearnerRegistration);
 		if (oo != null)
 		{
 			 if (oo instanceof Boolean)
@@ -722,32 +828,5 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
-	}
-
-	/**
-	 * Set Learner Registration.
-	 * 
-	 * @param ZZ_IsLearnerRegistration Learner Registration
-	 */
-	public void setZZ_IsLearnerRegistration(boolean ZZ_IsLearnerRegistration)
-	{
-		set_Value(COLUMNNAME_ZZ_IsLearnerRegistration, Boolean.valueOf(ZZ_IsLearnerRegistration));
-	}
-
-	/**
-	 * Get Learner Registration.
-	 * 
-	 * @return Learner Registration
-	 */
-	public boolean isZZ_IsLearnerRegistration()
-	{
-		Object oo = get_Value(COLUMNNAME_ZZ_IsLearnerRegistration);
-		if (oo != null)
-		{
-			if (oo instanceof Boolean)
-				return ((Boolean) oo).booleanValue();
-			return "Y".equals(oo);
-		}
-		return false;
 	}
 }
