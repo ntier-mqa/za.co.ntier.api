@@ -32,7 +32,7 @@ public interface I_ZZLearnerDGProgramme
     /** TableName=ZZLearnerDGProgramme */
     public static final String Table_Name = "ZZLearnerDGProgramme";
 
-    /** AD_Table_ID=1000655 */
+    /** AD_Table_ID=1000394 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -575,6 +575,21 @@ s site
 	public int getZZ_Employer_ID();
 
 	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException;
+
+    /** Column name ZZ_Institution_Qualifications_ID */
+    public static final String COLUMNNAME_ZZ_Institution_Qualifications_ID = "ZZ_Institution_Qualifications_ID";
+
+	/** Set Institution Qualifications.
+	  * Institution Qualifications
+	  */
+	public void setZZ_Institution_Qualifications_ID (int ZZ_Institution_Qualifications_ID);
+
+	/** Get Institution Qualifications.
+	  * Institution Qualifications
+	  */
+	public int getZZ_Institution_Qualifications_ID();
+
+	public I_ZZ_Institution_Qualifications getZZ_Institution_Qualifications() throws RuntimeException;
 
     /** Column name ZZ_MgrLPOps_DateNotRecommended */
     public static final String COLUMNNAME_ZZ_MgrLPOps_DateNotRecommended = "ZZ_MgrLPOps_DateNotRecommended";

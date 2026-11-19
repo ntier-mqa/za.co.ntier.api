@@ -32,7 +32,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261117L;
+	private static final long serialVersionUID = 20261119L;
 
     /** Standard Constructor */
     public X_ZZLearnerDGProgramme (Properties ctx, int ZZLearnerDGProgramme_ID, String trxName)
@@ -973,6 +973,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
+	/** Register = RG */
+	public static final String ZZ_DOCACTION_Register = "RG";
 	/** Re-Submit = RS */
 	public static final String ZZ_DOCACTION_Re_Submit = "RS";
 	/** Submit = S1 */
@@ -1019,8 +1021,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
-	/** Recommended &#8211; Mgr = AD */
-	public static final String ZZ_DOCSTATUS_RecommendedMgr = "AD";
+	/** Recommended &#8211; Admin = AD */
+	public static final String ZZ_DOCSTATUS_RecommendedAdmin = "AD";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
 	/** Prepared for CEO = CF */
@@ -1101,12 +1103,10 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
 	/** Registered = RG */
 	public static final String ZZ_DOCSTATUS_Registered = "RG";
-	/** Recommended for Registration - Mgr - LP Ops = RR */
-	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPOps = "RR";
+	/** Recommended - Mgr = RR */
+	public static final String ZZ_DOCSTATUS_Recommended_Mgr = "RR";
 	/** Recommended for Registration - Mgr - LP Strat = RS */
 	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPStrat = "RS";
-	/** Submitted to Snr Admin Finance = SA */
-	public static final String ZZ_DOCSTATUS_SubmittedToSnrAdminFinance = "SA";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
@@ -1119,6 +1119,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
 	/** Transfer Out = TO */
 	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
+	/** Terminated = TR */
+	public static final String ZZ_DOCSTATUS_Terminated = "TR";
 	/** Updated by SDR Admin = UA */
 	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
 	/** Uploaded = UP */
@@ -1213,6 +1215,34 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public int getZZ_Employer_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Employer_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZ_Institution_Qualifications getZZ_Institution_Qualifications() throws RuntimeException
+	{
+		return (I_ZZ_Institution_Qualifications)MTable.get(getCtx(), I_ZZ_Institution_Qualifications.Table_ID)
+			.getPO(getZZ_Institution_Qualifications_ID(), get_TrxName());
+	}
+
+	/** Set Institution Qualifications.
+		@param ZZ_Institution_Qualifications_ID Institution Qualifications
+	*/
+	public void setZZ_Institution_Qualifications_ID (int ZZ_Institution_Qualifications_ID)
+	{
+		if (ZZ_Institution_Qualifications_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Institution_Qualifications_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Institution_Qualifications_ID, Integer.valueOf(ZZ_Institution_Qualifications_ID));
+	}
+
+	/** Get Institution Qualifications.
+		@return Institution Qualifications
+	  */
+	public int getZZ_Institution_Qualifications_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Institution_Qualifications_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
