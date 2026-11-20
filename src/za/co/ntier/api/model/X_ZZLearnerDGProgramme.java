@@ -276,6 +276,34 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return (String)get_Value(COLUMNNAME_ZZFundingType);
 	}
 
+	/** ZZ_Funding_Year AD_Reference_ID=1000368 */
+	public static final int ZZ_FUNDING_YEAR_AD_Reference_ID=1000368;
+	/** 1st Year = 1 */
+	public static final String ZZ_FUNDING_YEAR_1stYear = "1";
+	/** 2nd Year = 2 */
+	public static final String ZZ_FUNDING_YEAR_2ndYear = "2";
+	/** 3rd Year = 3 */
+	public static final String ZZ_FUNDING_YEAR_3rdYear = "3";
+	/** 4th Year = 4 */
+	public static final String ZZ_FUNDING_YEAR_4thYear = "4";
+	/** 5th Year = 5 */
+	public static final String ZZ_FUNDING_YEAR_5thYear = "5";
+	/** Set Funding Year.
+		@param ZZ_Funding_Year Funding Year
+	*/
+	public void setZZ_Funding_Year (String ZZ_Funding_Year)
+	{
+		set_Value (COLUMNNAME_ZZ_Funding_Year, ZZ_Funding_Year);
+	}
+
+	/** Get Funding Year.
+		@return Funding Year
+	  */
+	public String getZZ_Funding_Year()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Funding_Year);
+	}
+
 	public org.compiere.model.I_AD_User getZZLeadSDProviderContact() throws RuntimeException
 	{
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)

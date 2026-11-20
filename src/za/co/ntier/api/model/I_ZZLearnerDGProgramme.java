@@ -576,6 +576,19 @@ s site
 
 	public org.compiere.model.I_C_BPartner getZZ_Employer() throws RuntimeException;
 
+    /** Column name ZZ_Funding_Year */
+    public static final String COLUMNNAME_ZZ_Funding_Year = "ZZ_Funding_Year";
+
+	/** Set Funding Year.
+	  * Funding Year
+	  */
+	public void setZZ_Funding_Year (String ZZ_Funding_Year);
+
+	/** Get Funding Year.
+	  * Funding Year
+	  */
+	public String getZZ_Funding_Year();
+
     /** Column name ZZ_Institution_Qualifications_ID */
     public static final String COLUMNNAME_ZZ_Institution_Qualifications_ID = "ZZ_Institution_Qualifications_ID";
 
