@@ -1248,6 +1248,34 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return ii.intValue();
 	}
 
+	public I_ZZ_Institution getZZ_Institution() throws RuntimeException
+	{
+		return (I_ZZ_Institution)MTable.get(getCtx(), I_ZZ_Institution.Table_ID)
+			.getPO(getZZ_Institution_ID(), get_TrxName());
+	}
+
+	/** Set Institution.
+		@param ZZ_Institution_ID Institution
+	*/
+	public void setZZ_Institution_ID (int ZZ_Institution_ID)
+	{
+		if (ZZ_Institution_ID < 1) 
+			set_Value (COLUMNNAME_ZZ_Institution_ID, null);
+		else 
+			set_Value (COLUMNNAME_ZZ_Institution_ID, Integer.valueOf(ZZ_Institution_ID));
+	}
+
+	/** Get Institution.
+		@return Institution
+	  */
+	public int getZZ_Institution_ID() 
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Institution_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	public I_ZZ_Institution_Qualifications getZZ_Institution_Qualifications() throws RuntimeException
 	{
 		return (I_ZZ_Institution_Qualifications)MTable.get(getCtx(), I_ZZ_Institution_Qualifications.Table_ID)

@@ -589,6 +589,21 @@ s site
 	  */
 	public String getZZ_Funding_Year();
 
+    /** Column name ZZ_Institution_ID */
+    public static final String COLUMNNAME_ZZ_Institution_ID = "ZZ_Institution_ID";
+
+	/** Set Institution.
+	  * Institution
+	  */
+	public void setZZ_Institution_ID (int ZZ_Institution_ID);
+
+	/** Get Institution.
+	  * Institution
+	  */
+	public int getZZ_Institution_ID();
+
+	public I_ZZ_Institution getZZ_Institution() throws RuntimeException;
+
     /** Column name ZZ_Institution_Qualifications_ID */
     public static final String COLUMNNAME_ZZ_Institution_Qualifications_ID = "ZZ_Institution_Qualifications_ID";
 
