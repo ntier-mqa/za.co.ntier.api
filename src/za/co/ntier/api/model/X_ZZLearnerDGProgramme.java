@@ -32,7 +32,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261119L;
+	private static final long serialVersionUID = 20261124L;
 
     /** Standard Constructor */
     public X_ZZLearnerDGProgramme (Properties ctx, int ZZLearnerDGProgramme_ID, String trxName)
@@ -42,11 +42,16 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
         {
 			setZZEmployedBeforeAgreement (false);
 // N
-			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
 			setZZPastWorkplaceAgreement (false);
 // N
 			setZZQCTO (false);
+// N
+			setZZ_HasContractCopy (false);
+// N
+			setZZ_IsContractSpecificToPeriod (false);
+// N
+			setZZ_IsDisability (false);
 // N
         } */
     }
@@ -59,11 +64,16 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
         {
 			setZZEmployedBeforeAgreement (false);
 // N
-			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
 			setZZPastWorkplaceAgreement (false);
 // N
 			setZZQCTO (false);
+// N
+			setZZ_HasContractCopy (false);
+// N
+			setZZ_IsContractSpecificToPeriod (false);
+// N
+			setZZ_IsDisability (false);
 // N
         } */
     }
@@ -76,11 +86,16 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
         {
 			setZZEmployedBeforeAgreement (false);
 // N
-			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
 			setZZPastWorkplaceAgreement (false);
 // N
 			setZZQCTO (false);
+// N
+			setZZ_HasContractCopy (false);
+// N
+			setZZ_IsContractSpecificToPeriod (false);
+// N
+			setZZ_IsDisability (false);
 // N
         } */
     }
@@ -93,11 +108,16 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
         {
 			setZZEmployedBeforeAgreement (false);
 // N
-			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
 			setZZPastWorkplaceAgreement (false);
 // N
 			setZZQCTO (false);
+// N
+			setZZ_HasContractCopy (false);
+// N
+			setZZ_IsContractSpecificToPeriod (false);
+// N
+			setZZ_IsDisability (false);
 // N
         } */
     }
@@ -274,34 +294,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public String getZZFundingType()
 	{
 		return (String)get_Value(COLUMNNAME_ZZFundingType);
-	}
-
-	/** ZZ_Funding_Year AD_Reference_ID=1000368 */
-	public static final int ZZ_FUNDING_YEAR_AD_Reference_ID=1000368;
-	/** 1st Year = 1 */
-	public static final String ZZ_FUNDING_YEAR_1stYear = "1";
-	/** 2nd Year = 2 */
-	public static final String ZZ_FUNDING_YEAR_2ndYear = "2";
-	/** 3rd Year = 3 */
-	public static final String ZZ_FUNDING_YEAR_3rdYear = "3";
-	/** 4th Year = 4 */
-	public static final String ZZ_FUNDING_YEAR_4thYear = "4";
-	/** 5th Year = 5 */
-	public static final String ZZ_FUNDING_YEAR_5thYear = "5";
-	/** Set Funding Year.
-		@param ZZ_Funding_Year Funding Year
-	*/
-	public void setZZ_Funding_Year (String ZZ_Funding_Year)
-	{
-		set_Value (COLUMNNAME_ZZ_Funding_Year, ZZ_Funding_Year);
-	}
-
-	/** Get Funding Year.
-		@return Funding Year
-	  */
-	public String getZZ_Funding_Year()
-	{
-		return (String)get_Value(COLUMNNAME_ZZ_Funding_Year);
 	}
 
 	public org.compiere.model.I_AD_User getZZLeadSDProviderContact() throws RuntimeException
@@ -579,6 +571,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public Timestamp getZZRegistrationDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZRegistrationDate);
+	}
+
+	public org.compiere.model.I_AD_User getZZSecondarySDProviderContact() throws RuntimeException
+	{
+		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
+			.getPO(getZZSecondarySDProviderContact_ID(), get_TrxName());
 	}
 
 	/** Set Secondary SDP Contact.
@@ -1248,6 +1246,56 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return ii.intValue();
 	}
 
+	public static final int ZZ_FUNDING_YEAR_AD_Reference_ID=1000368;
+	/** 3rd Year =  3 */
+	public static final String ZZ_FUNDING_YEAR_3rdYear = " 3";
+	/** 1st Year = 1  */
+	public static final String ZZ_FUNDING_YEAR_1stYear = "1 ";
+	/** 2nd Year = 2 */
+	public static final String ZZ_FUNDING_YEAR_2ndYear = "2";
+	/** 4th Year = 4 */
+	public static final String ZZ_FUNDING_YEAR_4thYear = "4";
+	/** 5th Year = 5  */
+	public static final String ZZ_FUNDING_YEAR_5thYear = "5 ";
+	/** Set Funding Year.
+		@param ZZ_Funding_Year Funding Year
+	*/
+	public void setZZ_Funding_Year (String ZZ_Funding_Year)
+	{
+
+		set_Value (COLUMNNAME_ZZ_Funding_Year, ZZ_Funding_Year);
+	}
+
+	/** Get Funding Year.
+		@return Funding Year	  */
+	public String getZZ_Funding_Year()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Funding_Year);
+	}
+
+	/** Set Has Contract Copy.
+		@param ZZ_HasContractCopy Does the learner have a copy of the contract of employment?
+	*/
+	public void setZZ_HasContractCopy (boolean ZZ_HasContractCopy)
+	{
+		set_Value (COLUMNNAME_ZZ_HasContractCopy, Boolean.valueOf(ZZ_HasContractCopy));
+	}
+
+	/** Get Has Contract Copy.
+		@return Does the learner have a copy of the contract of employment?
+	  */
+	public boolean isZZ_HasContractCopy()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_HasContractCopy);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	public I_ZZ_Institution getZZ_Institution() throws RuntimeException
 	{
 		return (I_ZZ_Institution)MTable.get(getCtx(), I_ZZ_Institution.Table_ID)
@@ -1259,16 +1307,15 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	*/
 	public void setZZ_Institution_ID (int ZZ_Institution_ID)
 	{
-		if (ZZ_Institution_ID < 1) 
+		if (ZZ_Institution_ID < 1)
 			set_Value (COLUMNNAME_ZZ_Institution_ID, null);
-		else 
+		else
 			set_Value (COLUMNNAME_ZZ_Institution_ID, Integer.valueOf(ZZ_Institution_ID));
 	}
 
 	/** Get Institution.
-		@return Institution
-	  */
-	public int getZZ_Institution_ID() 
+		@return Institution	  */
+	public int getZZ_Institution_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Institution_ID);
 		if (ii == null)
@@ -1302,6 +1349,29 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set Contract Specific To Period.
+		@param ZZ_IsContractSpecificToPeriod Is the learner&#039;s contract of employment specific to the period of the agreement?
+	*/
+	public void setZZ_IsContractSpecificToPeriod (boolean ZZ_IsContractSpecificToPeriod)
+	{
+		set_Value (COLUMNNAME_ZZ_IsContractSpecificToPeriod, Boolean.valueOf(ZZ_IsContractSpecificToPeriod));
+	}
+
+	/** Get Contract Specific To Period.
+		@return Is the learner&#039;s contract of employment specific to the period of the agreement?
+	  */
+	public boolean isZZ_IsContractSpecificToPeriod()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsContractSpecificToPeriod);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	/** Set Mgr - LP Ops Date Not Recommended.

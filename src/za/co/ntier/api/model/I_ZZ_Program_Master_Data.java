@@ -298,18 +298,40 @@ public interface I_ZZ_Program_Master_Data
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
 
-    /** Column name ZZ_Is_Employer_Based */
-    public static final String COLUMNNAME_ZZ_Is_Employer_Based = "ZZ_Is_Employer_Based";
+    /** Column name ZZ_HasContractCopy */
+    public static final String COLUMNNAME_ZZ_HasContractCopy = "ZZ_HasContractCopy";
+
+	/** Set Has Contract Copy.
+	  * Does the learner have a copy of the contract of employment?
+	  */
+	public void setZZ_HasContractCopy (boolean ZZ_HasContractCopy);
+
+	/** Get Has Contract Copy.
+	  * Does the learner have a copy of the contract of employment?
+	  */
+	public boolean isZZ_HasContractCopy();
+
+    /** Column name ZZ_IsContractSpecificToPeriod */
+    public static final String COLUMNNAME_ZZ_IsContractSpecificToPeriod = "ZZ_IsContractSpecificToPeriod";
+
+	/** Set Contract Specific To Period.
+	  * Is the learner&#039;
+s contract of employment specific to the period of the agreement?
+	  */
+	public void setZZ_IsContractSpecificToPeriod (boolean ZZ_IsContractSpecificToPeriod);
+
+	/** Get Contract Specific To Period.
+	  * Is the learner&#039;
+s contract of employment specific to the period of the agreement?
+	  */
+	public boolean isZZ_IsContractSpecificToPeriod();
+
     /** Column name ZZ_IsIncludeFundYear */
     public static final String COLUMNNAME_ZZ_IsIncludeFundYear = "ZZ_IsIncludeFundYear";
 
-	/** Set Employer Based	  */
-	public void setZZ_Is_Employer_Based (boolean ZZ_Is_Employer_Based);
 	/** Set Include Funding Year	  */
 	public void setZZ_IsIncludeFundYear (boolean ZZ_IsIncludeFundYear);
 
-	/** Get Employer Based	  */
-	public boolean isZZ_Is_Employer_Based();
 	/** Get Include Funding Year	  */
 	public boolean isZZ_IsIncludeFundYear();
 
@@ -339,6 +361,15 @@ public interface I_ZZ_Program_Master_Data
 
 	/** Get Learner Registration	  */
 	public boolean isZZ_IsLearnerRegistration();
+
+    /** Column name ZZ_Is_Employer_Based */
+    public static final String COLUMNNAME_ZZ_Is_Employer_Based = "ZZ_Is_Employer_Based";
+
+	/** Set Employer Based	  */
+	public void setZZ_Is_Employer_Based (boolean ZZ_Is_Employer_Based);
+
+	/** Get Employer Based	  */
+	public boolean isZZ_Is_Employer_Based();
 
     /** Column name ZZ_Program_Master_Data_ID */
     public static final String COLUMNNAME_ZZ_Program_Master_Data_ID = "ZZ_Program_Master_Data_ID";

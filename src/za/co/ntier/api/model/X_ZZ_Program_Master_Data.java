@@ -32,7 +32,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261117L;
+	private static final long serialVersionUID = 20261124L;
 
     /** Standard Constructor */
     public X_ZZ_Program_Master_Data (Properties ctx, int ZZ_Program_Master_Data_ID, String trxName)
@@ -42,6 +42,10 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
+			setZZ_HasContractCopy (false);
+// N
+			setZZ_IsContractSpecificToPeriod (false);
+// N
 			setZZ_IsIncludeFundYear (false);
 // N
 			setZZ_IsIncludeQual (false);
@@ -49,6 +53,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			setZZ_IsInstitution (false);
 // N
 			setZZ_IsLearnerRegistration (false);
+// N
+			setZZ_Is_Employer_Based (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -62,14 +68,19 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
+			setZZ_HasContractCopy (false);
+// N
+			setZZ_IsContractSpecificToPeriod (false);
+// N
 			setZZ_IsIncludeFundYear (false);
 // N
-			setZZ_Is_Employer_Based (false);
 			setZZ_IsIncludeQual (false);
 // N
 			setZZ_IsInstitution (false);
 // N
 			setZZ_IsLearnerRegistration (false);
+// N
+			setZZ_Is_Employer_Based (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -83,14 +94,19 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
+			setZZ_HasContractCopy (false);
+// N
+			setZZ_IsContractSpecificToPeriod (false);
+// N
 			setZZ_IsIncludeFundYear (false);
 // N
 			setZZ_IsIncludeQual (false);
 // N
 			setZZ_IsInstitution (false);
 // N
-			setZZ_Is_Employer_Based (false);
 			setZZ_IsLearnerRegistration (false);
+// N
+			setZZ_Is_Employer_Based (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -104,14 +120,19 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
+			setZZ_HasContractCopy (false);
+// N
+			setZZ_IsContractSpecificToPeriod (false);
+// N
 			setZZ_IsIncludeFundYear (false);
 // N
-			setZZ_Is_Employer_Based (false);
 			setZZ_IsIncludeQual (false);
 // N
 			setZZ_IsInstitution (false);
 // N
 			setZZ_IsLearnerRegistration (false);
+// N
+			setZZ_Is_Employer_Based (false);
 // N
 			setZZ_Program_Master_Data_ID (0);
         } */
@@ -503,8 +524,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
-	/** Recommended &#8211; Mgr = AD */
-	public static final String ZZ_DOCSTATUS_RecommendedMgr = "AD";
+	/** Recommended &#8211; Admin = AD */
+	public static final String ZZ_DOCSTATUS_RecommendedAdmin = "AD";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
 	/** Prepared for CEO = CF */
@@ -585,8 +606,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
 	/** Registered = RG */
 	public static final String ZZ_DOCSTATUS_Registered = "RG";
-	/** Recommended for Registration - Mgr - LP Ops = RR */
-	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPOps = "RR";
+	/** Recommended - Mgr = RR */
+	public static final String ZZ_DOCSTATUS_Recommended_Mgr = "RR";
 	/** Recommended for Registration - Mgr - LP Strat = RS */
 	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPStrat = "RS";
 	/** Submitted to Snr Admin Finance = SA */
@@ -631,26 +652,20 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
-	/** Set Employer Based.
-		@param ZZ_Is_Employer_Based Employer Based
-	/** Set Include Funding Year.
-		@param ZZ_IsIncludeFundYear Include Funding Year
+	/** Set Has Contract Copy.
+		@param ZZ_HasContractCopy Does the learner have a copy of the contract of employment?
 	*/
-	public void setZZ_Is_Employer_Based (boolean ZZ_Is_Employer_Based)
+	public void setZZ_HasContractCopy (boolean ZZ_HasContractCopy)
 	{
-		set_Value (COLUMNNAME_ZZ_Is_Employer_Based, Boolean.valueOf(ZZ_Is_Employer_Based));
-	}
-	
-	public void setZZ_IsIncludeFundYear (boolean ZZ_IsIncludeFundYear)
-	{
-		set_Value (COLUMNNAME_ZZ_IsIncludeFundYear, Boolean.valueOf(ZZ_IsIncludeFundYear));
+		set_Value (COLUMNNAME_ZZ_HasContractCopy, Boolean.valueOf(ZZ_HasContractCopy));
 	}
 
-	/** Get Employer Based.
-		@return Employer Based	  */
-	public boolean isZZ_Is_Employer_Based()
+	/** Get Has Contract Copy.
+		@return Does the learner have a copy of the contract of employment?
+	  */
+	public boolean isZZ_HasContractCopy()
 	{
-		Object oo = get_Value(COLUMNNAME_ZZ_Is_Employer_Based);
+		Object oo = get_Value(COLUMNNAME_ZZ_HasContractCopy);
 		if (oo != null)
 		{
 			 if (oo instanceof Boolean)
@@ -659,7 +674,38 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 		}
 		return false;
 	}
-	
+
+	/** Set Contract Specific To Period.
+		@param ZZ_IsContractSpecificToPeriod Is the learner&#039;s contract of employment specific to the period of the agreement?
+	*/
+	public void setZZ_IsContractSpecificToPeriod (boolean ZZ_IsContractSpecificToPeriod)
+	{
+		set_Value (COLUMNNAME_ZZ_IsContractSpecificToPeriod, Boolean.valueOf(ZZ_IsContractSpecificToPeriod));
+	}
+
+	/** Get Contract Specific To Period.
+		@return Is the learner&#039;s contract of employment specific to the period of the agreement?
+	  */
+	public boolean isZZ_IsContractSpecificToPeriod()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_IsContractSpecificToPeriod);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Include Funding Year.
+		@param ZZ_IsIncludeFundYear Include Funding Year
+	*/
+	public void setZZ_IsIncludeFundYear (boolean ZZ_IsIncludeFundYear)
+	{
+		set_Value (COLUMNNAME_ZZ_IsIncludeFundYear, Boolean.valueOf(ZZ_IsIncludeFundYear));
+	}
+
 	/** Get Include Funding Year.
 		@return Include Funding Year	  */
 	public boolean isZZ_IsIncludeFundYear()
@@ -731,6 +777,28 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public boolean isZZ_IsLearnerRegistration()
 	{
 		Object oo = get_Value(COLUMNNAME_ZZ_IsLearnerRegistration);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Employer Based.
+		@param ZZ_Is_Employer_Based Employer Based
+	*/
+	public void setZZ_Is_Employer_Based (boolean ZZ_Is_Employer_Based)
+	{
+		set_Value (COLUMNNAME_ZZ_Is_Employer_Based, Boolean.valueOf(ZZ_Is_Employer_Based));
+	}
+
+	/** Get Employer Based.
+		@return Employer Based	  */
+	public boolean isZZ_Is_Employer_Based()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Is_Employer_Based);
 		if (oo != null)
 		{
 			 if (oo instanceof Boolean)

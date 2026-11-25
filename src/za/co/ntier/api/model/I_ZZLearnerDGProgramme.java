@@ -335,6 +335,8 @@ s site
 	/** Get Secondary SDP Contact	  */
 	public int getZZSecondarySDProviderContact_ID();
 
+	public org.compiere.model.I_AD_User getZZSecondarySDProviderContact() throws RuntimeException;
+
     /** Column name ZZSecondarySDProviderLevy */
     public static final String COLUMNNAME_ZZSecondarySDProviderLevy = "ZZSecondarySDProviderLevy";
 
@@ -579,27 +581,32 @@ s site
     /** Column name ZZ_Funding_Year */
     public static final String COLUMNNAME_ZZ_Funding_Year = "ZZ_Funding_Year";
 
-	/** Set Funding Year.
-	  * Funding Year
-	  */
+	/** Set Funding Year	  */
 	public void setZZ_Funding_Year (String ZZ_Funding_Year);
 
-	/** Get Funding Year.
-	  * Funding Year
-	  */
+	/** Get Funding Year	  */
 	public String getZZ_Funding_Year();
+
+    /** Column name ZZ_HasContractCopy */
+    public static final String COLUMNNAME_ZZ_HasContractCopy = "ZZ_HasContractCopy";
+
+	/** Set Has Contract Copy.
+	  * Does the learner have a copy of the contract of employment?
+	  */
+	public void setZZ_HasContractCopy (boolean ZZ_HasContractCopy);
+
+	/** Get Has Contract Copy.
+	  * Does the learner have a copy of the contract of employment?
+	  */
+	public boolean isZZ_HasContractCopy();
 
     /** Column name ZZ_Institution_ID */
     public static final String COLUMNNAME_ZZ_Institution_ID = "ZZ_Institution_ID";
 
-	/** Set Institution.
-	  * Institution
-	  */
+	/** Set Institution	  */
 	public void setZZ_Institution_ID (int ZZ_Institution_ID);
 
-	/** Get Institution.
-	  * Institution
-	  */
+	/** Get Institution	  */
 	public int getZZ_Institution_ID();
 
 	public I_ZZ_Institution getZZ_Institution() throws RuntimeException;
@@ -618,6 +625,21 @@ s site
 	public int getZZ_Institution_Qualifications_ID();
 
 	public I_ZZ_Institution_Qualifications getZZ_Institution_Qualifications() throws RuntimeException;
+
+    /** Column name ZZ_IsContractSpecificToPeriod */
+    public static final String COLUMNNAME_ZZ_IsContractSpecificToPeriod = "ZZ_IsContractSpecificToPeriod";
+
+	/** Set Contract Specific To Period.
+	  * Is the learner&#039;
+s contract of employment specific to the period of the agreement?
+	  */
+	public void setZZ_IsContractSpecificToPeriod (boolean ZZ_IsContractSpecificToPeriod);
+
+	/** Get Contract Specific To Period.
+	  * Is the learner&#039;
+s contract of employment specific to the period of the agreement?
+	  */
+	public boolean isZZ_IsContractSpecificToPeriod();
 
     /** Column name ZZ_MgrLPOps_DateNotRecommended */
     public static final String COLUMNNAME_ZZ_MgrLPOps_DateNotRecommended = "ZZ_MgrLPOps_DateNotRecommended";
