@@ -45,6 +45,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
+			setZZ_HasAgent (false);
 // N
 			setZZ_IsIncludeFundYear (false);
 // N
@@ -71,6 +72,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
+			setZZ_HasAgent (false);
 // N
 			setZZ_IsIncludeFundYear (false);
 // N
@@ -97,6 +99,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
+			setZZ_HasAgent (false);
 // N
 			setZZ_IsIncludeFundYear (false);
 // N
@@ -123,6 +126,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
+			setZZ_HasAgent (false);
 // N
 			setZZ_IsIncludeFundYear (false);
 // N
@@ -476,8 +480,6 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
-	/** Register = RG */
-	public static final String ZZ_DOCACTION_Register = "RG";
 	/** Re-Submit = RS */
 	public static final String ZZ_DOCACTION_Re_Submit = "RS";
 	/** Submit = S1 */
@@ -624,8 +626,6 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
 	/** Transfer Out = TO */
 	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
-	/** Terminated = TR */
-	public static final String ZZ_DOCSTATUS_Terminated = "TR";
 	/** Updated by SDR Admin = UA */
 	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
 	/** Uploaded = UP */
@@ -689,6 +689,28 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public boolean isZZ_IsContractSpecificToPeriod()
 	{
 		Object oo = get_Value(COLUMNNAME_ZZ_IsContractSpecificToPeriod);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Has Agent.
+		@param ZZ_HasAgent Has Agent
+	*/
+	public void setZZ_HasAgent (boolean ZZ_HasAgent)
+	{
+		set_Value (COLUMNNAME_ZZ_HasAgent, Boolean.valueOf(ZZ_HasAgent));
+	}
+
+	/** Get Has Agent.
+		@return Has Agent	  */
+	public boolean isZZ_HasAgent()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_HasAgent);
 		if (oo != null)
 		{
 			 if (oo instanceof Boolean)

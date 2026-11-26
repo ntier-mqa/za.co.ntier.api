@@ -32,7 +32,7 @@ public interface I_ZZLearnerDGProgramme
     /** TableName=ZZLearnerDGProgramme */
     public static final String Table_Name = "ZZLearnerDGProgramme";
 
-    /** AD_Table_ID=1000394 */
+    /** AD_Table_ID=1000655 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -231,6 +231,32 @@ s site
 	/** Get ZZLearnerDGProgramme_UU	  */
 	public String getZZLearnerDGProgramme_UU();
 
+    /** Column name ZZLearnerQCTOSkillsProgramme_ID */
+    public static final String COLUMNNAME_ZZLearnerQCTOSkillsProgramme_ID = "ZZLearnerQCTOSkillsProgramme_ID";
+
+	/** Set Learner QCTOSkills Programme.
+	  * Learner QCTOSkills Programme
+	  */
+	public void setZZLearnerQCTOSkillsProgramme_ID (int ZZLearnerQCTOSkillsProgramme_ID);
+
+	/** Get Learner QCTOSkills Programme.
+	  * Learner QCTOSkills Programme
+	  */
+	public int getZZLearnerQCTOSkillsProgramme_ID();
+
+	public I_ZZLearnerQCTOSkillsProgramme getZZLearnerQCTOSkillsProgramme() throws RuntimeException;
+
+    /** Column name ZZLearnerSkillsProgramme_ID */
+    public static final String COLUMNNAME_ZZLearnerSkillsProgramme_ID = "ZZLearnerSkillsProgramme_ID";
+
+	/** Set Learner Skills Programme	  */
+	public void setZZLearnerSkillsProgramme_ID (int ZZLearnerSkillsProgramme_ID);
+
+	/** Get Learner Skills Programme	  */
+	public int getZZLearnerSkillsProgramme_ID();
+
+	public I_ZZLearnerSkillsProgramme getZZLearnerSkillsProgramme() throws RuntimeException;
+
     /** Column name ZZLearner_ID */
     public static final String COLUMNNAME_ZZLearner_ID = "ZZLearner_ID";
 
@@ -334,8 +360,6 @@ s site
 
 	/** Get Secondary SDP Contact	  */
 	public int getZZSecondarySDProviderContact_ID();
-
-	public org.compiere.model.I_AD_User getZZSecondarySDProviderContact() throws RuntimeException;
 
     /** Column name ZZSecondarySDProviderLevy */
     public static final String COLUMNNAME_ZZSecondarySDProviderLevy = "ZZSecondarySDProviderLevy";
@@ -472,6 +496,26 @@ s site
 	public int getZZ_AdminLPOps_RecommendedBy_ID();
 
 	public org.compiere.model.I_AD_User getZZ_AdminLPOps_RecommendedBy() throws RuntimeException;
+
+    /** Column name ZZ_Agent_ID */
+    public static final String COLUMNNAME_ZZ_Agent_ID = "ZZ_Agent_ID";
+
+	/** Set Agent	  */
+	public void setZZ_Agent_ID (int ZZ_Agent_ID);
+
+	/** Get Agent	  */
+	public int getZZ_Agent_ID();
+
+	public org.compiere.model.I_C_BPartner getZZ_Agent() throws RuntimeException;
+
+    /** Column name ZZ_Agent_Programme_Type */
+    public static final String COLUMNNAME_ZZ_Agent_Programme_Type = "ZZ_Agent_Programme_Type";
+
+	/** Set Program Type	  */
+	public void setZZ_Agent_Programme_Type (String ZZ_Agent_Programme_Type);
+
+	/** Get Program Type	  */
+	public String getZZ_Agent_Programme_Type();
 
     /** Column name ZZ_AltContactNumber */
     public static final String COLUMNNAME_ZZ_AltContactNumber = "ZZ_AltContactNumber";
@@ -713,6 +757,17 @@ s contract of employment specific to the period of the agreement?
 	public int getZZ_SDP_ID();
 
 	public org.compiere.model.I_C_BPartner getZZ_SDP() throws RuntimeException;
+
+    /** Column name ZZ_SETA_Master_ID */
+    public static final String COLUMNNAME_ZZ_SETA_Master_ID = "ZZ_SETA_Master_ID";
+
+	/** Set SETA Master	  */
+	public void setZZ_SETA_Master_ID (int ZZ_SETA_Master_ID);
+
+	/** Get SETA Master	  */
+	public int getZZ_SETA_Master_ID();
+
+	public I_ZZ_SETA_Master getZZ_SETA_Master() throws RuntimeException;
 
     /** Column name zzlearnerprogram_id */
     public static final String COLUMNNAME_zzlearnerprogram_id = "zzlearnerprogram_id";

@@ -14,10 +14,6 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 
 	private static final long serialVersionUID = 4154740391812230437L;
 
-
-
-
-
 	public MBPartner_New(Properties ctx) {
 		super(ctx);
 	}
@@ -478,4 +474,111 @@ public class MBPartner_New extends MBPartner implements I_C_BPartner {
 		return (String)get_Value(COLUMNNAME_ZZ_T_Number);
 	}
 
+	/**
+	 * Set SDP.
+	 * 
+	 * @param ZZ_Is_SDP SDP
+	 */
+	public void setZZ_Is_SDP(boolean ZZ_Is_SDP)
+	{
+		set_Value(COLUMNNAME_ZZ_Is_SDP, Boolean.valueOf(ZZ_Is_SDP));
+	}
+
+	/**
+	 * Get SDP.
+	 * 
+	 * @return SDP
+	 */
+	public boolean isZZ_Is_SDP()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Is_SDP);
+		if (oo != null)
+		{
+			if (oo instanceof Boolean)
+				return ((Boolean) oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/**
+	 * Set Trade Test Centre.
+	 * 
+	 * @param ZZ_Is_TTC Trade Test Centre
+	 */
+	public void setZZ_Is_TTC(boolean ZZ_Is_TTC)
+	{
+		set_Value(COLUMNNAME_ZZ_Is_TTC, Boolean.valueOf(ZZ_Is_TTC));
+	}
+
+	/**
+	 * Get Trade Test Centre.
+	 * 
+	 * @return Trade Test Centre
+	 */
+	public boolean isZZ_Is_TTC()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Is_TTC);
+		if (oo != null)
+		{
+			if (oo instanceof Boolean)
+				return ((Boolean) oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/**
+	 * Set Agent.
+	 * 
+	 * @param ZZ_Agent Agent
+	 */
+	public void setZZ_Agent(boolean ZZ_Agent)
+	{
+		set_Value(COLUMNNAME_ZZ_Agent, Boolean.valueOf(ZZ_Agent));
+	}
+
+	/**
+	 * Get Agent.
+	 * 
+	 * @return Agent
+	 */
+	public boolean isZZ_Agent()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Agent);
+		if (oo != null)
+		{
+			if (oo instanceof Boolean)
+				return ((Boolean) oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/**
+	 * Set Accreditation Centre.
+	 * 
+	 * @param ZZ_Is_AC Accreditation Centre
+	 */
+	public void setZZ_Is_AC(boolean ZZ_Is_AC)
+	{
+		set_Value(COLUMNNAME_ZZ_Is_AC, Boolean.valueOf(ZZ_Is_AC));
+	}
+
+	/**
+	 * Get Accreditation Centre.
+	 * 
+	 * @return Accreditation Centre
+	 */
+	public boolean isZZ_Is_AC()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Is_AC);
+		if (oo != null)
+		{
+			if (oo instanceof Boolean)
+				return ((Boolean) oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
 }

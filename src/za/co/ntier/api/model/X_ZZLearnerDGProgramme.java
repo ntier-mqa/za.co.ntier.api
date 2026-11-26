@@ -32,7 +32,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261124L;
+	private static final long serialVersionUID = 20261126L;
 
     /** Standard Constructor */
     public X_ZZLearnerDGProgramme (Properties ctx, int ZZLearnerDGProgramme_ID, String trxName)
@@ -42,6 +42,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
         {
 			setZZEmployedBeforeAgreement (false);
 // N
+			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
 			setZZPastWorkplaceAgreement (false);
 // N
@@ -50,8 +51,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
-// N
-			setZZ_IsDisability (false);
 // N
         } */
     }
@@ -64,6 +63,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
         {
 			setZZEmployedBeforeAgreement (false);
 // N
+			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
 			setZZPastWorkplaceAgreement (false);
 // N
@@ -72,8 +72,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
-// N
-			setZZ_IsDisability (false);
 // N
         } */
     }
@@ -86,6 +84,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
         {
 			setZZEmployedBeforeAgreement (false);
 // N
+			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
 			setZZPastWorkplaceAgreement (false);
 // N
@@ -94,8 +93,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
-// N
-			setZZ_IsDisability (false);
 // N
         } */
     }
@@ -108,6 +105,7 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
         {
 			setZZEmployedBeforeAgreement (false);
 // N
+			setZZFundingType (null);
 			setZZLearnerDGProgramme_ID (0);
 			setZZPastWorkplaceAgreement (false);
 // N
@@ -116,8 +114,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
-// N
-			setZZ_IsDisability (false);
 // N
         } */
     }
@@ -381,6 +377,61 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return (String)get_Value(COLUMNNAME_ZZLearnerDGProgramme_UU);
 	}
 
+	public I_ZZLearnerQCTOSkillsProgramme getZZLearnerQCTOSkillsProgramme() throws RuntimeException
+	{
+		return (I_ZZLearnerQCTOSkillsProgramme)MTable.get(getCtx(), I_ZZLearnerQCTOSkillsProgramme.Table_ID)
+			.getPO(getZZLearnerQCTOSkillsProgramme_ID(), get_TrxName());
+	}
+
+	/** Set Learner QCTOSkills Programme.
+		@param ZZLearnerQCTOSkillsProgramme_ID Learner QCTOSkills Programme
+	*/
+	public void setZZLearnerQCTOSkillsProgramme_ID (int ZZLearnerQCTOSkillsProgramme_ID)
+	{
+		if (ZZLearnerQCTOSkillsProgramme_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLearnerQCTOSkillsProgramme_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLearnerQCTOSkillsProgramme_ID, Integer.valueOf(ZZLearnerQCTOSkillsProgramme_ID));
+	}
+
+	/** Get Learner QCTOSkills Programme.
+		@return Learner QCTOSkills Programme
+	  */
+	public int getZZLearnerQCTOSkillsProgramme_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLearnerQCTOSkillsProgramme_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZLearnerSkillsProgramme getZZLearnerSkillsProgramme() throws RuntimeException
+	{
+		return (I_ZZLearnerSkillsProgramme)MTable.get(getCtx(), I_ZZLearnerSkillsProgramme.Table_ID)
+			.getPO(getZZLearnerSkillsProgramme_ID(), get_TrxName());
+	}
+
+	/** Set Learner Skills Programme.
+		@param ZZLearnerSkillsProgramme_ID Learner Skills Programme
+	*/
+	public void setZZLearnerSkillsProgramme_ID (int ZZLearnerSkillsProgramme_ID)
+	{
+		if (ZZLearnerSkillsProgramme_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_ZZLearnerSkillsProgramme_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_ZZLearnerSkillsProgramme_ID, Integer.valueOf(ZZLearnerSkillsProgramme_ID));
+	}
+
+	/** Get Learner Skills Programme.
+		@return Learner Skills Programme	  */
+	public int getZZLearnerSkillsProgramme_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZLearnerSkillsProgramme_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
 	public I_ZZLearner getZZLearner() throws RuntimeException
 	{
 		return (I_ZZLearner)MTable.get(getCtx(), I_ZZLearner.Table_ID)
@@ -571,12 +622,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public Timestamp getZZRegistrationDate()
 	{
 		return (Timestamp)get_Value(COLUMNNAME_ZZRegistrationDate);
-	}
-
-	public org.compiere.model.I_AD_User getZZSecondarySDProviderContact() throws RuntimeException
-	{
-		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_ID)
-			.getPO(getZZSecondarySDProviderContact_ID(), get_TrxName());
 	}
 
 	/** Set Secondary SDP Contact.
@@ -902,6 +947,53 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return ii.intValue();
 	}
 
+	public org.compiere.model.I_C_BPartner getZZ_Agent() throws RuntimeException
+	{
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_ID)
+			.getPO(getZZ_Agent_ID(), get_TrxName());
+	}
+
+	/** Set Agent.
+		@param ZZ_Agent_ID Agent
+	*/
+	public void setZZ_Agent_ID (int ZZ_Agent_ID)
+	{
+		if (ZZ_Agent_ID < 1)
+			set_Value (COLUMNNAME_ZZ_Agent_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_Agent_ID, Integer.valueOf(ZZ_Agent_ID));
+	}
+
+	/** Get Agent.
+		@return Agent	  */
+	public int getZZ_Agent_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_Agent_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** MQA Skills Programme = MSP */
+	public static final String ZZ_AGENT_PROGRAMME_TYPE_MQASkillsProgramme = "MSP";
+	/** Non MQA Skills Programme = NMS */
+	public static final String ZZ_AGENT_PROGRAMME_TYPE_NonMQASkillsProgramme = "NMS";
+	/** Set Program Type.
+		@param ZZ_Agent_Programme_Type Program Type
+	*/
+	public void setZZ_Agent_Programme_Type (String ZZ_Agent_Programme_Type)
+	{
+
+		set_Value (COLUMNNAME_ZZ_Agent_Programme_Type, ZZ_Agent_Programme_Type);
+	}
+
+	/** Get Program Type.
+		@return Program Type	  */
+	public String getZZ_Agent_Programme_Type()
+	{
+		return (String)get_Value(COLUMNNAME_ZZ_Agent_Programme_Type);
+	}
+
 	/** Set Alternate Contact Number.
 		@param ZZ_AltContactNumber Alternate Contact Number
 	*/
@@ -999,8 +1091,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public static final String ZZ_DOCACTION_ReferBack = "RB";
 	/** Recommend = RE */
 	public static final String ZZ_DOCACTION_Recommend = "RE";
-	/** Register = RG */
-	public static final String ZZ_DOCACTION_Register = "RG";
 	/** Re-Submit = RS */
 	public static final String ZZ_DOCACTION_Re_Submit = "RS";
 	/** Submit = S1 */
@@ -1047,8 +1137,8 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
-	/** Recommended &#8211; Admin = AD */
-	public static final String ZZ_DOCSTATUS_RecommendedAdmin = "AD";
+	/** Recommended &#8211; Mgr = AD */
+	public static final String ZZ_DOCSTATUS_RecommendedMgr = "AD";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
 	/** Prepared for CEO = CF */
@@ -1129,10 +1219,12 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
 	/** Registered = RG */
 	public static final String ZZ_DOCSTATUS_Registered = "RG";
-	/** Recommended - Mgr = RR */
-	public static final String ZZ_DOCSTATUS_Recommended_Mgr = "RR";
+	/** Recommended for Registration - Mgr - LP Ops = RR */
+	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPOps = "RR";
 	/** Recommended for Registration - Mgr - LP Strat = RS */
 	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPStrat = "RS";
+	/** Submitted to Snr Admin Finance = SA */
+	public static final String ZZ_DOCSTATUS_SubmittedToSnrAdminFinance = "SA";
 	/** Submitted to Manager Finance Consumables = SC */
 	public static final String ZZ_DOCSTATUS_SubmittedToManagerFinanceConsumables = "SC";
 	/** Submitted To SDL Finance Mgr = SD */
@@ -1145,8 +1237,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public static final String ZZ_DOCSTATUS_Submitted = "SU";
 	/** Transfer Out = TO */
 	public static final String ZZ_DOCSTATUS_TransferOut = "TO";
-	/** Terminated = TR */
-	public static final String ZZ_DOCSTATUS_Terminated = "TR";
 	/** Updated by SDR Admin = UA */
 	public static final String ZZ_DOCSTATUS_UpdatedBySDRAdmin = "UA";
 	/** Uploaded = UP */
@@ -1246,7 +1336,6 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 		return ii.intValue();
 	}
 
-	public static final int ZZ_FUNDING_YEAR_AD_Reference_ID=1000368;
 	/** 3rd Year =  3 */
 	public static final String ZZ_FUNDING_YEAR_3rdYear = " 3";
 	/** 1st Year = 1  */
@@ -1517,6 +1606,33 @@ public class X_ZZLearnerDGProgramme extends PO implements I_ZZLearnerDGProgramme
 	public int getZZ_SDP_ID()
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SDP_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public I_ZZ_SETA_Master getZZ_SETA_Master() throws RuntimeException
+	{
+		return (I_ZZ_SETA_Master)MTable.get(getCtx(), I_ZZ_SETA_Master.Table_ID)
+			.getPO(getZZ_SETA_Master_ID(), get_TrxName());
+	}
+
+	/** Set SETA Master.
+		@param ZZ_SETA_Master_ID SETA Master
+	*/
+	public void setZZ_SETA_Master_ID (int ZZ_SETA_Master_ID)
+	{
+		if (ZZ_SETA_Master_ID < 1)
+			set_Value (COLUMNNAME_ZZ_SETA_Master_ID, null);
+		else
+			set_Value (COLUMNNAME_ZZ_SETA_Master_ID, Integer.valueOf(ZZ_SETA_Master_ID));
+	}
+
+	/** Get SETA Master.
+		@return SETA Master	  */
+	public int getZZ_SETA_Master_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_ZZ_SETA_Master_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

@@ -325,6 +325,14 @@ s contract of employment specific to the period of the agreement?
 s contract of employment specific to the period of the agreement?
 	  */
 	public boolean isZZ_IsContractSpecificToPeriod();
+    /** Column name ZZ_HasAgent */
+    public static final String COLUMNNAME_ZZ_HasAgent = "ZZ_HasAgent";
+
+	/** Set Has Agent	  */
+	public void setZZ_HasAgent (boolean ZZ_HasAgent);
+
+	/** Get Has Agent	  */
+	public boolean isZZ_HasAgent();
 
     /** Column name ZZ_IsIncludeFundYear */
     public static final String COLUMNNAME_ZZ_IsIncludeFundYear = "ZZ_IsIncludeFundYear";

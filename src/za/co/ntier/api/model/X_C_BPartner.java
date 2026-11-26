@@ -35,7 +35,7 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20260413L;
+	private static final long serialVersionUID = 20261124L;
 
     /** Standard Constructor */
     public X_C_BPartner (Properties ctx, int C_BPartner_ID, String trxName)
@@ -63,11 +63,19 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 			setSO_CreditUsed (Env.ZERO);
 			setSendEMail (false);
 			setValue (null);
+			setZZ_Agent (false);
+// N
 			setZZ_IsSDRUser (false);
 // 'N'
+			setZZ_Is_AC (false);
+// N
 			setZZ_Is_Employer (false);
 // N
 			setZZ_Is_MQA_Sector (false);
+// N
+			setZZ_Is_SDP (false);
+// N
+			setZZ_Is_TTC (false);
 // N
         } */
     }
@@ -98,11 +106,19 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 			setSO_CreditUsed (Env.ZERO);
 			setSendEMail (false);
 			setValue (null);
+			setZZ_Agent (false);
+// N
 			setZZ_IsSDRUser (false);
 // 'N'
+			setZZ_Is_AC (false);
+// N
 			setZZ_Is_Employer (false);
 // N
 			setZZ_Is_MQA_Sector (false);
+// N
+			setZZ_Is_SDP (false);
+// N
+			setZZ_Is_TTC (false);
 // N
         } */
     }
@@ -133,11 +149,19 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 			setSO_CreditUsed (Env.ZERO);
 			setSendEMail (false);
 			setValue (null);
+			setZZ_Agent (false);
+// N
 			setZZ_IsSDRUser (false);
 // 'N'
+			setZZ_Is_AC (false);
+// N
 			setZZ_Is_Employer (false);
 // N
 			setZZ_Is_MQA_Sector (false);
+// N
+			setZZ_Is_SDP (false);
+// N
+			setZZ_Is_TTC (false);
 // N
         } */
     }
@@ -168,11 +192,19 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 			setSO_CreditUsed (Env.ZERO);
 			setSendEMail (false);
 			setValue (null);
+			setZZ_Agent (false);
+// N
 			setZZ_IsSDRUser (false);
 // 'N'
+			setZZ_Is_AC (false);
+// N
 			setZZ_Is_Employer (false);
 // N
 			setZZ_Is_MQA_Sector (false);
+// N
+			setZZ_Is_SDP (false);
+// N
+			setZZ_Is_TTC (false);
 // N
         } */
     }
@@ -2088,6 +2120,28 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 		return (String)get_Value(COLUMNNAME_ZZUnionised);
 	}
 
+	/** Set Agent.
+		@param ZZ_Agent Agent
+	*/
+	public void setZZ_Agent (boolean ZZ_Agent)
+	{
+		set_Value (COLUMNNAME_ZZ_Agent, Boolean.valueOf(ZZ_Agent));
+	}
+
+	/** Get Agent.
+		@return Agent	  */
+	public boolean isZZ_Agent()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Agent);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	/** Set Business Registration No.
 		@param ZZ_Business_Reg_No Business Registration No
 	*/
@@ -2116,6 +2170,28 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 	public boolean isZZ_IsSDRUser()
 	{
 		Object oo = get_Value(COLUMNNAME_ZZ_IsSDRUser);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Accreditation Centre.
+		@param ZZ_Is_AC Accreditation Centre
+	*/
+	public void setZZ_Is_AC (boolean ZZ_Is_AC)
+	{
+		set_Value (COLUMNNAME_ZZ_Is_AC, Boolean.valueOf(ZZ_Is_AC));
+	}
+
+	/** Get Accreditation Centre.
+		@return Accreditation Centre	  */
+	public boolean isZZ_Is_AC()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Is_AC);
 		if (oo != null)
 		{
 			 if (oo instanceof Boolean)
@@ -2160,6 +2236,50 @@ public class X_C_BPartner extends PO implements I_C_BPartner, I_Persistent
 	public boolean isZZ_Is_MQA_Sector()
 	{
 		Object oo = get_Value(COLUMNNAME_ZZ_Is_MQA_Sector);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set SDP.
+		@param ZZ_Is_SDP SDP
+	*/
+	public void setZZ_Is_SDP (boolean ZZ_Is_SDP)
+	{
+		set_Value (COLUMNNAME_ZZ_Is_SDP, Boolean.valueOf(ZZ_Is_SDP));
+	}
+
+	/** Get SDP.
+		@return SDP	  */
+	public boolean isZZ_Is_SDP()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Is_SDP);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Trade Test Centre.
+		@param ZZ_Is_TTC Trade Test Centre
+	*/
+	public void setZZ_Is_TTC (boolean ZZ_Is_TTC)
+	{
+		set_Value (COLUMNNAME_ZZ_Is_TTC, Boolean.valueOf(ZZ_Is_TTC));
+	}
+
+	/** Get Trade Test Centre.
+		@return Trade Test Centre	  */
+	public boolean isZZ_Is_TTC()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_Is_TTC);
 		if (oo != null)
 		{
 			 if (oo instanceof Boolean)

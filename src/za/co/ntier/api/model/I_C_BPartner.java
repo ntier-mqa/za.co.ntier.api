@@ -1109,6 +1109,15 @@ s business as a percentage
 	/** Get Unionised	  */
 	public String getZZUnionised();
 
+    /** Column name ZZ_Agent */
+    public static final String COLUMNNAME_ZZ_Agent = "ZZ_Agent";
+
+	/** Set Agent	  */
+	public void setZZ_Agent (boolean ZZ_Agent);
+
+	/** Get Agent	  */
+	public boolean isZZ_Agent();
+
     /** Column name ZZ_Business_Reg_No */
     public static final String COLUMNNAME_ZZ_Business_Reg_No = "ZZ_Business_Reg_No";
 
@@ -1127,6 +1136,15 @@ s business as a percentage
 	/** Get IsSDRUser	  */
 	public boolean isZZ_IsSDRUser();
 
+    /** Column name ZZ_Is_AC */
+    public static final String COLUMNNAME_ZZ_Is_AC = "ZZ_Is_AC";
+
+	/** Set Accreditation Centre	  */
+	public void setZZ_Is_AC (boolean ZZ_Is_AC);
+
+	/** Get Accreditation Centre	  */
+	public boolean isZZ_Is_AC();
+
     /** Column name ZZ_Is_Employer */
     public static final String COLUMNNAME_ZZ_Is_Employer = "ZZ_Is_Employer";
 
@@ -1144,6 +1162,24 @@ s business as a percentage
 
 	/** Get MQA Sector	  */
 	public boolean isZZ_Is_MQA_Sector();
+
+    /** Column name ZZ_Is_SDP */
+    public static final String COLUMNNAME_ZZ_Is_SDP = "ZZ_Is_SDP";
+
+	/** Set SDP	  */
+	public void setZZ_Is_SDP (boolean ZZ_Is_SDP);
+
+	/** Get SDP	  */
+	public boolean isZZ_Is_SDP();
+
+    /** Column name ZZ_Is_TTC */
+    public static final String COLUMNNAME_ZZ_Is_TTC = "ZZ_Is_TTC";
+
+	/** Set Trade Test Centre	  */
+	public void setZZ_Is_TTC (boolean ZZ_Is_TTC);
+
+	/** Get Trade Test Centre	  */
+	public boolean isZZ_Is_TTC();
 
     /** Column name ZZ_Municipality_District */
     public static final String COLUMNNAME_ZZ_Municipality_District = "ZZ_Municipality_District";
