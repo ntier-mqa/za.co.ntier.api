@@ -17,10 +17,12 @@
 /** Generated Model - DO NOT CHANGE */
 package za.co.ntier.api.model;
 
+import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
+import org.compiere.util.Env;
 
 /** Generated Model for ZZ_Program_Master_Data
  *  @author iDempiere (generated)
@@ -32,7 +34,7 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20261124L;
+	private static final long serialVersionUID = 20261127L;
 
     /** Standard Constructor */
     public X_ZZ_Program_Master_Data (Properties ctx, int ZZ_Program_Master_Data_ID, String trxName)
@@ -42,10 +44,11 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
+			setZZ_HasAgent (false);
+// N
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
-			setZZ_HasAgent (false);
 // N
 			setZZ_IsIncludeFundYear (false);
 // N
@@ -69,10 +72,11 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
+			setZZ_HasAgent (false);
+// N
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
-			setZZ_HasAgent (false);
 // N
 			setZZ_IsIncludeFundYear (false);
 // N
@@ -96,10 +100,11 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
+			setZZ_HasAgent (false);
+// N
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
-			setZZ_HasAgent (false);
 // N
 			setZZ_IsIncludeFundYear (false);
 // N
@@ -123,10 +128,11 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
         {
 			setIsEnterQualification (false);
 // N
+			setZZ_HasAgent (false);
+// N
 			setZZ_HasContractCopy (false);
 // N
 			setZZ_IsContractSpecificToPeriod (false);
-			setZZ_HasAgent (false);
 // N
 			setZZ_IsIncludeFundYear (false);
 // N
@@ -526,8 +532,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 
 	/** Approved By Manager Finance Consumables = AC */
 	public static final String ZZ_DOCSTATUS_ApprovedByManagerFinanceConsumables = "AC";
-	/** Recommended &#8211; Admin = AD */
-	public static final String ZZ_DOCSTATUS_RecommendedAdmin = "AD";
+	/** Recommended &#8211; Mgr = AD */
+	public static final String ZZ_DOCSTATUS_RecommendedMgr = "AD";
 	/** Approved = AP */
 	public static final String ZZ_DOCSTATUS_Approved = "AP";
 	/** Prepared for CEO = CF */
@@ -608,8 +614,8 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public static final String ZZ_DOCSTATUS_RecommendedForEvaluation = "RE";
 	/** Registered = RG */
 	public static final String ZZ_DOCSTATUS_Registered = "RG";
-	/** Recommended - Mgr = RR */
-	public static final String ZZ_DOCSTATUS_Recommended_Mgr = "RR";
+	/** Recommended for Registration - Mgr - LP Ops = RR */
+	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPOps = "RR";
 	/** Recommended for Registration - Mgr - LP Strat = RS */
 	public static final String ZZ_DOCSTATUS_RecommendedForRegistration_Mgr_LPStrat = "RS";
 	/** Submitted to Snr Admin Finance = SA */
@@ -652,6 +658,47 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 		return (String)get_Value(COLUMNNAME_ZZ_DocStatus);
 	}
 
+	/** Set Fixed Duration (Mths).
+		@param ZZ_FixedDuration Set the duration in months.
+	*/
+	public void setZZ_FixedDuration (BigDecimal ZZ_FixedDuration)
+	{
+		set_Value (COLUMNNAME_ZZ_FixedDuration, ZZ_FixedDuration);
+	}
+
+	/** Get Fixed Duration (Mths).
+		@return Set the duration in months.
+	  */
+	public BigDecimal getZZ_FixedDuration()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_ZZ_FixedDuration);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Has Agent.
+		@param ZZ_HasAgent Has Agent
+	*/
+	public void setZZ_HasAgent (boolean ZZ_HasAgent)
+	{
+		set_Value (COLUMNNAME_ZZ_HasAgent, Boolean.valueOf(ZZ_HasAgent));
+	}
+
+	/** Get Has Agent.
+		@return Has Agent	  */
+	public boolean isZZ_HasAgent()
+	{
+		Object oo = get_Value(COLUMNNAME_ZZ_HasAgent);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	/** Set Has Contract Copy.
 		@param ZZ_HasContractCopy Does the learner have a copy of the contract of employment?
 	*/
@@ -689,28 +736,6 @@ public class X_ZZ_Program_Master_Data extends PO implements I_ZZ_Program_Master_
 	public boolean isZZ_IsContractSpecificToPeriod()
 	{
 		Object oo = get_Value(COLUMNNAME_ZZ_IsContractSpecificToPeriod);
-		if (oo != null)
-		{
-			 if (oo instanceof Boolean)
-				 return ((Boolean)oo).booleanValue();
-			return "Y".equals(oo);
-		}
-		return false;
-	}
-
-	/** Set Has Agent.
-		@param ZZ_HasAgent Has Agent
-	*/
-	public void setZZ_HasAgent (boolean ZZ_HasAgent)
-	{
-		set_Value (COLUMNNAME_ZZ_HasAgent, Boolean.valueOf(ZZ_HasAgent));
-	}
-
-	/** Get Has Agent.
-		@return Has Agent	  */
-	public boolean isZZ_HasAgent()
-	{
-		Object oo = get_Value(COLUMNNAME_ZZ_HasAgent);
 		if (oo != null)
 		{
 			 if (oo instanceof Boolean)

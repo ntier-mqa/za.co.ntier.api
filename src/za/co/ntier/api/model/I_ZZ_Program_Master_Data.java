@@ -298,6 +298,19 @@ public interface I_ZZ_Program_Master_Data
 	/** Get Document Status	  */
 	public String getZZ_DocStatus();
 
+    /** Column name ZZ_FixedDuration */
+    public static final String COLUMNNAME_ZZ_FixedDuration = "ZZ_FixedDuration";
+
+	/** Set Fixed Duration (Mths).
+	  * Set the duration in months.
+	  */
+	public void setZZ_FixedDuration (BigDecimal ZZ_FixedDuration);
+
+	/** Get Fixed Duration (Mths).
+	  * Set the duration in months.
+	  */
+	public BigDecimal getZZ_FixedDuration();
+
     /** Column name ZZ_HasContractCopy */
     public static final String COLUMNNAME_ZZ_HasContractCopy = "ZZ_HasContractCopy";
 
